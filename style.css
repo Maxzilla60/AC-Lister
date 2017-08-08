@@ -21,6 +21,8 @@ img {
 }
 .clickable:hover {
     color: brown;
+    cursor: pointer;
+    background-color: orange;
 }
 .clickable:active {
     color: orangered;
@@ -49,6 +51,7 @@ img {
 }
 .result:hover {
     background-color: orange;
+    cursor: pointer;
 }
 .result:active {
     background-color: orangered;
@@ -75,6 +78,13 @@ input {
     margin-bottom: 10px;
     overflow-y: auto;
     background-color: floralwhite;
+}
+.list img:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+.list img:active {
+    background-color: orangered;
 }
 .menu {
     float: right;
