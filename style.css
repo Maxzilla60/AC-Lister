@@ -21,12 +21,12 @@ img {
     color: gray;
 }
 .clickable:hover {
-    color: brown;
+    color: white;
     cursor: pointer;
     background-color: orange;
 }
 .clickable:active {
-    color: orangered;
+    background-color: orangered;
 }
 
 .header {
