@@ -16,6 +16,7 @@ img {
 .fa {
     color: orange;
 }
+
 .disabled {
     color: gray;
 }
@@ -66,12 +67,14 @@ input {
 	width: 84%;
     border: solid orange;
 }
+
 .main {
 	width: 73%;
 	min-height: 800px;
 	float: right;
     padding: 0px;
 }
+
 .list {
     border: solid orange;
     height: 550px;
@@ -89,6 +92,7 @@ input {
 .menu {
     float: right;
 }
+
 #info {
     border: solid orange;
     min-height: 240px;
@@ -99,7 +103,7 @@ input {
     height: 215px;
     float:left;
     padding:0;
-    border-radius: 8px;
+    border-radius: 23px; /*8px*/
     /*border: solid orange;*/
 }
 .profile {
@@ -127,4 +131,7 @@ footer {
 footer .fa {
     margin: 0;
     padding: 0;
+}
+footer .fa:hover {
+    background-color: rgba(255,0,0,0);
 }
