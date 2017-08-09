@@ -105,10 +105,12 @@ function updateListSelect() {
 }
 // Update the button for adding a villager
 function updateAddVillagerButton() {
+    // Remove button:
     if (villagerInList(currentProfile, document.getElementById('list_select').value)) {
         block = "<i onclick=\"removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>";
         document.getElementById("add_remove_button").innerHTML = block;
     }
+    // Add button:
     else {
         block = "<i onclick=\"addVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i>";
         document.getElementById("add_remove_button").innerHTML = block;
@@ -161,6 +163,7 @@ function search(query) {
     viewResults(results); // Display results
 }
 
+// Add villager to list
 function addVillager(name, id) {
     // In case of an empty name:
     if (name == "") {
@@ -169,7 +172,7 @@ function addVillager(name, id) {
     
     // Go through list and find:
     for (l in lists) {
-        // Replace title with new title:
+        // Add villager to members:
         if (lists[l].id == id) {
             lists[l].members.push(name);  
         }
@@ -177,16 +180,19 @@ function addVillager(name, id) {
     viewLists(); // Refresh view
     updateListSelect(); // Update list select
 }
+// Remove villager from list
 function removeVillager(name, id) {
     tempList = []; // Keep a temporary array
-    // Add all lists except for the one removed:
+    // Add all lists:
     for (l in lists) {
         if (lists[l].id == id) {
+            // Keep a temporary list:
             temp = {
                 title: lists[l].title,
                 id: lists[l].id,
                 members: []
             };
+            // Add all members except for the one removed:
             for (m in lists[l].members) {
                 if (lists[l].members[m] != name) {
                     temp.members.push(lists[l].members[m]);
@@ -198,8 +204,7 @@ function removeVillager(name, id) {
             tempList.push(lists[l]);
         }
     }
-        // Update lists
-    lists = tempList;
+    lists = tempList; // Update lists
     viewLists(); // Refresh view
     updateListSelect(); // Update list select
 }
