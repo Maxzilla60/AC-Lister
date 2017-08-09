@@ -1,4 +1,5 @@
 var idCount = 1;
+var currentProfile = "";
 var lists = [
     {
         title: "Favorites",
@@ -59,6 +60,7 @@ function viewResults(resultList) {
 
 // Display villager profile
 function loadProfile(name) {
+    currentProfile = name;
     var villager = getVillager(name); // Get villager json
     var trimmedName = trimName(name); // Trim name for duplicate names
     // Get values from json:
@@ -74,11 +76,11 @@ function loadProfile(name) {
     var icon_personality = "<i title=\"Personality\" class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
     var icon_coffee = "<i title=\"Favorite coffee\" class=\"fa fa-coffee\" aria-hidden=\"true\"></i>";
     var icon_birthday = "<i title=\"Birthday\" class=\"fa fa-birthday-cake\" aria-hidden=\"true\"></i>";
-    var icon_add = "<i id=\"add_button\" onclick=\"addVillager('" + name + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i>";
+    var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><i onclick=\"addVillager('" + name + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i></div>";
     var br = "<br>";
     
     // Assemble all blocks:
-    block = "<div class=\"menu\"><select id=\"list_select\"></select> " + icon_add + "</div>" +
+    block = "<div class=\"menu\"><select id=\"list_select\" onchange=\"updateAddVillagerButton();\"></select> " + icon_add + "</div>" +
         "<img src=\"villager_heads/wip.jpg\" class=\"profile-image\">" + "<div class=\"profile\">" +
         icon_name + trimmedName + br +
         icon_species + species + br +
@@ -103,10 +105,27 @@ function updateListSelect() {
 }
 // Update the button for adding a villager
 function updateAddVillagerButton() {
-    /*// Change to minus Font Awesome
-    document.getElementById('add_button').className = document.getElementById('add_button').className.replace('fa-plus','fa-minus');
-    // Set onclick event
-    document.getElementById('add_button').onclick = removeVillager();*/
+    if (villagerInList(currentProfile, document.getElementById('list_select').value)) {
+        block = "<i onclick=\"removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>";
+        document.getElementById("add_remove_button").innerHTML = block;
+    }
+    else {
+        block = "<i onclick=\"addVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i>";
+        document.getElementById("add_remove_button").innerHTML = block;
+    }
+}
+// Check if villager is already in list
+function villagerInList(name, id) {
+    for (l in lists) {
+        if (lists[l].id == id) {
+            for (m in lists[l].members) {
+                if (lists[l].members[m] == name) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
 }
 
 // Execute a search from the search bar
@@ -155,6 +174,32 @@ function addVillager(name, id) {
             lists[l].members.push(name);  
         }
     }
+    viewLists(); // Refresh view
+    updateListSelect(); // Update list select
+}
+function removeVillager(name, id) {
+    tempList = []; // Keep a temporary array
+    // Add all lists except for the one removed:
+    for (l in lists) {
+        if (lists[l].id == id) {
+            temp = {
+                title: lists[l].title,
+                id: lists[l].id,
+                members: []
+            };
+            for (m in lists[l].members) {
+                if (lists[l].members[m] != name) {
+                    temp.members.push(lists[l].members[m]);
+                }
+            }
+            tempList.push(temp);
+        }
+        else {
+            tempList.push(lists[l]);
+        }
+    }
+        // Update lists
+    lists = tempList;
     viewLists(); // Refresh view
     updateListSelect(); // Update list select
 }
