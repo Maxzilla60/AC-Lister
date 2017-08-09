@@ -750,12 +750,6 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
-		name: "desktop",
-		personality: "Personality",
-		coffee: "Favorite Coffee",
-		birthday: "Birthday"
-	},
-	{
 		name: "Diana",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -2118,7 +2112,7 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
-		name: "Renée",
+		name: "Renee",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday"
@@ -2598,12 +2592,6 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
-		name: "Un-n",
-		personality: "Personality",
-		coffee: "Favorite Coffee",
-		birthday: "Birthday"
-	},
-	{
 		name: "Ursula",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -2759,4 +2747,4 @@ villagers = [
 		coffee: "Favorite Coffee",
 		birthday: "Birthday"
 	}
-]
+];
