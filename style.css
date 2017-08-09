@@ -75,19 +75,23 @@ input {
     padding: 0px;
 }
 
-.list {
+.lists {
     border: solid orange;
     height: 550px;
     margin-bottom: 10px;
     overflow-y: auto;
     background-color: floralwhite;
 }
-.list img:hover {
+.lists img:hover {
     background-color: orange;
     cursor: pointer;
 }
-.list img:active {
+.lists img:active {
     background-color: orangered;
+}
+.list {
+    font-weight: bold;
+    padding-bottom: 0;
 }
 .menu {
     float: right;
