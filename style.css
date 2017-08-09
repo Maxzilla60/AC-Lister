@@ -97,7 +97,6 @@ img {
 .list {
 	display: inline-block;
 	font-weight: bold;
-	padding-bottom: 0;
  }
 
 #lists input {
@@ -156,4 +155,9 @@ footer .fa:hover {background-color: rgba(255,0,0,0);}
 footer .fa:active {
     background-color: rgba(255,0,0,0);
     color: orangered;
- }
+}
+
+.viewer {
+    height: 800px;
+    padding: 0;
+}

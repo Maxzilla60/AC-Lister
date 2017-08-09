@@ -32,11 +32,11 @@ function viewLists() {
         block = "<div>";
         for (var l in lists) {
             block += "<div class=\"list\">" + lists[l].title + "</div>" +
-                "<i onclick=\"deleteList(" + lists[l].id + ")\" title=\"Delete list\" class=\"clickable fa fa-trash\" aria-hidden=\"true\"></i>" +
-                "<i onclick=\"renameList(" + lists[l].id + ")\" title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+                "<i onclick=\"deleteList(" + lists[l].id + ");\" title=\"Delete list\" class=\"clickable fa fa-trash\" aria-hidden=\"true\"></i>" +
+                "<i onclick=\"renameList(" + lists[l].id + ");\" title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
-                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "');\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
             }
             block += "</div>";
         }
@@ -59,7 +59,7 @@ function viewResults(resultList) {
         trimmedName = trimName(resultList[v].name); // Trim name for duplicate names
         
         // Create html block:
-        var block = "<div onclick=\"loadProfile('" + resultList[v].name + "')\" class=\"result\">" +
+        var block = "<div onclick=\"loadProfile('" + resultList[v].name + "');\" class=\"result\">" +
         "<img style=\"float:left\" src=\"villager_icons/" + resultList[v].name + ".gif\">" +
         "<div>" + trimmedName + "</div>" +
         "</div><br>";
@@ -80,7 +80,7 @@ function loadProfile(name) {
     var birthday = villager.birthday;
     
     // Create Font Awesome blocks:
-    var icon_wiki = "<i onclick=\"window.open('http://animalcrossing.wikia.com/wiki/" + trimmedName + "','_blank')\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" aria-hidden=\"true\"></i>";
+    var icon_wiki = "<i onclick=\"window.open('http://animalcrossing.wikia.com/wiki/" + trimmedName + "','_blank');\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" aria-hidden=\"true\"></i>";
     var icon_name = "<i title=\"Name\" class=\"fa fa-tag\" aria-hidden=\"true\"></i>";
     var icon_species = "<i title=\"Species\" class=\"fa fa-user\" aria-hidden=\"true\"></i>";
     var icon_personality = "<i title=\"Personality\" class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
@@ -349,6 +349,11 @@ function clearAll() {
         localStorage.idCount = idCount;
     }
     viewLists();
+}
+
+// Go to viewer
+function openViewer() {
+    window.location.href = "viewer.html";
 }
 
 // on page load:
