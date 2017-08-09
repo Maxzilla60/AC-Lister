@@ -2,7 +2,7 @@
 Easily assemble lists of your favorite Animal Crossing villagers!
 
 ## Where?
-[### **Right here!**](https://maxzilla60.github.io/AC-Lister/)
+### [**Right here!**](https://maxzilla60.github.io/AC-Lister/)
 
 ## Uhm, there's something wrong...
 Please go to the [issues section](https://github.com/Maxzilla60/AC-Lister/issues) and let me know!
