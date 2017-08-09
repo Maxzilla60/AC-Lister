@@ -2663,7 +2663,7 @@ villagers = [
 		name: "Scoot",
 		species: "Duck",
 		personality: "Jock",
-		coffee: "Mocha . Regular Milk . 2 Sugars",
+		coffee: "Mocha - Regular Milk - 2 Sugars",
 		birthday: "June 13"
 	},
 	{

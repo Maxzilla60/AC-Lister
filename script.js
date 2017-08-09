@@ -13,6 +13,7 @@ function generateResults(resultList) {
         document.getElementById("search_results").innerHTML += block;
     }
 }
+generateResults(villagers);
 
 /*
 <i onclick="window.open('http://animalcrossing.wikia.com/wiki/Scoot','_blank');" title="Open Wiki page" class="clickable fa fa-wikipedia-w" style="float:right;" aria-hidden="true"></i>
@@ -31,10 +32,11 @@ function generateResults(resultList) {
 */
 function loadProfile(name) {
     // TODO find in list
-    name = "Scoot";
-    var personality = "Jock";
-    var coffee = "Mocha, Regular Milk, 2 Sugars";
-    var birthday = "June 13";
+    //name = "Scoot";
+    villager = getVillager(name);
+    var personality = villager.personality;
+    var coffee = villager.coffee;
+    var birthday = villager.birthday;
     
     var icon_wiki = "<i onclick=\"window.open('http://animalcrossing.wikia.com/wiki/" + name + "','_blank')\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" style=\"float:right;\" aria-hidden=\"true\"></i>";
     var icon_name = "<i title=\"Name\" class=\"fa fa-user\" aria-hidden=\"true\"></i>";
@@ -56,6 +58,15 @@ function loadProfile(name) {
     document.getElementById("info").innerHTML = block;
 }
 
+function getVillager(name) {
+    for (v in villagers) {
+        if (villagers[v].name == name) {
+            return villagers[v];
+        }
+    }
+    return null;
+}
+
 //---
 
 function test_generateResults() {
@@ -69,4 +80,4 @@ function test_generateResults() {
         document.getElementById("search_results").innerHTML += block;
     }
 }
-test_generateResults();
+//test_generateResults();
