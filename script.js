@@ -1,3 +1,4 @@
+var idCount = 1;
 var lists = [
     {
         title: "Favorites",
@@ -24,13 +25,13 @@ function viewLists() {
     
     // Create html block:
     var block = "<div class=\"lists\">";
-    for (var list in lists) {
-        block += "<div class=\"list\">" + lists[list].title + "</div>" +
-            "<i onclick=\"deleteList(" + lists[list].id + ")\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
-            "<i onclick=\"renameList(" + lists[list].id + ")\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
-        for (var member in lists[list].members) {
-            trimmedName = trimName(lists[list].members[member]); // Trim name for duplicate names
-            block += "<img onclick=\"loadProfile('" + lists[list].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[list].members[member] + ".gif\">";
+    for (var l in lists) {
+        block += "<div class=\"list\">" + lists[l].title + "</div>" +
+            "<i onclick=\"deleteList(" + lists[l].id + ")\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
+            "<i onclick=\"renameList(" + lists[l].id + ")\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+        for (var member in lists[l].members) {
+            trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
+            block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
         }
         block += "</div>";
     }
@@ -78,8 +79,8 @@ function loadProfile(name) {
     
     // Create select options block:
     var options = "";
-    for (var list in lists) {
-        options += "<option value=\"" + lists[list].id + "\">" + lists[list].title + "</option>";
+    for (var l in lists) {
+        options += "<option value=\"" + lists[l].id + "\">" + lists[l].title + "</option>";
     }
     
     // Assemble all blocks:
@@ -149,6 +150,32 @@ function trimName(name) {
 // Show loading icon in search bar
 function searchbarLoading() {
     document.getElementById("search_results").innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
+}
+
+function newList() {
+    idCount++; // Increment global count
+    // Create new list:
+    list = {
+        title : "New List",
+        id : idCount,
+        members : []
+    };
+    lists.push(list); // Add to lists
+    viewLists(); // Refresh view
+    //renameList(idCount); // TODO: Initiate rename of list
+}
+
+function deleteList(id) {
+    tempList = [];
+    
+    for (l in lists) {
+        if (lists[l].id != id) {
+            tempList.push(lists[l]);
+        }
+    }
+    
+    lists = tempList;
+    viewLists();
 }
 
 // on page load:
