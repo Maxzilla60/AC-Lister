@@ -143,12 +143,19 @@ function newList() {
     renameList(idCount); // TODO: Initiate rename of list
 }
 // Removing a list
-function deleteList(id) {
+function deleteList(id) {    
     tempList = []; // Keep a temporary array
     // Add all lists except for the one removed:
     for (l in lists) {
         if (lists[l].id != id) {
             tempList.push(lists[l]);
+        }
+        else {
+            // Ask for confirmation:
+            var confirmDelete = confirm("Are you sure you want to delete \"" + lists[l].title + "\"?");
+            if (!confirmDelete) {
+                return;
+            }
         }
     }
     // Update lists
