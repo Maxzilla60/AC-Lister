@@ -14,7 +14,7 @@ function viewLists() {
                 "<div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
-                block += "<img title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+                block += "<img title=\"" + trimmedName + "\" src=\"../villager_icons/" + lists[l].members[member] + ".gif\">";
             }
             block += "</div>";
         }
