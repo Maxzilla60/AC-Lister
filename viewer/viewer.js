@@ -31,7 +31,7 @@ function viewLists() {
 
 // Return to main page
 function closeViewer() {
-    window.location.href = "/ac-lister/";
+    window.location.href = "/AC-Lister/";
 }
 
 // Trim '(2)' from name for duplicate names
