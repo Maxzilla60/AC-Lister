@@ -353,7 +353,7 @@ function clearAll() {
 
 // Go to viewer
 function openViewer() {
-    window.location.href = "viewer/viewer.html";
+    window.location.href = "viewer";
 }
 
 // on page load:
