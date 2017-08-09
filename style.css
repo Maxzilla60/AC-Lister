@@ -48,7 +48,7 @@ img {
 	height: 726px;
 }
 .result {
-    padding: 0px;
+    padding: 0;
 }
 .result:hover {
     background-color: orange;
@@ -61,7 +61,7 @@ img {
     color: white;
 }
 .search_area {
-	padding: 0px;
+	padding: 0;
 }
 input {
 	width: 84%;
@@ -72,7 +72,7 @@ input {
 	width: 73%;
 	min-height: 800px;
 	float: right;
-    padding: 0px;
+    padding: 0;
 }
 
 .list_area {
@@ -84,7 +84,7 @@ input {
     padding: 0;
 }
 .list_area img {
-    padding-bottom: 5px;
+    padding-bottom: 9px;
 }
 .list_area img:hover {
     background-color: orange;
@@ -99,10 +99,12 @@ input {
 .list {
     font-weight: bold;
     padding-bottom: 0;
+    display: inline-block;
 }
 .menu {
     float: right;
     padding-bottom: 0;
+    position: relative;
 }
 
 #info {
@@ -110,21 +112,21 @@ input {
     min-height: 240px;
     background-color: floralwhite;
     font-size: 16px;
+    padding: 0;
 }
 .profile-image {
     height: 215px;
     float:left;
-    padding:0;
     border-radius: 23px; /*8px*/
     /*border: solid orange;*/
+    margin: 9px;
 }
 .profile {
-    padding-left: 20;
-    padding-right: 0;
-    padding-top: auto;
-    padding-bottom: auto;
-    float: left;
-    max-height: 240px;
+    padding: 15px;
+}
+.profile .fa {
+    text-align: center;
+    min-width: 35px;
 }
 select {
     border: solid orange;
@@ -133,7 +135,7 @@ select {
 footer {
     font-size: xx-large;
     position:fixed;
-    left:0px;
+    left:0;
     bottom:10px;
     height:30px;
     width:100%;
@@ -146,4 +148,8 @@ footer .fa {
 }
 footer .fa:hover {
     background-color: rgba(255,0,0,0);
+}
+footer .fa:active {
+    background-color: rgba(255,0,0,0);
+    color: orangered;
 }
