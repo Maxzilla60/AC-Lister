@@ -1,6 +1,6 @@
-var idCount = 1;
+var idCount = -1;
 var currentProfile = "";
-var lists = [
+/*var lists = [
     {
         title: "Favorites",
         id: 0,
@@ -18,25 +18,35 @@ var lists = [
             "Goose"
         ]
     }
-];
+];*/
+var lists = [];
 
 // Display lists in list area
 function viewLists() {
     document.getElementById("lists").innerHTML = ""; // Clear list area
+    localStorage.lists = JSON.stringify(lists); // Update local storage
+    var block = "";
     
-    // Create html block:
-    var block = "<div>";
-    for (var l in lists) {
-        block += "<div class=\"list\">" + lists[l].title + "</div>" +
-            "<i onclick=\"deleteList(" + lists[l].id + ")\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
-            "<i onclick=\"renameList(" + lists[l].id + ")\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
-        for (var member in lists[l].members) {
-            trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
-            block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+    if (lists.length !== 0) {
+        // Create html block:
+        block = "<div>";
+        for (var l in lists) {
+            block += "<div class=\"list\">" + lists[l].title + "</div>" +
+                "<i onclick=\"deleteList(" + lists[l].id + ")\" title=\"Delete list\" class=\"clickable fa fa-trash\" aria-hidden=\"true\"></i>" +
+                "<i onclick=\"renameList(" + lists[l].id + ")\" title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+            for (var member in lists[l].members) {
+                trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
+                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+            }
+            block += "</div>";
         }
         block += "</div>";
     }
-    block += "</div>";
+    // In case of empty list:
+    else {
+        block = "<div style=\"padding-left:15px;color:orange;\">Press the<i onclick=\"newList();\" title=\"Add list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\" style=\"margin-left:3px;margin-right:3px;\"></i>to make a new list!</div>";
+    }
+    
     // Display block
     document.getElementById("lists").innerHTML = block;
 }
@@ -131,7 +141,7 @@ function villagerInList(name, id) {
 }
 
 // Execute a search from the search bar
-function search(query) {   
+function search(query) { 
     // In case of empty query:
     if (query == "") {
         viewResults(villagers); // Display all villagers
@@ -174,7 +184,7 @@ function addVillager(name, id) {
     for (l in lists) {
         // Add villager to members:
         if (lists[l].id == id) {
-            lists[l].members.push(name);  
+            lists[l].members.push(name);
         }
     }
     viewLists(); // Refresh view
@@ -212,6 +222,7 @@ function removeVillager(name, id) {
 // Adding a new list
 function newList() {
     idCount++; // Increment global count
+    localStorage.idCount = idCount; // Update local storage
     // Create new list:
     list = {
         title : "New List",
@@ -224,7 +235,7 @@ function newList() {
     updateListSelect(); // Update list select
 }
 // Removing a list
-function deleteList(id) {    
+function deleteList(id) {
     tempList = []; // Keep a temporary array
     // Add all lists except for the one removed:
     for (l in lists) {
@@ -269,8 +280,8 @@ function viewLists_Rename(id) {
         // Regular view:
         else {
             block += "<div class=\"list\">" + lists[l].title + "</div>" +
-                "<i onclick=\"deleteList(" + lists[l].id + ");\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
-                "<i onclick=\"renameList(" + lists[l].id + ");\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+                "<i onclick=\"deleteList(" + lists[l].id + ");\" title=\"Delete list\" class=\"clickable fa fa-trash\" aria-hidden=\"true\"></i>" +
+                "<i onclick=\"renameList(" + lists[l].id + ");\" title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
                 block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "');\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
@@ -297,7 +308,7 @@ function applyTitle(id,newTitle) {
     for (l in lists) {
         // Replace title with new title:
         if (lists[l].id == id) {
-            lists[l].title = newTitle;  
+            lists[l].title = newTitle;
         }
     }
     viewLists(); // Refresh view
@@ -327,6 +338,29 @@ function searchbarLoading() {
     document.getElementById("search_results").innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
 }
 
+// Clear everything
+function clearAll() {
+    var confirmClear = confirm("Are you sure you want to clear all lists?");
+    if (confirmClear) {
+        lists = [];
+        idCount = -1;
+        //localStorage.lists = JSON.stringify(lists);
+        localStorage.idCount = idCount;
+    }
+    viewLists();
+}
+
 // on page load:
-viewResults(villagers);
-viewLists();
+function init() {
+    viewResults(villagers);
+    // Retrieve lists from local storage:
+    if (localStorage.lists) {
+        lists = JSON.parse(localStorage.lists);
+    }
+    // Retrieve idCount from local storage:
+    if (localStorage.idCount) {
+        idCount = localStorage.idCount;
+    }
+    viewLists();
+}
+init();
