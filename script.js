@@ -27,10 +27,8 @@ function viewLists() {
             "<i onclick=\"deleteList(" + lists[list].id + ")\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
             "<i onclick=\"renameList(" + lists[list].id + ")\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
         for (var member in lists[list].members) {
-            for (var i = 0 ; i < 30 ; i++) {
             trimmedName = trimName(lists[list].members[member])
             block += "<img onclick=\"loadProfile('" + lists[list].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[list].members[member] + ".gif\">";
-            }
         }
         block += "</div>";
     }
