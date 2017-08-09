@@ -185,6 +185,7 @@ function addVillager(name, id) {
         // Add villager to members:
         if (lists[l].id == id) {
             lists[l].members.push(name);
+            lists[l].members.sort(); // Alphabetize!
         }
     }
     viewLists(); // Refresh view
