@@ -12,36 +12,20 @@
 
 		<div class="search">
 			<div class="search_area">
-				<i class="fa fa-search" aria-hidden="true"></i><input id="search_bar" onchange="search(document.getElementById('search_bar').value);" placeholder="Search (Press Enter)" type="text">
+				<i title="Search (Press Enter)" class="fa fa-search" aria-hidden="true"></i><input id="search_bar" onchange="search(document.getElementById('search_bar').value);" placeholder="Search (Press Enter)" type="text">
 			</div>
 			<div id="search_results">
 			</div>
 		</div>
 
 		<div class="main">
-            
-            <div class="lists">
+            <div class="list_area">
                 <div class="menu">
                     <i title="Add list" class="clickable fa fa-plus" aria-hidden="true"></i>
                     <i title="Save all lists" class="disabled fa fa-floppy-o" aria-hidden="true"></i>
                     <i title="Import list (Not implemented)" class="disabled fa fa-arrow-down" aria-hidden="true"></i>
                 </div>
-                <div class="list">
-                    <div style="display:inline-block;">Favorites</div>
-                    <i title="Delete list" class="clickable fa fa-minus" aria-hidden="true"></i><i title="Edit name" class="clickable fa fa-pencil" aria-hidden="true"></i>
-                    <div>
-                        <img title="Scoot" src="villager_icons/Scoot.gif">
-                        <img title="Scoot" src="villager_icons/Scoot.gif">
-                        <img title="Scoot" src="villager_icons/Scoot.gif">
-                    </div>
-                </div>
-                <div class="list">
-                    <div style="display:inline-block;">Hyrule</div>
-                    <i title="Delete list" class="clickable fa fa-minus" aria-hidden="true"></i><i title="Edit name" class="clickable fa fa-pencil" aria-hidden="true"></i>
-                    <div>
-                        <img title="Scoot" src="villager_icons/Scoot.gif">
-                        <img title="Scoot" src="villager_icons/Scoot.gif">
-                    </div>
+                <div id="lists">
                 </div>
             </div>
             

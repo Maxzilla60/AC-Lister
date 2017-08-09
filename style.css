@@ -75,19 +75,26 @@ input {
     padding: 0px;
 }
 
-.lists {
+.list_area {
     border: solid orange;
     height: 550px;
     margin-bottom: 10px;
     overflow-y: auto;
     background-color: floralwhite;
+    padding: 0;
 }
-.lists img:hover {
+.list_area img {
+    padding-bottom: 5px;
+}
+.list_area img:hover {
     background-color: orange;
     cursor: pointer;
 }
-.lists img:active {
+.list_area img:active {
     background-color: orangered;
+}
+#lists {
+    padding: 0;
 }
 .list {
     font-weight: bold;
@@ -95,7 +102,7 @@ input {
 }
 .menu {
     float: right;
-    padding: 0;
+    padding-bottom: 0;
 }
 
 #info {
