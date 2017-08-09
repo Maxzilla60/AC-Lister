@@ -106,7 +106,7 @@ function updateListSelect() {
 // Update the button for adding a villager
 function updateAddVillagerButton() {
     // Remove button:
-    if (villagerInList(currentProfile, document.getElementById('list_select').value)) {
+    if (villagerInList(currentProfile, document.getElementById("list_select").value)) {
         block = "<i onclick=\"removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>";
         document.getElementById("add_remove_button").innerHTML = block;
     }
@@ -258,22 +258,22 @@ function viewLists_Rename(id) {
     for (var l in lists) {
         // Rename view:
         if (lists[l].id == id) {
-            block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value)\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\"></input>" +
-                "<i onclick=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value)\" title=\"Edit name\" class=\"clickable fa fa-check\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+            block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\"></input>" +
+                "<i onclick=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" title=\"Edit name\" class=\"clickable fa fa-check\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
-                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "');\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
             }
             block += "</div>";
         }
         // Regular view:
         else {
             block += "<div class=\"list\">" + lists[l].title + "</div>" +
-                "<i onclick=\"deleteList(" + lists[l].id + ")\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
-                "<i onclick=\"renameList(" + lists[l].id + ")\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+                "<i onclick=\"deleteList(" + lists[l].id + ");\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
+                "<i onclick=\"renameList(" + lists[l].id + ");\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
-                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "');\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
             }
             block += "</div>";
         }
@@ -281,6 +281,9 @@ function viewLists_Rename(id) {
     block += "</div>";
     // Display block
     document.getElementById("lists").innerHTML = block;
+    // Focus rename bar & select all text:
+    document.getElementById("rename_bar").focus();
+    document.getElementById("rename_bar").select();
 }
 // Apply new title to list
 function applyTitle(id,newTitle) {

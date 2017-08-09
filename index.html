@@ -12,7 +12,7 @@
 
 		<div class="search">
 			<div class="search_area">
-				<i title="Search (Press Enter)" class="fa fa-search" aria-hidden="true"></i><input id="search_bar" onchange="search(document.getElementById('search_bar').value);" placeholder="Search (Press Enter)" type="text" autofocus>
+				<input id="search_bar" onchange="search(document.getElementById('search_bar').value);" placeholder="Search" type="text" autofocus><i onclick="search(document.getElementById('search_bar').value);" title="Search (Press Enter)" class="clickable fa fa-search" aria-hidden="true"></i>
 			</div>
 			<div id="search_results">
 			</div>
@@ -21,7 +21,7 @@
 		<div class="main">
             <div class="list_area">
                 <div class="menu">
-                    <i onclick="newList()" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></i>
+                    <i onclick="newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></i>
                     <i title="Save all lists" class="disabled fa fa-floppy-o" aria-hidden="true"></i>
                     <i title="Import list (Not implemented)" class="disabled fa fa-arrow-down" aria-hidden="true"></i>
                 </div>
