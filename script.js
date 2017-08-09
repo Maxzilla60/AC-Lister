@@ -166,16 +166,16 @@ function newList() {
 }
 
 function deleteList(id) {
-    tempList = [];
-    
+    tempList = []; // Keep a temporary array
+    // Add all lists except for the one removed:
     for (l in lists) {
         if (lists[l].id != id) {
             tempList.push(lists[l]);
         }
     }
-    
+    // Update lists
     lists = tempList;
-    viewLists();
+    viewLists(); // Refresh view
 }
 
 // on page load:
