@@ -574,6 +574,13 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
+		name: "Cece",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
 		name: "Celia",
 		species: "Species",
 		personality: "Personality",
@@ -595,6 +602,13 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
+		name: "Chai",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
 		name: "Champ",
 		species: "Species",
 		personality: "Personality",
@@ -610,6 +624,13 @@ villagers = [
 	},
 	{
 		name: "Charlise",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
+		name: "Chelsea",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -1015,7 +1036,21 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
+		name: "Epona",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
 		name: "Erik",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
+		name: "Etoile",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -1204,6 +1239,13 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
+		name: "Ganon",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
 		name: "Gaston",
 		species: "Species",
 		personality: "Personality",
@@ -1386,6 +1428,13 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
+		name: "Holden",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
 		name: "Hopkins",
 		species: "Species",
 		personality: "Personality",
@@ -1443,6 +1492,13 @@ villagers = [
 	},
 	{
 		name: "Ike",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
+		name: "Inkwell",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -1869,6 +1925,13 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
+		name: "Marty",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
 		name: "Masa",
 		species: "Species",
 		personality: "Personality",
@@ -1877,6 +1940,13 @@ villagers = [
 	},
 	{
 		name: "Mathilda",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
+		name: "Medli",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -2072,7 +2142,7 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
-		name: "O'Hare",
+		name: "OHare",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -2500,6 +2570,13 @@ villagers = [
 	},
 	{
 		name: "Ricky",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
+		name: "Rilla",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -2975,6 +3052,13 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
+		name: "Toby",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
 		name: "Tom",
 		species: "Species",
 		personality: "Personality",
@@ -3066,6 +3150,13 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
+		name: "Viche",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
 		name: "Victoria",
 		species: "Species",
 		personality: "Personality",
@@ -3151,6 +3242,13 @@ villagers = [
 	},
 	{
 		name: "Winnie",
+		species: "Species",
+		personality: "Personality",
+		coffee: "Favorite Coffee",
+		birthday: "Birthday"
+	},
+	{
+		name: "Wolf Link",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
