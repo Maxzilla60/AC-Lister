@@ -91,6 +91,7 @@ input {
 }
 .menu {
     float: right;
+    padding: 0;
 }
 
 #info {
