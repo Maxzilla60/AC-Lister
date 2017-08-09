@@ -119,10 +119,12 @@ img {
  }
 
 .profile-image {
-	border-radius: 23px; /*8px*/
+	border-radius: 27px;
 	float: left;
 	height: 215px;
-	margin: 9px; /*border: solid orange;*/
+	margin: 9px;
+    border: solid orange;
+    padding: 0;
  }
 
 .profile {padding: 15px;}
