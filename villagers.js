@@ -2464,7 +2464,7 @@ villagers = [
 		birthday: "Birthday"
 	},
 	{
-		name: "Renée",
+		name: "Renee",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",

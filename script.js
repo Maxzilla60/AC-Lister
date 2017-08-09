@@ -3,8 +3,9 @@
     <img style="float: left" src="villager_icons/scoot.gif"><div >scoot</div>
 </div><br>
 */
-function generateResults(resultList) {                
+function viewResults(resultList) {                
     document.getElementById("search_results").innerHTML = "";
+    
     for (var v in resultList) {
         block = "<div onclick=\"loadProfile('" + resultList[v].name + "')\" class=\"result\">" +
         "<img style=\"float:left\" src=\"villager_icons/" + resultList[v].name + ".gif\">" +
@@ -13,7 +14,6 @@ function generateResults(resultList) {
         document.getElementById("search_results").innerHTML += block;
     }
 }
-generateResults(villagers);
 
 /*
 <i onclick="window.open('http://animalcrossing.wikia.com/wiki/Scoot','_blank');" title="Open Wiki page" class="clickable fa fa-wikipedia-w" style="float:right;" aria-hidden="true"></i>
@@ -67,17 +67,39 @@ function getVillager(name) {
     return null;
 }
 
-//---
-
-function test_generateResults() {
-    var name = "Scoot";
-    document.getElementById("search_results").innerHTML = "";
-    for (var i = 0 ; i < 15 ; i++) {
-        block = "<div onclick=\"loadProfile('" + name + "')\" class=\"result\">" +
-        "<img style=\"float:left\" src=\"villager_icons/" + name + ".gif\">" +
-        "<div>" + name + "</div>" +
-        "</div><br>";
-        document.getElementById("search_results").innerHTML += block;
+function search(query) {    
+    if (query == "") {
+        viewResults(villagers);
+        return;
     }
+    
+    query = query.toLowerCase();
+    var results = [];
+    
+    // Name
+    for (v in villagers) {
+        if (villagers[v].name.toLowerCase().includes(query)) {
+            results.push(villagers[v]);
+        }
+    }
+    // Personality
+    for (v in villagers) {
+        if (villagers[v].personality.toLowerCase().includes(query)) {
+            results.push(villagers[v]);
+        }
+    }
+    // Species
+    for (v in villagers) {
+        if (villagers[v].species.toLowerCase().includes(query)) {
+            results.push(villagers[v]);
+        }
+    }
+    
+    viewResults(results);
 }
-//test_generateResults();
+
+function searchbarLoading() {
+    document.getElementById("search_results").innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
+}
+
+viewResults(villagers);

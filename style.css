@@ -60,7 +60,7 @@ img {
 .result:hover div {
     color: white;
 }
-.search_bar {
+.search_area {
 	padding: 0px;
 }
 input {
@@ -108,11 +108,11 @@ input {
     /*border: solid orange;*/
 }
 .profile {
-    padding-left: 0;
+    padding-left: 20;
     padding-right: 0;
     padding-top: auto;
     padding-bottom: auto;
-    float: right;
+    float: left;
     max-height: 240px;
 }
 select {

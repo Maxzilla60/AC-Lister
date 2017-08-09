@@ -11,8 +11,8 @@
 		</div>
 
 		<div class="search">
-			<div class="search_bar">
-				<i class="fa fa-search" aria-hidden="true"></i><input placeholder="Search..." type="text">
+			<div class="search_area">
+				<i class="fa fa-search" aria-hidden="true"></i><input id="search_bar" onchange="search(document.getElementById('search_bar').value);" placeholder="Search (Press Enter)" type="text">
 			</div>
 			<div id="search_results">
 			</div>
