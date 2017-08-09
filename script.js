@@ -59,8 +59,8 @@ function viewResults(resultList) {
 
 // Display villager profile
 function loadProfile(name) {
-    villager = getVillager(name); // Get villager json
-    trimmedName = trimName(name); // Trim name for duplicate names
+    var villager = getVillager(name); // Get villager json
+    var trimmedName = trimName(name); // Trim name for duplicate names
     // Get values from json:
     var species = villager.species;
     var personality = villager.personality;
@@ -74,17 +74,11 @@ function loadProfile(name) {
     var icon_personality = "<i title=\"Personality\" class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
     var icon_coffee = "<i title=\"Favorite coffee\" class=\"fa fa-coffee\" aria-hidden=\"true\"></i>";
     var icon_birthday = "<i title=\"Birthday\" class=\"fa fa-birthday-cake\" aria-hidden=\"true\"></i>";
-    var icon_add = "<i onclick=\"addVillager('" + name + "');\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i>";
+    var icon_add = "<i id=\"add_button\" onclick=\"addVillager('" + name + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i>";
     var br = "<br>";
     
-    // Create select options block:
-    var options = "";
-    for (var l in lists) {
-        options += "<option value=\"" + lists[l].id + "\">" + lists[l].title + "</option>";
-    }
-    
     // Assemble all blocks:
-    block = "<div class=\"menu\"><select>" + options + "</select> " + icon_add + "</div>" +
+    block = "<div class=\"menu\"><select id=\"list_select\"></select> " + icon_add + "</div>" +
         "<img src=\"villager_heads/wip.jpg\" class=\"profile-image\">" + "<div class=\"profile\">" +
         icon_name + trimmedName + br +
         icon_species + species + br +
@@ -94,6 +88,25 @@ function loadProfile(name) {
         icon_wiki + "</div>";
     // Display block
     document.getElementById("info").innerHTML = block;
+    updateListSelect(); // Update list select
+}
+
+// Update the select for selecting a list
+function updateListSelect() {
+    // Create select options block:
+    var options = "";
+    for (var l in lists) {
+        options += "<option value=\"" + lists[l].id + "\">" + lists[l].title + "</option>";
+    }
+    document.getElementById("list_select").innerHTML = options;
+    updateAddVillagerButton();
+}
+// Update the button for adding a villager
+function updateAddVillagerButton() {
+    /*// Change to minus Font Awesome
+    document.getElementById('add_button').className = document.getElementById('add_button').className.replace('fa-plus','fa-minus');
+    // Set onclick event
+    document.getElementById('add_button').onclick = removeVillager();*/
 }
 
 // Execute a search from the search bar
@@ -129,6 +142,23 @@ function search(query) {
     viewResults(results); // Display results
 }
 
+function addVillager(name, id) {
+    // In case of an empty name:
+    if (name == "") {
+        return;
+    }
+    
+    // Go through list and find:
+    for (l in lists) {
+        // Replace title with new title:
+        if (lists[l].id == id) {
+            lists[l].members.push(name);  
+        }
+    }
+    viewLists(); // Refresh view
+    updateListSelect(); // Update list select
+}
+
 // Adding a new list
 function newList() {
     idCount++; // Increment global count
@@ -141,6 +171,7 @@ function newList() {
     lists.push(list); // Add to lists
     viewLists(); // Refresh view
     renameList(idCount); // TODO: Initiate rename of list
+    updateListSelect(); // Update list select
 }
 // Removing a list
 function deleteList(id) {    
@@ -161,6 +192,7 @@ function deleteList(id) {
     // Update lists
     lists = tempList;
     viewLists(); // Refresh view
+    updateListSelect(); // Update list select
 }
 
 // Renaming a list
@@ -208,18 +240,15 @@ function applyTitle(id,newTitle) {
         return;
     }
     
-    tempList = []; // Keep a temporary array
-    // Add all lists:
+    // Go through list and find:
     for (l in lists) {
         // Replace title with new title:
         if (lists[l].id == id) {
             lists[l].title = newTitle;  
         }
-        tempList.push(lists[l]);
     }
-    // Update lists
-    lists = tempList;
     viewLists(); // Refresh view
+    updateListSelect(); // Update list select
 }
 
 // Find villager in json list
