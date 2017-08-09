@@ -63,7 +63,7 @@ img {
 .search_area {
 	padding: 0;
 }
-input {
+.search input {
 	width: 84%;
     border: solid orange;
 }
@@ -101,6 +101,11 @@ input {
     padding-bottom: 0;
     display: inline-block;
 }
+#lists input {
+	width: 450px;
+    border: solid orange;
+}
+
 .menu {
     float: right;
     padding-bottom: 0;

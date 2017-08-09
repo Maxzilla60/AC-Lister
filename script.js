@@ -24,7 +24,7 @@ function viewLists() {
     document.getElementById("lists").innerHTML = ""; // Clear list area
     
     // Create html block:
-    var block = "<div class=\"lists\">";
+    var block = "<div>";
     for (var l in lists) {
         block += "<div class=\"list\">" + lists[l].title + "</div>" +
             "<i onclick=\"deleteList(" + lists[l].id + ")\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
@@ -96,16 +96,6 @@ function loadProfile(name) {
     document.getElementById("info").innerHTML = block;
 }
 
-// Find villager in json list
-function getVillager(name) {
-    for (v in villagers) {
-        if (villagers[v].name == name) {
-            return villagers[v];
-        }
-    }
-    return null;
-}
-
 // Execute a search from the search bar
 function search(query) {   
     // In case of empty query:
@@ -139,19 +129,7 @@ function search(query) {
     viewResults(results); // Display results
 }
 
-// Trim '(2)' from name for duplicate names
-function trimName(name) {
-    if (name.includes("(2)")) {
-        return name.replace(" (2)", "");
-    }
-    return name;
-}
-
-// Show loading icon in search bar
-function searchbarLoading() {
-    document.getElementById("search_results").innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
-}
-
+// Adding a new list
 function newList() {
     idCount++; // Increment global count
     // Create new list:
@@ -162,9 +140,9 @@ function newList() {
     };
     lists.push(list); // Add to lists
     viewLists(); // Refresh view
-    //renameList(idCount); // TODO: Initiate rename of list
+    renameList(idCount); // TODO: Initiate rename of list
 }
-
+// Removing a list
 function deleteList(id) {
     tempList = []; // Keep a temporary array
     // Add all lists except for the one removed:
@@ -176,6 +154,88 @@ function deleteList(id) {
     // Update lists
     lists = tempList;
     viewLists(); // Refresh view
+}
+
+// Renaming a list
+function renameList(id) {
+    viewLists_Rename(id);
+}
+// Display lists with renaming input for given id
+function viewLists_Rename(id) {
+    document.getElementById("lists").innerHTML = ""; // Clear list area
+    
+    // Create html block:
+    var block = "<div>";
+    for (var l in lists) {
+        // Rename view:
+        if (lists[l].id == id) {
+            block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value)\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\"></input>" +
+                "<i onclick=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value)\" title=\"Edit name\" class=\"clickable fa fa-check\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+            for (var member in lists[l].members) {
+                trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
+                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+            }
+            block += "</div>";
+        }
+        // Regular view:
+        else {
+            block += "<div class=\"list\">" + lists[l].title + "</div>" +
+                "<i onclick=\"deleteList(" + lists[l].id + ")\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
+                "<i onclick=\"renameList(" + lists[l].id + ")\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+            for (var member in lists[l].members) {
+                trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
+                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+            }
+            block += "</div>";
+        }
+    }
+    block += "</div>";
+    // Display block
+    document.getElementById("lists").innerHTML = block;
+}
+// Apply new title to list
+function applyTitle(id,newTitle) {
+    // In case of an empty name:
+    if (newTitle == "") {
+        viewLists();
+        return;
+    }
+    
+    tempList = []; // Keep a temporary array
+    // Add all lists:
+    for (l in lists) {
+        // Replace title with new title:
+        if (lists[l].id == id) {
+            lists[l].title = newTitle;  
+        }
+        tempList.push(lists[l]);
+    }
+    // Update lists
+    lists = tempList;
+    viewLists(); // Refresh view
+}
+
+// Find villager in json list
+function getVillager(name) {
+    for (v in villagers) {
+        if (villagers[v].name == name) {
+            return villagers[v];
+        }
+    }
+    return null;
+}
+
+// Trim '(2)' from name for duplicate names
+function trimName(name) {
+    if (name.includes("(2)")) {
+        return name.replace(" (2)", "");
+    }
+    return name;
+}
+
+// Show loading icon in search bar
+function searchbarLoading() {
+    document.getElementById("search_results").innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
 }
 
 // on page load:
