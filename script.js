@@ -18,22 +18,24 @@ var lists = [
     }
 ];
 
+// Display lists in list area
 function viewLists() {
-    document.getElementById("lists").innerHTML = "";
+    document.getElementById("lists").innerHTML = ""; // Clear list area
     
+    // Create html block:
     var block = "<div class=\"lists\">";
     for (var list in lists) {
         block += "<div class=\"list\">" + lists[list].title + "</div>" +
             "<i onclick=\"deleteList(" + lists[list].id + ")\"  title=\"Delete list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>" +
             "<i onclick=\"renameList(" + lists[list].id + ")\"  title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
         for (var member in lists[list].members) {
-            trimmedName = trimName(lists[list].members[member])
+            trimmedName = trimName(lists[list].members[member]); // Trim name for duplicate names
             block += "<img onclick=\"loadProfile('" + lists[list].members[member] + "')\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[list].members[member] + ".gif\">";
         }
         block += "</div>";
     }
     block += "</div>";
-    
+    // Display block
     document.getElementById("lists").innerHTML = block;
 }
 
