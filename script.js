@@ -56,12 +56,12 @@ function viewResults(resultList) {
     document.getElementById("search_results").innerHTML = ""; // Clear results bar
     
     for (var v in resultList) {
-        trimmedName = trimName(resultList[v].name); // Trim name for duplicate names
+        //trimmedName = trimName(resultList[v].name); // Trim name for duplicate names
         
         // Create html block:
-        var block = "<div onclick=\"loadProfile('" + resultList[v].name + "');\" class=\"result\">" +
-        "<img style=\"float:left\" src=\"villager_icons/" + resultList[v].name + ".gif\">" +
-        "<div>" + trimmedName + "</div>" +
+        var block = "<div onclick=\"loadProfile('" + resultList[v].icon + "');\" class=\"result\">" +
+        "<img style=\"float:left\" src=\"villager_icons/" + resultList[v].icon + ".gif\">" +
+        "<div>" + resultList[v].name + "</div>" +
         "</div><br>";
         // Display block
         document.getElementById("search_results").innerHTML += block;
@@ -69,30 +69,32 @@ function viewResults(resultList) {
 }
 
 // Display villager profile
-function loadProfile(name) {
-    currentProfile = name;
-    var villager = getVillager(name); // Get villager json
-    var trimmedName = trimName(name); // Trim name for duplicate names
+function loadProfile(icon) {
+    currentProfile = icon;
+    var villager = getVillager(icon); // Get villager json
+    //var trimmedName = trimName(name); // Trim name for duplicate names
     // Get values from json:
+    var name = villager.name;
     var species = villager.species;
     var personality = villager.personality;
     var coffee = villager.coffee;
     var birthday = villager.birthday;
+    var wiki = villager.wiki;
     
     // Create Font Awesome blocks:
-    var icon_wiki = "<i onclick=\"window.open('http://animalcrossing.wikia.com/wiki/" + trimmedName + "','_blank');\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" aria-hidden=\"true\"></i>";
+    var icon_wiki = "<i onclick=\"window.open('" + wiki + "','_blank');\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" aria-hidden=\"true\"></i>";
     var icon_name = "<i title=\"Name\" class=\"fa fa-tag\" aria-hidden=\"true\"></i>";
     var icon_species = "<i title=\"Species\" class=\"fa fa-user\" aria-hidden=\"true\"></i>";
     var icon_personality = "<i title=\"Personality\" class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
     var icon_coffee = "<i title=\"Favorite coffee\" class=\"fa fa-coffee\" aria-hidden=\"true\"></i>";
     var icon_birthday = "<i title=\"Birthday\" class=\"fa fa-birthday-cake\" aria-hidden=\"true\"></i>";
-    var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><i onclick=\"addVillager('" + name + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i></div>";
+    var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><i onclick=\"addVillager('" + icon + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i></div>";
     var br = "<br>";
     
     // Assemble all blocks:
     block = "<div class=\"menu\"><select id=\"list_select\" onchange=\"updateAddVillagerButton();\"></select> " + icon_add + "</div>" +
         "<img src=\"villager_heads/wip.jpg\" class=\"profile-image\">" + "<div class=\"profile\">" +
-        icon_name + trimmedName + br +
+        icon_name + name + br +
         icon_species + species + br +
         icon_personality + personality + br +
         icon_coffee + coffee + br +
@@ -319,7 +321,7 @@ function applyTitle(id,newTitle) {
 // Find villager in json list
 function getVillager(name) {
     for (v in villagers) {
-        if (villagers[v].name == name) {
+        if (villagers[v].icon == name) {
             return villagers[v];
         }
     }
