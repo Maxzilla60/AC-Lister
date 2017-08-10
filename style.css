@@ -82,6 +82,14 @@ img {
 	overflow-y: auto;
 	padding: 0;
  }
+#viewer_list_area {
+	background-color: floralwhite;
+	border: solid orange;
+	min-height: 800px;
+	margin-bottom: 10px;
+	overflow-y: auto;
+	padding: 0;
+ }
 
 .list_area img {padding-bottom: 9px;}
 
