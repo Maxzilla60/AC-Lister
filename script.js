@@ -77,6 +77,7 @@ function loadProfile(icon) {
     //var trimmedName = trimName(name); // Trim name for duplicate names
     // Get values from json:
     var name = villager.name;
+    var head = villager.head;
     var species = villager.species;
     var personality = villager.personality;
     var coffee = villager.coffee;
@@ -95,7 +96,7 @@ function loadProfile(icon) {
     
     // Assemble all blocks:
     block = "<div class=\"menu\"><select id=\"list_select\" onchange=\"updateAddVillagerButton();\"></select> " + icon_add + "</div>" +
-        "<img src=\"villager_heads/wip.jpg\" class=\"profile-image\">" + "<div class=\"profile\">" +
+        "<img src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">" +
         icon_name + name + br +
         icon_species + species + br +
         icon_personality + personality + br +

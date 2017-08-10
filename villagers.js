@@ -3932,7 +3932,7 @@ villagers = [
 	{
 		name: "Scoot",
 		icon: "Scoot",
-		head: "wip.jpg",
+		head: "Scoot.jpg",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
