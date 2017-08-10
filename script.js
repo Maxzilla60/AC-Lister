@@ -1,5 +1,6 @@
 var idCount = -1;
 var currentProfile = "";
+var currentListSelect = -1;
 /*var lists = [
     {
         title: "Favorites",
@@ -71,6 +72,7 @@ function viewResults(resultList) {
 // Display villager profile
 function loadProfile(icon) {
     currentProfile = icon;
+    currentListSelect = document.getElementById("list_select").value;
     var villager = getVillager(icon); // Get villager json
     //var trimmedName = trimName(name); // Trim name for duplicate names
     // Get values from json:
@@ -110,7 +112,12 @@ function updateListSelect() {
     // Create select options block:
     var options = "";
     for (var l in lists) {
-        options += "<option value=\"" + lists[l].id + "\">" + lists[l].title + "</option>";
+        if (lists[l].id == currentListSelect) {
+            options += "<option value=\"" + lists[l].id + "\"selected>" + lists[l].title + "</option>";
+        }
+        else {
+            options += "<option value=\"" + lists[l].id + "\">" + lists[l].title + "</option>";
+        }
     }
     document.getElementById("list_select").innerHTML = options;
     updateAddVillagerButton();
@@ -177,6 +184,8 @@ function search(query) {
 
 // Add villager to list
 function addVillager(name, id) {
+    currentListSelect = document.getElementById("list_select").value;
+    
     // In case of an empty name:
     if (name == "") {
         return;
@@ -195,6 +204,8 @@ function addVillager(name, id) {
 }
 // Remove villager from list
 function removeVillager(name, id) {
+    currentListSelect = document.getElementById("list_select").value;
+    
     tempList = []; // Keep a temporary array
     // Add all lists:
     for (l in lists) {
