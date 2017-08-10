@@ -3934,7 +3934,7 @@ villagers = [
 		id: "Scoot",
 		head: "Scoot.jpg",
 		species: "Duck",
-		personality: "Personality",
+		personality: "Jock",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
 		wiki: "http://animalcrossing.wikia.com/wiki/Scoot"
