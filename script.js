@@ -1,25 +1,7 @@
+// Global variables:
 var idCount = -1;
 var currentProfile = "";
 var currentListSelect = -1;
-/*var lists = [
-    {
-        title: "Favorites",
-        id: 0,
-        members: [
-            "Scoot",
-            "Simon",
-            "Petunia (2)"
-        ]
-    },
-    {
-        title: "Hyrule",
-        id: 1,
-        members: [
-            "Peanut",
-            "Goose"
-        ]
-    }
-];*/
 var lists = [];
 
 // Display lists in list area
@@ -61,8 +43,8 @@ function viewResults(resultList) {
         //trimmedName = trimName(resultList[v].name); // Trim name for duplicate names
         
         // Create html block:
-        block += "<div onclick=\"loadProfile('" + resultList[v].icon + "');\" class=\"result\">" +
-        "<img style=\"float:left\" src=\"villager_icons/" + resultList[v].icon + ".gif\">" +
+        block += "<div onclick=\"loadProfile('" + resultList[v].id + "');\" class=\"result\">" +
+        "<img style=\"float:left\" src=\"villager_icons/" + resultList[v].id + ".gif\">" +
         "<div>" + resultList[v].name + "</div>" +
         "</div><br>";
     }
@@ -72,10 +54,10 @@ function viewResults(resultList) {
 }
 
 // Display villager profile
-function loadProfile(icon) {
-    currentProfile = icon;
+function loadProfile(id) {
+    currentProfile = id;
     currentListSelect = document.getElementById("list_select").value;
-    var villager = getVillager(icon); // Get villager json
+    var villager = getVillager(id); // Get villager json
     //var trimmedName = trimName(name); // Trim name for duplicate names
     // Get values from json:
     var name = villager.name;
@@ -93,7 +75,7 @@ function loadProfile(icon) {
     var icon_personality = "<i title=\"Personality\" class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
     var icon_coffee = "<i title=\"Favorite coffee\" class=\"fa fa-coffee\" aria-hidden=\"true\"></i>";
     var icon_birthday = "<i title=\"Birthday\" class=\"fa fa-birthday-cake\" aria-hidden=\"true\"></i>";
-    var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><i onclick=\"addVillager('" + icon + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i></div>";
+    var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><i onclick=\"addVillager('" + id + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i></div>";
     var br = "<br>";
     
     // Assemble all blocks:
@@ -335,7 +317,7 @@ function applyTitle(id,newTitle) {
 // Find villager in json list
 function getVillager(name) {
     for (v in villagers) {
-        if (villagers[v].icon == name) {
+        if (villagers[v].id == name) {
             return villagers[v];
         }
     }

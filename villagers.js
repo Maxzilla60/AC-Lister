@@ -1,7 +1,7 @@
 villagers = [
 	{
 		name: "Ace",
-		icon: "Ace",
+		id: "Ace",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -11,7 +11,7 @@ villagers = [
 	},
 	{
 		name: "Admiral",
-		icon: "Admiral",
+		id: "Admiral",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -21,7 +21,7 @@ villagers = [
 	},
 	{
 		name: "Agent S",
-		icon: "Agent S",
+		id: "Agent S",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -31,7 +31,7 @@ villagers = [
 	},
 	{
 		name: "Agnes",
-		icon: "Agnes",
+		id: "Agnes",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -41,7 +41,7 @@ villagers = [
 	},
 	{
 		name: "Aisle",
-		icon: "Aisle",
+		id: "Aisle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -51,7 +51,7 @@ villagers = [
 	},
 	{
 		name: "Al",
-		icon: "Al",
+		id: "Al",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -61,7 +61,7 @@ villagers = [
 	},
 	{
 		name: "Alfonso",
-		icon: "Alfonso",
+		id: "Alfonso",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -71,7 +71,7 @@ villagers = [
 	},
 	{
 		name: "Alice",
-		icon: "Alice",
+		id: "Alice",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -81,7 +81,7 @@ villagers = [
 	},
 	{
 		name: "Alli",
-		icon: "Alli",
+		id: "Alli",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -91,7 +91,7 @@ villagers = [
 	},
 	{
 		name: "Amelia",
-		icon: "Amelia",
+		id: "Amelia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -101,7 +101,7 @@ villagers = [
 	},
 	{
 		name: "Anabelle",
-		icon: "Anabelle",
+		id: "Anabelle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -111,7 +111,7 @@ villagers = [
 	},
 	{
 		name: "Analogue",
-		icon: "Analogue",
+		id: "Analogue",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -121,7 +121,7 @@ villagers = [
 	},
 	{
 		name: "Anchovy",
-		icon: "Anchovy",
+		id: "Anchovy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -131,7 +131,7 @@ villagers = [
 	},
 	{
 		name: "Angus",
-		icon: "Angus",
+		id: "Angus",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -141,7 +141,7 @@ villagers = [
 	},
 	{
 		name: "Anicotti",
-		icon: "Anicotti",
+		id: "Anicotti",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -151,7 +151,7 @@ villagers = [
 	},
 	{
 		name: "Ankha",
-		icon: "Ankha",
+		id: "Ankha",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -161,7 +161,7 @@ villagers = [
 	},
 	{
 		name: "Annalisa",
-		icon: "Annalisa",
+		id: "Annalisa",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -171,7 +171,7 @@ villagers = [
 	},
 	{
 		name: "Annalise",
-		icon: "Annalise",
+		id: "Annalise",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -181,7 +181,7 @@ villagers = [
 	},
 	{
 		name: "Antonio",
-		icon: "Antonio",
+		id: "Antonio",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -191,7 +191,7 @@ villagers = [
 	},
 	{
 		name: "Apollo",
-		icon: "Apollo",
+		id: "Apollo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -201,7 +201,7 @@ villagers = [
 	},
 	{
 		name: "Apple",
-		icon: "Apple",
+		id: "Apple",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -211,7 +211,7 @@ villagers = [
 	},
 	{
 		name: "Astrid",
-		icon: "Astrid",
+		id: "Astrid",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -221,7 +221,7 @@ villagers = [
 	},
 	{
 		name: "Aurora",
-		icon: "Aurora",
+		id: "Aurora",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -231,7 +231,7 @@ villagers = [
 	},
 	{
 		name: "Ava",
-		icon: "Ava",
+		id: "Ava",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -241,7 +241,7 @@ villagers = [
 	},
 	{
 		name: "Avery",
-		icon: "Avery",
+		id: "Avery",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -251,7 +251,7 @@ villagers = [
 	},
 	{
 		name: "Axel",
-		icon: "Axel",
+		id: "Axel",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -261,7 +261,7 @@ villagers = [
 	},
 	{
 		name: "Aziz",
-		icon: "Aziz",
+		id: "Aziz",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -271,7 +271,7 @@ villagers = [
 	},
 	{
 		name: "Baabara",
-		icon: "Baabara",
+		id: "Baabara",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -281,7 +281,7 @@ villagers = [
 	},
 	{
 		name: "Bam",
-		icon: "Bam",
+		id: "Bam",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -291,7 +291,7 @@ villagers = [
 	},
 	{
 		name: "Bangle",
-		icon: "Bangle",
+		id: "Bangle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -301,7 +301,7 @@ villagers = [
 	},
 	{
 		name: "Barold",
-		icon: "Barold",
+		id: "Barold",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -311,7 +311,7 @@ villagers = [
 	},
 	{
 		name: "Bea",
-		icon: "Bea",
+		id: "Bea",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -321,7 +321,7 @@ villagers = [
 	},
 	{
 		name: "Beardo",
-		icon: "Beardo",
+		id: "Beardo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -331,7 +331,7 @@ villagers = [
 	},
 	{
 		name: "Beau",
-		icon: "Beau",
+		id: "Beau",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -341,7 +341,7 @@ villagers = [
 	},
 	{
 		name: "Becky",
-		icon: "Becky",
+		id: "Becky",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -351,7 +351,7 @@ villagers = [
 	},
 	{
 		name: "Bella",
-		icon: "Bella",
+		id: "Bella",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -361,7 +361,7 @@ villagers = [
 	},
 	{
 		name: "Belle",
-		icon: "Belle",
+		id: "Belle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -371,7 +371,7 @@ villagers = [
 	},
 	{
 		name: "Benedict",
-		icon: "Benedict",
+		id: "Benedict",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -381,7 +381,7 @@ villagers = [
 	},
 	{
 		name: "Benjamin",
-		icon: "Benjamin",
+		id: "Benjamin",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -391,7 +391,7 @@ villagers = [
 	},
 	{
 		name: "Bertha",
-		icon: "Bertha",
+		id: "Bertha",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -401,7 +401,7 @@ villagers = [
 	},
 	{
 		name: "Bessie",
-		icon: "Bessie",
+		id: "Bessie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -411,7 +411,7 @@ villagers = [
 	},
 	{
 		name: "Bettina",
-		icon: "Bettina",
+		id: "Bettina",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -421,7 +421,7 @@ villagers = [
 	},
 	{
 		name: "Betty",
-		icon: "Betty",
+		id: "Betty",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -431,7 +431,7 @@ villagers = [
 	},
 	{
 		name: "Bianca",
-		icon: "Bianca",
+		id: "Bianca",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -441,7 +441,7 @@ villagers = [
 	},
 	{
 		name: "Biff",
-		icon: "Biff",
+		id: "Biff",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -451,7 +451,7 @@ villagers = [
 	},
 	{
 		name: "Big Top",
-		icon: "Big Top",
+		id: "Big Top",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -461,7 +461,7 @@ villagers = [
 	},
 	{
 		name: "Bill",
-		icon: "Bill",
+		id: "Bill",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -471,7 +471,7 @@ villagers = [
 	},
 	{
 		name: "Billy",
-		icon: "Billy",
+		id: "Billy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -481,7 +481,7 @@ villagers = [
 	},
 	{
 		name: "Biskit",
-		icon: "Biskit",
+		id: "Biskit",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -491,7 +491,7 @@ villagers = [
 	},
 	{
 		name: "Bitty",
-		icon: "Bitty",
+		id: "Bitty",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -501,7 +501,7 @@ villagers = [
 	},
 	{
 		name: "Blaire",
-		icon: "Blaire",
+		id: "Blaire",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -511,7 +511,7 @@ villagers = [
 	},
 	{
 		name: "Blanche",
-		icon: "Blanche",
+		id: "Blanche",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -521,8 +521,8 @@ villagers = [
 	},
 	{
 		name: "Bluebear",
-		icon: "Bluebear",
-		head: "wip.jpg",
+		id: "Bluebear",
+		head: "Bluebear.jpg",
 		species: "Species",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
@@ -531,7 +531,7 @@ villagers = [
 	},
 	{
 		name: "Bob",
-		icon: "Bob",
+		id: "Bob",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -541,7 +541,7 @@ villagers = [
 	},
 	{
 		name: "Bonbon",
-		icon: "Bonbon",
+		id: "Bonbon",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -551,7 +551,7 @@ villagers = [
 	},
 	{
 		name: "Bones",
-		icon: "Bones",
+		id: "Bones",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -561,7 +561,7 @@ villagers = [
 	},
 	{
 		name: "Boomer",
-		icon: "Boomer",
+		id: "Boomer",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -571,7 +571,7 @@ villagers = [
 	},
 	{
 		name: "Boone",
-		icon: "Boone",
+		id: "Boone",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -581,7 +581,7 @@ villagers = [
 	},
 	{
 		name: "Boots",
-		icon: "Boots",
+		id: "Boots",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -591,7 +591,7 @@ villagers = [
 	},
 	{
 		name: "Boris",
-		icon: "Boris",
+		id: "Boris",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -601,7 +601,7 @@ villagers = [
 	},
 	{
 		name: "Bow",
-		icon: "Bow",
+		id: "Bow",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -611,7 +611,7 @@ villagers = [
 	},
 	{
 		name: "Boyd",
-		icon: "Boyd",
+		id: "Boyd",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -621,7 +621,7 @@ villagers = [
 	},
 	{
 		name: "Bree",
-		icon: "Bree",
+		id: "Bree",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -631,7 +631,7 @@ villagers = [
 	},
 	{
 		name: "Broccolo",
-		icon: "Broccolo",
+		id: "Broccolo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -641,7 +641,7 @@ villagers = [
 	},
 	{
 		name: "Broffina",
-		icon: "Broffina",
+		id: "Broffina",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -651,7 +651,7 @@ villagers = [
 	},
 	{
 		name: "Bruce",
-		icon: "Bruce",
+		id: "Bruce",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -661,7 +661,7 @@ villagers = [
 	},
 	{
 		name: "Bubbles",
-		icon: "Bubbles",
+		id: "Bubbles",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -671,7 +671,7 @@ villagers = [
 	},
 	{
 		name: "Buck",
-		icon: "Buck",
+		id: "Buck",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -681,7 +681,7 @@ villagers = [
 	},
 	{
 		name: "Bud",
-		icon: "Bud",
+		id: "Bud",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -691,7 +691,7 @@ villagers = [
 	},
 	{
 		name: "Bunnie",
-		icon: "Bunnie",
+		id: "Bunnie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -701,7 +701,7 @@ villagers = [
 	},
 	{
 		name: "Butch",
-		icon: "Butch",
+		id: "Butch",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -711,7 +711,7 @@ villagers = [
 	},
 	{
 		name: "Buzz",
-		icon: "Buzz",
+		id: "Buzz",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -721,7 +721,7 @@ villagers = [
 	},
 	{
 		name: "Cally",
-		icon: "Cally",
+		id: "Cally",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -731,7 +731,7 @@ villagers = [
 	},
 	{
 		name: "Camofrog",
-		icon: "Camofrog",
+		id: "Camofrog",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -741,7 +741,7 @@ villagers = [
 	},
 	{
 		name: "Canberra",
-		icon: "Canberra",
+		id: "Canberra",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -751,7 +751,7 @@ villagers = [
 	},
 	{
 		name: "Candi",
-		icon: "Candi",
+		id: "Candi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -761,7 +761,7 @@ villagers = [
 	},
 	{
 		name: "Carmen",
-		icon: "Carmen (2)",
+		id: "Carmen (2)",
 		head: "wip.jpg",
 		species: "Mouse",
 		personality: "Personality",
@@ -771,7 +771,7 @@ villagers = [
 	},
 	{
 		name: "Carmen",
-		icon: "Carmen",
+		id: "Carmen",
 		head: "wip.jpg",
 		species: "Rabbit",
 		personality: "Personality",
@@ -781,7 +781,7 @@ villagers = [
 	},
 	{
 		name: "Caroline",
-		icon: "Caroline",
+		id: "Caroline",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -791,7 +791,7 @@ villagers = [
 	},
 	{
 		name: "Carrie",
-		icon: "Carrie",
+		id: "Carrie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -801,7 +801,7 @@ villagers = [
 	},
 	{
 		name: "Carrot",
-		icon: "Carrot",
+		id: "Carrot",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -811,7 +811,7 @@ villagers = [
 	},
 	{
 		name: "Cashmere",
-		icon: "Cashmere",
+		id: "Cashmere",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -821,7 +821,7 @@ villagers = [
 	},
 	{
 		name: "Cece",
-		icon: "Cece",
+		id: "Cece",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -831,7 +831,7 @@ villagers = [
 	},
 	{
 		name: "Celia",
-		icon: "Celia",
+		id: "Celia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -841,7 +841,7 @@ villagers = [
 	},
 	{
 		name: "Cesar",
-		icon: "Cesar",
+		id: "Cesar",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -851,7 +851,7 @@ villagers = [
 	},
 	{
 		name: "Chadder",
-		icon: "Chadder",
+		id: "Chadder",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -861,7 +861,7 @@ villagers = [
 	},
 	{
 		name: "Chai",
-		icon: "Chai",
+		id: "Chai",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -871,7 +871,7 @@ villagers = [
 	},
 	{
 		name: "Champ",
-		icon: "Champ",
+		id: "Champ",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -881,7 +881,7 @@ villagers = [
 	},
 	{
 		name: "Champagne",
-		icon: "Champagne",
+		id: "Champagne",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -891,7 +891,7 @@ villagers = [
 	},
 	{
 		name: "Charlise",
-		icon: "Charlise",
+		id: "Charlise",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -901,7 +901,7 @@ villagers = [
 	},
 	{
 		name: "Chelsea",
-		icon: "Chelsea",
+		id: "Chelsea",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -911,7 +911,7 @@ villagers = [
 	},
 	{
 		name: "Cheri",
-		icon: "Cheri",
+		id: "Cheri",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -921,7 +921,7 @@ villagers = [
 	},
 	{
 		name: "Cherry",
-		icon: "Cherry",
+		id: "Cherry",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -931,7 +931,7 @@ villagers = [
 	},
 	{
 		name: "Chester",
-		icon: "Chester",
+		id: "Chester",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -941,7 +941,7 @@ villagers = [
 	},
 	{
 		name: "Chevre",
-		icon: "Chevre",
+		id: "Chevre",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -951,7 +951,7 @@ villagers = [
 	},
 	{
 		name: "Chico",
-		icon: "Chico",
+		id: "Chico",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -961,7 +961,7 @@ villagers = [
 	},
 	{
 		name: "Chief",
-		icon: "Chief",
+		id: "Chief",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -971,7 +971,7 @@ villagers = [
 	},
 	{
 		name: "Chops",
-		icon: "Chops",
+		id: "Chops",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -981,7 +981,7 @@ villagers = [
 	},
 	{
 		name: "Chow",
-		icon: "Chow",
+		id: "Chow",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -991,7 +991,7 @@ villagers = [
 	},
 	{
 		name: "Chrissy",
-		icon: "Chrissy",
+		id: "Chrissy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1001,7 +1001,7 @@ villagers = [
 	},
 	{
 		name: "Chuck",
-		icon: "Chuck",
+		id: "Chuck",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1011,7 +1011,7 @@ villagers = [
 	},
 	{
 		name: "Clara",
-		icon: "Clara",
+		id: "Clara",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1021,7 +1021,7 @@ villagers = [
 	},
 	{
 		name: "Claude",
-		icon: "Claude",
+		id: "Claude",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1031,7 +1031,7 @@ villagers = [
 	},
 	{
 		name: "Claudia",
-		icon: "Claudia",
+		id: "Claudia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1041,7 +1041,7 @@ villagers = [
 	},
 	{
 		name: "Clay",
-		icon: "Clay",
+		id: "Clay",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1051,7 +1051,7 @@ villagers = [
 	},
 	{
 		name: "Cleo",
-		icon: "Cleo",
+		id: "Cleo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1061,7 +1061,7 @@ villagers = [
 	},
 	{
 		name: "Clyde",
-		icon: "Clyde",
+		id: "Clyde",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1071,7 +1071,7 @@ villagers = [
 	},
 	{
 		name: "Coach",
-		icon: "Coach",
+		id: "Coach",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1081,7 +1081,7 @@ villagers = [
 	},
 	{
 		name: "Cobb",
-		icon: "Cobb",
+		id: "Cobb",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1091,7 +1091,7 @@ villagers = [
 	},
 	{
 		name: "Coco",
-		icon: "Coco",
+		id: "Coco",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1101,7 +1101,7 @@ villagers = [
 	},
 	{
 		name: "Cole",
-		icon: "Cole",
+		id: "Cole",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1111,7 +1111,7 @@ villagers = [
 	},
 	{
 		name: "Colton",
-		icon: "Colton",
+		id: "Colton",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1121,7 +1121,7 @@ villagers = [
 	},
 	{
 		name: "Cookie",
-		icon: "Cookie",
+		id: "Cookie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1131,7 +1131,7 @@ villagers = [
 	},
 	{
 		name: "Cousteau",
-		icon: "Cousteau",
+		id: "Cousteau",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1141,7 +1141,7 @@ villagers = [
 	},
 	{
 		name: "Cranston",
-		icon: "Cranston",
+		id: "Cranston",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1151,7 +1151,7 @@ villagers = [
 	},
 	{
 		name: "Croque",
-		icon: "Croque",
+		id: "Croque",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1161,7 +1161,7 @@ villagers = [
 	},
 	{
 		name: "Cube",
-		icon: "Cube",
+		id: "Cube",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1171,7 +1171,7 @@ villagers = [
 	},
 	{
 		name: "Cupcake",
-		icon: "Cupcake",
+		id: "Cupcake",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1181,7 +1181,7 @@ villagers = [
 	},
 	{
 		name: "Curlos",
-		icon: "Curlos",
+		id: "Curlos",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1191,7 +1191,7 @@ villagers = [
 	},
 	{
 		name: "Curly",
-		icon: "Curly",
+		id: "Curly",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1201,7 +1201,7 @@ villagers = [
 	},
 	{
 		name: "Curt",
-		icon: "Curt",
+		id: "Curt",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1211,7 +1211,7 @@ villagers = [
 	},
 	{
 		name: "Cyrano",
-		icon: "Cyrano",
+		id: "Cyrano",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1221,7 +1221,7 @@ villagers = [
 	},
 	{
 		name: "Daisy",
-		icon: "Daisy",
+		id: "Daisy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1231,9 +1231,9 @@ villagers = [
 	},
 	{
 		name: "Deena",
-		icon: "Deena",
-		head: "wip.jpg",
-		species: "Species",
+		id: "Deena",
+		head: "Deena.jpg",
+		species: "Duck",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
@@ -1241,7 +1241,7 @@ villagers = [
 	},
 	{
 		name: "Deirdre",
-		icon: "Deirdre",
+		id: "Deirdre",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1251,7 +1251,7 @@ villagers = [
 	},
 	{
 		name: "Del",
-		icon: "Del",
+		id: "Del",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1261,7 +1261,7 @@ villagers = [
 	},
 	{
 		name: "Deli",
-		icon: "Deli",
+		id: "Deli",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1271,7 +1271,7 @@ villagers = [
 	},
 	{
 		name: "Derwin",
-		icon: "Derwin",
+		id: "Derwin",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1281,7 +1281,7 @@ villagers = [
 	},
 	{
 		name: "desktop",
-		icon: "desktop",
+		id: "desktop",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1291,7 +1291,7 @@ villagers = [
 	},
 	{
 		name: "Diana",
-		icon: "Diana",
+		id: "Diana",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1301,7 +1301,7 @@ villagers = [
 	},
 	{
 		name: "Diva",
-		icon: "Diva",
+		id: "Diva",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1311,7 +1311,7 @@ villagers = [
 	},
 	{
 		name: "Dizzy",
-		icon: "Dizzy",
+		id: "Dizzy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1321,7 +1321,7 @@ villagers = [
 	},
 	{
 		name: "Dobie",
-		icon: "Dobie",
+		id: "Dobie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1331,7 +1331,7 @@ villagers = [
 	},
 	{
 		name: "Doc",
-		icon: "Doc",
+		id: "Doc",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1341,7 +1341,7 @@ villagers = [
 	},
 	{
 		name: "Dora",
-		icon: "Dora",
+		id: "Dora",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1351,7 +1351,7 @@ villagers = [
 	},
 	{
 		name: "Dotty",
-		icon: "Dotty",
+		id: "Dotty",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1361,7 +1361,7 @@ villagers = [
 	},
 	{
 		name: "Dozer",
-		icon: "Dozer",
+		id: "Dozer",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1371,7 +1371,7 @@ villagers = [
 	},
 	{
 		name: "Drago",
-		icon: "Drago",
+		id: "Drago",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1381,9 +1381,9 @@ villagers = [
 	},
 	{
 		name: "Drake",
-		icon: "Drake",
-		head: "wip.jpg",
-		species: "Species",
+		id: "Drake",
+		head: "Drake.jpg",
+		species: "Duck",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
@@ -1391,7 +1391,7 @@ villagers = [
 	},
 	{
 		name: "Dritt",
-		icon: "Dritt",
+		id: "Dritt",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1401,7 +1401,7 @@ villagers = [
 	},
 	{
 		name: "Ed",
-		icon: "Ed",
+		id: "Ed",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1411,7 +1411,7 @@ villagers = [
 	},
 	{
 		name: "Egbert",
-		icon: "Egbert",
+		id: "Egbert",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1421,7 +1421,7 @@ villagers = [
 	},
 	{
 		name: "Elina",
-		icon: "Elina",
+		id: "Elina",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1431,7 +1431,7 @@ villagers = [
 	},
 	{
 		name: "Elise",
-		icon: "Elise",
+		id: "Elise",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1441,7 +1441,7 @@ villagers = [
 	},
 	{
 		name: "Ellie",
-		icon: "Ellie",
+		id: "Ellie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1451,7 +1451,7 @@ villagers = [
 	},
 	{
 		name: "Elmer",
-		icon: "Elmer",
+		id: "Elmer",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1461,7 +1461,7 @@ villagers = [
 	},
 	{
 		name: "Eloise",
-		icon: "Eloise",
+		id: "Eloise",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1471,7 +1471,7 @@ villagers = [
 	},
 	{
 		name: "Elvis",
-		icon: "Elvis",
+		id: "Elvis",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1481,7 +1481,7 @@ villagers = [
 	},
 	{
 		name: "Emerald",
-		icon: "Emerald",
+		id: "Emerald",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1491,7 +1491,7 @@ villagers = [
 	},
 	{
 		name: "Epona",
-		icon: "Epona",
+		id: "Epona",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1501,7 +1501,7 @@ villagers = [
 	},
 	{
 		name: "Erik",
-		icon: "Erik",
+		id: "Erik",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1511,7 +1511,7 @@ villagers = [
 	},
 	{
 		name: "Etoile",
-		icon: "Etoile",
+		id: "Etoile",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1521,7 +1521,7 @@ villagers = [
 	},
 	{
 		name: "Eugene",
-		icon: "Eugene",
+		id: "Eugene",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1531,7 +1531,7 @@ villagers = [
 	},
 	{
 		name: "Eunice",
-		icon: "Eunice",
+		id: "Eunice",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1541,7 +1541,7 @@ villagers = [
 	},
 	{
 		name: "Faith",
-		icon: "Faith",
+		id: "Faith",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1551,7 +1551,7 @@ villagers = [
 	},
 	{
 		name: "Fang",
-		icon: "Fang",
+		id: "Fang",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1561,7 +1561,7 @@ villagers = [
 	},
 	{
 		name: "Fauna",
-		icon: "Fauna",
+		id: "Fauna",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1571,7 +1571,7 @@ villagers = [
 	},
 	{
 		name: "Felicity",
-		icon: "Felicity",
+		id: "Felicity",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1581,7 +1581,7 @@ villagers = [
 	},
 	{
 		name: "Felyne",
-		icon: "Felyne",
+		id: "Felyne",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1591,7 +1591,7 @@ villagers = [
 	},
 	{
 		name: "Filbert",
-		icon: "Filbert",
+		id: "Filbert",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1601,7 +1601,7 @@ villagers = [
 	},
 	{
 		name: "Filly",
-		icon: "Filly",
+		id: "Filly",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1611,7 +1611,7 @@ villagers = [
 	},
 	{
 		name: "Flash",
-		icon: "Flash",
+		id: "Flash",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1621,7 +1621,7 @@ villagers = [
 	},
 	{
 		name: "Flip",
-		icon: "Flip",
+		id: "Flip",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1631,7 +1631,7 @@ villagers = [
 	},
 	{
 		name: "Flo",
-		icon: "Flo",
+		id: "Flo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1641,7 +1641,7 @@ villagers = [
 	},
 	{
 		name: "Flora",
-		icon: "Flora",
+		id: "Flora",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1651,7 +1651,7 @@ villagers = [
 	},
 	{
 		name: "Flossie",
-		icon: "Flossie",
+		id: "Flossie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1661,7 +1661,7 @@ villagers = [
 	},
 	{
 		name: "Flurry",
-		icon: "Flurry",
+		id: "Flurry",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1671,7 +1671,7 @@ villagers = [
 	},
 	{
 		name: "Francine",
-		icon: "Francine",
+		id: "Francine",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1681,7 +1681,7 @@ villagers = [
 	},
 	{
 		name: "Frank",
-		icon: "Frank",
+		id: "Frank",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1691,7 +1691,7 @@ villagers = [
 	},
 	{
 		name: "Freckles",
-		icon: "Freckles",
+		id: "Freckles",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1701,7 +1701,7 @@ villagers = [
 	},
 	{
 		name: "Freya",
-		icon: "Freya",
+		id: "Freya",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1711,7 +1711,7 @@ villagers = [
 	},
 	{
 		name: "Friga",
-		icon: "Friga",
+		id: "Friga",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1721,7 +1721,7 @@ villagers = [
 	},
 	{
 		name: "Frita",
-		icon: "Frita",
+		id: "Frita",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1731,7 +1731,7 @@ villagers = [
 	},
 	{
 		name: "Frobert",
-		icon: "Frobert",
+		id: "Frobert",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1741,7 +1741,7 @@ villagers = [
 	},
 	{
 		name: "Fruity",
-		icon: "Fruity",
+		id: "Fruity",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1751,7 +1751,7 @@ villagers = [
 	},
 	{
 		name: "Fuchsia",
-		icon: "Fuchsia",
+		id: "Fuchsia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1761,7 +1761,7 @@ villagers = [
 	},
 	{
 		name: "Gabi",
-		icon: "Gabi",
+		id: "Gabi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1771,7 +1771,7 @@ villagers = [
 	},
 	{
 		name: "Gala",
-		icon: "Gala",
+		id: "Gala",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1781,7 +1781,7 @@ villagers = [
 	},
 	{
 		name: "Ganon",
-		icon: "Ganon",
+		id: "Ganon",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1791,7 +1791,7 @@ villagers = [
 	},
 	{
 		name: "Gaston",
-		icon: "Gaston",
+		id: "Gaston",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1801,7 +1801,7 @@ villagers = [
 	},
 	{
 		name: "Gayle",
-		icon: "Gayle",
+		id: "Gayle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1811,7 +1811,7 @@ villagers = [
 	},
 	{
 		name: "Gen",
-		icon: "Gen",
+		id: "Gen",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1821,7 +1821,7 @@ villagers = [
 	},
 	{
 		name: "Genji",
-		icon: "Genji",
+		id: "Genji",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1831,7 +1831,7 @@ villagers = [
 	},
 	{
 		name: "Gigi",
-		icon: "Gigi",
+		id: "Gigi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1841,7 +1841,7 @@ villagers = [
 	},
 	{
 		name: "Gladys",
-		icon: "Gladys",
+		id: "Gladys",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1851,7 +1851,7 @@ villagers = [
 	},
 	{
 		name: "Gloria",
-		icon: "Gloria",
+		id: "Gloria",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1861,7 +1861,7 @@ villagers = [
 	},
 	{
 		name: "Goldie",
-		icon: "Goldie",
+		id: "Goldie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1871,7 +1871,7 @@ villagers = [
 	},
 	{
 		name: "Gonzo",
-		icon: "Gonzo",
+		id: "Gonzo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1881,7 +1881,7 @@ villagers = [
 	},
 	{
 		name: "Goose",
-		icon: "Goose",
+		id: "Goose",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1891,7 +1891,7 @@ villagers = [
 	},
 	{
 		name: "Graham",
-		icon: "Graham",
+		id: "Graham",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1901,7 +1901,7 @@ villagers = [
 	},
 	{
 		name: "Greta",
-		icon: "Greta",
+		id: "Greta",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1911,7 +1911,7 @@ villagers = [
 	},
 	{
 		name: "Grizzly",
-		icon: "Grizzly",
+		id: "Grizzly",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1921,7 +1921,7 @@ villagers = [
 	},
 	{
 		name: "Groucho",
-		icon: "Groucho",
+		id: "Groucho",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1931,7 +1931,7 @@ villagers = [
 	},
 	{
 		name: "Gruff",
-		icon: "Gruff",
+		id: "Gruff",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1941,7 +1941,7 @@ villagers = [
 	},
 	{
 		name: "Gwen",
-		icon: "Gwen",
+		id: "Gwen",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1951,7 +1951,7 @@ villagers = [
 	},
 	{
 		name: "Hambo",
-		icon: "Hambo",
+		id: "Hambo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1961,7 +1961,7 @@ villagers = [
 	},
 	{
 		name: "Hamlet",
-		icon: "Hamlet",
+		id: "Hamlet",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1971,7 +1971,7 @@ villagers = [
 	},
 	{
 		name: "Hamphrey",
-		icon: "Hamphrey",
+		id: "Hamphrey",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1981,7 +1981,7 @@ villagers = [
 	},
 	{
 		name: "Hank",
-		icon: "Hank",
+		id: "Hank",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -1991,7 +1991,7 @@ villagers = [
 	},
 	{
 		name: "Hans",
-		icon: "Hans",
+		id: "Hans",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2001,7 +2001,7 @@ villagers = [
 	},
 	{
 		name: "Harry",
-		icon: "Harry",
+		id: "Harry",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2011,7 +2011,7 @@ villagers = [
 	},
 	{
 		name: "Hazel",
-		icon: "Hazel",
+		id: "Hazel",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2021,7 +2021,7 @@ villagers = [
 	},
 	{
 		name: "Hector",
-		icon: "Hector",
+		id: "Hector",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2031,7 +2031,7 @@ villagers = [
 	},
 	{
 		name: "Henry",
-		icon: "Henry",
+		id: "Henry",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2041,7 +2041,7 @@ villagers = [
 	},
 	{
 		name: "Hippeux",
-		icon: "Hippeux",
+		id: "Hippeux",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2051,7 +2051,7 @@ villagers = [
 	},
 	{
 		name: "Holden",
-		icon: "Holden",
+		id: "Holden",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2061,7 +2061,7 @@ villagers = [
 	},
 	{
 		name: "Hopkins",
-		icon: "Hopkins",
+		id: "Hopkins",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2071,7 +2071,7 @@ villagers = [
 	},
 	{
 		name: "Hopper",
-		icon: "Hopper",
+		id: "Hopper",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2081,7 +2081,7 @@ villagers = [
 	},
 	{
 		name: "Hornsby",
-		icon: "Hornsby",
+		id: "Hornsby",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2091,7 +2091,7 @@ villagers = [
 	},
 	{
 		name: "Huck",
-		icon: "Huck",
+		id: "Huck",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2101,7 +2101,7 @@ villagers = [
 	},
 	{
 		name: "Huggy",
-		icon: "Huggy",
+		id: "Huggy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2111,7 +2111,7 @@ villagers = [
 	},
 	{
 		name: "Hugh",
-		icon: "Hugh",
+		id: "Hugh",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2121,7 +2121,7 @@ villagers = [
 	},
 	{
 		name: "Iggly",
-		icon: "Iggly",
+		id: "Iggly",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2131,7 +2131,7 @@ villagers = [
 	},
 	{
 		name: "Iggy",
-		icon: "Iggy",
+		id: "Iggy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2141,7 +2141,7 @@ villagers = [
 	},
 	{
 		name: "Ike",
-		icon: "Ike",
+		id: "Ike",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2151,7 +2151,7 @@ villagers = [
 	},
 	{
 		name: "Inkwell",
-		icon: "Inkwell",
+		id: "Inkwell",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2161,7 +2161,7 @@ villagers = [
 	},
 	{
 		name: "Jacob",
-		icon: "Jacob",
+		id: "Jacob",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2171,7 +2171,7 @@ villagers = [
 	},
 	{
 		name: "Jacques",
-		icon: "Jacques",
+		id: "Jacques",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2181,7 +2181,7 @@ villagers = [
 	},
 	{
 		name: "Jambette",
-		icon: "Jambette",
+		id: "Jambette",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2191,7 +2191,7 @@ villagers = [
 	},
 	{
 		name: "Jane",
-		icon: "Jane",
+		id: "Jane",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2201,7 +2201,7 @@ villagers = [
 	},
 	{
 		name: "Jay",
-		icon: "Jay",
+		id: "Jay",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2211,7 +2211,7 @@ villagers = [
 	},
 	{
 		name: "Jeremiah",
-		icon: "Jeremiah",
+		id: "Jeremiah",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2221,7 +2221,7 @@ villagers = [
 	},
 	{
 		name: "Jitters",
-		icon: "Jitters",
+		id: "Jitters",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2231,7 +2231,7 @@ villagers = [
 	},
 	{
 		name: "Joe",
-		icon: "Joe",
+		id: "Joe",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2241,7 +2241,7 @@ villagers = [
 	},
 	{
 		name: "Joey",
-		icon: "Joey",
+		id: "Joey",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2251,7 +2251,7 @@ villagers = [
 	},
 	{
 		name: "Jubei",
-		icon: "Jubei",
+		id: "Jubei",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2261,7 +2261,7 @@ villagers = [
 	},
 	{
 		name: "Julia",
-		icon: "Julia",
+		id: "Julia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2271,7 +2271,7 @@ villagers = [
 	},
 	{
 		name: "Julian",
-		icon: "Julian",
+		id: "Julian",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2281,7 +2281,7 @@ villagers = [
 	},
 	{
 		name: "June",
-		icon: "June",
+		id: "June",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2291,7 +2291,7 @@ villagers = [
 	},
 	{
 		name: "Kabuki",
-		icon: "Kabuki",
+		id: "Kabuki",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2301,7 +2301,7 @@ villagers = [
 	},
 	{
 		name: "Katt",
-		icon: "Katt",
+		id: "Katt",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2311,7 +2311,7 @@ villagers = [
 	},
 	{
 		name: "Keaton",
-		icon: "Keaton",
+		id: "Keaton",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2321,7 +2321,7 @@ villagers = [
 	},
 	{
 		name: "Ken",
-		icon: "Ken",
+		id: "Ken",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2331,7 +2331,7 @@ villagers = [
 	},
 	{
 		name: "Ketchup",
-		icon: "Ketchup",
+		id: "Ketchup",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2341,7 +2341,7 @@ villagers = [
 	},
 	{
 		name: "Kevin",
-		icon: "Kevin",
+		id: "Kevin",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2351,7 +2351,7 @@ villagers = [
 	},
 	{
 		name: "Kid Cat",
-		icon: "Kid Cat",
+		id: "Kid Cat",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2361,9 +2361,9 @@ villagers = [
 	},
 	{
 		name: "Kidd",
-		icon: "Kidd",
-		head: "wip.jpg",
-		species: "Species",
+		id: "Kidd",
+		head: "Kidd.jpg",
+		species: "Goat",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
@@ -2371,7 +2371,7 @@ villagers = [
 	},
 	{
 		name: "Kiki",
-		icon: "Kiki",
+		id: "Kiki",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2381,7 +2381,7 @@ villagers = [
 	},
 	{
 		name: "Kit",
-		icon: "Kit",
+		id: "Kit",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2391,7 +2391,7 @@ villagers = [
 	},
 	{
 		name: "Kitt",
-		icon: "Kitt",
+		id: "Kitt",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2401,7 +2401,7 @@ villagers = [
 	},
 	{
 		name: "Kitty",
-		icon: "Kitty",
+		id: "Kitty",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2411,7 +2411,7 @@ villagers = [
 	},
 	{
 		name: "Klaus",
-		icon: "Klaus",
+		id: "Klaus",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2421,7 +2421,7 @@ villagers = [
 	},
 	{
 		name: "Knox",
-		icon: "Knox",
+		id: "Knox",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2431,7 +2431,7 @@ villagers = [
 	},
 	{
 		name: "Kody",
-		icon: "Kody",
+		id: "Kody",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2441,7 +2441,7 @@ villagers = [
 	},
 	{
 		name: "Koharu",
-		icon: "Koharu",
+		id: "Koharu",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2451,7 +2451,7 @@ villagers = [
 	},
 	{
 		name: "Kyle",
-		icon: "Kyle",
+		id: "Kyle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2461,7 +2461,7 @@ villagers = [
 	},
 	{
 		name: "Leigh",
-		icon: "Leigh",
+		id: "Leigh",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2471,7 +2471,7 @@ villagers = [
 	},
 	{
 		name: "Leonardo",
-		icon: "Leonardo",
+		id: "Leonardo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2481,7 +2481,7 @@ villagers = [
 	},
 	{
 		name: "Leopold",
-		icon: "Leopold",
+		id: "Leopold",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2491,7 +2491,7 @@ villagers = [
 	},
 	{
 		name: "Lily",
-		icon: "Lily",
+		id: "Lily",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2501,7 +2501,7 @@ villagers = [
 	},
 	{
 		name: "Limberg",
-		icon: "Limberg",
+		id: "Limberg",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2511,7 +2511,7 @@ villagers = [
 	},
 	{
 		name: "Lionel",
-		icon: "Lionel",
+		id: "Lionel",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2521,7 +2521,7 @@ villagers = [
 	},
 	{
 		name: "Liz",
-		icon: "Liz",
+		id: "Liz",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2531,7 +2531,7 @@ villagers = [
 	},
 	{
 		name: "Lobo",
-		icon: "Lobo",
+		id: "Lobo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2541,7 +2541,7 @@ villagers = [
 	},
 	{
 		name: "Lolly",
-		icon: "Lolly",
+		id: "Lolly",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2551,7 +2551,7 @@ villagers = [
 	},
 	{
 		name: "Lopez",
-		icon: "Lopez",
+		id: "Lopez",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2561,7 +2561,7 @@ villagers = [
 	},
 	{
 		name: "Louie",
-		icon: "Louie",
+		id: "Louie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2571,7 +2571,7 @@ villagers = [
 	},
 	{
 		name: "Lucha",
-		icon: "Lucha",
+		id: "Lucha",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2581,7 +2581,7 @@ villagers = [
 	},
 	{
 		name: "Lucky",
-		icon: "Lucky",
+		id: "Lucky",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2591,7 +2591,7 @@ villagers = [
 	},
 	{
 		name: "Lucy",
-		icon: "Lucy",
+		id: "Lucy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2601,7 +2601,7 @@ villagers = [
 	},
 	{
 		name: "Lulu",
-		icon: "Lulu (2)",
+		id: "Lulu (2)",
 		head: "wip.jpg",
 		species: "Hippo",
 		personality: "Personality",
@@ -2611,7 +2611,7 @@ villagers = [
 	},
 	{
 		name: "Lulu",
-		icon: "Lulu",
+		id: "Lulu",
 		head: "wip.jpg",
 		species: "Anteater",
 		personality: "Personality",
@@ -2621,7 +2621,7 @@ villagers = [
 	},
 	{
 		name: "Lyman",
-		icon: "Lyman",
+		id: "Lyman",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2631,7 +2631,7 @@ villagers = [
 	},
 	{
 		name: "Mac",
-		icon: "Mac",
+		id: "Mac",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2641,7 +2641,7 @@ villagers = [
 	},
 	{
 		name: "Madam Rosa",
-		icon: "Madam Rosa",
+		id: "Madam Rosa",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2651,7 +2651,7 @@ villagers = [
 	},
 	{
 		name: "Maddie",
-		icon: "Maddie",
+		id: "Maddie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2661,7 +2661,7 @@ villagers = [
 	},
 	{
 		name: "Maelle",
-		icon: "Maelle",
+		id: "Maelle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2671,7 +2671,7 @@ villagers = [
 	},
 	{
 		name: "Maggie",
-		icon: "Maggie",
+		id: "Maggie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2681,7 +2681,7 @@ villagers = [
 	},
 	{
 		name: "Mallary",
-		icon: "Mallary",
+		id: "Mallary",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2691,7 +2691,7 @@ villagers = [
 	},
 	{
 		name: "Maple",
-		icon: "Maple",
+		id: "Maple",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2701,7 +2701,7 @@ villagers = [
 	},
 	{
 		name: "Marcel",
-		icon: "Marcel",
+		id: "Marcel",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2711,7 +2711,7 @@ villagers = [
 	},
 	{
 		name: "Marcie",
-		icon: "Marcie",
+		id: "Marcie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2721,7 +2721,7 @@ villagers = [
 	},
 	{
 		name: "Marcy",
-		icon: "Marcy",
+		id: "Marcy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2731,7 +2731,7 @@ villagers = [
 	},
 	{
 		name: "Margie",
-		icon: "Margie",
+		id: "Margie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2741,9 +2741,9 @@ villagers = [
 	},
 	{
 		name: "Marina",
-		icon: "Marina",
-		head: "wip.jpg",
-		species: "Species",
+		id: "Marina",
+		head: "Marina.jpg",
+		species: "Octopus",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
@@ -2751,7 +2751,7 @@ villagers = [
 	},
 	{
 		name: "Marshal",
-		icon: "Marshal",
+		id: "Marshal",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2761,7 +2761,7 @@ villagers = [
 	},
 	{
 		name: "Marty",
-		icon: "Marty",
+		id: "Marty",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2771,7 +2771,7 @@ villagers = [
 	},
 	{
 		name: "Masa",
-		icon: "Masa",
+		id: "Masa",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2781,7 +2781,7 @@ villagers = [
 	},
 	{
 		name: "Mathilda",
-		icon: "Mathilda",
+		id: "Mathilda",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2791,7 +2791,7 @@ villagers = [
 	},
 	{
 		name: "Medli",
-		icon: "Medli",
+		id: "Medli",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2801,7 +2801,7 @@ villagers = [
 	},
 	{
 		name: "Megumi",
-		icon: "Megumi",
+		id: "Megumi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2811,7 +2811,7 @@ villagers = [
 	},
 	{
 		name: "Melba",
-		icon: "Melba",
+		id: "Melba",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2821,7 +2821,7 @@ villagers = [
 	},
 	{
 		name: "Meow",
-		icon: "Meow",
+		id: "Meow",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2831,7 +2831,7 @@ villagers = [
 	},
 	{
 		name: "Merengue",
-		icon: "Merengue",
+		id: "Merengue",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2841,9 +2841,9 @@ villagers = [
 	},
 	{
 		name: "Merry",
-		icon: "Merry",
-		head: "wip.jpg",
-		species: "Species",
+		id: "Merry",
+		head: "Merry.jpg",
+		species: "Cat",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
@@ -2851,7 +2851,7 @@ villagers = [
 	},
 	{
 		name: "Midge",
-		icon: "Midge",
+		id: "Midge",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2861,7 +2861,7 @@ villagers = [
 	},
 	{
 		name: "Mint",
-		icon: "Mint",
+		id: "Mint",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2871,7 +2871,7 @@ villagers = [
 	},
 	{
 		name: "Mira",
-		icon: "Mira",
+		id: "Mira",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2881,7 +2881,7 @@ villagers = [
 	},
 	{
 		name: "Miranda",
-		icon: "Miranda",
+		id: "Miranda",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2891,7 +2891,7 @@ villagers = [
 	},
 	{
 		name: "Mitzi",
-		icon: "Mitzi",
+		id: "Mitzi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2901,7 +2901,7 @@ villagers = [
 	},
 	{
 		name: "Moe",
-		icon: "Moe",
+		id: "Moe",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2911,7 +2911,7 @@ villagers = [
 	},
 	{
 		name: "Molly",
-		icon: "Molly",
+		id: "Molly",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2921,7 +2921,7 @@ villagers = [
 	},
 	{
 		name: "Monique",
-		icon: "Monique",
+		id: "Monique",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2931,7 +2931,7 @@ villagers = [
 	},
 	{
 		name: "Monty",
-		icon: "Monty",
+		id: "Monty",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2941,7 +2941,7 @@ villagers = [
 	},
 	{
 		name: "Moose",
-		icon: "Moose",
+		id: "Moose",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2951,7 +2951,7 @@ villagers = [
 	},
 	{
 		name: "Mott",
-		icon: "Mott",
+		id: "Mott",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2961,7 +2961,7 @@ villagers = [
 	},
 	{
 		name: "Muffy",
-		icon: "Muffy",
+		id: "Muffy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2971,7 +2971,7 @@ villagers = [
 	},
 	{
 		name: "Murphy",
-		icon: "Murphy",
+		id: "Murphy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2981,7 +2981,7 @@ villagers = [
 	},
 	{
 		name: "Nan",
-		icon: "Nan",
+		id: "Nan",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -2991,7 +2991,7 @@ villagers = [
 	},
 	{
 		name: "Nana",
-		icon: "Nana",
+		id: "Nana",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3001,7 +3001,7 @@ villagers = [
 	},
 	{
 		name: "Naomi",
-		icon: "Naomi",
+		id: "Naomi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3011,7 +3011,7 @@ villagers = [
 	},
 	{
 		name: "Nate",
-		icon: "Nate",
+		id: "Nate",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3021,7 +3021,7 @@ villagers = [
 	},
 	{
 		name: "Nibbles",
-		icon: "Nibbles",
+		id: "Nibbles",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3031,7 +3031,7 @@ villagers = [
 	},
 	{
 		name: "Nindori",
-		icon: "Nindori",
+		id: "Nindori",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3041,7 +3041,7 @@ villagers = [
 	},
 	{
 		name: "Nobuo",
-		icon: "Nobuo",
+		id: "Nobuo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3051,7 +3051,7 @@ villagers = [
 	},
 	{
 		name: "Norma",
-		icon: "Norma",
+		id: "Norma",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3061,7 +3061,7 @@ villagers = [
 	},
 	{
 		name: "Nosegay",
-		icon: "Nosegay",
+		id: "Nosegay",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3071,7 +3071,7 @@ villagers = [
 	},
 	{
 		name: "Octavian",
-		icon: "Octavian",
+		id: "Octavian",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3081,7 +3081,7 @@ villagers = [
 	},
 	{
 		name: "O'Hare",
-		icon: "OHare",
+		id: "OHare",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3091,7 +3091,7 @@ villagers = [
 	},
 	{
 		name: "Olaf",
-		icon: "Olaf",
+		id: "Olaf",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3101,7 +3101,7 @@ villagers = [
 	},
 	{
 		name: "Olive",
-		icon: "Olive",
+		id: "Olive",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3111,7 +3111,7 @@ villagers = [
 	},
 	{
 		name: "Olivia",
-		icon: "Olivia",
+		id: "Olivia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3121,7 +3121,7 @@ villagers = [
 	},
 	{
 		name: "Opal",
-		icon: "Opal",
+		id: "Opal",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3131,7 +3131,7 @@ villagers = [
 	},
 	{
 		name: "o",
-		icon: "o",
+		id: "o",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3141,7 +3141,7 @@ villagers = [
 	},
 	{
 		name: "Otis",
-		icon: "Otis",
+		id: "Otis",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3151,7 +3151,7 @@ villagers = [
 	},
 	{
 		name: "Oxford",
-		icon: "Oxford",
+		id: "Oxford",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3161,7 +3161,7 @@ villagers = [
 	},
 	{
 		name: "Ozzie",
-		icon: "Ozzie",
+		id: "Ozzie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3171,7 +3171,7 @@ villagers = [
 	},
 	{
 		name: "Pancetti",
-		icon: "Pancetti",
+		id: "Pancetti",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3181,7 +3181,7 @@ villagers = [
 	},
 	{
 		name: "Pango",
-		icon: "Pango",
+		id: "Pango",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3191,7 +3191,7 @@ villagers = [
 	},
 	{
 		name: "Paolo",
-		icon: "Paolo",
+		id: "Paolo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3201,7 +3201,7 @@ villagers = [
 	},
 	{
 		name: "Papi",
-		icon: "Papi",
+		id: "Papi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3211,7 +3211,7 @@ villagers = [
 	},
 	{
 		name: "Pashmina",
-		icon: "Pashmina",
+		id: "Pashmina",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3221,7 +3221,7 @@ villagers = [
 	},
 	{
 		name: "Pate",
-		icon: "Pate",
+		id: "Pate",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3231,7 +3231,7 @@ villagers = [
 	},
 	{
 		name: "Patricia",
-		icon: "Patricia",
+		id: "Patricia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3241,7 +3241,7 @@ villagers = [
 	},
 	{
 		name: "Patty",
-		icon: "Patty",
+		id: "Patty",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3251,7 +3251,7 @@ villagers = [
 	},
 	{
 		name: "Paula",
-		icon: "Paula",
+		id: "Paula",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3261,7 +3261,7 @@ villagers = [
 	},
 	{
 		name: "Peaches",
-		icon: "Peaches",
+		id: "Peaches",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3271,7 +3271,7 @@ villagers = [
 	},
 	{
 		name: "Peanut",
-		icon: "Peanut",
+		id: "Peanut",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3281,7 +3281,7 @@ villagers = [
 	},
 	{
 		name: "Pecan",
-		icon: "Pecan",
+		id: "Pecan",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3291,7 +3291,7 @@ villagers = [
 	},
 	{
 		name: "Peck",
-		icon: "Peck",
+		id: "Peck",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3301,7 +3301,7 @@ villagers = [
 	},
 	{
 		name: "Peewee",
-		icon: "Peewee",
+		id: "Peewee",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3311,7 +3311,7 @@ villagers = [
 	},
 	{
 		name: "Peggy",
-		icon: "Peggy",
+		id: "Peggy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3321,7 +3321,7 @@ villagers = [
 	},
 	{
 		name: "Pekoe",
-		icon: "Pekoe",
+		id: "Pekoe",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3331,7 +3331,7 @@ villagers = [
 	},
 	{
 		name: "Penelope",
-		icon: "Penelope",
+		id: "Penelope",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3341,7 +3341,7 @@ villagers = [
 	},
 	{
 		name: "Penny",
-		icon: "Penny",
+		id: "Penny",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3351,7 +3351,7 @@ villagers = [
 	},
 	{
 		name: "Petunia",
-		icon: "Petunia (2)",
+		id: "Petunia (2)",
 		head: "wip.jpg",
 		species: "Rhino",
 		personality: "Personality",
@@ -3361,7 +3361,7 @@ villagers = [
 	},
 	{
 		name: "Petunia",
-		icon: "Petunia",
+		id: "Petunia",
 		head: "wip.jpg",
 		species: "Cow",
 		personality: "Personality",
@@ -3371,7 +3371,7 @@ villagers = [
 	},
 	{
 		name: "Phil",
-		icon: "Phil",
+		id: "Phil",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3381,7 +3381,7 @@ villagers = [
 	},
 	{
 		name: "Phoebe",
-		icon: "Phoebe",
+		id: "Phoebe",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3391,7 +3391,7 @@ villagers = [
 	},
 	{
 		name: "Pierce",
-		icon: "Pierce",
+		id: "Pierce",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3401,7 +3401,7 @@ villagers = [
 	},
 	{
 		name: "Pierre",
-		icon: "Pierre",
+		id: "Pierre",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3411,7 +3411,7 @@ villagers = [
 	},
 	{
 		name: "Pietro",
-		icon: "Pietro",
+		id: "Pietro",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3421,7 +3421,7 @@ villagers = [
 	},
 	{
 		name: "Pigleg",
-		icon: "Pigleg",
+		id: "Pigleg",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3431,7 +3431,7 @@ villagers = [
 	},
 	{
 		name: "Pinky",
-		icon: "Pinky",
+		id: "Pinky",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3441,7 +3441,7 @@ villagers = [
 	},
 	{
 		name: "Piper",
-		icon: "Piper",
+		id: "Piper",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3451,7 +3451,7 @@ villagers = [
 	},
 	{
 		name: "Pippy",
-		icon: "Pippy",
+		id: "Pippy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3461,7 +3461,7 @@ villagers = [
 	},
 	{
 		name: "Pironkon",
-		icon: "Pironkon",
+		id: "Pironkon",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3471,7 +3471,7 @@ villagers = [
 	},
 	{
 		name: "Plucky",
-		icon: "Plucky",
+		id: "Plucky",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3481,7 +3481,7 @@ villagers = [
 	},
 	{
 		name: "Poko",
-		icon: "Poko",
+		id: "Poko",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3491,7 +3491,7 @@ villagers = [
 	},
 	{
 		name: "Pompom",
-		icon: "Pompom",
+		id: "Pompom",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3501,7 +3501,7 @@ villagers = [
 	},
 	{
 		name: "Poncho",
-		icon: "Poncho",
+		id: "Poncho",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3511,7 +3511,7 @@ villagers = [
 	},
 	{
 		name: "Poppy",
-		icon: "Poppy",
+		id: "Poppy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3521,7 +3521,7 @@ villagers = [
 	},
 	{
 		name: "Portia",
-		icon: "Portia",
+		id: "Portia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3531,7 +3531,7 @@ villagers = [
 	},
 	{
 		name: "Prince",
-		icon: "Prince",
+		id: "Prince",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3541,7 +3541,7 @@ villagers = [
 	},
 	{
 		name: "Puck",
-		icon: "Puck",
+		id: "Puck",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3551,7 +3551,7 @@ villagers = [
 	},
 	{
 		name: "Puddles",
-		icon: "Puddles",
+		id: "Puddles",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3561,7 +3561,7 @@ villagers = [
 	},
 	{
 		name: "Pudge",
-		icon: "Pudge",
+		id: "Pudge",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3571,7 +3571,7 @@ villagers = [
 	},
 	{
 		name: "Punchy",
-		icon: "Punchy",
+		id: "Punchy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3581,7 +3581,7 @@ villagers = [
 	},
 	{
 		name: "Purrl",
-		icon: "Purrl",
+		id: "Purrl",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3591,7 +3591,7 @@ villagers = [
 	},
 	{
 		name: "Queenie",
-		icon: "Queenie",
+		id: "Queenie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3601,7 +3601,7 @@ villagers = [
 	},
 	{
 		name: "Quetzal",
-		icon: "Quetzal",
+		id: "Quetzal",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3611,7 +3611,7 @@ villagers = [
 	},
 	{
 		name: "Quillson",
-		icon: "Quillson",
+		id: "Quillson",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3621,7 +3621,7 @@ villagers = [
 	},
 	{
 		name: "Raddle",
-		icon: "Raddle",
+		id: "Raddle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3631,7 +3631,7 @@ villagers = [
 	},
 	{
 		name: "Rasher",
-		icon: "Rasher",
+		id: "Rasher",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3641,7 +3641,7 @@ villagers = [
 	},
 	{
 		name: "Renée",
-		icon: "Renee",
+		id: "Renee",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3651,7 +3651,7 @@ villagers = [
 	},
 	{
 		name: "Rex",
-		icon: "Rex",
+		id: "Rex",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3661,7 +3661,7 @@ villagers = [
 	},
 	{
 		name: "Rhoda",
-		icon: "Rhoda",
+		id: "Rhoda",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3671,7 +3671,7 @@ villagers = [
 	},
 	{
 		name: "Rhonda",
-		icon: "Rhonda",
+		id: "Rhonda",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3681,7 +3681,7 @@ villagers = [
 	},
 	{
 		name: "Ribbot",
-		icon: "Ribbot",
+		id: "Ribbot",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3691,7 +3691,7 @@ villagers = [
 	},
 	{
 		name: "Ricky",
-		icon: "Ricky",
+		id: "Ricky",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3701,7 +3701,7 @@ villagers = [
 	},
 	{
 		name: "Rilla",
-		icon: "Rilla",
+		id: "Rilla",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3711,7 +3711,7 @@ villagers = [
 	},
 	{
 		name: "Rio",
-		icon: "Rio",
+		id: "Rio",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3721,7 +3721,7 @@ villagers = [
 	},
 	{
 		name: "Rizzo",
-		icon: "Rizzo",
+		id: "Rizzo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3731,7 +3731,7 @@ villagers = [
 	},
 	{
 		name: "Roald",
-		icon: "Roald",
+		id: "Roald",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3741,7 +3741,7 @@ villagers = [
 	},
 	{
 		name: "Robin",
-		icon: "Robin",
+		id: "Robin",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3751,7 +3751,7 @@ villagers = [
 	},
 	{
 		name: "Rocco",
-		icon: "Rocco",
+		id: "Rocco",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3761,7 +3761,7 @@ villagers = [
 	},
 	{
 		name: "Rocket",
-		icon: "Rocket",
+		id: "Rocket",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3771,7 +3771,7 @@ villagers = [
 	},
 	{
 		name: "Rod",
-		icon: "Rod",
+		id: "Rod",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3781,7 +3781,7 @@ villagers = [
 	},
 	{
 		name: "Rodeo",
-		icon: "Rodeo",
+		id: "Rodeo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3791,7 +3791,7 @@ villagers = [
 	},
 	{
 		name: "Rodney",
-		icon: "Rodney",
+		id: "Rodney",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3801,7 +3801,7 @@ villagers = [
 	},
 	{
 		name: "Rolf",
-		icon: "Rolf",
+		id: "Rolf",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3811,7 +3811,7 @@ villagers = [
 	},
 	{
 		name: "Rollo",
-		icon: "Rollo",
+		id: "Rollo",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3821,7 +3821,7 @@ villagers = [
 	},
 	{
 		name: "Rooney",
-		icon: "Rooney",
+		id: "Rooney",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3831,7 +3831,7 @@ villagers = [
 	},
 	{
 		name: "Rory",
-		icon: "Rory",
+		id: "Rory",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3841,7 +3841,7 @@ villagers = [
 	},
 	{
 		name: "Roscoe",
-		icon: "Roscoe",
+		id: "Roscoe",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3851,7 +3851,7 @@ villagers = [
 	},
 	{
 		name: "Rosie",
-		icon: "Rosie",
+		id: "Rosie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3861,7 +3861,7 @@ villagers = [
 	},
 	{
 		name: "Rowan",
-		icon: "Rowan",
+		id: "Rowan",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3871,7 +3871,7 @@ villagers = [
 	},
 	{
 		name: "Ruby",
-		icon: "Ruby",
+		id: "Ruby",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3881,7 +3881,7 @@ villagers = [
 	},
 	{
 		name: "Rudy",
-		icon: "Rudy",
+		id: "Rudy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3891,7 +3891,7 @@ villagers = [
 	},
 	{
 		name: "Sally",
-		icon: "Sally",
+		id: "Sally",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3901,7 +3901,7 @@ villagers = [
 	},
 	{
 		name: "Samson",
-		icon: "Samson",
+		id: "Samson",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3911,7 +3911,7 @@ villagers = [
 	},
 	{
 		name: "Sandy",
-		icon: "Sandy",
+		id: "Sandy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3921,7 +3921,7 @@ villagers = [
 	},
 	{
 		name: "Savannah",
-		icon: "Savannah",
+		id: "Savannah",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3931,7 +3931,7 @@ villagers = [
 	},
 	{
 		name: "Scoot",
-		icon: "Scoot",
+		id: "Scoot",
 		head: "Scoot.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3941,7 +3941,7 @@ villagers = [
 	},
 	{
 		name: "Shari",
-		icon: "Shari",
+		id: "Shari",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3951,7 +3951,7 @@ villagers = [
 	},
 	{
 		name: "Sheldon",
-		icon: "Sheldon",
+		id: "Sheldon",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3961,7 +3961,7 @@ villagers = [
 	},
 	{
 		name: "Shep",
-		icon: "Shep",
+		id: "Shep",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3971,7 +3971,7 @@ villagers = [
 	},
 	{
 		name: "Shinabiru",
-		icon: "Shinabiru",
+		id: "Shinabiru",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3981,7 +3981,7 @@ villagers = [
 	},
 	{
 		name: "Shoukichi",
-		icon: "Shoukichi",
+		id: "Shoukichi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -3991,7 +3991,7 @@ villagers = [
 	},
 	{
 		name: "Simon",
-		icon: "Simon",
+		id: "Simon",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4001,7 +4001,7 @@ villagers = [
 	},
 	{
 		name: "Skye",
-		icon: "Skye",
+		id: "Skye",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4011,7 +4011,7 @@ villagers = [
 	},
 	{
 		name: "Sly",
-		icon: "Sly",
+		id: "Sly",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4021,7 +4021,7 @@ villagers = [
 	},
 	{
 		name: "Snake",
-		icon: "Snake",
+		id: "Snake",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4031,7 +4031,7 @@ villagers = [
 	},
 	{
 		name: "Snooty",
-		icon: "Snooty",
+		id: "Snooty",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4041,7 +4041,7 @@ villagers = [
 	},
 	{
 		name: "Soleil",
-		icon: "Soleil",
+		id: "Soleil",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4051,7 +4051,7 @@ villagers = [
 	},
 	{
 		name: "Sparro",
-		icon: "Sparro",
+		id: "Sparro",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4061,7 +4061,7 @@ villagers = [
 	},
 	{
 		name: "Spike",
-		icon: "Spike",
+		id: "Spike",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4071,7 +4071,7 @@ villagers = [
 	},
 	{
 		name: "Spork",
-		icon: "Spork",
+		id: "Spork",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4081,7 +4081,7 @@ villagers = [
 	},
 	{
 		name: "Sprinkle",
-		icon: "Sprinkle",
+		id: "Sprinkle",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4091,7 +4091,7 @@ villagers = [
 	},
 	{
 		name: "Sprocket",
-		icon: "Sprocket",
+		id: "Sprocket",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4101,7 +4101,7 @@ villagers = [
 	},
 	{
 		name: "Static",
-		icon: "Static",
+		id: "Static",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4111,7 +4111,7 @@ villagers = [
 	},
 	{
 		name: "Stella",
-		icon: "Stella",
+		id: "Stella",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4121,7 +4121,7 @@ villagers = [
 	},
 	{
 		name: "Sterling",
-		icon: "Sterling",
+		id: "Sterling",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4131,7 +4131,7 @@ villagers = [
 	},
 	{
 		name: "Stinky",
-		icon: "Stinky",
+		id: "Stinky",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4141,7 +4141,7 @@ villagers = [
 	},
 	{
 		name: "Stitches",
-		icon: "Stitches",
+		id: "Stitches",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4151,7 +4151,7 @@ villagers = [
 	},
 	{
 		name: "Stu",
-		icon: "Stu",
+		id: "Stu",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4161,7 +4161,7 @@ villagers = [
 	},
 	{
 		name: "Sue E.",
-		icon: "Sue E.",
+		id: "Sue E.",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4171,7 +4171,7 @@ villagers = [
 	},
 	{
 		name: "Sunny",
-		icon: "Sunny",
+		id: "Sunny",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4181,7 +4181,7 @@ villagers = [
 	},
 	{
 		name: "Sven",
-		icon: "Sven",
+		id: "Sven",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4191,7 +4191,7 @@ villagers = [
 	},
 	{
 		name: "Sydney",
-		icon: "Sydney",
+		id: "Sydney",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4201,7 +4201,7 @@ villagers = [
 	},
 	{
 		name: "Sylvana",
-		icon: "Sylvana",
+		id: "Sylvana",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4211,7 +4211,7 @@ villagers = [
 	},
 	{
 		name: "Sylvia",
-		icon: "Sylvia",
+		id: "Sylvia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4221,7 +4221,7 @@ villagers = [
 	},
 	{
 		name: "T-Bone",
-		icon: "T-Bone",
+		id: "T-Bone",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4231,7 +4231,7 @@ villagers = [
 	},
 	{
 		name: "Tabby",
-		icon: "Tabby",
+		id: "Tabby",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4241,7 +4241,7 @@ villagers = [
 	},
 	{
 		name: "Tad",
-		icon: "Tad",
+		id: "Tad",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4251,7 +4251,7 @@ villagers = [
 	},
 	{
 		name: "Tammi",
-		icon: "Tammi",
+		id: "Tammi",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4261,7 +4261,7 @@ villagers = [
 	},
 	{
 		name: "Tammy",
-		icon: "Tammy",
+		id: "Tammy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4271,7 +4271,7 @@ villagers = [
 	},
 	{
 		name: "Tangy",
-		icon: "Tangy",
+		id: "Tangy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4281,7 +4281,7 @@ villagers = [
 	},
 	{
 		name: "Tank",
-		icon: "Tank",
+		id: "Tank",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4291,7 +4291,7 @@ villagers = [
 	},
 	{
 		name: "Tarou",
-		icon: "Tarou",
+		id: "Tarou",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4301,7 +4301,7 @@ villagers = [
 	},
 	{
 		name: "Tasha",
-		icon: "Tasha",
+		id: "Tasha",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4311,7 +4311,7 @@ villagers = [
 	},
 	{
 		name: "Teddy",
-		icon: "Teddy",
+		id: "Teddy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4321,7 +4321,7 @@ villagers = [
 	},
 	{
 		name: "Tex",
-		icon: "Tex",
+		id: "Tex",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4331,7 +4331,7 @@ villagers = [
 	},
 	{
 		name: "Tia",
-		icon: "Tia",
+		id: "Tia",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4341,7 +4341,7 @@ villagers = [
 	},
 	{
 		name: "Tiara",
-		icon: "Tiara",
+		id: "Tiara",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4351,7 +4351,7 @@ villagers = [
 	},
 	{
 		name: "Tiffany",
-		icon: "Tiffany",
+		id: "Tiffany",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4361,7 +4361,7 @@ villagers = [
 	},
 	{
 		name: "Timbra",
-		icon: "Timbra",
+		id: "Timbra",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4371,7 +4371,7 @@ villagers = [
 	},
 	{
 		name: "Tipper",
-		icon: "Tipper",
+		id: "Tipper",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4381,7 +4381,7 @@ villagers = [
 	},
 	{
 		name: "Toby",
-		icon: "Toby",
+		id: "Toby",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4391,7 +4391,7 @@ villagers = [
 	},
 	{
 		name: "Tom",
-		icon: "Tom",
+		id: "Tom",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4401,7 +4401,7 @@ villagers = [
 	},
 	{
 		name: "Truffles",
-		icon: "Truffles",
+		id: "Truffles",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4411,7 +4411,7 @@ villagers = [
 	},
 	{
 		name: "Tucker",
-		icon: "Tucker",
+		id: "Tucker",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4421,7 +4421,7 @@ villagers = [
 	},
 	{
 		name: "Tutu",
-		icon: "Tutu",
+		id: "Tutu",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4431,7 +4431,7 @@ villagers = [
 	},
 	{
 		name: "Twiggy",
-		icon: "Twiggy",
+		id: "Twiggy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4441,7 +4441,7 @@ villagers = [
 	},
 	{
 		name: "Twirp",
-		icon: "Twirp",
+		id: "Twirp",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4451,7 +4451,7 @@ villagers = [
 	},
 	{
 		name: "Tybalt",
-		icon: "Tybalt",
+		id: "Tybalt",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4461,7 +4461,7 @@ villagers = [
 	},
 	{
 		name: "Ursula",
-		icon: "Ursula",
+		id: "Ursula",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4471,7 +4471,7 @@ villagers = [
 	},
 	{
 		name: "Valise",
-		icon: "Valise",
+		id: "Valise",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4481,7 +4481,7 @@ villagers = [
 	},
 	{
 		name: "Velma",
-		icon: "Velma",
+		id: "Velma",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4491,7 +4491,7 @@ villagers = [
 	},
 	{
 		name: "Verdun",
-		icon: "Verdun",
+		id: "Verdun",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4501,7 +4501,7 @@ villagers = [
 	},
 	{
 		name: "Vesta",
-		icon: "Vesta",
+		id: "Vesta",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4511,7 +4511,7 @@ villagers = [
 	},
 	{
 		name: "Vic",
-		icon: "Vic",
+		id: "Vic",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4521,7 +4521,7 @@ villagers = [
 	},
 	{
 		name: "Viche",
-		icon: "Viche",
+		id: "Viche",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4531,7 +4531,7 @@ villagers = [
 	},
 	{
 		name: "Victoria",
-		icon: "Victoria",
+		id: "Victoria",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4541,7 +4541,7 @@ villagers = [
 	},
 	{
 		name: "Violet",
-		icon: "Violet",
+		id: "Violet",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4551,7 +4551,7 @@ villagers = [
 	},
 	{
 		name: "Vivian",
-		icon: "Vivian",
+		id: "Vivian",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4561,7 +4561,7 @@ villagers = [
 	},
 	{
 		name: "Vladimir",
-		icon: "Vladimir",
+		id: "Vladimir",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4571,7 +4571,7 @@ villagers = [
 	},
 	{
 		name: "Wade",
-		icon: "Wade",
+		id: "Wade",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4581,7 +4581,7 @@ villagers = [
 	},
 	{
 		name: "Walker",
-		icon: "Walker",
+		id: "Walker",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4591,7 +4591,7 @@ villagers = [
 	},
 	{
 		name: "Walt",
-		icon: "Walt",
+		id: "Walt",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4601,7 +4601,7 @@ villagers = [
 	},
 	{
 		name: "Wart Jr",
-		icon: "Wart Jr",
+		id: "Wart Jr",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4611,7 +4611,7 @@ villagers = [
 	},
 	{
 		name: "Weber",
-		icon: "Weber",
+		id: "Weber",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4621,7 +4621,7 @@ villagers = [
 	},
 	{
 		name: "Wendy",
-		icon: "Wendy",
+		id: "Wendy",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4631,7 +4631,7 @@ villagers = [
 	},
 	{
 		name: "Whitney",
-		icon: "Whitney",
+		id: "Whitney",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4641,7 +4641,7 @@ villagers = [
 	},
 	{
 		name: "Willow",
-		icon: "Willow",
+		id: "Willow",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4651,7 +4651,7 @@ villagers = [
 	},
 	{
 		name: "Winnie",
-		icon: "Winnie",
+		id: "Winnie",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4661,7 +4661,7 @@ villagers = [
 	},
 	{
 		name: "Wolf Link",
-		icon: "Wolf Link",
+		id: "Wolf Link",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4671,7 +4671,7 @@ villagers = [
 	},
 	{
 		name: "Wolfgang",
-		icon: "Wolfgang",
+		id: "Wolfgang",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4681,7 +4681,7 @@ villagers = [
 	},
 	{
 		name: "Woolio",
-		icon: "Woolio",
+		id: "Woolio",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4691,7 +4691,7 @@ villagers = [
 	},
 	{
 		name: "Yodel",
-		icon: "Yodel",
+		id: "Yodel",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4701,7 +4701,7 @@ villagers = [
 	},
 	{
 		name: "Yuka",
-		icon: "Yuka",
+		id: "Yuka",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4711,7 +4711,7 @@ villagers = [
 	},
 	{
 		name: "Zell",
-		icon: "Zell",
+		id: "Zell",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4721,7 +4721,7 @@ villagers = [
 	},
 	{
 		name: "Zoe",
-		icon: "Zoe",
+		id: "Zoe",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
@@ -4731,7 +4731,7 @@ villagers = [
 	},
 	{
 		name: "Zucker",
-		icon: "Zucker",
+		id: "Zucker",
 		head: "wip.jpg",
 		species: "Species",
 		personality: "Personality",
