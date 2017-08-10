@@ -47,6 +47,7 @@ function exportImage() {
     // Temporarily hide menu items
     document.getElementsByClassName("menu")[0].style.display = "none";
     
+    // Turn viewer-list-area into canvas and save:
     html2canvas($("#viewer_list_area"), {
         onrendered: function(canvas) {
             canvas.toBlob(function(blob) {

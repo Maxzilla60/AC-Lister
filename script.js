@@ -55,18 +55,20 @@ function viewLists() {
 // Display search results in results bar
 function viewResults(resultList) {
     document.getElementById("search_results").innerHTML = ""; // Clear results bar
+    var block = "";
     
     for (var v in resultList) {
         //trimmedName = trimName(resultList[v].name); // Trim name for duplicate names
         
         // Create html block:
-        var block = "<div onclick=\"loadProfile('" + resultList[v].icon + "');\" class=\"result\">" +
+        block += "<div onclick=\"loadProfile('" + resultList[v].icon + "');\" class=\"result\">" +
         "<img style=\"float:left\" src=\"villager_icons/" + resultList[v].icon + ".gif\">" +
         "<div>" + resultList[v].name + "</div>" +
         "</div><br>";
-        // Display block
-        document.getElementById("search_results").innerHTML += block;
     }
+    
+    // Display block
+    document.getElementById("search_results").innerHTML = block;
 }
 
 // Display villager profile
