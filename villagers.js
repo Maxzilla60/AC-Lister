@@ -1280,16 +1280,6 @@ villagers = [
 		wiki: "http://animalcrossing.wikia.com/wiki/Derwin"
 	},
 	{
-		name: "desktop",
-		id: "desktop",
-		head: "wip.jpg",
-		species: "Species",
-		personality: "Personality",
-		coffee: "Favorite Coffee",
-		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/desktop"
-	},
-	{
 		name: "Diana",
 		id: "Diana",
 		head: "Diana.jpg",

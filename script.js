@@ -78,9 +78,17 @@ function loadProfile(id) {
     var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><i onclick=\"addVillager('" + id + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i></div>";
     var br = "<br>";
     
+    // In case of 'wip.jpg'
+    if (head == "wip.jpg") {
+        var block_head = "<img title=\"Image not available (yet)\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
+    }
+    else {
+        var block_head = "<img title=\"" + name + "\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
+    }
+    
     // Assemble all blocks:
     block = "<div class=\"menu\"><select id=\"list_select\" onchange=\"updateAddVillagerButton();\"></select> " + icon_add + "</div>" +
-        "<img src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">" +
+        block_head + 
         icon_name + name + br +
         icon_species + species + br +
         icon_personality + personality + br +
