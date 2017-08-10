@@ -42,6 +42,22 @@ function trimName(name) {
     return name;
 }
 
+// Save as image
+function exportImage() {
+    // Temporarily hide menu items
+    document.getElementsByClassName("menu")[0].style.display = "none";
+    
+    html2canvas($("#viewer_list_area"), {
+        onrendered: function(canvas) {
+            canvas.toBlob(function(blob) {
+                saveAs(blob, "AnimalCrossing-VillagerLists.png");
+            });
+        }
+    });
+    // Display menu again
+    document.getElementsByClassName("menu")[0].style.display = "";
+}
+
 // on page load:
 function init() {
     // Retrieve lists from local storage:

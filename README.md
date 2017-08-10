@@ -9,5 +9,5 @@ Please go to the [issues section](https://github.com/Maxzilla60/AC-Lister/issues
 
 ## Coming Soon
 - [ ] Villager Info *(the Construction Gyroid should be replaced by ingame image of selected villager)*
-- [ ] Save as image *(you'll have to take screenshots in the viewer for now)*
+- [x] Save as image
 - [ ] Export and Import
