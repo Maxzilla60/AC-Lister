@@ -2303,7 +2303,7 @@ villagers = [
 		name: "Keaton",
 		id: "Keaton",
 		head: "Keaton.jpg",
-		species: "Bird",
+		species: "Eagle",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
