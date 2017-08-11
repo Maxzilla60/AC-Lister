@@ -1,4 +1,4 @@
-villagers = [
+var villagers = [
 	{
 		name: "Ace",
 		id: "Ace",
@@ -7,7 +7,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ace"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ace",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Admiral",
@@ -17,7 +18,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Admiral"
+		wiki: "http://animalcrossing.wikia.com/wiki/Admiral",
+		store: "https://www.redbubble.com/people/purplepixel/works/25037087-admiral-animal-crossing"
 	},
 	{
 		name: "Agent S",
@@ -27,7 +29,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Agent S"
+		wiki: "http://animalcrossing.wikia.com/wiki/Agent S",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Agnes",
@@ -37,7 +40,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Agnes"
+		wiki: "http://animalcrossing.wikia.com/wiki/Agnes",
+		store: "https://www.redbubble.com/people/purplepixel/works/17864000-agnes-animal-crossing"
 	},
 	{
 		name: "Aisle",
@@ -47,7 +51,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Aisle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Aisle",
+		store: "https://www.redbubble.com/people/purplepixel/works/25143703-aisle-animal-crossing"
 	},
 	{
 		name: "Al",
@@ -57,7 +62,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Al"
+		wiki: "http://animalcrossing.wikia.com/wiki/Al",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Alfonso",
@@ -67,7 +73,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Alfonso"
+		wiki: "http://animalcrossing.wikia.com/wiki/Alfonso",
+		store: "https://www.redbubble.com/people/purplepixel/works/15535466-alfonzo-animal-crossing"
 	},
 	{
 		name: "Alice",
@@ -77,7 +84,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Alice"
+		wiki: "http://animalcrossing.wikia.com/wiki/Alice",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Alli",
@@ -87,7 +95,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Alli"
+		wiki: "http://animalcrossing.wikia.com/wiki/Alli",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Amelia",
@@ -97,7 +106,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Amelia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Amelia",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Anabelle",
@@ -107,7 +117,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Anabelle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Anabelle",
+		store: "https://www.redbubble.com/people/purplepixel/works/15936773-anabelle-animal-crossing"
 	},
 	{
 		name: "Analogue",
@@ -117,7 +128,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Analogue"
+		wiki: "http://animalcrossing.wikia.com/wiki/Analogue",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Anchovy",
@@ -127,7 +139,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Anchovy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Anchovy",
+		store: "https://www.redbubble.com/people/purplepixel/works/25555780-anchovy-animal-crossing"
 	},
 	{
 		name: "Angus",
@@ -137,7 +150,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Angus"
+		wiki: "http://animalcrossing.wikia.com/wiki/Angus",
+		store: "https://www.redbubble.com/people/purplepixel/works/26270231-angus-animal-crossing"
 	},
 	{
 		name: "Anicotti",
@@ -147,7 +161,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Anicotti"
+		wiki: "http://animalcrossing.wikia.com/wiki/Anicotti",
+		store: "https://www.redbubble.com/people/purplepixel/works/17877071-anicotti-animal-crossing"
 	},
 	{
 		name: "Ankha",
@@ -157,7 +172,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ankha"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ankha",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Annalisa",
@@ -167,7 +183,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Annalisa"
+		wiki: "http://animalcrossing.wikia.com/wiki/Annalisa",
+		store: "https://www.redbubble.com/people/purplepixel/works/20720286-annalisa-animal-crossing"
 	},
 	{
 		name: "Annalise",
@@ -177,7 +194,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Annalise"
+		wiki: "http://animalcrossing.wikia.com/wiki/Annalise",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Antonio",
@@ -187,7 +205,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Antonio"
+		wiki: "http://animalcrossing.wikia.com/wiki/Antonio",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Apollo",
@@ -197,7 +216,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Apollo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Apollo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Apple",
@@ -207,7 +227,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Apple"
+		wiki: "http://animalcrossing.wikia.com/wiki/Apple",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Astrid",
@@ -217,7 +238,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Astrid"
+		wiki: "http://animalcrossing.wikia.com/wiki/Astrid",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Aurora",
@@ -227,7 +249,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Aurora"
+		wiki: "http://animalcrossing.wikia.com/wiki/Aurora",
+		store: "https://www.redbubble.com/people/purplepixel/works/16605244-aurora-animal-crossing"
 	},
 	{
 		name: "Ava",
@@ -237,7 +260,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ava"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ava",
+		store: "https://www.redbubble.com/people/purplepixel/works/26255408-ava-animal-crossing"
 	},
 	{
 		name: "Avery",
@@ -247,7 +271,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Avery"
+		wiki: "http://animalcrossing.wikia.com/wiki/Avery",
+		store: "https://www.redbubble.com/people/purplepixel/works/15234964-avery-animal-crossing"
 	},
 	{
 		name: "Axel",
@@ -257,7 +282,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Axel"
+		wiki: "http://animalcrossing.wikia.com/wiki/Axel",
+		store: "https://www.redbubble.com/people/purplepixel/works/21873067-axel-animal-crossing"
 	},
 	{
 		name: "Aziz",
@@ -267,7 +293,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Aziz"
+		wiki: "http://animalcrossing.wikia.com/wiki/Aziz",
+		store: "https://www.redbubble.com/people/purplepixel/works/23211780-aziz-animal-crossing"
 	},
 	{
 		name: "Baabara",
@@ -277,7 +304,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Baabara"
+		wiki: "http://animalcrossing.wikia.com/wiki/Baabara",
+		store: "https://www.redbubble.com/people/purplepixel/works/15525207-baabara-animal-crossing"
 	},
 	{
 		name: "Bam",
@@ -287,7 +315,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bam"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bam",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bangle",
@@ -297,7 +326,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bangle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bangle",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Barold",
@@ -307,7 +337,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Barold"
+		wiki: "http://animalcrossing.wikia.com/wiki/Barold",
+		store: "https://www.redbubble.com/people/purplepixel/works/16040780-barold-animal-crossing"
 	},
 	{
 		name: "Bea",
@@ -317,7 +348,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bea"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bea",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Beardo",
@@ -327,7 +359,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Beardo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Beardo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Beau",
@@ -337,7 +370,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Beau"
+		wiki: "http://animalcrossing.wikia.com/wiki/Beau",
+		store: "https://www.redbubble.com/people/purplepixel/works/15239562-beau-animal-crossing"
 	},
 	{
 		name: "Becky",
@@ -347,7 +381,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Becky"
+		wiki: "http://animalcrossing.wikia.com/wiki/Becky",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bella",
@@ -357,7 +392,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bella"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bella",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Belle",
@@ -367,7 +403,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Belle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Belle",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Benedict",
@@ -377,7 +414,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Benedict"
+		wiki: "http://animalcrossing.wikia.com/wiki/Benedict",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Benjamin",
@@ -387,7 +425,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Benjamin"
+		wiki: "http://animalcrossing.wikia.com/wiki/Benjamin",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bertha",
@@ -397,7 +436,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bertha"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bertha",
+		store: "https://www.redbubble.com/people/purplepixel/works/26255280-bertha-animal-crossing"
 	},
 	{
 		name: "Bessie",
@@ -407,7 +447,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bessie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bessie",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bettina",
@@ -417,7 +458,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bettina"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bettina",
+		store: "https://www.redbubble.com/people/purplepixel/works/27121722-bettina-animal-crossing"
 	},
 	{
 		name: "Betty",
@@ -427,7 +469,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Betty"
+		wiki: "http://animalcrossing.wikia.com/wiki/Betty",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bianca",
@@ -437,7 +480,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bianca"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bianca",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Biff",
@@ -447,7 +491,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Biff"
+		wiki: "http://animalcrossing.wikia.com/wiki/Biff",
+		store: "https://www.redbubble.com/people/purplepixel/works/20776285-biff-animal-crossing"
 	},
 	{
 		name: "Big Top",
@@ -457,7 +502,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Big Top"
+		wiki: "http://animalcrossing.wikia.com/wiki/Big Top",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bill",
@@ -467,7 +513,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bill"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bill",
+		store: "https://www.redbubble.com/people/purplepixel/works/16161715-bill-animal-crossing"
 	},
 	{
 		name: "Billy",
@@ -477,7 +524,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Billy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Billy",
+		store: "https://www.redbubble.com/people/purplepixel/works/21638560-billy-animal-crossing"
 	},
 	{
 		name: "Biskit",
@@ -487,7 +535,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Biskit"
+		wiki: "http://animalcrossing.wikia.com/wiki/Biskit",
+		store: "https://www.redbubble.com/people/purplepixel/works/18774695-biskit-animal-crossing"
 	},
 	{
 		name: "Bitty",
@@ -497,7 +546,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bitty"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bitty",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Blaire",
@@ -507,7 +557,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Blaire"
+		wiki: "http://animalcrossing.wikia.com/wiki/Blaire",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Blanche",
@@ -517,7 +568,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Blanche"
+		wiki: "http://animalcrossing.wikia.com/wiki/Blanche",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bluebear",
@@ -527,7 +579,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bluebear"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bluebear",
+		store: "https://www.redbubble.com/people/purplepixel/works/15908274-bluebear-animal-crossing"
 	},
 	{
 		name: "Bob",
@@ -537,7 +590,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bob"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bob",
+		store: "https://www.redbubble.com/people/purplepixel/works/15354593-bob-animal-crossing"
 	},
 	{
 		name: "Bonbon",
@@ -547,7 +601,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bonbon"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bonbon",
+		store: "https://www.redbubble.com/people/purplepixel/works/20605211-bonbon-animal-crossing"
 	},
 	{
 		name: "Bones",
@@ -557,7 +612,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bones"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bones",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Boomer",
@@ -567,7 +623,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Boomer"
+		wiki: "http://animalcrossing.wikia.com/wiki/Boomer",
+		store: "https://www.redbubble.com/people/purplepixel/works/19050136-boomer-animal-crossing"
 	},
 	{
 		name: "Boone",
@@ -577,7 +634,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Boone"
+		wiki: "http://animalcrossing.wikia.com/wiki/Boone",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Boots",
@@ -587,7 +645,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Boots"
+		wiki: "http://animalcrossing.wikia.com/wiki/Boots",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Boris",
@@ -597,7 +656,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Boris"
+		wiki: "http://animalcrossing.wikia.com/wiki/Boris",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bow",
@@ -607,7 +667,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bow"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bow",
+		store: "https://www.redbubble.com/people/purplepixel/works/19493582-bow-animal-crossing"
 	},
 	{
 		name: "Boyd",
@@ -617,7 +678,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Boyd"
+		wiki: "http://animalcrossing.wikia.com/wiki/Boyd",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bree",
@@ -627,7 +689,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bree"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bree",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Broccolo",
@@ -637,7 +700,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Broccolo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Broccolo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Broffina",
@@ -647,7 +711,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Broffina"
+		wiki: "http://animalcrossing.wikia.com/wiki/Broffina",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bruce",
@@ -657,7 +722,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bruce"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bruce",
+		store: "https://www.redbubble.com/people/purplepixel/works/16032284-bruce-animal-crossing"
 	},
 	{
 		name: "Bubbles",
@@ -667,7 +733,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bubbles"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bubbles",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Buck",
@@ -677,7 +744,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Buck"
+		wiki: "http://animalcrossing.wikia.com/wiki/Buck",
+		store: "https://www.redbubble.com/people/purplepixel/works/18780632-buck-animal-crossing"
 	},
 	{
 		name: "Bud",
@@ -687,7 +755,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bud"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bud",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Bunnie",
@@ -697,7 +766,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Bunnie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Bunnie",
+		store: "https://www.redbubble.com/people/purplepixel/works/16137670-bunnie-animal-crossing"
 	},
 	{
 		name: "Butch",
@@ -707,7 +777,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Butch"
+		wiki: "http://animalcrossing.wikia.com/wiki/Butch",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Buzz",
@@ -717,7 +788,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Buzz"
+		wiki: "http://animalcrossing.wikia.com/wiki/Buzz",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Cally",
@@ -727,7 +799,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cally"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cally",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Camofrog",
@@ -737,7 +810,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Camofrog"
+		wiki: "http://animalcrossing.wikia.com/wiki/Camofrog",
+		store: "https://www.redbubble.com/people/purplepixel/works/18790179-camofrog-animal-crossing"
 	},
 	{
 		name: "Canberra",
@@ -747,7 +821,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Canberra"
+		wiki: "http://animalcrossing.wikia.com/wiki/Canberra",
+		store: "https://www.redbubble.com/people/purplepixel/works/16068035-canberra-animal-crossing"
 	},
 	{
 		name: "Candi",
@@ -757,7 +832,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Candi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Candi",
+		store: "https://www.redbubble.com/people/purplepixel/works/23778232-candi-animal-crossing"
 	},
 	{
 		name: "Carmen",
@@ -767,7 +843,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Carmen_(mouse)"
+		wiki: "http://animalcrossing.wikia.com/wiki/Carmen_(mouse)",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Carmen",
@@ -777,7 +854,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Carmen_(rabbit)"
+		wiki: "http://animalcrossing.wikia.com/wiki/Carmen_(rabbit)",
+		store: "https://www.redbubble.com/people/purplepixel/works/15934499-carmen-animal-crossing"
 	},
 	{
 		name: "Caroline",
@@ -787,7 +865,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Caroline"
+		wiki: "http://animalcrossing.wikia.com/wiki/Caroline",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Carrie",
@@ -797,7 +876,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Carrie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Carrie",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Carrot",
@@ -807,7 +887,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Carrot"
+		wiki: "http://animalcrossing.wikia.com/wiki/Carrot",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Cashmere",
@@ -817,7 +898,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cashmere"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cashmere",
+		store: "https://www.redbubble.com/people/purplepixel/works/20480848-cashmere-animal-crossing"
 	},
 	{
 		name: "Cece",
@@ -827,7 +909,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cece"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cece",
+		store: "https://www.redbubble.com/people/purplepixel/works/26757332-cece-animal-crossing"
 	},
 	{
 		name: "Celia",
@@ -837,7 +920,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Celia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Celia",
+		store: "https://www.redbubble.com/people/purplepixel/works/22389920-celia-animal-crossing"
 	},
 	{
 		name: "Cesar",
@@ -847,7 +931,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cesar"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cesar",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Chadder",
@@ -857,7 +942,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chadder"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chadder",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Chai",
@@ -867,7 +953,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chai"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chai",
+		store: "https://www.redbubble.com/people/purplepixel/works/23088691-chai-animal-crossing"
 	},
 	{
 		name: "Champ",
@@ -877,7 +964,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Champ"
+		wiki: "http://animalcrossing.wikia.com/wiki/Champ",
+		store: "https://www.redbubble.com/people/purplepixel/works/20608008-champ-animal-crossing"
 	},
 	{
 		name: "Champagne",
@@ -887,7 +975,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Champagne"
+		wiki: "http://animalcrossing.wikia.com/wiki/Champagne",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Charlise",
@@ -897,7 +986,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Charlise"
+		wiki: "http://animalcrossing.wikia.com/wiki/Charlise",
+		store: "https://www.redbubble.com/people/purplepixel/works/22156496-charlise-animal-crossing"
 	},
 	{
 		name: "Chelsea",
@@ -907,7 +997,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chelsea"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chelsea",
+		store: "https://www.redbubble.com/people/purplepixel/works/23062076-chelsea-animal-crossing"
 	},
 	{
 		name: "Cheri",
@@ -917,7 +1008,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cheri"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cheri",
+		store: "https://www.redbubble.com/people/purplepixel/works/16505048-cheri-animal-corssing"
 	},
 	{
 		name: "Cherry",
@@ -927,7 +1019,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cherry"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cherry",
+		store: "https://www.redbubble.com/people/purplepixel/works/15534881-cherry-animal-crossing"
 	},
 	{
 		name: "Chester",
@@ -937,7 +1030,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chester"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chester",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Chevre",
@@ -947,7 +1041,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chevre"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chevre",
+		store: "https://www.redbubble.com/people/purplepixel/works/15273273-chevre-animal-crossing"
 	},
 	{
 		name: "Chico",
@@ -957,7 +1052,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chico"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chico",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Chief",
@@ -967,7 +1063,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chief"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chief",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Chops",
@@ -977,7 +1074,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chops"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chops",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Chow",
@@ -987,7 +1085,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chow"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chow",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Chrissy",
@@ -997,7 +1096,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chrissy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chrissy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Chuck",
@@ -1007,7 +1107,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Chuck"
+		wiki: "http://animalcrossing.wikia.com/wiki/Chuck",
+		store: "https://www.redbubble.com/people/purplepixel/works/24646503-chuck-animal-crossing"
 	},
 	{
 		name: "Clara",
@@ -1017,7 +1118,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Clara"
+		wiki: "http://animalcrossing.wikia.com/wiki/Clara",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Claude",
@@ -1027,7 +1129,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Claude"
+		wiki: "http://animalcrossing.wikia.com/wiki/Claude",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Claudia",
@@ -1037,7 +1140,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Claudia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Claudia",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Clay",
@@ -1047,7 +1151,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Clay"
+		wiki: "http://animalcrossing.wikia.com/wiki/Clay",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Cleo",
@@ -1057,7 +1162,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cleo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cleo",
+		store: "https://www.redbubble.com/people/purplepixel/works/20812346-cleo-animal-crossing"
 	},
 	{
 		name: "Clyde",
@@ -1067,7 +1173,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Clyde"
+		wiki: "http://animalcrossing.wikia.com/wiki/Clyde",
+		store: "https://www.redbubble.com/people/purplepixel/works/26279031-clyde-animal-crossing"
 	},
 	{
 		name: "Coach",
@@ -1077,7 +1184,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Coach"
+		wiki: "http://animalcrossing.wikia.com/wiki/Coach",
+		store: "https://www.redbubble.com/people/purplepixel/works/20349682-coach-animal-crossing"
 	},
 	{
 		name: "Cobb",
@@ -1087,7 +1195,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cobb"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cobb",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Coco",
@@ -1097,7 +1206,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Coco"
+		wiki: "http://animalcrossing.wikia.com/wiki/Coco",
+		store: "https://www.redbubble.com/people/purplepixel/works/16394772-coco-animal-crossing"
 	},
 	{
 		name: "Cole",
@@ -1107,7 +1217,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cole"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cole",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Colton",
@@ -1117,7 +1228,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Colton"
+		wiki: "http://animalcrossing.wikia.com/wiki/Colton",
+		store: "https://www.redbubble.com/people/purplepixel/works/19828402-colton-animal-crossing"
 	},
 	{
 		name: "Cookie",
@@ -1127,7 +1239,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cookie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cookie",
+		store: "https://www.redbubble.com/people/purplepixel/works/15792569-cookie-animal-crossing"
 	},
 	{
 		name: "Cousteau",
@@ -1137,7 +1250,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cousteau"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cousteau",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Cranston",
@@ -1147,7 +1261,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cranston"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cranston",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Croque",
@@ -1157,7 +1272,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Croque"
+		wiki: "http://animalcrossing.wikia.com/wiki/Croque",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Cube",
@@ -1167,7 +1283,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cube"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cube",
+		store: "https://www.redbubble.com/people/purplepixel/works/21384171-cube-animal-crossing"
 	},
 	{
 		name: "Cupcake",
@@ -1177,7 +1294,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cupcake"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cupcake",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Curlos",
@@ -1187,7 +1305,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Curlos"
+		wiki: "http://animalcrossing.wikia.com/wiki/Curlos",
+		store: "https://www.redbubble.com/people/purplepixel/works/15890615-curlos-animal-crossing"
 	},
 	{
 		name: "Curly",
@@ -1197,7 +1316,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Curly"
+		wiki: "http://animalcrossing.wikia.com/wiki/Curly",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Curt",
@@ -1207,7 +1327,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Curt"
+		wiki: "http://animalcrossing.wikia.com/wiki/Curt",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Cyrano",
@@ -1217,7 +1338,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Cyrano"
+		wiki: "http://animalcrossing.wikia.com/wiki/Cyrano",
+		store: "https://www.redbubble.com/people/purplepixel/works/17622886-cyrano-animal-crossing"
 	},
 	{
 		name: "Daisy",
@@ -1227,7 +1349,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Daisy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Daisy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Deena",
@@ -1237,7 +1360,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Deena"
+		wiki: "http://animalcrossing.wikia.com/wiki/Deena",
+		store: "https://www.redbubble.com/people/purplepixel/works/27484644-deena-animal-crossing"
 	},
 	{
 		name: "Deirdre",
@@ -1247,7 +1371,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Deirdre"
+		wiki: "http://animalcrossing.wikia.com/wiki/Deirdre",
+		store: "https://www.redbubble.com/people/purplepixel/works/17313407-deirdre-animal-crossing"
 	},
 	{
 		name: "Del",
@@ -1257,7 +1382,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Del"
+		wiki: "http://animalcrossing.wikia.com/wiki/Del",
+		store: "https://www.redbubble.com/people/purplepixel/works/22410558-del-animal-crossing"
 	},
 	{
 		name: "Deli",
@@ -1267,7 +1393,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Deli"
+		wiki: "http://animalcrossing.wikia.com/wiki/Deli",
+		store: "https://www.redbubble.com/people/purplepixel/works/26646424-deli-animal-crossing"
 	},
 	{
 		name: "Derwin",
@@ -1277,7 +1404,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Derwin"
+		wiki: "http://animalcrossing.wikia.com/wiki/Derwin",
+		store: "https://www.redbubble.com/people/purplepixel/works/20855433-derwin-animal-crossing"
 	},
 	{
 		name: "Diana",
@@ -1287,7 +1415,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Diana"
+		wiki: "http://animalcrossing.wikia.com/wiki/Diana",
+		store: "https://www.redbubble.com/people/purplepixel/works/15917199-diana-animal-crossing"
 	},
 	{
 		name: "Diva",
@@ -1297,7 +1426,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Diva"
+		wiki: "http://animalcrossing.wikia.com/wiki/Diva",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Dizzy",
@@ -1307,7 +1437,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Dizzy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Dizzy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Dobie",
@@ -1317,7 +1448,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Dobie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Dobie",
+		store: "https://www.redbubble.com/people/purplepixel/works/22311816-dobie-animal-crossing"
 	},
 	{
 		name: "Doc",
@@ -1327,7 +1459,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Doc"
+		wiki: "http://animalcrossing.wikia.com/wiki/Doc",
+		store: "https://www.redbubble.com/people/purplepixel/works/21213601-doc-animal-crossing"
 	},
 	{
 		name: "Dora",
@@ -1337,7 +1470,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Dora"
+		wiki: "http://animalcrossing.wikia.com/wiki/Dora",
+		store: "https://www.redbubble.com/people/purplepixel/works/20630289-dora-animal-crossing"
 	},
 	{
 		name: "Dotty",
@@ -1347,7 +1481,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Dotty"
+		wiki: "http://animalcrossing.wikia.com/wiki/Dotty",
+		store: "https://www.redbubble.com/people/purplepixel/works/21133408-dotty-animal-crossing"
 	},
 	{
 		name: "Dozer",
@@ -1357,7 +1492,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Dozer"
+		wiki: "http://animalcrossing.wikia.com/wiki/Dozer",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Drago",
@@ -1367,7 +1503,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Drago"
+		wiki: "http://animalcrossing.wikia.com/wiki/Drago",
+		store: "https://www.redbubble.com/people/purplepixel/works/15699986-drago-animal-crossing"
 	},
 	{
 		name: "Drake",
@@ -1377,7 +1514,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Drake"
+		wiki: "http://animalcrossing.wikia.com/wiki/Drake",
+		store: "https://www.redbubble.com/people/purplepixel/works/22943164-drake-animal-crossing"
 	},
 	{
 		name: "Dritt",
@@ -1387,7 +1525,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Dritt"
+		wiki: "http://animalcrossing.wikia.com/wiki/Dritt",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Ed",
@@ -1397,7 +1536,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ed"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ed",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Egbert",
@@ -1407,7 +1547,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Egbert"
+		wiki: "http://animalcrossing.wikia.com/wiki/Egbert",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Elina",
@@ -1417,7 +1558,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Elina"
+		wiki: "http://animalcrossing.wikia.com/wiki/Elina",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Elise",
@@ -1427,7 +1569,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Elise"
+		wiki: "http://animalcrossing.wikia.com/wiki/Elise",
+		store: "https://www.redbubble.com/people/purplepixel/works/20878649-elise-animal-crossing"
 	},
 	{
 		name: "Ellie",
@@ -1437,7 +1580,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ellie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ellie",
+		store: "https://www.redbubble.com/people/purplepixel/works/19704656-ellie-animal-crossing"
 	},
 	{
 		name: "Elmer",
@@ -1447,7 +1591,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Elmer"
+		wiki: "http://animalcrossing.wikia.com/wiki/Elmer",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Eloise",
@@ -1457,7 +1602,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Eloise"
+		wiki: "http://animalcrossing.wikia.com/wiki/Eloise",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Elvis",
@@ -1467,7 +1613,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Elvis"
+		wiki: "http://animalcrossing.wikia.com/wiki/Elvis",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Emerald",
@@ -1477,7 +1624,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Emerald"
+		wiki: "http://animalcrossing.wikia.com/wiki/Emerald",
+		store: "https://www.redbubble.com/people/purplepixel/works/21268669-emerald-animal-crossing"
 	},
 	{
 		name: "Epona",
@@ -1487,7 +1635,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Epona"
+		wiki: "http://animalcrossing.wikia.com/wiki/Epona",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Erik",
@@ -1497,7 +1646,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Erik"
+		wiki: "http://animalcrossing.wikia.com/wiki/Erik",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Etoile",
@@ -1507,7 +1657,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Etoile"
+		wiki: "http://animalcrossing.wikia.com/wiki/Etoile",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Eugene",
@@ -1517,7 +1668,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Eugene"
+		wiki: "http://animalcrossing.wikia.com/wiki/Eugene",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Eunice",
@@ -1527,7 +1679,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Eunice"
+		wiki: "http://animalcrossing.wikia.com/wiki/Eunice",
+		store: "https://www.redbubble.com/people/purplepixel/works/16029198-eunice-animal-crossing"
 	},
 	{
 		name: "Faith",
@@ -1537,7 +1690,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Faith"
+		wiki: "http://animalcrossing.wikia.com/wiki/Faith",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Fang",
@@ -1547,7 +1701,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Fang"
+		wiki: "http://animalcrossing.wikia.com/wiki/Fang",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Fauna",
@@ -1557,7 +1712,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Fauna"
+		wiki: "http://animalcrossing.wikia.com/wiki/Fauna",
+		store: "https://www.redbubble.com/people/purplepixel/works/17469106-fauna-animal-crossing"
 	},
 	{
 		name: "Felicity",
@@ -1567,7 +1723,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Felicity"
+		wiki: "http://animalcrossing.wikia.com/wiki/Felicity",
+		store: "https://www.redbubble.com/people/purplepixel/works/16546184-felicity-animal-crossing"
 	},
 	{
 		name: "Felyne",
@@ -1577,7 +1734,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Felyne"
+		wiki: "http://animalcrossing.wikia.com/wiki/Felyne",
+		store: "https://www.redbubble.com/people/purplepixel/works/15927920-felyne-animal-crossing"
 	},
 	{
 		name: "Filbert",
@@ -1587,7 +1745,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Filbert"
+		wiki: "http://animalcrossing.wikia.com/wiki/Filbert",
+		store: "https://www.redbubble.com/people/purplepixel/works/15235138-filbert-animal-crossing"
 	},
 	{
 		name: "Filly",
@@ -1597,7 +1756,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Filly"
+		wiki: "http://animalcrossing.wikia.com/wiki/Filly",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Flash",
@@ -1607,7 +1767,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Flash"
+		wiki: "http://animalcrossing.wikia.com/wiki/Flash",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Flip",
@@ -1617,7 +1778,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Flip"
+		wiki: "http://animalcrossing.wikia.com/wiki/Flip",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Flo",
@@ -1627,7 +1789,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Flo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Flo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Flora",
@@ -1637,7 +1800,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Flora"
+		wiki: "http://animalcrossing.wikia.com/wiki/Flora",
+		store: "https://www.redbubble.com/people/purplepixel/works/17252510-flora-animal-crossing"
 	},
 	{
 		name: "Flossie",
@@ -1647,7 +1811,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Flossie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Flossie",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Flurry",
@@ -1657,7 +1822,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Flurry"
+		wiki: "http://animalcrossing.wikia.com/wiki/Flurry",
+		store: "https://www.redbubble.com/people/purplepixel/works/19811037-flurry-animal-crossing"
 	},
 	{
 		name: "Francine",
@@ -1667,7 +1833,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Francine"
+		wiki: "http://animalcrossing.wikia.com/wiki/Francine",
+		store: "https://www.redbubble.com/people/purplepixel/works/15522329-francine-animal-crossing"
 	},
 	{
 		name: "Frank",
@@ -1677,7 +1844,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Frank"
+		wiki: "http://animalcrossing.wikia.com/wiki/Frank",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Freckles",
@@ -1687,7 +1855,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Freckles"
+		wiki: "http://animalcrossing.wikia.com/wiki/Freckles",
+		store: "https://www.redbubble.com/people/purplepixel/works/15721508-freckles-animal-crossing"
 	},
 	{
 		name: "Freya",
@@ -1697,7 +1866,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Freya"
+		wiki: "http://animalcrossing.wikia.com/wiki/Freya",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Friga",
@@ -1707,7 +1877,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Friga"
+		wiki: "http://animalcrossing.wikia.com/wiki/Friga",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Frita",
@@ -1717,7 +1888,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Frita"
+		wiki: "http://animalcrossing.wikia.com/wiki/Frita",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Frobert",
@@ -1727,7 +1899,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Frobert"
+		wiki: "http://animalcrossing.wikia.com/wiki/Frobert",
+		store: "https://www.redbubble.com/people/purplepixel/works/20650900-frobert-animal-crossing"
 	},
 	{
 		name: "Fruity",
@@ -1737,7 +1910,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Fruity"
+		wiki: "http://animalcrossing.wikia.com/wiki/Fruity",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Fuchsia",
@@ -1747,7 +1921,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Fuchsia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Fuchsia",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Gabi",
@@ -1757,7 +1932,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gabi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gabi",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Gala",
@@ -1767,7 +1943,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gala"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gala",
+		store: "https://www.redbubble.com/people/purplepixel/works/20284477-gala-animal-crossing"
 	},
 	{
 		name: "Ganon",
@@ -1777,7 +1954,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ganon"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ganon",
+		store: "https://www.redbubble.com/people/purplepixel/works/25377916-ganon-animal-crossing"
 	},
 	{
 		name: "Gaston",
@@ -1787,7 +1965,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gaston"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gaston",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Gayle",
@@ -1797,7 +1976,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gayle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gayle",
+		store: "https://www.redbubble.com/people/purplepixel/works/22467057-gayle-animal-crossing"
 	},
 	{
 		name: "Gen",
@@ -1807,7 +1987,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gen"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gen",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Genji",
@@ -1817,7 +1998,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Genji"
+		wiki: "http://animalcrossing.wikia.com/wiki/Genji",
+		store: "https://www.redbubble.com/people/purplepixel/works/15987575-genji-animal-crossing"
 	},
 	{
 		name: "Gigi",
@@ -1827,7 +2009,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gigi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gigi",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Gladys",
@@ -1837,7 +2020,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gladys"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gladys",
+		store: "https://www.redbubble.com/people/purplepixel/works/24853098-gladys-animal-crossing"
 	},
 	{
 		name: "Gloria",
@@ -1847,7 +2031,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gloria"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gloria",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Goldie",
@@ -1857,7 +2042,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Goldie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Goldie",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Gonzo",
@@ -1867,7 +2053,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gonzo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gonzo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Goose",
@@ -1877,7 +2064,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Goose"
+		wiki: "http://animalcrossing.wikia.com/wiki/Goose",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Graham",
@@ -1887,7 +2075,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Graham"
+		wiki: "http://animalcrossing.wikia.com/wiki/Graham",
+		store: "https://www.redbubble.com/people/purplepixel/works/23387254-graham-animal-crossing"
 	},
 	{
 		name: "Greta",
@@ -1897,7 +2086,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Greta"
+		wiki: "http://animalcrossing.wikia.com/wiki/Greta",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Grizzly",
@@ -1907,7 +2097,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Grizzly"
+		wiki: "http://animalcrossing.wikia.com/wiki/Grizzly",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Groucho",
@@ -1917,7 +2108,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Groucho"
+		wiki: "http://animalcrossing.wikia.com/wiki/Groucho",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Gruff",
@@ -1927,7 +2119,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gruff"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gruff",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Gwen",
@@ -1937,7 +2130,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Gwen"
+		wiki: "http://animalcrossing.wikia.com/wiki/Gwen",
+		store: "https://www.redbubble.com/people/purplepixel/works/24973895-gwen-animal-crossing"
 	},
 	{
 		name: "Hambo",
@@ -1947,7 +2141,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hambo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hambo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Hamlet",
@@ -1957,7 +2152,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hamlet"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hamlet",
+		store: "https://www.redbubble.com/people/purplepixel/works/16040604-hamlet-animal-crossing"
 	},
 	{
 		name: "Hamphrey",
@@ -1967,7 +2163,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hamphrey"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hamphrey",
+		store: "https://www.redbubble.com/people/purplepixel/works/15802712-hamphrey-animal-crossing"
 	},
 	{
 		name: "Hank",
@@ -1977,7 +2174,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hank"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hank",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Hans",
@@ -1987,7 +2185,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hans"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hans",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Harry",
@@ -1997,7 +2196,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Harry"
+		wiki: "http://animalcrossing.wikia.com/wiki/Harry",
+		store: "https://www.redbubble.com/people/purplepixel/works/24746049-harry-animal-crossing"
 	},
 	{
 		name: "Hazel",
@@ -2007,7 +2207,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hazel"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hazel",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Hector",
@@ -2017,7 +2218,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hector"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hector",
+		store: "https://www.redbubble.com/people/purplepixel/works/25336096-hector-animal-crossing"
 	},
 	{
 		name: "Henry",
@@ -2027,7 +2229,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Henry"
+		wiki: "http://animalcrossing.wikia.com/wiki/Henry",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Hippeux",
@@ -2037,7 +2240,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hippeux"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hippeux",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Holden",
@@ -2047,7 +2251,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Holden"
+		wiki: "http://animalcrossing.wikia.com/wiki/Holden",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Hopkins",
@@ -2057,7 +2262,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hopkins"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hopkins",
+		store: "https://www.redbubble.com/people/purplepixel/works/25652540-hopkins-animal-crossing"
 	},
 	{
 		name: "Hopper",
@@ -2067,7 +2273,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hopper"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hopper",
+		store: "https://www.redbubble.com/people/purplepixel/works/22210630-hopper-animal-crossing"
 	},
 	{
 		name: "Hornsby",
@@ -2077,7 +2284,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hornsby"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hornsby",
+		store: "https://www.redbubble.com/people/purplepixel/works/19303882-hornsby-animal-crossing"
 	},
 	{
 		name: "Huck",
@@ -2087,7 +2295,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Huck"
+		wiki: "http://animalcrossing.wikia.com/wiki/Huck",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Huggy",
@@ -2097,7 +2306,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Huggy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Huggy",
+		store: "https://www.redbubble.com/people/purplepixel/works/25663736-huggy-animal-crossing"
 	},
 	{
 		name: "Hugh",
@@ -2107,7 +2317,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Hugh"
+		wiki: "http://animalcrossing.wikia.com/wiki/Hugh",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Iggly",
@@ -2117,7 +2328,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Iggly"
+		wiki: "http://animalcrossing.wikia.com/wiki/Iggly",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Iggy",
@@ -2127,7 +2339,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Iggy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Iggy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Ike",
@@ -2137,7 +2350,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ike"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ike",
+		store: "https://www.redbubble.com/people/purplepixel/works/19231803-ike-animal-crossing"
 	},
 	{
 		name: "Inkwell",
@@ -2147,7 +2361,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Inkwell"
+		wiki: "http://animalcrossing.wikia.com/wiki/Inkwell",
+		store: "https://www.redbubble.com/people/purplepixel/works/26907467-inkwell-animal-crossing"
 	},
 	{
 		name: "Jacob",
@@ -2157,7 +2372,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Jacob"
+		wiki: "http://animalcrossing.wikia.com/wiki/Jacob",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Jacques",
@@ -2167,7 +2383,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Jacques"
+		wiki: "http://animalcrossing.wikia.com/wiki/Jacques",
+		store: "https://www.redbubble.com/people/purplepixel/works/20307630-jacques-animal-crossing"
 	},
 	{
 		name: "Jambette",
@@ -2177,7 +2394,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Jambette"
+		wiki: "http://animalcrossing.wikia.com/wiki/Jambette",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Jane",
@@ -2187,7 +2405,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Jane"
+		wiki: "http://animalcrossing.wikia.com/wiki/Jane",
+		store: "https://www.redbubble.com/people/purplepixel/works/20519339-jane-animal-crossing"
 	},
 	{
 		name: "Jay",
@@ -2197,7 +2416,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Jay"
+		wiki: "http://animalcrossing.wikia.com/wiki/Jay",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Jeremiah",
@@ -2207,7 +2427,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Jeremiah"
+		wiki: "http://animalcrossing.wikia.com/wiki/Jeremiah",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Jitters",
@@ -2217,7 +2438,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Jitters"
+		wiki: "http://animalcrossing.wikia.com/wiki/Jitters",
+		store: "https://www.redbubble.com/people/purplepixel/works/25116788-jitters-animal-crossing"
 	},
 	{
 		name: "Joe",
@@ -2227,7 +2449,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Joe"
+		wiki: "http://animalcrossing.wikia.com/wiki/Joe",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Joey",
@@ -2237,7 +2460,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Joey"
+		wiki: "http://animalcrossing.wikia.com/wiki/Joey",
+		store: "https://www.redbubble.com/people/purplepixel/works/22156820-joey-animal-crossing"
 	},
 	{
 		name: "Jubei",
@@ -2247,7 +2471,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Jubei"
+		wiki: "http://animalcrossing.wikia.com/wiki/Jubei",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Julia",
@@ -2257,7 +2482,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Julia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Julia",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Julian",
@@ -2267,7 +2493,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Julian"
+		wiki: "http://animalcrossing.wikia.com/wiki/Julian",
+		store: "https://www.redbubble.com/people/purplepixel/works/15961811-julian-animal-crossing"
 	},
 	{
 		name: "June",
@@ -2277,7 +2504,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/June"
+		wiki: "http://animalcrossing.wikia.com/wiki/June",
+		store: "https://www.redbubble.com/people/purplepixel/works/23988684-june-animal-crossing"
 	},
 	{
 		name: "Kabuki",
@@ -2287,7 +2515,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kabuki"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kabuki",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Katt",
@@ -2297,7 +2526,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Katt"
+		wiki: "http://animalcrossing.wikia.com/wiki/Katt",
+		store: "https://www.redbubble.com/people/purplepixel/works/15384158-katt-animal-crossing"
 	},
 	{
 		name: "Keaton",
@@ -2307,7 +2537,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Keaton"
+		wiki: "http://animalcrossing.wikia.com/wiki/Keaton",
+		store: "https://www.redbubble.com/people/purplepixel/works/22215009-keaton-animal-crossing"
 	},
 	{
 		name: "Ken",
@@ -2317,7 +2548,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ken"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ken",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Ketchup",
@@ -2327,7 +2559,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ketchup"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ketchup",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Kevin",
@@ -2337,7 +2570,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kevin"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kevin",
+		store: "https://www.redbubble.com/people/purplepixel/works/23036018-kevin-animal-crossing"
 	},
 	{
 		name: "Kid Cat",
@@ -2347,7 +2581,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kid Cat"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kid Cat",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Kidd",
@@ -2357,7 +2592,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kidd"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kidd",
+		store: "https://www.redbubble.com/people/purplepixel/works/21707147-kidd-animal-crossing"
 	},
 	{
 		name: "Kiki",
@@ -2367,7 +2603,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kiki"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kiki",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Kit",
@@ -2377,7 +2614,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kit"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kit",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Kitt",
@@ -2387,7 +2625,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kitt"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kitt",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Kitty",
@@ -2397,7 +2636,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kitty"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kitty",
+		store: "https://www.redbubble.com/people/purplepixel/works/20072551-kitty-animal-crossing"
 	},
 	{
 		name: "Klaus",
@@ -2407,7 +2647,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Klaus"
+		wiki: "http://animalcrossing.wikia.com/wiki/Klaus",
+		store: "https://www.redbubble.com/people/purplepixel/works/25970392-klaus-animal-crossing"
 	},
 	{
 		name: "Knox",
@@ -2417,7 +2658,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Knox"
+		wiki: "http://animalcrossing.wikia.com/wiki/Knox",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Kody",
@@ -2427,7 +2669,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kody"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kody",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Koharu",
@@ -2437,7 +2680,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Koharu"
+		wiki: "http://animalcrossing.wikia.com/wiki/Koharu",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Kyle",
@@ -2447,7 +2691,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Kyle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Kyle",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Leigh",
@@ -2457,7 +2702,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Leigh"
+		wiki: "http://animalcrossing.wikia.com/wiki/Leigh",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Leonardo",
@@ -2467,7 +2713,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Leonardo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Leonardo",
+		store: "https://www.redbubble.com/people/purplepixel/works/15689291-leonardo-animal-crossing"
 	},
 	{
 		name: "Leopold",
@@ -2477,7 +2724,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Leopold"
+		wiki: "http://animalcrossing.wikia.com/wiki/Leopold",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Lily",
@@ -2487,7 +2735,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lily"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lily",
+		store: "https://www.redbubble.com/people/purplepixel/works/15975647-lily-animal-crossing"
 	},
 	{
 		name: "Limberg",
@@ -2497,7 +2746,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Limberg"
+		wiki: "http://animalcrossing.wikia.com/wiki/Limberg",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Lionel",
@@ -2507,7 +2757,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lionel"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lionel",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Liz",
@@ -2517,7 +2768,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Liz"
+		wiki: "http://animalcrossing.wikia.com/wiki/Liz",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Lobo",
@@ -2527,7 +2779,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lobo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lobo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Lolly",
@@ -2537,7 +2790,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lolly"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lolly",
+		store: "https://www.redbubble.com/people/purplepixel/works/16102314-lolly-animal-crossing"
 	},
 	{
 		name: "Lopez",
@@ -2547,7 +2801,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lopez"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lopez",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Louie",
@@ -2557,7 +2812,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Louie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Louie",
+		store: "https://www.redbubble.com/people/purplepixel/works/25918607-louie-animal-crossing"
 	},
 	{
 		name: "Lucha",
@@ -2567,7 +2823,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lucha"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lucha",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Lucky",
@@ -2577,7 +2834,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lucky"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lucky",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Lucy",
@@ -2587,7 +2845,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lucy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lucy",
+		store: "https://www.redbubble.com/people/purplepixel/works/21002141-lucy-animal-crossing"
 	},
 	{
 		name: "Lulu",
@@ -2597,7 +2856,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lulu_(villager)"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lulu_(villager)",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Lulu",
@@ -2607,7 +2867,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lulu_(islander)"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lulu_(islander)",
+		store: "https://www.redbubble.com/people/purplepixel/works/21389592-lulu-animal-crossing"
 	},
 	{
 		name: "Lyman",
@@ -2617,7 +2878,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Lyman"
+		wiki: "http://animalcrossing.wikia.com/wiki/Lyman",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Mac",
@@ -2627,7 +2889,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Mac"
+		wiki: "http://animalcrossing.wikia.com/wiki/Mac",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Madam Rosa",
@@ -2637,7 +2900,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Madam Rosa"
+		wiki: "http://animalcrossing.wikia.com/wiki/Madam Rosa",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Maddie",
@@ -2647,7 +2911,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Maddie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Maddie",
+		store: "https://www.redbubble.com/people/purplepixel/works/24799430-maddie-animal-crossing"
 	},
 	{
 		name: "Maelle",
@@ -2657,7 +2922,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Maelle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Maelle",
+		store: "https://www.redbubble.com/people/purplepixel/works/26064176-maelle-animal-crossing"
 	},
 	{
 		name: "Maggie",
@@ -2667,7 +2933,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Maggie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Maggie",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Mallary",
@@ -2677,7 +2944,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Mallary"
+		wiki: "http://animalcrossing.wikia.com/wiki/Mallary",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Maple",
@@ -2687,7 +2955,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Maple"
+		wiki: "http://animalcrossing.wikia.com/wiki/Maple",
+		store: "https://www.redbubble.com/people/purplepixel/works/17835253-maple-animal-crossing"
 	},
 	{
 		name: "Marcel",
@@ -2697,7 +2966,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Marcel"
+		wiki: "http://animalcrossing.wikia.com/wiki/Marcel",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Marcie",
@@ -2707,7 +2977,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Marcie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Marcie",
+		store: "https://www.redbubble.com/people/purplepixel/works/19994786-marcie-animal-crossing"
 	},
 	{
 		name: "Marcy",
@@ -2717,7 +2988,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Marcy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Marcy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Margie",
@@ -2727,7 +2999,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Margie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Margie",
+		store: "https://www.redbubble.com/people/purplepixel/works/20973415-margie-animal-crossing"
 	},
 	{
 		name: "Marina",
@@ -2737,7 +3010,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Marina"
+		wiki: "http://animalcrossing.wikia.com/wiki/Marina",
+		store: "https://www.redbubble.com/people/purplepixel/works/15586967-marina-animal-crossing"
 	},
 	{
 		name: "Marshal",
@@ -2747,7 +3021,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Marshal"
+		wiki: "http://animalcrossing.wikia.com/wiki/Marshal",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Marty",
@@ -2757,7 +3032,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Marty"
+		wiki: "http://animalcrossing.wikia.com/wiki/Marty",
+		store: "https://www.redbubble.com/people/purplepixel/works/23068994-marty-animal-crossing"
 	},
 	{
 		name: "Masa",
@@ -2767,7 +3043,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Masa"
+		wiki: "http://animalcrossing.wikia.com/wiki/Masa",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Mathilda",
@@ -2777,7 +3054,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Mathilda"
+		wiki: "http://animalcrossing.wikia.com/wiki/Mathilda",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Medli",
@@ -2787,7 +3065,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Medli"
+		wiki: "http://animalcrossing.wikia.com/wiki/Medli",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Megumi",
@@ -2797,7 +3076,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Megumi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Megumi",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Melba",
@@ -2807,7 +3087,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Melba"
+		wiki: "http://animalcrossing.wikia.com/wiki/Melba",
+		store: "https://www.redbubble.com/people/purplepixel/works/16253665-melba-animal-crossing"
 	},
 	{
 		name: "Meow",
@@ -2817,7 +3098,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Meow"
+		wiki: "http://animalcrossing.wikia.com/wiki/Meow",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Merengue",
@@ -2827,7 +3109,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Merengue"
+		wiki: "http://animalcrossing.wikia.com/wiki/Merengue",
+		store: "https://www.redbubble.com/people/purplepixel/works/15238457-merengue-animal-crossing"
 	},
 	{
 		name: "Merry",
@@ -2837,7 +3120,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Merry"
+		wiki: "http://animalcrossing.wikia.com/wiki/Merry",
+		store: "https://www.redbubble.com/people/purplepixel/works/19016771-merry-animal-crossing"
 	},
 	{
 		name: "Midge",
@@ -2847,7 +3131,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Midge"
+		wiki: "http://animalcrossing.wikia.com/wiki/Midge",
+		store: "https://www.redbubble.com/people/purplepixel/works/16045752-midge-animal-crossing"
 	},
 	{
 		name: "Mint",
@@ -2857,7 +3142,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Mint"
+		wiki: "http://animalcrossing.wikia.com/wiki/Mint",
+		store: "https://www.redbubble.com/people/purplepixel/works/26303393-mint-animal-crossing"
 	},
 	{
 		name: "Mira",
@@ -2867,7 +3153,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Mira"
+		wiki: "http://animalcrossing.wikia.com/wiki/Mira",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Miranda",
@@ -2877,7 +3164,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Miranda"
+		wiki: "http://animalcrossing.wikia.com/wiki/Miranda",
+		store: "https://www.redbubble.com/people/purplepixel/works/20813899-miranda-animal-crossing"
 	},
 	{
 		name: "Mitzi",
@@ -2887,7 +3175,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Mitzi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Mitzi",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Moe",
@@ -2897,7 +3186,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Moe"
+		wiki: "http://animalcrossing.wikia.com/wiki/Moe",
+		store: "https://www.redbubble.com/people/purplepixel/works/15856662-moe-animal-crossing"
 	},
 	{
 		name: "Molly",
@@ -2907,7 +3197,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Molly"
+		wiki: "http://animalcrossing.wikia.com/wiki/Molly",
+		store: "https://www.redbubble.com/people/purplepixel/works/25597008-molly-animal-crossing"
 	},
 	{
 		name: "Monique",
@@ -2917,7 +3208,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Monique"
+		wiki: "http://animalcrossing.wikia.com/wiki/Monique",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Monty",
@@ -2927,7 +3219,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Monty"
+		wiki: "http://animalcrossing.wikia.com/wiki/Monty",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Moose",
@@ -2937,7 +3230,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Moose"
+		wiki: "http://animalcrossing.wikia.com/wiki/Moose",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Mott",
@@ -2947,7 +3241,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Mott"
+		wiki: "http://animalcrossing.wikia.com/wiki/Mott",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Muffy",
@@ -2957,7 +3252,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Muffy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Muffy",
+		store: "https://www.redbubble.com/people/purplepixel/works/17491732-muffy-animal-crossing"
 	},
 	{
 		name: "Murphy",
@@ -2967,7 +3263,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Murphy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Murphy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Nan",
@@ -2977,7 +3274,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Nan"
+		wiki: "http://animalcrossing.wikia.com/wiki/Nan",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Nana",
@@ -2987,7 +3285,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Nana"
+		wiki: "http://animalcrossing.wikia.com/wiki/Nana",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Naomi",
@@ -2997,7 +3296,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Naomi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Naomi",
+		store: "https://www.redbubble.com/people/purplepixel/works/25489325-naomi-animal-crossing"
 	},
 	{
 		name: "Nate",
@@ -3007,7 +3307,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Nate"
+		wiki: "http://animalcrossing.wikia.com/wiki/Nate",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Nibbles",
@@ -3017,7 +3318,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Nibbles"
+		wiki: "http://animalcrossing.wikia.com/wiki/Nibbles",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Nindori",
@@ -3027,7 +3329,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Nindori"
+		wiki: "http://animalcrossing.wikia.com/wiki/Nindori",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Nobuo",
@@ -3037,7 +3340,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Nobuo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Nobuo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Norma",
@@ -3047,7 +3351,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Norma"
+		wiki: "http://animalcrossing.wikia.com/wiki/Norma",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Nosegay",
@@ -3057,7 +3362,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Nosegay"
+		wiki: "http://animalcrossing.wikia.com/wiki/Nosegay",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Octavian",
@@ -3067,7 +3373,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Octavian"
+		wiki: "http://animalcrossing.wikia.com/wiki/Octavian",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "O'Hare",
@@ -3077,7 +3384,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/O%27Hare"
+		wiki: "http://animalcrossing.wikia.com/wiki/O%27Hare",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Olaf",
@@ -3087,7 +3395,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Olaf"
+		wiki: "http://animalcrossing.wikia.com/wiki/Olaf",
+		store: "https://www.redbubble.com/people/purplepixel/works/26564701-olaf-animal-crossing"
 	},
 	{
 		name: "Olive",
@@ -3097,7 +3406,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Olive"
+		wiki: "http://animalcrossing.wikia.com/wiki/Olive",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Olivia",
@@ -3107,7 +3417,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Olivia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Olivia",
+		store: "https://www.redbubble.com/people/purplepixel/works/15951236-olivia-animal-crossing"
 	},
 	{
 		name: "Opal",
@@ -3117,7 +3428,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Opal"
+		wiki: "http://animalcrossing.wikia.com/wiki/Opal",
+		store: "https://www.redbubble.com/people/purplepixel/works/24928381-opal-animal-crossing"
 	},
 	{
 		name: "o",
@@ -3127,7 +3439,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/o"
+		wiki: "http://animalcrossing.wikia.com/wiki/o",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Otis",
@@ -3137,7 +3450,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Otis"
+		wiki: "http://animalcrossing.wikia.com/wiki/Otis",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Oxford",
@@ -3147,7 +3461,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Oxford"
+		wiki: "http://animalcrossing.wikia.com/wiki/Oxford",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Ozzie",
@@ -3157,7 +3472,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ozzie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ozzie",
+		store: "https://www.redbubble.com/people/purplepixel/works/21472314-ozzie-animal-crossing"
 	},
 	{
 		name: "Pancetti",
@@ -3167,7 +3483,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pancetti"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pancetti",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Pango",
@@ -3177,7 +3494,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pango"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pango",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Paolo",
@@ -3187,7 +3505,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Paolo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Paolo",
+		store: "https://www.redbubble.com/people/purplepixel/works/26338049-paolo-animal-crossing"
 	},
 	{
 		name: "Papi",
@@ -3197,7 +3516,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Papi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Papi",
+		store: "https://www.redbubble.com/people/purplepixel/works/15853756-papi-animal-crossing"
 	},
 	{
 		name: "Pashmina",
@@ -3207,7 +3527,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pashmina"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pashmina",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Pate",
@@ -3217,7 +3538,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pate"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pate",
+		store: "https://www.redbubble.com/people/purplepixel/works/21042376-pate-animal-crossing"
 	},
 	{
 		name: "Patricia",
@@ -3227,7 +3549,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Patricia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Patricia",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Patty",
@@ -3237,7 +3560,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Patty"
+		wiki: "http://animalcrossing.wikia.com/wiki/Patty",
+		store: "https://www.redbubble.com/people/purplepixel/works/21533268-patty-animal-crossing"
 	},
 	{
 		name: "Paula",
@@ -3247,7 +3571,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Paula"
+		wiki: "http://animalcrossing.wikia.com/wiki/Paula",
+		store: "https://www.redbubble.com/people/purplepixel/works/25824742-paula-animal-crossing"
 	},
 	{
 		name: "Peaches",
@@ -3257,7 +3582,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Peaches"
+		wiki: "http://animalcrossing.wikia.com/wiki/Peaches",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Peanut",
@@ -3267,7 +3593,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Peanut"
+		wiki: "http://animalcrossing.wikia.com/wiki/Peanut",
+		store: "https://www.redbubble.com/people/purplepixel/works/20641683-peanut-animal-crossing"
 	},
 	{
 		name: "Pecan",
@@ -3277,7 +3604,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pecan"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pecan",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Peck",
@@ -3287,7 +3615,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Peck"
+		wiki: "http://animalcrossing.wikia.com/wiki/Peck",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Peewee",
@@ -3297,7 +3626,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Peewee"
+		wiki: "http://animalcrossing.wikia.com/wiki/Peewee",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Peggy",
@@ -3307,7 +3637,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Peggy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Peggy",
+		store: "https://www.redbubble.com/people/purplepixel/works/20962534-peggy-animal-crossing"
 	},
 	{
 		name: "Pekoe",
@@ -3317,7 +3648,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pekoe"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pekoe",
+		store: "https://www.redbubble.com/people/purplepixel/works/23766475-pekoe-animal-crossing"
 	},
 	{
 		name: "Penelope",
@@ -3327,7 +3659,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Penelope"
+		wiki: "http://animalcrossing.wikia.com/wiki/Penelope",
+		store: "https://www.redbubble.com/people/purplepixel/works/20390269-penelope-animal-crossing"
 	},
 	{
 		name: "Penny",
@@ -3337,7 +3670,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Penny"
+		wiki: "http://animalcrossing.wikia.com/wiki/Penny",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Petunia",
@@ -3347,7 +3681,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Petunia_(rhino)"
+		wiki: "http://animalcrossing.wikia.com/wiki/Petunia_(rhino)",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Petunia",
@@ -3357,7 +3692,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Petunia_(cow)"
+		wiki: "http://animalcrossing.wikia.com/wiki/Petunia_(cow)",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Phil",
@@ -3367,7 +3703,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Phil"
+		wiki: "http://animalcrossing.wikia.com/wiki/Phil",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Phoebe",
@@ -3377,7 +3714,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Phoebe"
+		wiki: "http://animalcrossing.wikia.com/wiki/Phoebe",
+		store: "https://www.redbubble.com/people/purplepixel/works/15811925-phoebe-animal-crossing"
 	},
 	{
 		name: "Pierce",
@@ -3387,7 +3725,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pierce"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pierce",
+		store: "https://www.redbubble.com/people/purplepixel/works/18298989-pierce-animal-crossing"
 	},
 	{
 		name: "Pierre",
@@ -3397,7 +3736,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pierre"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pierre",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Pietro",
@@ -3407,7 +3747,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pietro"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pietro",
+		store: "https://www.redbubble.com/people/purplepixel/works/15927422-pietro-animal-crossing"
 	},
 	{
 		name: "Pigleg",
@@ -3417,7 +3758,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pigleg"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pigleg",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Pinky",
@@ -3427,7 +3769,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pinky"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pinky",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Piper",
@@ -3437,7 +3780,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Piper"
+		wiki: "http://animalcrossing.wikia.com/wiki/Piper",
+		store: "https://www.redbubble.com/people/purplepixel/works/20846118-piper-animal-crossing"
 	},
 	{
 		name: "Pippy",
@@ -3447,7 +3791,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pippy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pippy",
+		store: "https://www.redbubble.com/people/purplepixel/works/25257095-pippy-animal-crossing"
 	},
 	{
 		name: "Pironkon",
@@ -3457,7 +3802,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pironkon"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pironkon",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Plucky",
@@ -3467,7 +3813,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Plucky"
+		wiki: "http://animalcrossing.wikia.com/wiki/Plucky",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Poko",
@@ -3477,7 +3824,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Poko"
+		wiki: "http://animalcrossing.wikia.com/wiki/Poko",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Pompom",
@@ -3487,7 +3835,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pompom"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pompom",
+		store: "https://www.redbubble.com/people/purplepixel/works/21368271-pompom-animal-crossing"
 	},
 	{
 		name: "Poncho",
@@ -3497,7 +3846,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Poncho"
+		wiki: "http://animalcrossing.wikia.com/wiki/Poncho",
+		store: "https://www.redbubble.com/people/purplepixel/works/21999605-poncho-animal-crossing"
 	},
 	{
 		name: "Poppy",
@@ -3507,7 +3857,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Poppy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Poppy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Portia",
@@ -3517,7 +3868,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Portia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Portia",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Prince",
@@ -3527,7 +3879,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Prince"
+		wiki: "http://animalcrossing.wikia.com/wiki/Prince",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Puck",
@@ -3537,7 +3890,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Puck"
+		wiki: "http://animalcrossing.wikia.com/wiki/Puck",
+		store: "https://www.redbubble.com/people/purplepixel/works/25390855-puck-animal-crossing"
 	},
 	{
 		name: "Puddles",
@@ -3547,7 +3901,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Puddles"
+		wiki: "http://animalcrossing.wikia.com/wiki/Puddles",
+		store: "https://www.redbubble.com/people/purplepixel/works/15513085-puddles-animal-crossing"
 	},
 	{
 		name: "Pudge",
@@ -3557,7 +3912,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Pudge"
+		wiki: "http://animalcrossing.wikia.com/wiki/Pudge",
+		store: "https://www.redbubble.com/people/purplepixel/works/16461572-pudge-animal-crossing"
 	},
 	{
 		name: "Punchy",
@@ -3567,7 +3923,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Punchy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Punchy",
+		store: "https://www.redbubble.com/people/purplepixel/works/17518912-punchy-animal-crossing"
 	},
 	{
 		name: "Purrl",
@@ -3577,7 +3934,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Purrl"
+		wiki: "http://animalcrossing.wikia.com/wiki/Purrl",
+		store: "https://www.redbubble.com/people/purplepixel/works/26784198-purrl-animal-crossing"
 	},
 	{
 		name: "Queenie",
@@ -3587,7 +3945,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Queenie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Queenie",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Quetzal",
@@ -3597,7 +3956,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Quetzal"
+		wiki: "http://animalcrossing.wikia.com/wiki/Quetzal",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Quillson",
@@ -3607,7 +3967,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Quillson"
+		wiki: "http://animalcrossing.wikia.com/wiki/Quillson",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Raddle",
@@ -3617,7 +3978,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Raddle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Raddle",
+		store: "https://www.redbubble.com/people/purplepixel/works/22389852-raddle-animal-crossing"
 	},
 	{
 		name: "Rasher",
@@ -3627,7 +3989,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rasher"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rasher",
+		store: "https://www.redbubble.com/people/purplepixel/works/16237287-rasher-animal-crossing"
 	},
 	{
 		name: "Renée",
@@ -3637,7 +4000,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Renée"
+		wiki: "http://animalcrossing.wikia.com/wiki/Renée",
+		store: "https://www.redbubble.com/people/purplepixel/works/18109500-ren-e-animal-crossing"
 	},
 	{
 		name: "Rex",
@@ -3647,7 +4011,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rex"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rex",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rhoda",
@@ -3657,7 +4022,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rhoda"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rhoda",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rhonda",
@@ -3667,7 +4033,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rhonda"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rhonda",
+		store: "https://www.redbubble.com/people/purplepixel/works/24995320-rhonda-animal-crossing"
 	},
 	{
 		name: "Ribbot",
@@ -3677,7 +4044,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ribbot"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ribbot",
+		store: "https://www.redbubble.com/people/purplepixel/works/15979463-ribbot-animal-crossing"
 	},
 	{
 		name: "Ricky",
@@ -3687,7 +4055,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ricky"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ricky",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rilla",
@@ -3697,7 +4066,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rilla"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rilla",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rio",
@@ -3707,7 +4077,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rio"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rio",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rizzo",
@@ -3717,7 +4088,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rizzo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rizzo",
+		store: "https://www.redbubble.com/people/purplepixel/works/23026007-rizzo-animal-crossing"
 	},
 	{
 		name: "Roald",
@@ -3727,7 +4099,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Roald"
+		wiki: "http://animalcrossing.wikia.com/wiki/Roald",
+		store: "https://www.redbubble.com/people/purplepixel/works/20071267-roald-animal-crossing"
 	},
 	{
 		name: "Robin",
@@ -3737,7 +4110,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Robin"
+		wiki: "http://animalcrossing.wikia.com/wiki/Robin",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rocco",
@@ -3747,7 +4121,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rocco"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rocco",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rocket",
@@ -3757,7 +4132,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rocket"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rocket",
+		store: "https://www.redbubble.com/people/purplepixel/works/21492045-rocket-animal-crossing"
 	},
 	{
 		name: "Rod",
@@ -3767,7 +4143,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rod"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rod",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rodeo",
@@ -3777,7 +4154,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rodeo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rodeo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rodney",
@@ -3787,7 +4165,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rodney"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rodney",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rolf",
@@ -3797,7 +4176,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rolf"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rolf",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rollo",
@@ -3807,7 +4187,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rollo"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rollo",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rooney",
@@ -3817,7 +4198,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rooney"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rooney",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rory",
@@ -3827,7 +4209,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rory"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rory",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Roscoe",
@@ -3837,7 +4220,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Roscoe"
+		wiki: "http://animalcrossing.wikia.com/wiki/Roscoe",
+		store: "https://www.redbubble.com/people/purplepixel/works/15418237-roscoe-animal-crossing"
 	},
 	{
 		name: "Rosie",
@@ -3847,7 +4231,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rosie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rosie",
+		store: "https://www.redbubble.com/people/purplepixel/works/16052066-rosie-animal-crossing"
 	},
 	{
 		name: "Rowan",
@@ -3857,7 +4242,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rowan"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rowan",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Ruby",
@@ -3867,7 +4253,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ruby"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ruby",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Rudy",
@@ -3877,7 +4264,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Rudy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Rudy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Sally",
@@ -3887,7 +4275,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sally"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sally",
+		store: "https://www.redbubble.com/people/purplepixel/works/15588891-sally-animal-crossing"
 	},
 	{
 		name: "Samson",
@@ -3897,7 +4286,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Samson"
+		wiki: "http://animalcrossing.wikia.com/wiki/Samson",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Sandy",
@@ -3907,7 +4297,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sandy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sandy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Savannah",
@@ -3917,7 +4308,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Savannah"
+		wiki: "http://animalcrossing.wikia.com/wiki/Savannah",
+		store: "https://www.redbubble.com/people/purplepixel/works/16012479-savannah-animal-crossing"
 	},
 	{
 		name: "Scoot",
@@ -3927,7 +4319,8 @@ villagers = [
 		personality: "Jock",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Scoot"
+		wiki: "http://animalcrossing.wikia.com/wiki/Scoot",
+		store: "https://www.redbubble.com/people/purplepixel/works/15861187-scoot-animal-crossing"
 	},
 	{
 		name: "Shari",
@@ -3937,7 +4330,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Shari"
+		wiki: "http://animalcrossing.wikia.com/wiki/Shari",
+		store: "https://www.redbubble.com/people/purplepixel/works/20415371-shari-animal-crossing"
 	},
 	{
 		name: "Sheldon",
@@ -3947,7 +4341,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sheldon"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sheldon",
+		store: "https://www.redbubble.com/people/purplepixel/works/21374258-sheldon-animal-crossing"
 	},
 	{
 		name: "Shep",
@@ -3957,7 +4352,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Shep"
+		wiki: "http://animalcrossing.wikia.com/wiki/Shep",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Shinabiru",
@@ -3967,7 +4363,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Shinabiru"
+		wiki: "http://animalcrossing.wikia.com/wiki/Shinabiru",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Shoukichi",
@@ -3977,7 +4374,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Shoukichi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Shoukichi",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Simon",
@@ -3987,7 +4385,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Simon"
+		wiki: "http://animalcrossing.wikia.com/wiki/Simon",
+		store: "https://www.redbubble.com/people/purplepixel/works/24909507-simon-animal-crossing"
 	},
 	{
 		name: "Skye",
@@ -3997,7 +4396,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Skye"
+		wiki: "http://animalcrossing.wikia.com/wiki/Skye",
+		store: "https://www.redbubble.com/people/purplepixel/works/16175124-skye-animal-crossing"
 	},
 	{
 		name: "Sly",
@@ -4007,7 +4407,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sly"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sly",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Snake",
@@ -4017,7 +4418,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Snake"
+		wiki: "http://animalcrossing.wikia.com/wiki/Snake",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Snooty",
@@ -4027,7 +4429,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Snooty"
+		wiki: "http://animalcrossing.wikia.com/wiki/Snooty",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Soleil",
@@ -4037,7 +4440,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Soleil"
+		wiki: "http://animalcrossing.wikia.com/wiki/Soleil",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Sparro",
@@ -4047,7 +4451,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sparro"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sparro",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Spike",
@@ -4057,7 +4462,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Spike"
+		wiki: "http://animalcrossing.wikia.com/wiki/Spike",
+		store: "https://www.redbubble.com/people/purplepixel/works/19807982-spike-animal-crossing"
 	},
 	{
 		name: "Spork",
@@ -4067,7 +4473,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Spork"
+		wiki: "http://animalcrossing.wikia.com/wiki/Spork",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Sprinkle",
@@ -4077,7 +4484,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sprinkle"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sprinkle",
+		store: "https://www.redbubble.com/people/purplepixel/works/16028229-sprinkle-animal-crossing"
 	},
 	{
 		name: "Sprocket",
@@ -4087,7 +4495,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sprocket"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sprocket",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Static",
@@ -4097,7 +4506,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Static"
+		wiki: "http://animalcrossing.wikia.com/wiki/Static",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Stella",
@@ -4107,7 +4517,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Stella"
+		wiki: "http://animalcrossing.wikia.com/wiki/Stella",
+		store: "https://www.redbubble.com/people/purplepixel/works/20794588-stella-animal-crossing"
 	},
 	{
 		name: "Sterling",
@@ -4117,7 +4528,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sterling"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sterling",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Stinky",
@@ -4127,7 +4539,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Stinky"
+		wiki: "http://animalcrossing.wikia.com/wiki/Stinky",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Stitches",
@@ -4137,7 +4550,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Stitches"
+		wiki: "http://animalcrossing.wikia.com/wiki/Stitches",
+		store: "https://www.redbubble.com/people/purplepixel/works/15272054-stitches-animal-crossing"
 	},
 	{
 		name: "Stu",
@@ -4147,7 +4561,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Stu"
+		wiki: "http://animalcrossing.wikia.com/wiki/Stu",
+		store: "https://www.redbubble.com/people/purplepixel/works/26177021-stu-animal-crossing"
 	},
 	{
 		name: "Sue E.",
@@ -4157,7 +4572,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sue E."
+		wiki: "http://animalcrossing.wikia.com/wiki/Sue E.",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Sunny",
@@ -4167,7 +4583,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sunny"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sunny",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Sven",
@@ -4177,7 +4594,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sven"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sven",
+		store: "https://www.redbubble.com/people/purplepixel/works/25318463-sven-animal-crossing"
 	},
 	{
 		name: "Sydney",
@@ -4187,7 +4605,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sydney"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sydney",
+		store: "https://www.redbubble.com/people/purplepixel/works/19973395-sydney-animal-crossing"
 	},
 	{
 		name: "Sylvana",
@@ -4197,7 +4616,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sylvana"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sylvana",
+		store: "https://www.redbubble.com/people/purplepixel/works/26299195-sylvia-animal-crossing"
 	},
 	{
 		name: "Sylvia",
@@ -4207,7 +4627,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Sylvia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Sylvia",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "T-Bone",
@@ -4217,7 +4638,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/T-Bone"
+		wiki: "http://animalcrossing.wikia.com/wiki/T-Bone",
+		store: "https://www.redbubble.com/people/purplepixel/works/26572785-t-bone-animal-crossing"
 	},
 	{
 		name: "Tabby",
@@ -4227,7 +4649,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tabby"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tabby",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tad",
@@ -4237,7 +4660,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tad"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tad",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tammi",
@@ -4247,7 +4671,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tammi"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tammi",
+		store: "https://www.redbubble.com/people/purplepixel/works/22010139-tammi-animal-crossing"
 	},
 	{
 		name: "Tammy",
@@ -4257,7 +4682,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tammy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tammy",
+		store: "https://www.redbubble.com/people/purplepixel/works/15868993-tammy-animal-crossing"
 	},
 	{
 		name: "Tangy",
@@ -4267,7 +4693,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tangy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tangy",
+		store: "https://www.redbubble.com/people/purplepixel/works/15280318-tangy-animal-crossing"
 	},
 	{
 		name: "Tank",
@@ -4277,7 +4704,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tank"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tank",
+		store: "https://www.redbubble.com/people/purplepixel/works/20301936-tank-animal-crossing"
 	},
 	{
 		name: "Tarou",
@@ -4287,7 +4715,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tarou"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tarou",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tasha",
@@ -4297,7 +4726,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tasha"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tasha",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Teddy",
@@ -4307,7 +4737,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Teddy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Teddy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tex",
@@ -4317,7 +4748,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tex"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tex",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tia",
@@ -4327,7 +4759,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tia"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tia",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tiara",
@@ -4337,7 +4770,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tiara"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tiara",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tiffany",
@@ -4347,7 +4781,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tiffany"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tiffany",
+		store: "https://www.redbubble.com/people/purplepixel/works/16305764-tiffany-animal-crossing"
 	},
 	{
 		name: "Timbra",
@@ -4357,7 +4792,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Timbra"
+		wiki: "http://animalcrossing.wikia.com/wiki/Timbra",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tipper",
@@ -4367,7 +4803,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tipper"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tipper",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Toby",
@@ -4377,7 +4814,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Toby"
+		wiki: "http://animalcrossing.wikia.com/wiki/Toby",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tom",
@@ -4387,7 +4825,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tom"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tom",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Truffles",
@@ -4397,7 +4836,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Truffles"
+		wiki: "http://animalcrossing.wikia.com/wiki/Truffles",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tucker",
@@ -4407,7 +4847,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tucker"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tucker",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tutu",
@@ -4417,7 +4858,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tutu"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tutu",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Twiggy",
@@ -4427,7 +4869,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Twiggy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Twiggy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Twirp",
@@ -4437,7 +4880,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Twirp"
+		wiki: "http://animalcrossing.wikia.com/wiki/Twirp",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Tybalt",
@@ -4447,7 +4891,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Tybalt"
+		wiki: "http://animalcrossing.wikia.com/wiki/Tybalt",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Ursula",
@@ -4457,7 +4902,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Ursula"
+		wiki: "http://animalcrossing.wikia.com/wiki/Ursula",
+		store: "https://www.redbubble.com/people/purplepixel/works/15943943-ursala-animal-crossing"
 	},
 	{
 		name: "Valise",
@@ -4467,7 +4913,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Valise"
+		wiki: "http://animalcrossing.wikia.com/wiki/Valise",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Velma",
@@ -4477,7 +4924,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Velma"
+		wiki: "http://animalcrossing.wikia.com/wiki/Velma",
+		store: "https://www.redbubble.com/people/purplepixel/works/20649366-velma-animal-crossing"
 	},
 	{
 		name: "Verdun",
@@ -4487,7 +4935,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Verdun"
+		wiki: "http://animalcrossing.wikia.com/wiki/Verdun",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Vesta",
@@ -4497,7 +4946,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Vesta"
+		wiki: "http://animalcrossing.wikia.com/wiki/Vesta",
+		store: "https://www.redbubble.com/people/purplepixel/works/15313072-vesta-animal-crossing"
 	},
 	{
 		name: "Vic",
@@ -4507,7 +4957,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Vic"
+		wiki: "http://animalcrossing.wikia.com/wiki/Vic",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Viche",
@@ -4517,7 +4968,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Viche"
+		wiki: "http://animalcrossing.wikia.com/wiki/Viche",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Victoria",
@@ -4527,7 +4979,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Victoria"
+		wiki: "http://animalcrossing.wikia.com/wiki/Victoria",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Violet",
@@ -4537,7 +4990,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Violet"
+		wiki: "http://animalcrossing.wikia.com/wiki/Violet",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Vivian",
@@ -4547,7 +5001,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Vivian"
+		wiki: "http://animalcrossing.wikia.com/wiki/Vivian",
+		store: "https://www.redbubble.com/people/purplepixel/works/22050277-vivian-animal-crossing"
 	},
 	{
 		name: "Vladimir",
@@ -4557,7 +5012,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Vladimir"
+		wiki: "http://animalcrossing.wikia.com/wiki/Vladimir",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Wade",
@@ -4567,7 +5023,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Wade"
+		wiki: "http://animalcrossing.wikia.com/wiki/Wade",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Walker",
@@ -4577,7 +5034,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Walker"
+		wiki: "http://animalcrossing.wikia.com/wiki/Walker",
+		store: "https://www.redbubble.com/people/purplepixel/works/15587400-walker-animal-crossing"
 	},
 	{
 		name: "Walt",
@@ -4587,7 +5045,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Walt"
+		wiki: "http://animalcrossing.wikia.com/wiki/Walt",
+		store: "https://www.redbubble.com/people/purplepixel/works/24035776-walt-animal-crossing"
 	},
 	{
 		name: "Wart Jr",
@@ -4597,7 +5056,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Wart Jr"
+		wiki: "http://animalcrossing.wikia.com/wiki/Wart Jr",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Weber",
@@ -4607,7 +5067,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Weber"
+		wiki: "http://animalcrossing.wikia.com/wiki/Weber",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Wendy",
@@ -4617,7 +5078,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Wendy"
+		wiki: "http://animalcrossing.wikia.com/wiki/Wendy",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Whitney",
@@ -4627,7 +5089,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Whitney"
+		wiki: "http://animalcrossing.wikia.com/wiki/Whitney",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Willow",
@@ -4637,7 +5100,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Willow"
+		wiki: "http://animalcrossing.wikia.com/wiki/Willow",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Winnie",
@@ -4647,7 +5111,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Winnie"
+		wiki: "http://animalcrossing.wikia.com/wiki/Winnie",
+		store: "https://www.redbubble.com/people/purplepixel/works/25088706-winnie-animal-crossing"
 	},
 	{
 		name: "Wolf Link",
@@ -4657,7 +5122,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Wolf Link"
+		wiki: "http://animalcrossing.wikia.com/wiki/Wolf Link",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Wolfgang",
@@ -4667,7 +5133,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Wolfgang"
+		wiki: "http://animalcrossing.wikia.com/wiki/Wolfgang",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Woolio",
@@ -4677,7 +5144,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Woolio"
+		wiki: "http://animalcrossing.wikia.com/wiki/Woolio",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Yodel",
@@ -4687,7 +5155,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Yodel"
+		wiki: "http://animalcrossing.wikia.com/wiki/Yodel",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Yuka",
@@ -4697,7 +5166,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Yuka"
+		wiki: "http://animalcrossing.wikia.com/wiki/Yuka",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Zell",
@@ -4707,7 +5177,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Zell"
+		wiki: "http://animalcrossing.wikia.com/wiki/Zell",
+		store: "https://www.redbubble.com/people/purplepixel/works/17248858-zell-animal-crossing"
 	},
 	{
 		name: "Zoe",
@@ -4717,7 +5188,8 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Zoe"
+		wiki: "http://animalcrossing.wikia.com/wiki/Zoe",
+		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
 		name: "Zucker",
@@ -4727,6 +5199,7 @@ villagers = [
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/Zucker"
+		wiki: "http://animalcrossing.wikia.com/wiki/Zucker",
+		store: "https://www.redbubble.com/people/purplepixel/works/15977970-zucker-animal-crossing"
 	},
 ]

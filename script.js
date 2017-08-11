@@ -67,9 +67,11 @@ function loadProfile(id) {
     var coffee = villager.coffee;
     var birthday = villager.birthday;
     var wiki = villager.wiki;
+    var store = villager.store;
     
     // Create Font Awesome blocks:
     var icon_wiki = "<i onclick=\"window.open('" + wiki + "','_blank');\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" aria-hidden=\"true\"></i>";
+    var icon_store = "<i onclick=\"window.open('" + store + "','_blank');\" title=\"Buy this!\" class=\"clickable fa fa-shopping-bag\" aria-hidden=\"true\"></i>";
     var icon_name = "<i title=\"Name\" class=\"fa fa-tag\" aria-hidden=\"true\"></i>";
     var icon_species = "<i title=\"Species\" class=\"fa fa-user\" aria-hidden=\"true\"></i>";
     var icon_personality = "<i title=\"Personality\" class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
@@ -94,7 +96,7 @@ function loadProfile(id) {
         icon_personality + personality + br +
         icon_coffee + coffee + br +
         icon_birthday + birthday + br +
-        icon_wiki + "</div>";
+        icon_wiki + icon_store + "</div>";
     // Display block
     document.getElementById("info").innerHTML = block;
     updateListSelect(); // Update list select
