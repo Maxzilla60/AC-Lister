@@ -278,7 +278,7 @@ function viewLists_Rename(id) {
     for (var l in lists) {
         // Rename view:
         if (lists[l].id == id) {
-            block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\" maxlength=\"20\"></input>" +
+            block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\" maxlength=\"30\"></input>" +
                 "<i onclick=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" title=\"Edit name\" class=\"clickable fa fa-check\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names

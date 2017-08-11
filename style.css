@@ -30,7 +30,7 @@ img {
 .clickable:active {background-color: orangered;}
 
 .header {
-	font-size: 25;
+	font-size: 25px;
 	text-align: center;
 }
 

@@ -3432,17 +3432,6 @@ var villagers = [
 		store: "https://www.redbubble.com/people/purplepixel/works/24928381-opal-animal-crossing"
 	},
 	{
-		name: "o",
-		id: "o",
-		head: "wip.jpg",
-		species: "Species",
-		personality: "Personality",
-		coffee: "Favorite Coffee",
-		birthday: "Birthday",
-		wiki: "http://animalcrossing.wikia.com/wiki/o",
-		store: "https://www.redbubble.com/people/purplepixel/"
-	},
-	{
 		name: "Otis",
 		id: "Otis",
 		head: "wip.jpg",
@@ -3908,7 +3897,7 @@ var villagers = [
 		name: "Pudge",
 		id: "Pudge",
 		head: "Pudge.jpg",
-		species: "Bear",
+		species: "Cub",
 		personality: "Personality",
 		coffee: "Favorite Coffee",
 		birthday: "Birthday",
