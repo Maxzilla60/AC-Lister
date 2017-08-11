@@ -2,7 +2,7 @@ lists = [];
 
 // Display lists in list area
 function viewLists() {
-    document.getElementById("lists").innerHTML = ""; // Clear list area
+    document.getElementById("viewer_lists").innerHTML = ""; // Clear list area
     localStorage.lists = JSON.stringify(lists); // Update local storage
     var block = "";
     
@@ -26,7 +26,7 @@ function viewLists() {
     }
     
     // Display block
-    document.getElementById("lists").innerHTML = block;
+    document.getElementById("viewer_lists").innerHTML = block;
 }
 
 // Return to main page

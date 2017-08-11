@@ -101,6 +101,12 @@ img {
 .list_area img:active {background-color: orangered;}
 
 #lists {padding: 0;}
+#viewer_lists {
+    padding: 0;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
 
 .list {
 	display: inline-block;
