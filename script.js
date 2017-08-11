@@ -44,7 +44,7 @@ function viewResults(resultList) {
         
         // Create html block:
         block += "<div onclick=\"loadProfile('" + resultList[v].id + "');\" class=\"result\">" +
-        "<img style=\"float:left\" src=\"villager_icons/" + resultList[v].id + ".gif\">" +
+        "<img alt=\"" + resultList[v].name + "\" style=\"float:left\" src=\"villager_icons/" + resultList[v].id + ".gif\">" +
         "<div>" + resultList[v].name + "</div>" +
         "</div><br>";
     }
@@ -82,10 +82,10 @@ function loadProfile(id) {
     
     // In case of 'wip.jpg'
     if (head == "wip.jpg") {
-        var block_head = "<img title=\"Image not available (yet)\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
+        var block_head = "<img title=\"Image not available (yet)\" alt=\"Profile image (" + name + ")\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
     }
     else {
-        var block_head = "<img title=\"" + name + "\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
+        var block_head = "<img title=\"" + name + "\" alt=\"Profile image (" + name + ")\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
     }
     
     // Assemble all blocks:
