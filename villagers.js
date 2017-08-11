@@ -4306,8 +4306,8 @@ var villagers = [
 		head: "Scoot.jpg",
 		species: "Duck",
 		personality: "Jock",
-		coffee: "Favorite Coffee",
-		birthday: "Birthday",
+		coffee: "Mocha - Regular Milk - 2 Sugars",
+		birthday: "June 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Scoot",
 		store: "https://www.redbubble.com/people/purplepixel/works/15861187-scoot-animal-crossing"
 	},
