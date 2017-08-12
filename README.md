@@ -5,9 +5,10 @@ Easily search, view and assemble lists of your favorite Animal Crossing villager
 ### [**Right here!**](https://maxzilla60.github.io/AC-Lister/)
 
 ## Features
-- Easily search through all current villagers (by name, species and personality)
+- Easily search through all current villagers *(by name, species and personality)*
 - Multiple custom lists
 - See species, personality, favorite coffee and birthday at a glance
+- Browser remembers your lists even after refresh *(but not after hard refresh/clearing cache!)*
 - Easily save your lists as an image
 
 ## Uhm, there's something wrong...
