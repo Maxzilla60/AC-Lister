@@ -4371,7 +4371,7 @@ var villagers = [
 		id: "Simon",
 		head: "Simon.jpg",
 		species: "Monkey",
-		personality: "Monkey",
+		personality: "Lazy",
 		coffee: "Blend - None - None",
 		birthday: "January 19",
 		wiki: "http://animalcrossing.wikia.com/wiki/Simon",
@@ -5190,5 +5190,5 @@ var villagers = [
 		birthday: "March 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Zucker",
 		store: "https://www.redbubble.com/people/purplepixel/works/15977970-zucker-animal-crossing"
-	},
-]
+	}
+];
