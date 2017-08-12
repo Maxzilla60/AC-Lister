@@ -159,6 +159,9 @@ footer .fa:active {
 .readme_area ul {
     margin-left: 35px;
 }
+.readme_area li {
+    padding-top: 0;
+}
 .readme_area p {
     margin-left: 20px;
 }
