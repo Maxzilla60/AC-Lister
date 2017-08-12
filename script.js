@@ -27,7 +27,7 @@ function viewLists() {
     }
     // In case of empty list:
     else {
-        block = "<div style=\"padding-left:15px;color:orange;\">Press the<i onclick=\"newList();\" title=\"Add list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\" style=\"margin-left:3px;margin-right:3px;\"></i>to make a new list!</div>";
+        block = "<div style=\"padding-left:15px;color:orange;\">Click<i onclick=\"newList();\" title=\"Add list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\" style=\"margin-left:3px;margin-right:3px;\"></i>to make a new list!</div>";
     }
     
     // Display block
