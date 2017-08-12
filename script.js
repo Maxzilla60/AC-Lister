@@ -14,12 +14,12 @@ function viewLists() {
         // Create html block:
         block = "<div>";
         for (var l in lists) {
-            block += "<div class=\"list\">" + lists[l].title + "</div>" +
+            block += "<div onclick=\"updateListSelect(" + lists[l].id + ");\" class=\"clickable list\">" + lists[l].title + "</div>" +
                 "<i onclick=\"deleteList(" + lists[l].id + ");\" title=\"Delete list\" class=\"clickable fa fa-trash\" aria-hidden=\"true\"></i>" +
                 "<i onclick=\"renameList(" + lists[l].id + ");\" title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
-                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "');\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+                block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "');updateListSelect(" + lists[l].id + ");\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
             }
             block += "</div>";
         }
@@ -103,11 +103,16 @@ function loadProfile(id) {
 }
 
 // Update the select for selecting a list
-function updateListSelect() {
+function updateListSelect(id = currentListSelect) {
+    // Don't update when no profile's loaded:
+    if (currentProfile == "") {
+        return;
+    }
+    
     // Create select options block:
     var options = "";
     for (var l in lists) {
-        if (lists[l].id == currentListSelect) {
+        if (lists[l].id == id) {
             options += "<option value=\"" + lists[l].id + "\"selected>" + lists[l].title + "</option>";
         }
         else {
