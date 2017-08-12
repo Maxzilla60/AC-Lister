@@ -88,12 +88,23 @@ function loadProfile(id) {
     var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><i onclick=\"addVillager('" + id + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i></div>";
     var br = "<br>";
     
-    // In case of 'wip.jpg'
+    // In case of 'wip.jpg':
     if (head == "wip.jpg") {
         var block_head = "<img title=\"Image not available (yet)\" alt=\"Profile image (" + name + ")\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
     }
     else {
         var block_head = "<img title=\"" + name + "\" alt=\"Profile image (" + name + ")\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
+    }
+    
+    // Birthday Easter Egg:
+    var today_date = new Date(); // Get today's date
+    var birthday_date = new Date(birthday); // Convert birthday to Date
+    // If villager's birthday's today:
+    if (today_date.getDate() === birthday_date.getDate()) {
+        // Highlight birthday string
+        birthday = "<div class=\"birthday\">" + birthday + "</div>";
+        // Fun little icon with a sound
+        icon_birthday = "<i title=\"Happy Birthday " + name + "!\" onclick=\"new Audio('happybirthday.mp3').play();\" style=\"color:hotpink;\" class=\" clickable fa fa-birthday-cake\" aria-hidden=\"true\"></i>";
     }
     
     // Assemble all blocks:
@@ -379,7 +390,7 @@ function openViewer() {
 
 // on page load:
 function init() {
-    viewResults(villagers);
+    search(document.getElementById('search_bar').value);
     // Retrieve lists from local storage:
     if (localStorage.lists) {
         lists = JSON.parse(localStorage.lists);

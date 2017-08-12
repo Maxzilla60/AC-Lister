@@ -12,7 +12,7 @@ Easily search, view and assemble lists of your favorite Animal Crossing villager
 - Easily save your lists as an image
 
 ## Uhm, there's something wrong...
-Please go to the [issues section](https://github.com/Maxzilla60/AC-Lister/issues) and let me know!
+Please go [here](https://github.com/Maxzilla60/AC-Lister/issues) and let me know!
 
 ## Coming Soon
 - [x] Villager info

@@ -206,3 +206,9 @@ select {border: solid orange;}
     display: inline;
     padding: 0;
 }
+.birthday {
+    color: hotpink;
+    display: inline;
+    font-weight: bold;
+    padding: 0;
+}
