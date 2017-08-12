@@ -67,12 +67,12 @@ function loadProfile(id) {
     var coffee = villager.coffee;
     // In case of N/A:
     if (coffee == "") {
-        coffee = "N/A";
+        coffee = "<div class=\"na\">N/A</div>";
     }
     var birthday = villager.birthday;
     // In case of N/A:
     if (birthday == "") {
-        birthday = "N/A";
+        birthday = "<div class=\"na\">N/A</div>";
     }
     var wiki = villager.wiki;
     var store = villager.store;

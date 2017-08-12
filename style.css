@@ -137,7 +137,7 @@ footer .fa:active {
 	padding: 0;
 }
 
-/* CSS for readme */
+/* README */
 .readme_area {
 	background-color: floralwhite;
 	border: solid orange;
@@ -200,3 +200,9 @@ footer .fa:active {
     text-align: center;
 }
 select {border: solid orange;}
+/* "N/A" */
+.na {
+    color: orange;
+    display: inline;
+    padding: 0;
+}
