@@ -1,3 +1,4 @@
+/* Global */
 * {
 	border-radius: 8px;
 	box-sizing: border-box;
@@ -5,153 +6,38 @@
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 9px;
 }
-
 body {
 	background-image: url("background.jpg");
 	margin: auto;
 	width: 900px;
 }
-
 img {
 	padding-right: 3px;
 	padding: 0;
 }
-
 .fa {color: orange;}
 
+/* Clickables that are disabled */
 .disabled {color: gray;}
 
+/* Everything that can be clicked */
 .clickable:hover {
 	background-color: orange;
 	color: white;
 	cursor: pointer;
 }
-
 .clickable:active {background-color: orangered;}
-
-.header {
-	font-size: 25px;
-	text-align: center;
-}
-
-.search {
-	background-color: floralwhite;
-	border: solid orange;
-	float: left;
-	min-height: 800px;
-	width: 26%;
-}
-
-#search_results {
-	border: solid orange;
-	height: 726px;
-	margin-top: 10px;
-	overflow-y: auto;
-}
-
-.result {padding: 0;}
-
-.result:hover {
-    background-color: orange;
-    cursor: pointer;
-}
-
-.result:active {background-color: orangered;}
-
-.result:hover div {color: white;}
-
-.search_area {padding: 0;}
-
-.search input {
-	border: solid orange;
-	width: 84%;
-}
-
-.main {
-	float: right;
-	min-height: 800px;
-	padding: 0;
-	width: 73%;
-}
-
-.list_area {
-	background-color: floralwhite;
-	border: solid orange;
-	height: 550px;
-	margin-bottom: 10px;
-	overflow-y: auto;
-	padding: 0;
-}
-
-#viewer_list_area {
-	background-color: floralwhite;
-	border: solid orange;
-	margin-bottom: 10px;
-	min-height: 800px;
-	overflow-y: auto;
-	padding: 0;
-}
-
-.list_area img {padding-bottom: 9px;}
-
-.list_area img:hover {
-    background-color: orange;
-    cursor: pointer;
-}
-
-.list_area img:active {background-color: orangered;}
-
-#lists {padding: 0;}
-
-#viewer_lists {
-	margin: auto;
-	padding: 0;
-	text-align: center;
-	width: fit-content;
-}
-
-.list {
-	display: inline-block;
-	font-weight: bold;
-}
-
-#lists input {
-	border: solid orange;
-	width: 400px;
-}
-
 .menu {
 	float: right;
 	padding-bottom: 0;
 	position: relative;
 }
 
-#info {
-	background-color: floralwhite;
-	border: solid orange;
-	font-size: 16px;
-	min-height: 240px;
-	padding: 0;
+/* Header & Footer */
+header {
+	font-size: 25px;
+	text-align: center;
 }
-
-.profile-image {
-	border-radius: 27px;
-	border: solid orange;
-	float: left;
-	height: 215px;
-	margin: 9px;
-	padding: 0;
-}
-
-.profile {padding: 15px;}
-
-.profile .fa {
-    min-width: 35px;
-    text-align: center;
-}
-
-select {border: solid orange;}
-
 footer {
 	bottom: 10px;
 	font-size: xx-large;
@@ -162,20 +48,152 @@ footer {
 	text-align: center;
 	width: 100%;
 }
-
 footer .fa {
     margin: 0;
     padding: 0;
 }
-
 footer .fa:hover {background-color: rgba(255,0,0,0);}
-
 footer .fa:active {
     background-color: rgba(255,0,0,0);
     color: orangered;
 }
 
+
+/* Search bar */
+.search {
+	background-color: floralwhite;
+	border: solid orange;
+	float: left;
+	min-height: 800px;
+	width: 26%;
+}
+#search_results {
+	border: solid orange;
+	height: 726px;
+	margin-top: 10px;
+	overflow-y: auto;
+}
+.result {padding: 0;}
+.result:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+.result:active {background-color: orangered;}
+.result:hover div {color: white;}
+.search_area {padding: 0;}
+.search input {
+	border: solid orange;
+	width: 84%;
+}
+
+/* Main listing */
+.main {
+	float: right;
+	min-height: 800px;
+	padding: 0;
+	width: 73%;
+}
+.list_area {
+	background-color: floralwhite;
+	border: solid orange;
+	height: 550px;
+	margin-bottom: 10px;
+	overflow-y: auto;
+	padding: 0;
+}
+.list_area img {padding-bottom: 9px;}
+.list_area img:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+.list_area img:active {background-color: orangered;}
+#lists {padding: 0;}
+.list {
+	display: inline-block;
+	font-weight: bold;
+}
+#lists input {
+	border: solid orange;
+	width: 400px;
+}
+
+/* Viewer */
+#viewer_list_area {
+	background-color: floralwhite;
+	border: solid orange;
+	margin-bottom: 10px;
+	min-height: 800px;
+	overflow-y: auto;
+	padding: 0;
+}
+#viewer_lists {
+	margin: auto;
+	padding: 0;
+	text-align: center;
+	width: fit-content;
+}
 .viewer {
 	height: 800px;
 	padding: 0;
 }
+
+/* CSS for readme */
+.readme_area {
+	background-color: floralwhite;
+	border: solid orange;
+	margin-bottom: 10px;
+	min-height: 800px;
+	overflow-y: auto;
+	padding: 0;
+}
+.readme_area * {
+    margin: 0;
+}
+.readme_area h1 {
+    color: orange;
+} 
+.readme_area h2 {
+    color: orange;
+    margin-left: 0;
+} 
+.readme_area ul {
+    margin-left: 35px;
+}
+.readme_area p {
+    margin-left: 20px;
+}
+.readme_area a {
+    border-radius: 0;
+    padding: 0;
+}
+.readme_area a:hover {
+    background-color: orange;
+	color: white;
+	cursor: pointer;
+}
+.readme_area a:active {
+    background-color: orangered;
+}
+
+/* Villager profile */
+#info {
+	background-color: floralwhite;
+	border: solid orange;
+	font-size: 16px;
+	min-height: 240px;
+	padding: 0;
+}
+.profile-image {
+	border-radius: 27px;
+	border: solid orange;
+	float: left;
+	height: 215px;
+	margin: 9px;
+	padding: 0;
+}
+.profile {padding: 15px;}
+.profile .fa {
+    min-width: 35px;
+    text-align: center;
+}
+select {border: solid orange;}
