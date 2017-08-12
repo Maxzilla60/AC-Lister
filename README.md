@@ -14,7 +14,7 @@ Easily search, view and assemble lists of your favorite Animal Crossing villager
 Please go to the [issues section](https://github.com/Maxzilla60/AC-Lister/issues) and let me know!
 
 ## Coming Soon
-- [ ] Villager info
+- [x] Villager info
 - [x] Save as image
 - [ ] Reordering lists
 - [ ] Export and Import

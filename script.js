@@ -65,7 +65,15 @@ function loadProfile(id) {
     var species = villager.species;
     var personality = villager.personality;
     var coffee = villager.coffee;
+    // In case of N/A:
+    if (coffee == "") {
+        coffee = "N/A";
+    }
     var birthday = villager.birthday;
+    // In case of N/A:
+    if (birthday == "") {
+        birthday = "N/A";
+    }
     var wiki = villager.wiki;
     var store = villager.store;
     
