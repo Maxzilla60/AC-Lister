@@ -2247,7 +2247,7 @@ var villagers = [
 		name: "Holden",
 		id: "Holden",
 		head: "wip.jpg",
-		species: "Holden",
+		species: "Hamster",
 		personality: "Lazy",
 		coffee: "",
 		birthday: "June 11",
