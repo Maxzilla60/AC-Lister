@@ -38,7 +38,7 @@ var villagers = [
 		head: "Agnes.jpg",
 		species: "Pig",
 		personality: "Uchi",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "April 21",
 		wiki: "http://animalcrossing.wikia.com/wiki/Agnes",
 		store: "https://www.redbubble.com/people/purplepixel/works/17864000-agnes-animal-crossing"
@@ -60,7 +60,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Gorilla",
 		personality: "Lazy",
-		coffee: "Mocha - A Lot - 2 Sugars",
+		coffee: "Mocha - Lots of Milk - 2 Sugars",
 		birthday: "October 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Al",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -104,7 +104,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Eagle",
 		personality: "Snooty",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "November 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Amelia",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -192,7 +192,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Horse",
 		personality: "Snooty",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "December 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Annalise",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -368,7 +368,7 @@ var villagers = [
 		head: "Beau.jpg",
 		species: "Deer",
 		personality: "Lazy",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "April 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Beau",
 		store: "https://www.redbubble.com/people/purplepixel/works/15239562-beau-animal-crossing"
@@ -434,7 +434,7 @@ var villagers = [
 		head: "Bertha.jpg",
 		species: "Hippo",
 		personality: "Normal",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "April 25",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bertha",
 		store: "https://www.redbubble.com/people/purplepixel/works/26255280-bertha-animal-crossing"
@@ -456,7 +456,7 @@ var villagers = [
 		head: "Bettina.jpg",
 		species: "Mouse",
 		personality: "Normal",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "June 12",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bettina",
 		store: "https://www.redbubble.com/people/purplepixel/works/27121722-bettina-animal-crossing"
@@ -500,7 +500,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Elephant",
 		personality: "Lazy",
-		coffee: "Blye Mountain - A Lot - 3 Sugars",
+		coffee: "Blye Mountain - Lots of Milk - 3 Sugars",
 		birthday: "October 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Big Top",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -566,7 +566,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Ostrich",
 		personality: "Snooty",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "December 21",
 		wiki: "http://animalcrossing.wikia.com/wiki/Blanche",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -577,7 +577,7 @@ var villagers = [
 		head: "Bluebear.jpg",
 		species: "Cub",
 		personality: "Peppy",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "June 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bluebear",
 		store: "https://www.redbubble.com/people/purplepixel/works/15908274-bluebear-animal-crossing"
@@ -643,7 +643,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Alligator",
 		personality: "Jock",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "August 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Boots",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -654,7 +654,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Pig",
 		personality: "Cranky",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "November 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Boris",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -676,7 +676,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Gorilla",
 		personality: "Cranky",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "October 1",
 		wiki: "http://animalcrossing.wikia.com/wiki/Boyd",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -709,7 +709,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Chicken",
 		personality: "Snooty",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "October 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Broffina",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -764,7 +764,7 @@ var villagers = [
 		head: "Bunnie.jpg",
 		species: "Rabbit",
 		personality: "Peppy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "May 9",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bunnie",
 		store: "https://www.redbubble.com/people/purplepixel/works/16137670-bunnie-animal-crossing"
@@ -786,7 +786,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Eagle",
 		personality: "Cranky",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "December 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Buzz",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -797,7 +797,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Squirrel",
 		personality: "Normal",
-		coffee: "Kilimanjaro - A Little - 1 Sugar",
+		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "September 4",
 		wiki: "http://animalcrossing.wikia.com/wiki/Cally",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -819,7 +819,7 @@ var villagers = [
 		head: "Canberra.jpg",
 		species: "Koala",
 		personality: "Uchi",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "May `4",
 		wiki: "http://animalcrossing.wikia.com/wiki/Canberra",
 		store: "https://www.redbubble.com/people/purplepixel/works/16068035-canberra-animal-crossing"
@@ -830,7 +830,7 @@ var villagers = [
 		head: "Candi.jpg",
 		species: "Mouse",
 		personality: "Peppy",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "April 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Candi",
 		store: "https://www.redbubble.com/people/purplepixel/works/23778232-candi-animal-crossing"
@@ -852,7 +852,7 @@ var villagers = [
 		head: "Carmen.jpg",
 		species: "Rabbit",
 		personality: "Peppy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "January 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Carmen_(rabbit)",
 		store: "https://www.redbubble.com/people/purplepixel/works/15934499-carmen-animal-crossing"
@@ -940,7 +940,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Mouse",
 		personality: "Smug",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "December 15",
 		wiki: "http://animalcrossing.wikia.com/wiki/Chadder",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -984,7 +984,7 @@ var villagers = [
 		head: "Charlise.jpg",
 		species: "Bear",
 		personality: "Uchi",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "April 17",
 		wiki: "http://animalcrossing.wikia.com/wiki/Charlise",
 		store: "https://www.redbubble.com/people/purplepixel/works/22156496-charlise-animal-crossing"
@@ -995,7 +995,7 @@ var villagers = [
 		head: "Chelsea.jpg",
 		species: "Deer",
 		personality: "Normal",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "January 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Chelsea",
 		store: "https://www.redbubble.com/people/purplepixel/works/23062076-chelsea-animal-crossing"
@@ -1006,7 +1006,7 @@ var villagers = [
 		head: "Cheri.jpg",
 		species: "Cub",
 		personality: "Peppy",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "March 17",
 		wiki: "http://animalcrossing.wikia.com/wiki/Cheri",
 		store: "https://www.redbubble.com/people/purplepixel/works/16505048-cheri-animal-corssing"
@@ -1061,7 +1061,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Wolf",
 		personality: "Cranky",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "December 19",
 		wiki: "http://animalcrossing.wikia.com/wiki/Chief",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1171,7 +1171,7 @@ var villagers = [
 		head: "Clyde.jpg",
 		species: "Horse",
 		personality: "Lazy",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "May 1",
 		wiki: "http://animalcrossing.wikia.com/wiki/Clyde",
 		store: "https://www.redbubble.com/people/purplepixel/works/26279031-clyde-animal-crossing"
@@ -1182,7 +1182,7 @@ var villagers = [
 		head: "Coach.jpg",
 		species: "Bull",
 		personality: "Jock",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "April 29",
 		wiki: "http://animalcrossing.wikia.com/wiki/Coach",
 		store: "https://www.redbubble.com/people/purplepixel/works/20349682-coach-animal-crossing"
@@ -1303,7 +1303,7 @@ var villagers = [
 		head: "Curlos.jpg",
 		species: "Sheep",
 		personality: "Smug",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "May 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Curlos",
 		store: "https://www.redbubble.com/people/purplepixel/works/15890615-curlos-animal-crossing"
@@ -1314,7 +1314,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Pig",
 		personality: "Jock",
-		coffee: "Blue Mountain - A Little - 1 Sugar",
+		coffee: "Blue Mountain - A Little Milk - 1 Sugar",
 		birthday: "July 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Curly",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1347,7 +1347,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Dog",
 		personality: "Normal",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "November 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Daisy",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1391,7 +1391,7 @@ var villagers = [
 		head: "Deli.jpg",
 		species: "Monkey",
 		personality: "Lazy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "May 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Deli",
 		store: "https://www.redbubble.com/people/purplepixel/works/26646424-deli-animal-crossing"
@@ -1435,7 +1435,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Elephant",
 		personality: "Lazy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "July 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Dizzy",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1446,7 +1446,7 @@ var villagers = [
 		head: "Dobie.jpg",
 		species: "Wolf",
 		personality: "Cranky",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "February 17",
 		wiki: "http://animalcrossing.wikia.com/wiki/Dobie",
 		store: "https://www.redbubble.com/people/purplepixel/works/22311816-dobie-animal-crossing"
@@ -1468,7 +1468,7 @@ var villagers = [
 		head: "Dora.jpg",
 		species: "Mouse",
 		personality: "Normal",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "February 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Dora",
 		store: "https://www.redbubble.com/people/purplepixel/works/20630289-dora-animal-crossing"
@@ -1479,7 +1479,7 @@ var villagers = [
 		head: "Dotty.jpg",
 		species: "Rabbit",
 		personality: "Peppy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "March 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Dotty",
 		store: "https://www.redbubble.com/people/purplepixel/works/21133408-dotty-animal-crossing"
@@ -1589,7 +1589,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Horse",
 		personality: "Lazy",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "October 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Elmer",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1600,7 +1600,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Elephant",
 		personality: "Snooty",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "December 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Eloise",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1644,7 +1644,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Deer",
 		personality: "Lazy",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "July 27",
 		wiki: "http://animalcrossing.wikia.com/wiki/Erik",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1655,7 +1655,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Sheep",
 		personality: "Normal",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "December 25",
 		wiki: "http://animalcrossing.wikia.com/wiki/Etoile",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1699,7 +1699,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Wolf",
 		personality: "Cranky",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "December 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Fang",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1710,7 +1710,7 @@ var villagers = [
 		head: "Fauna.jpg",
 		species: "Deer",
 		personality: "Normal",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "March 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Fauna",
 		store: "https://www.redbubble.com/people/purplepixel/works/17469106-fauna-animal-crossing"
@@ -1732,7 +1732,7 @@ var villagers = [
 		head: "Felyne.jpg",
 		species: "Cat",
 		personality: "Lazy",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "January 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Felyne",
 		store: "https://www.redbubble.com/people/purplepixel/works/15927920-felyne-animal-crossing"
@@ -1743,7 +1743,7 @@ var villagers = [
 		head: "Filbert.jpg",
 		species: "Squirrel",
 		personality: "Lazy",
-		coffee: "Blue Mountain - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "June 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Filbert",
 		store: "https://www.redbubble.com/people/purplepixel/works/15235138-filbert-animal-crossing"
@@ -1831,7 +1831,7 @@ var villagers = [
 		head: "Francine.jpg",
 		species: "Rabbit",
 		personality: "Snooty",
-		coffee: "Kilimanjaro - A Little - 1 Sugar",
+		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "January 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Francine",
 		store: "https://www.redbubble.com/people/purplepixel/works/15522329-francine-animal-crossing"
@@ -1864,7 +1864,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Wolf",
 		personality: "Snooty",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "December 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Freya",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1875,7 +1875,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Penguin",
 		personality: "Snooty",
-		coffee: "Blend - A Little - 1 Sugar",
+		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "October 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Friga",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1930,7 +1930,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Rabbit",
 		personality: "Peppy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "December 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Gabi",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1952,7 +1952,7 @@ var villagers = [
 		head: "Ganon.jpg",
 		species: "Pig",
 		personality: "Cranky",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "February 21",
 		wiki: "http://animalcrossing.wikia.com/wiki/Ganon",
 		store: "https://www.redbubble.com/people/purplepixel/works/25377916-ganon-animal-crossing"
@@ -1963,7 +1963,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Rabbit",
 		personality: "Cranky",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "October 28",
 		wiki: "http://animalcrossing.wikia.com/wiki/Gaston",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -1996,7 +1996,7 @@ var villagers = [
 		head: "Genji.jpg",
 		species: "Rabbit",
 		personality: "Jock",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "January 21",
 		wiki: "http://animalcrossing.wikia.com/wiki/Genji",
 		store: "https://www.redbubble.com/people/purplepixel/works/15987575-genji-animal-crossing"
@@ -2040,7 +2040,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Dog",
 		personality: "Normal",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "December 27",
 		wiki: "http://animalcrossing.wikia.com/wiki/Goldie",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2051,7 +2051,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Koala",
 		personality: "Cranky",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "October 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Gonzo",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2062,7 +2062,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Chicken",
 		personality: "Jock",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "October 4",
 		wiki: "http://animalcrossing.wikia.com/wiki/Goose",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2238,7 +2238,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Hippo",
 		personality: "Smug",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "October 15",
 		wiki: "http://animalcrossing.wikia.com/wiki/Hippeux",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2271,7 +2271,7 @@ var villagers = [
 		head: "Hopper.jpg",
 		species: "Penguin",
 		personality: "Cranky",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "April 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Hopper",
 		store: "https://www.redbubble.com/people/purplepixel/works/22210630-hopper-animal-crossing"
@@ -2315,7 +2315,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Pig",
 		personality: "Lazy",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "December 30",
 		wiki: "http://animalcrossing.wikia.com/wiki/Hugh",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2326,7 +2326,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Penguin",
 		personality: "Jock",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "November 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Iggly",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2359,7 +2359,7 @@ var villagers = [
 		head: "Inkwell.jpg",
 		species: "Octopus",
 		personality: "Jock",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "June 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Inkwell",
 		store: "https://www.redbubble.com/people/purplepixel/works/26907467-inkwell-animal-crossing"
@@ -2381,7 +2381,7 @@ var villagers = [
 		head: "Jacques.jpg",
 		species: "Bird",
 		personality: "Smug",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "June 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Jacques",
 		store: "https://www.redbubble.com/people/purplepixel/works/20307630-jacques-animal-crossing"
@@ -2480,7 +2480,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Ostrich",
 		personality: "Snooty",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "July 31",
 		wiki: "http://animalcrossing.wikia.com/wiki/Julia",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2601,7 +2601,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Cat",
 		personality: "Normal",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "October 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Kiki",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2645,7 +2645,7 @@ var villagers = [
 		head: "Klaus.jpg",
 		species: "Bear",
 		personality: "Smug",
-		coffee: "Blue Mountain - A Little - 1 Sugar",
+		coffee: "Blue Mountain - A Little Milk - 1 Sugar",
 		birthday: "March 31",
 		wiki: "http://animalcrossing.wikia.com/wiki/Klaus",
 		store: "https://www.redbubble.com/people/purplepixel/works/25970392-klaus-animal-crossing"
@@ -2656,7 +2656,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Chicken",
 		personality: "Cranky",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "November 23",
 		wiki: "http://animalcrossing.wikia.com/wiki/Knox",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2667,7 +2667,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Cub",
 		personality: "Jock",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "September 28",
 		wiki: "http://animalcrossing.wikia.com/wiki/Kody",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2711,7 +2711,7 @@ var villagers = [
 		head: "Leonardo.jpg",
 		species: "Tiger",
 		personality: "Jock",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "May 15",
 		wiki: "http://animalcrossing.wikia.com/wiki/Leonardo",
 		store: "https://www.redbubble.com/people/purplepixel/works/15689291-leonardo-animal-crossing"
@@ -2722,7 +2722,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Lion",
 		personality: "Jock",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "August 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Leopold",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2755,7 +2755,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Lion",
 		personality: "Smug",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "July 29",
 		wiki: "http://animalcrossing.wikia.com/wiki/Lionel",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2777,7 +2777,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Wolf",
 		personality: "Cranky",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "November 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Lobo",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2788,7 +2788,7 @@ var villagers = [
 		head: "Lolly.jpg",
 		species: "Cat",
 		personality: "Normal",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "March 27",
 		wiki: "http://animalcrossing.wikia.com/wiki/Lolly",
 		store: "https://www.redbubble.com/people/purplepixel/works/16102314-lolly-animal-crossing"
@@ -2799,7 +2799,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Deer",
 		personality: "Smug",
-		coffee: "Blend - A Little - 1 Sugar",
+		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "August 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Lopez",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2821,7 +2821,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Bird",
 		personality: "Smug",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "December 12",
 		wiki: "http://animalcrossing.wikia.com/wiki/Lucha",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -2909,7 +2909,7 @@ var villagers = [
 		head: "Maddie.jpg",
 		species: "Dog",
 		personality: "Peppy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "January 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Maddie",
 		store: "https://www.redbubble.com/people/purplepixel/works/24799430-maddie-animal-crossing"
@@ -3008,7 +3008,7 @@ var villagers = [
 		head: "Marina.jpg",
 		species: "Octopus",
 		personality: "Normal",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "June 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Marina",
 		store: "https://www.redbubble.com/people/purplepixel/works/15586967-marina-animal-crossing"
@@ -3052,7 +3052,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Kangaroo",
 		personality: "Snooty",
-		coffee: "Blue Mountain - A Little - 1 Sugar",
+		coffee: "Blue Mountain - A Little Milk - 1 Sugar",
 		birthday: "November ",
 		wiki: "http://animalcrossing.wikia.com/wiki/Mathilda",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -3107,7 +3107,7 @@ var villagers = [
 		head: "Merengue.jpg",
 		species: "Rhino",
 		personality: "Normal",
-		coffee: "Blend - A Little - 1 Sugar",
+		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "March 19",
 		wiki: "http://animalcrossing.wikia.com/wiki/Merengue",
 		store: "https://www.redbubble.com/people/purplepixel/works/15238457-merengue-animal-crossing"
@@ -3129,7 +3129,7 @@ var villagers = [
 		head: "Midge.jpg",
 		species: "Bird",
 		personality: "Normal",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "March 12",
 		wiki: "http://animalcrossing.wikia.com/wiki/Midge",
 		store: "https://www.redbubble.com/people/purplepixel/works/16045752-midge-animal-crossing"
@@ -3151,7 +3151,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Rabbit",
 		personality: "Uchi",
-		coffee: "Kilimanjaro - A Little - 1 Sugar",
+		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "July 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Mira",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -3173,7 +3173,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Cat",
 		personality: "Norma",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "September 25",
 		wiki: "http://animalcrossing.wikia.com/wiki/Mitzi",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -3195,7 +3195,7 @@ var villagers = [
 		head: "Molly.jpg",
 		species: "Duck",
 		personality: "Normal",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "March 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Molly",
 		store: "https://www.redbubble.com/people/purplepixel/works/25597008-molly-animal-crossing"
@@ -3349,7 +3349,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Cow",
 		personality: "Normal",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "September 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Norma",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -3426,7 +3426,7 @@ var villagers = [
 		head: "Opal.jpg",
 		species: "Elephant",
 		personality: "Snooty",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "January 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Opal",
 		store: "https://www.redbubble.com/people/purplepixel/works/24928381-opal-animal-crossing"
@@ -3459,7 +3459,7 @@ var villagers = [
 		head: "Ozzie.jpg",
 		species: "Koala",
 		personality: "Lazy",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "May 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Ozzie",
 		store: "https://www.redbubble.com/people/purplepixel/works/21472314-ozzie-animal-crossing"
@@ -3514,7 +3514,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Goat",
 		personality: "Uchi",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "December 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Pashmina",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -3558,7 +3558,7 @@ var villagers = [
 		head: "Paula.jpg",
 		species: "Bear",
 		personality: "Uchi",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "March 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Paula",
 		store: "https://www.redbubble.com/people/purplepixel/works/25824742-paula-animal-crossing"
@@ -3602,7 +3602,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Bird",
 		personality: "Jock",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "July 25",
 		wiki: "http://animalcrossing.wikia.com/wiki/Peck",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -3646,7 +3646,7 @@ var villagers = [
 		head: "Penelope.jpg",
 		species: "Mouse",
 		personality: "Peppy",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "February 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Penelope",
 		store: "https://www.redbubble.com/people/purplepixel/works/20390269-penelope-animal-crossing"
@@ -3767,7 +3767,7 @@ var villagers = [
 		head: "Piper.jpg",
 		species: "Bird",
 		personality: "Peppy",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "April 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Piper",
 		store: "https://www.redbubble.com/people/purplepixel/works/20846118-piper-animal-crossing"
@@ -3778,7 +3778,7 @@ var villagers = [
 		head: "Pippy.jpg",
 		species: "Rabbit",
 		personality: "Peppy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "June 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Pippy",
 		store: "https://www.redbubble.com/people/purplepixel/works/25257095-pippy-animal-crossing"
@@ -3833,7 +3833,7 @@ var villagers = [
 		head: "Poncho.jpg",
 		species: "Cub",
 		personality: "Jock",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "January 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Poncho",
 		store: "https://www.redbubble.com/people/purplepixel/works/21999605-poncho-animal-crossing"
@@ -3932,7 +3932,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Ostrich",
 		personality: "Snooty",
-		coffee: "Kilimanjaro - A Little - 1 Sugar",
+		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "November 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Queenie",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -3954,7 +3954,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Duck",
 		personality: "Smug",
-		coffee: "Kilimanjaro - A Little - 1 Sugar",
+		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "December 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Quillson",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -3965,7 +3965,7 @@ var villagers = [
 		head: "Raddle.jpg",
 		species: "Frog",
 		personality: "Lazy",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "June 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Raddle",
 		store: "https://www.redbubble.com/people/purplepixel/works/22389852-raddle-animal-crossing"
@@ -4020,7 +4020,7 @@ var villagers = [
 		head: "Rhonda.jpg",
 		species: "Rhino",
 		personality: "Normal",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "January 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rhonda",
 		store: "https://www.redbubble.com/people/purplepixel/works/24995320-rhonda-animal-crossing"
@@ -4042,7 +4042,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Squirrel",
 		personality: "Cranky",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "September 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Ricky",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4086,7 +4086,7 @@ var villagers = [
 		head: "Roald.jpg",
 		species: "Penguin",
 		personality: "Jock",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "January 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Roald",
 		store: "https://www.redbubble.com/people/purplepixel/works/20071267-roald-animal-crossing"
@@ -4196,7 +4196,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Lion",
 		personality: "Jock",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "August 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rory",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4218,7 +4218,7 @@ var villagers = [
 		head: "Rosie.jpg",
 		species: "Cat",
 		personality: "Peppy",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "February 27",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rosie",
 		store: "https://www.redbubble.com/people/purplepixel/works/16052066-rosie-animal-crossing"
@@ -4229,7 +4229,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Tiger",
 		personality: "Jock",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "August 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rowan",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4240,7 +4240,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Rabbit",
 		personality: "Peppy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "December 25",
 		wiki: "http://animalcrossing.wikia.com/wiki/Ruby",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4251,7 +4251,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Cat",
 		personality: "Jock",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "December 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rudy",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4339,7 +4339,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Dog",
 		personality: "Smug",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "November 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Shep",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4394,7 +4394,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Alligator",
 		personality: "Jock",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "November 15",
 		wiki: "http://animalcrossing.wikia.com/wiki/Sly",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4405,7 +4405,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Rabbit",
 		personality: "Jock",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "November 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Snake",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4427,7 +4427,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Hamster",
 		personality: "Snooty",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "August 9",
 		wiki: "http://animalcrossing.wikia.com/wiki/Soleil",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4438,7 +4438,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Bird",
 		personality: "Jock",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "November 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Sparro",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4460,7 +4460,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Pig",
 		personality: "Lazy",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "September 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Spork",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4504,7 +4504,7 @@ var villagers = [
 		head: "Stella.jpg",
 		species: "Sheep",
 		personality: "Normal",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "April 9",
 		wiki: "http://animalcrossing.wikia.com/wiki/Stella",
 		store: "https://www.redbubble.com/people/purplepixel/works/20794588-stella-animal-crossing"
@@ -4548,7 +4548,7 @@ var villagers = [
 		head: "Stu.jpg",
 		species: "Bull",
 		personality: "Lazy",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "April 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Stu",
 		store: "https://www.redbubble.com/people/purplepixel/works/26177021-stu-animal-crossing"
@@ -4603,7 +4603,7 @@ var villagers = [
 		head: "Sylvana.jpg",
 		species: "Kangaroo",
 		personality: "Normal",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "October 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Sylvana",
 		store: "https://www.redbubble.com/people/purplepixel/works/26299195-sylvia-animal-crossing"
@@ -4647,7 +4647,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Frog",
 		personality: "Jock",
-		coffee: "Mocha - A Little - 1 Sugar",
+		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "August 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Tad",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4911,7 +4911,7 @@ var villagers = [
 		head: "Velma.jpg",
 		species: "Goat",
 		personality: "Snooty",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "January 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Velma",
 		store: "https://www.redbubble.com/people/purplepixel/works/20649366-velma-animal-crossing"
@@ -4955,7 +4955,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Squirrel",
 		personality: "Normal",
-		coffee: "Blue Mountain - A Lot - 3  Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3  Sugars",
 		birthday: "July 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Viche",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4977,7 +4977,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Gorilla",
 		personality: "Snooty",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "September 1",
 		wiki: "http://animalcrossing.wikia.com/wiki/Violet",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -4988,7 +4988,7 @@ var villagers = [
 		head: "Vivian.jpg",
 		species: "Wolf",
 		personality: "Snooty",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "January 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Vivian",
 		store: "https://www.redbubble.com/people/purplepixel/works/22050277-vivian-animal-crossing"
@@ -4999,7 +4999,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Cub",
 		personality: "Cranky",
-		coffee: "Mocha - A Lot - 3 Sugars",
+		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "August 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Vladimir",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -5054,7 +5054,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Duck",
 		personality: "Lazy",
-		coffee: "Blue Mountain - A Lot - 3 Sugars",
+		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "June 30",
 		wiki: "http://animalcrossing.wikia.com/wiki/Weber",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -5120,7 +5120,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Wolf",
 		personality: "Cranky",
-		coffee: "Blend - A Lot - 3 Sugars",
+		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "November 25",
 		wiki: "http://animalcrossing.wikia.com/wiki/Wolfgang",
 		store: "https://www.redbubble.com/people/purplepixel/"
@@ -5153,7 +5153,7 @@ var villagers = [
 		head: "wip.jpg",
 		species: "Koala",
 		personality: "Snooty",
-		coffee: "Kilimanjaro - A Lot - 3 Sugars",
+		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "July 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Yuka",
 		store: "https://www.redbubble.com/people/purplepixel/"
