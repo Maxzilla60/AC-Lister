@@ -100,7 +100,7 @@ function loadProfile(id) {
     var today_date = new Date(); // Get today's date
     var birthday_date = new Date(birthday); // Convert birthday to Date
     // If villager's birthday's today:
-    if (today_date.getDate() === birthday_date.getDate()) {
+    if (today_date.getDate() === birthday_date.getDate() && today_date.getMonth() === birthday_date.getMonth()) {
         // Highlight birthday string
         birthday = "<div class=\"birthday\">" + birthday + "</div>";
         // Fun little icon with a sound
