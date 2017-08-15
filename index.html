@@ -35,10 +35,11 @@
             <div class="list_area">
                 <div class="menu">
                     <i onclick="newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></i>
-                    <!--<i title="Save all lists (Not implemented)" class="disabled fa fa-floppy-o" aria-hidden="true"></i>-->
-                    <i title="Import list (coming soon)" class="disabled fa fa-arrow-down" aria-hidden="true"></i>
+                    <i onclick="exportLists();" title="Save lists" class="clickable fa fa-download" id="export_lists" aria-hidden="true"></i>
+                    <i onclick="document.getElementById('file-input').click();" title="Import lists" class="clickable fa fa-upload" aria-hidden="true"></i>
                     <i onclick="clearAll();" title="Clear all lists" class="clickable fa fa-times" aria-hidden="true"></i>
                     <i onclick="openViewer();" title="Open viewer" class="clickable fa fa-expand" aria-hidden="true"></i>
+                    <input onchange="importLists();" id="file-input" type="file" hidden="true">
                 </div>
                 <div id="lists">
                 </div>
@@ -55,6 +56,8 @@
             </div>
 		</div>
 	</body>
+    <script src="viewer/Blob.js"></script>
+    <script src="viewer/FileSaver.min.js"></script>
     <script src="villagers.js"></script>
     <script src="script.js"></script>
     <footer>

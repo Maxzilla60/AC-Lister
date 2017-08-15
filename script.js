@@ -24,10 +24,16 @@ function viewLists() {
             block += "</div>";
         }
         block += "</div>";
+        // Enable export button:
+        document.getElementById("export_lists").className = "clickable fa fa-download";
+        document.getElementById("export_lists").onclick = exportLists;
     }
     // In case of empty list:
     else {
         block = "<div style=\"padding-left:15px;color:orange;\">Click<i onclick=\"newList();\" title=\"Add list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\" style=\"margin-left:3px;margin-right:3px;\"></i>to make a new list!</div>";
+        // Disable export button:
+        document.getElementById("export_lists").className = "disabled fa fa-download";
+        document.getElementById("export_lists").onclick = function() {};
     }
     
     // Display block
@@ -302,7 +308,7 @@ function viewLists_Rename(id) {
     for (var l in lists) {
         // Rename view:
         if (lists[l].id == id) {
-            block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\" maxlength=\"30\"></input>" +
+                block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" onblur=\"viewLists();\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\" maxlength=\"30\"></input>" +
                 "<i onclick=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" title=\"Edit name\" class=\"clickable fa fa-check\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
@@ -386,6 +392,51 @@ function clearAll() {
 // Go to viewer
 function openViewer() {
     window.location.href = "viewer";
+}
+
+// Export lists as .json file
+function exportLists() {
+    var blob = new Blob([JSON.stringify(lists, null, 2)], {type:"text/plain"});
+    saveAs(blob, "ACLists.json");
+}
+
+// Import lists from .json file
+function importLists() {
+    var selectedFile = document.getElementById("file-input").files[0];
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+        // Confirm dialog on lists present:
+        if (lists.length > 0) {
+            var confirmOverride = confirm("Are you sure you want to override current lists?");
+        }
+        else {
+            var confirmOverride = true;
+        }
+        // Set lists if confirmed:
+        if (confirmOverride) {
+            lists = JSON.parse(reader.result); // Save lists
+            findIDCount(); // Get idCount
+            document.getElementById('file-input').value = ""; // Reset input
+        }
+        viewLists();
+	}
+    
+    reader.readAsText(selectedFile);
+}
+
+// Retrieve largest id from lists
+function findIDCount() {
+    var temp = -1; // Keep temporary value
+    // Find largest id in lists:
+    for (var l in lists) {
+        if (lists[l].id > temp) {
+            temp = lists[l].id;
+        }
+    }
+    // Save idCount:
+    localStorage.idCount = temp;
+    idCount = localStorage.idCount;
 }
 
 // on page load:
