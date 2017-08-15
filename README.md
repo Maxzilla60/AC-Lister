@@ -15,10 +15,11 @@ Easily search, view and assemble lists of your favorite Animal Crossing villager
 Please go [here](https://github.com/Maxzilla60/AC-Lister/issues) and let me know!
 
 ## Coming Soon
+- [ ] Reordering lists
+- [ ] Better viewer *(more viewer options)*
 - [x] Villager info
 - [x] Save as image
-- [ ] Reordering lists
-- [ ] Export and Import
+- [x] Export and Import
 
 ## Credits
 - [Purple-Pixel](https://purple-pixel.tumblr.com/) for the wonderful art
