@@ -1,4 +1,4 @@
-lists = [];
+var lists = [];
 
 // Display lists in list area
 function viewLists() {
