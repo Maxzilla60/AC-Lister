@@ -3503,7 +3503,7 @@ var villagers = [
 		head: "Papi.jpg",
 		species: "Horse",
 		personality: "Lazy",
-		coffee: "Blue Mocha - Regular Milk - 2 Sugars",
+		coffee: "Blue Mountain - Regular Milk - 2 Sugars",
 		birthday: "January 10",
 		wiki: "http://animalcrossing.wikia.com/wiki/Papi",
 		store: "https://www.redbubble.com/people/purplepixel/works/15853756-papi-animal-crossing"
