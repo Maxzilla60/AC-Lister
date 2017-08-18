@@ -30,4 +30,4 @@ Please go [here](https://github.com/Maxzilla60/AC-Lister/issues) and let me know
 - [html2canvas](https://html2canvas.hertzen.com/) and [FileSaver.js](https://github.com/eligrey/FileSaver.js/) for saving the lists as an image
 - [showdown](https://github.com/showdownjs/showdown) for rendering the README
 - [Real Favicon Generator](http://realfavicongenerator.net/)
-- Special thanks to Lucy for helping me out with the villager information and images (`villagers.js`) ♥
+- Special thanks to [Lucy](http://laxatite.tumblr.com/) for helping me out with the villager information and images (`villagers.js`) ♥
