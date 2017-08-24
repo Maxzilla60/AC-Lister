@@ -113,7 +113,7 @@ function loadProfile(id) {
 	var br = "<br>";
 	
 	// Listselect:
-	if (lists.length !=== 0) {
+	if (lists.length !== 0) {
 		var listselect = "<div class=\"menu\"><select id=\"list_select\" onchange=\"updateAddVillagerButton();\"></select> ";
 	}
 	else {
