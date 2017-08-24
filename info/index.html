@@ -48,7 +48,9 @@
     </footer>
     <script>
         // Render checkboxes:
-        document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[ \]/g, "<input type=\"checkbox\" disabled>");
-        document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[x\]/g, "<input type=\"checkbox\" checked disabled>");
+        setTimeout(function() {
+            document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[ \]/g, "<input type=\"checkbox\" disabled>");
+            document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[x\]/g, "<input type=\"checkbox\" checked disabled>");
+        }, 100);
     </script>
 </html>
