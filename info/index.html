@@ -36,11 +36,13 @@
 		</div>
 	</body>
     <script>
+        // Load README:
         $.get("../README.md", function(response) {
             var converter = new showdown.Converter();
             var html = converter.makeHtml(response);
             $("#readme").html(html);
         });
+        // Render checkboxes:
         document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[ \]/g, "<input type=\"checkbox\" disabled>");
         document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[x\]/g, "<input type=\"checkbox\" checked disabled>");
     </script>
