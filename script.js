@@ -27,7 +27,7 @@ function viewLists() {
         // Enable export and clear buttons:
         document.getElementById("export_lists").className = "clickable fa fa-download";
         document.getElementById("export_lists").onclick = exportLists;
-        document.getElementById("clear_lists").className = "clickable fa fa-download";
+        document.getElementById("clear_lists").className = "clickable fa fa-times";
         document.getElementById("clear_lists").onclick = clearAll;
     }
     // In case of empty list:
@@ -36,7 +36,7 @@ function viewLists() {
         // Disable export and clear buttons:
         document.getElementById("export_lists").className = "disabled fa fa-download";
         document.getElementById("export_lists").onclick = function() {};
-        document.getElementById("clear_lists").className = "disabled fa fa-download";
+        document.getElementById("clear_lists").className = "disabled fa fa-times";
         document.getElementById("clear_lists").onclick = function() {};
     }
     
