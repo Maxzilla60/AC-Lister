@@ -32,7 +32,7 @@
 
 		<div class="search">
 			<div class="search_area">
-				<input id="search_bar" oninput="search(document.getElementById('search_bar').value);" placeholder="Search" type="search" autofocus><i onclick="search(document.getElementById('search_bar').value);" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></i>
+				<input id="search_bar" oninput="search(document.getElementById('search_bar').value);" placeholder="Search" type="search" autofocus><button onclick="search(document.getElementById('search_bar').value);" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
 			</div>
 			<div id="search_results">
 			</div>
@@ -41,11 +41,11 @@
 		<div class="main">
             <div class="list_area">
                 <div class="menu">
-                    <i onclick="newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></i>
-                    <i onclick="exportLists();" title="Save lists" class="clickable fa fa-download" id="export_lists" aria-hidden="true"></i>
-                    <i onclick="document.getElementById('file-input').click();" title="Import lists" class="clickable fa fa-upload" aria-hidden="true"></i>
-                    <i onclick="clearAll();" title="Clear all lists" class="clickable fa fa-times" aria-hidden="true"></i>
-                    <i onclick="openViewer();" title="Open viewer" class="clickable fa fa-expand" aria-hidden="true"></i>
+                    <button onclick="newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
+                    <button onclick="exportLists();" title="Save lists" class="clickable fa fa-download" id="export_lists" aria-hidden="true"></button>
+                    <button onclick="document.getElementById('file-input').click();" title="Import lists" class="clickable fa fa-upload" aria-hidden="true"></button>
+                    <button onclick="clearAll();" title="Clear all lists" class="clickable fa fa-times" aria-hidden="true"></button>
+                    <button onclick="openViewer();" title="Open viewer" class="clickable fa fa-expand" aria-hidden="true"></button>
                     <input onchange="importLists();" id="file-input" type="file" hidden="true">
                 </div>
                 <div id="lists">
@@ -57,7 +57,7 @@
                 <div class="menu">
                     <select id="list_select" disabled><option value="-1">...</option></select>
                     <div id="add_remove_button" style="padding:0;display:inline-block">
-                        <i title="Add to list" class="disabled fa fa-plus" aria-hidden="true"></i>
+                        <button title="Add to list" class="disabled fa fa-plus" aria-hidden="true"></button>
                     </div>
                 </div>
             </div>

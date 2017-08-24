@@ -14,9 +14,9 @@ function viewLists() {
         // Create html block:
         block = "<div>";
         for (var l in lists) {
-            block += "<div onclick=\"updateListSelect(" + lists[l].id + ");\" class=\"clickable list\">" + lists[l].title + "</div>" +
-                "<i onclick=\"deleteList(" + lists[l].id + ");\" title=\"Delete list\" class=\"clickable fa fa-trash\" aria-hidden=\"true\"></i>" +
-                "<i onclick=\"renameList(" + lists[l].id + ");\" title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+            block += "<button onclick=\"updateListSelect(" + lists[l].id + ");\" class=\"clickable list\">" + lists[l].title + "</button>" +
+                "<button onclick=\"deleteList(" + lists[l].id + ");\" title=\"Delete list\" class=\"clickable fa fa-trash\" aria-hidden=\"true\"></button>" +
+                "<button onclick=\"renameList(" + lists[l].id + ");\" title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></button><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
                 block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "');updateListSelect(" + lists[l].id + ");\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
@@ -49,10 +49,10 @@ function viewResults(resultList) {
         //trimmedName = trimName(resultList[v].name); // Trim name for duplicate names
         
         // Create html block:
-        block += "<div onclick=\"loadProfile('" + resultList[v].id + "');\" class=\"result\">" +
+        block += "<button onclick=\"loadProfile('" + resultList[v].id + "');\" class=\"result\">" +
         "<img alt=\"" + resultList[v].name + "\" style=\"float:left\" src=\"villager_icons/" + resultList[v].id + ".gif\">" +
         "<div>" + resultList[v].name + "</div>" +
-        "</div><br>";
+        "</button><br>";
     }
     
     // Display block
@@ -98,14 +98,14 @@ function loadProfile(id) {
     var store = villager.store;
     
     // Create Font Awesome blocks:
-    var icon_wiki = "<i onclick=\"window.open('" + wiki + "','_blank');\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" aria-hidden=\"true\"></i>";
-    var icon_store = "<i onclick=\"window.open('" + store + "','_blank');\" title=\"Buy this art!\" class=\"clickable fa fa-shopping-bag\" aria-hidden=\"true\"></i>";
+    var icon_wiki = "<button onclick=\"window.open('" + wiki + "','_blank');\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" aria-hidden=\"true\"></button>";
+    var icon_store = "<button onclick=\"window.open('" + store + "','_blank');\" title=\"Buy this art!\" class=\"clickable fa fa-shopping-bag\" aria-hidden=\"true\"></button>";
     var icon_name = "<i title=\"Name\" class=\"fa fa-tag\" aria-hidden=\"true\"></i>";
     var icon_species = "<i title=\"Species\" class=\"fa fa-user\" aria-hidden=\"true\"></i>";
     var icon_personality = "<i title=\"Personality\" class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
     var icon_coffee = "<i title=\"Favorite coffee\" class=\"fa fa-coffee\" aria-hidden=\"true\"></i>";
     var icon_birthday = "<i title=\"Birthday\" class=\"fa fa-birthday-cake\" aria-hidden=\"true\"></i>";
-    var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><i onclick=\"addVillager('" + id + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i></div>";
+    var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><button onclick=\"addVillager('" + id + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></button></div>";
     var br = "<br>";
     
     // In case of 'wip.jpg':
@@ -124,7 +124,7 @@ function loadProfile(id) {
         // Highlight birthday string
         birthday = "<div class=\"birthday\">" + birthday + "</div>";
         // Fun little icon with a sound
-        icon_birthday = "<i title=\"Happy Birthday " + name + "!\" onclick=\"new Audio('happybirthday.mp3').play();\" style=\"color:hotpink;\" class=\" clickable fa fa-birthday-cake\" aria-hidden=\"true\"></i>";
+        icon_birthday = "<button title=\"Happy Birthday " + name + "!\" onclick=\"new Audio('happybirthday.mp3').play();\" style=\"color:hotpink;\" class=\" clickable fa fa-birthday-cake\" aria-hidden=\"true\"></button>";
     }
     
     // Assemble all blocks:
@@ -179,12 +179,12 @@ function updateListSelect(id = currentListSelect) {
 function updateAddVillagerButton() {
     // Remove button:
     if (villagerInList(currentProfile, document.getElementById("list_select").value)) {
-        block = "<i onclick=\"removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></i>";
+        block = "<button onclick=\"removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></button>";
         document.getElementById("add_remove_button").innerHTML = block;
     }
     // Add button:
     else {
-        block = "<i onclick=\"addVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></i>";
+        block = "<button onclick=\"addVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></button>";
         document.getElementById("add_remove_button").innerHTML = block;
     }
 }
@@ -336,8 +336,8 @@ function viewLists_Rename(id) {
     for (var l in lists) {
         // Rename view:
         if (lists[l].id == id) {
-                block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" onblur=\"viewLists();\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\" maxlength=\"30\"></input>" +
-                "<i onclick=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" title=\"Edit name\" class=\"clickable fa fa-check\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
+                block += "<input onchange=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\" maxlength=\"30\"></input>" +
+                "<button onclick=\"applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" title=\"Edit name\" class=\"clickable fa fa-check\" aria-hidden=\"true\"></button><div style=\"padding-bottom:0;padding-top:0;\">";
             for (var member in lists[l].members) {
                 trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
                 block += "<img onclick=\"loadProfile('" + lists[l].members[member] + "');\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";

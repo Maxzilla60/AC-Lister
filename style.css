@@ -10,11 +10,17 @@ html * {
 body {
 	background-image: url("background.jpg");
 	margin: auto;
+    padding: 0;
 	width: 900px;
 }
 img {
 	padding-right: 3px;
 	padding: 0;
+}
+button {
+    background-color: floralwhite;
+    border: none;
+    font-size: 16px;
 }
 .fa {color: orange;}
 
@@ -22,7 +28,7 @@ img {
 .disabled {color: gray;}
 
 /* Everything that can be clicked */
-.clickable:hover {
+.clickable:hover, .clickable:focus {
 	background-color: orange;
     bottom: 1px;
     box-shadow: 0px 1px 5px 0px rgba(165,42,42,0.3);
@@ -57,7 +63,7 @@ footer .fa {
     min-width: 25px;
     padding: 0;
 }
-footer .fa:hover {
+footer .fa:hover, footer .fa:focus {
     background-color: rgba(255,0,0,0);
     box-shadow: none;}
 footer .fa:active {
@@ -80,8 +86,15 @@ footer .fa:active {
 	margin-top: 10px;
 	overflow-y: auto;
 }
-.result {padding: 0;}
-.result:hover {
+.result {
+    height: 36px;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+.result img {margin-right: 5px;}
+.result:hover, .result:focus {
     background-color: orange;
     bottom: 1px;
     box-shadow: 0px 1px 5px 0px rgba(165,42,42,0.3);
@@ -89,7 +102,7 @@ footer .fa:active {
     position: relative;
 }
 .result:active {background-color: orangered;}
-.result:hover div {color: white;}
+.result:hover div, .result:focus div {color: white;}
 .search_area {padding: 0;}
 .search input {
 	border: solid orange;
@@ -111,7 +124,7 @@ footer .fa:active {
 	overflow-y: auto;
 	padding: 0;
 }
-.list_area img:hover {
+.list_area img:hover, .list_area img:focus {
     background-color: orange;
     border-radius: 50%;
     bottom: 1px;
@@ -122,10 +135,12 @@ footer .fa:active {
 #lists {padding: 0;}
 .list {
 	display: inline-block;
+    font-size: 16px;
 	font-weight: bold;
 }
 #lists input {
 	border: solid orange;
+    margin-bottom: 5px;
 	width: 400px;
 }
 
@@ -181,7 +196,7 @@ footer .fa:active {
     border-radius: 0;
     padding: 0;
 }
-.readme_area a:hover {
+.readme_area a:hover, .readme_area a:focus {
     background-color: orange;
 	color: white;
 	cursor: pointer;
