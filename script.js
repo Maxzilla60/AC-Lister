@@ -181,14 +181,19 @@ function updateListSelect(id = currentListSelect) {
 }
 // Update the button for adding a villager
 function updateAddVillagerButton() {
+    // Disabled button:
+    if (lists.length <= 0) {
+        var block = "<button title=\"Add to list\" class=\"disabled fa fa-plus\" aria-hidden=\"true\"></button>";
+        document.getElementById("add_remove_button").innerHTML = block;
+    }
     // Remove button:
-    if (villagerInList(currentProfile, document.getElementById("list_select").value)) {
-        block = "<button onclick=\"removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></button>";
+    else if (villagerInList(currentProfile, document.getElementById("list_select").value)) {
+        var block = "<button onclick=\"removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></button>";
         document.getElementById("add_remove_button").innerHTML = block;
     }
     // Add button:
     else {
-        block = "<button onclick=\"addVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></button>";
+        var block = "<button onclick=\"addVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></button>";
         document.getElementById("add_remove_button").innerHTML = block;
     }
 }
@@ -452,7 +457,7 @@ function importLists() {
             document.getElementById('file-input').value = ""; // Reset input
         }
         viewLists();
-	}
+    }
     
     reader.readAsText(selectedFile);
 }
