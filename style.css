@@ -224,7 +224,10 @@ footer .fa:active {
 	min-width: 35px;
 	text-align: center;
 }
-select {border: solid orange;}
+select {
+	border: solid orange;
+	height: 40px;
+}
 
 /* "N/A" */
 .na {
