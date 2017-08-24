@@ -24,16 +24,20 @@ function viewLists() {
             block += "</div>";
         }
         block += "</div>";
-        // Enable export button:
+        // Enable export and clear buttons:
         document.getElementById("export_lists").className = "clickable fa fa-download";
         document.getElementById("export_lists").onclick = exportLists;
+        document.getElementById("clear_lists").className = "clickable fa fa-download";
+        document.getElementById("clear_lists").onclick = clearAll;
     }
     // In case of empty list:
     else {
         block = "<div style=\"padding-left:15px;color:orange;\">Click<i onclick=\"newList();\" title=\"Add list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\" style=\"margin-left:3px;margin-right:3px;\"></i>to make a new list!</div>";
-        // Disable export button:
+        // Disable export and clear buttons:
         document.getElementById("export_lists").className = "disabled fa fa-download";
         document.getElementById("export_lists").onclick = function() {};
+        document.getElementById("clear_lists").className = "disabled fa fa-download";
+        document.getElementById("clear_lists").onclick = function() {};
     }
     
     // Display block

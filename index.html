@@ -42,9 +42,9 @@
             <div class="list_area">
                 <div class="menu">
                     <button onclick="newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
-                    <button onclick="exportLists();" title="Save lists" class="clickable fa fa-download" id="export_lists" aria-hidden="true"></button>
+                    <button onclick="exportLists();" title="Save lists" class="disabled fa fa-download" id="export_lists" aria-hidden="true"></button>
                     <button onclick="document.getElementById('file-input').click();" title="Import lists" class="clickable fa fa-upload" aria-hidden="true"></button>
-                    <button onclick="clearAll();" title="Clear all lists" class="clickable fa fa-times" aria-hidden="true"></button>
+                    <button onclick="clearAll();" title="Clear all lists" class="disabled fa fa-times" id="clear_lists" aria-hidden="true"></button>
                     <button onclick="openViewer();" title="Open viewer" class="clickable fa fa-expand" aria-hidden="true"></button>
                     <input onchange="importLists();" id="file-input" type="file" hidden="true">
                 </div>
