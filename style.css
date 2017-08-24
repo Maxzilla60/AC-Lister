@@ -54,6 +54,7 @@ footer {
 }
 footer .fa {
     margin: 0;
+    min-width: 25px;
     padding: 0;
 }
 footer .fa:hover {
