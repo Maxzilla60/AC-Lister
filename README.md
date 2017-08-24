@@ -32,3 +32,4 @@ Please go [here](https://github.com/Maxzilla60/AC-Lister/issues) and let me know
 - [showdown](https://github.com/showdownjs/showdown) for rendering the README
 - [Real Favicon Generator](http://realfavicongenerator.net/)
 - [Autoprefixer](https://autoprefixer.github.io/)
+- [TinyJPG](https://tinyjpg.com/)
