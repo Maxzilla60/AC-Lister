@@ -42,11 +42,13 @@
             var html = converter.makeHtml(response);
             $("#readme").html(html);
         });
-        // Render checkboxes:
-        document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[ \]/g, "<input type=\"checkbox\" disabled>");
-        document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[x\]/g, "<input type=\"checkbox\" checked disabled>");
     </script>
     <footer hidden>
         <a href="info"><i class="clickable fa fa-info" aria-hidden="true"></i></a><a target="_blank" rel="noopener" href="https://github.com/Maxzilla60/ac-lister"><i class="clickable fa fa-github" aria-hidden="true"></i></a><a target="_blank"  rel="noopener" href="https://twitter.com/hungrymaxzilla"><i class="clickable fa fa-twitter" aria-hidden="true"></i></a><a target="_blank" rel="noopener" href="https://purple-pixel.tumblr.com/"><i class="clickable fa fa-paint-brush" aria-hidden="true"></i></a>
     </footer>
+    <script>
+        // Render checkboxes:
+        document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[ \]/g, "<input type=\"checkbox\" disabled>");
+        document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[x\]/g, "<input type=\"checkbox\" checked disabled>");
+    </script>
 </html>
