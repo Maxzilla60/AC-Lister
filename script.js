@@ -502,4 +502,3 @@ function init() {
 	}
 	viewLists();
 }
-setTimeout(init, 100);
