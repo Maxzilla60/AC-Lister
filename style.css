@@ -5,6 +5,7 @@
 	color: brown;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 9px;
+    transition-duration: 0.2s;
 }
 body {
 	background-image: url("background.jpg");

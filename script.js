@@ -57,6 +57,20 @@ function viewResults(resultList) {
     
     // Display block
     document.getElementById("search_results").innerHTML = block;
+    
+    // Transition:
+    // Hide:
+    var results = document.querySelectorAll(".result");
+        for (var i = 0; i < results.length; i++) {
+            results[i].style.opacity = 0;
+    }
+    // Show:
+    setTimeout(function() {
+        var results = document.querySelectorAll(".result");
+        for (var i = 0; i < results.length; i++) {
+            results[i].style.opacity = 1;
+        }
+    }, 100);
 }
 
 // Display villager profile
@@ -125,6 +139,20 @@ function loadProfile(id) {
     // Display block
     document.getElementById("info").innerHTML = block;
     updateListSelect(); // Update list select
+    
+    // Transition:
+    // Hide:
+    var results = document.querySelectorAll("#info *");
+        for (var i = 0; i < results.length; i++) {
+            results[i].style.opacity = 0;
+    }
+    // Show:
+    setTimeout(function() {
+        var results = document.querySelectorAll("#info *");
+        for (var i = 0; i < results.length; i++) {
+            results[i].style.opacity = 1;
+        }
+    }, 100);
 }
 
 // Update the select for selecting a list
