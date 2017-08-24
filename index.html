@@ -30,15 +30,15 @@
 			<b>Animal Crossing<i style="color: brown" class="fa fa-star" aria-hidden="true"></i>Villager Lister</b>
 		</header>
 
-		<div class="search">
+		<search class="search">
 			<div class="search_area">
 				<input id="search_bar" oninput="search(document.getElementById('search_bar').value);" placeholder="Search" type="search" autofocus><button onclick="search(document.getElementById('search_bar').value);" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
 			</div>
 			<div id="search_results">
 			</div>
-		</div>
+		</search>
 
-		<div class="main">
+		<main class="main">
             <div class="list_area">
                 <div class="menu">
                     <button onclick="newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             
-            <div id="info">
+            <summary id="info">
                 <img title="Image not available (yet)" src="villager_heads/wip.jpg" class="profile-image">
                 <div class="menu">
                     <select id="list_select" disabled></select>
@@ -60,8 +60,8 @@
                         <button title="Add to list" class="disabled fa fa-plus" aria-hidden="true"></button>
                     </div>
                 </div>
-            </div>
-		</div>
+            </summary>
+		</main>
 	</body>
     <script src="viewer/Blob.js"></script>
     <script src="viewer/FileSaver.min.js"></script>
