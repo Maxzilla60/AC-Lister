@@ -501,5 +501,4 @@ function init() {
 		idCount = localStorage.idCount;
 	}
 	viewLists();
-	document.querySelector("body").style.backgroundImage="url(background.jpg);"; // Background image
 }

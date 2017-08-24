@@ -11,7 +11,7 @@ html * {
 	transition-duration: 0.2s;
 }
 body {
-	/*background-image: url("background.jpg");*/
+	background-image: url("background.jpg");
 	margin: auto;
 	padding: 0;
 	width: 900px;
