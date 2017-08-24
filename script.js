@@ -112,6 +112,14 @@ function loadProfile(id) {
 	var icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><button onclick=\"addVillager('" + id + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></button></div>";
 	var br = "<br>";
 	
+	// Listselect:
+	if (lists.length !=== 0) {
+		var listselect = "<div class=\"menu\"><select id=\"list_select\" onchange=\"updateAddVillagerButton();\"></select> ";
+	}
+	else {
+		var listselect = "<div class=\"menu\"><select id=\"list_select\" disabled></select> ";
+	}
+	
 	// In case of 'wip.jpg':
 	if (head == "wip.jpg") {
 		var block_head = "<img title=\"Image not available (yet)\" alt=\"Profile image (" + name + ")\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
@@ -132,7 +140,7 @@ function loadProfile(id) {
 	}
 	
 	// Assemble all blocks:
-	block = "<div class=\"menu\"><select id=\"list_select\" onchange=\"updateAddVillagerButton();\"></select> " + icon_add + "</div>" +
+	block = listselect + icon_add + "</div>" +
 		block_head + 
 		icon_name + name + br +
 		icon_species + species + br +
@@ -164,6 +172,11 @@ function updateListSelect(id = currentListSelect) {
 	// Don't update when no profile's loaded:
 	if (currentProfile == "") {
 		return;
+	}
+	
+	// No lists:
+	if (lists.length <= 0) {
+		
 	}
 	
 	// Create select options block:
