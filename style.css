@@ -225,6 +225,7 @@ footer .fa:active {
 	text-align: center;
 }
 select {
+	background-color: white;
 	border: solid orange;
 	height: 40px;
 }

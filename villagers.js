@@ -24,7 +24,7 @@ var villagers = [
 	{
 		name: "Agent S",
 		id: "Agent S",
-		head: "wip.jpg",
+		head: "Agent S.jpg",
 		species: "Squirrel",
 		personality: "Peppy",
 		coffee: "Mocha - Regular Milk - 2 Sugars",
@@ -211,7 +211,7 @@ var villagers = [
 	{
 		name: "Apollo",
 		id: "Apollo",
-		head: "wip.jpg",
+		head: "Apollo.jpg",
 		species: "Eagle",
 		personality: "Cranky",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
@@ -552,7 +552,7 @@ var villagers = [
 	{
 		name: "Blaire",
 		id: "Blaire",
-		head: "wip.jpg",
+		head: "Blaire.jpg",
 		species: "Squirrel",
 		personality: "Snooty",
 		coffee: "Blend - None - None",
@@ -695,7 +695,7 @@ var villagers = [
 	{
 		name: "Broccolo",
 		id: "Broccolo",
-		head: "wip.jpg",
+		head: "Broccolo.jpg",
 		species: "Mouse",
 		personality: "Lazy",
 		coffee: "Blend - Regular Milk - 2 Sugars",
@@ -1322,7 +1322,7 @@ var villagers = [
 	{
 		name: "Curt",
 		id: "Curt",
-		head: "wip.jpg",
+		head: "Curt.jpg",
 		species: "Bear",
 		personality: "Cranky",
 		coffee: "Mocha - None - None",
@@ -1685,7 +1685,7 @@ var villagers = [
 	{
 		name: "Faith",
 		id: "Faith",
-		head: "wip.jpg",
+		head: "Faith.jpg",
 		species: "Koala",
 		personality: "Normal",
 		coffee: "",
@@ -2246,7 +2246,7 @@ var villagers = [
 	{
 		name: "Holden",
 		id: "Holden",
-		head: "wip.jpg",
+		head: "Holden.jpg",
 		species: "Hamster",
 		personality: "Lazy",
 		coffee: "",
@@ -2983,7 +2983,7 @@ var villagers = [
 	{
 		name: "Marcy",
 		id: "Marcy",
-		head: "wip.jpg",
+		head: "Marcy.jpg",
 		species: "Kangaroo",
 		personality: "Peppy",
 		coffee: "",
@@ -4270,7 +4270,7 @@ var villagers = [
 	{
 		name: "Samson",
 		id: "Samson",
-		head: "wip.jpg",
+		head: "Samson.jpg",
 		species: "Mouse",
 		personality: "Jock",
 		coffee: "Mocha - None - None",
@@ -5051,7 +5051,7 @@ var villagers = [
 	{
 		name: "Weber",
 		id: "Weber",
-		head: "wip.jpg",
+		head: "Weber.jpg",
 		species: "Duck",
 		personality: "Lazy",
 		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
