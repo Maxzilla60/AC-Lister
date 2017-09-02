@@ -3,7 +3,6 @@ var lists = [];
 // Display lists in list area
 function viewLists() {
 	document.getElementById("viewer_lists").innerHTML = ""; // Clear list area
-	localStorage.lists = JSON.stringify(lists); // Update local storage
 	var block = "";
 	
 	if (lists.length !== 0) {
@@ -40,6 +39,11 @@ function trimName(name) {
 		return name.replace(" (2)", "");
 	}
 	return name;
+}
+
+// Open sharable link
+function openShare() {
+	prompt("Copy the link and share!", "https://maxzilla60.github.io/AC-Lister/viewer?lists=" + encodeURIComponent(JSON.stringify(lists)));
 }
 
 // Save as image
@@ -79,13 +83,17 @@ function exportText() {
 
 // On page load
 function init() {
-	// Retrieve lists from local storage:
-	if (localStorage.lists) {
-		lists = JSON.parse(localStorage.lists);
+	// Get share from URL:
+	var url = new URL(window.location.href);
+	var share = url.searchParams.get("lists");
+	
+	// Retrieve lists from URL:
+	if (share != null) {
+		lists = JSON.parse(decodeURIComponent(share));
 	}
-	// Retrieve idCount from local storage:
-	if (localStorage.idCount) {
-		idCount = localStorage.idCount;
+	// Retrieve lists from local storage:
+	else if (localStorage.lists) {
+		lists = JSON.parse(localStorage.lists);
 	}
 	// Disable buttons when list is empty:
 	if (lists.length <= 0) {
@@ -95,6 +103,9 @@ function init() {
 		// Text button:
 		document.getElementById("text_button").className = "disabled fa fa-file-text";
 		document.getElementById("text_button").onclick = function() {};
+		// Share button:
+		document.getElementById("share_button").className = "disabled fa fa-share";
+		document.getElementById("share_button").onclick = function() {};
 	}
 	viewLists();
 }
