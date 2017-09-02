@@ -59,7 +59,25 @@ function exportImage() {
 	document.getElementsByClassName("menu")[0].style.display = "";
 }
 
-// on page load:
+// Save as text file
+function exportText() {
+	var text = "";
+	
+	for (var l in lists) {
+		text += lists[l].title + ":\n";
+		for (var member in lists[l].members) {
+			trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
+			text += "\t- " + trimmedName + "\n";
+		}
+		text += "\n";
+	}
+	text += "Made with Animal Crossing Villager Lister\n(https://maxzilla60.github.io/AC-Lister/)";
+	
+	var blob = new Blob([text], {type:"text/plain;charset-utf-8"});
+	saveAs(blob, "AnimalCrossing-VillagerLists.txt");
+}
+
+// On page load
 function init() {
 	// Retrieve lists from local storage:
 	if (localStorage.lists) {
@@ -68,6 +86,15 @@ function init() {
 	// Retrieve idCount from local storage:
 	if (localStorage.idCount) {
 		idCount = localStorage.idCount;
+	}
+	// Disable buttons when list is empty:
+	if (lists.length <= 0) {
+		// Image button:
+		document.getElementById("image_button").className = "disabled fa fa-camera";
+		document.getElementById("image_button").onclick = function() {};
+		// Text button:
+		document.getElementById("text_button").className = "disabled fa fa-file-text";
+		document.getElementById("text_button").onclick = function() {};
 	}
 	viewLists();
 }
