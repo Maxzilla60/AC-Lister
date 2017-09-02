@@ -3,6 +3,7 @@
 <html lang="en">
 	<head>
 		<title>Animal Crossing ★ Villager Lister</title>
+		<link href='https://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
         <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
@@ -27,7 +28,8 @@
 
 	<body onload="init();">
 		<header>
-			<b>Animal Crossing<i style="color: brown" class="fa fa-star" aria-hidden="true"></i>Villager Lister</b>
+			Animal Crossing<i style="color: brown" class="fa fa-star" aria-hidden="true"></i>Villager Lister
+			<small>NEW: Save as text file & Sharable links (see viewer)!</small>
 		</header>
 
 		<search class="search">
@@ -45,7 +47,7 @@
                     <button onclick="exportLists();" title="Save lists" class="disabled fa fa-download" id="export_lists" aria-hidden="true"></button>
                     <button onclick="document.getElementById('file-input').click();" title="Import lists" class="clickable fa fa-upload" aria-hidden="true"></button>
                     <button onclick="clearAll();" title="Clear all lists" class="disabled fa fa-times" id="clear_lists" aria-hidden="true"></button>
-                    <button onclick="openViewer();" title="Open viewer and Share" class="clickable fa fa-expand" aria-hidden="true"></button>
+                    <button onclick="openViewer();" title="Open viewer and share" class="clickable fa fa-expand" aria-hidden="true"></button>
                     <input onchange="importLists();" id="file-input" type="file" hidden="true">
                 </div>
                 <div id="lists">
