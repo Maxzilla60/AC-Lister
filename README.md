@@ -17,7 +17,7 @@ Please go [here](https://github.com/Maxzilla60/AC-Lister/issues) and let me know
 
 ## Coming Soon
 - [ ] Reordering lists
-- [ ] Sharable links
+- [x] Sharable links
 - [x] Save as text file
 - [ ] Better viewer *(more viewer options)*
 - [ ] More profile art
