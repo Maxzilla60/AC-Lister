@@ -10,7 +10,8 @@ Easily search, view and assemble lists of your favorite Animal Crossing villager
 - See species, personality, favorite coffee and birthday at a glance
 - Browser remembers your lists even after refresh *(but not after hard refresh/clearing cache!)*
 - Export and upload your lists from files
-- Easily view and save your lists as an image
+- Easily view and save your lists as an image or a text file
+- Share your lists with links
 
 ## Uhm, there's something wrong...
 Please go [here](https://github.com/Maxzilla60/AC-Lister/issues) and let me know!
