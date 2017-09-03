@@ -54,6 +54,7 @@ header {
 	text-align: center;
 }
 small {
+	background-color: floralwhite;
 	color: red;
 	display: block;
 	font-family: Arial, Helvetica, sans-serif;
