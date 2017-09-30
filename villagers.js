@@ -684,7 +684,7 @@ var villagers = [
 	{
 		name: "Bree",
 		id: "Bree",
-		head: "wip.jpg",
+		head: "Bree.jpg",
 		species: "Mouse",
 		personality: "Snooty",
 		coffee: "Blend - Regular Milk - 2 Sugars",
@@ -860,7 +860,7 @@ var villagers = [
 	{
 		name: "Caroline",
 		id: "Caroline",
-		head: "wip.jpg",
+		head: "Caroline.jpg",
 		species: "Squirrel",
 		personality: "Normal",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
@@ -1432,7 +1432,7 @@ var villagers = [
 	{
 		name: "Dizzy",
 		id: "Dizzy",
-		head: "wip.jpg",
+		head: "Dizzy.jpg",
 		species: "Elephant",
 		personality: "Lazy",
 		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
@@ -1751,7 +1751,7 @@ var villagers = [
 	{
 		name: "Filly",
 		id: "Filly",
-		head: "wip.jpg",
+		head: "Filly.jpg",
 		species: "Horse",
 		personality: "Normal",
 		coffee: "",
@@ -1883,7 +1883,7 @@ var villagers = [
 	{
 		name: "Frita",
 		id: "Frita",
-		head: "wip.jpg",
+		head: "Frita.jpg",
 		species: "Sheep",
 		personality: "Uchi",
 		coffee: "Mocha - None - None",
@@ -1982,7 +1982,7 @@ var villagers = [
 	{
 		name: "Gen",
 		id: "Gen",
-		head: "wip.jpg",
+		head: "Gen.jpg",
 		species: "Sheep",
 		personality: "Jock",
 		coffee: "",
@@ -2290,7 +2290,7 @@ var villagers = [
 	{
 		name: "Huck",
 		id: "Huck",
-		head: "wip.jpg",
+		head: "Huck.jpg",
 		species: "Frog",
 		personality: "Smug",
 		coffee: "Mocha - A Little Milk - 1 Sugar",
@@ -2422,7 +2422,7 @@ var villagers = [
 	{
 		name: "Jeremiah",
 		id: "Jeremiah",
-		head: "wip.jpg",
+		head: "Jeremiah.jpg",
 		species: "Frog",
 		personality: "Lazy",
 		coffee: "Kilimanjaro - None - None",
@@ -3148,7 +3148,7 @@ var villagers = [
 	{
 		name: "Mira",
 		id: "Mira",
-		head: "wip.jpg",
+		head: "Mira.jpg",
 		species: "Rabbit",
 		personality: "Uchi",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
@@ -3236,7 +3236,7 @@ var villagers = [
 	{
 		name: "Mott",
 		id: "Mott",
-		head: "wip.jpg",
+		head: "Mott.jpg",
 		species: "Lion",
 		personality: "Jock",
 		coffee: "Blue Mountain - None - None",
@@ -3401,7 +3401,7 @@ var villagers = [
 	{
 		name: "Olive",
 		id: "Olive",
-		head: "wip.jpg",
+		head: "Olive.jpg",
 		species: "Cub",
 		personality: "Normal",
 		coffee: "Blue Mountain - None - None",
@@ -4006,7 +4006,7 @@ var villagers = [
 	{
 		name: "Rhoda",
 		id: "Rhoda",
-		head: "wip.jpg",
+		head: "Rhoda.jpg",
 		species: "Chicken",
 		personality: "Snooty",
 		coffee: "",
@@ -4490,7 +4490,7 @@ var villagers = [
 	{
 		name: "Static",
 		id: "Static",
-		head: "wip.jpg",
+		head: "Static.jpg",
 		species: "Squirrel",
 		personality: "Cranky",
 		coffee: "Kilimanjaro - A Little Milk - 2 Sugars",
@@ -4798,7 +4798,7 @@ var villagers = [
 	{
 		name: "Toby",
 		id: "Toby",
-		head: "wip.jpg",
+		head: "Toby.jpg",
 		species: "Rabbit",
 		personality: "Smug",
 		coffee: "Mocha - Regular Milk - 2 Sugars",
@@ -4853,7 +4853,7 @@ var villagers = [
 	{
 		name: "Twiggy",
 		id: "Twiggy",
-		head: "wip.jpg",
+		head: "Twiggy.jpg",
 		species: "Bird",
 		personality: "Peppy",
 		coffee: "Kilimanjaro - None - None",
@@ -4950,9 +4950,9 @@ var villagers = [
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
 	{
-		name: "Viche",
+		name: "Viché",
 		id: "Viche",
-		head: "wip.jpg",
+		head: "Viche.jpg",
 		species: "Squirrel",
 		personality: "Normal",
 		coffee: "Blue Mountain - Lots of Milk - 3  Sugars",
@@ -4963,7 +4963,7 @@ var villagers = [
 	{
 		name: "Victoria",
 		id: "Victoria",
-		head: "wip.jpg",
+		head: "Victoria.jpg",
 		species: "Horse",
 		personality: "Peppy",
 		coffee: "Mocha - A Little Milk - 1 Sugar",
