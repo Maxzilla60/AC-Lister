@@ -30,7 +30,7 @@ var villagers = [
 		coffee: "Mocha - Regular Milk - 2 Sugars",
 		birthday: "July 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Agent S",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21509096-agent-s-animal-crossing"
 	},
 	{
 		name: "Agnes",
@@ -217,7 +217,7 @@ var villagers = [
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "July 4",
 		wiki: "http://animalcrossing.wikia.com/wiki/Apollo",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15395583-apollo-animal-crossing"
 	},
 	{
 		name: "Apple",
@@ -558,7 +558,7 @@ var villagers = [
 		coffee: "Blend - None - None",
 		birthday: "July 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Blaire",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/19950692-blaire-animal-crossing"
 	},
 	{
 		name: "Blanche",
@@ -690,7 +690,7 @@ var villagers = [
 		coffee: "Blend - Regular Milk - 2 Sugars",
 		birthday: "July 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bree",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/18191939-bree-animal-crossing"
 	},
 	{
 		name: "Broccolo",
@@ -701,7 +701,7 @@ var villagers = [
 		coffee: "Blend - Regular Milk - 2 Sugars",
 		birthday: "June 30",
 		wiki: "http://animalcrossing.wikia.com/wiki/Broccolo",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/20348144-broccolo-animal-crossing"
 	},
 	{
 		name: "Broffina",
@@ -866,7 +866,7 @@ var villagers = [
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "July 15",
 		wiki: "http://animalcrossing.wikia.com/wiki/Caroline",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15735314-caroline-animal-crossing"
 	},
 	{
 		name: "Carrie",
@@ -1328,7 +1328,7 @@ var villagers = [
 		coffee: "Mocha - None - None",
 		birthday: "July 1",
 		wiki: "http://animalcrossing.wikia.com/wiki/Curt",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15495960-curt-animal-crossing"
 	},
 	{
 		name: "Cyrano",
@@ -1438,7 +1438,7 @@ var villagers = [
 		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "July 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Dizzy",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15405997-dizzy-animal-crossing"
 	},
 	{
 		name: "Dobie",
@@ -1691,7 +1691,7 @@ var villagers = [
 		coffee: "",
 		birthday: "April 12",
 		wiki: "http://animalcrossing.wikia.com/wiki/Faith",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21615953-faith-animal-crossing"
 	},
 	{
 		name: "Fang",
@@ -1757,7 +1757,7 @@ var villagers = [
 		coffee: "",
 		birthday: "July 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Filly",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/28028229-filly-animal-crossing"
 	},
 	{
 		name: "Flash",
@@ -1889,7 +1889,7 @@ var villagers = [
 		coffee: "Mocha - None - None",
 		birthday: "July 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Frita",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/20889577-frita-animal-crossing"
 	},
 	{
 		name: "Frobert",
@@ -1988,7 +1988,7 @@ var villagers = [
 		coffee: "",
 		birthday: "",
 		wiki: "http://animalcrossing.wikia.com/wiki/Gen",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/27930373-gen-animal-crossing"
 	},
 	{
 		name: "Genji",
@@ -2252,7 +2252,7 @@ var villagers = [
 		coffee: "",
 		birthday: "June 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Holden",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/27597178-holden-animal-crossing"
 	},
 	{
 		name: "Hopkins",
@@ -2296,7 +2296,7 @@ var villagers = [
 		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "January 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Huck",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/22188086-huck-animal-crossing"
 	},
 	{
 		name: "Huggy",
@@ -2428,7 +2428,7 @@ var villagers = [
 		coffee: "Kilimanjaro - None - None",
 		birthday: "July 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Jeremiah",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/22465325-jeremiah-animal-crossing"
 	},
 	{
 		name: "Jitters",
@@ -2989,7 +2989,7 @@ var villagers = [
 		coffee: "",
 		birthday: "May 31",
 		wiki: "http://animalcrossing.wikia.com/wiki/Marcy",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/22041559-marcy-animal-crossing"
 	},
 	{
 		name: "Margie",
@@ -3154,7 +3154,7 @@ var villagers = [
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "July 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Mira",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/18879086-mira-animal-crossing"
 	},
 	{
 		name: "Miranda",
@@ -3242,7 +3242,7 @@ var villagers = [
 		coffee: "Blue Mountain - None - None",
 		birthday: "July 10",
 		wiki: "http://animalcrossing.wikia.com/wiki/Mott",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/22514858-mott-animal-crossing"
 	},
 	{
 		name: "Muffy",
@@ -3407,7 +3407,7 @@ var villagers = [
 		coffee: "Blue Mountain - None - None",
 		birthday: "July 12",
 		wiki: "http://animalcrossing.wikia.com/wiki/Olive",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/24349189-olive-animal-crossing"
 	},
 	{
 		name: "Olivia",
@@ -4012,7 +4012,7 @@ var villagers = [
 		coffee: "",
 		birthday: "",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rhoda",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/20708872-rhoda-animal-crossing"
 	},
 	{
 		name: "Rhonda",
@@ -4276,7 +4276,7 @@ var villagers = [
 		coffee: "Mocha - None - None",
 		birthday: "July 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Samson",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/23214160-samson-animal-crossing"
 	},
 	{
 		name: "Sandy",
@@ -4496,7 +4496,7 @@ var villagers = [
 		coffee: "Kilimanjaro - A Little Milk - 2 Sugars",
 		birthday: "July 9",
 		wiki: "http://animalcrossing.wikia.com/wiki/Static",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16352282-static-animal-crossing"
 	},
 	{
 		name: "Stella",
@@ -4804,7 +4804,7 @@ var villagers = [
 		coffee: "Mocha - Regular Milk - 2 Sugars",
 		birthday: "July 10",
 		wiki: "http://animalcrossing.wikia.com/wiki/Toby",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/23098793-toby-animal-crossing"
 	},
 	{
 		name: "Tom",
@@ -4859,7 +4859,7 @@ var villagers = [
 		coffee: "Kilimanjaro - None - None",
 		birthday: "July 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Twiggy",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16100636-twiggy-animal-crossing"
 	},
 	{
 		name: "Twirp",
@@ -4958,7 +4958,7 @@ var villagers = [
 		coffee: "Blue Mountain - Lots of Milk - 3  Sugars",
 		birthday: "July 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Viche",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/26757897-vich-animal-crossing"
 	},
 	{
 		name: "Victoria",
@@ -4969,7 +4969,7 @@ var villagers = [
 		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "July 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Victoria",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16068757-victoria-animal-crossing"
 	},
 	{
 		name: "Violet",
@@ -5057,7 +5057,7 @@ var villagers = [
 		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "June 30",
 		wiki: "http://animalcrossing.wikia.com/wiki/Weber",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/27628277-weber-animal-crossing"
 	},
 	{
 		name: "Wendy",
