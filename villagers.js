@@ -420,13 +420,13 @@ var villagers = [
 	{
 		name: "Benjamin",
 		id: "Benjamin",
-		head: "wip.jpg",
+		head: "Benjamin.jpg",
 		species: "Dog",
 		personality: "Lazy",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "August 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Benjamin",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/29321066-benjamin-animal-crossing"
 	},
 	{
 		name: "Bertha",
@@ -607,13 +607,13 @@ var villagers = [
 	{
 		name: "Bones",
 		id: "Bones",
-		head: "wip.jpg",
+		head: "Bones.jpg",
 		species: "Dog",
 		personality: "Lazy",
 		coffee: "Mocha - Regular Milk - 2 Sugars",
 		birthday: "August 4",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bones",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16524184-bones-animal-crossing"
 	},
 	{
 		name: "Boomer",
@@ -640,13 +640,13 @@ var villagers = [
 	{
 		name: "Boots",
 		id: "Boots",
-		head: "wip.jpg",
+		head: "Boots.jpg",
 		species: "Alligator",
 		personality: "Jock",
 		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "August 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Boots",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/29555143-boots-animal-crossing"
 	},
 	{
 		name: "Boris",
@@ -750,13 +750,13 @@ var villagers = [
 	{
 		name: "Bud",
 		id: "Bud",
-		head: "wip.jpg",
+		head: "Bud.jpg",
 		species: "Lion",
 		personality: "Jock",
 		coffee: "Blue Mountain - None - None",
 		birthday: "August 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bud",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/17644958-bud-animal-crossing"
 	},
 	{
 		name: "Bunnie",
@@ -1025,13 +1025,13 @@ var villagers = [
 	{
 		name: "Chester",
 		id: "Chester",
-		head: "wip.jpg",
+		head: "Chester.jpg",
 		species: "Cub",
 		personality: "Lazy",
 		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "August 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Chester",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15978310-chester-animal-crossing"
 	},
 	{
 		name: "Chevre",
@@ -1839,13 +1839,13 @@ var villagers = [
 	{
 		name: "Frank",
 		id: "Frank",
-		head: "wip.jpg",
+		head: "Frank.jpg",
 		species: "Eagle",
 		personality: "Cranky",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "July 30",
 		wiki: "http://animalcrossing.wikia.com/wiki/Frank",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15282791-frank-animal-crossing"
 	},
 	{
 		name: "Freckles",
@@ -2092,13 +2092,13 @@ var villagers = [
 	{
 		name: "Grizzly",
 		id: "Grizzly",
-		head: "wip.jpg",
+		head: "Grizzly.jpg",
 		species: "Bear",
 		personality: "Cranky",
 		coffee: "Blend - Regular Milk - 2 Sugars",
 		birthday: "July 31",
 		wiki: "http://animalcrossing.wikia.com/wiki/Grizzly",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/29102668-grizzly-animal-crossing"
 	},
 	{
 		name: "Groucho",
@@ -2477,13 +2477,13 @@ var villagers = [
 	{
 		name: "Julia",
 		id: "Julia",
-		head: "wip.jpg",
+		head: "Julia.jpg",
 		species: "Ostrich",
 		personality: "Snooty",
 		coffee: "Blue Mountain - Lots of Milk - 3 Sugars",
 		birthday: "July 31",
 		wiki: "http://animalcrossing.wikia.com/wiki/Julia",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21758188-julia-animal-crossing"
 	},
 	{
 		name: "Julian",
@@ -2576,13 +2576,13 @@ var villagers = [
 	{
 		name: "Kid Cat",
 		id: "Kid Cat",
-		head: "wip.jpg",
+		head: "Kid Cat.jpg",
 		species: "Cat",
 		personality: "Jock",
 		coffee: "Blue Mountain - Regular Milk - 2 Sugars",
 		birthday: "August 1",
 		wiki: "http://animalcrossing.wikia.com/wiki/Kid Cat",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16119389-kid-cat-animal-crossing"
 	},
 	{
 		name: "Kidd",
@@ -3841,13 +3841,13 @@ var villagers = [
 	{
 		name: "Poppy",
 		id: "Poppy",
-		head: "wip.jpg",
+		head: "Poppy.jpg",
 		species: "Squirrel",
 		personality: "Normal",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "August 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Poppy",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15427516-poppy-animal-crossing"
 	},
 	{
 		name: "Portia",
@@ -4193,13 +4193,13 @@ var villagers = [
 	{
 		name: "Rory",
 		id: "Rory",
-		head: "wip.jpg",
+		head: "Rory.jpg",
 		species: "Lion",
 		personality: "Jock",
 		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "August 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rory",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/29609257-rory-animal-crossing"
 	},
 	{
 		name: "Roscoe",
@@ -4644,13 +4644,13 @@ var villagers = [
 	{
 		name: "Tad",
 		id: "Tad",
-		head: "wip.jpg",
+		head: "Tad.jpg",
 		species: "Frog",
 		personality: "Jock",
 		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "August 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Tad",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/19503749-tad-animal-crossing"
 	},
 	{
 		name: "Tammi",
@@ -4996,13 +4996,13 @@ var villagers = [
 	{
 		name: "Vladimir",
 		id: "Vladimir",
-		head: "wip.jpg",
+		head: "Vladimir.jpg",
 		species: "Cub",
 		personality: "Cranky",
 		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "August 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Vladimir",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15561541-vladimir-animal-crossing"
 	},
 	{
 		name: "Wade",
