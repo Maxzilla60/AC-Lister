@@ -2367,13 +2367,13 @@ var villagers = [
 	{
 		name: "Jacob",
 		id: "Jacob",
-		head: "wip.jpg",
+		head: "Jacob.jpg",
 		species: "Bird",
 		personality: "Lazy",
 		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "August 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Jacob",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/30508140-jacob-animal-crossing"
 	},
 	{
 		name: "Jacques",
@@ -2796,13 +2796,13 @@ var villagers = [
 	{
 		name: "Lopez",
 		id: "Lopez",
-		head: "wip.jpg",
+		head: "Lopez.jpg",
 		species: "Deer",
 		personality: "Smug",
 		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "August 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Lopez",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/30221919-lopez-animal-crossing"
 	},
 	{
 		name: "Louie",
@@ -3269,13 +3269,13 @@ var villagers = [
 	{
 		name: "Nan",
 		id: "Nan",
-		head: "wip.jpg",
+		head: "Nan.jpg",
 		species: "Goat",
 		personality: "Normal",
 		coffee: "Blue Mountain - None - None",
 		birthday: "August 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Nan",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/25622343-nan-animal-crossing"
 	},
 	{
 		name: "Nana",
@@ -4160,13 +4160,13 @@ var villagers = [
 	{
 		name: "Rolf",
 		id: "Rolf",
-		head: "wip.jpg",
+		head: "Rolf.jpg",
 		species: "Tiger",
 		personality: "Cranky",
 		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "August 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rolf",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15326272-rolf-animal-crossing"
 	},
 	{
 		name: "Rollo",
@@ -4226,13 +4226,13 @@ var villagers = [
 	{
 		name: "Rowan",
 		id: "Rowan",
-		head: "wip.jpg",
+		head: "Rowan.jpg",
 		species: "Tiger",
 		personality: "Jock",
 		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "August 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rowan",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/23168562-rowan-animal-crossing"
 	},
 	{
 		name: "Ruby",
@@ -4787,13 +4787,13 @@ var villagers = [
 	{
 		name: "Tipper",
 		id: "Tipper",
-		head: "wip.jpg",
+		head: "Tipper.jpg",
 		species: "Cow",
 		personality: "Snooty",
 		coffee: "Blue Mountain - None - None",
 		birthday: "August 25",
 		wiki: "http://animalcrossing.wikia.com/wiki/Tipper",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15303136-tipper-animal-crossing"
 	},
 	{
 		name: "Toby",
@@ -5040,13 +5040,13 @@ var villagers = [
 	{
 		name: "Wart Jr",
 		id: "Wart Jr",
-		head: "wip.jpg",
+		head: "Wart Jr.jpg",
 		species: "Frog",
 		personality: "Cranky",
 		coffee: "Blue Mountain - Regular Milk - 2 Sugars",
 		birthday: "August 21",
 		wiki: "http://animalcrossing.wikia.com/wiki/Wart Jr",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/30318917-wart-jr-animal-crossing"
 	},
 	{
 		name: "Weber",
