@@ -233,13 +233,13 @@ var villagers = [
 	{
 		name: "Astrid",
 		id: "Astrid",
-		head: "wip.jpg",
+		head: "Astrid.jpg",
 		species: "Kangaroo",
 		personality: "Snooty",
 		coffee: "Blue Mountain - A Little Milk - 1 Sugar",
 		birthday: "September 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Astrid",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16065776-astrid-animal-crossing"
 	},
 	{
 		name: "Aurora",
@@ -926,13 +926,13 @@ var villagers = [
 	{
 		name: "Cesar",
 		id: "Cesar",
-		head: "wip.jpg",
+		head: "Cesar.jpg",
 		species: "Gorilla",
 		personality: "Cranky",
 		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "September 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Cesar",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21591304-cesar-animal-crossing"
 	},
 	{
 		name: "Chadder",
@@ -3280,13 +3280,13 @@ var villagers = [
 	{
 		name: "Nana",
 		id: "Nana",
-		head: "wip.jpg",
+		head: "Nana.jpg",
 		species: "Monkey",
 		personality: "Normal",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "August 23",
 		wiki: "http://animalcrossing.wikia.com/wiki/Nana",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/27606268-nana-animal-crossing"
 	},
 	{
 		name: "Naomi",
@@ -3434,13 +3434,13 @@ var villagers = [
 	{
 		name: "Otis",
 		id: "Otis",
-		head: "wip.jpg",
+		head: "Otis.jpg",
 		species: "Bird",
 		personality: "Lazy",
 		coffee: "",
 		birthday: "",
 		wiki: "http://animalcrossing.wikia.com/wiki/Otis",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/31873270-otis-animal-crossing"
 	},
 	{
 		name: "Oxford",
@@ -3588,13 +3588,13 @@ var villagers = [
 	{
 		name: "Pecan",
 		id: "Pecan",
-		head: "wip.jpg",
+		head: "Pecan.jpg",
 		species: "Squirrel",
 		personality: "Snooty",
 		coffee: "Blend - None - None",
 		birthday: "September 10",
 		wiki: "http://animalcrossing.wikia.com/wiki/Pecan",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/20389469-pecan-animal-crossing"
 	},
 	{
 		name: "Peck",
@@ -3610,13 +3610,13 @@ var villagers = [
 	{
 		name: "Peewee",
 		id: "Peewee",
-		head: "wip.jpg",
+		head: "Peewee.jpg",
 		species: "Gorilla",
 		personality: "Cranky",
 		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "September 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Peewee",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/25259900-peewee-animal-crossing"
 	},
 	{
 		name: "Peggy",
@@ -3753,13 +3753,13 @@ var villagers = [
 	{
 		name: "Pinky",
 		id: "Pinky",
-		head: "wip.jpg",
+		head: "Pinky.jpg",
 		species: "Bear",
 		personality: "Peppy",
 		coffee: "Blend - Regular Milk - 2 Sugars",
 		birthday: "September 9",
 		wiki: "http://animalcrossing.wikia.com/wiki/Pinky",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16606051-pinky-animal-crossing"
 	},
 	{
 		name: "Piper",
@@ -4556,13 +4556,13 @@ var villagers = [
 	{
 		name: "Sue E.",
 		id: "Sue E.",
-		head: "wip.jpg",
+		head: "Sue E.jpg",
 		species: "Pig",
 		personality: "Snooty",
 		coffee: "",
 		birthday: "",
 		wiki: "http://animalcrossing.wikia.com/wiki/Sue E.",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/19873242-sue-e-animal-crossing"
 	},
 	{
 		name: "Sunny",
@@ -4831,13 +4831,13 @@ var villagers = [
 	{
 		name: "Tucker",
 		id: "Tucker",
-		head: "wip.jpg",
+		head: "Tucker.jpg",
 		species: "Elephant",
 		personality: "Lazy",
 		coffee: "Mocha - Regular Milk - 2 Sugars",
 		birthday: "September 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Tucker",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15844182-tucker-animal-crossing"
 	},
 	{
 		name: "Tutu",
@@ -4864,13 +4864,13 @@ var villagers = [
 	{
 		name: "Twirp",
 		id: "Twirp",
-		head: "wip.jpg",
+		head: "Twirp.jpg",
 		species: "Bird",
 		personality: "Cranky",
 		coffee: "",
 		birthday: "",
 		wiki: "http://animalcrossing.wikia.com/wiki/Twirp",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/31798202-twirp-animal-crossing"
 	},
 	{
 		name: "Tybalt",
