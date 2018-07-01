@@ -629,13 +629,13 @@ var villagers = [
 	{
 		name: "Boone",
 		id: "Boone",
-		head: "wip.jpg",
+		head: "Boone.jpg",
 		species: "Gorilla",
 		personality: "Jock",
 		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "September 12",
 		wiki: "http://animalcrossing.wikia.com/wiki/Boone",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21984307-boone-animal-crossing"
 	},
 	{
 		name: "Boots",
@@ -1289,13 +1289,13 @@ var villagers = [
 	{
 		name: "Cupcake",
 		id: "Cupcake",
-		head: "wip.jpg",
+		head: "Cupcake.jpg",
 		species: "Cub",
 		personality: "Snooty",
 		coffee: "",
 		birthday: "",
 		wiki: "http://animalcrossing.wikia.com/wiki/Cupcake",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/32295792-cupcake-animal-crossing"
 	},
 	{
 		name: "Curlos",
@@ -1531,13 +1531,13 @@ var villagers = [
 	{
 		name: "Ed",
 		id: "Ed",
-		head: "wip.jpg",
+		head: "Ed.jpg",
 		species: "Horse",
 		personality: "Smug",
 		coffee: "Blue Mountain - Regular Milk - 2 Sugars",
 		birthday: "September 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Ed",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21879720-ed-animal-crossing"
 	},
 	{
 		name: "Egbert",
@@ -2895,13 +2895,13 @@ var villagers = [
 	{
 		name: "Madam Rosa",
 		id: "Madam Rosa",
-		head: "wip.jpg",
+		head: "Madam Rosa.jpg",
 		species: "Bird",
 		personality: "Snooty",
 		coffee: "",
 		birthday: "",
 		wiki: "http://animalcrossing.wikia.com/wiki/Madam Rosa",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/32279685-madam-rosa-animal-crossing"
 	},
 	{
 		name: "Maddie",
@@ -3225,13 +3225,13 @@ var villagers = [
 	{
 		name: "Moose",
 		id: "Moose",
-		head: "wip.jpg",
+		head: "Moose.jpg",
 		species: "Mouse",
 		personality: "Jock",
 		coffee: "Mocha - None - None",
 		birthday: "September 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Moose",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/22190484-moose-animal-crossing"
 	},
 	{
 		name: "Mott",
@@ -4039,13 +4039,13 @@ var villagers = [
 	{
 		name: "Ricky",
 		id: "Ricky",
-		head: "wip.jpg",
+		head: "Ricky.jpg",
 		species: "Squirrel",
 		personality: "Cranky",
 		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "September 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Ricky",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21141918-ricky-animal-crossing"
 	},
 	{
 		name: "Rilla",
@@ -4842,13 +4842,13 @@ var villagers = [
 	{
 		name: "Tutu",
 		id: "Tutu",
-		head: "wip.jpg",
+		head: "Tutu.jpg",
 		species: "Bear",
 		personality: "Peppy",
 		coffee: "Blend - Regular Milk - 2 Sugars",
 		birthday: "September 15",
 		wiki: "http://animalcrossing.wikia.com/wiki/Tutu",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15460233-tutu-animal-crossing"
 	},
 	{
 		name: "Twiggy",
@@ -5073,13 +5073,13 @@ var villagers = [
 	{
 		name: "Whitney",
 		id: "Whitney",
-		head: "wip.jpg",
+		head: "Whitney.jpg",
 		species: "Wolf",
 		personality: "Snooty",
 		coffee: "Mocha - A Little Milk - 1 Sugar",
 		birthday: "September 17",
 		wiki: "http://animalcrossing.wikia.com/wiki/Whitney",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16500659-whitney-animal-crossing"
 	},
 	{
 		name: "Willow",
