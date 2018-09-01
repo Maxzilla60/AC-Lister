@@ -354,13 +354,13 @@ var villagers = [
 	{
 		name: "Beardo",
 		id: "Beardo",
-		head: "wip.jpg",
+		head: "Beardo.jpg",
 		species: "Bear",
 		personality: "Smug",
 		coffee: "Blue Mountain - A Little Milk - 1 Sugar",
 		birthday: "March 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Beardo",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21746198-beardo-animal-crossing"
 	},
 	{
 		name: "Beau",
@@ -497,13 +497,13 @@ var villagers = [
 	{
 		name: "Big Top",
 		id: "Big Top",
-		head: "wip.jpg",
+		head: "Big Top.jpg",
 		species: "Elephant",
 		personality: "Lazy",
 		coffee: "Blye Mountain - Lots of Milk - 3 Sugars",
 		birthday: "October 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Big Top",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/32250461-big-top-animal-crossing"
 	},
 	{
 		name: "Bill",
@@ -673,13 +673,13 @@ var villagers = [
 	{
 		name: "Boyd",
 		id: "Boyd",
-		head: "wip.jpg",
+		head: "Boyd.jpg",
 		species: "Gorilla",
 		personality: "Cranky",
 		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "October 1",
 		wiki: "http://animalcrossing.wikia.com/wiki/Boyd",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/24655366-boyd-animal-crossing"
 	},
 	{
 		name: "Bree",
@@ -1421,13 +1421,13 @@ var villagers = [
 	{
 		name: "Diva",
 		id: "Diva",
-		head: "wip.jpg",
+		head: "Diva.jpg",
 		species: "Frog",
 		personality: "Uchi",
 		coffee: "Kilimanjaro - None - None",
 		birthday: "October 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Diva",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21905774-diva-animal-crossing"
 	},
 	{
 		name: "Dizzy",
@@ -1586,13 +1586,13 @@ var villagers = [
 	{
 		name: "Elmer",
 		id: "Elmer",
-		head: "wip.jpg",
+		head: "Elmer.jpg",
 		species: "Horse",
 		personality: "Lazy",
 		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "October 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Elmer",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/20327789-elmer-animal-crossing"
 	},
 	{
 		name: "Eloise",
@@ -2059,13 +2059,13 @@ var villagers = [
 	{
 		name: "Goose",
 		id: "Goose",
-		head: "wip.jpg",
+		head: "Goose.jpg",
 		species: "Chicken",
 		personality: "Jock",
 		coffee: "Blend - Lots of Milk - 3 Sugars",
 		birthday: "October 4",
 		wiki: "http://animalcrossing.wikia.com/wiki/Goose",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16043984-goose-animal-crossing"
 	},
 	{
 		name: "Graham",
@@ -2664,13 +2664,13 @@ var villagers = [
 	{
 		name: "Kody",
 		id: "Kody",
-		head: "wip.jpg",
+		head: "Kody.jpg",
 		species: "Cub",
 		personality: "Jock",
 		coffee: "Mocha - Lots of Milk - 3 Sugars",
 		birthday: "September 28",
 		wiki: "http://animalcrossing.wikia.com/wiki/Kody",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/20191499-kody-animal-crossing"
 	},
 	{
 		name: "Koharu",
@@ -3016,13 +3016,13 @@ var villagers = [
 	{
 		name: "Marshal",
 		id: "Marshal",
-		head: "wip.jpg",
+		head: "Marshal.jpg",
 		species: "Squirrel",
 		personality: "Smug",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "September 29",
 		wiki: "http://animalcrossing.wikia.com/wiki/Marshal",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/15239647-marshal-animal-crossing"
 	},
 	{
 		name: "Marty",
@@ -3203,13 +3203,13 @@ var villagers = [
 	{
 		name: "Monique",
 		id: "Monique",
-		head: "wip.jpg",
+		head: "Monique.jpg",
 		species: "Cat",
 		personality: "Snooty",
 		coffee: "Kilimanjaro - None - None",
 		birthday: "September 30",
 		wiki: "http://animalcrossing.wikia.com/wiki/Monique",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21257867-monique-animal-crossing"
 	},
 	{
 		name: "Monty",
