@@ -57,13 +57,13 @@ var villagers = [
 	{
 		name: "Al",
 		id: "Al",
-		head: "wip.jpg",
+		head: "Al.jpg",
 		species: "Gorilla",
 		personality: "Lazy",
 		coffee: "Mocha - Lots of Milk - 2 Sugars",
 		birthday: "October 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Al",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/25989712-al-animal-crossing"
 	},
 	{
 		name: "Alfonso",
@@ -343,13 +343,13 @@ var villagers = [
 	{
 		name: "Bea",
 		id: "Bea",
-		head: "wip.jpg",
+		head: "Bea.jpg",
 		species: "Dog",
 		personality: "Normal",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "October 15",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bea",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/34407345-bea-animal-crossing"
 	},
 	{
 		name: "Beardo",
@@ -1872,13 +1872,13 @@ var villagers = [
 	{
 		name: "Friga",
 		id: "Friga",
-		head: "wip.jpg",
+		head: "Friga.jpg",
 		species: "Penguin",
 		personality: "Snooty",
 		coffee: "Blend - A Little Milk - 1 Sugar",
 		birthday: "October 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Friga",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/23888203-friga-animal-crossing"
 	},
 	{
 		name: "Frita",
@@ -2235,13 +2235,13 @@ var villagers = [
 	{
 		name: "Hippeux",
 		id: "Hippeux",
-		head: "wip.jpg",
+		head: "Hippeux.jpg",
 		species: "Hippo",
 		personality: "Smug",
 		coffee: "Kilimanjaro - Lots of Milk - 3 Sugars",
 		birthday: "October 15",
 		wiki: "http://animalcrossing.wikia.com/wiki/Hippeux",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/20956393-hippeux-animal-crossing"
 	},
 	{
 		name: "Holden",
@@ -2741,13 +2741,13 @@ var villagers = [
 	{
 		name: "Limberg",
 		id: "Limberg",
-		head: "wip.jpg",
+		head: "Limberg.jpg",
 		species: "Mouse",
 		personality: "Cranky",
 		coffee: "Mocha - None - None",
 		birthday: "October 17",
 		wiki: "http://animalcrossing.wikia.com/wiki/Limberg",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/21652665-limberg-animal-crossing"
 	},
 	{
 		name: "Lionel",
