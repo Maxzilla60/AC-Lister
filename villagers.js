@@ -1146,13 +1146,13 @@ var villagers = [
 	{
 		name: "Clay",
 		id: "Clay",
-		head: "wip.jpg",
+		head: "Clay.jpg",
 		species: "Hamster",
 		personality: "Lazy",
 		coffee: "Mocha - None - None",
 		birthday: "October 19",
 		wiki: "http://animalcrossing.wikia.com/wiki/Clay",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/17294209-clay-animal-crossing"
 	},
 	{
 		name: "Cleo",
