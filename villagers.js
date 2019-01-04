@@ -200,13 +200,13 @@ var villagers = [
 	{
 		name: "Antonio",
 		id: "Antonio",
-		head: "wip.jpg",
+		head: "Antonio.jpg",
 		species: "Anteater",
 		personality: "Jock",
 		coffee: "Kilimanjaro - A Little Milk - 1 Sugar",
 		birthday: "October 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Antonio",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/16019628-antonio-animal-crossing"
 	},
 	{
 		name: "Apollo",
@@ -4281,13 +4281,13 @@ var villagers = [
 	{
 		name: "Sandy",
 		id: "Sandy",
-		head: "wip.jpg",
+		head: "Sandy.jpg",
 		species: "Ostrich",
 		personality: "Normal",
 		coffee: "Blend - None - None",
 		birthday: "October 21",
 		wiki: "http://animalcrossing.wikia.com/wiki/Sandy",
-		store: "https://www.redbubble.com/people/purplepixel/"
+		store: "https://www.redbubble.com/people/purplepixel/works/35556240-sandy-animal-crossing"
 	},
 	{
 		name: "Savannah",
