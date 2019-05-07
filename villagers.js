@@ -6,7 +6,7 @@ var villagers = [
 		species: "Bird",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "March 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Ace",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -50,7 +50,7 @@ var villagers = [
 		species: "Cub",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "September 27",
 		wiki: "http://animalcrossing.wikia.com/wiki/Aisle",
 		store: "https://www.redbubble.com/people/purplepixel/works/25143703-aisle-animal-crossing"
 	},
@@ -127,7 +127,7 @@ var villagers = [
 		species: "Penguin",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "December 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Analogue",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -402,7 +402,7 @@ var villagers = [
 		species: "Cow",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "June 27",
 		wiki: "http://animalcrossing.wikia.com/wiki/Belle",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -446,7 +446,7 @@ var villagers = [
 		species: "Cow",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "May 10",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bessie",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -468,7 +468,7 @@ var villagers = [
 		species: "Chicken",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "June 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Betty",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -666,7 +666,7 @@ var villagers = [
 		species: "Dog",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "August 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Bow",
 		store: "https://www.redbubble.com/people/purplepixel/works/19493582-bow-animal-crossing"
 	},
@@ -842,7 +842,7 @@ var villagers = [
 		species: "Mouse",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "March 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Carmen_(mouse)",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -886,7 +886,7 @@ var villagers = [
 		species: "Cow",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "May 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Carrot",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -974,7 +974,7 @@ var villagers = [
 		species: "Dog",
 		personality: "Cranky",
 		coffee: "",
-		birthday: "",
+		birthday: "April 1",
 		wiki: "http://animalcrossing.wikia.com/wiki/Champagne",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -1051,7 +1051,7 @@ var villagers = [
 		species: "Mouse",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "January 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Chico",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -1106,7 +1106,7 @@ var villagers = [
 		species: "Bull",
 		personality: "Cranky",
 		coffee: "",
-		birthday: "",
+		birthday: "May 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Chuck",
 		store: "https://www.redbubble.com/people/purplepixel/works/24646503-chuck-animal-crossing"
 	},
@@ -1117,7 +1117,7 @@ var villagers = [
 		species: "Hippo",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "July 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Clara",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -1293,7 +1293,7 @@ var villagers = [
 		species: "Cub",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "May 29",
 		wiki: "http://animalcrossing.wikia.com/wiki/Cupcake",
 		store: "https://www.redbubble.com/people/purplepixel/works/32295792-cupcake-animal-crossing"
 	},
@@ -1491,7 +1491,7 @@ var villagers = [
 		species: "Bear",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "March 10",
 		wiki: "http://animalcrossing.wikia.com/wiki/Dozer",
 		store: "https://www.redbubble.com/people/purplepixel/works/20981668-dozer-animal-crossing"
 	},
@@ -1623,7 +1623,7 @@ var villagers = [
 		species: "Frog",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "July 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Emerald",
 		store: "https://www.redbubble.com/people/purplepixel/works/21268669-emerald-animal-crossing"
 	},
@@ -1766,7 +1766,7 @@ var villagers = [
 		species: "Bird",
 		personality: "Cranky",
 		coffee: "",
-		birthday: "",
+		birthday: "September 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Flash",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -1810,7 +1810,7 @@ var villagers = [
 		species: "Mouse",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "March 30",
 		wiki: "http://animalcrossing.wikia.com/wiki/Flossie",
 		store: "https://www.redbubble.com/people/purplepixel/works/23512313-flossie-animal-crosssing"
 	},
@@ -1909,7 +1909,7 @@ var villagers = [
 		species: "Duck",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "January 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Fruity",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -1986,7 +1986,7 @@ var villagers = [
 		species: "Sheep",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "October 10",
 		wiki: "http://animalcrossing.wikia.com/wiki/Gen",
 		store: "https://www.redbubble.com/people/purplepixel/works/27930373-gen-animal-crossing"
 	},
@@ -2140,7 +2140,7 @@ var villagers = [
 		species: "Pig",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "September 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Hambo",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2173,7 +2173,7 @@ var villagers = [
 		species: "Chicken",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "September 29",
 		wiki: "http://animalcrossing.wikia.com/wiki/Hank",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2217,7 +2217,7 @@ var villagers = [
 		species: "Chicken",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "April 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Hector",
 		store: "https://www.redbubble.com/people/purplepixel/works/25336096-hector-animal-crossing"
 	},
@@ -2305,7 +2305,7 @@ var villagers = [
 		species: "Koala",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "February 17",
 		wiki: "http://animalcrossing.wikia.com/wiki/Huggy",
 		store: "https://www.redbubble.com/people/purplepixel/works/25663736-huggy-animal-crossing"
 	},
@@ -2338,7 +2338,7 @@ var villagers = [
 		species: "Goat",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "August 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Iggy",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2448,7 +2448,7 @@ var villagers = [
 		species: "Bird",
 		personality: "Cranky",
 		coffee: "",
-		birthday: "",
+		birthday: "December 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Joe",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2470,7 +2470,7 @@ var villagers = [
 		species: "Lion",
 		personality: "Cranky",
 		coffee: "",
-		birthday: "",
+		birthday: "October 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Jubei",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2613,7 +2613,7 @@ var villagers = [
 		species: "Squirrel",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "June 8",
 		wiki: "http://animalcrossing.wikia.com/wiki/Kit",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2679,7 +2679,7 @@ var villagers = [
 		species: "Kangaroo",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "February 14",
 		wiki: "http://animalcrossing.wikia.com/wiki/Koharu",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2701,7 +2701,7 @@ var villagers = [
 		species: "Chicken",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "December 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Leigh",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2767,7 +2767,7 @@ var villagers = [
 		species: "Alligator",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "September 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Liz",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2855,7 +2855,7 @@ var villagers = [
 		species: "Hippo",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "December 19",
 		wiki: "http://animalcrossing.wikia.com/wiki/Lulu_(villager)",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -2899,7 +2899,7 @@ var villagers = [
 		species: "Bird",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "November 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Madam Rosa",
 		store: "https://www.redbubble.com/people/purplepixel/works/32279685-madam-rosa-animal-crossing"
 	},
@@ -3042,7 +3042,7 @@ var villagers = [
 		species: "Dog",
 		personality: "Cranky",
 		coffee: "",
-		birthday: "",
+		birthday: "May 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Masa",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3075,7 +3075,7 @@ var villagers = [
 		species: "Dog",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "April 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Megumi",
 		store: "https://www.redbubble.com/people/purplepixel/works/20789079-megumi-animal-crossing"
 	},
@@ -3097,7 +3097,7 @@ var villagers = [
 		species: "Cat",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "August 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Meow",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3328,7 +3328,7 @@ var villagers = [
 		species: "Ostrich",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "June 5",
 		wiki: "http://animalcrossing.wikia.com/wiki/Nindori",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3339,7 +3339,7 @@ var villagers = [
 		species: "Penguin",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "January 23",
 		wiki: "http://animalcrossing.wikia.com/wiki/Nobuo",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3361,7 +3361,7 @@ var villagers = [
 		species: "Anteater",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "February 23",
 		wiki: "http://animalcrossing.wikia.com/wiki/Nosegay",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3438,7 +3438,7 @@ var villagers = [
 		species: "Bird",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "January 13",
 		wiki: "http://animalcrossing.wikia.com/wiki/Otis",
 		store: "https://www.redbubble.com/people/purplepixel/works/31873270-otis-animal-crossing"
 	},
@@ -3537,7 +3537,7 @@ var villagers = [
 		species: "Rhino",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "September 4",
 		wiki: "http://animalcrossing.wikia.com/wiki/Patricia",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3658,7 +3658,7 @@ var villagers = [
 		species: "Mouse",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "June 18",
 		wiki: "http://animalcrossing.wikia.com/wiki/Penny",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3669,7 +3669,7 @@ var villagers = [
 		species: "Rhino",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "December 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Petunia_(rhino)",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3680,7 +3680,7 @@ var villagers = [
 		species: "Cow",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "April 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Petunia_(cow)",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3724,7 +3724,7 @@ var villagers = [
 		species: "Cat",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "June 24",
 		wiki: "http://animalcrossing.wikia.com/wiki/Pierre",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3746,7 +3746,7 @@ var villagers = [
 		species: "Pig",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "September 6",
 		wiki: "http://animalcrossing.wikia.com/wiki/Pigleg",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3790,7 +3790,7 @@ var villagers = [
 		species: "Alligator",
 		personality: "Cranky",
 		coffee: "",
-		birthday: "",
+		birthday: "June 26",
 		wiki: "http://animalcrossing.wikia.com/wiki/Pironkon",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3812,7 +3812,7 @@ var villagers = [
 		species: "Cub",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "July 4",
 		wiki: "http://animalcrossing.wikia.com/wiki/Poko",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -3944,7 +3944,7 @@ var villagers = [
 		species: "Eagle",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "September 2",
 		wiki: "http://animalcrossing.wikia.com/wiki/Quetzal",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -4010,7 +4010,7 @@ var villagers = [
 		species: "Chicken",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "March 31",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rhoda",
 		store: "https://www.redbubble.com/people/purplepixel/works/20708872-rhoda-animal-crossing"
 	},
@@ -4065,7 +4065,7 @@ var villagers = [
 		species: "Ostrich",
 		personality: "Peppy",
 		coffee: "",
-		birthday: "",
+		birthday: "October 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rio",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -4175,7 +4175,7 @@ var villagers = [
 		species: "Hippo",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "July 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Rollo",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -4351,7 +4351,7 @@ var villagers = [
 		species: "Duck",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "April 11",
 		wiki: "http://animalcrossing.wikia.com/wiki/Shinabiru",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -4362,7 +4362,7 @@ var villagers = [
 		species: "Bird",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "May 30",
 		wiki: "http://animalcrossing.wikia.com/wiki/Shoukichi",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -4560,7 +4560,7 @@ var villagers = [
 		species: "Pig",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "October 20",
 		wiki: "http://animalcrossing.wikia.com/wiki/Sue E.",
 		store: "https://www.redbubble.com/people/purplepixel/works/19873242-sue-e-animal-crossing"
 	},
@@ -4571,7 +4571,7 @@ var villagers = [
 		species: "Frog",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "May 22",
 		wiki: "http://animalcrossing.wikia.com/wiki/Sunny",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -4582,7 +4582,7 @@ var villagers = [
 		species: "Goat",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "December 28",
 		wiki: "http://animalcrossing.wikia.com/wiki/Sven",
 		store: "https://www.redbubble.com/people/purplepixel/works/25318463-sven-animal-crossing"
 	},
@@ -4703,7 +4703,7 @@ var villagers = [
 		species: "Wolf",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "October 29",
 		wiki: "http://animalcrossing.wikia.com/wiki/Tarou",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -4758,7 +4758,7 @@ var villagers = [
 		species: "Rhino",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "January 17",
 		wiki: "http://animalcrossing.wikia.com/wiki/Tiara",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -4868,7 +4868,7 @@ var villagers = [
 		species: "Bird",
 		personality: "Cranky",
 		coffee: "",
-		birthday: "",
+		birthday: "August 7",
 		wiki: "http://animalcrossing.wikia.com/wiki/Twirp",
 		store: "https://www.redbubble.com/people/purplepixel/works/31798202-twirp-animal-crossing"
 	},
@@ -4901,7 +4901,7 @@ var villagers = [
 		species: "Kangaroo",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "",
+		birthday: "December 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Valise",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -5132,7 +5132,7 @@ var villagers = [
 		species: "Sheep",
 		personality: "Jock",
 		coffee: "",
-		birthday: "",
+		birthday: "April 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Woolio",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -5143,7 +5143,7 @@ var villagers = [
 		species: "Gorilla",
 		personality: "Lazy",
 		coffee: "",
-		birthday: "",
+		birthday: "December 10",
 		wiki: "http://animalcrossing.wikia.com/wiki/Yodel",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -5176,7 +5176,7 @@ var villagers = [
 		species: "Anteater",
 		personality: "Normal",
 		coffee: "",
-		birthday: "",
+		birthday: "January 29",
 		wiki: "http://animalcrossing.wikia.com/wiki/Zoe",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
