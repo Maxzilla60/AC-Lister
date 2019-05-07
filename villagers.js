@@ -1621,7 +1621,7 @@ var villagers = [
 		id: "Emerald",
 		head: "Emerald.jpg",
 		species: "Frog",
-		personality: "",
+		personality: "Normal",
 		coffee: "",
 		birthday: "",
 		wiki: "http://animalcrossing.wikia.com/wiki/Emerald",
