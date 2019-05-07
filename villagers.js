@@ -1557,7 +1557,7 @@ var villagers = [
 		species: "Elephant",
 		personality: "Snooty",
 		coffee: "",
-		birthday: "Elina",
+		birthday: "July 1",
 		wiki: "http://animalcrossing.wikia.com/wiki/Elina",
 		store: "https://www.redbubble.com/people/purplepixel/"
 	},
@@ -1678,7 +1678,7 @@ var villagers = [
 		species: "Sheep",
 		personality: "Normal",
 		coffee: "Blue Mountain - A Little Milk - 1 Sugar",
-		birthday: "April3",
+		birthday: "April 3",
 		wiki: "http://animalcrossing.wikia.com/wiki/Eunice",
 		store: "https://www.redbubble.com/people/purplepixel/works/16029198-eunice-animal-crossing"
 	},
@@ -4890,7 +4890,7 @@ var villagers = [
 		species: "Bear",
 		personality: "Uchi",
 		coffee: "Mocha - None - None",
-		birthday: "Jaunary 16",
+		birthday: "January 16",
 		wiki: "http://animalcrossing.wikia.com/wiki/Ursula",
 		store: "https://www.redbubble.com/people/purplepixel/works/15943943-ursala-animal-crossing"
 	},
