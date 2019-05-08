@@ -9,5 +9,8 @@
   "keywords": [],
   "author": "Maxime Orione",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  }
 }
