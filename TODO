@@ -1,4 +1,8 @@
 Todo:
+  ☐ Function return types
+  ☐ Function renames
+  ☐ Rename to ..Component functions
+  ☐ Code splitting
   ☐ Copy over static files (images) to dist
     https://www.npmjs.com/package/parcel-plugin-static-files-copy
   ☐ CSS Redesign
