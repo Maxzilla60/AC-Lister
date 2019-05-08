@@ -463,23 +463,19 @@ function viewLists_Rename(id: number) {
     $("rename_bar").focus();
     (<HTMLInputElement>$("rename_bar")).select();
 }
-// Apply new title to list
-export function applyTitle(id: number, newTitle: string) {
-    // In case of an empty name:
-    if (newTitle == "") {
+
+export function applyTitle(listId: number, newTitle: string): void {
+    if (newTitle === '') {
         viewLists();
         return;
     }
 
-    // Go through list and find:
-    for (let l in lists) {
-        // Replace title with new title:
-        if (lists[l].id == id) {
-            lists[l].title = newTitle;
-        }
-    }
-    viewLists(); // Refresh view
-    updateListSelect(); // Update list select
+    lists
+        .find(l => l.id == listId)
+        .title = newTitle;
+
+    viewLists();
+    updateListSelect();
 }
 
 // Find villager in json list
