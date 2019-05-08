@@ -16,5 +16,9 @@ function component() {
     return element;
 }
 
+export function fart() {
+    console.log('💨');
+}
+
 document.body.appendChild(component());
 console.log(villagers);

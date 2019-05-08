@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "serve": "parcel index.html --global index"
+  },
   "keywords": [],
   "author": "Maxime Orione",
   "license": "ISC",
