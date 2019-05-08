@@ -210,7 +210,7 @@ export function loadProfile(id: string) {
 
     // Birthday Easter Egg:
     let today_date = new Date(); // Get today's date
-    let birthday_date = new Date(birthday as string); // Convert birthday to Date
+    let birthday_date = new Date(birthday.toString()); // Convert birthday to Date
     // If villager's birthday's today:
     if (today_date.getDate() === birthday_date.getDate() && today_date.getMonth() === birthday_date.getMonth()) {
         // Highlight birthday string
@@ -366,20 +366,19 @@ export function removeVillager(name: string, id: number) {
     updateListSelect(); // Update list select
 }
 
-// Adding a new list
-export function newList() {
+export function newList(): void {
     idCount++; // Increment global count
     localStorage.idCount = idCount; // Update local storage
-    // Create new list:
-    let list: VillagerList = {
-        title: "New List",
+
+    lists.push({
+        title: 'New List',
         id: idCount,
         members: []
-    };
-    lists.push(list); // Add to lists
-    viewLists(); // Refresh view
-    renameList(idCount); // TODO: Initiate rename of list
-    updateListSelect(); // Update list select
+    });
+
+    viewLists();
+    renameList(idCount); // Initiate rename of list
+    updateListSelect();
 }
 
 export function deleteList(id: number): void {
