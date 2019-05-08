@@ -501,16 +501,13 @@ function searchbarLoading() {
     $("search_results").innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
 }
 
-// Clear everything
 export function clearAll() {
-    let confirmClear = confirm("Are you sure you want to clear all lists?");
-    if (confirmClear) {
+    if (confirm('Are you sure you want to clear all lists?')) {
         lists = [];
         idCount = -1;
-        //localStorage.lists = JSON.stringify(lists);
         localStorage.idCount = idCount;
+        viewLists();
     }
-    viewLists();
 }
 
 // Go to viewer
