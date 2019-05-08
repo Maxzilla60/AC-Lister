@@ -391,45 +391,64 @@ export function deleteList(id: number): void {
     }
 }
 
-// Renaming a list
-function renameList(id: number) {
-    viewLists_Rename(id);
+function renameList(listId: number) {
+    viewLists_Rename(listId);
 }
-// Display lists with renaming input for given id
-function viewLists_Rename(id: number) {
+function viewLists_Rename(listToRenameId: number): void {
     clearElement($('lists'));
+    updateListsFromLocalStorage();
+    var listContentElement: HTMLElement = document.createElement('div');
 
-    // Create html block:
-    let block = "<div>";
-    for (let l in lists) {
-        // Rename view:
-        if (lists[l].id == id) {
-            block += "<input onchange=\"index.applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" id=\"rename_bar\" type=\"text\" value=\"" + lists[l].title + "\" maxlength=\"30\"></input>" +
-                "<button onclick=\"index.applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" title=\"Edit name\" class=\"clickable fa fa-check\" aria-hidden=\"true\"></button><div style=\"padding-bottom:0;padding-top:0;\">";
-            for (let member in lists[l].members) {
-                let trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
-                block += "<img onclick=\"index.loadProfile('" + lists[l].members[member] + "');\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+    if (lists.length !== 0) {
+        for (let list of lists) {
+            if (list.id == listToRenameId) {
+                listContentElement.appendChild(aListTitleInputElement(list));
+                listContentElement.appendChild(aListRenameConfirmButton(list));
             }
-            block += "</div>";
-        }
-        // Regular view:
-        else {
-            block += "<div class=\"list\">" + lists[l].title + "</div>" +
-                "<i onclick=\"index.deleteList(" + lists[l].id + ");\" title=\"Delete list\" class=\"clickable fa fa-trash\" aria-hidden=\"true\"></i>" +
-                "<i onclick=\"renameList(" + lists[l].id + ");\" title=\"Edit name\" class=\"clickable fa fa-pencil\" aria-hidden=\"true\"></i><div style=\"padding-bottom:0;padding-top:0;\">";
-            for (let member in lists[l].members) {
-                let trimmedName = trimName(lists[l].members[member]); // Trim name for duplicate names
-                block += "<img onclick=\"index.loadProfile('" + lists[l].members[member] + "');\" title=\"" + trimmedName + "\" src=\"villager_icons/" + lists[l].members[member] + ".gif\">";
+            else {
+                listContentElement.appendChild(aListTitleElement(list));
+                listContentElement.appendChild(aListDeleteButton(list));
+                listContentElement.appendChild(aListRenameButton(list));
             }
-            block += "</div>";
+            listContentElement.appendChild(aVillagersIconsSection(list));
         }
     }
-    block += "</div>";
-    // Display block
-    $("lists").innerHTML = block;
-    // Focus rename bar & select all text:
+    else {
+        listContentElement = anEmptyListInfoElement();;
+    }
+
+    $("lists").appendChild(listContentElement);
+    focusAndSelectRenameInput();
+}
+
+function focusAndSelectRenameInput() {
     $("rename_bar").focus();
     (<HTMLInputElement>$("rename_bar")).select();
+}
+
+function aListTitleInputElement(list: VillagerList): HTMLInputElement {
+    //"<input onchange=\"index.applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" id=\"rename_bar\" type=\"text\"
+    // value=\"" + lists[l].title + "\" maxlength=\"30\"></input>" +
+    let listTitleInputElement: HTMLInputElement = document.createElement('input');
+    listTitleInputElement.onchange = () => {
+        applyTitle(list.id, (<HTMLInputElement>$('rename_bar')).value);
+    }
+    listTitleInputElement.id = 'rename_bar';
+    listTitleInputElement.type = 'text';
+    listTitleInputElement.value = list.title;
+    listTitleInputElement.maxLength = 30;
+    return listTitleInputElement;
+}
+
+function aListRenameConfirmButton(list: VillagerList): HTMLButtonElement {
+    let listRenameButtonElement: HTMLButtonElement = document.createElement('button');
+    listRenameButtonElement.onclick = () => {
+        applyTitle(list.id, (<HTMLInputElement>$('rename_bar')).value);
+    }
+    listRenameButtonElement.title = 'Edit name';
+    listRenameButtonElement.className = 'clickable fa fa-check';
+    listRenameButtonElement.setAttribute('aria-hidden', 'true');
+    return listRenameButtonElement;
 }
 
 export function applyTitle(listId: number, newTitle: string): void {
