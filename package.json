@@ -1,0 +1,11 @@
+{
+  "name": "tryingparcel",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {},
+  "keywords": [],
+  "author": "Maxime Orione",
+  "license": "ISC",
+  "dependencies": {}
+}
