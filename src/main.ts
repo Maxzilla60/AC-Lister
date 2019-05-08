@@ -447,14 +447,8 @@ export function applyTitle(listId: number, newTitle: string): void {
     updateListSelect();
 }
 
-// Find villager in json list
-function getVillager(name: string) {
-    for (let v in villagers) {
-        if (villagers[v].id == name) {
-            return villagers[v];
-        }
-    }
-    return null;
+function getVillager(villagerId: string): Villager {
+    return villagers.find((v: Villager) => v.id === villagerId);
 }
 
 // Trim '(2)' from name for duplicate names
