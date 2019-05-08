@@ -160,7 +160,7 @@ function aVillagersSearchResultImage(villager: Villager) {
 // Display villager profile
 export function loadProfile(id: string) {
     currentProfile = id;
-    currentListSelect = +(<HTMLInputElement>$("list_select")).value;
+    updateCurrentListSelect();
     let villager = getVillager(id); // Get villager json
     //let trimmedName = trimName(name); // Trim name for duplicate names
     // Get values from json:
@@ -338,28 +338,26 @@ function removeDuplicates(results: any[]): any[] {
 }
 
 // Add villager to list
-export function addVillager(name: string, id: number) {
-    currentListSelect = +(<HTMLInputElement>$("list_select")).value;
+export function addVillager(villagerNameToAdd: string, listId: number) {
+    updateCurrentListSelect();
 
-    // In case of an empty name:
-    if (name == "") {
-        return;
-    }
+    if (villagerNameToAdd === '') { return; }
 
-    // Go through list and find:
-    for (let l in lists) {
-        // Add villager to members:
-        if (lists[l].id == id) {
-            lists[l].members.push(name);
-            lists[l].members.sort(); // Alphabetize!
-        }
-    }
-    viewLists(); // Refresh view
-    updateListSelect(); // Update list select
+    let listToAddTo: VillagerList = lists.find(l => l.id == listId);
+    listToAddTo.members.push(villagerNameToAdd);
+    listToAddTo.members.sort();
+
+    viewLists();
+    updateListSelect();
 }
+
+function updateCurrentListSelect(): void {
+    currentListSelect = +(<HTMLInputElement>$("list_select")).value;
+}
+
 // Remove villager from list
 function removeVillager(name: string, id: number) {
-    currentListSelect = +(<HTMLInputElement>$("list_select")).value;
+    updateCurrentListSelect();
 
     let tempList = []; // Keep a temporary array
     // Add all lists:
