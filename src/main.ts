@@ -114,7 +114,7 @@ function aListRenameButton(list: VillagerList): HTMLButtonElement {
     return listRenameButtonElement;
 }
 
-function viewResults(resultList: Villager[]): void {
+function viewResults(resultList: Villager[] = villagers): void {
     let searchResultsElement = $('search_results');
     clearElement(searchResultsElement);
 
@@ -308,37 +308,33 @@ function villagerInList(name: string, id: number) {
     return false;
 }
 
-// Execute a search from the search bar
-export function search(query: string) {
-    // In case of empty query:
-    if (query == "") {
-        viewResults(villagers); // Display all villagers
+export function search(query: string): void {
+    if (query == '') {
+        viewResults(); // Display all villagers
         return;
     }
 
-    query = query.toLowerCase(); // Lowercase
-    let results = []; // Create list
+    query = query.toLowerCase();
+    let results: Villager[] = [];
 
-    // Search by Name:
-    for (let v in villagers) {
-        if (villagers[v].name.toLowerCase().includes(query)) {
-            results.push(villagers[v]);
-        }
-    }
-    // Search by Personality:
-    for (let v in villagers) {
-        if (villagers[v].personality.toLowerCase().includes(query)) {
-            results.push(villagers[v]);
-        }
-    }
-    // Search by Species:
-    for (let v in villagers) {
-        if (villagers[v].species.toLowerCase().includes(query)) {
-            results.push(villagers[v]);
-        }
-    }
+    const villagersFilteredOnName = villagers.filter(
+        (villager: Villager) => villager.name.toLowerCase().includes(query)
+    );
+    const villagersFilteredOnPersonality = villagers.filter(
+        (villager: Villager) => villager.personality.toLowerCase().includes(query)
+    );
+    const villagersFilteredOnSpecies = villagers.filter(
+        (villager: Villager) => villager.species.toLowerCase().includes(query)
+    );
 
-    viewResults(results); // Display results
+    results = [...villagersFilteredOnName, ...villagersFilteredOnPersonality, ...villagersFilteredOnSpecies];
+    results = removeDuplicates(results);
+
+    viewResults(results);
+}
+
+function removeDuplicates(results: any[]): any[] {
+    return [...new Set(results)];
 }
 
 // Add villager to list
