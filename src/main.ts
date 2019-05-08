@@ -401,26 +401,15 @@ export function newList() {
     renameList(idCount); // TODO: Initiate rename of list
     updateListSelect(); // Update list select
 }
-// Removing a list
-export function deleteList(id: number) {
-    let tempList = []; // Keep a temporary array
-    // Add all lists except for the one removed:
-    for (var l in lists) {
-        if (lists[l].id != id) {
-            tempList.push(lists[l]);
-        }
-        else {
-            // Ask for confirmation:
-            let confirmDelete = confirm("Are you sure you want to delete \"" + lists[l].title + "\"?");
-            if (!confirmDelete) {
-                return;
-            }
-        }
+
+export function deleteList(id: number): void {
+    const listToDelete = lists.find(l => l.id == id);
+
+    if (confirm(`Are you sure you want to delete "${listToDelete.title}"?`)) {
+        lists = lists.filter(l => l.id != id);
+        viewLists();
+        updateListSelect();
     }
-    // Update lists
-    lists = tempList;
-    viewLists(); // Refresh view
-    updateListSelect(); // Update list select
 }
 
 // Renaming a list
