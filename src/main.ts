@@ -149,7 +149,7 @@ function aVillagerSearchResultButton(villager: Villager): HTMLButtonElement {
     }
 }
 
-function aVillagersSearchResultImage(villager: Villager) {
+function aVillagersSearchResultImage(villager: Villager): HTMLImageElement {
     let villagersSearchResultImage: HTMLImageElement = document.createElement('img');
     villagersSearchResultImage.alt = villager.name;
     villagersSearchResultImage.style.cssFloat = 'left';
@@ -171,12 +171,12 @@ export function loadProfile(id: string) {
     let coffee = villager.coffee;
     // In case of N/A:
     if (coffee == "") {
-        coffee = "<div class=\"na\">N/A</div>";
+        coffee = "<span class=\"na\">N/A</span>";
     }
     let birthday = villager.birthday.toString();
     // In case of N/A:
     if (birthday == "") {
-        birthday = "<div class=\"na\">N/A</div>";
+        birthday = "<span class=\"na\">N/A</span>";
     }
     let wiki = villager.wiki;
     let store = villager.store;
@@ -273,7 +273,7 @@ function clearElement(element: HTMLElement): void {
 }
 
 function aProfileIsSelected(): boolean {
-    return currentProfile !== "";
+    return currentProfile !== '';
 }
 
 export function updateAddVillagerButton(): void {
@@ -281,7 +281,7 @@ export function updateAddVillagerButton(): void {
     if (villagerInList(currentProfile, getListSelectValue())) {
         $('add_remove_button').appendChild(aRemoveVillagerFromListButton());
     } else {
-        $('add_remove_button').appendChild(anAddVillagerToListButton(lists.length <= 0));
+        $('add_remove_button').appendChild(anAddVillagerToListButton());
     }
 }
 
@@ -300,15 +300,19 @@ function aRemoveVillagerFromListButton(): HTMLButtonElement {
     return removeVillagerFromListButton;
 }
 
-function anAddVillagerToListButton(isDisabled: boolean = false): HTMLButtonElement {
+function anAddVillagerToListButton(): HTMLButtonElement {
+    const isDisabled = lists.length <= 0;
+
     let addVillagerToListButton: HTMLButtonElement = document.createElement('button');
     addVillagerToListButton.onclick = () => {
         addVillager(currentProfile, getListSelectValue());
     }
     addVillagerToListButton.title = 'Add to list';
-    isDisabled ? addVillagerToListButton.className = 'disabled fa fa-plus' : addVillagerToListButton.className = 'clickable fa fa-plus';
     addVillagerToListButton.setAttribute('aria-hidden', 'true');
+
+    addVillagerToListButton.className = isDisabled ? 'disabled fa fa-plus' : 'clickable fa fa-plus';
     addVillagerToListButton.disabled = isDisabled;
+
     return addVillagerToListButton;
 }
 
@@ -323,7 +327,6 @@ export function search(query: string): void {
     }
 
     query = query.toLowerCase();
-    let results: Villager[] = [];
 
     const villagersFilteredOnName = villagers.filter(
         (villager: Villager) => villager.name.toLowerCase().includes(query)
@@ -335,7 +338,7 @@ export function search(query: string): void {
         (villager: Villager) => villager.species.toLowerCase().includes(query)
     );
 
-    results = [...villagersFilteredOnName, ...villagersFilteredOnPersonality, ...villagersFilteredOnSpecies];
+    let results: Villager[] = [...villagersFilteredOnName, ...villagersFilteredOnPersonality, ...villagersFilteredOnSpecies];
     results = removeDuplicates(results);
 
     viewResults(results);
@@ -346,7 +349,7 @@ function removeDuplicates(results: any[]): any[] {
 }
 
 // Add villager to list
-export function addVillager(villagerNameToAdd: string, listId: number) {
+export function addVillager(villagerNameToAdd: string, listId: number): void {
     updateCurrentListSelect();
 
     if (villagerNameToAdd === '') { return; }
@@ -435,11 +438,9 @@ function focusAndSelectRenameInput() {
 }
 
 function aListTitleInputElement(list: VillagerList): HTMLInputElement {
-    //"<input onchange=\"index.applyTitle(" + lists[l].id + ", document.getElementById('rename_bar').value);\" id=\"rename_bar\" type=\"text\"
-    // value=\"" + lists[l].title + "\" maxlength=\"30\"></input>" +
     let listTitleInputElement: HTMLInputElement = document.createElement('input');
     listTitleInputElement.onchange = () => {
-        applyTitle(list.id, (<HTMLInputElement>$('rename_bar')).value);
+        applyTitle(list.id, getRenameListTitleValue());
     }
     listTitleInputElement.id = 'rename_bar';
     listTitleInputElement.type = 'text';
@@ -448,10 +449,14 @@ function aListTitleInputElement(list: VillagerList): HTMLInputElement {
     return listTitleInputElement;
 }
 
+function getRenameListTitleValue(): string {
+    return (<HTMLInputElement>$('rename_bar')).value;
+}
+
 function aListRenameConfirmButton(list: VillagerList): HTMLButtonElement {
     let listRenameButtonElement: HTMLButtonElement = document.createElement('button');
     listRenameButtonElement.onclick = () => {
-        applyTitle(list.id, (<HTMLInputElement>$('rename_bar')).value);
+        applyTitle(list.id, getRenameListTitleValue());
     }
     listRenameButtonElement.title = 'Edit name';
     listRenameButtonElement.className = 'clickable fa fa-check';
@@ -483,11 +488,11 @@ function trimName(name: string): string {
 }
 
 // Show loading icon in search bar
-function searchbarLoading() {
+function searchbarLoading(): void {
     $('search_results').innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
 }
 
-export function clearAll() {
+export function clearAll(): void {
     if (confirm('Are you sure you want to clear all lists?')) {
         lists = [];
         idCount = -1;
@@ -497,19 +502,20 @@ export function clearAll() {
 }
 
 // Go to viewer
+// TODO
 function openViewer() {
     window.location.href = "viewer";
 }
 
-function saveAs(blob: Blob, filename: string) { }
-
 // Export lists as .json file
-export function exportLists() {
+export function exportLists(): void {
+    // TODO
     let blob = new Blob([JSON.stringify(lists, null, 2)], { type: "text/plain" });
-    saveAs(blob, "ACLists.json");
+    // saveAs(blob, "ACLists.json");
 }
 
 // Import lists from .json file
+// TODO
 function importLists() {
     let selectedFile = (<HTMLInputElement>$('file-input')).files[0];
     let reader = new FileReader();
@@ -535,20 +541,19 @@ function importLists() {
 }
 
 // Retrieve largest id from lists
-function findIDCount() {
-    let temp = -1; // Keep temporary value
-    // Find largest id in lists:
+function findIDCount(): void {
+    let temp = -1;
+
     for (let l in lists) {
         if (lists[l].id > temp) {
             temp = lists[l].id;
         }
     }
-    // Save idCount:
+
     localStorage.idCount = temp;
     idCount = localStorage.idCount;
 }
 
-// on page load:
 export function init() {
     search((<HTMLInputElement>$('search_bar')).value);
     // Retrieve lists from local storage:
