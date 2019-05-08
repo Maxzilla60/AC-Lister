@@ -161,7 +161,7 @@ function aVillagersSearchResultImage(villager: Villager) {
 export function loadProfile(id: string) {
     currentProfile = id;
     updateCurrentListSelect();
-    let villager = getVillager(id); // Get villager json
+    let villager: Villager = getVillager(id);
     //let trimmedName = trimName(name); // Trim name for duplicate names
     // Get values from json:
     let name = villager.name;
@@ -194,7 +194,7 @@ export function loadProfile(id: string) {
 
     // Listselect:
     if (lists.length !== 0) {
-        var listselect = "<div class=\"menu\"><select id=\"list_select\" onchange=\"updateAddVillagerButton();\"></select> ";
+        var listselect = "<div class=\"menu\"><select id=\"list_select\" onchange=\"index.updateAddVillagerButton();\"></select> ";
     }
     else {
         var listselect = "<div class=\"menu\"><select id=\"list_select\" disabled></select> ";
@@ -277,7 +277,7 @@ function aProfileIsSelected(): boolean {
 }
 
 // Update the button for adding a villager
-function updateAddVillagerButton() {
+export function updateAddVillagerButton() {
     // Disabled button:
     if (lists.length <= 0) {
         let block = "<button title=\"Add to list\" class=\"disabled fa fa-plus\" aria-hidden=\"true\"></button>";
@@ -285,7 +285,7 @@ function updateAddVillagerButton() {
     }
     // Remove button:
     else if (villagerInList(currentProfile, +(<HTMLInputElement>$("list_select")).value)) {
-        let block = "<button onclick=\"removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></button>";
+        let block = "<button onclick=\"index.removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></button>";
         $("add_remove_button").innerHTML = block;
     }
     // Add button:
@@ -355,33 +355,13 @@ function updateCurrentListSelect(): void {
     currentListSelect = +(<HTMLInputElement>$("list_select")).value;
 }
 
-// Remove villager from list
-function removeVillager(name: string, id: number) {
+export function removeVillager(name: string, id: number) {
     updateCurrentListSelect();
 
-    let tempList = []; // Keep a temporary array
-    // Add all lists:
-    for (var l in lists) {
-        if (lists[l].id == id) {
-            // Keep a temporary list:
-            let temp: VillagerList = {
-                title: lists[l].title,
-                id: lists[l].id,
-                members: []
-            };
-            // Add all members except for the one removed:
-            for (var m in lists[l].members) {
-                if (lists[l].members[m] != name) {
-                    temp.members.push(lists[l].members[m]);
-                }
-            }
-            tempList.push(temp);
-        }
-        else {
-            tempList.push(lists[l]);
-        }
-    }
-    lists = tempList; // Update lists
+    let listToDeleteFrom = lists.find(l => l.id == id);
+    listToDeleteFrom.members = listToDeleteFrom.members
+        .filter(v => v !== name);
+
     viewLists(); // Refresh view
     updateListSelect(); // Update list select
 }
