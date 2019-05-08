@@ -31,7 +31,7 @@ function viewLists() {
     }
 
     updateListEditingButtons();
-    $("lists").appendChild(listContentElement);
+    $('lists').appendChild(listContentElement);
 }
 
 function updateListEditingButtons(): void {
@@ -173,7 +173,7 @@ export function loadProfile(id: string) {
     if (coffee == "") {
         coffee = "<div class=\"na\">N/A</div>";
     }
-    let birthday = villager.birthday;
+    let birthday = villager.birthday.toString();
     // In case of N/A:
     if (birthday == "") {
         birthday = "<div class=\"na\">N/A</div>";
@@ -229,7 +229,7 @@ export function loadProfile(id: string) {
         icon_birthday + birthday + br +
         icon_wiki + icon_store + "</div>";
     // Display block
-    $("info").innerHTML = block;
+    $('info').innerHTML = block;
     updateListSelect(); // Update list select
 
     // Transition:
@@ -277,18 +277,18 @@ function aProfileIsSelected(): boolean {
 }
 
 export function updateAddVillagerButton(): void {
-    clearElement($("add_remove_button"));
-    if (villagerInList(currentProfile, +(<HTMLInputElement>$("list_select")).value)) {
-        $("add_remove_button").appendChild(aRemoveVillagerFromListButton());
+    clearElement($('add_remove_button'));
+    if (villagerInList(currentProfile, +(<HTMLInputElement>$('list_select')).value)) {
+        $('add_remove_button').appendChild(aRemoveVillagerFromListButton());
     } else {
-        $("add_remove_button").appendChild(anAddVillagerToListButton(lists.length <= 0));
+        $('add_remove_button').appendChild(anAddVillagerToListButton(lists.length <= 0));
     }
 }
 
 function aRemoveVillagerFromListButton(): HTMLButtonElement {
     let removeVillagerFromListButton: HTMLButtonElement = document.createElement('button');
     removeVillagerFromListButton.onclick = () => {
-        removeVillager(currentProfile, +(<HTMLSelectElement>document.getElementById('list_select')).value);
+        removeVillager(currentProfile, +(<HTMLSelectElement>$('list_select')).value);
     };
     removeVillagerFromListButton.title = 'Remove from list';
     removeVillagerFromListButton.className = 'clickable fa fa-minus';
@@ -299,7 +299,7 @@ function aRemoveVillagerFromListButton(): HTMLButtonElement {
 function anAddVillagerToListButton(isDisabled: boolean = false): HTMLButtonElement {
     let addVillagerToListButton: HTMLButtonElement = document.createElement('button');
     addVillagerToListButton.onclick = () => {
-        addVillager(currentProfile, +(<HTMLSelectElement>document.getElementById('list_select')).value);
+        addVillager(currentProfile, +(<HTMLSelectElement>$('list_select')).value);
     }
     addVillagerToListButton.title = 'Add to list';
     isDisabled ? addVillagerToListButton.className = 'disabled fa fa-plus' : addVillagerToListButton.className = 'clickable fa fa-plus';
@@ -366,7 +366,7 @@ export function addVillager(villagerNameToAdd: string, listId: number) {
 }
 
 function updateCurrentListSelect(): void {
-    currentListSelect = +(<HTMLInputElement>$("list_select")).value;
+    currentListSelect = +(<HTMLInputElement>$('list_select')).value;
 }
 
 export function removeVillager(name: string, id: number) {
@@ -431,13 +431,13 @@ function viewLists_Rename(listToRenameId: number): void {
         listContentElement = anEmptyListInfoElement();;
     }
 
-    $("lists").appendChild(listContentElement);
+    $('lists').appendChild(listContentElement);
     focusAndSelectRenameInput();
 }
 
 function focusAndSelectRenameInput() {
-    $("rename_bar").focus();
-    (<HTMLInputElement>$("rename_bar")).select();
+    $('rename_bar').focus();
+    (<HTMLInputElement>$('rename_bar')).select();
 }
 
 function aListTitleInputElement(list: VillagerList): HTMLInputElement {
@@ -490,7 +490,7 @@ function trimName(name: string): string {
 
 // Show loading icon in search bar
 function searchbarLoading() {
-    $("search_results").innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
+    $('search_results').innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
 }
 
 export function clearAll() {
@@ -517,7 +517,7 @@ export function exportLists() {
 
 // Import lists from .json file
 function importLists() {
-    let selectedFile = (<HTMLInputElement>$("file-input")).files[0];
+    let selectedFile = (<HTMLInputElement>$('file-input')).files[0];
     let reader = new FileReader();
 
     reader.onload = function (e) {
