@@ -277,22 +277,37 @@ function aProfileIsSelected(): boolean {
 }
 
 export function updateAddVillagerButton(): void {
-    // Disabled button:
-    if (lists.length <= 0) {
-        let block = "<button title=\"Add to list\" class=\"disabled fa fa-plus\" aria-hidden=\"true\"></button>";
-        $("add_remove_button").innerHTML = block;
-    }
-    // Remove button:
-    else if (villagerInList(currentProfile, +(<HTMLInputElement>$("list_select")).value)) {
-        let block = "<button onclick=\"index.removeVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Remove from list\" class=\"clickable fa fa-minus\" aria-hidden=\"true\"></button>";
-        $("add_remove_button").innerHTML = block;
-    }
-    // Add button:
-    else {
-        let block = "<button onclick=\"index.addVillager('" + currentProfile + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></button>";
-        $("add_remove_button").innerHTML = block;
+    clearElement($("add_remove_button"));
+    if (villagerInList(currentProfile, +(<HTMLInputElement>$("list_select")).value)) {
+        $("add_remove_button").appendChild(aRemoveVillagerFromListButton());
+    } else {
+        $("add_remove_button").appendChild(anAddVillagerToListButton(lists.length <= 0));
     }
 }
+
+function aRemoveVillagerFromListButton(): HTMLButtonElement {
+    let removeVillagerFromListButton: HTMLButtonElement = document.createElement('button');
+    removeVillagerFromListButton.onclick = () => {
+        removeVillager(currentProfile, +(<HTMLSelectElement>document.getElementById('list_select')).value);
+    };
+    removeVillagerFromListButton.title = 'Remove from list';
+    removeVillagerFromListButton.className = 'clickable fa fa-minus';
+    removeVillagerFromListButton.setAttribute('aria-hidden', 'true');
+    return removeVillagerFromListButton;
+}
+
+function anAddVillagerToListButton(isDisabled: boolean = false): HTMLButtonElement {
+    let addVillagerToListButton: HTMLButtonElement = document.createElement('button');
+    addVillagerToListButton.onclick = () => {
+        addVillager(currentProfile, +(<HTMLSelectElement>document.getElementById('list_select')).value);
+    }
+    addVillagerToListButton.title = 'Add to list';
+    isDisabled ? addVillagerToListButton.className = 'disabled fa fa-plus' : addVillagerToListButton.className = 'clickable fa fa-plus';
+    addVillagerToListButton.setAttribute('aria-hidden', 'true');
+    addVillagerToListButton.disabled = isDisabled;
+    return addVillagerToListButton;
+}
+
 // Check if villager is already in list
 function villagerInList(name: string, id: number) {
     for (let l in lists) {
