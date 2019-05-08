@@ -278,17 +278,21 @@ function aProfileIsSelected(): boolean {
 
 export function updateAddVillagerButton(): void {
     clearElement($('add_remove_button'));
-    if (villagerInList(currentProfile, +(<HTMLInputElement>$('list_select')).value)) {
+    if (villagerInList(currentProfile, getListSelectValue())) {
         $('add_remove_button').appendChild(aRemoveVillagerFromListButton());
     } else {
         $('add_remove_button').appendChild(anAddVillagerToListButton(lists.length <= 0));
     }
 }
 
+function getListSelectValue(): number {
+    return +(<HTMLSelectElement>$('list_select')).value;
+}
+
 function aRemoveVillagerFromListButton(): HTMLButtonElement {
     let removeVillagerFromListButton: HTMLButtonElement = document.createElement('button');
     removeVillagerFromListButton.onclick = () => {
-        removeVillager(currentProfile, +(<HTMLSelectElement>$('list_select')).value);
+        removeVillager(currentProfile, getListSelectValue());
     };
     removeVillagerFromListButton.title = 'Remove from list';
     removeVillagerFromListButton.className = 'clickable fa fa-minus';
@@ -299,7 +303,7 @@ function aRemoveVillagerFromListButton(): HTMLButtonElement {
 function anAddVillagerToListButton(isDisabled: boolean = false): HTMLButtonElement {
     let addVillagerToListButton: HTMLButtonElement = document.createElement('button');
     addVillagerToListButton.onclick = () => {
-        addVillager(currentProfile, +(<HTMLSelectElement>$('list_select')).value);
+        addVillager(currentProfile, getListSelectValue());
     }
     addVillagerToListButton.title = 'Add to list';
     isDisabled ? addVillagerToListButton.className = 'disabled fa fa-plus' : addVillagerToListButton.className = 'clickable fa fa-plus';
@@ -366,7 +370,7 @@ export function addVillager(villagerNameToAdd: string, listId: number) {
 }
 
 function updateCurrentListSelect(): void {
-    currentListSelect = +(<HTMLInputElement>$('list_select')).value;
+    currentListSelect = getListSelectValue();
 }
 
 export function removeVillager(name: string, id: number) {
