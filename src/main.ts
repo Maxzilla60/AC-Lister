@@ -276,8 +276,7 @@ function aProfileIsSelected(): boolean {
     return currentProfile !== "";
 }
 
-// Update the button for adding a villager
-export function updateAddVillagerButton() {
+export function updateAddVillagerButton(): void {
     // Disabled button:
     if (lists.length <= 0) {
         let block = "<button title=\"Add to list\" class=\"disabled fa fa-plus\" aria-hidden=\"true\"></button>";
@@ -470,11 +469,8 @@ function getVillager(villagerId: string): Villager {
 }
 
 // Trim '(2)' from name for duplicate names
-function trimName(name: string) {
-    if (name.includes("(2)")) {
-        return name.replace(" (2)", "");
-    }
-    return name;
+function trimName(name: string): string {
+    return name.replace(" (2)", "");
 }
 
 // Show loading icon in search bar
