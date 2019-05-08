@@ -312,18 +312,8 @@ function anAddVillagerToListButton(isDisabled: boolean = false): HTMLButtonEleme
     return addVillagerToListButton;
 }
 
-// Check if villager is already in list
-function villagerInList(name: string, id: number) {
-    for (let l in lists) {
-        if (lists[l].id == id) {
-            for (let m in lists[l].members) {
-                if (lists[l].members[m] == name) {
-                    return true;
-                }
-            }
-        }
-    }
-    return false;
+function villagerInList(villagerName: string, listId: number): boolean {
+    return lists.find(l => l.id == listId).members.includes(villagerName);
 }
 
 export function search(query: string): void {
