@@ -59,13 +59,14 @@
         </div>
 
         <summary id="info">
-            <img title="Image not available (yet)" src="villager_heads/wip.jpg" class="profile-image">
             <div class="menu">
-                <select id="list_select" disabled></select>
+                <select id="list_select" disabled onchange="index.updateAddVillagerButton();"></select>
                 <div id="add_remove_button" style="padding:0;display:inline-block">
                     <button title="Add to list" class="disabled fa fa-plus" aria-hidden="true"></button>
                 </div>
             </div>
+            <img id="profile-image" title="Profile image not available (yet)" alt="Profile image not available (yet)" src="villager_heads/wip.jpg">
+            <div id="profile"></div>
         </summary>
     </main>
 </body>

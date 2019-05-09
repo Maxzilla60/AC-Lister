@@ -75,80 +75,134 @@ function viewResults(resultList: Villager[] = villagers): void {
     }, 100);
 }
 
+export function aWikiIconButton(wikiLink: string): HTMLButtonElement {
+    let wikiIconButton: HTMLButtonElement = document.createElement('button');
+    wikiIconButton.onclick = () => { window.open(wikiLink, '_blank'); }
+    wikiIconButton.title = 'Open Wiki page';
+    wikiIconButton.className = 'clickable fa fa-wikipedia-w';
+    wikiIconButton.setAttribute('aria-hidden', 'true');
+    return wikiIconButton;
+}
+
+export function aStoreIconButton(storeLink: string): HTMLButtonElement {
+    let storeIconButton: HTMLButtonElement = document.createElement('button');
+    storeIconButton.onclick = () => { window.open(storeLink, '_blank'); }
+    storeIconButton.title = 'Buy this art!';
+    storeIconButton.className = 'clickable fa fa-shopping-bag';
+    storeIconButton.setAttribute('aria-hidden', 'true');
+    return storeIconButton;
+}
+
+export function aNameIcon(): HTMLElement {
+    let nameIconButton: HTMLElement = document.createElement('i');
+    nameIconButton.title = 'Name';
+    nameIconButton.className = 'fa fa-tag';
+    nameIconButton.setAttribute('aria-hidden', 'true');
+    return nameIconButton;
+}
+
+export function aSpeciesIcon(): HTMLElement {
+    let speciesIconButton: HTMLElement = document.createElement('i');
+    speciesIconButton.title = 'Species';
+    speciesIconButton.className = 'fa fa-user';
+    speciesIconButton.setAttribute('aria-hidden', 'true');
+    return speciesIconButton;
+}
+
+export function aPersonalityIcon(): HTMLElement {
+    let personalityIconButton: HTMLElement = document.createElement('i');
+    personalityIconButton.title = 'Personality';
+    personalityIconButton.className = 'fa fa-heart';
+    personalityIconButton.setAttribute('aria-hidden', 'true');
+    return personalityIconButton;
+}
+
+export function aCoffeeIcon(): HTMLElement {
+    let coffeeIconButton: HTMLElement = document.createElement('i');
+    coffeeIconButton.title = 'Favourite coffee';
+    coffeeIconButton.className = 'fa fa-coffee';
+    coffeeIconButton.setAttribute('aria-hidden', 'true');
+    return coffeeIconButton;
+}
+
+export function aBirthdayIcon(): HTMLElement {
+    let coffeeIconButton: HTMLElement = document.createElement('i');
+    coffeeIconButton.title = 'Birthday';
+    coffeeIconButton.className = 'fa fa-birthday-cake';
+    coffeeIconButton.setAttribute('aria-hidden', 'true');
+    return coffeeIconButton;
+}
+
+export function anAddOrRemoveElement(): HTMLElement {
+    let addOrRemoveElement: HTMLElement = document.createElement('div');
+    addOrRemoveElement.style.padding = '0';
+    addOrRemoveElement.style.display = 'inline-block';
+    return addOrRemoveElement;
+}
+
+export function aBreakElement(): HTMLElement {
+    return document.createElement('br');
+}
+
+export function aTextNode(text: string): Text {
+    return document.createTextNode(text);
+}
+
+export function anNASpanElement(): HTMLSpanElement {
+    let naElement: HTMLSpanElement = document.createElement('span');
+    naElement.className = 'na';
+    naElement.innerHTML = 'N/A';
+    return naElement;
+}
+
+export function updateProfile(villager: Villager): void {
+    clearElement($('profile'));
+
+    $('profile').appendChild(aNameIcon());
+    $('profile').appendChild(aTextNode(villager.name));
+    $('profile').appendChild(aBreakElement());
+
+    $('profile').appendChild(aSpeciesIcon());
+    $('profile').appendChild(aTextNode(villager.species));
+    $('profile').appendChild(aBreakElement());
+
+    $('profile').appendChild(aPersonalityIcon());
+    $('profile').appendChild(aTextNode(villager.personality));
+    $('profile').appendChild(aBreakElement());
+
+    $('profile').appendChild(aCoffeeIcon());
+    $('profile').appendChild(aTextNode(villager.coffee)); // TODO: Show N/A when empty
+    $('profile').appendChild(aBreakElement());
+
+    $('profile').appendChild(aBirthdayIcon());
+    $('profile').appendChild(aTextNode(villager.birthday.toString())); // TODO: Show N/A when empty
+
+    $('profile').appendChild(anAddOrRemoveElement());
+    $('profile').appendChild(aBreakElement());
+    $('profile').appendChild(aWikiIconButton(villager.wiki));
+    $('profile').appendChild(aStoreIconButton(villager.store));
+}
+
+function updateProfileImage(villager: Villager): void {
+    let profileImageElement: HTMLImageElement = <HTMLImageElement>$('profile-image');
+    profileImageElement.alt = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
+    profileImageElement.title = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
+    profileImageElement.src = `./villager_heads/${villager.head}`;
+}
+
+function villagerHasProfileImage(villager: Villager): boolean {
+    return villager.head !== 'wip.jpg';
+}
+
 // Display villager profile
 export function loadProfile(id: string) {
     currentProfile = id;
-    updateCurrentListSelect();
     let villager: Villager = getVillager(id);
-    //let trimmedName = trimName(name); // Trim name for duplicate names
-    // Get values from json:
-    let name = villager.name;
-    let head = villager.head;
-    let species = villager.species;
-    let personality = villager.personality;
-    let coffee = villager.coffee;
-    // In case of N/A:
-    if (coffee == "") {
-        coffee = "<span class=\"na\">N/A</span>";
-    }
-    let birthday = villager.birthday.toString();
-    // In case of N/A:
-    if (birthday == "") {
-        birthday = "<span class=\"na\">N/A</span>";
-    }
-    let wiki = villager.wiki;
-    let store = villager.store;
 
-    // Create Font Awesome blocks:
-    let icon_wiki = "<button onclick=\"window.open('" + wiki + "','_blank');\" title=\"Open Wiki page\" class=\"clickable fa fa-wikipedia-w\" aria-hidden=\"true\"></button>";
-    let icon_store = "<button onclick=\"window.open('" + store + "','_blank');\" title=\"Buy this art!\" class=\"clickable fa fa-shopping-bag\" aria-hidden=\"true\"></button>";
-    let icon_name = "<i title=\"Name\" class=\"fa fa-tag\" aria-hidden=\"true\"></i>";
-    let icon_species = "<i title=\"Species\" class=\"fa fa-user\" aria-hidden=\"true\"></i>";
-    let icon_personality = "<i title=\"Personality\" class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
-    let icon_coffee = "<i title=\"Favorite coffee\" class=\"fa fa-coffee\" aria-hidden=\"true\"></i>";
-    let icon_birthday = "<i title=\"Birthday\" class=\"fa fa-birthday-cake\" aria-hidden=\"true\"></i>";
-    let icon_add = "<div id=\"add_remove_button\" style=\"padding:0;display:inline-block\"><button onclick=\"index.addVillager('" + id + "',document.getElementById('list_select').value);\" title=\"Add to list\" class=\"clickable fa fa-plus\" aria-hidden=\"true\"></button></div>";
-    let br = "<br>";
-
-    // Listselect:
-    if (lists.length !== 0) {
-        var listselect = "<div class=\"menu\"><select id=\"list_select\" onchange=\"index.updateAddVillagerButton();\"></select> ";
-    }
-    else {
-        var listselect = "<div class=\"menu\"><select id=\"list_select\" disabled></select> ";
-    }
-
-    // In case of 'wip.jpg':
-    if (head == "wip.jpg") {
-        var block_head = "<img title=\"Image not available (yet)\" alt=\"Profile image (" + name + ")\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
-    }
-    else {
-        var block_head = "<img title=\"" + name + "\" alt=\"Profile image (" + name + ")\" src=\"villager_heads/" + head + "\" class=\"profile-image\">" + "<div class=\"profile\">";
-    }
-
-    // Birthday Easter Egg:
-    let today_date = new Date(); // Get today's date
-    let birthday_date = new Date(birthday.toString()); // Convert birthday to Date
-    // If villager's birthday's today:
-    if (today_date.getDate() === birthday_date.getDate() && today_date.getMonth() === birthday_date.getMonth()) {
-        // Highlight birthday string
-        birthday = "<div class=\"birthday\">" + birthday + "</div>";
-        // Fun little icon with a sound
-        icon_birthday = "<button title=\"Happy Birthday " + name + "!\" onclick=\"new Audio('happybirthday.mp3').play();\" style=\"color:hotpink;\" class=\" clickable fa fa-birthday-cake\" aria-hidden=\"true\"></button>";
-    }
-
-    // Assemble all blocks:
-    let block = listselect + icon_add + "</div>" +
-        block_head +
-        icon_name + name + br +
-        icon_species + species + br +
-        icon_personality + personality + br +
-        icon_coffee + coffee + br +
-        icon_birthday + birthday + br +
-        icon_wiki + icon_store + "</div>";
-    // Display block
-    $('info').innerHTML = block;
-    updateListSelect(); // Update list select
+    updateProfile(villager);
+    updateCurrentListSelect();
+    updateListSelect();
+    updateProfileImage(villager);
 
     // Transition:
     // Hide:
@@ -163,16 +217,40 @@ export function loadProfile(id: string) {
             results[i].style.opacity = '1';
         }
     }, 100);
+
+    return;
+    currentProfile = id;
+    updateCurrentListSelect();
+    // let villager: Villager = getVillager(id);
+    //let trimmedName = trimName(name); // Trim name for duplicate names
+    // Get values from json:
+    let birthday = "<span class=\"na\">N/A</span>";
+
+    // Birthday Easter Egg:
+    let today_date = new Date(); // Get today's date
+    let birthday_date = new Date(birthday.toString()); // Convert birthday to Date
+    // If villager's birthday's today:
+    if (today_date.getDate() === birthday_date.getDate() && today_date.getMonth() === birthday_date.getMonth()) {
+        // Highlight birthday string
+        birthday = "<div class=\"birthday\">" + birthday + "</div>";
+        // Fun little icon with a sound
+        let icon_birthday = "<button title=\"Happy Birthday " + name + "!\" onclick=\"new Audio('happybirthday.mp3').play();\" style=\"color:hotpink;\" class=\" clickable fa fa-birthday-cake\" aria-hidden=\"true\"></button>";
+    }
 }
 
 // Update the select for selecting a list
 export function updateListSelect(selectedListId: number = currentListSelect): void {
-    if (!aProfileIsSelected() || lists.length <= 0) { return; }
+    if (!aProfileIsSelected()) { return; }
 
     clearElement($('list_select'));
 
-    for (let list of lists) {
-        $('list_select').appendChild(aListDropdownOption(list, list.id == selectedListId));
+    if (listsAreEmpty()) {
+        (<HTMLSelectElement>$('list_select')).disabled = true;
+    } else {
+        for (let list of lists) {
+            (<HTMLSelectElement>$('list_select')).disabled = false;
+            $('list_select').appendChild(aListDropdownOption(list, list.id == selectedListId));
+        }
     }
 
     updateAddVillagerButton();
