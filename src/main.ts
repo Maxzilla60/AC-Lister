@@ -144,8 +144,8 @@ export function aBreakElement(): HTMLElement {
     return document.createElement('br');
 }
 
-export function aTextNode(text: string): Text {
-    return document.createTextNode(text);
+export function aTextNode(text: string): Text | HTMLSpanElement {
+    return text === '' ? anNASpanElement() : document.createTextNode(text);
 }
 
 export function anNASpanElement(): HTMLSpanElement {
@@ -171,11 +171,11 @@ export function updateProfile(villager: Villager): void {
     $('profile').appendChild(aBreakElement());
 
     $('profile').appendChild(aCoffeeIcon());
-    $('profile').appendChild(aTextNode(villager.coffee)); // TODO: Show N/A when empty
+    $('profile').appendChild(aTextNode(villager.coffee));
     $('profile').appendChild(aBreakElement());
 
     $('profile').appendChild(aBirthdayIcon());
-    $('profile').appendChild(aTextNode(villager.birthday.toString())); // TODO: Show N/A when empty
+    $('profile').appendChild(aTextNode(villager.birthday.toString()));
 
     $('profile').appendChild(anAddOrRemoveElement());
     $('profile').appendChild(aBreakElement());
