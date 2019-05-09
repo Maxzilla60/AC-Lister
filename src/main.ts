@@ -8,9 +8,9 @@ function $(elementID: string): HTMLElement {
 }
 
 // Global variables:
-export let idCount = -1;
+let idCount = -1;
 export let currentProfile = "";
-export let currentListSelect = -1;
+let currentListSelect = -1;
 export let lists: VillagerList[] = [];
 
 // Display lists in list area
