@@ -125,12 +125,23 @@ export function aCoffeeIcon(): HTMLElement {
     return coffeeIconButton;
 }
 
-export function aBirthdayIcon(): HTMLElement {
-    let coffeeIconButton: HTMLElement = document.createElement('i');
-    coffeeIconButton.title = 'Birthday';
-    coffeeIconButton.className = 'fa fa-birthday-cake';
-    coffeeIconButton.setAttribute('aria-hidden', 'true');
-    return coffeeIconButton;
+export function aBirthdayIcon(villager: Villager): HTMLButtonElement | HTMLElement {
+    if (birthdayIsToday(villager.birthday.toString())) {
+        return aBirthdayButton(villager.name);
+    } else {
+        let birthdayIcon: HTMLElement = document.createElement('i');
+        birthdayIcon.title = 'Birthday';
+        birthdayIcon.className = 'fa fa-birthday-cake';
+        birthdayIcon.setAttribute('aria-hidden', 'true');
+        return birthdayIcon;
+    }
+}
+
+function birthdayIsToday(birthdayString: string): boolean {
+    const today: Date = new Date();
+    const birthday: Date = new Date(birthdayString);
+    return today.getDate() === birthday.getDate()
+        && today.getMonth() === birthday.getMonth();
 }
 
 export function anAddOrRemoveElement(): HTMLElement {
@@ -155,6 +166,29 @@ export function anNASpanElement(): HTMLSpanElement {
     return naElement;
 }
 
+export function aBirthdayTextNode(birthday: Date): Text | HTMLSpanElement {
+    if (birthdayIsToday(birthday.toString())) {
+        let birthdaySpan: HTMLSpanElement = document.createElement('span');
+        birthdaySpan.innerHTML = birthday.toString();
+        birthdaySpan.className = 'birthday';
+        return birthdaySpan;
+    } else {
+        return aTextNode(birthday.toString());
+    }
+}
+
+function aBirthdayButton(villagerName: string): HTMLButtonElement {
+    let birthdayEasterEggButton: HTMLButtonElement = document.createElement('button');
+    birthdayEasterEggButton.title = `Happy birthday to ${villagerName}!`;
+    birthdayEasterEggButton.onclick = () => {
+        new Audio('happybirthday.mp3').play();
+    };
+    birthdayEasterEggButton.style.color = 'hotpink';
+    birthdayEasterEggButton.className = 'clickable fa fa-birthday-cake';
+    birthdayEasterEggButton.setAttribute('aria-hidden', 'true');
+    return birthdayEasterEggButton;
+}
+
 export function updateProfile(villager: Villager): void {
     clearElement($('profile'));
 
@@ -174,8 +208,8 @@ export function updateProfile(villager: Villager): void {
     $('profile').appendChild(aTextNode(villager.coffee));
     $('profile').appendChild(aBreakElement());
 
-    $('profile').appendChild(aBirthdayIcon());
-    $('profile').appendChild(aTextNode(villager.birthday.toString()));
+    $('profile').appendChild(aBirthdayIcon(villager));
+    $('profile').appendChild(aBirthdayTextNode(villager.birthday));
 
     $('profile').appendChild(anAddOrRemoveElement());
     $('profile').appendChild(aBreakElement());
@@ -217,25 +251,6 @@ export function loadProfile(id: string) {
             results[i].style.opacity = '1';
         }
     }, 100);
-
-    return;
-    currentProfile = id;
-    updateCurrentListSelect();
-    // let villager: Villager = getVillager(id);
-    //let trimmedName = trimName(name); // Trim name for duplicate names
-    // Get values from json:
-    let birthday = "<span class=\"na\">N/A</span>";
-
-    // Birthday Easter Egg:
-    let today_date = new Date(); // Get today's date
-    let birthday_date = new Date(birthday.toString()); // Convert birthday to Date
-    // If villager's birthday's today:
-    if (today_date.getDate() === birthday_date.getDate() && today_date.getMonth() === birthday_date.getMonth()) {
-        // Highlight birthday string
-        birthday = "<div class=\"birthday\">" + birthday + "</div>";
-        // Fun little icon with a sound
-        let icon_birthday = "<button title=\"Happy Birthday " + name + "!\" onclick=\"new Audio('happybirthday.mp3').play();\" style=\"color:hotpink;\" class=\" clickable fa fa-birthday-cake\" aria-hidden=\"true\"></button>";
-    }
 }
 
 // Update the select for selecting a list
