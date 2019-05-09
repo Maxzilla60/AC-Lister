@@ -1,15 +1,18 @@
 Todo:
-  ☐ Function return types
+  ✔ Function return types @done(19-05-09 10:40)
+  ☐ Birthday doesn't have to be a Date
+  ☐ Playing birthday audio?
   ☐ Function renames
   ☐ Rename to ..Component functions
   ☐ Code splitting
   ☐ Copy over static files (images) to dist
-    https://www.npmjs.com/package/parcel-plugin-static-files-copy
+  https://www.npmjs.com/package/parcel-plugin-static-files-copy
   ☐ CSS Redesign
-    https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
+  https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
   ☐ WebComponents
   ☐ PWA
-    https://hiswe.github.io/2019/14-state-of-pwa-with-parcel-february-2019/
+  https://hiswe.github.io/2019/14-state-of-pwa-with-parcel-february-2019/
+  ☐ Fade transitions
   ☐ <head>
     https://github.com/joshbuchea/HEAD
     https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254
