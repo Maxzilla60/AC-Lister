@@ -427,6 +427,7 @@ export function clearAll(): void {
         idCount = -1;
         localStorage.idCount = idCount;
         viewLists();
+        updateListSelect();
     }
 }
 
