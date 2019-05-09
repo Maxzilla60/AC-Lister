@@ -1,4 +1,4 @@
-import { addVillager, applyTitle, currentProfile, deleteList, getListSelectValue, lists, loadProfile, removeVillager, renameList, updateListSelect } from './main';
+import { addVillager, applyTitle, currentProfile, deleteList, getListSelectValue, listsAreEmpty, loadProfile, removeVillager, renameList, updateListSelect } from './main';
 import { Villager } from './models/villager.model';
 import { VillagerList } from './models/villagerlist.model';
 
@@ -88,7 +88,7 @@ export function anEmptyListInfoElement(): HTMLElement {
 }
 
 export function anAddVillagerToListButton(): HTMLButtonElement {
-    const isDisabled = lists.length <= 0;
+    const isDisabled = listsAreEmpty();
 
     let addVillagerToListButton: HTMLButtonElement = document.createElement('button');
     addVillagerToListButton.onclick = () => {

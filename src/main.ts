@@ -19,7 +19,7 @@ function viewLists() {
     updateListsFromLocalStorage();
     var listContentElement: HTMLElement = document.createElement('div');
 
-    if (lists.length !== 0) {
+    if (!listsAreEmpty()) {
         for (let list of lists) {
             listContentElement.appendChild(aListTitleElement(list));
             listContentElement.appendChild(aListDeleteButton(list));
@@ -38,7 +38,7 @@ function viewLists() {
 function updateListEditingButtons(): void {
     var exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('export_lists');
     var clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clear_lists');
-    if (lists.length !== 0) {
+    if (!listsAreEmpty()) {
         exportListsButton.className = "clickable fa fa-download";
         exportListsButton.disabled = false;
         clearListsButton.className = "clickable fa fa-times";
@@ -278,7 +278,7 @@ export function getListSelectValue(): number {
 }
 
 function villagerInList(villagerName: string, listId: number): boolean {
-    return lists.find(l => l.id == listId).members.includes(villagerName);
+    return !listsAreEmpty() && lists.find(l => l.id == listId).members.includes(villagerName);
 }
 
 export function search(query: string): void {
@@ -371,7 +371,7 @@ function viewLists_Rename(listToRenameId: number): void {
     updateListsFromLocalStorage();
     var listContentElement: HTMLElement = document.createElement('div');
 
-    if (lists.length !== 0) {
+    if (!listsAreEmpty()) {
         for (let list of lists) {
             if (list.id == listToRenameId) {
                 listContentElement.appendChild(aListTitleInputElement(list));
@@ -451,7 +451,7 @@ function importLists() {
 
     reader.onload = function (e) {
         // Confirm dialog on lists present:
-        if (lists.length > 0) {
+        if (!listsAreEmpty()) {
             var confirmOverride = confirm("Are you sure you want to override current lists?");
         }
         else {
@@ -481,6 +481,10 @@ function findIDCount(): void {
 
     localStorage.idCount = temp;
     idCount = localStorage.idCount;
+}
+
+export function listsAreEmpty(): boolean {
+    return lists.length <= 0;
 }
 
 export function init() {
