@@ -94,35 +94,35 @@ export function aStoreIconButton(storeLink: string): HTMLButtonElement {
 }
 
 export function aNameIcon(): HTMLElement {
-    let nameIconButton: HTMLElement = document.createElement('i');
-    nameIconButton.title = 'Name';
-    nameIconButton.className = 'fa fa-tag';
-    nameIconButton.setAttribute('aria-hidden', 'true');
-    return nameIconButton;
+    let nameIcon: HTMLElement = document.createElement('i');
+    nameIcon.title = 'Name';
+    nameIcon.className = 'fa fa-tag';
+    nameIcon.setAttribute('aria-hidden', 'true');
+    return nameIcon;
 }
 
 export function aSpeciesIcon(): HTMLElement {
-    let speciesIconButton: HTMLElement = document.createElement('i');
-    speciesIconButton.title = 'Species';
-    speciesIconButton.className = 'fa fa-user';
-    speciesIconButton.setAttribute('aria-hidden', 'true');
-    return speciesIconButton;
+    let speciesIcon: HTMLElement = document.createElement('i');
+    speciesIcon.title = 'Species';
+    speciesIcon.className = 'fa fa-user';
+    speciesIcon.setAttribute('aria-hidden', 'true');
+    return speciesIcon;
 }
 
 export function aPersonalityIcon(): HTMLElement {
-    let personalityIconButton: HTMLElement = document.createElement('i');
-    personalityIconButton.title = 'Personality';
-    personalityIconButton.className = 'fa fa-heart';
-    personalityIconButton.setAttribute('aria-hidden', 'true');
-    return personalityIconButton;
+    let personalityIcon: HTMLElement = document.createElement('i');
+    personalityIcon.title = 'Personality';
+    personalityIcon.className = 'fa fa-heart';
+    personalityIcon.setAttribute('aria-hidden', 'true');
+    return personalityIcon;
 }
 
 export function aCoffeeIcon(): HTMLElement {
-    let coffeeIconButton: HTMLElement = document.createElement('i');
-    coffeeIconButton.title = 'Favourite coffee';
-    coffeeIconButton.className = 'fa fa-coffee';
-    coffeeIconButton.setAttribute('aria-hidden', 'true');
-    return coffeeIconButton;
+    let coffeeIcon: HTMLElement = document.createElement('i');
+    coffeeIcon.title = 'Favourite coffee';
+    coffeeIcon.className = 'fa fa-coffee';
+    coffeeIcon.setAttribute('aria-hidden', 'true');
+    return coffeeIcon;
 }
 
 export function aBirthdayIcon(villager: Villager): HTMLButtonElement | HTMLElement {
