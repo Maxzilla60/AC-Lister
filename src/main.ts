@@ -1,6 +1,8 @@
-import { aBirthdayIcon, aBirthdayTextNode, aBreakElement, aCoffeeIcon, aListDeleteButton, aListDropdownOption, aListRenameButton, aListRenameConfirmButton, aListTitleElement, aListTitleInputElement, anAddOrRemoveElement, anAddVillagerToListButton, aNameIcon, anEmptyListInfoElement, aPersonalityIcon, aRemoveVillagerFromListButton, aSpeciesIcon, aStoreIconButton, aTextNode, aVillagerSearchResultButton, aVillagersIconsSection, aWikiIconButton } from './components';
+import { aBirthdayIcon, aBirthdayTextNode, aBreakElement, aCoffeeIcon, aListDropdownOption, anAddOrRemoveElement, anAddVillagerToListButton, aNameIcon, aPersonalityIcon, aRemoveVillagerFromListButton, aSpeciesIcon, aStoreIconButton, aTextNode, aVillagerSearchResultButton, aWikiIconButton } from './components';
+import ListsView from './lists.view';
 import { Villager } from './models/villager.model';
 import { VillagerList } from './models/villagerlist.model';
+import { clearElement } from './util';
 import villagers from './villagers.json';
 
 function $(elementID: string): HTMLElement {
@@ -14,45 +16,18 @@ export let currentProfile = '';
 export let lists: VillagerList[] = [];
 export const villagersDB = villagers;
 
-function viewLists() {
-    clearElement($('lists'));
-    updateListsFromLocalStorage();
-    var listContentElement: HTMLElement = document.createElement('div');
-
-    if (!listsAreEmpty()) {
-        for (let list of lists) {
-            listContentElement.appendChild(aListTitleElement(list));
-            listContentElement.appendChild(aListDeleteButton(list));
-            listContentElement.appendChild(aListRenameButton(list));
-            listContentElement.appendChild(aVillagersIconsSection(list));
-        }
-    }
-    else {
-        listContentElement = anEmptyListInfoElement();;
-    }
-
-    updateListEditingButtons();
-    $('lists').appendChild(listContentElement);
-}
-
-function updateListEditingButtons(): void {
-    var exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('export_lists');
-    var clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clear_lists');
-    if (!listsAreEmpty()) {
-        exportListsButton.className = 'clickable fa fa-download';
-        exportListsButton.disabled = false;
-        clearListsButton.className = 'clickable fa fa-times';
-        clearListsButton.disabled = false;
-    } else {
-        exportListsButton.className = 'disabled fa fa-download';
-        exportListsButton.disabled = true;
-        clearListsButton.className = 'disabled fa fa-times';
-        clearListsButton.disabled = true;
-    }
-}
-
 function updateListsFromLocalStorage(): void {
     localStorage.lists = JSON.stringify(lists);
+}
+
+function viewLists() {
+    updateListsFromLocalStorage();
+    ListsView.updateView();
+}
+
+export function renameList(listId: number) {
+    updateListsFromLocalStorage();
+    ListsView.updateViewWithListTitleRenaming(listId);
 }
 
 function viewResults(resultList: Villager[] = villagers): void {
@@ -64,15 +39,15 @@ function viewResults(resultList: Villager[] = villagers): void {
         searchResultsElement.appendChild(document.createElement('br'));
     }
 
-    // Transition:
-    // Hide:
-    document.querySelectorAll<HTMLElement>(".result")
-        .forEach(result => result.style.opacity = '0');
-    // Show:
-    setTimeout(function () {
-        document.querySelectorAll<HTMLElement>(".result")
-            .forEach(result => result.style.opacity = '1');
-    }, 100);
+    /*     // Transition:
+        // Hide:
+        document.querySelectorAll<HTMLElement>('.result')
+            .forEach(result => result.style.opacity = '0');
+        // Show:
+        setTimeout(function () {
+            document.querySelectorAll<HTMLElement>('.result')
+                .forEach(result => result.style.opacity = '1');
+        }, 100); */
 }
 
 export function birthdayIsToday(birthdayString: string): boolean {
@@ -123,26 +98,24 @@ function villagerHasProfileImage(villager: Villager): boolean {
 
 export function loadProfile(id: string) {
     currentProfile = id;
-    let villager: Villager = getVillager(id);
-
-    updateProfile(villager);
+    updateProfile(getVillager(id));
     updateCurrentListSelect();
     updateListSelect();
-    updateProfileImage(villager);
+    updateProfileImage(getVillager(id));
 
     // Transition:
-    // Hide:
-    let results = document.querySelectorAll<HTMLElement>("#info *");
+    /* // Hide:
+    let results = document.querySelectorAll<HTMLElement>('#info *');
     for (let i = 0; i < results.length; i++) {
         results[i].style.opacity = '0';
     }
     // Show:
     setTimeout(function () {
-        let results = document.querySelectorAll<HTMLElement>("#info *");
+        let results = document.querySelectorAll<HTMLElement>('#info *');
         for (let i = 0; i < results.length; i++) {
             results[i].style.opacity = '1';
         }
-    }, 100);
+    }, 100); */
 }
 
 // Update the select for selecting a list
@@ -161,10 +134,6 @@ export function updateListSelect(selectedListId: number = currentListSelect): vo
     }
 
     updateAddVillagerButton();
-}
-
-function clearElement(element: HTMLElement): void {
-    element.innerHTML = '';
 }
 
 function aProfileIsSelected(): boolean {
@@ -268,41 +237,6 @@ export function deleteList(id: number): void {
         viewLists();
         updateListSelect();
     }
-}
-
-export function renameList(listId: number) {
-    viewLists_Rename(listId);
-}
-function viewLists_Rename(listToRenameId: number): void {
-    clearElement($('lists'));
-    updateListsFromLocalStorage();
-    var listContentElement: HTMLElement = document.createElement('div');
-
-    if (!listsAreEmpty()) {
-        for (let list of lists) {
-            if (list.id == listToRenameId) {
-                listContentElement.appendChild(aListTitleInputElement(list));
-                listContentElement.appendChild(aListRenameConfirmButton(list));
-            }
-            else {
-                listContentElement.appendChild(aListTitleElement(list));
-                listContentElement.appendChild(aListDeleteButton(list));
-                listContentElement.appendChild(aListRenameButton(list));
-            }
-            listContentElement.appendChild(aVillagersIconsSection(list));
-        }
-    }
-    else {
-        listContentElement = anEmptyListInfoElement();;
-    }
-
-    $('lists').appendChild(listContentElement);
-    focusAndSelectRenameInput();
-}
-
-function focusAndSelectRenameInput() {
-    $('rename_bar').focus();
-    (<HTMLInputElement>$('rename_bar')).select();
 }
 
 export function applyTitle(listId: number, newTitle: string): void {
