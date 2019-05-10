@@ -9,11 +9,11 @@ function $(elementID: string): HTMLElement {
 
 // Global variables:
 let idCount = -1;
-export let currentProfile = "";
 let currentListSelect = -1;
+export let currentProfile = '';
 export let lists: VillagerList[] = [];
+export const villagersDB = villagers;
 
-// Display lists in list area
 function viewLists() {
     clearElement($('lists'));
     updateListsFromLocalStorage();
@@ -39,14 +39,14 @@ function updateListEditingButtons(): void {
     var exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('export_lists');
     var clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clear_lists');
     if (!listsAreEmpty()) {
-        exportListsButton.className = "clickable fa fa-download";
+        exportListsButton.className = 'clickable fa fa-download';
         exportListsButton.disabled = false;
-        clearListsButton.className = "clickable fa fa-times";
+        clearListsButton.className = 'clickable fa fa-times';
         clearListsButton.disabled = false;
     } else {
-        exportListsButton.className = "disabled fa fa-download";
+        exportListsButton.className = 'disabled fa fa-download';
         exportListsButton.disabled = true;
-        clearListsButton.className = "disabled fa fa-times";
+        clearListsButton.className = 'disabled fa fa-times';
         clearListsButton.disabled = true;
     }
 }
@@ -121,7 +121,6 @@ function villagerHasProfileImage(villager: Villager): boolean {
     return villager.head !== 'wip.jpg';
 }
 
-// Display villager profile
 export function loadProfile(id: string) {
     currentProfile = id;
     let villager: Villager = getVillager(id);
@@ -191,7 +190,7 @@ function villagerInList(villagerName: string, listId: number): boolean {
 
 export function search(query: string): void {
     if (query == '') {
-        viewResults(); // Display all villagers
+        viewResults();
         return;
     }
 
@@ -326,7 +325,7 @@ function getVillager(villagerId: string): Villager {
 
 // Show loading icon in search bar
 function searchbarLoading(): void {
-    $('search_results').innerHTML = "<i class=\"fa fa-spinner fa-pulse fa-2x fa-fw\"></i>";
+    $('search_results').innerHTML = '<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>';
 }
 
 export function clearAll(): void {
@@ -342,14 +341,14 @@ export function clearAll(): void {
 // Go to viewer
 // TODO
 function openViewer() {
-    window.location.href = "viewer";
+    window.location.href = 'viewer';
 }
 
 // Export lists as .json file
 export function exportLists(): void {
     // TODO
-    let blob = new Blob([JSON.stringify(lists, null, 2)], { type: "text/plain" });
-    // saveAs(blob, "ACLists.json");
+    let blob = new Blob([JSON.stringify(lists, null, 2)], { type: 'text/plain' });
+    // saveAs(blob, 'ACLists.json');
 }
 
 // Import lists from .json file
@@ -361,7 +360,7 @@ function importLists() {
     reader.onload = function (e) {
         // Confirm dialog on lists present:
         if (!listsAreEmpty()) {
-            var confirmOverride = confirm("Are you sure you want to override current lists?");
+            var confirmOverride = confirm('Are you sure you want to override current lists?');
         }
         else {
             var confirmOverride = true;
@@ -370,7 +369,7 @@ function importLists() {
         if (confirmOverride) {
             lists = JSON.parse(reader.result as string); // Save lists
             findIDCount(); // Get idCount
-            (<HTMLInputElement>$('file-input')).value = ""; // Reset input
+            (<HTMLInputElement>$('file-input')).value = ''; // Reset input
         }
         viewLists();
     }
