@@ -1,9 +1,9 @@
-import { aBirthdayIcon, aBirthdayTextNode, aCoffeeIcon, aListDropdownOption, anAddOrRemoveElement, anAddVillagerToListButton, aNameIcon, aPersonalityIcon, aRemoveVillagerFromListButton, aSpeciesIcon, aStoreIconButton, aTextNode, aWikiIconButton } from './components';
 import ListsView from './lists.view';
 import { Villager } from './models/villager.model';
 import { VillagerList } from './models/villagerlist.model';
+import ProfileView from './profile.view';
 import SearchView from './search.view';
-import { aBreakElement, clearElement } from './util';
+import { listsAreEmpty } from './util';
 import villagers from './villagers.json';
 
 function $(elementID: string): HTMLElement {
@@ -12,7 +12,7 @@ function $(elementID: string): HTMLElement {
 
 // Global variables:
 let idCount = -1;
-let currentListSelect = -1;
+export let currentListSelect = -1;
 export let currentProfile = '';
 export let lists: VillagerList[] = [];
 export const villagersDB = villagers;
@@ -31,111 +31,18 @@ export function renameList(listId: number) {
     ListsView.updateViewWithListTitleRenaming(listId);
 }
 
-export function birthdayIsToday(birthdayString: string): boolean {
-    const today: Date = new Date();
-    const birthday: Date = new Date(birthdayString);
-    return today.getDate() === birthday.getDate()
-        && today.getMonth() === birthday.getMonth();
-}
-
-export function updateProfile(villager: Villager): void {
-    clearElement($('profile'));
-
-    $('profile').appendChild(aNameIcon());
-    $('profile').appendChild(aTextNode(villager.name));
-    $('profile').appendChild(aBreakElement());
-
-    $('profile').appendChild(aSpeciesIcon());
-    $('profile').appendChild(aTextNode(villager.species));
-    $('profile').appendChild(aBreakElement());
-
-    $('profile').appendChild(aPersonalityIcon());
-    $('profile').appendChild(aTextNode(villager.personality));
-    $('profile').appendChild(aBreakElement());
-
-    $('profile').appendChild(aCoffeeIcon());
-    $('profile').appendChild(aTextNode(villager.coffee));
-    $('profile').appendChild(aBreakElement());
-
-    $('profile').appendChild(aBirthdayIcon(villager));
-    $('profile').appendChild(aBirthdayTextNode(villager.birthday));
-
-    $('profile').appendChild(anAddOrRemoveElement());
-    $('profile').appendChild(aBreakElement());
-    $('profile').appendChild(aWikiIconButton(villager.wiki));
-    $('profile').appendChild(aStoreIconButton(villager.store));
-}
-
-function updateProfileImage(villager: Villager): void {
-    let profileImageElement: HTMLImageElement = <HTMLImageElement>$('profile-image');
-    profileImageElement.alt = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
-    profileImageElement.title = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
-    profileImageElement.src = `./villager_heads/${villager.head}`;
-}
-
-function villagerHasProfileImage(villager: Villager): boolean {
-    return villager.head !== 'wip.jpg';
-}
-
 export function loadProfile(id: string) {
     currentProfile = id;
-    updateProfile(getVillager(id));
     updateCurrentListSelect();
-    updateListSelect();
-    updateProfileImage(getVillager(id));
-
-    // Transition:
-    /* // Hide:
-    let results = document.querySelectorAll<HTMLElement>('#info *');
-    for (let i = 0; i < results.length; i++) {
-        results[i].style.opacity = '0';
-    }
-    // Show:
-    setTimeout(function () {
-        let results = document.querySelectorAll<HTMLElement>('#info *');
-        for (let i = 0; i < results.length; i++) {
-            results[i].style.opacity = '1';
-        }
-    }, 100); */
+    ProfileView.updateView(getVillager(id));
 }
 
-// Update the select for selecting a list
-export function updateListSelect(selectedListId: number = currentListSelect): void {
-    if (!aProfileIsSelected()) { return; }
-
-    clearElement($('list_select'));
-
-    if (listsAreEmpty()) {
-        (<HTMLSelectElement>$('list_select')).disabled = true;
-    } else {
-        for (let list of lists) {
-            (<HTMLSelectElement>$('list_select')).disabled = false;
-            $('list_select').appendChild(aListDropdownOption(list, list.id == selectedListId));
-        }
-    }
-
-    updateAddVillagerButton();
-}
-
-function aProfileIsSelected(): boolean {
+export function aProfileIsSelected(): boolean {
     return currentProfile !== '';
-}
-
-export function updateAddVillagerButton(): void {
-    clearElement($('add_remove_button'));
-    if (villagerInList(currentProfile, getListSelectValue())) {
-        $('add_remove_button').appendChild(aRemoveVillagerFromListButton());
-    } else {
-        $('add_remove_button').appendChild(anAddVillagerToListButton());
-    }
 }
 
 export function getListSelectValue(): number {
     return +(<HTMLSelectElement>$('list_select')).value;
-}
-
-function villagerInList(villagerName: string, listId: number): boolean {
-    return !listsAreEmpty() && lists.find(l => l.id == listId).members.includes(villagerName);
 }
 
 export function search(query: string): void {
@@ -177,7 +84,7 @@ export function addVillager(villagerNameToAdd: string, listId: number): void {
     listToAddTo.members.sort();
 
     viewLists();
-    updateListSelect();
+    ProfileView.updateListSelect();
 }
 
 function updateCurrentListSelect(): void {
@@ -192,7 +99,7 @@ export function removeVillager(name: string, id: number) {
         .filter(v => v !== name);
 
     viewLists(); // Refresh view
-    updateListSelect(); // Update list select
+    ProfileView.updateListSelect(); // Update list select
 }
 
 export function newList(): void {
@@ -207,7 +114,7 @@ export function newList(): void {
 
     viewLists();
     renameList(idCount); // Initiate rename of list
-    updateListSelect();
+    ProfileView.updateListSelect();
 }
 
 export function deleteList(id: number): void {
@@ -216,7 +123,7 @@ export function deleteList(id: number): void {
     if (confirm(`Are you sure you want to delete "${listToDelete.title}"?`)) {
         lists = lists.filter(l => l.id != id);
         viewLists();
-        updateListSelect();
+        ProfileView.updateListSelect();
     }
 }
 
@@ -231,7 +138,7 @@ export function applyTitle(listId: number, newTitle: string): void {
         .title = newTitle;
 
     viewLists();
-    updateListSelect();
+    ProfileView.updateListSelect();
 }
 
 function getVillager(villagerId: string): Villager {
@@ -249,7 +156,7 @@ export function clearAll(): void {
         idCount = -1;
         localStorage.idCount = idCount;
         viewLists();
-        updateListSelect();
+        ProfileView.updateListSelect();
     }
 }
 
@@ -304,10 +211,6 @@ function findIDCount(): void {
 
     localStorage.idCount = temp;
     idCount = localStorage.idCount;
-}
-
-export function listsAreEmpty(): boolean {
-    return lists.length <= 0;
 }
 
 export function init() {

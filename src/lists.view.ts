@@ -1,6 +1,7 @@
-import { applyTitle, deleteList, lists, listsAreEmpty, loadProfile, renameList, updateListSelect } from './main';
+import { applyTitle, deleteList, lists, loadProfile, renameList } from './main';
 import { VillagerList } from './models/villagerlist.model';
-import { clearElement, trimName } from './util';
+import ProfileView from './profile.view';
+import { clearElement, listsAreEmpty, trimName } from './util';
 
 function $(elementID: string): HTMLElement {
     return document.getElementById(elementID);
@@ -74,7 +75,7 @@ export default class ListsView {
 
     private static aListTitleElement(list: VillagerList): HTMLButtonElement {
         let listTitleElement: HTMLButtonElement = document.createElement('button');
-        listTitleElement.onclick = () => { updateListSelect(list.id); };
+        listTitleElement.onclick = () => { ProfileView.updateListSelect(list.id); };
         listTitleElement.innerHTML = list.title;
         listTitleElement.className = 'clickable list';
         return listTitleElement;
