@@ -1,8 +1,9 @@
-import { aBirthdayIcon, aBirthdayTextNode, aBreakElement, aCoffeeIcon, aListDropdownOption, anAddOrRemoveElement, anAddVillagerToListButton, aNameIcon, aPersonalityIcon, aRemoveVillagerFromListButton, aSpeciesIcon, aStoreIconButton, aTextNode, aVillagerSearchResultButton, aWikiIconButton } from './components';
+import { aBirthdayIcon, aBirthdayTextNode, aCoffeeIcon, aListDropdownOption, anAddOrRemoveElement, anAddVillagerToListButton, aNameIcon, aPersonalityIcon, aRemoveVillagerFromListButton, aSpeciesIcon, aStoreIconButton, aTextNode, aWikiIconButton } from './components';
 import ListsView from './lists.view';
 import { Villager } from './models/villager.model';
 import { VillagerList } from './models/villagerlist.model';
-import { clearElement } from './util';
+import SearchView from './search.view';
+import { aBreakElement, clearElement } from './util';
 import villagers from './villagers.json';
 
 function $(elementID: string): HTMLElement {
@@ -28,26 +29,6 @@ function viewLists() {
 export function renameList(listId: number) {
     updateListsFromLocalStorage();
     ListsView.updateViewWithListTitleRenaming(listId);
-}
-
-function viewResults(resultList: Villager[] = villagers): void {
-    let searchResultsElement = $('search_results');
-    clearElement(searchResultsElement);
-
-    for (let villager of resultList) {
-        searchResultsElement.appendChild(aVillagerSearchResultButton(villager));
-        searchResultsElement.appendChild(document.createElement('br'));
-    }
-
-    /*     // Transition:
-        // Hide:
-        document.querySelectorAll<HTMLElement>('.result')
-            .forEach(result => result.style.opacity = '0');
-        // Show:
-        setTimeout(function () {
-            document.querySelectorAll<HTMLElement>('.result')
-                .forEach(result => result.style.opacity = '1');
-        }, 100); */
 }
 
 export function birthdayIsToday(birthdayString: string): boolean {
@@ -159,7 +140,7 @@ function villagerInList(villagerName: string, listId: number): boolean {
 
 export function search(query: string): void {
     if (query == '') {
-        viewResults();
+        SearchView.updateView();
         return;
     }
 
@@ -178,7 +159,7 @@ export function search(query: string): void {
     let results: Villager[] = [...villagersFilteredOnName, ...villagersFilteredOnPersonality, ...villagersFilteredOnSpecies];
     results = removeDuplicates(results);
 
-    viewResults(results);
+    SearchView.updateView(results);
 }
 
 function removeDuplicates(results: any[]): any[] {

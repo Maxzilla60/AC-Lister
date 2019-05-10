@@ -1,4 +1,4 @@
-import { addVillager, birthdayIsToday, currentProfile, getListSelectValue, listsAreEmpty, loadProfile, removeVillager } from './main';
+import { addVillager, birthdayIsToday, currentProfile, getListSelectValue, listsAreEmpty, removeVillager } from './main';
 import { Villager } from './models/villager.model';
 import { VillagerList } from './models/villagerlist.model';
 
@@ -41,38 +41,11 @@ export function aRemoveVillagerFromListButton(): HTMLButtonElement {
     return removeVillagerFromListButton;
 }
 
-export function aVillagerSearchResultButton(villager: Villager): HTMLButtonElement {
-    let villagersSearchResultButton: HTMLButtonElement = document.createElement('button');
-    villagersSearchResultButton.onclick = () => { loadProfile(villager.id); };
-    villagersSearchResultButton.className = 'result';
-    villagersSearchResultButton.appendChild(aVillagersSearchResultImage(villager));
-    villagersSearchResultButton.appendChild(aVillagersSearchResultNameElement());
-    return villagersSearchResultButton;
-
-    function aVillagersSearchResultNameElement(): HTMLElement {
-        let villagersSearchResultNameElement: HTMLElement = document.createElement('div');
-        villagersSearchResultNameElement.innerHTML = villager.name;
-        return villagersSearchResultNameElement;
-    }
-}
-
-export function aVillagersSearchResultImage(villager: Villager): HTMLImageElement {
-    let villagersSearchResultImage: HTMLImageElement = document.createElement('img');
-    villagersSearchResultImage.alt = villager.name;
-    villagersSearchResultImage.style.cssFloat = 'left';
-    villagersSearchResultImage.src = `./villager_icons/${villager.id}.gif`;
-    return villagersSearchResultImage;
-}
-
 export function anAddOrRemoveElement(): HTMLElement {
     let addOrRemoveElement: HTMLElement = document.createElement('div');
     addOrRemoveElement.style.padding = '0';
     addOrRemoveElement.style.display = 'inline-block';
     return addOrRemoveElement;
-}
-
-export function aBreakElement(): HTMLElement {
-    return document.createElement('br');
 }
 
 export function aTextNode(text: string): Text | HTMLSpanElement {
