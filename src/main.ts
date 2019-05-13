@@ -5,6 +5,7 @@ import villagersDB from './util/villagers.json';
 import ListsView from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
+import saveAs from 'file-saver';
 
 export const villagers = villagersDB;
 
@@ -104,26 +105,26 @@ export function updateAddVillagerButton(): void {
     ProfileView.updateAddVillagerButton();
 }
 
-// Go to viewer
 // TODO
-function openViewer() {
-    window.location.href = 'viewer';
+export function openViewer() {
+    // window.location.href = 'viewer/index.html';
 }
 
 // Export lists as .json file
 export function exportLists(): void {
-    // TODO
     let blob = new Blob([JSON.stringify(stateService.getLists(), null, 2)], { type: 'text/plain' });
-    // saveAs(blob, 'ACLists.json');
+    saveAs(blob, 'ACLists.json');
 }
 
 // Import lists from .json file
-// TODO
-function importLists() {
-    if (!stateService.listsAreEmpty() && confirm('Are you sure you want to override current lists?')) {
-        let selectedFile = (<HTMLInputElement>$('file-input')).files[0];
-        stateService.importListFromFile(selectedFile, viewLists);
+export function importLists() {
+    if (!stateService.listsAreEmpty()) {
+        if (!confirm('Are you sure you want to override current lists?')) {
+            return;
+        }
     }
+    let selectedFile = (<HTMLInputElement>$('file-input')).files[0];
+    stateService.importListFromFile(selectedFile, viewLists);
 }
 
 export function init() {

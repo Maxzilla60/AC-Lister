@@ -122,10 +122,7 @@ class StateService {
         let reader = new FileReader();
 
         reader.onload = () => {
-            // Set lists if confirmed:
-
-            // TODO
-            // lists = JSON.parse(reader.result as string); // Save lists
+            this._lists = JSON.parse(reader.result as string); // Save lists
             this.findIDCount(); // Get idCount
             (<HTMLInputElement>$('file-input')).value = ''; // Reset input
 
