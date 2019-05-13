@@ -175,7 +175,7 @@ export default class ProfileView {
     }
 
     private static aBirthdayIcon(villager: Villager): HTMLButtonElement | HTMLElement {
-        if (birthdayIsToday(villager.birthday.toString())) {
+        if (birthdayIsToday(villager.birthday)) {
             return this.aBirthdayButton(villager.name);
         } else {
             let birthdayIcon: HTMLElement = document.createElement('i');
@@ -186,14 +186,14 @@ export default class ProfileView {
         }
     }
 
-    private static aBirthdayTextNode(birthday: Date): Text | HTMLSpanElement {
-        if (birthdayIsToday(birthday.toString())) {
+    private static aBirthdayTextNode(birthday: string): Text | HTMLSpanElement {
+        if (birthdayIsToday(birthday)) {
             let birthdaySpan: HTMLSpanElement = document.createElement('span');
-            birthdaySpan.innerHTML = birthday.toString();
+            birthdaySpan.innerHTML = birthday;
             birthdaySpan.className = 'birthday';
             return birthdaySpan;
         } else {
-            return this.aTextNode(birthday.toString());
+            return this.aTextNode(birthday);
         }
     }
 

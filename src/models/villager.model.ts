@@ -17,7 +17,7 @@ export interface Villager extends Serializable {
     species: Species;
     personality: Personality;
     coffee: string;
-    birthday: Date;
+    birthday: string; // Date
     wiki: string;
     store: string;
 }
