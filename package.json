@@ -9,7 +9,9 @@
   "keywords": [],
   "author": "Maxime Orione",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "file-saver": "^2.0.1"
+  },
   "devDependencies": {
     "typescript": "^3.4.5",
     "tslint": "^5.16.0",
