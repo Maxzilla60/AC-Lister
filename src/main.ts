@@ -5,7 +5,7 @@ import villagersDB from './util/villagers.json';
 import ListsView from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
-import saveAs from 'file-saver';
+import { saveAs } from 'file-saver';
 
 export const villagers = villagersDB;
 
@@ -27,7 +27,7 @@ export function loadProfile(id: string, fromListId: number = getListSelectValue(
 }
 
 export function search(query: string): void {
-    if (query == '') {
+    if (query === '') {
         SearchView.updateView();
         return;
     }
@@ -65,7 +65,7 @@ export function removeVillager(villagerNameToRemove: string, listId: number) {
 }
 
 export function newList(): void {
-    let newListID = stateService.addNewList();
+    const newListID = stateService.addNewList();
     viewLists(newListID);
 }
 
@@ -112,7 +112,7 @@ export function openViewer() {
 
 // Export lists as .json file
 export function exportLists(): void {
-    let blob = new Blob([JSON.stringify(stateService.getLists(), null, 2)], { type: 'text/plain' });
+    const blob = new Blob([JSON.stringify(stateService.getLists(), null, 2)], { type: 'text/plain' });
     saveAs(blob, 'ACLists.json');
 }
 
@@ -123,7 +123,7 @@ export function importLists() {
             return;
         }
     }
-    let selectedFile = (<HTMLInputElement>$('file-input')).files[0];
+    const selectedFile = (<HTMLInputElement>$('file-input')).files[0];
     stateService.importListFromFile(selectedFile, viewLists);
 }
 
