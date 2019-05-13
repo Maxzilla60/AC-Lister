@@ -1,37 +1,41 @@
-import { addVillager, aProfileIsSelected, currentListSelect, currentProfile, getListSelectValue, lists, removeVillager } from './main';
+import { addVillager, removeVillager } from './main';
 import { Personality } from './models/personality.enum';
 import { Species } from './models/species.enum';
 import { Villager } from './models/villager.model';
 import { VillagerList } from './models/villagerlist.model';
-import { aBreakElement, birthdayIsToday, clearElement, listsAreEmpty, villagerHasProfileImage, villagerIsInList } from './util';
+import { stateService } from './state.service';
+import { aBreakElement, birthdayIsToday, clearElement, getListSelectValue, villagerHasProfileImage } from './util';
 
 function $(elementID: string): HTMLElement {
     return document.getElementById(elementID);
 }
 
 export default class ProfileView {
-    public static updateView(villager: Villager): void {
+    public static updateView(villager: Villager, fromListId: number): void {
+        stateService.currentLoadedProfileId = villager.id;
+
         clearElement($('profile'));
 
         this.appendVillagerInfo(villager);
         this.appendWikiAndStoreButtons(villager);
 
-        this.updateListSelect();
+        this.updateListSelect(fromListId);
         this.updateProfileImage(villager);
 
         this.fadeTransition();
     }
 
-    public static updateListSelect(selectedListId: number = currentListSelect): void {
-        if (!aProfileIsSelected()) { return; }
+    public static updateListSelect(selectedListId: number = stateService.currentListSelect): void {
+        if (!stateService.aProfileIsLoaded()) {
+            return;
+        }
 
+        stateService.currentListSelect = selectedListId;
+
+        (<HTMLSelectElement>$('list_select')).disabled = stateService.listsAreEmpty();
         clearElement($('list_select'));
-
-        (<HTMLSelectElement>$('list_select')).disabled = listsAreEmpty();
-        if (!listsAreEmpty()) {
-            for (let list of lists) {
-                $('list_select').appendChild(this.aListDropdownOption(list, list.id == selectedListId));
-            }
+        for (let list of stateService.getLists()) {
+            $('list_select').appendChild(this.aListDropdownOption(list, list.id == selectedListId));
         }
 
         this.updateAddVillagerButton();
@@ -63,9 +67,9 @@ export default class ProfileView {
         profileImageElement.src = `./villager_heads/${villager.head}`;
     }
 
-    private static updateAddVillagerButton(): void {
+    public static updateAddVillagerButton(): void {
         clearElement($('add_remove_button'));
-        if (villagerIsInList(currentProfile, getListSelectValue())) {
+        if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
             $('add_remove_button').appendChild(this.aRemoveVillagerFromListButton());
         } else {
             $('add_remove_button').appendChild(this.anAddVillagerToListButton());
@@ -206,11 +210,11 @@ export default class ProfileView {
     }
 
     private static anAddVillagerToListButton(): HTMLButtonElement {
-        const isDisabled = listsAreEmpty();
+        const isDisabled = stateService.listsAreEmpty();
 
         let addVillagerToListButton: HTMLButtonElement = document.createElement('button');
         addVillagerToListButton.onclick = () => {
-            addVillager(currentProfile, getListSelectValue());
+            addVillager(stateService.currentLoadedProfileId, getListSelectValue());
         }
         addVillagerToListButton.title = 'Add to list';
         addVillagerToListButton.setAttribute('aria-hidden', 'true');
@@ -224,7 +228,7 @@ export default class ProfileView {
     private static aRemoveVillagerFromListButton(): HTMLButtonElement {
         let removeVillagerFromListButton: HTMLButtonElement = document.createElement('button');
         removeVillagerFromListButton.onclick = () => {
-            removeVillager(currentProfile, getListSelectValue());
+            removeVillager(stateService.currentLoadedProfileId, getListSelectValue());
         };
         removeVillagerFromListButton.title = 'Remove from list';
         removeVillagerFromListButton.className = 'clickable fa fa-minus';

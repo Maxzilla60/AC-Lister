@@ -1,47 +1,40 @@
-import { applyTitle, deleteList, lists, loadProfile, renameList } from './main';
+import { applyTitle, deleteList, loadProfile, renameList } from './main';
 import { VillagerList } from './models/villagerlist.model';
 import ProfileView from './profile.view';
-import { clearElement, listsAreEmpty, trimName } from './util';
+import { stateService } from './state.service';
+import { clearElement, trimName } from './util';
 
 function $(elementID: string): HTMLElement {
     return document.getElementById(elementID);
 }
 
 export default class ListsView {
-    public static updateView(): void {
+    public static updateView(withListToRenameId?: number): void {
         var listContentElement: HTMLElement = document.createElement('div');
-        if (!listsAreEmpty()) {
-            for (let list of lists) {
-                this.appendListSection(listContentElement, list);
-            }
+
+        if (!stateService.listsAreEmpty()) {
+            this.appendLists(listContentElement, withListToRenameId);
         }
         else {
             listContentElement = this.anEmptyListInfoElement();
         }
+
         clearElement($('lists'));
         $('lists').appendChild(listContentElement);
         this.updateListEditingButtons();
+
+        if (withListToRenameId) { this.focusAndSelectRenameInput(); }
     }
 
-    public static updateViewWithListTitleRenaming(listToRenameId: number): void {
-        var listContentElement: HTMLElement = document.createElement('div');
-        if (!listsAreEmpty()) {
-            for (let list of lists) {
-                if (list.id == listToRenameId) {
-                    this.appendListWithRenameInputSection(listContentElement, list);
-                }
-                else {
-                    this.appendListSection(listContentElement, list);
-                }
+    private static appendLists(listContentElement: HTMLElement, withListToRenameId?: number): void {
+        for (let list of stateService.getLists()) {
+            if (withListToRenameId && list.id == withListToRenameId) {
+                this.appendListWithRenameInputSection(listContentElement, list);
+            }
+            else {
+                this.appendListSection(listContentElement, list);
             }
         }
-        else {
-            listContentElement = this.anEmptyListInfoElement();;
-        }
-        clearElement($('lists'));
-        $('lists').appendChild(listContentElement);
-        this.updateListEditingButtons();
-        this.focusAndSelectRenameInput();
     }
 
     private static appendListSection(listContentElement: HTMLElement, list: VillagerList): void {
@@ -60,17 +53,10 @@ export default class ListsView {
     private static updateListEditingButtons(): void {
         var exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('export_lists');
         var clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clear_lists');
-        if (!listsAreEmpty()) {
-            exportListsButton.className = 'clickable fa fa-download';
-            exportListsButton.disabled = false;
-            clearListsButton.className = 'clickable fa fa-times';
-            clearListsButton.disabled = false;
-        } else {
-            exportListsButton.className = 'disabled fa fa-download';
-            exportListsButton.disabled = true;
-            clearListsButton.className = 'disabled fa fa-times';
-            clearListsButton.disabled = true;
-        }
+        exportListsButton.disabled = stateService.listsAreEmpty();
+        clearListsButton.disabled = stateService.listsAreEmpty();
+        exportListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-download' : 'clickable fa fa-download';
+        clearListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-times' : 'clickable fa fa-times';
     }
 
     private static aListTitleElement(list: VillagerList): HTMLButtonElement {
@@ -109,7 +95,7 @@ export default class ListsView {
 
     private static aVillagerListIcon(villager: string, listId: number): HTMLImageElement {
         let villagerListIcon: HTMLImageElement = document.createElement('img');
-        villagerListIcon.onclick = () => { loadProfile(villager); };
+        villagerListIcon.onclick = () => { loadProfile(villager, listId); };
         villagerListIcon.title = trimName(villager);
         villagerListIcon.src = `./villager_icons/${villager}.gif`;
         return villagerListIcon;

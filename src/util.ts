@@ -1,5 +1,8 @@
-import { lists } from './main';
 import { Villager } from './models/villager.model';
+
+function $(elementID: string): HTMLElement {
+    return document.getElementById(elementID);
+}
 
 export function clearElement(element: HTMLElement): void {
     element.innerHTML = '';
@@ -25,10 +28,10 @@ export function birthdayIsToday(birthdayString: string): boolean {
         && today.getMonth() === birthday.getMonth();
 }
 
-export function listsAreEmpty(): boolean {
-    return lists.length <= 0;
+export function getListSelectValue(): number {
+    return +(<HTMLSelectElement>$('list_select')).value;
 }
 
-export function villagerIsInList(villagerName: string, listId: number): boolean {
-    return !listsAreEmpty() && lists.find(l => l.id == listId).members.includes(villagerName);
+export function removeDuplicates(results: any[]): any[] {
+    return [...new Set(results)];
 }

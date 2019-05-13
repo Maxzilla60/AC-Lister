@@ -6,12 +6,13 @@ Todo:
   ☐ Rename to ..Component functions
   ☐ Code splitting
   ☐ Copy over static files (images) to dist
-  https://www.npmjs.com/package/parcel-plugin-static-files-copy
+    https://www.npmjs.com/package/parcel-plugin-static-files-copy
   ☐ CSS Redesign
-  https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
+    https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
   ☐ WebComponents
+    https://github.com/parcel-bundler/parcel/issues/1049
   ☐ PWA
-  https://hiswe.github.io/2019/14-state-of-pwa-with-parcel-february-2019/
+    https://hiswe.github.io/2019/14-state-of-pwa-with-parcel-february-2019/
   ☐ Fade transitions
   ☐ <head>
     https://github.com/joshbuchea/HEAD
