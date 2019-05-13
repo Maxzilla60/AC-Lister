@@ -1,10 +1,12 @@
-import ListsView from './views/lists.view';
 import { Villager } from './models/villager.model';
-import ProfileView from './views/profile.view';
-import SearchView from './views/search.view';
 import { stateService } from './util/state.service';
 import { getListSelectValue, removeDuplicates } from './util/util';
-import villagers from './util/villagers.json';
+import villagersDB from './util/villagers.json';
+import ListsView from './views/lists.view';
+import ProfileView from './views/profile.view';
+import SearchView from './views/search.view';
+
+export const villagers = villagersDB;
 
 function $(elementID: string): HTMLElement {
     return document.getElementById(elementID);
@@ -31,13 +33,13 @@ export function search(query: string): void {
 
     query = query.toLowerCase();
 
-    const villagersFilteredOnName = villagers.filter(
+    const villagersFilteredOnName = villagersDB.filter(
         (villager: Villager) => villager.name.toLowerCase().includes(query)
     );
-    const villagersFilteredOnPersonality = villagers.filter(
+    const villagersFilteredOnPersonality = villagersDB.filter(
         (villager: Villager) => villager.personality.toLowerCase().includes(query)
     );
-    const villagersFilteredOnSpecies = villagers.filter(
+    const villagersFilteredOnSpecies = villagersDB.filter(
         (villager: Villager) => villager.species.toLowerCase().includes(query)
     );
 
@@ -83,7 +85,7 @@ export function applyTitle(listId: number, newTitle: string): void {
 }
 
 function getVillagerById(villagerId: string): Villager {
-    return villagers.find((v: Villager) => v.id === villagerId);
+    return villagersDB.find((v: Villager) => v.id === villagerId);
 }
 
 // Show loading icon in search bar
