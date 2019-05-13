@@ -6,7 +6,7 @@ Todo:
   ✘ Rename to ..Component functions @cancelled(19-05-13 09:43)
   ✔ Code splitting @done(19-05-13 09:43)
   ✔ Import & Export Lists @done(19-05-13 09:52)
-  ☐ Copy over static files (images) to dist
+  ✔ Copy over static files (images) to dist @done(19-05-13 10:54)
     https://www.npmjs.com/package/parcel-plugin-static-files-copy
   ☐ CSS Redesign
     https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
