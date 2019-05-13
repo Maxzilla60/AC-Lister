@@ -55,7 +55,7 @@ export default class ListsView {
         var clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clear_lists');
         exportListsButton.disabled = stateService.listsAreEmpty();
         clearListsButton.disabled = stateService.listsAreEmpty();
-        exportListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-download' : 'clickable fa fa-download';
+        exportListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-upload' : 'clickable fa fa-upload';
         clearListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-times' : 'clickable fa fa-times';
     }
 
