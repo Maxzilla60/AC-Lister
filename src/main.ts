@@ -1,6 +1,6 @@
 import { Villager } from './models/villager.model';
 import { stateService } from './util/state.service';
-import { getListSelectValue, removeDuplicates } from './util/util';
+import { birthdayIsToday, getListSelectValue, removeDuplicates } from './util/util';
 import villagersDB from './util/villagers.json';
 import ListsView from './views/lists.view';
 import ProfileView from './views/profile.view';
@@ -125,6 +125,21 @@ export function importLists() {
     }
     const selectedFile = (<HTMLInputElement>$('file-input')).files[0];
     stateService.importListFromFile(selectedFile, viewLists);
+}
+
+export function getVillagersWhosBirthdayIsToday(): string[] {
+    return villagersDB
+        .filter((v: Villager) => birthdayIsToday(v.birthday))
+        .map((v: Villager) => v.name);
+}
+export function percentageOfVillagersWithProfileImage(): string {
+    const allVillagersCount = villagersDB.length;
+    const villagersWithProfileImageCount = villagersDB
+        .filter((v: Villager) => v.head !== 'wip.jpg')
+        .length;
+
+    const percentage = Math.floor((villagersWithProfileImageCount / allVillagersCount) * 100);
+    return `${percentage}% of all villagers have a profile image. (${villagersWithProfileImageCount}/${allVillagersCount})`;
 }
 
 export function init() {
