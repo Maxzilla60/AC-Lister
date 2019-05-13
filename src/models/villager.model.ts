@@ -1,16 +1,7 @@
 import { Personality } from './personality.enum';
 import { Species } from './species.enum';
 
-class Serializable {
-    fillFromJSON(json: string) {
-        var jsonObj = JSON.parse(json);
-        for (var propName in jsonObj) {
-            this[propName] = jsonObj[propName]
-        }
-    }
-}
-
-export interface Villager extends Serializable {
+export interface Villager {
     name: string;
     id: string;
     head: string;

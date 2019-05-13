@@ -10,12 +10,11 @@ function $(elementID: string): HTMLElement {
 
 export default class ListsView {
     public static updateView(withListToRenameId?: number): void {
-        var listContentElement: HTMLElement = document.createElement('div');
+        let listContentElement: HTMLElement = document.createElement('div');
 
         if (!stateService.listsAreEmpty()) {
             this.appendLists(listContentElement, withListToRenameId);
-        }
-        else {
+        } else {
             listContentElement = this.anEmptyListInfoElement();
         }
 
@@ -27,11 +26,10 @@ export default class ListsView {
     }
 
     private static appendLists(listContentElement: HTMLElement, withListToRenameId?: number): void {
-        for (let list of stateService.getLists()) {
-            if (withListToRenameId && list.id == withListToRenameId) {
+        for (const list of stateService.getLists()) {
+            if (withListToRenameId && list.id === withListToRenameId) {
                 this.appendListWithRenameInputSection(listContentElement, list);
-            }
-            else {
+            } else {
                 this.appendListSection(listContentElement, list);
             }
         }
@@ -51,8 +49,8 @@ export default class ListsView {
     }
 
     private static updateListEditingButtons(): void {
-        var exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('export_lists');
-        var clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clear_lists');
+        const exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('export_lists');
+        const clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clear_lists');
         exportListsButton.disabled = stateService.listsAreEmpty();
         clearListsButton.disabled = stateService.listsAreEmpty();
         exportListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-upload' : 'clickable fa fa-upload';
@@ -60,7 +58,7 @@ export default class ListsView {
     }
 
     private static aListTitleElement(list: VillagerList): HTMLButtonElement {
-        let listTitleElement: HTMLButtonElement = document.createElement('button');
+        const listTitleElement: HTMLButtonElement = document.createElement('button');
         listTitleElement.onclick = () => { ProfileView.updateListSelect(list.id); };
         listTitleElement.innerHTML = list.title;
         listTitleElement.className = 'clickable list';
@@ -68,8 +66,8 @@ export default class ListsView {
     }
 
     private static aListDeleteButton(list: VillagerList): HTMLButtonElement {
-        let deleteButtonElement: HTMLButtonElement = document.createElement('button');
-        deleteButtonElement.onclick = () => { deleteList(list.id); }
+        const deleteButtonElement: HTMLButtonElement = document.createElement('button');
+        deleteButtonElement.onclick = () => { deleteList(list.id); };
         deleteButtonElement.title = 'Delete list';
         deleteButtonElement.className = 'clickable fa fa-trash';
         deleteButtonElement.setAttribute('aria-hidden', 'true');
@@ -77,8 +75,8 @@ export default class ListsView {
     }
 
     private static aListRenameButton(list: VillagerList): HTMLButtonElement {
-        let listRenameButtonElement: HTMLButtonElement = document.createElement('button');
-        listRenameButtonElement.onclick = () => { renameList(list.id); }
+        const listRenameButtonElement: HTMLButtonElement = document.createElement('button');
+        listRenameButtonElement.onclick = () => { renameList(list.id); };
         listRenameButtonElement.title = 'Edit list title';
         listRenameButtonElement.className = 'clickable fa fa-pencil';
         listRenameButtonElement.setAttribute('aria-hidden', 'true');
@@ -86,15 +84,15 @@ export default class ListsView {
     }
 
     private static aVillagerListIconsSection(list: VillagerList): HTMLElement {
-        let villagerIconsSection = this.aDividerElement();
-        for (let villager of list.members) {
+        const villagerIconsSection = this.aDividerElement();
+        for (const villager of list.members) {
             villagerIconsSection.appendChild(this.aVillagerListIcon(villager, list.id));
         }
         return villagerIconsSection;
     }
 
     private static aVillagerListIcon(villager: string, listId: number): HTMLImageElement {
-        let villagerListIcon: HTMLImageElement = document.createElement('img');
+        const villagerListIcon: HTMLImageElement = document.createElement('img');
         villagerListIcon.onclick = () => { loadProfile(villager, listId); };
         villagerListIcon.title = trimName(villager);
         villagerListIcon.src = `./villager_icons/${villager}.gif`;
@@ -102,7 +100,7 @@ export default class ListsView {
     }
 
     private static anEmptyListInfoElement(): HTMLElement {
-        let emptyListInfoElement = document.createElement('div');
+        const emptyListInfoElement = document.createElement('div');
         emptyListInfoElement.style.paddingLeft = '15px';
         emptyListInfoElement.style.color = 'orange';
         emptyListInfoElement.innerHTML = 'Click<i onclick="index.newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!';
@@ -110,17 +108,17 @@ export default class ListsView {
     }
 
     private static aDividerElement(): HTMLElement {
-        var divider: HTMLElement = document.createElement('div');
+        const divider: HTMLElement = document.createElement('div');
         divider.style.paddingBottom = '0';
         divider.style.paddingTop = '0';
         return divider;
     }
 
     private static aListTitleInputElement(list: VillagerList): HTMLInputElement {
-        let listTitleInputElement: HTMLInputElement = document.createElement('input');
+        const listTitleInputElement: HTMLInputElement = document.createElement('input');
         listTitleInputElement.onchange = () => {
             applyTitle(list.id, this.getRenameListTitleValue());
-        }
+        };
         listTitleInputElement.id = 'rename_bar';
         listTitleInputElement.type = 'text';
         listTitleInputElement.value = list.title;
@@ -129,10 +127,10 @@ export default class ListsView {
     }
 
     private static aListRenameConfirmButton(list: VillagerList): HTMLButtonElement {
-        let listRenameButtonElement: HTMLButtonElement = document.createElement('button');
+        const listRenameButtonElement: HTMLButtonElement = document.createElement('button');
         listRenameButtonElement.onclick = () => {
             applyTitle(list.id, this.getRenameListTitleValue());
-        }
+        };
         listRenameButtonElement.title = 'Edit name';
         listRenameButtonElement.className = 'clickable fa fa-check';
         listRenameButtonElement.setAttribute('aria-hidden', 'true');

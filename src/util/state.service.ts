@@ -38,7 +38,7 @@ class StateService {
 
     public addNewList(): number {
         this._idCount++;
-        let tempLists = this._lists;
+        const tempLists = this._lists;
         tempLists.push({
             title: 'New List',
             id: this._idCount,
@@ -49,13 +49,13 @@ class StateService {
     }
 
     public deleteList(id: number): void {
-        this._lists = this._lists.filter(l => l.id != id);
+        this._lists = this._lists.filter(l => l.id !== id);
     }
 
     public renameList(listId: number, newTitle: string): void {
-        let tempLists = this._lists;
+        const tempLists = this._lists;
         tempLists
-            .find(l => l.id == listId)
+            .find(l => l.id === listId)
             .title = newTitle;
         this._lists = tempLists;
     }
@@ -66,16 +66,16 @@ class StateService {
     }
 
     public addVillagerToList(villagerNameToAdd: string, listId: number): void {
-        let tempLists = this._lists;
-        let listToAddTo: VillagerList = tempLists.find(l => l.id == listId);
+        const tempLists = this._lists;
+        const listToAddTo: VillagerList = tempLists.find(l => l.id === listId);
         listToAddTo.members.push(villagerNameToAdd);
         listToAddTo.members.sort();
         this._lists = tempLists;
     }
 
     public removeVillagerFromList(villagerNameToRemove: string, listId: number): void {
-        let tempLists = this._lists;
-        let listToRemoveFrom: VillagerList = tempLists.find(l => l.id == listId);
+        const tempLists = this._lists;
+        const listToRemoveFrom: VillagerList = tempLists.find(l => l.id === listId);
         listToRemoveFrom.members = listToRemoveFrom.members
             .filter(v => v !== villagerNameToRemove);
         this._lists = tempLists;
@@ -100,7 +100,7 @@ class StateService {
     }
 
     public getListById(id: number): VillagerList {
-        return this._lists.find(l => l.id == id);
+        return this._lists.find(l => l.id === id);
     }
 
     public get currentLoadedProfileId(): string {
@@ -119,7 +119,7 @@ class StateService {
     }
 
     public importListFromFile(selectedFile: File, callbackWhenDone: Function): void {
-        let reader = new FileReader();
+        const reader = new FileReader();
 
         reader.onload = () => {
             this._lists = JSON.parse(reader.result as string); // Save lists
@@ -127,7 +127,7 @@ class StateService {
             (<HTMLInputElement>$('file-input')).value = ''; // Reset input
 
             callbackWhenDone();
-        }
+        };
 
         reader.readAsText(selectedFile);
     }
@@ -135,7 +135,7 @@ class StateService {
     private findIDCount(): void {
         let temp = -1;
 
-        for (let list of this._lists) {
+        for (const list of this._lists) {
             if (list.id > temp) {
                 temp = list.id;
             }

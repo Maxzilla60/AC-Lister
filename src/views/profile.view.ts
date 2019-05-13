@@ -34,8 +34,8 @@ export default class ProfileView {
 
         (<HTMLSelectElement>$('list_select')).disabled = stateService.listsAreEmpty();
         clearElement($('list_select'));
-        for (let list of stateService.getLists()) {
-            $('list_select').appendChild(this.aListDropdownOption(list, list.id == selectedListId));
+        for (const list of stateService.getLists()) {
+            $('list_select').appendChild(this.aListDropdownOption(list, list.id === selectedListId));
         }
 
         this.updateAddVillagerButton();
@@ -61,7 +61,7 @@ export default class ProfileView {
     }
 
     private static updateProfileImage(villager: Villager): void {
-        let profileImageElement: HTMLImageElement = <HTMLImageElement>$('profile-image');
+        const profileImageElement: HTMLImageElement = <HTMLImageElement>$('profile-image');
         profileImageElement.alt = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
         profileImageElement.title = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
         profileImageElement.src = `./villager_heads/${villager.head}`;
@@ -106,15 +106,15 @@ export default class ProfileView {
     }
 
     private static anAddOrRemoveElement(): HTMLElement {
-        let addOrRemoveElement: HTMLElement = document.createElement('div');
+        const addOrRemoveElement: HTMLElement = document.createElement('div');
         addOrRemoveElement.style.padding = '0';
         addOrRemoveElement.style.display = 'inline-block';
         return addOrRemoveElement;
     }
 
     private static aWikiIconButton(wikiLink: string): HTMLButtonElement {
-        let wikiIconButton: HTMLButtonElement = document.createElement('button');
-        wikiIconButton.onclick = () => { window.open(wikiLink, '_blank'); }
+        const wikiIconButton: HTMLButtonElement = document.createElement('button');
+        wikiIconButton.onclick = () => { window.open(wikiLink, '_blank'); };
         wikiIconButton.title = 'Open Wiki page';
         wikiIconButton.className = 'clickable fa fa-wikipedia-w';
         wikiIconButton.setAttribute('aria-hidden', 'true');
@@ -122,8 +122,8 @@ export default class ProfileView {
     }
 
     private static aStoreIconButton(storeLink: string): HTMLButtonElement {
-        let storeIconButton: HTMLButtonElement = document.createElement('button');
-        storeIconButton.onclick = () => { window.open(storeLink, '_blank'); }
+        const storeIconButton: HTMLButtonElement = document.createElement('button');
+        storeIconButton.onclick = () => { window.open(storeLink, '_blank'); };
         storeIconButton.title = 'Buy this art!';
         storeIconButton.className = 'clickable fa fa-shopping-bag';
         storeIconButton.setAttribute('aria-hidden', 'true');
@@ -131,7 +131,7 @@ export default class ProfileView {
     }
 
     private static aListDropdownOption(list: VillagerList, isSelected: boolean): HTMLOptionElement {
-        let dropdownOption: HTMLOptionElement = document.createElement('option');
+        const dropdownOption: HTMLOptionElement = document.createElement('option');
         dropdownOption.innerHTML = list.title;
         dropdownOption.value = list.id.toString();
         dropdownOption.selected = isSelected;
@@ -143,7 +143,7 @@ export default class ProfileView {
     }
 
     private static aNameIcon(): HTMLElement {
-        let nameIcon: HTMLElement = document.createElement('i');
+        const nameIcon: HTMLElement = document.createElement('i');
         nameIcon.title = 'Name';
         nameIcon.className = 'fa fa-tag';
         nameIcon.setAttribute('aria-hidden', 'true');
@@ -151,7 +151,7 @@ export default class ProfileView {
     }
 
     private static aSpeciesIcon(): HTMLElement {
-        let speciesIcon: HTMLElement = document.createElement('i');
+        const speciesIcon: HTMLElement = document.createElement('i');
         speciesIcon.title = 'Species';
         speciesIcon.className = 'fa fa-user';
         speciesIcon.setAttribute('aria-hidden', 'true');
@@ -159,7 +159,7 @@ export default class ProfileView {
     }
 
     private static aPersonalityIcon(): HTMLElement {
-        let personalityIcon: HTMLElement = document.createElement('i');
+        const personalityIcon: HTMLElement = document.createElement('i');
         personalityIcon.title = 'Personality';
         personalityIcon.className = 'fa fa-heart';
         personalityIcon.setAttribute('aria-hidden', 'true');
@@ -167,7 +167,7 @@ export default class ProfileView {
     }
 
     private static aCoffeeIcon(): HTMLElement {
-        let coffeeIcon: HTMLElement = document.createElement('i');
+        const coffeeIcon: HTMLElement = document.createElement('i');
         coffeeIcon.title = 'Favourite coffee';
         coffeeIcon.className = 'fa fa-coffee';
         coffeeIcon.setAttribute('aria-hidden', 'true');
@@ -178,7 +178,7 @@ export default class ProfileView {
         if (birthdayIsToday(villager.birthday)) {
             return this.aBirthdayButton(villager.name);
         } else {
-            let birthdayIcon: HTMLElement = document.createElement('i');
+            const birthdayIcon: HTMLElement = document.createElement('i');
             birthdayIcon.title = 'Birthday';
             birthdayIcon.className = 'fa fa-birthday-cake';
             birthdayIcon.setAttribute('aria-hidden', 'true');
@@ -188,7 +188,7 @@ export default class ProfileView {
 
     private static aBirthdayTextNode(birthday: string): Text | HTMLSpanElement {
         if (birthdayIsToday(birthday)) {
-            let birthdaySpan: HTMLSpanElement = document.createElement('span');
+            const birthdaySpan: HTMLSpanElement = document.createElement('span');
             birthdaySpan.innerHTML = birthday;
             birthdaySpan.className = 'birthday';
             return birthdaySpan;
@@ -198,7 +198,7 @@ export default class ProfileView {
     }
 
     private static aBirthdayButton(villagerName: string): HTMLButtonElement {
-        let birthdayEasterEggButton: HTMLButtonElement = document.createElement('button');
+        const birthdayEasterEggButton: HTMLButtonElement = document.createElement('button');
         birthdayEasterEggButton.title = `Happy birthday to ${villagerName}!`;
         birthdayEasterEggButton.onclick = () => {
             new Audio('./happybirthday.mp3').play();
@@ -212,10 +212,10 @@ export default class ProfileView {
     private static anAddVillagerToListButton(): HTMLButtonElement {
         const isDisabled = stateService.listsAreEmpty();
 
-        let addVillagerToListButton: HTMLButtonElement = document.createElement('button');
+        const addVillagerToListButton: HTMLButtonElement = document.createElement('button');
         addVillagerToListButton.onclick = () => {
             addVillager(stateService.currentLoadedProfileId, getListSelectValue());
-        }
+        };
         addVillagerToListButton.title = 'Add to list';
         addVillagerToListButton.setAttribute('aria-hidden', 'true');
 
@@ -226,7 +226,7 @@ export default class ProfileView {
     }
 
     private static aRemoveVillagerFromListButton(): HTMLButtonElement {
-        let removeVillagerFromListButton: HTMLButtonElement = document.createElement('button');
+        const removeVillagerFromListButton: HTMLButtonElement = document.createElement('button');
         removeVillagerFromListButton.onclick = () => {
             removeVillager(stateService.currentLoadedProfileId, getListSelectValue());
         };
@@ -237,15 +237,15 @@ export default class ProfileView {
     }
 
     private static anNASpanElement(): HTMLSpanElement {
-        let naElement: HTMLSpanElement = document.createElement('span');
+        const naElement: HTMLSpanElement = document.createElement('span');
         naElement.className = 'na';
         naElement.innerHTML = 'N/A';
         return naElement;
     }
 
     private static fadeTransition() {
-        // Transition:
-        /* // Hide:
+        /* // Transition:
+        // Hide:
         let results = document.querySelectorAll<HTMLElement>('#info *');
         for (let i = 0; i < results.length; i++) {
             results[i].style.opacity = '0';
