@@ -1,10 +1,10 @@
-import ListsView from './lists.view';
+import ListsView from './views/lists.view';
 import { Villager } from './models/villager.model';
-import ProfileView from './profile.view';
-import SearchView from './search.view';
-import { stateService } from './state.service';
-import { getListSelectValue, removeDuplicates } from './util';
-import villagers from './villagers.json';
+import ProfileView from './views/profile.view';
+import SearchView from './views/search.view';
+import { stateService } from './util/state.service';
+import { getListSelectValue, removeDuplicates } from './util/util';
+import villagers from './util/villagers.json';
 
 function $(elementID: string): HTMLElement {
     return document.getElementById(elementID);

@@ -1,10 +1,10 @@
-import { addVillager, removeVillager } from './main';
-import { Personality } from './models/personality.enum';
-import { Species } from './models/species.enum';
-import { Villager } from './models/villager.model';
-import { VillagerList } from './models/villagerlist.model';
-import { stateService } from './state.service';
-import { aBreakElement, birthdayIsToday, clearElement, getListSelectValue, villagerHasProfileImage } from './util';
+import { addVillager, removeVillager } from '../main';
+import { Personality } from '../models/personality.enum';
+import { Species } from '../models/species.enum';
+import { Villager } from '../models/villager.model';
+import { VillagerList } from '../models/villagerlist.model';
+import { stateService } from '../util/state.service';
+import { aBreakElement, birthdayIsToday, clearElement, getListSelectValue, villagerHasProfileImage } from '../util/util';
 
 function $(elementID: string): HTMLElement {
     return document.getElementById(elementID);

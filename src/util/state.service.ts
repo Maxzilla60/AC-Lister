@@ -1,4 +1,4 @@
-import { VillagerList } from './models/villagerlist.model';
+import { VillagerList } from '../models/villagerlist.model';
 
 function $(elementID: string): HTMLElement {
     return document.getElementById(elementID);

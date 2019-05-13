@@ -1,8 +1,8 @@
-import { applyTitle, deleteList, loadProfile, renameList } from './main';
-import { VillagerList } from './models/villagerlist.model';
+import { applyTitle, deleteList, loadProfile, renameList } from '../main';
+import { VillagerList } from '../models/villagerlist.model';
+import { stateService } from '../util/state.service';
+import { clearElement, trimName } from '../util/util';
 import ProfileView from './profile.view';
-import { stateService } from './state.service';
-import { clearElement, trimName } from './util';
 
 function $(elementID: string): HTMLElement {
     return document.getElementById(elementID);
