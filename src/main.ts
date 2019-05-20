@@ -1,6 +1,6 @@
 import { Villager } from './models/villager.model';
 import { stateService } from './util/state.service';
-import { birthdayIsToday, getListSelectValue, removeDuplicates } from './util/util';
+import { birthdayIsToday, getElement as $, getListSelectValue, removeDuplicates } from './util/util';
 import villagersDB from './util/villagers.json';
 import ListsView from './views/lists.view';
 import ProfileView from './views/profile.view';
@@ -8,10 +8,6 @@ import SearchView from './views/search.view';
 import { saveAs } from 'file-saver';
 
 export const villagers = villagersDB;
-
-function $(elementID: string): HTMLElement {
-    return document.getElementById(elementID);
-}
 
 function viewLists(withListToRenameId?: number) {
     ListsView.updateView(withListToRenameId);

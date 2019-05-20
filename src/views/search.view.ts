@@ -1,11 +1,7 @@
 import { loadProfile } from '../main';
 import { Villager } from '../models/villager.model';
-import { aBreakElement, clearElement } from '../util/util';
+import { aBreakElement, clearElement, getElement as $ } from '../util/util';
 import villagers from '../util/villagers.json';
-
-function $(elementID: string): HTMLElement {
-    return document.getElementById(elementID);
-}
 
 export default class SearchView {
     public static updateView(resultList: Villager[] = villagers): void {

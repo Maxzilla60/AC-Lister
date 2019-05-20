@@ -1,6 +1,6 @@
 import { Villager } from '../models/villager.model';
 
-function $(elementID: string): HTMLElement {
+export function getElement(elementID: string): HTMLElement {
     return document.getElementById(elementID);
 }
 
@@ -29,7 +29,7 @@ export function birthdayIsToday(birthdayString: string): boolean {
 }
 
 export function getListSelectValue(): number {
-    return +(<HTMLSelectElement>$('list_select')).value;
+    return +(<HTMLSelectElement>getElement('list_select')).value;
 }
 
 export function removeDuplicates(results: any[]): any[] {

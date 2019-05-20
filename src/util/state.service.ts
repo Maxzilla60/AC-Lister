@@ -1,8 +1,5 @@
 import { VillagerList } from '../models/villagerlist.model';
-
-function $(elementID: string): HTMLElement {
-    return document.getElementById(elementID);
-}
+import { getElement as $ } from '../util/util';
 
 class StateService {
     /* private static instance: StateService;

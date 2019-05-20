@@ -4,11 +4,7 @@ import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
-import { aBreakElement, birthdayIsToday, clearElement, getListSelectValue, villagerHasProfileImage } from '../util/util';
-
-function $(elementID: string): HTMLElement {
-    return document.getElementById(elementID);
-}
+import { aBreakElement, birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage } from '../util/util';
 
 export default class ProfileView {
     public static updateView(villager: Villager, fromListId: number): void {

@@ -1,12 +1,8 @@
 import { applyTitle, deleteList, loadProfile, renameList } from '../main';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
-import { clearElement, trimName } from '../util/util';
+import { clearElement, getElement as $, trimName } from '../util/util';
 import ProfileView from './profile.view';
-
-function $(elementID: string): HTMLElement {
-    return document.getElementById(elementID);
-}
 
 export default class ListsView {
     public static updateView(withListToRenameId?: number): void {

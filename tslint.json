@@ -48,6 +48,7 @@
             "info",
             "time",
             "timeEnd",
+            "log",
             "trace"
         ],
         "no-construct": true,
