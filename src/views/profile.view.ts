@@ -7,7 +7,7 @@ import { stateService } from '../util/state.service';
 import { aBreakElement, birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage } from '../util/util';
 
 export default class ProfileView {
-    public static updateView(villager: Villager, fromListId: number): void {
+    public static updateView(villager: Villager, fromListId: string): void {
         stateService.currentLoadedProfileId = villager.id;
 
         clearElement($('profile'));
@@ -21,7 +21,7 @@ export default class ProfileView {
         this.fadeTransition();
     }
 
-    public static updateListSelect(selectedListId: number = stateService.currentListSelect): void {
+    public static updateListSelect(selectedListId: string = stateService.currentListSelect): void {
         if (!stateService.aProfileIsLoaded()) {
             return;
         }
@@ -32,7 +32,7 @@ export default class ProfileView {
         clearElement($('list_select'));
         for (const list of stateService.getLists()) {
             // tslint:disable-next-line: triple-equals
-            $('list_select').appendChild(this.aListDropdownOption(list, list.id == selectedListId));
+            $('list_select').appendChild(this.aListDropdownOption(list, list.id === selectedListId));
         }
 
         this.updateAddVillagerButton();

@@ -9,16 +9,16 @@ import { saveAs } from 'file-saver';
 
 export const villagers = villagersDB;
 
-function viewLists(withListToRenameId?: number) {
+function viewLists(withListToRenameId?: string): void {
     ListsView.updateView(withListToRenameId);
     ProfileView.updateListSelect();
 }
 
-export function renameList(listId: number) {
+export function renameList(listId: string): void {
     viewLists(listId);
 }
 
-export function loadProfile(id: string, fromListId: number = getListSelectValue()) {
+export function loadProfile(id: string, fromListId: string = getListSelectValue()): void {
     ProfileView.updateView(getVillagerById(id), fromListId);
 }
 
@@ -46,14 +46,14 @@ export function search(query: string): void {
     SearchView.updateView(results);
 }
 
-export function addVillager(villagerNameToAdd: string, listId: number): void {
+export function addVillager(villagerNameToAdd: string, listId: string): void {
     if (villagerNameToAdd !== '') {
         stateService.addVillagerToList(villagerNameToAdd, listId);
         viewLists();
     }
 }
 
-export function removeVillager(villagerNameToRemove: string, listId: number) {
+export function removeVillager(villagerNameToRemove: string, listId: string): void {
     if (villagerNameToRemove !== '') {
         stateService.removeVillagerFromList(villagerNameToRemove, listId);
         viewLists();
@@ -65,7 +65,7 @@ export function newList(): void {
     viewLists(newListID);
 }
 
-export function deleteList(id: number): void {
+export function deleteList(id: string): void {
     const listToDelete = stateService.getListById(id);
 
     if (confirm(`Are you sure you want to delete "${listToDelete.title}"?`)) {
@@ -74,7 +74,7 @@ export function deleteList(id: number): void {
     }
 }
 
-export function applyTitle(listId: number, newTitle: string): void {
+export function applyTitle(listId: string, newTitle: string): void {
     if (newTitle !== '') {
         stateService.renameList(listId, newTitle);
     }
@@ -102,7 +102,7 @@ export function updateAddVillagerButton(): void {
 }
 
 // TODO
-export function openViewer() {
+export function openViewer(): void {
     // window.location.href = 'viewer/index.html';
 }
 
@@ -113,7 +113,7 @@ export function exportLists(): void {
 }
 
 // Import lists from .json file
-export function importLists() {
+export function importLists(): void {
     if (!stateService.listsAreEmpty()) {
         if (!confirm('Are you sure you want to override current lists?')) {
             return;
@@ -138,7 +138,7 @@ export function percentageOfVillagersWithProfileImage(): string {
     return `${percentage}% of all villagers have a profile image. (${villagersWithProfileImageCount}/${allVillagersCount})`;
 }
 
-export function init() {
+export function init(): void {
     search((<HTMLInputElement>$('search_bar')).value);
     viewLists();
 }

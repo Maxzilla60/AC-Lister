@@ -28,8 +28,8 @@ export function birthdayIsToday(birthdayString: string): boolean {
         && today.getMonth() === birthday.getMonth();
 }
 
-export function getListSelectValue(): number {
-    return +(<HTMLSelectElement>getElement('list_select')).value;
+export function getListSelectValue(): string {
+    return (<HTMLSelectElement>getElement('list_select')).value;
 }
 
 export function removeDuplicates(results: any[]): any[] {

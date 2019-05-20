@@ -1,5 +1,5 @@
 export interface VillagerList {
+    id: string;
     title: string;
-    id: number;
     members: string[];
 }

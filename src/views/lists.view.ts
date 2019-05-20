@@ -5,7 +5,7 @@ import { clearElement, getElement as $, trimName } from '../util/util';
 import ProfileView from './profile.view';
 
 export default class ListsView {
-    public static updateView(withListToRenameId?: number): void {
+    public static updateView(withListToRenameId?: string): void {
         let listContentElement: HTMLElement = document.createElement('div');
 
         if (!stateService.listsAreEmpty()) {
@@ -21,7 +21,7 @@ export default class ListsView {
         if (withListToRenameId) { this.focusAndSelectRenameInput(); }
     }
 
-    private static appendLists(listContentElement: HTMLElement, withListToRenameId?: number): void {
+    private static appendLists(listContentElement: HTMLElement, withListToRenameId?: string): void {
         for (const list of stateService.getLists()) {
             if (withListToRenameId && list.id === withListToRenameId) {
                 this.appendListWithRenameInputSection(listContentElement, list);
@@ -87,7 +87,7 @@ export default class ListsView {
         return villagerIconsSection;
     }
 
-    private static aVillagerListIcon(villager: string, listId: number): HTMLImageElement {
+    private static aVillagerListIcon(villager: string, listId: string): HTMLImageElement {
         const villagerListIcon: HTMLImageElement = document.createElement('img');
         villagerListIcon.onclick = () => { loadProfile(villager, listId); };
         villagerListIcon.title = trimName(villager);
