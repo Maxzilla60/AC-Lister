@@ -49,13 +49,15 @@ class StateService {
     }
 
     public deleteList(id: number): void {
-        this._lists = this._lists.filter(l => l.id !== id);
+        // tslint:disable-next-line: triple-equals
+        this._lists = this._lists.filter(l => l.id != id);
     }
 
     public renameList(listId: number, newTitle: string): void {
         const tempLists = this._lists;
         tempLists
-            .find(l => l.id === listId)
+            // tslint:disable-next-line: triple-equals
+            .find(l => l.id == listId)
             .title = newTitle;
         this._lists = tempLists;
     }
@@ -67,7 +69,8 @@ class StateService {
 
     public addVillagerToList(villagerNameToAdd: string, listId: number): void {
         const tempLists = this._lists;
-        const listToAddTo: VillagerList = tempLists.find(l => l.id === listId);
+        // tslint:disable-next-line: triple-equals
+        const listToAddTo: VillagerList = tempLists.find(l => l.id == listId);
         listToAddTo.members.push(villagerNameToAdd);
         listToAddTo.members.sort();
         this._lists = tempLists;
@@ -75,7 +78,8 @@ class StateService {
 
     public removeVillagerFromList(villagerNameToRemove: string, listId: number): void {
         const tempLists = this._lists;
-        const listToRemoveFrom: VillagerList = tempLists.find(l => l.id === listId);
+        // tslint:disable-next-line: triple-equals
+        const listToRemoveFrom: VillagerList = tempLists.find(l => l.id == listId);
         listToRemoveFrom.members = listToRemoveFrom.members
             .filter(v => v !== villagerNameToRemove);
         this._lists = tempLists;
@@ -100,7 +104,8 @@ class StateService {
     }
 
     public getListById(id: number): VillagerList {
-        return this._lists.find(l => l.id === id);
+        // tslint:disable-next-line: triple-equals
+        return this._lists.find(l => l.id == id);
     }
 
     public get currentLoadedProfileId(): string {

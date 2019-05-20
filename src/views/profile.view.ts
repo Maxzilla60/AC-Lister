@@ -35,7 +35,8 @@ export default class ProfileView {
         (<HTMLSelectElement>$('list_select')).disabled = stateService.listsAreEmpty();
         clearElement($('list_select'));
         for (const list of stateService.getLists()) {
-            $('list_select').appendChild(this.aListDropdownOption(list, list.id === selectedListId));
+            // tslint:disable-next-line: triple-equals
+            $('list_select').appendChild(this.aListDropdownOption(list, list.id == selectedListId));
         }
 
         this.updateAddVillagerButton();
