@@ -14,10 +14,11 @@ Definitely:
  - Refactor the JavaScript code to **[TypeScript](https://www.typescriptlang.org)**.
  - Overhaul the CSS & design to make it mobile-friendly with **[CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)**.
  - Convert the website into a **[PWA](https://developers.google.com/web/progressive-web-apps/)**.
- 
+
 Maybe:
  - Host the website on **[Netlify](https://www.netlify.com/)**.
  - Split up the UI into **[Web Components](https://www.webcomponents.org)**.
+ - Implement integration tests with **[Cypress](https://www.cypress.io)**.
 
 ## Why I Wanna Do It
 - **Parcel**: This website was purposefully made without a framework like Angular in mind. I want to show that you don't necessarily need a framework to create something for the web.
