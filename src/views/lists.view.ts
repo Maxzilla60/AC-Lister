@@ -1,4 +1,4 @@
-import { applyTitle, deleteList, loadProfile, renameList } from '../main';
+import { applyTitle, deleteList, loadProfile, renameList } from '../actions';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { clearElement, getElement as $, trimName } from '../util/util';
@@ -45,8 +45,8 @@ export default class ListsView {
     }
 
     private static updateListEditingButtons(): void {
-        const exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('export_lists');
-        const clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clear_lists');
+        const exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('exportlists_button');
+        const clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clearlists_button');
         exportListsButton.disabled = stateService.listsAreEmpty();
         clearListsButton.disabled = stateService.listsAreEmpty();
         exportListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-upload' : 'clickable fa fa-upload';

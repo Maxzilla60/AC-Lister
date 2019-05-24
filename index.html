@@ -30,7 +30,7 @@
     </script> -->
 </head>
 
-<body onload="index.init();">
+<body>
     <header>
         Animal Crossing<i style="color: brown" class="fa fa-star" aria-hidden="true"></i>Villager Lister
         <small style="display:none;">Happy Holidays! ❄️</small>
@@ -38,7 +38,7 @@
 
     <search class="search">
         <div class="search_area">
-            <input id="search_bar" oninput="index.search(document.getElementById('search_bar').value);" placeholder="Search" type="search" autofocus><button onclick="search(document.getElementById('search_bar').value);" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
+            <input id="search_bar" placeholder="Search" type="search" autofocus><button id="search_button" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
         </div>
         <div id="search_results">
         </div>
@@ -47,12 +47,12 @@
     <main class="main">
         <div class="list_area">
             <div class="menu">
-                <button onclick="index.newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
-                <button onclick="index.exportLists();" title="Save lists" class="disabled fa fa-upload" id="export_lists" aria-hidden="true"></button>
-                <button onclick="document.getElementById('file-input').click();" title="Import lists" class="clickable fa fa-download" aria-hidden="true"></button>
-                <button onclick="index.clearAllLists();" title="Clear all lists" class="disabled fa fa-times" id="clear_lists" aria-hidden="true"></button>
-                <button disabled onclick="index.openViewer();" title="Open viewer and share" class="disabled fa fa-expand" aria-hidden="true"></button>
-                <input onchange="index.importLists();" id="file-input" type="file" hidden="true">
+                <button id="newlist_button" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
+                <button id="exportlists_button" title="Save lists" class="disabled fa fa-upload" aria-hidden="true"></button>
+                <button id="importlists_button" title="Import lists" class="clickable fa fa-download" aria-hidden="true"></button>
+                <button id="clearlists_button" title="Clear all lists" class="disabled fa fa-times" aria-hidden="true"></button>
+                <button disabled id="openviewer_button" title="Open viewer and share" class="disabled fa fa-expand" aria-hidden="true"></button>
+                <input id="file_input" type="file" hidden="true">
             </div>
             <div id="lists">
             </div>
@@ -60,7 +60,7 @@
 
         <summary id="info">
             <div class="menu">
-                <select id="list_select" disabled onchange="index.updateAddVillagerButton();"></select>
+                <select id="list_select" disabled></select>
                 <div id="add_remove_button" style="padding:0;display:inline-block">
                     <button title="Add to list" class="disabled fa fa-plus" aria-hidden="true"></button>
                 </div>
@@ -70,7 +70,7 @@
         </summary>
     </main>
 </body>
-<script src="./src/main.ts"></script>
+<script src="./src/init.ts"></script>
 <script src="https://use.fontawesome.com/e0304574ea.js" type="text/javascript"></script>
 <footer>
     <!-- <a title="Info Page" href="info"><i class="clickable fa fa-question" aria-hidden="true"></i></a> -->

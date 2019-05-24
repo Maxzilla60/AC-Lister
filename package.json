@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "serve": "parcel index.html --global index"
+    "serve": "parcel index.html"
   },
   "keywords": [],
   "author": "Maxime Orione",

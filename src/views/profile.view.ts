@@ -1,4 +1,4 @@
-import { addVillager, removeVillager } from '../main';
+import { addVillager, removeVillager } from '../actions';
 import { Personality } from '../models/personality.enum';
 import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';

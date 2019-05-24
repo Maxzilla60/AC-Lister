@@ -1,4 +1,4 @@
-import { loadProfile } from '../main';
+import { loadProfile } from '../actions';
 import { Villager } from '../models/villager.model';
 import { aBreakElement, clearElement, getElement as $ } from '../util/util';
 import villagers from '../util/villagers.json';

@@ -110,7 +110,7 @@ class StateService {
 
         reader.onload = () => {
             this._lists = JSON.parse(reader.result as string); // Save lists
-            (<HTMLInputElement>$('file-input')).value = ''; // Reset input
+            (<HTMLInputElement>$('file_input')).value = ''; // Reset input
 
             callbackWhenDone();
         };
