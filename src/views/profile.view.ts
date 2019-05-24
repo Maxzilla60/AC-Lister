@@ -38,6 +38,15 @@ export default class ProfileView {
         this.updateAddVillagerButton();
     }
 
+    public static updateAddVillagerButton(): void {
+        clearElement($('add_remove_button'));
+        if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
+            $('add_remove_button').appendChild(this.aRemoveVillagerFromListButton());
+        } else {
+            $('add_remove_button').appendChild(this.anAddVillagerToListButton());
+        }
+    }
+
     private static appendVillagerInfo(villager: Villager) {
         this.appendVillagerNameInfo(villager.name);
         this.appendABreakElement();
@@ -62,15 +71,6 @@ export default class ProfileView {
         profileImageElement.alt = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
         profileImageElement.title = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
         profileImageElement.src = `./villager_heads/${villager.head}`;
-    }
-
-    public static updateAddVillagerButton(): void {
-        clearElement($('add_remove_button'));
-        if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
-            $('add_remove_button').appendChild(this.aRemoveVillagerFromListButton());
-        } else {
-            $('add_remove_button').appendChild(this.anAddVillagerToListButton());
-        }
     }
 
     private static appendABreakElement(): void {

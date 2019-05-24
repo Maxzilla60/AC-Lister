@@ -3,35 +3,29 @@ import { getElement as $ } from '../util/util';
 import { v4 as uuid } from 'uuid';
 
 class StateService {
-    /* private static instance: StateService;
-    private constructor() { }
-    public static getInstance(): StateService {
-        if (!this.instance) {
-            this.instance = new StateService();
-        }
-        return this.instance;
-    } */
-
     private _currentListSelect: string = '';
     private _currentProfile: string = '';
+
+    public get currentLoadedProfileId(): string {
+        return this._currentProfile;
+    }
+    public set currentLoadedProfileId(newId: string) {
+        this._currentProfile = newId;
+    }
+
+    public get currentListSelect(): string {
+        return this._currentListSelect;
+    }
+    public set currentListSelect(newValue: string) {
+        this._currentListSelect = newValue;
+    }
 
     public getLists(): VillagerList[] {
         return this._lists;
     }
 
-    public aProfileIsLoaded(): boolean {
-        return this._currentProfile !== '';
-    }
-
-    private get _lists(): VillagerList[] {
-        if (!localStorage.lists) {
-            localStorage.lists = '[]';
-        }
-        return JSON.parse(localStorage.lists);
-    }
-
-    private set _lists(newLists: VillagerList[]) {
-        localStorage.lists = JSON.stringify(newLists);
+    public getListById(id: string): VillagerList {
+        return this._lists.find(l => l.id === id);
     }
 
     public addNewList(): string {
@@ -46,16 +40,16 @@ class StateService {
         return newId;
     }
 
-    public deleteList(id: string): void {
-        this._lists = this._lists.filter(l => l.id !== id);
-    }
-
     public renameList(listId: string, newTitle: string): void {
         const tempLists = this._lists;
         tempLists
             .find(l => l.id === listId)
             .title = newTitle;
         this._lists = tempLists;
+    }
+
+    public deleteList(id: string): void {
+        this._lists = this._lists.filter(l => l.id !== id);
     }
 
     public clearAllLists(): void {
@@ -86,23 +80,8 @@ class StateService {
         return !this.listsAreEmpty() && this.getListById(listId).members.includes(villagerName);
     }
 
-    public getListById(id: string): VillagerList {
-        return this._lists.find(l => l.id === id);
-    }
-
-    public get currentLoadedProfileId(): string {
-        return this._currentProfile;
-    }
-
-    public set currentLoadedProfileId(newId: string) {
-        this._currentProfile = newId;
-    }
-
-    public get currentListSelect(): string {
-        return this._currentListSelect;
-    }
-    public set currentListSelect(newValue: string) {
-        this._currentListSelect = newValue;
+    public aProfileIsLoaded(): boolean {
+        return this._currentProfile !== '';
     }
 
     public importListFromFile(selectedFile: File, callbackWhenDone: Function): void {
@@ -117,6 +96,17 @@ class StateService {
 
         reader.readAsText(selectedFile);
     }
+    private get _lists(): VillagerList[] {
+        if (!localStorage.lists) {
+            localStorage.lists = '[]';
+        }
+        return JSON.parse(localStorage.lists);
+    }
+
+    private set _lists(newLists: VillagerList[]) {
+        localStorage.lists = JSON.stringify(newLists);
+    }
+
 }
 
 export const stateService = new StateService();
