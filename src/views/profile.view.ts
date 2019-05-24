@@ -21,18 +21,20 @@ export default class ProfileView {
         this.fadeTransition();
     }
 
-    public static updateListSelect(selectedListId: string = stateService.currentListSelect): void {
+    public static updateListSelect(selectedListId?: string): void {
         if (!stateService.aProfileIsLoaded()) {
             return;
         }
 
-        stateService.currentListSelect = selectedListId;
+        if (selectedListId) {
+            stateService.currentListSelect = selectedListId;
+        }
 
         (<HTMLSelectElement>$('list_select')).disabled = stateService.listsAreEmpty();
         clearElement($('list_select'));
         for (const list of stateService.getLists()) {
             // tslint:disable-next-line: triple-equals
-            $('list_select').appendChild(this.aListDropdownOption(list, list.id === selectedListId));
+            $('list_select').appendChild(this.aListDropdownOption(list, list.id === stateService.currentListSelect));
         }
 
         this.updateAddVillagerButton();
