@@ -1,5 +1,5 @@
 # Animal Crossing Villager Lister 2.0
-I love the web and I've been keeping up on the latest developments, opinions, tips, tricks, tools, etc. online. There are so many different new and upcoming things in web development that really interest me and that I've always wanted to try out.
+I love the web and I've been keeping up on the latest developments, articles, tips, tricks, tools, etc. online. There are so many different new and upcoming things in web development that really interest me and that I've always wanted to try out.
 For Exploration Days, I'd like to (make an attempt to) take a relatively old personal project of mine and upgrade it with some of these _web-things_.
 
 ## What is Animal Crossing Villager Lister?
@@ -12,7 +12,7 @@ This project is a fairly simple free tool for creating lists of your favorite vi
 Definitely:
  - Build the website with a simple web bundler, **[Parcel](https://parceljs.org)**.
  - Refactor the JavaScript code to **[TypeScript](https://www.typescriptlang.org)**.
- - Overhaul the CSS & design to make it mobile-friendly with **[CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)**.
+ - Overhaul the CSS & HTML to make it mobile-friendly with **[CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)**.
  - Convert the website into a **[PWA](https://developers.google.com/web/progressive-web-apps/)**.
 
 Maybe:
