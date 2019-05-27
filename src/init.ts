@@ -1,9 +1,9 @@
-import { clearAllLists, exportLists, importLists, newList, openImportDialog, openViewer, updateAddVillagerButton, updateSearch, viewLists } from './actions';
+import { clearAllLists, exportLists, importListsFromFile, newList, openImportDialog, openViewer, updateAddVillagerButton, updateSearch, viewLists } from './actions';
 import { getElement as $ } from './util/util';
 
 function init(): void {
-    updateSearch();
     bindEvents();
+    updateSearch();
     viewLists();
 }
 
@@ -15,7 +15,7 @@ function bindEvents(): void {
     $('importlists_button').onclick = openImportDialog;
     $('clearlists_button').onclick = clearAllLists;
     $('openviewer_button').onclick = openViewer;
-    $('file_input').onchange = importLists;
+    $('file_input').onchange = importListsFromFile;
     $('list_select').onchange = updateAddVillagerButton;
 }
 

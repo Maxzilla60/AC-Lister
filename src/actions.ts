@@ -88,7 +88,7 @@ export function exportLists(): void {
 }
 
 // Import lists from .json file
-export function importLists(): void {
+export function importListsFromFile(): void {
     if (!stateService.listsAreEmpty()) {
         if (!confirm('Are you sure you want to override current lists?')) {
             return;
