@@ -1,4 +1,7 @@
 import { loadProfile } from '../actions';
+import ButtonBuilder from '../components/ButtonBuilder';
+import DivisionBuilder from '../components/DivisionBuilder';
+import ImageBuilder from '../components/ImageBuilder';
 import { Villager } from '../models/villager.model';
 import { aBreakElement, clearElement, getElement as $ } from '../util/util';
 import villagers from '../util/villagers.json';
@@ -17,26 +20,26 @@ export default class SearchView {
     }
 
     private static aVillagerSearchResultButton(villager: Villager): HTMLButtonElement {
-        const villagersSearchResultButton: HTMLButtonElement = document.createElement('button');
-        villagersSearchResultButton.onclick = () => { loadProfile(villager.id); };
-        villagersSearchResultButton.className = 'result';
-        villagersSearchResultButton.appendChild(this.aVillagersSearchResultImage(villager));
-        villagersSearchResultButton.appendChild(this.aVillagersSearchResultNameElement(villager.name));
-        return villagersSearchResultButton;
+        return new ButtonBuilder(() => { loadProfile(villager.id); })
+            .withClassNames('result')
+            .withChildren(
+                this.aVillagersSearchResultImage(villager),
+                this.aVillagersSearchResultNameElement(villager.name),
+            )
+            .build();
     }
 
     private static aVillagersSearchResultNameElement(villagerName: string): HTMLElement {
-        const villagersSearchResultNameElement: HTMLElement = document.createElement('div');
-        villagersSearchResultNameElement.innerHTML = villagerName;
-        return villagersSearchResultNameElement;
+        return new DivisionBuilder()
+            .withInnerHTML(villagerName)
+            .build();
     }
 
     private static aVillagersSearchResultImage(villager: Villager): HTMLImageElement {
-        const villagersSearchResultImage: HTMLImageElement = document.createElement('img');
-        villagersSearchResultImage.alt = villager.name;
-        villagersSearchResultImage.style.cssFloat = 'left';
-        villagersSearchResultImage.src = `./villager_icons/${villager.id}.gif`;
-        return villagersSearchResultImage;
+        return new ImageBuilder(`./villager_icons/${villager.id}.gif`)
+            .withFloatLeft()
+            .withAlt(villager.name)
+            .build();
     }
 
     private static fadeTransition(): void {

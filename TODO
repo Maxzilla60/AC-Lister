@@ -9,6 +9,8 @@ Todo:
   ✔ Copy over static files (images) to dist @done(19-05-13 10:54)
     https://www.npmjs.com/package/parcel-plugin-static-files-copy
   ✔ UUID for Lists @done(19-05-20 14:37)
+  ✔ Component Builders @done(19-05-29 12:02)
+    ☐ Refactor
   ☐ CSS Redesign
     https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
   ☐ LighterHTML Templating?

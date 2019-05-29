@@ -1,4 +1,7 @@
 import { addVillager, removeVillager } from '../actions';
+import ButtonBuilder from '../components/ButtonBuilder';
+import DivisionBuilder from '../components/DivisionBuilder';
+import IconBuilder from '../components/IconBuilder';
 import { Personality } from '../models/personality.enum';
 import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';
@@ -105,28 +108,26 @@ export default class ProfileView {
     }
 
     private static anAddOrRemoveElement(): HTMLElement {
-        const addOrRemoveElement: HTMLElement = document.createElement('div');
-        addOrRemoveElement.style.padding = '0';
-        addOrRemoveElement.style.display = 'inline-block';
-        return addOrRemoveElement;
+        return new DivisionBuilder()
+            .withPadding(0)
+            .withDisplay('inline-block')
+            .build();
     }
 
     private static aWikiIconButton(wikiLink: string): HTMLButtonElement {
-        const wikiIconButton: HTMLButtonElement = document.createElement('button');
-        wikiIconButton.onclick = () => { window.open(wikiLink, '_blank'); };
-        wikiIconButton.title = 'Open Wiki page';
-        wikiIconButton.className = 'clickable fa fa-wikipedia-w';
-        wikiIconButton.setAttribute('aria-hidden', 'true');
-        return wikiIconButton;
+        return new ButtonBuilder(() => { window.open(wikiLink, '_blank'); })
+            .asFontAwesome('fa-wikipedia-w')
+            .withTitle('Open Wiki page')
+            .withClassNames('clickable')
+            .build();
     }
 
     private static aStoreIconButton(storeLink: string): HTMLButtonElement {
-        const storeIconButton: HTMLButtonElement = document.createElement('button');
-        storeIconButton.onclick = () => { window.open(storeLink, '_blank'); };
-        storeIconButton.title = 'Buy this art!';
-        storeIconButton.className = 'clickable fa fa-shopping-bag';
-        storeIconButton.setAttribute('aria-hidden', 'true');
-        return storeIconButton;
+        return new ButtonBuilder(() => { window.open(storeLink, '_blank'); })
+            .asFontAwesome('fa-shopping-bag')
+            .withTitle('Buy this art!')
+            .withClassNames('clickable')
+            .build();
     }
 
     private static aListDropdownOption(list: VillagerList, isSelected: boolean): HTMLOptionElement {
@@ -142,46 +143,36 @@ export default class ProfileView {
     }
 
     private static aNameIcon(): HTMLElement {
-        const nameIcon: HTMLElement = document.createElement('i');
-        nameIcon.title = 'Name';
-        nameIcon.className = 'fa fa-tag';
-        nameIcon.setAttribute('aria-hidden', 'true');
-        return nameIcon;
+        return new IconBuilder('fa-tag')
+            .withTitle('Name')
+            .build();
     }
 
     private static aSpeciesIcon(): HTMLElement {
-        const speciesIcon: HTMLElement = document.createElement('i');
-        speciesIcon.title = 'Species';
-        speciesIcon.className = 'fa fa-user';
-        speciesIcon.setAttribute('aria-hidden', 'true');
-        return speciesIcon;
+        return new IconBuilder('fa-user')
+            .withTitle('Species')
+            .build();
     }
 
     private static aPersonalityIcon(): HTMLElement {
-        const personalityIcon: HTMLElement = document.createElement('i');
-        personalityIcon.title = 'Personality';
-        personalityIcon.className = 'fa fa-heart';
-        personalityIcon.setAttribute('aria-hidden', 'true');
-        return personalityIcon;
+        return new IconBuilder('fa-heart')
+            .withTitle('Personality')
+            .build();
     }
 
     private static aCoffeeIcon(): HTMLElement {
-        const coffeeIcon: HTMLElement = document.createElement('i');
-        coffeeIcon.title = 'Favourite coffee';
-        coffeeIcon.className = 'fa fa-coffee';
-        coffeeIcon.setAttribute('aria-hidden', 'true');
-        return coffeeIcon;
+        return new IconBuilder('fa-coffee')
+            .withTitle('Favourite coffee')
+            .build();
     }
 
     private static aBirthdayIcon(villager: Villager): HTMLButtonElement | HTMLElement {
         if (birthdayIsToday(villager.birthday)) {
             return this.aBirthdayButton(villager.name);
         } else {
-            const birthdayIcon: HTMLElement = document.createElement('i');
-            birthdayIcon.title = 'Birthday';
-            birthdayIcon.className = 'fa fa-birthday-cake';
-            birthdayIcon.setAttribute('aria-hidden', 'true');
-            return birthdayIcon;
+            return new IconBuilder('fa-birthday-cake')
+                .withTitle('Birthday')
+                .build();
         }
     }
 
@@ -197,42 +188,31 @@ export default class ProfileView {
     }
 
     private static aBirthdayButton(villagerName: string): HTMLButtonElement {
-        const birthdayEasterEggButton: HTMLButtonElement = document.createElement('button');
-        birthdayEasterEggButton.title = `Happy birthday to ${villagerName}!`;
-        birthdayEasterEggButton.onclick = () => {
-            new Audio('./happybirthday.mp3').play();
-        };
-        birthdayEasterEggButton.style.color = 'hotpink';
-        birthdayEasterEggButton.className = 'clickable fa fa-birthday-cake';
-        birthdayEasterEggButton.setAttribute('aria-hidden', 'true');
-        return birthdayEasterEggButton;
+        return new ButtonBuilder(() => { new Audio('./happybirthday.mp3').play(); })
+            .asFontAwesome('fa-birthday-cake')
+            .withTitle(`Happy birthday to ${villagerName}!`)
+            .withClassNames('clickable')
+            .withColor('hotpink')
+            .build();
     }
 
     private static anAddVillagerToListButton(): HTMLButtonElement {
         const isDisabled = stateService.listsAreEmpty();
 
-        const addVillagerToListButton: HTMLButtonElement = document.createElement('button');
-        addVillagerToListButton.onclick = () => {
-            addVillager(stateService.currentLoadedProfileId, getListSelectValue());
-        };
-        addVillagerToListButton.title = 'Add to list';
-        addVillagerToListButton.setAttribute('aria-hidden', 'true');
-
-        addVillagerToListButton.className = isDisabled ? 'disabled fa fa-plus' : 'clickable fa fa-plus';
-        addVillagerToListButton.disabled = isDisabled;
-
-        return addVillagerToListButton;
+        return new ButtonBuilder(() => { addVillager(stateService.currentLoadedProfileId, getListSelectValue()); })
+            .withTitle('Add to list')
+            .asFontAwesome('fa-plus')
+            .withClassNames(isDisabled ? 'disabled' : 'clickable')
+            .isDisabled(isDisabled)
+            .build();
     }
 
     private static aRemoveVillagerFromListButton(): HTMLButtonElement {
-        const removeVillagerFromListButton: HTMLButtonElement = document.createElement('button');
-        removeVillagerFromListButton.onclick = () => {
-            removeVillager(stateService.currentLoadedProfileId, getListSelectValue());
-        };
-        removeVillagerFromListButton.title = 'Remove from list';
-        removeVillagerFromListButton.className = 'clickable fa fa-minus';
-        removeVillagerFromListButton.setAttribute('aria-hidden', 'true');
-        return removeVillagerFromListButton;
+        return new ButtonBuilder(() => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); })
+            .withTitle('Remove from list')
+            .asFontAwesome('fa-minus')
+            .withClassNames('clickable')
+            .build();
     }
 
     private static anNASpanElement(): HTMLSpanElement {

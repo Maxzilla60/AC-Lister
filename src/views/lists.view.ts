@@ -1,4 +1,7 @@
 import { applyTitle, deleteList, loadProfile, renameList } from '../actions';
+import ButtonBuilder from '../components/ButtonBuilder';
+import DivisionBuilder from '../components/DivisionBuilder';
+import ImageBuilder from '../components/ImageBuilder';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { clearElement, getElement as $, trimName } from '../util/util';
@@ -54,60 +57,51 @@ export default class ListsView {
     }
 
     private static aListTitleElement(list: VillagerList): HTMLButtonElement {
-        const listTitleElement: HTMLButtonElement = document.createElement('button');
-        listTitleElement.onclick = () => { ProfileView.updateListSelect(list.id); };
-        listTitleElement.innerHTML = list.title;
-        listTitleElement.className = 'clickable list';
-        return listTitleElement;
+        return new ButtonBuilder(() => { ProfileView.updateListSelect(list.id); })
+            .withInnerHTML(list.title)
+            .withClassNames('clickable', 'list')
+            .build();
     }
 
     private static aListDeleteButton(list: VillagerList): HTMLButtonElement {
-        const deleteButtonElement: HTMLButtonElement = document.createElement('button');
-        deleteButtonElement.onclick = () => { deleteList(list.id); };
-        deleteButtonElement.title = 'Delete list';
-        deleteButtonElement.className = 'clickable fa fa-trash';
-        deleteButtonElement.setAttribute('aria-hidden', 'true');
-        return deleteButtonElement;
+        return new ButtonBuilder(() => { deleteList(list.id); })
+            .asFontAwesome('fa-trash')
+            .withTitle('Delete list')
+            .withClassNames('clickable')
+            .build();
     }
 
     private static aListRenameButton(list: VillagerList): HTMLButtonElement {
-        const listRenameButtonElement: HTMLButtonElement = document.createElement('button');
-        listRenameButtonElement.onclick = () => { renameList(list.id); };
-        listRenameButtonElement.title = 'Edit list title';
-        listRenameButtonElement.className = 'clickable fa fa-pencil';
-        listRenameButtonElement.setAttribute('aria-hidden', 'true');
-        return listRenameButtonElement;
+        return new ButtonBuilder(() => { renameList(list.id); })
+            .asFontAwesome('fa-pencil')
+            .withTitle('Edit list title')
+            .withClassNames('clickable')
+            .build();
     }
 
     private static aVillagerListIconsSection(list: VillagerList): HTMLElement {
-        const villagerIconsSection = this.aDividerElement();
-        for (const villager of list.members) {
-            villagerIconsSection.appendChild(this.aVillagerListIcon(villager, list.id));
-        }
-        return villagerIconsSection;
+        return new DivisionBuilder()
+            .withChildren(...list.members.map(villager => this.aVillagerListIcon(villager, list.id)))
+            .withPaddingTop(0)
+            .withPaddingBottom(0)
+            .build();
     }
 
     private static aVillagerListIcon(villager: string, listId: string): HTMLImageElement {
-        const villagerListIcon: HTMLImageElement = document.createElement('img');
-        villagerListIcon.onclick = () => { loadProfile(villager, listId); };
-        villagerListIcon.title = trimName(villager);
-        villagerListIcon.src = `./villager_icons/${villager}.gif`;
-        return villagerListIcon;
+        return new ImageBuilder(`./villager_icons/${villager}.gif`)
+            .withTitle(trimName(villager))
+            .onClick(() => { loadProfile(villager, listId); })
+            .build();
     }
 
     private static anEmptyListInfoElement(): HTMLElement {
-        const emptyListInfoElement = document.createElement('div');
-        emptyListInfoElement.style.paddingLeft = '15px';
-        emptyListInfoElement.style.color = 'orange';
-        emptyListInfoElement.innerHTML = 'Click<i onclick="index.newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!';
-        return emptyListInfoElement;
-    }
-
-    private static aDividerElement(): HTMLElement {
-        const divider: HTMLElement = document.createElement('div');
-        divider.style.paddingBottom = '0';
-        divider.style.paddingTop = '0';
-        return divider;
+        return new DivisionBuilder()
+            // TODO: Bind event to plus button
+            // .withInnerHTML('Click<i onclick="index.newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
+            .withInnerHTML('Click<i title="Add list" class="fa fa-plus" style="color: orange;" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
+            .withPaddingLeft(15)
+            .withColor('orange')
+            .build();
     }
 
     private static aListTitleInputElement(list: VillagerList): HTMLInputElement {
@@ -123,14 +117,11 @@ export default class ListsView {
     }
 
     private static aListRenameConfirmButton(list: VillagerList): HTMLButtonElement {
-        const listRenameButtonElement: HTMLButtonElement = document.createElement('button');
-        listRenameButtonElement.onclick = () => {
-            applyTitle(list.id, this.getRenameListTitleValue());
-        };
-        listRenameButtonElement.title = 'Edit name';
-        listRenameButtonElement.className = 'clickable fa fa-check';
-        listRenameButtonElement.setAttribute('aria-hidden', 'true');
-        return listRenameButtonElement;
+        return new ButtonBuilder(() => { applyTitle(list.id, this.getRenameListTitleValue()); })
+            .asFontAwesome('fa-check')
+            .withTitle('Edit name')
+            .withClassNames('clickable')
+            .build();
     }
 
     private static getRenameListTitleValue(): string {
