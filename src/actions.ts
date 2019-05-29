@@ -65,6 +65,7 @@ export function clearAllLists(): void {
 }
 
 export function updateAddVillagerButton(): void {
+    stateService.currentListSelect = getListSelectValue();
     ProfileView.updateAddVillagerButton();
 }
 
