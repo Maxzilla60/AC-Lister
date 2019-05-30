@@ -18,7 +18,8 @@
     "@types/file-saver": "^2.0.0",
     "parcel-plugin-static-files-copy": "^2.0.0",
     "uuid": "^3.3.2",
-    "@types/uuid": "^3.4.4"
+    "@types/uuid": "^3.4.4",
+    "cypress": "latest"
   },
   "staticFiles": {
     "staticPath": "public",
