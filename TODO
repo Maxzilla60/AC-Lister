@@ -13,8 +13,7 @@ Todo:
     ☐ Refactor
   ☐ CSS Redesign
     https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
-  ☐ LighterHTML Templating?
-    https://github.com/WebReflection/lighterhtml
+  ☐ Font Awesome Dependency
   ☐ WebComponents
     https://github.com/parcel-bundler/parcel/issues/1049
   ☐ PWA
@@ -27,3 +26,6 @@ Todo:
   ☐ http://webdevchecklist.com
   ☐ Cypress
   ☐ Netlify
+  ☐ Re-enable Analytics
+  ☐ LighterHTML Templating?
+    https://github.com/WebReflection/lighterhtml
