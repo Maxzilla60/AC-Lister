@@ -1,20 +1,9 @@
-export default class IconBuilder {
-    private icon: HTMLElement;
-    private classNames: string[] = [];
+import HTMLElementBuilder from './HTMLElementBuilder';
 
+export default class IconBuilder extends HTMLElementBuilder<HTMLElement> {
     public constructor(iconName: string) {
-        this.icon = document.createElement('i');
+        super('i');
         this.classNames = ['fa', iconName];
-        this.icon.setAttribute('aria-hidden', 'true');
-    }
-
-    public withTitle(title: string): IconBuilder {
-        this.icon.title = title;
-        return this;
-    }
-
-    public build(): HTMLElement {
-        this.icon.className = this.classNames.join(' ');
-        return this.icon;
+        this.element.setAttribute('aria-hidden', 'true');
     }
 }

@@ -1,35 +1,20 @@
+import HTMLElementBuilder from './HTMLElementBuilder';
 import { HTMLEvent } from './HTMLEvent.type';
 
-export default class ImageBuilder {
-    private image: HTMLImageElement;
-
+export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
     public constructor(src: string) {
-        this.image = document.createElement('img');
-        this.image.src = src;
-        this.image.setAttribute('aria-hidden', 'true');
-    }
-
-    public withTitle(title: string): ImageBuilder {
-        this.image.title = title;
-        return this;
+        super('img');
+        this.element.src = src;
+        this.element.setAttribute('aria-hidden', 'true');
     }
 
     public withAlt(alt: string): ImageBuilder {
-        this.image.alt = alt;
+        this.element.alt = alt;
         return this;
     }
 
     public onClick(onclick: HTMLEvent): ImageBuilder {
-        this.image.onclick = onclick;
+        this.element.onclick = onclick;
         return this;
-    }
-
-    public withFloatLeft(): ImageBuilder {
-        this.image.style.cssFloat = 'left';
-        return this;
-    }
-
-    public build(): HTMLImageElement {
-        return this.image;
     }
 }
