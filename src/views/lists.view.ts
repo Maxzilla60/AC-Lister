@@ -92,8 +92,8 @@ export default class ListsView {
 
     private static aVillagerListIcon(villager: string, listId: string): HTMLImageElement {
         return new ImageBuilder(`./villager_icons/${villager}.gif`)
-            .withTitle(trimName(villager))
             .onClick(() => { loadProfile(villager, listId); })
+            .withTitle(trimName(villager))
             .build();
     }
 

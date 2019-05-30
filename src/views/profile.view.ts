@@ -200,17 +200,17 @@ export default class ProfileView {
         const isDisabled = stateService.listsAreEmpty();
 
         return new ButtonBuilder(() => { addVillager(stateService.currentLoadedProfileId, getListSelectValue()); })
-            .withTitle('Add to list')
             .asFontAwesome('fa-plus')
-            .withClassNames(isDisabled ? 'disabled' : 'clickable')
             .isDisabled(isDisabled)
+            .withTitle('Add to list')
+            .withClassNames(isDisabled ? 'disabled' : 'clickable')
             .build();
     }
 
     private static aRemoveVillagerFromListButton(): HTMLButtonElement {
         return new ButtonBuilder(() => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); })
-            .withTitle('Remove from list')
             .asFontAwesome('fa-minus')
+            .withTitle('Remove from list')
             .withClassNames('clickable')
             .build();
     }
