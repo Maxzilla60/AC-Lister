@@ -1,4 +1,4 @@
-import { applyTitle, deleteList, loadProfile, renameList } from '../actions';
+import { applyTitle, deleteList, loadProfile, newList, renameList } from '../actions';
 import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
 import ImageBuilder from '../components/ImageBuilder';
@@ -11,14 +11,17 @@ export default class ListsView {
     public static updateView(withListToRenameId?: string): void {
         let listContentElement: HTMLElement = document.createElement('div');
 
-        if (!stateService.listsAreEmpty()) {
-            this.appendLists(listContentElement, withListToRenameId);
-        } else {
+        if (stateService.listsAreEmpty()) {
             listContentElement = this.anEmptyListInfoElement();
+        } else {
+            this.appendLists(listContentElement, withListToRenameId);
         }
 
         clearElement($('lists'));
         $('lists').appendChild(listContentElement);
+        if (stateService.listsAreEmpty()) {
+            $('emptylists_newlist_button').onclick = newList;
+        }
         this.updateListEditingButtons();
 
         if (withListToRenameId) { this.focusAndSelectRenameInput(); }
@@ -96,9 +99,8 @@ export default class ListsView {
 
     private static anEmptyListInfoElement(): HTMLElement {
         return new DivisionBuilder()
-            // TODO: Bind event to plus button
             // .withInnerHTML('Click<i onclick="index.newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
-            .withInnerHTML('Click<i title="Add list" class="fa fa-plus" style="color: orange;" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
+            .withInnerHTML('Click<i id="emptylists_newlist_button" title="Add list" class="clickable fa fa-plus" style="color: orange;" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
             .withPaddingLeft(15)
             .withColor('orange')
             .build();
