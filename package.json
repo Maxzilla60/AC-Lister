@@ -4,8 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "serve": "parcel index.html",
-    "test": "cypress open"
+    "start": "parcel index.html",
+    "cypress": "cypress run",
+    "test": "cypress run"
   },
   "keywords": [],
   "author": "Maxime Orione",
