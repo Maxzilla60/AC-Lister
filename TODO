@@ -10,8 +10,8 @@ Todo:
     https://www.npmjs.com/package/parcel-plugin-static-files-copy
   ✔ UUID for Lists @done(19-05-20 14:37)
   ✔ Component Builders @done(19-05-29 12:02)
-    ☐ Refactor
   ☐ CSS Redesign
+    ☐ HTML-first without any CSS
     https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
   ☐ Font Awesome Dependency
   ☐ WebComponents
@@ -24,7 +24,7 @@ Todo:
     https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254
   ☐ Fix /viewer
   ☐ http://webdevchecklist.com
-  ☐ Cypress
+  ☐ Cypress @started(19-05-31 00:01)
   ☐ Netlify
   ☐ Re-enable Analytics
   ☐ LighterHTML Templating?
