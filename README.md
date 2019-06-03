@@ -1,6 +1,14 @@
 # Animal Crossing ★ Villager Lister
 Easily search, view and assemble lists of your favorite Animal Crossing villagers!
 
+## Version 2.0!
+ - [x] Build the website with a simple web bundler, **[Parcel](https://parceljs.org)**.
+ - [x] Refactor the JavaScript code to **[TypeScript](https://www.typescriptlang.org)**.
+ - [ ] Implement integration tests with **[Cypress](https://www.cypress.io)**.
+ - [ ] **Overhaul the CSS & HTML to make it mobile-friendly with [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).**
+ - [ ] Convert the website into a **[PWA](https://developers.google.com/web/progressive-web-apps/)**.
+ - [ ] Host the website on **[Netlify](https://www.netlify.com/)**.
+
 ## Where?
 ### [**Right here!**](https://maxzilla60.github.io/AC-Lister/)
 
@@ -16,7 +24,7 @@ Easily search, view and assemble lists of your favorite Animal Crossing villager
 ## Uhm, there's something wrong...
 Please go [here](https://github.com/Maxzilla60/AC-Lister/issues) and let me know!
 
-## Coming Soon
+## Someday...
 - [ ] Reordering lists
 - [x] Sharable links
 - [x] Save as text file
