@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html",
-    "cypress": "cypress run",
-    "test": "cypress run"
+    "cypress": "cypress open",
+    "test": "cypress run --config videoUploadOnPasses=false"
   },
   "keywords": [],
   "author": "Maxime Orione",
