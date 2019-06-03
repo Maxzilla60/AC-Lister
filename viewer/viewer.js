@@ -4,7 +4,7 @@ var lists = [];
 function viewLists() {
 	document.getElementById("viewer_lists").innerHTML = ""; // Clear list area
 	var block = "";
-
+	
 	if (lists.length !== 0) {
 		// Create html block:
 		block = "<div>";
@@ -23,7 +23,7 @@ function viewLists() {
 	else {
 		block = "<div style=\"padding-left:15px;color:orange;\">Click<i onclick=\"closeViewer();\" title=\"Close viewer\" class=\"clickable fa fa-compress\" aria-hidden=\"true\" style=\"margin-left:3px;margin-right:3px;\"></i>and make a list!</div>";
 	}
-
+	
 	// Display block
 	document.getElementById("viewer_lists").innerHTML = block;
 }
@@ -50,11 +50,11 @@ function openShare() {
 function exportImage() {
 	// Temporarily hide menu items
 	document.getElementsByClassName("menu")[0].style.display = "none";
-
+	
 	// Turn viewer-list-area into canvas and save:
 	html2canvas($("#viewer_list_area"), {
-		onrendered: function (canvas) {
-			canvas.toBlob(function (blob) {
+		onrendered: function(canvas) {
+			canvas.toBlob(function(blob) {
 				saveAs(blob, "AnimalCrossing-VillagerLists.png");
 			});
 		}
@@ -66,7 +66,7 @@ function exportImage() {
 // Save as text file
 function exportText() {
 	var text = "";
-
+	
 	for (var l in lists) {
 		text += lists[l].title + ":\n";
 		for (var member in lists[l].members) {
@@ -76,8 +76,8 @@ function exportText() {
 		text += "\n";
 	}
 	text += "Made with Animal Crossing Villager Lister\n(https://maxzilla60.github.io/AC-Lister/)";
-
-	var blob = new Blob([text], { type: "text/plain;charset-utf-8" });
+	
+	var blob = new Blob([text], {type:"text/plain;charset-utf-8"});
 	saveAs(blob, "AnimalCrossing-VillagerLists.txt");
 }
 
@@ -86,7 +86,7 @@ function init() {
 	// Get share from URL:
 	var url = new URL(window.location.href);
 	var share = url.searchParams.get("lists");
-
+	
 	// Retrieve lists from URL:
 	if (share != null) {
 		lists = JSON.parse(decodeURIComponent(share));
@@ -99,13 +99,13 @@ function init() {
 	if (lists.length <= 0) {
 		// Image button:
 		document.getElementById("image_button").className = "disabled fa fa-camera";
-		document.getElementById("image_button").onclick = function () { };
+		document.getElementById("image_button").onclick = function() {};
 		// Text button:
 		document.getElementById("text_button").className = "disabled fa fa-file-text";
-		document.getElementById("text_button").onclick = function () { };
+		document.getElementById("text_button").onclick = function() {};
 		// Share button:
 		document.getElementById("share_button").className = "disabled fa fa-share";
-		document.getElementById("share_button").onclick = function () { };
+		document.getElementById("share_button").onclick = function() {};
 	}
 	viewLists();
 }
