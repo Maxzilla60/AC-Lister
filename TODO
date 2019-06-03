@@ -13,9 +13,8 @@ Todo:
   ☐ CSS Redesign
     ☐ HTML-first without any CSS
     https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
+  ☐ Cypress @started(19-05-31 00:01)
   ☐ Font Awesome Dependency
-  ☐ WebComponents
-    https://github.com/parcel-bundler/parcel/issues/1049
   ☐ PWA
     https://hiswe.github.io/2019/14-state-of-pwa-with-parcel-february-2019/
   ☐ Fade transitions
@@ -24,8 +23,10 @@ Todo:
     https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254
   ☐ Fix /viewer
   ☐ http://webdevchecklist.com
-  ☐ Cypress @started(19-05-31 00:01)
-  ☐ Netlify
   ☐ Re-enable Analytics
+  ☐ Netlify
+
+  ☐ WebComponents
+    https://github.com/parcel-bundler/parcel/issues/1049
   ☐ LighterHTML Templating?
     https://github.com/WebReflection/lighterhtml
