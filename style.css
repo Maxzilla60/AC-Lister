@@ -62,6 +62,9 @@ small {
 	font-weight: bold;
 	padding: 0;
 }
+small > a {
+	padding: 0;
+}
 footer {
 	bottom: 10px;
 	font-size: xx-large;
