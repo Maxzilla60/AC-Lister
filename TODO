@@ -18,6 +18,8 @@ Todo:
     ☐ Aria
   ☐ Async Localstorage
   ☐ Cypress @started(19-05-31 00:01)
+  ☐ <no-script>
+  ☐ Loading...
   ☐ PWA
     https://hiswe.github.io/2019/14-state-of-pwa-with-parcel-february-2019/
   ☐ Fade transitions
@@ -37,5 +39,5 @@ Todo:
 
   ☐ WebComponents
     https://github.com/parcel-bundler/parcel/issues/1049
-  ☐ LighterHTML Templating?
+  ✘ LighterHTML Templating? @canceled(19-06-07 21:50)
     https://github.com/WebReflection/lighterhtml
