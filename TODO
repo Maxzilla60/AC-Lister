@@ -10,7 +10,7 @@ Todo:
     https://www.npmjs.com/package/parcel-plugin-static-files-copy
   ✔ UUID for Lists @done(19-05-20 14:37)
   ✔ Component Builders @done(19-05-29 12:02)
-  ☐ Font Awesome Dependency
+  ✔ Font Awesome Dependency @done(19-06-07 21:39)
   ☐ CSS Redesign
     ☐ HTML-first without any CSS @started(19-06-07 11:47)
     ☐ CSS-Grid
@@ -28,6 +28,7 @@ Todo:
     ☐ Shareable links
       https://github.com/typestack/class-validator
       https://github.com/Sage/jsurl
+  ☐ Fix /info
   ☐ http://webdevchecklist.com
   ☐ Re-enable Analytics
   ☐ Netlify
