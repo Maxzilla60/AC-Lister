@@ -13,6 +13,7 @@
   "author": "Maxime Orione",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "@types/file-saver": "^2.0.0",
     "@types/uuid": "^3.4.4",
     "file-saver": "^2.0.1",
