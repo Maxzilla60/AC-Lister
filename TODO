@@ -10,11 +10,14 @@ Todo:
     https://www.npmjs.com/package/parcel-plugin-static-files-copy
   ✔ UUID for Lists @done(19-05-20 14:37)
   ✔ Component Builders @done(19-05-29 12:02)
-  ☐ CSS Redesign
-    ☐ HTML-first without any CSS
-    https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
-  ☐ Cypress @started(19-05-31 00:01)
   ☐ Font Awesome Dependency
+  ☐ CSS Redesign
+    ☐ HTML-first without any CSS @started(19-06-07 11:47)
+    ☐ CSS-Grid
+      https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
+    ☐ Aria
+  ☐ Async Localstorage
+  ☐ Cypress @started(19-05-31 00:01)
   ☐ PWA
     https://hiswe.github.io/2019/14-state-of-pwa-with-parcel-february-2019/
   ☐ Fade transitions
@@ -22,6 +25,9 @@ Todo:
     https://github.com/joshbuchea/HEAD
     https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254
   ☐ Fix /viewer
+    ☐ Shareable links
+      https://github.com/typestack/class-validator
+      https://github.com/Sage/jsurl
   ☐ http://webdevchecklist.com
   ☐ Re-enable Analytics
   ☐ Netlify
