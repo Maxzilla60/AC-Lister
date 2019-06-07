@@ -2,6 +2,7 @@ import { applyTitle, deleteList, loadProfile, newList, renameList } from '../act
 import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
 import ImageBuilder from '../components/ImageBuilder';
+import ListItemBuilder from '../components/ListItemBuilder';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { clearElement, getElement as $, trimName } from '../util/util';
@@ -9,60 +10,61 @@ import ProfileView from './profile.view';
 
 export default class ListsView {
     public static updateView(withListToRenameId?: string): void {
-        let listContentElement: HTMLElement = document.createElement('div');
-
-        if (stateService.listsAreEmpty()) {
-            listContentElement = this.anEmptyListInfoElement();
-        } else {
-            this.appendLists(listContentElement, withListToRenameId);
-        }
-
         clearElement($('lists'));
-        $('lists').appendChild(listContentElement);
+
         if (stateService.listsAreEmpty()) {
+            $('lists').appendChild(this.anEmptyListInfoElement());
             $('emptylists_newlist_button').onclick = newList;
+        } else {
+            this.appendLists(withListToRenameId);
         }
+
         this.updateListEditingButtons();
 
         if (withListToRenameId) { this.focusAndSelectRenameInput(); }
     }
 
-    private static appendLists(listContentElement: HTMLElement, withListToRenameId?: string): void {
+    private static appendLists(withListToRenameId?: string): void {
         for (const list of stateService.getLists()) {
-            if (withListToRenameId && list.id === withListToRenameId) {
-                this.appendListWithRenameInputSection(listContentElement, list);
-            } else {
-                this.appendListSection(listContentElement, list);
-            }
+            const renameEnabled = withListToRenameId && list.id === withListToRenameId;
+            this.appendListSection(list, renameEnabled);
         }
     }
 
-    private static appendListSection(listContentElement: HTMLElement, list: VillagerList): void {
-        listContentElement.appendChild(this.aListTitleElement(list));
-        listContentElement.appendChild(this.aListDeleteButton(list));
-        listContentElement.appendChild(this.aListRenameButton(list));
-        listContentElement.appendChild(this.aVillagerListIconsSection(list));
+    private static appendListSection(list: VillagerList, renameEnabled: boolean = false): void {
+        $('lists').appendChild(
+            new ListItemBuilder()
+                .withChildren(
+                    this.aListHeaderSection(list, renameEnabled),
+                    this.aListMembersSection(list.id, list.members),
+                )
+                .build()
+        );
     }
 
-    private static appendListWithRenameInputSection(listContentElement: HTMLElement, list: VillagerList): void {
-        listContentElement.appendChild(this.aListTitleInputElement(list));
-        listContentElement.appendChild(this.aListRenameConfirmButton(list));
-        listContentElement.appendChild(this.aVillagerListIconsSection(list));
-    }
-
-    private static updateListEditingButtons(): void {
-        const exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('exportlists_button');
-        const clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clearlists_button');
-        exportListsButton.disabled = stateService.listsAreEmpty();
-        clearListsButton.disabled = stateService.listsAreEmpty();
-        exportListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-upload' : 'clickable fa fa-upload';
-        clearListsButton.className = stateService.listsAreEmpty() ? 'disabled fa fa-times' : 'clickable fa fa-times';
+    private static aListHeaderSection(list: VillagerList, renameEnabled: boolean = false): HTMLDivElement {
+        let headerChildren: HTMLElement[];
+        if (renameEnabled) {
+            headerChildren = [
+                this.aListTitleInputElement(list),
+                this.aListRenameConfirmButton(list),
+            ];
+        } else {
+            headerChildren = [
+                this.aListTitleElement(list),
+                this.aListDeleteButton(list),
+                this.aListRenameButton(list),
+            ];
+        }
+        return new DivisionBuilder()
+            .withChildren(...headerChildren)
+            .build();
     }
 
     private static aListTitleElement(list: VillagerList): HTMLButtonElement {
         return new ButtonBuilder(() => { ProfileView.updateListSelect(list.id); })
             .withInnerHTML(list.title)
-            .withClassNames('clickable', 'list')
+            .withClassNames('clickable', 'list_title')
             .build();
     }
 
@@ -79,30 +81,6 @@ export default class ListsView {
             .asFontAwesome('fa-pencil')
             .withTitle('Edit list title')
             .withClassNames('clickable')
-            .build();
-    }
-
-    private static aVillagerListIconsSection(list: VillagerList): HTMLElement {
-        return new DivisionBuilder()
-            .withChildren(...list.members.map(villager => this.aVillagerListIcon(villager, list.id)))
-            .withPaddingTop(0)
-            .withPaddingBottom(0)
-            .build();
-    }
-
-    private static aVillagerListIcon(villager: string, listId: string): HTMLImageElement {
-        return new ImageBuilder(`./villager_icons/${villager}.gif`)
-            .onClick(() => { loadProfile(villager, listId); })
-            .withTitle(trimName(villager))
-            .build();
-    }
-
-    private static anEmptyListInfoElement(): HTMLElement {
-        return new DivisionBuilder()
-            // .withInnerHTML('Click<i onclick="index.newList();" title="Add list" class="clickable fa fa-plus" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
-            .withInnerHTML('Click<i id="emptylists_newlist_button" title="Add list" class="clickable fa fa-plus" style="color: orange;" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
-            .withPaddingLeft(15)
-            .withColor('orange')
             .build();
     }
 
@@ -123,6 +101,42 @@ export default class ListsView {
             .asFontAwesome('fa-check')
             .withTitle('Edit name')
             .withClassNames('clickable')
+            .build();
+    }
+
+    private static aListMembersSection(listId: string, members: string[]) {
+        const listElement: HTMLElement = document.createElement('ul');
+        listElement.className = 'list_members';
+        for (const member of members) {
+            listElement.appendChild(this.aMemberElement(member, listId));
+        }
+        return listElement;
+    }
+
+    private static aMemberElement(member: string, listId: string): HTMLButtonElement {
+        return new ButtonBuilder(() => { loadProfile(member, listId); })
+            .withClassNames('clickable', 'list_member')
+            .appendChild(
+                new ImageBuilder(`./villager_icons/${member}.gif`)
+                    .withTitle(trimName(member))
+                    .build())
+            .build();
+    }
+
+    private static updateListEditingButtons(): void {
+        const exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('exportlists_button');
+        const clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clearlists_button');
+        exportListsButton.disabled = stateService.listsAreEmpty();
+        clearListsButton.disabled = stateService.listsAreEmpty();
+        exportListsButton.className = 'clickable fa fa-upload';
+        clearListsButton.className = 'clickable fa fa-times';
+    }
+
+    private static anEmptyListInfoElement(): HTMLElement {
+        // TODO: Don't
+        return new DivisionBuilder()
+            .withInnerHTML('Click<i id="emptylists_newlist_button" title="Add list" class="clickable fa fa-plus" style="color: orange;" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
+            .withColor('orange')
             .build();
     }
 

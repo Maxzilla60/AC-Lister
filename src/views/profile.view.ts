@@ -1,22 +1,21 @@
 import { addVillager, removeVillager } from '../actions';
 import ButtonBuilder from '../components/ButtonBuilder';
-import DivisionBuilder from '../components/DivisionBuilder';
 import IconBuilder from '../components/IconBuilder';
+import ListItemBuilder from '../components/ListItemBuilder';
 import { Personality } from '../models/personality.enum';
 import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
-import { aBreakElement, birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage } from '../util/util';
+import { birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage } from '../util/util';
 
 export default class ProfileView {
     public static updateView(villager: Villager, fromListId: string): void {
         stateService.currentLoadedProfileId = villager.id;
 
-        clearElement($('profile'));
+        clearElement($('villager_information'));
 
         this.appendVillagerInfo(villager);
-        this.appendWikiAndStoreButtons(villager);
 
         this.updateListSelect(fromListId);
         this.updateProfileImage(villager);
@@ -36,7 +35,6 @@ export default class ProfileView {
         (<HTMLSelectElement>$('list_select')).disabled = stateService.listsAreEmpty();
         clearElement($('list_select'));
         for (const list of stateService.getLists()) {
-            // tslint:disable-next-line: triple-equals
             $('list_select').appendChild(this.aListDropdownOption(list, list.id === stateService.currentListSelect));
         }
 
@@ -44,74 +42,90 @@ export default class ProfileView {
     }
 
     public static updateAddVillagerButton(): void {
-        clearElement($('add_remove_button'));
+        const button = <HTMLButtonElement>$('add_remove_button');
         if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
-            $('add_remove_button').appendChild(this.aRemoveVillagerFromListButton());
+            button.onclick = () => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
+            button.className = 'clickable fa fa-minus';
+            button.title = 'Remove from list';
         } else {
-            $('add_remove_button').appendChild(this.anAddVillagerToListButton());
+            button.onclick = () => { addVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
+            button.className = 'clickable fa fa-plus';
+            button.title = 'Add to list';
+            button.disabled = stateService.listsAreEmpty();
         }
     }
 
     private static appendVillagerInfo(villager: Villager) {
         this.appendVillagerNameInfo(villager.name);
-        this.appendABreakElement();
         this.appendVillagerSpeciesInfo(villager.species);
-        this.appendABreakElement();
         this.appendVillagerPersonalityInfo(villager.personality);
-        this.appendABreakElement();
         this.appendVillagerCoffeeInfo(villager.coffee);
-        this.appendABreakElement();
         this.appendVillagerBirthdayInfo(villager);
+        this.appendWikiAndStoreButtons(villager);
     }
 
     private static appendWikiAndStoreButtons(villager: Villager) {
-        $('profile').appendChild(this.anAddOrRemoveElement());
-        this.appendABreakElement();
-        $('profile').appendChild(this.aWikiIconButton(villager.wiki));
-        $('profile').appendChild(this.aStoreIconButton(villager.store));
+        $('villager_information').appendChild(this.aWikiIconButton(villager.wiki));
+        $('villager_information').appendChild(this.aStoreIconButton(villager.store));
     }
 
     private static updateProfileImage(villager: Villager): void {
-        const profileImageElement: HTMLImageElement = <HTMLImageElement>$('profile-image');
+        const profileImageElement: HTMLImageElement = <HTMLImageElement>$('profile_image');
         profileImageElement.alt = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
         profileImageElement.title = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
         profileImageElement.src = `./villager_heads/${villager.head}`;
     }
 
-    private static appendABreakElement(): void {
-        $('profile').appendChild(aBreakElement());
-    }
-
-    private static appendATextNode(text: string): void {
-        $('profile').appendChild(this.aTextNode(text));
-    }
-
     private static appendVillagerNameInfo(villagerName: string): void {
-        $('profile').appendChild(this.aNameIcon());
-        this.appendATextNode(villagerName);
+        $('villager_information').appendChild(
+            new ListItemBuilder()
+                .asFontAwesome('fa-tag', 'Name')
+                .appendChild(
+                    this.aTextNode(villagerName)
+                )
+                .build()
+        );
     }
     private static appendVillagerSpeciesInfo(villagerSpecies: Species): void {
-        $('profile').appendChild(this.aSpeciesIcon());
-        this.appendATextNode(villagerSpecies);
+        $('villager_information').appendChild(
+            new ListItemBuilder()
+                .asFontAwesome('fa-user', 'Species')
+                .appendChild(
+                    this.aTextNode(villagerSpecies)
+                )
+                .build()
+        );
     }
     private static appendVillagerPersonalityInfo(villagerPersonality: Personality): void {
-        $('profile').appendChild(this.aPersonalityIcon());
-        this.appendATextNode(villagerPersonality);
+        $('villager_information').appendChild(
+            new ListItemBuilder()
+                .asFontAwesome('fa-heart', 'Personality')
+                .appendChild(
+                    this.aTextNode(villagerPersonality)
+                )
+                .build()
+        );
     }
     private static appendVillagerCoffeeInfo(villagerCoffee: string): void {
-        $('profile').appendChild(this.aCoffeeIcon());
-        this.appendATextNode(villagerCoffee);
+        $('villager_information').appendChild(
+            new ListItemBuilder()
+                .asFontAwesome('fa-coffee', 'Favourite coffee')
+                .appendChild(
+                    this.aTextNode(villagerCoffee)
+                )
+                .build()
+        );
     }
     private static appendVillagerBirthdayInfo(villager: Villager) {
-        $('profile').appendChild(this.aBirthdayIcon(villager));
-        $('profile').appendChild(this.aBirthdayTextNode(villager.birthday));
-    }
-
-    private static anAddOrRemoveElement(): HTMLElement {
-        return new DivisionBuilder()
-            .withPadding(0)
-            .withDisplay('inline-block')
-            .build();
+        // TODO: Birthday Easter Egg
+        $('villager_information').appendChild(
+            new ListItemBuilder()
+                .asFontAwesome('fa-birthday-cake', 'Birthday')
+                .appendChild(
+                    this.aTextNode(villager.birthday)
+                )
+                .build()
+        );
     }
 
     private static aWikiIconButton(wikiLink: string): HTMLButtonElement {
@@ -142,30 +156,6 @@ export default class ProfileView {
         return text === '' ? this.anNASpanElement() : document.createTextNode(text);
     }
 
-    private static aNameIcon(): HTMLElement {
-        return new IconBuilder('fa-tag')
-            .withTitle('Name')
-            .build();
-    }
-
-    private static aSpeciesIcon(): HTMLElement {
-        return new IconBuilder('fa-user')
-            .withTitle('Species')
-            .build();
-    }
-
-    private static aPersonalityIcon(): HTMLElement {
-        return new IconBuilder('fa-heart')
-            .withTitle('Personality')
-            .build();
-    }
-
-    private static aCoffeeIcon(): HTMLElement {
-        return new IconBuilder('fa-coffee')
-            .withTitle('Favourite coffee')
-            .build();
-    }
-
     private static aBirthdayIcon(villager: Villager): HTMLButtonElement | HTMLElement {
         if (birthdayIsToday(villager.birthday)) {
             return this.aBirthdayButton(villager.name);
@@ -193,25 +183,6 @@ export default class ProfileView {
             .withTitle(`Happy birthday to ${villagerName}!`)
             .withClassNames('clickable')
             .withColor('hotpink')
-            .build();
-    }
-
-    private static anAddVillagerToListButton(): HTMLButtonElement {
-        const isDisabled = stateService.listsAreEmpty();
-
-        return new ButtonBuilder(() => { addVillager(stateService.currentLoadedProfileId, getListSelectValue()); })
-            .asFontAwesome('fa-plus')
-            .isDisabled(isDisabled)
-            .withTitle('Add to list')
-            .withClassNames(isDisabled ? 'disabled' : 'clickable')
-            .build();
-    }
-
-    private static aRemoveVillagerFromListButton(): HTMLButtonElement {
-        return new ButtonBuilder(() => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); })
-            .asFontAwesome('fa-minus')
-            .withTitle('Remove from list')
-            .withClassNames('clickable')
             .build();
     }
 

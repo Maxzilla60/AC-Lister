@@ -3,7 +3,7 @@ import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
 import ImageBuilder from '../components/ImageBuilder';
 import { Villager } from '../models/villager.model';
-import { aBreakElement, clearElement, getElement as $ } from '../util/util';
+import { clearElement, getElement as $ } from '../util/util';
 import villagers from '../util/villagers.json';
 
 export default class SearchView {
@@ -13,7 +13,6 @@ export default class SearchView {
 
         for (const villager of resultList) {
             searchResultsElement.appendChild(this.aVillagerSearchResultButton(villager));
-            searchResultsElement.appendChild(aBreakElement());
         }
 
         this.fadeTransition();
@@ -21,7 +20,7 @@ export default class SearchView {
 
     private static aVillagerSearchResultButton(villager: Villager): HTMLButtonElement {
         return new ButtonBuilder(() => { loadProfile(villager.id); })
-            .withClassNames('result')
+            .withClassNames('clickable', 'result')
             .withChildren(
                 this.aVillagersSearchResultImage(villager),
                 this.aVillagersSearchResultNameElement(villager.name),
