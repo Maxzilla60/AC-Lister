@@ -78,7 +78,7 @@ export default class ListsView {
 
     private static aListRenameButton(list: VillagerList): HTMLButtonElement {
         return new ButtonBuilder(() => { renameList(list.id); })
-            .asFontAwesome('fa-pencil')
+            .asFontAwesome('fa-edit')
             .withTitle('Edit list title')
             .withClassNames('clickable')
             .build();

@@ -11,7 +11,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     width: 600px;
-    margin-bottom: 500px;
 }
 
 /* Global Stuff */
@@ -40,7 +39,7 @@ img {
     right: 0;
 }
 
-.fa {
+.fa, .fab {
     color: orange;
     width: 30px;
     height: 30px;
@@ -147,6 +146,7 @@ search {
 }
 
 .result {
+    color: brown;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -183,6 +183,7 @@ main > .menu {
     pointer-events: none;
 }
 
+main > .menu > a,
 main > .menu > button {
     pointer-events: all;
 }
