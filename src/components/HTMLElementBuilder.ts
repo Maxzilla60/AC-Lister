@@ -25,6 +25,11 @@ export default abstract class HTMLElementBuilder<T extends HTMLElement> {
         this.classNames = [...new Set([...this.classNames, ...classnames])];
         return this;
     }
+    
+    public withId(idName: string): HTMLElementBuilder<T> {
+        this.element.id = idName;
+        return this;
+    }
 
     public withChildren(...children: HTMLElement[]): HTMLElementBuilder<T> {
         children.forEach(child => this.element.appendChild(child));

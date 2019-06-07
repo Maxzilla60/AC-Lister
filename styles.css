@@ -188,7 +188,7 @@ main > .menu > button {
 }
 
 #lists_container {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 5px;
     width: 99%;
     top: 0;
@@ -230,6 +230,20 @@ main > .menu > button {
     width: 40px;
 }
 
+#emptylists_prompt {
+    color: orange;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-top: 5px;
+}
+#emptylists_newlist_button {
+    display: flex;
+    color: orange;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Profile */
 #profile_container {
     padding: 5px;
@@ -243,6 +257,7 @@ main > .menu > button {
 
 #profile_container > .menu {
     margin: 5px;
+    align-items: center;
 }
 
 select, option {
@@ -269,7 +284,7 @@ select, option {
 }
 
 #villager_information > li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 #villager_information > li > .fa-li {

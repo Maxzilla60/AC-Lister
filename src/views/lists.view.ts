@@ -135,8 +135,8 @@ export default class ListsView {
     private static anEmptyListInfoElement(): HTMLElement {
         // TODO: Don't
         return new DivisionBuilder()
-            .withInnerHTML('Click<i id="emptylists_newlist_button" title="Add list" class="clickable fa fa-plus" style="color: orange;" aria-hidden="true" style="margin-left:3px;margin-right:3px;"></i>to make a new list!')
-            .withColor('orange')
+            .withInnerHTML('Click<i id="emptylists_newlist_button" title="Add list" class="clickable fa fa-plus" style="color: orange;" aria-hidden="true"></i>to make a new list!')
+            .withId('emptylists_prompt')
             .build();
     }
 
