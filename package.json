@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html",
+    "codenvy": "parcel index.html --host 0.0.0.0 --port 1337",
     "cypress": "cypress open",
     "test": "cypress run --config videoUploadOnPasses=false"
   },
@@ -12,16 +13,17 @@
   "author": "Maxime Orione",
   "license": "ISC",
   "dependencies": {
-    "file-saver": "^2.0.1"
+    "@types/file-saver": "^2.0.0",
+    "@types/uuid": "^3.4.4",
+    "file-saver": "^2.0.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "typescript": "^3.4.5",
-    "tslint": "^5.16.0",
-    "@types/file-saver": "^2.0.0",
+    "cypress": "latest",
     "parcel-plugin-static-files-copy": "^2.0.0",
-    "uuid": "^3.3.2",
-    "@types/uuid": "^3.4.4",
-    "cypress": "latest"
+    "parcel": "latest",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
   },
   "staticFiles": {
     "staticPath": "public",
