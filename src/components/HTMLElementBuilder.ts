@@ -31,7 +31,7 @@ export default abstract class HTMLElementBuilder<T extends HTMLElement> {
         return this;
     }
 
-    public withChildren(...children: HTMLElement[]): HTMLElementBuilder<T> {
+    public withChildren(...children: Node[]): HTMLElementBuilder<T> {
         children.forEach(child => this.element.appendChild(child));
         return this;
     }

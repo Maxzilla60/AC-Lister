@@ -5,10 +5,11 @@ import ImageBuilder from '../components/ImageBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
-import { clearElement, getElement as $, trimName } from '../util/util';
+import { clearElement, getElement as $, trimName, aTextNode } from '../util/util';
 import ProfileView from './profile.view';
 import InputFieldBuilder from '../components/InputFieldBuilder';
 import ListElementBuilder from '../components/ListElementBuilder';
+import IconBuilder from '../components/IconBuilder';
 
 export default class ListsView {
     public static updateView(withListToRenameId?: string): void {
@@ -16,7 +17,6 @@ export default class ListsView {
 
         if (stateService.listsAreEmpty()) {
             $('lists').appendChild(this.anEmptyListInfoElement());
-            $('emptylists_newlist_button').onclick = newList;
         } else {
             this.appendLists(withListToRenameId);
         }
@@ -144,10 +144,22 @@ export default class ListsView {
     }
 
     private static anEmptyListInfoElement(): HTMLElement {
-        // TODO: Don't
         return new DivisionBuilder()
-            .withInnerHTML('Click<i id="emptylists_newlist_button" title="Add list" class="clickable fa fa-plus" style="color: orange;" aria-hidden="true"></i>to make a new list!')
+            .withChildren(
+                aTextNode('Click'),
+                this.anAddNewListButton(),
+                aTextNode('to make a new list!'),
+            )
             .withId('emptylists_prompt')
+            .build();
+    }
+
+    private static anAddNewListButton(): Node {
+        return new IconBuilder('fa-plus')
+            .onClick(newList)
+            .withId('emptylists_newlist_button')
+            .withTitle('Add list')
+            .withClassNames('clickable')
             .build();
     }
 
