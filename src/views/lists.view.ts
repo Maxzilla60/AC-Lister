@@ -114,24 +114,33 @@ export default class ListsView {
     }
 
     private static aMemberElement(member: string, listId: string): HTMLLIElement {
-        return new ListItemBuilder().appendChild(
-                new ButtonBuilder(() => { loadProfile(member, listId); })
-                    .withClassNames('clickable', 'list_member')
-                    .appendChild(
-                        new ImageBuilder(`./villager_icons/${member}.gif`)
-                            .withTitle(trimName(member))
-                            .build())
-                    .build()
+        return new ListItemBuilder()
+            .appendChild(
+                this.aMemberButton(member, listId)
             )
+            .build();
+    }
+
+    private static aMemberButton(member: string, listId: string): Node {
+        return new ButtonBuilder(() => { loadProfile(member, listId); })
+            .withClassNames('clickable', 'list_member')
+            .appendChild(this.aMemberImage(member))
+            .build();
+    }
+
+    private static aMemberImage(member: string): Node {
+        return new ImageBuilder(`./villager_icons/${member}.gif`)
+            .withTitle(trimName(member))
             .build();
     }
 
     private static updateListEditingButtons(): void {
         const exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('exportlists_button');
-        const clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clearlists_button');
         exportListsButton.disabled = stateService.listsAreEmpty();
-        clearListsButton.disabled = stateService.listsAreEmpty();
         exportListsButton.className = 'clickable fa fa-upload';
+
+        const clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clearlists_button');
+        clearListsButton.disabled = stateService.listsAreEmpty();
         clearListsButton.className = 'clickable fa fa-times';
     }
 
