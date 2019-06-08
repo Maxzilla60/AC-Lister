@@ -5,9 +5,7 @@ export default class ListItemBuilder extends HTMLElementBuilder<HTMLLIElement> {
     private fontAwesomeIconName: string = null;
     private fontAwesomeIconTitle: string = null;
 
-    public constructor() {
-        super('li');
-    }
+    public constructor() { super('li'); }
 
     public asFontAwesome(iconName: string, iconTitle: string): ListItemBuilder {
         this.fontAwesomeIconName = iconName;

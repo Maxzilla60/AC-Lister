@@ -8,6 +8,7 @@ import { stateService } from '../util/state.service';
 import { clearElement, getElement as $, trimName } from '../util/util';
 import ProfileView from './profile.view';
 import InputFieldBuilder from '../components/InputFieldBuilder';
+import ListElementBuilder from '../components/ListElementBuilder';
 
 export default class ListsView {
     public static updateView(withListToRenameId?: string): void {
@@ -103,12 +104,12 @@ export default class ListsView {
     }
 
     private static aListMembersSection(listId: string, members: string[]) {
-        const listElement: HTMLElement = document.createElement('ul');
-        listElement.className = 'list_members';
-        for (const member of members) {
-            listElement.appendChild(this.aMemberElement(member, listId));
-        }
-        return listElement;
+        return new ListElementBuilder()
+            .withClassNames('list_members')
+            .withChildren(
+                ...members.map(member => this.aMemberElement(member, listId))
+            )
+            .build();
     }
 
     private static aMemberElement(member: string, listId: string): HTMLLIElement {
