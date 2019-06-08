@@ -14,7 +14,6 @@ export default class ProfileView {
         stateService.currentLoadedProfileId = villager.id;
 
         clearElement($('villager_information'));
-
         this.appendVillagerInfo(villager);
 
         this.updateListSelect(fromListId);
@@ -42,17 +41,17 @@ export default class ProfileView {
     }
 
     public static updateAddVillagerButton(): void {
-        const button = <HTMLButtonElement>$('add_remove_button');
+        const addRemoveButton = <HTMLButtonElement>$('add_remove_button');
         if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
-            button.onclick = () => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
-            button.className = 'clickable fa fa-minus';
-            button.title = 'Remove from list';
-            button.disabled = false;
+            addRemoveButton.onclick = () => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
+            addRemoveButton.className = 'clickable fa fa-minus';
+            addRemoveButton.title = 'Remove from list';
+            addRemoveButton.disabled = false;
         } else {
-            button.onclick = () => { addVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
-            button.className = 'clickable fa fa-plus';
-            button.title = 'Add to list';
-            button.disabled = stateService.listsAreEmpty();
+            addRemoveButton.onclick = () => { addVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
+            addRemoveButton.className = 'clickable fa fa-plus';
+            addRemoveButton.title = 'Add to list';
+            addRemoveButton.disabled = stateService.listsAreEmpty();
         }
     }
 
@@ -77,55 +76,39 @@ export default class ProfileView {
         profileImageElement.src = `./villager_heads/${villager.head}`;
     }
 
+    private static aProfileInfoListItem(iconName: string, iconTitle: string, infoValue: string): HTMLLIElement {
+        return new ListItemBuilder()
+                .asFontAwesome(iconName, iconTitle)
+                .appendChild(
+                    this.aTextNode(infoValue)
+                )
+                .build();
+    }
+
     private static appendVillagerNameInfo(villagerName: string): void {
         $('villager_information').appendChild(
-            new ListItemBuilder()
-                .asFontAwesome('fa-tag', 'Name')
-                .appendChild(
-                    this.aTextNode(villagerName)
-                )
-                .build()
+            this.aProfileInfoListItem('fa-tag', 'Name', villagerName)
         );
     }
     private static appendVillagerSpeciesInfo(villagerSpecies: Species): void {
         $('villager_information').appendChild(
-            new ListItemBuilder()
-                .asFontAwesome('fa-user', 'Species')
-                .appendChild(
-                    this.aTextNode(villagerSpecies)
-                )
-                .build()
+            this.aProfileInfoListItem('fa-user', 'Species', villagerSpecies)
         );
     }
     private static appendVillagerPersonalityInfo(villagerPersonality: Personality): void {
         $('villager_information').appendChild(
-            new ListItemBuilder()
-                .asFontAwesome('fa-heart', 'Personality')
-                .appendChild(
-                    this.aTextNode(villagerPersonality)
-                )
-                .build()
+            this.aProfileInfoListItem('fa-heart', 'Personality', villagerPersonality)
         );
     }
     private static appendVillagerCoffeeInfo(villagerCoffee: string): void {
         $('villager_information').appendChild(
-            new ListItemBuilder()
-                .asFontAwesome('fa-coffee', 'Favourite coffee')
-                .appendChild(
-                    this.aTextNode(villagerCoffee)
-                )
-                .build()
+            this.aProfileInfoListItem('fa-coffee', 'Favourite coffee', villagerCoffee)
         );
     }
     private static appendVillagerBirthdayInfo(villager: Villager) {
         // TODO: Birthday Easter Egg
         $('villager_information').appendChild(
-            new ListItemBuilder()
-                .asFontAwesome('fa-birthday-cake', 'Birthday')
-                .appendChild(
-                    this.aTextNode(villager.birthday)
-                )
-                .build()
+            this.aProfileInfoListItem('fa-birthday-cake', 'Birthday', villager.birthday)
         );
     }
 
