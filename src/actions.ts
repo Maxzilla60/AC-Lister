@@ -104,6 +104,7 @@ function getVillagerById(villagerId: string): Villager {
 }
 
 function search(query: string): void {
+    $('search_bar').className = '';
     if (query === '') {
         SearchView.updateView();
         return;
@@ -111,17 +112,26 @@ function search(query: string): void {
 
     query = query.toLowerCase();
 
-    const villagersFilteredOnName = villagersDB.filter(
-        (villager: Villager) => villager.name.toLowerCase().includes(query)
-    );
-    const villagersFilteredOnPersonality = villagersDB.filter(
-        (villager: Villager) => villager.personality.toLowerCase().includes(query)
-    );
-    const villagersFilteredOnSpecies = villagersDB.filter(
-        (villager: Villager) => villager.species.toLowerCase().includes(query)
-    );
+    let results: Villager[];
+    if (query === 'birthday') {
+        $('search_bar').className = 'birthday';
+        results = villagersDB.filter(
+            (villager: Villager) => birthdayIsToday(villager.birthday)
+        );
+    } else {
+        const villagersFilteredOnName = villagersDB.filter(
+            (villager: Villager) => villager.name.toLowerCase().includes(query)
+        );
+        const villagersFilteredOnPersonality = villagersDB.filter(
+            (villager: Villager) => villager.personality.toLowerCase().includes(query)
+        );
+        const villagersFilteredOnSpecies = villagersDB.filter(
+            (villager: Villager) => villager.species.toLowerCase().includes(query)
+        );
 
-    let results: Villager[] = [...villagersFilteredOnName, ...villagersFilteredOnPersonality, ...villagersFilteredOnSpecies];
+        results = [...villagersFilteredOnName, ...villagersFilteredOnPersonality, ...villagersFilteredOnSpecies];
+    }
+
     results = removeDuplicates(results);
 
     SearchView.updateView(results);
