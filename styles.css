@@ -241,7 +241,7 @@ search {
     width: 40px;
 }
 
-#emptylists_prompt {
+#emptylists_prompt, noscript, .loading {
     color: orange;
     display: flex;
     align-items: center;
@@ -253,6 +253,14 @@ search {
     color: orange;
     align-items: center;
     justify-content: center;
+}
+noscript {
+    width: 400px;
+    color: red;
+    font-weight: bold;
+}
+.loading {
+    padding-top: 10px;
 }
 
 /* Profile */
