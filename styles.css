@@ -318,5 +318,6 @@ select, option {
     border: solid orange;
     float: left;
     height: 200px;
+    width: 200px;
     padding: 0;
 }
