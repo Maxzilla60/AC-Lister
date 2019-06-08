@@ -47,6 +47,7 @@ export default class ProfileView {
             button.onclick = () => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
             button.className = 'clickable fa fa-minus';
             button.title = 'Remove from list';
+            button.disabled = false;
         } else {
             button.onclick = () => { addVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
             button.className = 'clickable fa fa-plus';
