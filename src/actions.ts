@@ -6,6 +6,7 @@ import ListsView from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
 import { saveAs } from 'file-saver';
+import confetti from 'canvas-confetti';
 
 export const villagers = villagersDB;
 
@@ -77,9 +78,14 @@ export function openImportDialog(): void {
     $('file_input').click();
 }
 
-// TODO
-export function openViewer(): void {
-    // window.location.href = 'viewer/index.html';
+export function birthdayHurray(): void {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: {y: 0.6},
+        colors: ['#FFC0CB'],
+    });
+    new Audio('./happybirthday.mp3').play();
 }
 
 // Export lists as .json file

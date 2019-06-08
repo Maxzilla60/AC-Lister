@@ -1,4 +1,4 @@
-import { addVillager, removeVillager } from '../actions';
+import { addVillager, removeVillager, birthdayHurray } from '../actions';
 import ButtonBuilder from '../components/ButtonBuilder';
 import IconBuilder from '../components/IconBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
@@ -152,7 +152,7 @@ export default class ProfileView {
     }
 
     private static aBirthdayEasterEggButton(villagerName: string): HTMLButtonElement {
-        return new ButtonBuilder(() => { new Audio('./happybirthday.mp3').play(); })
+        return new ButtonBuilder(birthdayHurray)
             .asFontAwesome('fa-birthday-cake')
             .withId('birthday_button')
             .withTitle(`Happy birthday to ${villagerName}!`)
@@ -161,9 +161,9 @@ export default class ProfileView {
     }
 
     private static aBirthdayEasterEggTextNode(birthday: string): Text | HTMLSpanElement {
-            return new SpanBuilder(birthday)
-                .withClassNames('birthday')
-                .build();
+        return new SpanBuilder(birthday)
+            .withClassNames('birthday')
+            .build();
     }
 
     private static anNASpanElement(): HTMLSpanElement {
