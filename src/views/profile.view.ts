@@ -77,15 +77,6 @@ export default class ProfileView {
         profileImageElement.src = `./villager_heads/${villager.head}`;
     }
 
-    private static aProfileInfoListItem(iconName: string, iconTitle: string, infoValue: string): HTMLLIElement {
-        return new ListItemBuilder()
-            .asFontAwesome(iconName, iconTitle)
-            .appendChild(
-                this.aTextNodeOrNAElement(infoValue)
-            )
-            .build();
-    }
-
     private static appendVillagerNameInfo(villagerName: string): void {
         $('villager_information').appendChild(
             this.aProfileInfoListItem('fa-tag', 'Name', villagerName)
@@ -107,9 +98,10 @@ export default class ProfileView {
         );
     }
     private static appendVillagerBirthdayInfo(villager: Villager) {
-        // TODO: Birthday Easter Egg
         $('villager_information').appendChild(
-            this.aProfileInfoListItem('fa-birthday-cake', 'Birthday', villager.birthday)
+            birthdayIsToday(villager.birthday) ?
+                this.aBirthdayEasterEggInfoListItem(villager) :
+                this.aProfileInfoListItem('fa-birthday-cake', 'Birthday', villager.birthday)
         );
     }
 
@@ -129,6 +121,15 @@ export default class ProfileView {
             .build();
     }
 
+    private static aProfileInfoListItem(iconName: string, iconTitle: string, infoValue: string): HTMLLIElement {
+        return new ListItemBuilder()
+            .asFontAwesome(iconName, iconTitle)
+            .appendChild(
+                this.aTextNodeOrNAElement(infoValue)
+            )
+            .build();
+    }
+
     private static aListDropdownOption(list: VillagerList, isSelected: boolean): HTMLOptionElement {
         const dropdownOption: HTMLOptionElement = document.createElement('option');
         dropdownOption.innerHTML = list.title;
@@ -141,33 +142,28 @@ export default class ProfileView {
         return text === '' ? this.anNASpanElement() : aTextNode(text);
     }
 
-    private static aBirthdayIcon(villager: Villager): HTMLButtonElement | HTMLElement {
-        if (birthdayIsToday(villager.birthday)) {
-            return this.aBirthdayButton(villager.name);
-        } else {
-            return new IconBuilder('fa-birthday-cake')
-                .withTitle('Birthday')
-                .build();
-        }
+    private static aBirthdayEasterEggInfoListItem(villager: Villager): HTMLLIElement {
+        return new ListItemBuilder()
+            .withChildren(
+                this.aBirthdayEasterEggButton(villager.name),
+                this.aBirthdayEasterEggTextNode(villager.birthday),
+            )
+            .build();
     }
 
-    private static aBirthdayTextNode(birthday: string): Text | HTMLSpanElement {
-        if (birthdayIsToday(birthday)) {
+    private static aBirthdayEasterEggButton(villagerName: string): HTMLButtonElement {
+        return new ButtonBuilder(() => { new Audio('./happybirthday.mp3').play(); })
+            .asFontAwesome('fa-birthday-cake')
+            .withId('birthday_button')
+            .withTitle(`Happy birthday to ${villagerName}!`)
+            .withClassNames('clickable')
+            .build();
+    }
+
+    private static aBirthdayEasterEggTextNode(birthday: string): Text | HTMLSpanElement {
             return new SpanBuilder(birthday)
                 .withClassNames('birthday')
                 .build();
-        } else {
-            return this.aTextNodeOrNAElement(birthday);
-        }
-    }
-
-    private static aBirthdayButton(villagerName: string): HTMLButtonElement {
-        return new ButtonBuilder(() => { new Audio('./happybirthday.mp3').play(); })
-            .asFontAwesome('fa-birthday-cake')
-            .withTitle(`Happy birthday to ${villagerName}!`)
-            .withClassNames('clickable')
-            .withColor('hotpink')
-            .build();
     }
 
     private static anNASpanElement(): HTMLSpanElement {

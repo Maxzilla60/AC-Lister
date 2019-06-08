@@ -93,6 +93,13 @@ a.clickable {
     padding: 0;
 }
 
+.birthday, #birthday_button {
+    color: hotpink;
+    display: inline;
+    font-weight: bold;
+    padding: 0;
+}
+
 /* Header */
 header {
     text-align: center;
@@ -281,14 +288,21 @@ select, option {
 #villager_information {
     color: brown;
     padding: 5px;
+    margin-left: 20px;
 }
 
 #villager_information > li {
     margin-bottom: 5px;
 }
 
-#villager_information > li > .fa-li {
-    position: initial !important;
+#villager_information > li > label {
+    text-align: center;
+    padding-top: 5px;
+}
+
+#villager_information > li > label,
+#birthday_button {
+    margin-right: 10px;
 }
 
 .fa-li > .fa {
