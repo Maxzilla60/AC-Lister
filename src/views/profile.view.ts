@@ -8,6 +8,7 @@ import { Villager } from '../models/villager.model';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage } from '../util/util';
+import SpanBuilder from '../components/SpanBuilder';
 
 export default class ProfileView {
     public static updateView(villager: Villager, fromListId: string): void {
@@ -78,11 +79,11 @@ export default class ProfileView {
 
     private static aProfileInfoListItem(iconName: string, iconTitle: string, infoValue: string): HTMLLIElement {
         return new ListItemBuilder()
-                .asFontAwesome(iconName, iconTitle)
-                .appendChild(
-                    this.aTextNode(infoValue)
-                )
-                .build();
+            .asFontAwesome(iconName, iconTitle)
+            .appendChild(
+                this.aTextNode(infoValue)
+            )
+            .build();
     }
 
     private static appendVillagerNameInfo(villagerName: string): void {
@@ -153,10 +154,9 @@ export default class ProfileView {
 
     private static aBirthdayTextNode(birthday: string): Text | HTMLSpanElement {
         if (birthdayIsToday(birthday)) {
-            const birthdaySpan: HTMLSpanElement = document.createElement('span');
-            birthdaySpan.innerHTML = birthday;
-            birthdaySpan.className = 'birthday';
-            return birthdaySpan;
+            return new SpanBuilder(birthday)
+                .withClassNames('birthday')
+                .build();
         } else {
             return this.aTextNode(birthday);
         }
@@ -172,10 +172,9 @@ export default class ProfileView {
     }
 
     private static anNASpanElement(): HTMLSpanElement {
-        const naElement: HTMLSpanElement = document.createElement('span');
-        naElement.className = 'na';
-        naElement.innerHTML = 'N/A';
-        return naElement;
+        return new SpanBuilder('N/A')
+            .withClassNames('na')
+            .build();
     }
 
     private static fadeTransition() {
@@ -194,4 +193,3 @@ export default class ProfileView {
         }, 100); */
     }
 }
-
