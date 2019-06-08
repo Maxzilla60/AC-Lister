@@ -25,10 +25,11 @@ export default class ListItemBuilder extends HTMLElementBuilder<HTMLLIElement> {
     private aFontAwesomeElement(): HTMLSpanElement {
         const label = document.createElement('label');
         // TODO: label.htmlFor
-        const icon = new IconBuilder(this.fontAwesomeIconName)
-            .withTitle(this.fontAwesomeIconTitle)
-            .build();
-        label.appendChild(icon);
+        label.appendChild(
+            new IconBuilder(this.fontAwesomeIconName)
+                .withTitle(this.fontAwesomeIconTitle)
+                .build()
+        );
         return label;
     }
 }

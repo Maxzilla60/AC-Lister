@@ -46,7 +46,6 @@ img {
     font-size: 16px !important;
 }
 
-/* TODO: Use attribute */
 .clickable:disabled {
     background-color: floralwhite;
     border: none;
