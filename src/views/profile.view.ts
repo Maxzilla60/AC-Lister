@@ -7,7 +7,7 @@ import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
-import { birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage } from '../util/util';
+import { birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage, aTextNode } from '../util/util';
 import SpanBuilder from '../components/SpanBuilder';
 
 export default class ProfileView {
@@ -81,7 +81,7 @@ export default class ProfileView {
         return new ListItemBuilder()
             .asFontAwesome(iconName, iconTitle)
             .appendChild(
-                this.aTextNode(infoValue)
+                this.aTextNodeOrNAElement(infoValue)
             )
             .build();
     }
@@ -138,8 +138,8 @@ export default class ProfileView {
         return dropdownOption;
     }
 
-    private static aTextNode(text: string): Text | HTMLSpanElement {
-        return text === '' ? this.anNASpanElement() : document.createTextNode(text);
+    private static aTextNodeOrNAElement(text: string): Text | HTMLSpanElement {
+        return text === '' ? this.anNASpanElement() : aTextNode(text);
     }
 
     private static aBirthdayIcon(villager: Villager): HTMLButtonElement | HTMLElement {
@@ -158,7 +158,7 @@ export default class ProfileView {
                 .withClassNames('birthday')
                 .build();
         } else {
-            return this.aTextNode(birthday);
+            return this.aTextNodeOrNAElement(birthday);
         }
     }
 

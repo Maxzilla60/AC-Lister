@@ -13,6 +13,10 @@ export function trimName(name: string): string {
     return name.replace(' (2)', '');
 }
 
+export function aTextNode(text: string): Text {
+    return document.createTextNode(text);
+}
+
 export function aBreakElement(): HTMLElement {
     return document.createElement('br');
 }
