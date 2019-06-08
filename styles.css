@@ -248,19 +248,29 @@ search {
     padding: 10px;
     padding-top: 5px;
 }
+
 #emptylists_newlist_button {
     display: flex;
     color: orange;
     align-items: center;
     justify-content: center;
 }
+
 noscript {
     width: 400px;
     color: red;
     font-weight: bold;
 }
+
 .loading {
     padding-top: 10px;
+}
+
+.loading > .fa {
+    width: initial;
+    height: initial;
+    margin-right: 5px;
+    display: block;
 }
 
 /* Profile */
