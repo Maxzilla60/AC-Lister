@@ -7,6 +7,7 @@ import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { clearElement, getElement as $, trimName } from '../util/util';
 import ProfileView from './profile.view';
+import InputFieldBuilder from '../components/InputFieldBuilder';
 
 export default class ListsView {
     public static updateView(withListToRenameId?: string): void {
@@ -85,15 +86,12 @@ export default class ListsView {
     }
 
     private static aListTitleInputElement(list: VillagerList): HTMLInputElement {
-        const listTitleInputElement: HTMLInputElement = document.createElement('input');
-        listTitleInputElement.onchange = () => {
-            applyTitle(list.id, this.getRenameListTitleValue());
-        };
-        listTitleInputElement.id = 'rename_bar';
-        listTitleInputElement.type = 'text';
-        listTitleInputElement.value = list.title;
-        listTitleInputElement.maxLength = 30;
-        return listTitleInputElement;
+        return new InputFieldBuilder('text')
+            .onChange(() => { applyTitle(list.id, this.getRenameListTitleValue()); })
+            .withValue(list.title)
+            .withMaxLength(30)
+            .withId('rename_bar')
+            .build();
     }
 
     private static aListRenameConfirmButton(list: VillagerList): HTMLButtonElement {
