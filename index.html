@@ -37,17 +37,17 @@
     </header>
 
     <h2>Search</h2>
-    <div id="search_container">
+    <section id="search_container">
         <search>
             <input id="search_bar" placeholder="Search" type="search" autofocus="">
             <button id="search_button" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
         </search>
         <div id="search_results">
         </div>
-    </div>
+    </section>
 
     <h2>Lists</h2>
-    <main>
+    <section id="main_container">
         <div class="menu">
             <button id="newlist_button" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
             <button id="exportlists_button" title="Save lists" class="clickable fa fa-upload" aria-hidden="true"></button>
@@ -61,10 +61,10 @@
                 <div id="emptylists_prompt" class="">Click<i id="emptylists_newlist_button" title="Add list" class="clickable fa fa-plus" style="color: orange;" aria-hidden="true"></i>to make a new list!</div>
             </ul>
         </div>
-    </main>
+    </section>
 
     <h2>Profile</h2>
-    <div id="profile_container">
+    <section id="profile_container">
         <div class="menu">
             <select id="list_select"></select>
             <button id="add_remove_button" aria-hidden="true" disabled="" title="Add to list" class="fa fa-plus clickable"></button>
@@ -73,7 +73,7 @@
             <ul id="villager_information"></ul>
         </summary>
         <img title="Image not available (yet)" src="villager_heads/wip.jpg" id="profile_image">
-    </div>
+    </section>
 </body>
 
 <script src="./src/init.ts" type="text/javascript"></script>

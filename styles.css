@@ -166,7 +166,7 @@ search {
 }
 
 /* Lists */
-main {
+#main_container {
     padding: 5px;
     background-color: floralwhite;
     border: solid orange;
@@ -176,15 +176,15 @@ main {
     position: relative;
 }
 
-main > .menu {
+#main_container > .menu {
     position: sticky;
     justify-content: flex-end;
     z-index: 1;
     pointer-events: none;
 }
 
-main > .menu > a,
-main > .menu > button {
+#main_container > .menu > a,
+#main_container > .menu > button {
     pointer-events: all;
 }
 

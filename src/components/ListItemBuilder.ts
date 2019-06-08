@@ -25,12 +25,12 @@ export default class ListItemBuilder extends HTMLElementBuilder<HTMLLIElement> {
     }
 
     private aFontAwesomeElement(): HTMLSpanElement {
-        const span = document.createElement('span');
-        span.className = 'fa-li';
+        const label = document.createElement('label');
+        // TODO: label.htmlFor
         const icon = new IconBuilder(this.fontAwesomeIconName)
             .withTitle(this.fontAwesomeIconTitle)
             .build();
-        span.appendChild(icon);
-        return span;
+        label.appendChild(icon);
+        return label;
     }
 }

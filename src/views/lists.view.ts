@@ -113,13 +113,16 @@ export default class ListsView {
         return listElement;
     }
 
-    private static aMemberElement(member: string, listId: string): HTMLButtonElement {
-        return new ButtonBuilder(() => { loadProfile(member, listId); })
-            .withClassNames('clickable', 'list_member')
-            .appendChild(
-                new ImageBuilder(`./villager_icons/${member}.gif`)
-                    .withTitle(trimName(member))
-                    .build())
+    private static aMemberElement(member: string, listId: string): HTMLLIElement {
+        return new ListItemBuilder().appendChild(
+                new ButtonBuilder(() => { loadProfile(member, listId); })
+                    .withClassNames('clickable', 'list_member')
+                    .appendChild(
+                        new ImageBuilder(`./villager_icons/${member}.gif`)
+                            .withTitle(trimName(member))
+                            .build())
+                    .build()
+            )
             .build();
     }
 
