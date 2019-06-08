@@ -114,11 +114,10 @@ export default class ProfileView {
     }
 
     private static aWikiIconButton(wikiLink: string): HTMLButtonElement {
-        // TODO: asFontAwesome should recieve a boolean for 'fab' instead of 'fa'
         return new ButtonBuilder(() => { window.open(wikiLink, '_blank'); })
-            // .asFontAwesome('fa-wikipedia-w', true)
+            .asFontAwesome('fa-wikipedia-w', true)
             .withTitle('Open Wiki page')
-            .withClassNames('clickable', 'fab', 'fa-wikipedia-w')
+            .withClassNames('clickable')
             .build();
     }
 

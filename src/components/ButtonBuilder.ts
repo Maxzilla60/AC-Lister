@@ -7,8 +7,11 @@ export default class ButtonBuilder extends HTMLElementBuilder<HTMLButtonElement>
         this.element.onclick = onclick;
     }
 
-    public asFontAwesome(iconName: string): ButtonBuilder {
-        this.withClassNames('fa', iconName);
+    public asFontAwesome(iconName: string, brandIcon: boolean = false): ButtonBuilder {
+        this.withClassNames(
+            brandIcon ? 'fab' : 'fa',
+            iconName,
+        );
         this.element.setAttribute('aria-hidden', 'true');
         return this;
     }
