@@ -25,11 +25,9 @@ export default class ListItemBuilder extends HTMLElementBuilder<HTMLLIElement> {
     private aFontAwesomeElement(): HTMLSpanElement {
         const label = document.createElement('label');
         // TODO: label.htmlFor
-        label.appendChild(
-            new IconBuilder(this.fontAwesomeIconName)
-                .withTitle(this.fontAwesomeIconTitle)
-                .build()
-        );
+        label.className = `fa ${this.fontAwesomeIconName}`;
+        label.title = this.fontAwesomeIconTitle;
+        label.setAttribute('aria-hidden', 'true');
         return label;
     }
 }
