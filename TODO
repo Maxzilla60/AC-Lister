@@ -12,7 +12,7 @@ Todo:
   ✔ Component Builders @done(19-05-29 12:02)
   ✔ Font Awesome Dependency @done(19-06-07 21:39)
   ☐ CSS Redesign
-    ☐ HTML-first without any CSS @started(19-06-07 11:47)
+    ✔ HTML-first without any CSS @done(19-06-08 20:54)
     ☐ CSS-Grid
       https://webdesign.tutsplus.com/tutorials/how-to-build-an-off-canvas-navigation-with-css-grid--cms-28191
     ☐ Aria
