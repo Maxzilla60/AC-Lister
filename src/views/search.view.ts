@@ -11,8 +11,14 @@ export default class SearchView {
         const searchResultsElement = $('search_results');
         clearElement(searchResultsElement);
 
-        for (const villager of resultList) {
-            searchResultsElement.appendChild(this.aVillagerSearchResultButton(villager));
+        if (resultList.length <= 0) {
+            searchResultsElement.appendChild(
+                this.aNoResultsElement()
+            );
+        } else {
+            for (const villager of resultList) {
+                searchResultsElement.appendChild(this.aVillagerSearchResultButton(villager));
+            }
         }
 
         this.fadeTransition();
@@ -38,6 +44,13 @@ export default class SearchView {
         return new ImageBuilder(`./villager_icons/${villager.id}.gif`)
             .withAlt(villager.name)
             .withFloatLeft()
+            .build();
+    }
+
+    private static aNoResultsElement(): HTMLDivElement {
+        return new DivisionBuilder()
+            .withInnerHTML('No results found')
+            .withId('no_results')
             .build();
     }
 

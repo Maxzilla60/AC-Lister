@@ -155,6 +155,12 @@ search {
     height: 200px;
 }
 
+#no_results {
+    padding: 10px;
+    color: orange;
+    text-align: center;
+}
+
 .result {
     color: brown;
     display: flex;
