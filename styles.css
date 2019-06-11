@@ -221,14 +221,6 @@ search {
     padding-inline-start: 0;
 }
 
-.list:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.list_header {
-    margin-bottom: 5px;
-}
-
 .list_title {
     color: brown;
     font-weight: bold;
