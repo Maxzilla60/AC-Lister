@@ -1,15 +1,15 @@
 import { applyTitle, deleteList, loadProfile, newList, renameList } from '../actions';
 import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
+import IconBuilder from '../components/IconBuilder';
 import ImageBuilder from '../components/ImageBuilder';
+import InputFieldBuilder from '../components/InputFieldBuilder';
+import ListElementBuilder from '../components/ListElementBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
-import { clearElement, getElement as $, trimName, aTextNode } from '../util/util';
+import { aTextNode, clearElement, getElement as $, trimName } from '../util/util';
 import ProfileView from './profile.view';
-import InputFieldBuilder from '../components/InputFieldBuilder';
-import ListElementBuilder from '../components/ListElementBuilder';
-import IconBuilder from '../components/IconBuilder';
 
 export default class ListsView {
     public static updateView(withListToRenameId?: string): void {
@@ -40,6 +40,7 @@ export default class ListsView {
                     this.aListHeaderSection(list, renameEnabled),
                     this.aListMembersSection(list.id, list.members),
                 )
+                .withClassNames('list')
                 .build()
         );
     }
@@ -59,6 +60,7 @@ export default class ListsView {
             ];
         }
         return new DivisionBuilder()
+            .withClassNames('list_header')
             .withChildren(...headerChildren)
             .build();
     }
@@ -74,7 +76,7 @@ export default class ListsView {
         return new ButtonBuilder(() => { deleteList(list.id); })
             .asFontAwesome('fa-trash')
             .withTitle('Delete list')
-            .withClassNames('clickable')
+            .withClassNames('listdelete_button', 'clickable')
             .build();
     }
 
@@ -82,7 +84,7 @@ export default class ListsView {
         return new ButtonBuilder(() => { renameList(list.id); })
             .asFontAwesome('fa-edit')
             .withTitle('Edit list title')
-            .withClassNames('clickable')
+            .withClassNames('listrename_button', 'clickable')
             .build();
     }
 
@@ -98,6 +100,7 @@ export default class ListsView {
     private static aListRenameConfirmButton(list: VillagerList): HTMLButtonElement {
         return new ButtonBuilder(() => { applyTitle(list.id, this.getRenameListTitleValue()); })
             .asFontAwesome('fa-check')
+            .withId('confirmrename_button')
             .withTitle('Edit name')
             .withClassNames('clickable')
             .build();
