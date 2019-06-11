@@ -5,16 +5,20 @@ describe('Lists Section', () => {
 
     beforeEach(() => {
         cy.restoreLocalStorage();
-        cy.visitPage();
     });
 
     afterEach(() => {
         cy.saveLocalStorage();
     });
 
+    it('should visit the page', () => {
+        cy.visitPage();
+    });
+
     it('should create new list', () => {
+        cy.visitPage();
         cy.get('#newlist_button').click();
-        cy.get('.fa-check').click();
+        cy.get('#confirmrename_button').click();
 
         cy.get('.list').should('contain', newList);
     });
@@ -22,7 +26,7 @@ describe('Lists Section', () => {
     it('should create new list with name', () => {
         cy.get('#newlist_button').click();
         cy.get('#rename_bar').type(listName);
-        cy.get('#rename_bar').type('{enter}');
+        cy.get('#confirmrename_button').click();
 
         cy.get('.list').should('have.length', 2);
         cy.get('.list').should('contain', listName);
@@ -31,7 +35,7 @@ describe('Lists Section', () => {
     it('should rename list', () => {
         cy.contains(newList)
             .siblings()
-            .get('.fa-pencil')
+            .get('.listrename_button')
             .first()
             .click();
 
@@ -46,11 +50,18 @@ describe('Lists Section', () => {
     it('should delete list', () => {
         cy.contains(otherListName)
             .siblings()
-            .get('.fa-trash')
+            .get('.listdelete_button')
             .first()
             .click();
 
         cy.get('.list').should('have.length', 1);
         cy.get('.list').should('not.contain', otherListName);
+    });
+
+    it('should clear all lists', () => {
+        cy.get('#clearlists_button').click();
+
+        cy.get('.list').should('have.length', 0);
+        cy.get('#emptylists_prompt').should('exist');
     });
 });
