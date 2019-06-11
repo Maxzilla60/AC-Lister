@@ -7,9 +7,12 @@ export default abstract class HTMLElementBuilder<T extends HTMLElement> {
     }
 
     public build(): T {
+        this.beforeBuild();
         this.element.className = this.classNames.join(' ');
         return this.element;
     }
+
+    public beforeBuild(): void { }
 
     public withTitle(title: string): HTMLElementBuilder<T> {
         this.element.title = title;
