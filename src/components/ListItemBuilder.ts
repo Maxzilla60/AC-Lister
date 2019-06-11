@@ -1,5 +1,4 @@
 import HTMLElementBuilder from './HTMLElementBuilder';
-import IconBuilder from './IconBuilder';
 
 export default class ListItemBuilder extends HTMLElementBuilder<HTMLLIElement> {
     private fontAwesomeIconName: string = null;
@@ -13,13 +12,12 @@ export default class ListItemBuilder extends HTMLElementBuilder<HTMLLIElement> {
         return this;
     }
 
-    public build(): HTMLLIElement {
+    public beforeBuild(): void {
         if (this.fontAwesomeIconName) {
             this.element.prepend(
                 this.aFontAwesomeElement()
             );
         }
-        return this.element;
     }
 
     private aFontAwesomeElement(): HTMLSpanElement {
