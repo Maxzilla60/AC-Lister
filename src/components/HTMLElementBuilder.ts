@@ -45,36 +45,6 @@ export default abstract class HTMLElementBuilder<T extends HTMLElement> {
         return this;
     }
 
-    public withPadding(padding: number): HTMLElementBuilder<T> {
-        this.element.style.padding = padding.toString();
-        return this;
-    }
-
-    public withPaddingLeft(padding: number): HTMLElementBuilder<T> {
-        this.element.style.paddingLeft = `${padding}px`;
-        return this;
-    }
-
-    public withPaddingBottom(padding: number): HTMLElementBuilder<T> {
-        this.element.style.paddingBottom = `${padding}px`;
-        return this;
-    }
-
-    public withPaddingTop(padding: number): HTMLElementBuilder<T> {
-        this.element.style.paddingTop = `${padding}px`;
-        return this;
-    }
-
-    public withColor(color: string): HTMLElementBuilder<T> {
-        this.element.style.color = color;
-        return this;
-    }
-
-    public withDisplay(display: 'inline-block' | 'none' | ''): HTMLElementBuilder<T> {
-        this.element.style.display = display;
-        return this;
-    }
-
     public withFloatLeft(): HTMLElementBuilder<T> {
         this.element.style.cssFloat = 'left';
         return this;
