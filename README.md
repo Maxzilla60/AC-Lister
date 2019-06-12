@@ -2,6 +2,8 @@
 Easily search, view and assemble lists of your favorite Animal Crossing villagers!
 
 ## Version 2.0!
+### Check out the progress on 2.0 via this **[Trello board](https://trello.com/b/DD4k8ncM)**!
+
  - [x] Build the website with a simple web bundler, **[Parcel](https://parceljs.org)**.
  - [x] Refactor the JavaScript code to **[TypeScript](https://www.typescriptlang.org)**.
  - [ ] Implement integration tests with **[Cypress](https://www.cypress.io)**.
