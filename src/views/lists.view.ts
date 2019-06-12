@@ -36,6 +36,8 @@ export default class ListsView {
     private static appendListSection(list: VillagerList, renameEnabled: boolean = false): void {
         $('lists').appendChild(
             new ListItemBuilder()
+                // TODO: Update tests to use the data- attribute
+                .withDataAttribute('id', list.id)
                 .withChildren(
                     this.aListHeaderSection(list, renameEnabled),
                     this.aListMembersSection(list.id, list.members),

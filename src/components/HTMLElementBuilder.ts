@@ -45,6 +45,11 @@ export default abstract class HTMLElementBuilder<T extends HTMLElement> {
         return this;
     }
 
+    public withDataAttribute(attributeName: string, value: string): HTMLElementBuilder<T> {
+        this.element.setAttribute(`data-${attributeName}`, value);
+        return this;
+    }
+
     public withFloatLeft(): HTMLElementBuilder<T> {
         this.element.style.cssFloat = 'left';
         return this;
