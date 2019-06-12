@@ -233,7 +233,7 @@ search {
     flex-flow: wrap;
 }
 
-.list_member {
+.member_button {
     border-radius: 50%;
     height: 40px;
     width: 40px;

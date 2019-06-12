@@ -56,7 +56,7 @@ describe('Profile Section', () => {
 
         cy.contains(oneListTitle)
             .parent().siblings()
-            .find('li')
+            .find('.list_member')
             .should('have.length', superHeroVillagers.length);
     });
 
@@ -80,12 +80,12 @@ describe('Profile Section', () => {
 
             cy.contains(firstListTitle)
                 .parent().siblings()
-                .find('li')
+                .find('.list_member')
                 .should('have.attr', 'title')
                 .and('equal', randomVillager.name);
             cy.contains(secondListTitle)
                 .parent().siblings()
-                .find('li')
+                .find('.list_member')
                 .should('have.attr', 'title')
                 .and('equal', randomVillager.name);
         });
@@ -106,7 +106,7 @@ describe('Profile Section', () => {
 
         cy.contains(firstListTitle)
             .parent().siblings()
-            .find('li')
+            .find('.list_member')
             .should('have.length', 0);
     });
 });

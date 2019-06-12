@@ -118,6 +118,7 @@ export default class ListsView {
     private static aMemberElement(member: string, listId: string): HTMLLIElement {
         return new ListItemBuilder()
             .withTitle(member)
+            .withClassNames('list_member')
             .appendChild(
                 this.aMemberButton(member, listId)
             )
@@ -126,7 +127,7 @@ export default class ListsView {
 
     private static aMemberButton(member: string, listId: string): Node {
         return new ButtonBuilder(() => { loadProfile(member, listId); })
-            .withClassNames('clickable', 'list_member')
+            .withClassNames('clickable', 'member_button')
             .appendChild(this.aMemberImage(member))
             .build();
     }

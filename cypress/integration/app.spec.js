@@ -28,8 +28,6 @@ describe('App', () => {
         cy.get('.list').should('contain', listName2);
     });
 
-    // TODO: List member image shouldn't be the DOM element that has the .list_member class
-    // TODO: li.list_member & button.member_button
     it('should find and add favourite villagers', () => {
         cy.get('#search_bar').clear().type('Scoot');
         cy.get('#search_results').get('.result').contains('Scoot').click();

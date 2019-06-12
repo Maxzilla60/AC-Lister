@@ -24,6 +24,7 @@ export default abstract class HTMLElementBuilder<T extends HTMLElement> {
         return this;
     }
 
+    // TODO: Implement isClickable?
     public withClassNames(...classnames: string[]): HTMLElementBuilder<T> {
         this.classNames = [...new Set([...this.classNames, ...classnames])];
         return this;
