@@ -5,8 +5,8 @@ import villagersDB from './util/villagers.json';
 import ListsView from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
-import { saveAs } from 'file-saver';
 import confetti from 'canvas-confetti';
+import { saveAs } from 'file-saver';
 
 export const villagers = villagersDB;
 
@@ -82,7 +82,7 @@ export function birthdayHurray(): void {
     confetti({
         particleCount: 100,
         spread: 70,
-        origin: {y: 0.6},
+        origin: { y: 0.6 },
         colors: ['#FFC0CB'],
     });
     new Audio('./happybirthday.mp3').play();
