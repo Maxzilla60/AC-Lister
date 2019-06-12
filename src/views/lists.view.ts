@@ -117,6 +117,7 @@ export default class ListsView {
 
     private static aMemberElement(member: string, listId: string): HTMLLIElement {
         return new ListItemBuilder()
+            .withTitle(member)
             .appendChild(
                 this.aMemberButton(member, listId)
             )
