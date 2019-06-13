@@ -1,5 +1,6 @@
 import { clearAllLists, exportLists, importListsFromFile, loadWipProfileImage, newList, observeLazyLoadedImages, openImportDialog, percentageOfVillagersWithProfileImage, updateAddVillagerButton, updateSearch, viewLists } from './actions';
 import { getElement as $ } from './util/util';
+import villagersDB from './util/villagers.json';
 
 function init(): void {
     bindEvents();
@@ -7,6 +8,7 @@ function init(): void {
     viewLists();
     observeLazyLoadedImages();
     exposeHelperFunctionsToConsole();
+    exposeVillagersDB();
 }
 
 function bindEvents(): void {
@@ -24,6 +26,11 @@ function bindEvents(): void {
 function exposeHelperFunctionsToConsole() {
     // @ts-ignore
     window.percentageOfVillagersWithProfileImage = percentageOfVillagersWithProfileImage;
+}
+
+function exposeVillagersDB() {
+    // @ts-ignore
+    window.villagers = villagersDB;
 }
 
 init();
