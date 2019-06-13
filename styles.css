@@ -17,14 +17,13 @@ body {
 h2 {
     padding: 0;
     margin-bottom: 10px;
-
     display: none;
 }
 
 input {
     -webkit-box-flex: 1;
-        -ms-flex: auto;
-            flex: auto;
+    -ms-flex: auto;
+    flex: auto;
     border: solid orange;
     padding: 5px;
     border-radius: 8px;
@@ -76,7 +75,7 @@ img {
 .clickable:disabled:hover, .clickable:disabled:focus {
     background-color: floralwhite;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     color: gray;
     cursor: initial;
     position: initial;
@@ -118,6 +117,7 @@ h1 {
     margin: 0;
     padding: 10px;
 }
+
 h1 > .fa {
     font-size: 35px !important;
     color: brown;
@@ -161,8 +161,8 @@ search {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     overflow-y: scroll;
     height: 200px;
 }
@@ -179,14 +179,14 @@ search {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     cursor: pointer;
     padding: 0;
 }
 
 .result:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .result:active {
@@ -212,8 +212,8 @@ search {
     position: -webkit-sticky;
     position: sticky;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     z-index: 1;
     pointer-events: none;
 }
@@ -236,15 +236,15 @@ search {
     padding: 0;
     list-style: none;
     -webkit-margin-before: 0;
-            margin-block-start: 0;
+    margin-block-start: 0;
     -webkit-margin-after: 0;
-            margin-block-end: 0;
+    margin-block-end: 0;
     -webkit-margin-start: 0;
-            margin-inline-start: 0;
+    margin-inline-start: 0;
     -webkit-margin-end: 0;
-            margin-inline-end: 0;
+    margin-inline-end: 0;
     -webkit-padding-start: 0;
-            padding-inline-start: 0;
+    padding-inline-start: 0;
 }
 
 .list_title {
@@ -259,7 +259,7 @@ search {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: wrap;
-        flex-flow: wrap;
+    flex-flow: wrap;
 }
 
 .member_button {
@@ -274,8 +274,8 @@ search {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 10px;
     padding-top: 5px;
 }
@@ -286,11 +286,11 @@ search {
     display: flex;
     color: orange;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 noscript {
@@ -322,15 +322,15 @@ noscript {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 #profile_container > .menu {
     margin: 5px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 select, option {
@@ -345,21 +345,21 @@ select, option {
 
 #villager_information_container {
     -webkit-box-flex: 1;
-        -ms-flex: auto;
-            flex: auto;
+    -ms-flex: auto;
+    flex: auto;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 #villager_information {
