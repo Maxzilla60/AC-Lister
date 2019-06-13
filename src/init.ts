@@ -7,6 +7,7 @@ function init(): void {
     updateSearch();
     viewLists();
     initImageLazyLoading();
+    exposeHelperFunctionsToConsole();
 }
 
 function bindEvents(): void {
@@ -18,7 +19,6 @@ function bindEvents(): void {
     $('importlists_button').onclick = openImportDialog;
     $('file_input').onchange = importListsFromFile;
     $('list_select').onchange = updateAddVillagerButton;
-    exposeHelperFunctionsToConsole();
 }
 
 function exposeHelperFunctionsToConsole() {
