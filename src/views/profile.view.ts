@@ -7,7 +7,7 @@ import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
-import { aTextNode, birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage } from '../util/util';
+import { aTextNode, birthdayIsToday, clearElement, getElement as $, getListSelectValue } from '../util/util';
 
 export default class ProfileView {
     public static updateView(villager: Villager, fromListId: string): void {
@@ -71,9 +71,7 @@ export default class ProfileView {
 
     private static updateProfileImage(villager: Villager): void {
         const profileImageElement: HTMLImageElement = $('profile_image') as HTMLImageElement;
-        profileImageElement.alt = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
-        profileImageElement.title = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
-        profileImageElement.src = `./villager_heads/${villager.head}`;
+        profileImageElement.src = `./villager_heads/${villager.id}.jpg`;
     }
 
     private static appendVillagerNameInfo(villagerName: string): void {

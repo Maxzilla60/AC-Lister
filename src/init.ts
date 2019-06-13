@@ -1,4 +1,4 @@
-import { clearAllLists, exportLists, importListsFromFile, newList, observeLazyLoadedImages, openImportDialog, percentageOfVillagersWithProfileImage, updateAddVillagerButton, updateSearch, viewLists } from './actions';
+import { clearAllLists, exportLists, importListsFromFile, loadWipProfileImage, newList, observeLazyLoadedImages, openImportDialog, percentageOfVillagersWithProfileImage, updateAddVillagerButton, updateSearch, viewLists } from './actions';
 import { getElement as $ } from './util/util';
 
 function init(): void {
@@ -10,6 +10,7 @@ function init(): void {
 }
 
 function bindEvents(): void {
+    $('profile_image').onerror = loadWipProfileImage;
     $('search_bar').oninput = updateSearch;
     $('search_button').onclick = updateSearch;
     $('newlist_button').onclick = newList;

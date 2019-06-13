@@ -96,6 +96,12 @@ export function birthdayHurray(): void {
     new Audio('./happybirthday.mp3').play();
 }
 
+export function loadWipProfileImage() {
+    this.src = './villager_heads/wip.jpg';
+    this.alt = 'Profile image not available (yet)';
+    this.title = 'Profile image not available (yet)';
+}
+
 // Export lists as .json file
 export function exportLists(): void {
     const blob = new Blob([JSON.stringify(stateService.getLists(), null, 2)], { type: 'text/plain' });
