@@ -1,14 +1,13 @@
-import { addVillager, removeVillager, birthdayHurray } from '../actions';
+import { addVillager, birthdayHurray, removeVillager } from '../actions';
 import ButtonBuilder from '../components/ButtonBuilder';
-import IconBuilder from '../components/IconBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
+import SpanBuilder from '../components/SpanBuilder';
 import { Personality } from '../models/personality.enum';
 import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
-import { birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage, aTextNode } from '../util/util';
-import SpanBuilder from '../components/SpanBuilder';
+import { aTextNode, birthdayIsToday, clearElement, getElement as $, getListSelectValue, villagerHasProfileImage } from '../util/util';
 
 export default class ProfileView {
     public static updateView(villager: Villager, fromListId: string): void {
@@ -32,7 +31,7 @@ export default class ProfileView {
             stateService.currentListSelect = selectedListId;
         }
 
-        (<HTMLSelectElement>$('list_select')).disabled = stateService.listsAreEmpty();
+        ($('list_select') as HTMLSelectElement).disabled = stateService.listsAreEmpty();
         clearElement($('list_select'));
         for (const list of stateService.getLists()) {
             $('list_select').appendChild(this.aListDropdownOption(list, list.id === stateService.currentListSelect));
@@ -42,7 +41,7 @@ export default class ProfileView {
     }
 
     public static updateAddVillagerButton(): void {
-        const addRemoveButton = <HTMLButtonElement>$('add_remove_button');
+        const addRemoveButton = $('add_remove_button') as HTMLButtonElement;
         if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
             addRemoveButton.onclick = () => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
             addRemoveButton.className = 'clickable fa fa-minus';
@@ -71,7 +70,7 @@ export default class ProfileView {
     }
 
     private static updateProfileImage(villager: Villager): void {
-        const profileImageElement: HTMLImageElement = <HTMLImageElement>$('profile_image');
+        const profileImageElement: HTMLImageElement = $('profile_image') as HTMLImageElement;
         profileImageElement.alt = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
         profileImageElement.title = villagerHasProfileImage(villager) ? `Profile image (${villager.name})` : 'Profile image not available (yet)';
         profileImageElement.src = `./villager_heads/${villager.head}`;

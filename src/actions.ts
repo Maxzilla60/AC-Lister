@@ -71,7 +71,7 @@ export function updateAddVillagerButton(): void {
 }
 
 export function updateSearch(): void {
-    search((<HTMLInputElement>$('search_bar')).value);
+    search(($('search_bar') as HTMLInputElement).value);
 }
 
 export function openImportDialog(): void {
@@ -101,7 +101,7 @@ export function importListsFromFile(): void {
             return;
         }
     }
-    const selectedFile = (<HTMLInputElement>$('file_input')).files[0];
+    const selectedFile = ($('file_input') as HTMLInputElement).files[0];
     stateService.importListFromFile(selectedFile, viewLists);
 }
 

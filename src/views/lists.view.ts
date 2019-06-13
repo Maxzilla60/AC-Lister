@@ -141,11 +141,11 @@ export default class ListsView {
     }
 
     private static updateListEditingButtons(): void {
-        const exportListsButton: HTMLButtonElement = <HTMLButtonElement>$('exportlists_button');
+        const exportListsButton: HTMLButtonElement = $('exportlists_button') as HTMLButtonElement;
         exportListsButton.disabled = stateService.listsAreEmpty();
         exportListsButton.className = 'clickable fa fa-upload';
 
-        const clearListsButton: HTMLButtonElement = <HTMLButtonElement>$('clearlists_button');
+        const clearListsButton: HTMLButtonElement = $('clearlists_button') as HTMLButtonElement;
         clearListsButton.disabled = stateService.listsAreEmpty();
         clearListsButton.className = 'clickable fa fa-times';
     }
@@ -171,11 +171,11 @@ export default class ListsView {
     }
 
     private static getRenameListTitleValue(): string {
-        return (<HTMLInputElement>$('rename_bar')).value;
+        return ($('rename_bar') as HTMLInputElement).value;
     }
 
     private static focusAndSelectRenameInput() {
         $('rename_bar').focus();
-        (<HTMLInputElement>$('rename_bar')).select();
+        ($('rename_bar') as HTMLInputElement).select();
     }
 }

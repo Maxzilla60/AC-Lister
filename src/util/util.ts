@@ -33,7 +33,7 @@ export function birthdayIsToday(birthdayString: string): boolean {
 }
 
 export function getListSelectValue(): string {
-    return (<HTMLSelectElement>getElement('list_select')).value;
+    return (getElement('list_select') as HTMLSelectElement).value;
 }
 
 export function removeDuplicates(results: any[]): any[] {
