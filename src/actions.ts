@@ -8,6 +8,8 @@ import SearchView from './views/search.view';
 import confetti from 'canvas-confetti';
 import { saveAs } from 'file-saver';
 
+// TODO: Refactor this to a class (Controller)
+
 export const villagers = villagersDB;
 
 export function viewLists(withListToRenameId?: string): void {
@@ -121,26 +123,33 @@ function search(query: string): void {
     let results: Villager[];
     if (query === 'birthday') {
         $('search_bar').className = 'birthday';
-        results = villagersDB.filter(
-            (villager: Villager) => birthdayIsToday(villager.birthday)
-        );
+        results = filterVillagersWhosBirthdayIsToday(results);
     } else {
-        const villagersFilteredOnName = villagersDB.filter(
-            (villager: Villager) => villager.name.toLowerCase().includes(query)
-        );
-        const villagersFilteredOnPersonality = villagersDB.filter(
-            (villager: Villager) => villager.personality.toLowerCase().includes(query)
-        );
-        const villagersFilteredOnSpecies = villagersDB.filter(
-            (villager: Villager) => villager.species.toLowerCase().includes(query)
-        );
-
-        results = [...villagersFilteredOnName, ...villagersFilteredOnPersonality, ...villagersFilteredOnSpecies];
+        results = [
+            ...filterVillagersOnName(query),
+            ...filterVillagersOnPersonality(query),
+            ...filterVillagersOnSpecies(query)
+        ];
     }
 
     results = removeDuplicates(results);
-
     SearchView.updateView(results);
+}
+
+function filterVillagersWhosBirthdayIsToday(results: Villager[]): Villager[] {
+    return villagersDB.filter((villager: Villager) => birthdayIsToday(villager.birthday));
+}
+
+function filterVillagersOnName(nameQuery: string): Villager[] {
+    return villagersDB.filter((villager: Villager) => villager.name.toLowerCase().includes(nameQuery));
+}
+
+function filterVillagersOnPersonality(personalityQuery: string): Villager[] {
+    return villagersDB.filter((villager: Villager) => villager.personality.toLowerCase().includes(personalityQuery));
+}
+
+function filterVillagersOnSpecies(speciesQuery: string): Villager[] {
+    return villagersDB.filter((villager: Villager) => villager.species.toLowerCase().includes(speciesQuery));
 }
 
 // Show loading icon in search bar
@@ -149,12 +158,6 @@ function searchbarLoading(): void {
 }
 
 // Useful functions for in the console
-function getVillagersWhosBirthdayIsToday(): string[] {
-    return villagersDB
-        .filter((v: Villager) => birthdayIsToday(v.birthday))
-        .map((v: Villager) => v.name);
-}
-
 function percentageOfVillagersWithProfileImage(): string {
     const allVillagersCount = villagersDB.length;
     const villagersWithProfileImageCount = villagersDB
