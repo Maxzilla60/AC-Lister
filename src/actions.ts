@@ -12,7 +12,6 @@ import lozad from 'lozad';
 // TODO: Refactor this to a class (Controller)
 // TODO: Refactor to updateListsView() & updateSearchView()
 
-export const villagers = villagersDB;
 const lozadObserver = lozad();
 
 export function observeLazyLoadedImages() { lozadObserver.observe(); }

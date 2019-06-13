@@ -1,5 +1,3 @@
-import { Villager } from '../models/villager.model';
-
 export function getElement(elementID: string): HTMLElement {
     return document.getElementById(elementID);
 }
@@ -19,10 +17,6 @@ export function aTextNode(text: string): Text {
 
 export function aBreakElement(): HTMLElement {
     return document.createElement('br');
-}
-
-export function villagerHasProfileImage(villager: Villager): boolean {
-    return villager.head !== 'wip.jpg';
 }
 
 export function birthdayIsToday(birthdayString: string): boolean {
