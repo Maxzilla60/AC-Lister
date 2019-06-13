@@ -30,7 +30,9 @@ describe('App', () => {
 
     it('should find and add favourite villagers', () => {
         cy.get('#search_bar').clear().type('Scoot');
-        cy.get('#search_results').get('.result').contains('Scoot').click();
+        cy.get('#search_results').get('.result').first()
+            .should('contain', 'Scoot')
+            .click();
 
         cy.get('#add_remove_button').click();
 
