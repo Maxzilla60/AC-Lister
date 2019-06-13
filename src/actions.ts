@@ -152,11 +152,6 @@ function filterVillagersOnSpecies(speciesQuery: string): Villager[] {
     return villagersDB.filter((villager: Villager) => villager.species.toLowerCase().includes(speciesQuery));
 }
 
-// Show loading icon in search bar
-function searchbarLoading(): void {
-    $('search_results').innerHTML = '<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>';
-}
-
 export function percentageOfVillagersWithProfileImage(): string {
     const allVillagersCount = villagersDB.length;
     const villagersWithProfileImageCount = villagersDB

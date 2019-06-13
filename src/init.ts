@@ -17,6 +17,7 @@ function bindEvents(): void {
     $('openviewer_button').onclick = openViewer;
     $('file_input').onchange = importListsFromFile;
     $('list_select').onchange = updateAddVillagerButton;
+    // @ts-ignore
     window.percentageOfVillagersWithProfileImage = percentageOfVillagersWithProfileImage;
 }
 
