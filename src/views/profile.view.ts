@@ -108,7 +108,7 @@ export default class ProfileView {
         return new ButtonBuilder(() => { window.open(wikiLink, '_blank'); })
             .asFontAwesome('fa-wikipedia-w', true)
             .withTitle('Open Wiki page')
-            .withClassNames('clickable')
+            .isClickable()
             .build();
     }
 
@@ -116,7 +116,7 @@ export default class ProfileView {
         return new ButtonBuilder(() => { window.open(storeLink, '_blank'); })
             .asFontAwesome('fa-shopping-bag')
             .withTitle('Buy this art!')
-            .withClassNames('clickable')
+            .isClickable()
             .build();
     }
 
@@ -155,7 +155,7 @@ export default class ProfileView {
             .asFontAwesome('fa-birthday-cake')
             .withId('birthday_button')
             .withTitle(`Happy birthday to ${villagerName}!`)
-            .withClassNames('clickable')
+            .isClickable()
             .build();
     }
 

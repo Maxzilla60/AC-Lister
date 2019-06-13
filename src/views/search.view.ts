@@ -26,7 +26,8 @@ export default class SearchView {
 
     private static aVillagerSearchResultButton(villager: Villager): HTMLButtonElement {
         return new ButtonBuilder(() => { loadProfile(villager.id); })
-            .withClassNames('clickable', 'result')
+            .withClassNames('result')
+            .isClickable()
             .withChildren(
                 this.aVillagersSearchResultImage(villager),
                 this.aVillagersSearchResultNameElement(villager.name),

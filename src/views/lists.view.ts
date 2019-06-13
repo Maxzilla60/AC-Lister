@@ -70,7 +70,8 @@ export default class ListsView {
     private static aListTitleElement(list: VillagerList): HTMLButtonElement {
         return new ButtonBuilder(() => { ProfileView.updateListSelect(list.id); })
             .withInnerHTML(list.title)
-            .withClassNames('clickable', 'list_title')
+            .withClassNames('list_title')
+            .isClickable()
             .build();
     }
 
@@ -78,7 +79,8 @@ export default class ListsView {
         return new ButtonBuilder(() => { deleteList(list.id); })
             .asFontAwesome('fa-trash')
             .withTitle('Delete list')
-            .withClassNames('listdelete_button', 'clickable')
+            .withClassNames('listdelete_button')
+            .isClickable()
             .build();
     }
 
@@ -86,7 +88,8 @@ export default class ListsView {
         return new ButtonBuilder(() => { renameList(list.id); })
             .asFontAwesome('fa-edit')
             .withTitle('Edit list title')
-            .withClassNames('listrename_button', 'clickable')
+            .withClassNames('listrename_button')
+            .isClickable()
             .build();
     }
 
@@ -104,7 +107,7 @@ export default class ListsView {
             .asFontAwesome('fa-check')
             .withId('confirmrename_button')
             .withTitle('Edit name')
-            .withClassNames('clickable')
+            .isClickable()
             .build();
     }
 
@@ -129,7 +132,8 @@ export default class ListsView {
 
     private static aMemberButton(member: string, listId: string): Node {
         return new ButtonBuilder(() => { loadProfile(member, listId); })
-            .withClassNames('clickable', 'member_button')
+            .withClassNames('member_button')
+            .isClickable()
             .appendChild(this.aMemberImage(member))
             .build();
     }
@@ -166,7 +170,7 @@ export default class ListsView {
             .onClick(newList)
             .withId('emptylists_newlist_button')
             .withTitle('Add list')
-            .withClassNames('clickable')
+            .isClickable()
             .build();
     }
 
