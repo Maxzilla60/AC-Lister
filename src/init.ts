@@ -11,11 +11,15 @@ function bindEvents(): void {
     $('search_bar').oninput = updateSearch;
     $('search_button').onclick = updateSearch;
     $('newlist_button').onclick = newList;
+    $('clearlists_button').onclick = clearAllLists;
     $('exportlists_button').onclick = exportLists;
     $('importlists_button').onclick = openImportDialog;
-    $('clearlists_button').onclick = clearAllLists;
     $('file_input').onchange = importListsFromFile;
     $('list_select').onchange = updateAddVillagerButton;
+    exposeHelperFunctionsToConsole();
+}
+
+function exposeHelperFunctionsToConsole() {
     // @ts-ignore
     window.percentageOfVillagersWithProfileImage = percentageOfVillagersWithProfileImage;
 }
