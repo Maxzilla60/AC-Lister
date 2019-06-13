@@ -22,7 +22,9 @@ h2 {
 }
 
 input {
-    flex: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
     border: solid orange;
     padding: 5px;
     border-radius: 8px;
@@ -34,6 +36,8 @@ img {
 
 .menu {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     top: 0;
     right: 0;
@@ -71,7 +75,8 @@ img {
 
 .clickable:disabled:hover, .clickable:disabled:focus {
     background-color: floralwhite;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color: gray;
     cursor: initial;
     position: initial;
@@ -138,6 +143,8 @@ small {
 }
 
 search {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-bottom: 5px;
 }
@@ -149,8 +156,13 @@ search {
 #search_results {
     border: solid orange;
     border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow-y: scroll;
     height: 200px;
 }
@@ -163,8 +175,12 @@ search {
 
 .result {
     color: brown;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
     padding: 0;
 }
@@ -193,8 +209,11 @@ search {
 }
 
 #main_container > .menu {
+    position: -webkit-sticky;
     position: sticky;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     z-index: 1;
     pointer-events: none;
 }
@@ -213,12 +232,19 @@ search {
 }
 
 #lists, .list_members, #villager_information {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
 }
 
 .list_title {
@@ -229,8 +255,11 @@ search {
 }
 
 .list_members {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: wrap;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
 }
 
 .member_button {
@@ -241,17 +270,27 @@ search {
 
 #emptylists_prompt, noscript, .loading {
     color: orange;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px;
     padding-top: 5px;
 }
 
 #emptylists_newlist_button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: orange;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 noscript {
@@ -278,13 +317,20 @@ noscript {
     border: solid orange;
     border-radius: 8px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 #profile_container > .menu {
     margin: 5px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 select, option {
@@ -298,11 +344,22 @@ select, option {
 }
 
 #villager_information_container {
-    flex: auto;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 #villager_information {
