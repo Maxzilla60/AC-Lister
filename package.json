@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
+    "@types/canvas-confetti": "^0.1.0",
     "@types/file-saver": "^2.0.0",
     "@types/uuid": "^3.4.4",
     "canvas-confetti": "^0.2.1",
