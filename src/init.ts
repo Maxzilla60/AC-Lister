@@ -1,12 +1,11 @@
-import { clearAllLists, exportLists, importListsFromFile, newList, openImportDialog, percentageOfVillagersWithProfileImage, updateAddVillagerButton, updateSearch, viewLists } from './actions';
+import { clearAllLists, exportLists, importListsFromFile, newList, observeLazyLoadedImages, openImportDialog, percentageOfVillagersWithProfileImage, updateAddVillagerButton, updateSearch, viewLists } from './actions';
 import { getElement as $ } from './util/util';
-import lozad from 'lozad';
 
 function init(): void {
     bindEvents();
     updateSearch();
     viewLists();
-    initImageLazyLoading();
+    observeLazyLoadedImages();
     exposeHelperFunctionsToConsole();
 }
 
@@ -25,7 +24,5 @@ function exposeHelperFunctionsToConsole() {
     // @ts-ignore
     window.percentageOfVillagersWithProfileImage = percentageOfVillagersWithProfileImage;
 }
-
-function initImageLazyLoading() { lozad().observe(); }
 
 init();

@@ -7,14 +7,20 @@ import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
 import confetti from 'canvas-confetti';
 import { saveAs } from 'file-saver';
+import lozad from 'lozad';
 
 // TODO: Refactor this to a class (Controller)
+// TODO: Refactor to updateListsView() & updateSearchView()
 
 export const villagers = villagersDB;
+const lozadObserver = lozad();
+
+export function observeLazyLoadedImages() { lozadObserver.observe(); }
 
 export function viewLists(withListToRenameId?: string): void {
     ListsView.updateView(withListToRenameId);
     ProfileView.updateListSelect();
+    observeLazyLoadedImages();
 }
 
 export function renameList(listId: string): void {
@@ -115,6 +121,7 @@ function search(query: string): void {
     $('search_bar').className = '';
     if (query === '') {
         SearchView.updateView();
+        observeLazyLoadedImages();
         return;
     }
 
@@ -134,6 +141,7 @@ function search(query: string): void {
 
     results = removeDuplicates(results);
     SearchView.updateView(results);
+    observeLazyLoadedImages();
 }
 
 function filterVillagersWhosBirthdayIsToday(results: Villager[]): Villager[] {
