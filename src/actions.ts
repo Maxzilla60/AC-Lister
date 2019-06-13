@@ -157,8 +157,7 @@ function searchbarLoading(): void {
     $('search_results').innerHTML = '<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>';
 }
 
-// Useful functions for in the console
-function percentageOfVillagersWithProfileImage(): string {
+export function percentageOfVillagersWithProfileImage(): string {
     const allVillagersCount = villagersDB.length;
     const villagersWithProfileImageCount = villagersDB
         .filter((v: Villager) => v.head !== 'wip.jpg')

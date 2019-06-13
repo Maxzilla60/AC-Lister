@@ -1,4 +1,4 @@
-import { clearAllLists, exportLists, importListsFromFile, newList, openImportDialog, openViewer, updateAddVillagerButton, updateSearch, viewLists } from './actions';
+import { clearAllLists, exportLists, importListsFromFile, newList, openImportDialog, openViewer, percentageOfVillagersWithProfileImage, updateAddVillagerButton, updateSearch, viewLists } from './actions';
 import { getElement as $ } from './util/util';
 
 function init(): void {
@@ -17,6 +17,7 @@ function bindEvents(): void {
     $('openviewer_button').onclick = openViewer;
     $('file_input').onchange = importListsFromFile;
     $('list_select').onchange = updateAddVillagerButton;
+    window.percentageOfVillagersWithProfileImage = percentageOfVillagersWithProfileImage;
 }
 
 init();
