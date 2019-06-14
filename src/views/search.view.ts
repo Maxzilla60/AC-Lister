@@ -12,16 +12,20 @@ export default class SearchView {
         clearElement(searchResultsElement);
 
         if (resultList.length <= 0) {
-            searchResultsElement.appendChild(
-                this.aNoResultsElement()
-            );
+            this.appendNoResultsElement(searchResultsElement);
         } else {
-            for (const villager of resultList) {
-                searchResultsElement.appendChild(this.aVillagerSearchResultButton(villager));
-            }
+            this.appendResults(resultList, searchResultsElement);
         }
+    }
 
-        this.fadeTransition();
+    private static appendResults(resultList: Villager[], searchResultsElement: HTMLElement) {
+        for (const villager of resultList) {
+            searchResultsElement.appendChild(this.aVillagerSearchResultButton(villager));
+        }
+    }
+
+    private static appendNoResultsElement(searchResultsElement: HTMLElement) {
+        searchResultsElement.appendChild(this.aNoResultsElement());
     }
 
     private static aVillagerSearchResultButton(villager: Villager): HTMLButtonElement {

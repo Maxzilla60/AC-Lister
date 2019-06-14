@@ -1,7 +1,7 @@
-import Controller from '../controller';
 import ButtonBuilder from '../components/ButtonBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
 import SpanBuilder from '../components/SpanBuilder';
+import Controller from '../controller';
 import { Personality } from '../models/personality.enum';
 import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';
@@ -18,8 +18,6 @@ export default class ProfileView {
 
         this.updateListSelect(fromListId);
         this.updateProfileImage(villager);
-
-        this.fadeTransition();
     }
 
     public static updateListSelect(selectedListId?: string): void {
@@ -43,12 +41,12 @@ export default class ProfileView {
     public static updateAddVillagerButton(): void {
         const addRemoveButton = $('add_remove_button') as HTMLButtonElement;
         if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
-            addRemoveButton.onclick = () => { Controller.removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
+            addRemoveButton.onclick = Controller.removeVillager;
             addRemoveButton.className = 'clickable fa fa-minus';
             addRemoveButton.title = 'Remove from list';
             addRemoveButton.disabled = false;
         } else {
-            addRemoveButton.onclick = () => { Controller.addVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
+            addRemoveButton.onclick = Controller.addVillager;
             addRemoveButton.className = 'clickable fa fa-plus';
             addRemoveButton.title = 'Add to list';
             addRemoveButton.disabled = stateService.listsAreEmpty();

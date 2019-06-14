@@ -96,6 +96,7 @@ class StateService {
 
         reader.readAsText(selectedFile);
     }
+
     private get _lists(): VillagerList[] {
         if (!localStorage.lists) {
             localStorage.lists = '[]';

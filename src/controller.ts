@@ -9,27 +9,25 @@ import confetti from 'canvas-confetti';
 import { saveAs } from 'file-saver';
 import lozad from 'lozad';
 
-// TODO: Refactor to updateListsView() & updateSearchView()
-
 export default class Controller {
     private static readonly lozadObserver = lozad();
 
     public static init(): void {
         Controller.updateSearch();
-        Controller.viewLists();
+        Controller.refreshLists();
         Controller.observeLazyLoadedImages();
     }
 
     public static observeLazyLoadedImages() { Controller.lozadObserver.observe(); }
 
-    public static viewLists(withListToRenameId?: string): void {
+    public static refreshLists(withListToRenameId?: string): void {
         ListsView.updateView(withListToRenameId);
         ProfileView.updateListSelect();
         Controller.observeLazyLoadedImages();
     }
 
     public static renameList(listId: string): void {
-        Controller.viewLists(listId);
+        Controller.refreshLists(listId);
     }
 
     public static loadProfile(id: string, fromListId: string = getListSelectValue()): void {
@@ -37,31 +35,34 @@ export default class Controller {
         ProfileView.updateView(Controller.getVillagerById(id), fromListId);
     }
 
-    public static addVillager(villagerNameToAdd: string, listId: string): void {
-        if (villagerNameToAdd !== '') {
-            stateService.addVillagerToList(villagerNameToAdd, listId);
-            Controller.viewLists();
+    public static addVillager(): void {
+        const villagerIdToAdd = stateService.currentLoadedProfileId;
+        const listId = getListSelectValue();
+        if (villagerIdToAdd !== '') {
+            stateService.addVillagerToList(villagerIdToAdd, listId);
+            Controller.refreshLists();
         }
     }
 
-    public static removeVillager(villagerNameToRemove: string, listId: string): void {
-        if (villagerNameToRemove !== '') {
-            stateService.removeVillagerFromList(villagerNameToRemove, listId);
-            Controller.viewLists();
+    public static removeVillager(): void {
+        const villagerIdToRemove = stateService.currentLoadedProfileId;
+        const listId = getListSelectValue();
+        if (villagerIdToRemove !== '') {
+            stateService.removeVillagerFromList(villagerIdToRemove, listId);
+            Controller.refreshLists();
         }
     }
 
     public static newList(): void {
         const newListID = stateService.addNewList();
-        Controller.viewLists(newListID);
+        Controller.refreshLists(newListID);
     }
 
     public static deleteList(id: string): void {
         const listToDelete = stateService.getListById(id);
-
         if (confirm(`Are you sure you want to delete "${listToDelete.title}"?`)) {
             stateService.deleteList(id);
-            Controller.viewLists();
+            Controller.refreshLists();
         }
     }
 
@@ -69,13 +70,13 @@ export default class Controller {
         if (newTitle !== '') {
             stateService.renameList(listId, newTitle);
         }
-        Controller.viewLists();
+        Controller.refreshLists();
     }
 
     public static clearAllLists(): void {
         if (confirm('Are you sure you want to clear all lists?')) {
             stateService.clearAllLists();
-            Controller.viewLists();
+            Controller.refreshLists();
         }
     }
 
@@ -102,22 +103,11 @@ export default class Controller {
         new Audio('./happybirthday.mp3').play();
     }
 
-    public static loadWipProfileImage() {
-        // @ts-ignore
-        this.src = './villager_heads/wip.jpg';
-        // @ts-ignore
-        this.alt = 'Profile image not available (yet)';
-        // @ts-ignore
-        this.title = 'Profile image not available (yet)';
-    }
-
-    // Export lists as .json file
-    public static exportLists(): void {
+    public static exportListsAsJSONFile(): void {
         const blob = new Blob([JSON.stringify(stateService.getLists(), null, 2)], { type: 'text/plain' });
         saveAs(blob, 'ACLists.json');
     }
 
-    // Import lists from .json file
     public static importListsFromFile(): void {
         if (!stateService.listsAreEmpty()) {
             if (!confirm('Are you sure you want to override current lists?')) {
@@ -125,7 +115,7 @@ export default class Controller {
             }
         }
         const selectedFile = ($('file_input') as HTMLInputElement).files[0];
-        stateService.importListFromFile(selectedFile, Controller.viewLists);
+        stateService.importListFromFile(selectedFile, Controller.refreshLists);
     }
 
     public static percentageOfVillagersWithProfileImage(): string {
@@ -148,28 +138,25 @@ export default class Controller {
 
     private static search(query: string): void {
         $('search_bar').className = '';
-        if (query === '') {
-            SearchView.updateView();
-            Controller.observeLazyLoadedImages();
-            return;
-        }
-
-        query = query.toLowerCase();
-
         let results: Villager[];
-        if (query === 'birthday') {
-            $('search_bar').className = 'birthday';
-            results = Controller.filterVillagersWhosBirthdayIsToday();
-        } else {
-            results = [
-                ...Controller.filterVillagersOnName(query),
-                ...Controller.filterVillagersOnPersonality(query),
-                ...Controller.filterVillagersOnSpecies(query)
-            ];
+
+        if (query !== '') {
+            query = query.toLowerCase();
+
+            if (query === 'birthday') {
+                $('search_bar').className = 'birthday';
+                results = Controller.filterVillagersWhosBirthdayIsToday();
+            } else {
+                results = [
+                    ...Controller.filterVillagersOnName(query),
+                    ...Controller.filterVillagersOnPersonality(query),
+                    ...Controller.filterVillagersOnSpecies(query)
+                ];
+            }
+            results = removeDuplicates(results);
         }
 
-        results = removeDuplicates(results);
-        SearchView.updateView(results);
+        SearchView.updateView(results ? results : undefined);
         Controller.observeLazyLoadedImages();
     }
 
@@ -188,4 +175,10 @@ export default class Controller {
     private static filterVillagersOnSpecies(speciesQuery: string): Villager[] {
         return villagersDB.filter((villager: Villager) => villager.species.toLowerCase().includes(speciesQuery));
     }
+}
+
+export function loadWipProfileImage(element: HTMLImageElement) {
+    element.src = './villager_heads/wip.jpg';
+    element.alt = 'Profile image not available (yet)';
+    element.title = 'Profile image not available (yet)';
 }
