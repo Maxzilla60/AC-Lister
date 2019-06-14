@@ -115,32 +115,32 @@ export default class ListsView {
         return new ListElementBuilder()
             .withClassNames('list_members')
             .withChildren(
-                ...members.map(member => this.aMemberElement(member, listId))
+                ...members.map(villager => this.aMemberElement(villager, listId))
             )
             .build();
     }
 
-    private static aMemberElement(member: string, listId: string): HTMLLIElement {
+    private static aMemberElement(villagerId: string, listId: string): HTMLLIElement {
         return new ListItemBuilder()
-            .withTitle(member)
+            .withTitle(villagerId)
             .withClassNames('list_member')
             .appendChild(
-                this.aMemberButton(member, listId)
+                this.aMemberButton(villagerId, listId)
             )
             .build();
     }
 
-    private static aMemberButton(member: string, listId: string): Node {
-        return new ButtonBuilder(() => { loadProfile(member, listId); })
+    private static aMemberButton(villagerId: string, listId: string): Node {
+        return new ButtonBuilder(() => { loadProfile(villagerId, listId); })
             .withClassNames('member_button')
             .isClickable()
-            .appendChild(this.aMemberImage(member))
+            .appendChild(this.aMemberImage(villagerId))
             .build();
     }
 
-    private static aMemberImage(member: string): Node {
-        return new ImageBuilder(`./villager_icons/${member}.gif`, './villager_icons/other/default.gif')
-            .withTitle(trimName(member))
+    private static aMemberImage(villagerId: string): Node {
+        return new ImageBuilder(`./villager_icons/${villagerId}.gif`, './villager_icons/other/default.gif')
+            .withTitle(trimName(villagerId))
             .build();
     }
 

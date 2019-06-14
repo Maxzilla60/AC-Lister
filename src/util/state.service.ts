@@ -56,19 +56,19 @@ class StateService {
         this._lists = [];
     }
 
-    public addVillagerToList(villagerNameToAdd: string, listId: string): void {
+    public addVillagerToList(villagerIdToAdd: string, listId: string): void {
         const tempLists = this._lists;
         const listToAddTo: VillagerList = tempLists.find(l => l.id === listId);
-        listToAddTo.members.push(villagerNameToAdd);
+        listToAddTo.members.push(villagerIdToAdd);
         listToAddTo.members.sort();
         this._lists = tempLists;
     }
 
-    public removeVillagerFromList(villagerNameToRemove: string, listId: string): void {
+    public removeVillagerFromList(villagerIdToRemove: string, listId: string): void {
         const tempLists = this._lists;
         const listToRemoveFrom: VillagerList = tempLists.find(l => l.id === listId);
         listToRemoveFrom.members = listToRemoveFrom.members
-            .filter(v => v !== villagerNameToRemove);
+            .filter(v => v !== villagerIdToRemove);
         this._lists = tempLists;
     }
 
@@ -76,8 +76,8 @@ class StateService {
         return this._lists.length <= 0;
     }
 
-    public villagerIsInList(villagerName: string, listId: string): boolean {
-        return !this.listsAreEmpty() && this.getListById(listId).members.includes(villagerName);
+    public villagerIsInList(villagerId: string, listId: string): boolean {
+        return !this.listsAreEmpty() && this.getListById(listId).members.includes(villagerId);
     }
 
     public aProfileIsLoaded(): boolean {
