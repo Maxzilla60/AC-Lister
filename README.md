@@ -6,10 +6,10 @@ Easily search, view and assemble lists of your favorite Animal Crossing villager
 
  - [x] Build the website with a simple web bundler, **[Parcel](https://parceljs.org)**.
  - [x] Refactor the JavaScript code to **[TypeScript](https://www.typescriptlang.org)**.
- - [ ] Implement integration tests with **[Cypress](https://www.cypress.io)**.
- - [ ] **Overhaul the CSS & HTML to make it mobile-friendly with [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).**
+ - [x] Implement integration tests with **[Cypress](https://www.cypress.io)**.
+ - [x] **Overhaul the CSS & HTML to make it mobile-friendly with [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).**
  - [ ] Convert the website into a **[PWA](https://developers.google.com/web/progressive-web-apps/)**.
- - [ ] Host the website on **[Netlify](https://www.netlify.com/)**.
+ - [x] Host the website on **[Netlify](https://www.netlify.com/)**.
 
 ## Where?
 ### [**Right here!**](https://maxzilla60.github.io/AC-Lister/)
