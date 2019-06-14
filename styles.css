@@ -173,6 +173,7 @@ small {
     border: solid orange;
     border-radius: 8px;
     padding: 5px;
+    z-index: inherit;
 }
 
 search {
@@ -247,6 +248,7 @@ search {
     -ms-flex-pack: end;
     justify-content: flex-end;
     pointer-events: none;
+    z-index: 1;
 }
 
 #main_container > .menu > a,
@@ -463,7 +465,7 @@ select, option {
         width: 300px;
         left: -340px;
         transition: transform .3s ease-in-out;
-        z-index: 1;
+        z-index: 2;
     }
 
     .menu {
