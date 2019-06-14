@@ -154,7 +154,7 @@ export default class Controller {
         let results: Villager[];
         if (query === 'birthday') {
             $('search_bar').className = 'birthday';
-            results = Controller.filterVillagersWhosBirthdayIsToday(results);
+            results = Controller.filterVillagersWhosBirthdayIsToday();
         } else {
             results = [
                 ...Controller.filterVillagersOnName(query),
@@ -168,7 +168,7 @@ export default class Controller {
         Controller.observeLazyLoadedImages();
     }
 
-    private static filterVillagersWhosBirthdayIsToday(results: Villager[]): Villager[] {
+    private static filterVillagersWhosBirthdayIsToday(): Villager[] {
         return villagersDB.filter((villager: Villager) => birthdayIsToday(villager.birthday));
     }
 
