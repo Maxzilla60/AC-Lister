@@ -31,18 +31,17 @@ Please go [here](https://github.com/Maxzilla60/AC-Lister/issues) and let me know
 - [x] Sharable links
 - [x] Save as text file
 - [ ] Better viewer *(more viewer options)*
-- [ ] More profile art
 - [x] Villager info
 - [x] Save as image
 - [x] Export and Import
+- [ ] More profile art
 
 ## Credits
-- [Purple-Pixel](https://purple-pixel.tumblr.com/) for the wonderful art
-- [Here](http://kelseycrossing.com/post/149344517906/animal-crossing-pixel-masterpost) and [here](http://reguluscrossing.tumblr.com/post/153233705592/tried-to-edit-some-of-rehoeass-pixels-to-make) for the small villager icons
-- Special thanks to [Lucy](http://laxatite.tumblr.com/) for helping me out with the villager information and images (`villagers.js`) ♥
-- [Font Awesome](http://fontawesome.io/) icons
-- [html2canvas](https://html2canvas.hertzen.com/) and [FileSaver.js](https://github.com/eligrey/FileSaver.js/) for saving the lists as an image
-- [showdown](https://github.com/showdownjs/showdown) for rendering the README
+- [Purple-Pixel](https://purple-pixel.tumblr.com/) for the wonderful art.
+- [Here](http://kelseycrossing.com/post/149344517906/animal-crossing-pixel-masterpost) and [here](http://reguluscrossing.tumblr.com/post/153233705592/tried-to-edit-some-of-rehoeass-pixels-to-make) for the small villager icons.
+- Special thanks to [Lucy](http://laxatite.tumblr.com/) for helping me out with the villager information and images (`villagers.js`).
+- [Font Awesome](http://fontawesome.io/) icons.
+- [html2canvas](https://html2canvas.hertzen.com/) and [FileSaver.js](https://github.com/eligrey/FileSaver.js/) for saving the lists as an image.
 - [Real Favicon Generator](http://realfavicongenerator.net/)
-- [Autoprefixer](https://autoprefixer.github.io/)
-- [TinyJPG](https://tinyjpg.com/)
+- [Confetti](https://github.com/catdad/canvas-confetti) for the fun confetti!
+- [Lozad](https://apoorv.pro/lozad.js/) for lazy loading of images.
