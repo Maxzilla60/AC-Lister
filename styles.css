@@ -400,10 +400,6 @@ select, option {
     padding: 5px;
 }
 
-#villager_information > li {
-    margin-bottom: 5px;
-}
-
 #villager_information > li > label {
     text-align: center;
     padding-top: 5px;
@@ -468,14 +464,11 @@ select, option {
         z-index: 2;
     }
 
-    .menu {
+    #main_container > .menu {
         position: initial;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-    }
-
-    #main_container > .menu {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
@@ -499,18 +492,27 @@ select, option {
         justify-content: center;
     }
 
+    #villager_information:empty {
+        height: 25vw;
+    }
+}
+
+@media only screen and (max-width: 590px) {
     #profile_container {
         display: initial;
+    }
+
+    #profile_container > .menu {
+        position: initial;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     #list_select {
         -webkit-box-flex: 1;
         -ms-flex: auto;
         flex: auto;
-    }
-
-    #villager_information > li {
-        margin: 0;
     }
 
     #profile_image {
@@ -522,21 +524,27 @@ select, option {
         margin: 5px;
     }
 
-    #villager_information:empty {
-        height: 25vw;
+    #villager_information {
+        padding: 0;
     }
-}
 
-@media only screen and (max-width: 575px) {
+    #villager_information > li {
+        margin: 0;
+    }
+
+    #villager_information > li, .na {
+        margin-bottom: -10px;
+    }
+
+    #villager_information > li > label {
+        margin-right: 0;
+    }
+
     h1 {
-        font-size: 5.5vw;
+        font-size: 5.2vw;
     }
 
     h1 > .fa {
         font-size: 5.5vw !important;
-    }
-
-    #villager_information > li, .na {
-        font-size: 3.5vw;
     }
 }
