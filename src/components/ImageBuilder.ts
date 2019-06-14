@@ -27,6 +27,7 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
 }
 
 function imageOnError(src: string) {
+    console.log('this', this);
     // @ts-ignore
     this.onerror = null;
     // @ts-ignore
