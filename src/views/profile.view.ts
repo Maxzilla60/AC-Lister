@@ -1,4 +1,4 @@
-import Controller from '../actions';
+import Controller from '../controller';
 import ButtonBuilder from '../components/ButtonBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
 import SpanBuilder from '../components/SpanBuilder';

@@ -1,4 +1,4 @@
-import Controller from './actions';
+import Controller from './controller';
 import { getElement as $ } from './util/util';
 import villagersDB from './util/villagers.json';
 

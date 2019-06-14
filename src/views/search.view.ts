@@ -1,4 +1,4 @@
-import Controller from '../actions';
+import Controller from '../controller';
 import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
 import ImageBuilder from '../components/ImageBuilder';
