@@ -436,8 +436,8 @@ select, option {
     }
 
     #search_container:target {
-        -webkit-transform: translateX(340px);
-                transform: translateX(340px);
+        -webkit-transform: translateX(240px);
+                transform: translateX(240px);
     }
 
     main {
@@ -456,11 +456,11 @@ select, option {
     }
 
     #search_container {
-        position: fixed; /* or choose `absolute` depending on desired behavior*/
+        position: fixed;
         top: 0;
         bottom: 0;
-        width: 300px;
-        left: -340px;
+        width: 200px;
+        left: -240px;
         -webkit-transition: -webkit-transform .3s ease-in-out;
         transition: -webkit-transform .3s ease-in-out;
         transition: transform .3s ease-in-out;
