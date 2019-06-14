@@ -16,7 +16,7 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
     private initFallBackSrc(src: string): void {
         this.element.src = src;
         this.element.onerror = () => {
-            imageOnError(src);
+            imageOnError(this.element, src);
         };
     }
 
@@ -26,10 +26,9 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
     }
 }
 
-function imageOnError(src: string) {
-    console.log('this', this);
+function imageOnError(element: HTMLElement, src: string) {
     // @ts-ignore
-    this.onerror = null;
+    element.onerror = null;
     // @ts-ignore
-    this.src = src;
+    element.src = src;
 }
