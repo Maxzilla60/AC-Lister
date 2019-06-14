@@ -125,7 +125,7 @@ export default class Controller {
             }
         }
         const selectedFile = ($('file_input') as HTMLInputElement).files[0];
-        stateService.importListFromFile(selectedFile, viewLists);
+        stateService.importListFromFile(selectedFile, Controller.viewLists);
     }
 
     public static percentageOfVillagersWithProfileImage(): string {
