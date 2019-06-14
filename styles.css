@@ -425,7 +425,8 @@ select, option {
 }
 
 #profile_image {
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     border-radius: 27px;
     border: solid orange;
     float: left;
@@ -441,7 +442,8 @@ select, option {
     }
 
     #search_container:target {
-        transform: translateX(340px);
+        -webkit-transform: translateX(340px);
+                transform: translateX(340px);
     }
 
     main {
@@ -465,23 +467,32 @@ select, option {
         bottom: 0;
         width: 300px;
         left: -340px;
+        -webkit-transition: -webkit-transform .3s ease-in-out;
+        transition: -webkit-transform .3s ease-in-out;
         transition: transform .3s ease-in-out;
+        transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
         z-index: 2;
     }
 
     .menu {
         position: initial;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     #main_container > .menu {
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         border-bottom: orange 1px solid;
     }
 
     #lists_container {
         position: initial;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     .list_header {
@@ -489,7 +500,9 @@ select, option {
     }
 
     .list_members {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     #profile_container {
@@ -497,7 +510,9 @@ select, option {
     }
 
     #list_select {
-        flex: auto;
+        -webkit-box-flex: 1;
+            -ms-flex: auto;
+                flex: auto;
     }
 
     #villager_information > li {
