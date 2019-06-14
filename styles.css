@@ -498,6 +498,10 @@ select, option {
 }
 
 @media only screen and (max-width: 590px) {
+    h1 {
+        padding: 0;
+    }
+
     #profile_container {
         display: initial;
     }
