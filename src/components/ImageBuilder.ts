@@ -14,6 +14,7 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
     }
 
     private initFallBackSrc(src: string): void {
+        this.element.src = src;
         this.element.onerror = () => {
             // @ts-ignore
             this.src = src;
