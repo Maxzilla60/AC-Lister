@@ -1,4 +1,3 @@
-// TODO: Birthday Easter Egg
 describe('Search Field', () => {
     it('should visit the page', () => {
         cy.visitPage();

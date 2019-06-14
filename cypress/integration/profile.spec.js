@@ -1,4 +1,3 @@
-// TODO: Birthday Easter Egg
 describe('Profile Section', () => {
     let testData;
     const oneListTitle = 'My List';
