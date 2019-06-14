@@ -33,6 +33,7 @@ export default class Controller {
     }
 
     public static loadProfile(id: string, fromListId: string = getListSelectValue()): void {
+        Controller.closeSearchPanel();
         ProfileView.updateView(Controller.getVillagerById(id), fromListId);
     }
 
@@ -135,6 +136,10 @@ export default class Controller {
 
         const percentage = Math.floor((villagersWithProfileImageCount / allVillagersCount) * 100);
         return `${percentage}% of all villagers have a profile image. (${villagersWithProfileImageCount}/${allVillagersCount})`;
+    }
+
+    private static closeSearchPanel() {
+        $('close_searchpanel_button').click();
     }
 
     private static getVillagerById(villagerId: string): Villager {

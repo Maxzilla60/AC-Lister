@@ -163,6 +163,11 @@ small {
 }
 
 /* Search */
+#close_searchpanel_button,
+#open_searchpanel_button {
+    display: none;
+}
+
 #search_container {
     background-color: floralwhite;
     border: solid orange;
@@ -427,6 +432,15 @@ select, option {
 }
 
 @media only screen and (max-width: 730px) {
+    #close_searchpanel_button,
+    #open_searchpanel_button {
+        display: initial;
+    }
+
+    #search_container:target {
+        transform: translateX(340px);
+    }
+
     main {
         display: grid;
         grid-template-columns: 1fr;
@@ -449,6 +463,7 @@ select, option {
         width: 300px;
         left: -340px;
         transition: transform .3s ease-in-out;
+        z-index: 1;
     }
 
     .menu {
