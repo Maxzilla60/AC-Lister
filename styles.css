@@ -420,7 +420,7 @@ select, option {
 
 #profile_image {
     -ms-flex-item-align: center;
-        align-self: center;
+    align-self: center;
     border-radius: 27px;
     border: solid orange;
     float: left;
@@ -437,7 +437,7 @@ select, option {
 
     #search_container:target {
         -webkit-transform: translateX(240px);
-                transform: translateX(240px);
+        transform: translateX(240px);
     }
 
     main {
@@ -471,22 +471,22 @@ select, option {
     .menu {
         position: initial;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     #main_container > .menu {
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         border-bottom: orange 1px solid;
     }
 
     #lists_container {
         position: initial;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     .list_header {
@@ -495,8 +495,8 @@ select, option {
 
     .list_members {
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     #profile_container {
@@ -505,8 +505,8 @@ select, option {
 
     #list_select {
         -webkit-box-flex: 1;
-            -ms-flex: auto;
-                flex: auto;
+        -ms-flex: auto;
+        flex: auto;
     }
 
     #villager_information > li {
