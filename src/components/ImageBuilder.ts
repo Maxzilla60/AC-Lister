@@ -15,14 +15,8 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
 
     private initFallBackSrc(src: string): void {
         this.element.src = src;
-        this.element.onerror = (event: Event) => {
-            if (src.includes('Cece') {
-                console.log('Error, event:', event);
-                console.log('Error, this:', this);
-                console.log('Error, loading:', src);
-            }
-            // @ts-ignore
-            this.src = src;
+        this.element.onerror = () => {
+            imageOnError(src);
         };
     }
 
@@ -30,4 +24,11 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
         this.withClassNames('lozad');
         this.element.setAttribute('data-src', src);
     }
+}
+
+function imageOnError(src: string) {
+    // @ts-ignore
+    this.onerror = null;
+    // @ts-ignore
+    this.src = src;
 }

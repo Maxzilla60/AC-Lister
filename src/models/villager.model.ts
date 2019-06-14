@@ -8,7 +8,7 @@ export interface Villager {
     species: Species;
     personality: Personality;
     coffee: string;
-    birthday: string; // Date
+    birthday: string;
     wiki: string;
     store: string;
 }
