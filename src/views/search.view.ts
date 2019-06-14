@@ -1,4 +1,4 @@
-import { loadProfile } from '../actions';
+import Controller from '../actions';
 import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
 import ImageBuilder from '../components/ImageBuilder';
@@ -25,7 +25,7 @@ export default class SearchView {
     }
 
     private static aVillagerSearchResultButton(villager: Villager): HTMLButtonElement {
-        return new ButtonBuilder(() => { loadProfile(villager.id); })
+        return new ButtonBuilder(() => { Controller.loadProfile(villager.id); })
             .withClassNames('result')
             .isClickable()
             .withChildren(

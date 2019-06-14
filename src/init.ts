@@ -1,31 +1,29 @@
-import { clearAllLists, exportLists, importListsFromFile, loadWipProfileImage, newList, observeLazyLoadedImages, openImportDialog, percentageOfVillagersWithProfileImage, updateAddVillagerButton, updateSearch, viewLists } from './actions';
+import Controller from './actions';
 import { getElement as $ } from './util/util';
 import villagersDB from './util/villagers.json';
 
 function init(): void {
     bindEvents();
-    updateSearch();
-    viewLists();
-    observeLazyLoadedImages();
+    Controller.init();
     exposeHelperFunctionsToConsole();
     exposeVillagersDB();
 }
 
 function bindEvents(): void {
-    $('profile_image').onerror = loadWipProfileImage;
-    $('search_bar').oninput = updateSearch;
-    $('search_button').onclick = updateSearch;
-    $('newlist_button').onclick = newList;
-    $('clearlists_button').onclick = clearAllLists;
-    $('exportlists_button').onclick = exportLists;
-    $('importlists_button').onclick = openImportDialog;
-    $('file_input').onchange = importListsFromFile;
-    $('list_select').onchange = updateAddVillagerButton;
+    $('profile_image').onerror = Controller.loadWipProfileImage;
+    $('search_bar').oninput = Controller.updateSearch;
+    $('search_button').onclick = Controller.updateSearch;
+    $('newlist_button').onclick = Controller.newList;
+    $('clearlists_button').onclick = Controller.clearAllLists;
+    $('exportlists_button').onclick = Controller.exportLists;
+    $('importlists_button').onclick = Controller.openImportDialog;
+    $('file_input').onchange = Controller.importListsFromFile;
+    $('list_select').onchange = Controller.updateAddVillagerButton;
 }
 
 function exposeHelperFunctionsToConsole() {
     // @ts-ignore
-    window.percentageOfVillagersWithProfileImage = percentageOfVillagersWithProfileImage;
+    window.percentageOfVillagersWithProfileImage = Controller.percentageOfVillagersWithProfileImage;
 }
 
 function exposeVillagersDB() {

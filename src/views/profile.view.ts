@@ -1,4 +1,4 @@
-import { addVillager, birthdayHurray, removeVillager } from '../actions';
+import Controller from '../actions';
 import ButtonBuilder from '../components/ButtonBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
 import SpanBuilder from '../components/SpanBuilder';
@@ -43,12 +43,12 @@ export default class ProfileView {
     public static updateAddVillagerButton(): void {
         const addRemoveButton = $('add_remove_button') as HTMLButtonElement;
         if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
-            addRemoveButton.onclick = () => { removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
+            addRemoveButton.onclick = () => { Controller.removeVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
             addRemoveButton.className = 'clickable fa fa-minus';
             addRemoveButton.title = 'Remove from list';
             addRemoveButton.disabled = false;
         } else {
-            addRemoveButton.onclick = () => { addVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
+            addRemoveButton.onclick = () => { Controller.addVillager(stateService.currentLoadedProfileId, getListSelectValue()); };
             addRemoveButton.className = 'clickable fa fa-plus';
             addRemoveButton.title = 'Add to list';
             addRemoveButton.disabled = stateService.listsAreEmpty();
@@ -149,7 +149,7 @@ export default class ProfileView {
     }
 
     private static aBirthdayEasterEggButton(villagerName: string): HTMLButtonElement {
-        return new ButtonBuilder(birthdayHurray)
+        return new ButtonBuilder(Controller.birthdayHurray)
             .asFontAwesome('fa-birthday-cake')
             .withId('birthday_button')
             .withTitle(`Happy birthday to ${villagerName}!`)

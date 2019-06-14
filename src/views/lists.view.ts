@@ -1,4 +1,4 @@
-import { applyTitle, deleteList, loadProfile, newList, renameList } from '../actions';
+import Controller from '../actions';
 import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
 import IconBuilder from '../components/IconBuilder';
@@ -76,7 +76,7 @@ export default class ListsView {
     }
 
     private static aListDeleteButton(list: VillagerList): HTMLButtonElement {
-        return new ButtonBuilder(() => { deleteList(list.id); })
+        return new ButtonBuilder(() => { Controller.deleteList(list.id); })
             .asFontAwesome('fa-trash')
             .withTitle('Delete list')
             .withClassNames('listdelete_button')
@@ -85,7 +85,7 @@ export default class ListsView {
     }
 
     private static aListRenameButton(list: VillagerList): HTMLButtonElement {
-        return new ButtonBuilder(() => { renameList(list.id); })
+        return new ButtonBuilder(() => { Controller.renameList(list.id); })
             .asFontAwesome('fa-edit')
             .withTitle('Edit list title')
             .withClassNames('listrename_button')
@@ -95,7 +95,7 @@ export default class ListsView {
 
     private static aListTitleInputElement(list: VillagerList): HTMLInputElement {
         return new InputFieldBuilder('text')
-            .onChange(() => { applyTitle(list.id, this.getRenameListTitleValue()); })
+            .onChange(() => { Controller.applyTitle(list.id, this.getRenameListTitleValue()); })
             .withValue(list.title)
             .withMaxLength(30)
             .withId('rename_bar')
@@ -103,7 +103,7 @@ export default class ListsView {
     }
 
     private static aListRenameConfirmButton(list: VillagerList): HTMLButtonElement {
-        return new ButtonBuilder(() => { applyTitle(list.id, this.getRenameListTitleValue()); })
+        return new ButtonBuilder(() => { Controller.applyTitle(list.id, this.getRenameListTitleValue()); })
             .asFontAwesome('fa-check')
             .withId('confirmrename_button')
             .withTitle('Edit name')
@@ -131,7 +131,7 @@ export default class ListsView {
     }
 
     private static aMemberButton(villagerId: string, listId: string): Node {
-        return new ButtonBuilder(() => { loadProfile(villagerId, listId); })
+        return new ButtonBuilder(() => { Controller.loadProfile(villagerId, listId); })
             .withClassNames('member_button')
             .isClickable()
             .appendChild(this.aMemberImage(villagerId))
@@ -167,7 +167,7 @@ export default class ListsView {
 
     private static anAddNewListButton(): Node {
         return new IconBuilder('fa-plus')
-            .onClick(newList)
+            .onClick(Controller.newList)
             .withId('emptylists_newlist_button')
             .withTitle('Add list')
             .isClickable()
