@@ -12,6 +12,7 @@ body {
     background-image: url("background.jpg");
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
+    padding: 10px;
     max-width: 900px;
     height: 100%;
 }
