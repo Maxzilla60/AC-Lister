@@ -1,4 +1,3 @@
-import Controller from '../controller';
 import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
 import IconBuilder from '../components/IconBuilder';
@@ -6,6 +5,7 @@ import ImageBuilder from '../components/ImageBuilder';
 import InputFieldBuilder from '../components/InputFieldBuilder';
 import ListElementBuilder from '../components/ListElementBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
+import Controller from '../controller';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { aTextNode, clearElement, getElement as $, trimName } from '../util/util';
@@ -139,7 +139,7 @@ export default class ListsView {
     }
 
     private static aMemberImage(villagerId: string): Node {
-        return new ImageBuilder(`./villager_icons/${villagerId}.gif`, './villager_icons/other/default.gif')
+        return new ImageBuilder(`./villager_icons/${villagerId}.gif`, './villager_icons/default.gif')
             .withTitle(trimName(villagerId))
             .build();
     }
