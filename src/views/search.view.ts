@@ -42,7 +42,7 @@ export default class SearchView {
     }
 
     private static aVillagersSearchResultImage(villager: Villager): HTMLImageElement {
-        return new ImageBuilder(`./villager_icons/${villager.id}.gif`)
+        return new ImageBuilder(`./villager_icons/${villager.id}.gif`, './villager_icons/other/default.gif')
             .withAlt(villager.name)
             .withFloatLeft()
             .build();

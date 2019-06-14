@@ -139,7 +139,7 @@ export default class ListsView {
     }
 
     private static aMemberImage(member: string): Node {
-        return new ImageBuilder(`./villager_icons/${member}.gif`)
+        return new ImageBuilder(`./villager_icons/${member}.gif`, './villager_icons/other/default.gif')
             .withTitle(trimName(member))
             .build();
     }
