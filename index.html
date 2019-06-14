@@ -4,6 +4,7 @@
 
 <head>
     <title>Animal Crossing ★ Villager Lister</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
@@ -34,49 +35,50 @@
         <h1>Animal Crossing <i class="fa fa-star" aria-hidden="true"></i> Villager Lister</h1>
         <small>🚧 This is version 2.0 and currently WIP 🚧</small>
     </header>
+    <main>
+        <h2>Search</h2>
+        <section id="search_container">
+            <search>
+                <input id="search_bar" placeholder="Search" type="search" autofocus>
+                <button id="search_button" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
+            </search>
+            <div id="search_results">
+            </div>
+        </section>
 
-    <h2>Search</h2>
-    <section id="search_container">
-        <search>
-            <input id="search_bar" placeholder="Search" type="search" autofocus>
-            <button id="search_button" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
-        </search>
-        <div id="search_results">
-        </div>
-    </section>
+        <h2>Lists</h2>
+        <section id="main_container">
+            <div class="menu">
+                <button id="newlist_button" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
+                <button id="exportlists_button" title="Save lists" class="clickable fa fa-upload" aria-hidden="true"></button>
+                <button id="importlists_button" title="Import lists" class="clickable fa fa-download" aria-hidden="true"></button>
+                <button id="clearlists_button" title="Clear all lists" class="clickable fa fa-times" aria-hidden="true"></button>
+                <a href="viewer/index.html" id="openviewer_button" title="Open viewer and share" class="clickable fa fa-expand" aria-hidden="true"></a>
+                <input id="file_input" hidden type="file" accept="application/json,.json">
+            </div>
+            <div id="lists_container">
+                <ul id="lists">
+                    <div class="loading">
+                        <i class="fa fa-star fa-spin"></i>
+                        Loading...
+                    </div>
+                    <noscript>I'm sorry but this website requires JavaScript to be enabled to work. 😅</noscript>
+                </ul>
+            </div>
+        </section>
 
-    <h2>Lists</h2>
-    <section id="main_container">
-        <div class="menu">
-            <button id="newlist_button" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
-            <button id="exportlists_button" title="Save lists" class="clickable fa fa-upload" aria-hidden="true"></button>
-            <button id="importlists_button" title="Import lists" class="clickable fa fa-download" aria-hidden="true"></button>
-            <button id="clearlists_button" title="Clear all lists" class="clickable fa fa-times" aria-hidden="true"></button>
-            <a href="viewer/index.html" id="openviewer_button" title="Open viewer and share" class="clickable fa fa-expand" aria-hidden="true"></a>
-            <input id="file_input" hidden type="file" accept="application/json,.json">
-        </div>
-        <div id="lists_container">
-            <ul id="lists">
-                <div class="loading">
-                    <i class="fa fa-star fa-spin"></i>
-                    Loading...
-                </div>
-                <noscript>I'm sorry but this website requires JavaScript to be enabled to work. 😅</noscript>
-            </ul>
-        </div>
-    </section>
-
-    <h2>Profile</h2>
-    <section id="profile_container">
-        <div class="menu">
-            <select id="list_select"></select>
-            <button id="add_remove_button" aria-hidden="true" disabled title="Add to list" class="fa fa-plus clickable"></button>
-        </div>
-        <summary id="villager_information_container">
-            <ul id="villager_information"></ul>
-        </summary>
-        <img title="Image not available (yet)" src="./public/villager_heads/wip.jpg" id="profile_image">
-    </section>
+        <h2>Profile</h2>
+        <section id="profile_container">
+            <div class="menu">
+                <select id="list_select"></select>
+                <button id="add_remove_button" aria-hidden="true" disabled title="Add to list" class="fa fa-plus clickable"></button>
+            </div>
+            <summary id="villager_information_container">
+                <ul id="villager_information"></ul>
+            </summary>
+            <img title="Image not available (yet)" src="./public/villager_heads/wip.jpg" id="profile_image">
+        </section>
+    </main>
 </body>
 
 <script src="./src/init.ts" type="text/javascript"></script>

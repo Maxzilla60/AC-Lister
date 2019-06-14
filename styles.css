@@ -1,16 +1,42 @@
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
     font-size: 16px;
+}
+
+html {
+    height: 100%;
 }
 
 body {
     background-image: url("background.jpg");
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    width: 600px;
+    max-width: 900px;
+    height: 100%;
+}
+
+main {
+    display: grid;
+    height: 80%;
+    grid-template-columns: 25% 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas: "search lists lists" "search lists lists" "search profile profile";
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+#search_container {
+    grid-area: search;
+}
+
+#main_container {
+    grid-area: lists;
+}
+
+#profile_container {
+    grid-area: profile;
 }
 
 /* Global Stuff */
@@ -27,6 +53,7 @@ input {
     border: solid orange;
     padding: 5px;
     border-radius: 8px;
+    width: 0;
 }
 
 img {
@@ -132,6 +159,7 @@ small {
     font-weight: bold;
     padding: 5px;
     border-radius: 8px;
+    margin-bottom: 5px;
 }
 
 /* Search */
@@ -164,7 +192,7 @@ search {
     -ms-flex-direction: column;
     flex-direction: column;
     overflow-y: scroll;
-    height: 200px;
+    height: 94%;
 }
 
 #no_results {
@@ -204,7 +232,6 @@ search {
     border: solid orange;
     overflow-y: auto;
     border-radius: 8px;
-    height: 300px;
     position: relative;
 }
 
@@ -214,13 +241,13 @@ search {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    z-index: 1;
     pointer-events: none;
 }
 
 #main_container > .menu > a,
 #main_container > .menu > button {
     pointer-events: all;
+    background-color: transparent;
 }
 
 #lists_container {
@@ -252,6 +279,10 @@ search {
     font-weight: bold;
     margin: 0;
     padding: 5px;
+}
+
+#rename_bar {
+    width: initial;
 }
 
 .list_members {
@@ -365,7 +396,6 @@ select, option {
 #villager_information {
     color: brown;
     padding: 5px;
-    margin-left: 20px;
 }
 
 #villager_information > li {
@@ -387,10 +417,99 @@ select, option {
 }
 
 #profile_image {
+    align-self: center;
     border-radius: 27px;
     border: solid orange;
     float: left;
     height: 200px;
     width: 200px;
     padding: 0;
+}
+
+@media only screen and (max-width: 730px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "lists" "lists" "profile";
+    }
+
+    #main_container {
+        grid-area: lists;
+    }
+
+    #profile_container {
+        grid-area: profile;
+    }
+
+    #search_container {
+        position: fixed; /* or choose `absolute` depending on desired behavior*/
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        left: -340px;
+        transition: transform .3s ease-in-out;
+    }
+
+    .menu {
+        position: initial;
+        justify-content: center;
+    }
+
+    #main_container > .menu {
+        justify-content: space-between;
+        border-bottom: orange 1px solid;
+    }
+
+    #lists_container {
+        position: initial;
+        justify-content: center;
+    }
+
+    .list_header {
+        text-align: center;
+    }
+
+    .list_members {
+        justify-content: center;
+    }
+
+    #profile_container {
+        display: initial;
+    }
+
+    #list_select {
+        flex: auto;
+    }
+
+    #villager_information > li {
+        margin: 0;
+    }
+
+    #profile_image {
+        position: absolute;
+        height: 25vw;
+        width: 25vw;
+        bottom: 0;
+        right: 0;
+        margin: 5px;
+    }
+
+    #villager_information:empty {
+        height: 25vw;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    h1 {
+        font-size: 5.5vw;
+    }
+
+    h1 > .fa {
+        font-size: 5.5vw !important;
+    }
+
+    #villager_information > li, .na {
+        font-size: 3.5vw;
+    }
 }
