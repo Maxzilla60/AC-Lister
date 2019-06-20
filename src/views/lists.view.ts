@@ -9,6 +9,7 @@ import Controller from '../controller';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { aTextNode, clearElement, getElement as $, trimName } from '../util/util';
+import { Villager } from './../models/villager.model';
 import ProfileView from './profile.view';
 
 export default class ListsView {
@@ -139,9 +140,14 @@ export default class ListsView {
     }
 
     private static aMemberImage(villagerId: string): Node {
-        return new ImageBuilder(`./villager_icons/${villagerId}.gif`, './villager_icons/default.gif')
+        return new ImageBuilder(`./villager_icons/${this.getIconImage(villagerId)}`, './villager_icons/default.gif')
             .withTitle(trimName(villagerId))
             .build();
+    }
+
+    private static getIconImage(villagerId: string): string {
+        const villager: Villager = Controller.getVillagerById(villagerId);
+        return villager.hasIconImage ? `${villager.id}.gif` : 'default.gif';
     }
 
     private static updateListEditingButtons(): void {

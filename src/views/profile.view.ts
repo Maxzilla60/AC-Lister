@@ -69,7 +69,11 @@ export default class ProfileView {
 
     private static updateProfileImage(villager: Villager): void {
         const profileImageElement: HTMLImageElement = $('profile_image') as HTMLImageElement;
-        profileImageElement.src = `./villager_heads/${villager.id}.jpg`;
+        profileImageElement.src = `./villager_heads/${this.getProfileImage(villager)}`;
+    }
+
+    private static getProfileImage(villager: Villager): string {
+        return villager.hasProfileImage ? `${villager.id}.jpg` : 'wip.jpg';
     }
 
     private static appendVillagerNameInfo(villagerName: string): void {

@@ -46,10 +46,15 @@ export default class SearchView {
     }
 
     private static aVillagersSearchResultImage(villager: Villager): HTMLImageElement {
-        return new ImageBuilder(`./villager_icons/${villager.id}.gif`, './villager_icons/default.gif')
+        return new ImageBuilder(`./villager_icons/${this.getIconImage(villager.id)}`, './villager_icons/default.gif')
             .withAlt(villager.name)
             .withFloatLeft()
             .build();
+    }
+
+    private static getIconImage(villagerId: string): string {
+        const villager: Villager = Controller.getVillagerById(villagerId);
+        return villager.hasIconImage ? `${villager.id}.gif` : 'default.gif';
     }
 
     private static aNoResultsElement(): HTMLDivElement {

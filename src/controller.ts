@@ -121,7 +121,7 @@ export default class Controller {
     public static percentageOfVillagersWithProfileImage(): string {
         const allVillagersCount = villagersDB.length;
         const villagersWithProfileImageCount = villagersDB
-            .filter((v: Villager) => v.head !== 'wip.jpg')
+            .filter((v: Villager) => v.hasProfileImage)
             .length;
 
         const percentage = Math.floor((villagersWithProfileImageCount / allVillagersCount) * 100);
@@ -132,7 +132,7 @@ export default class Controller {
         $('close_searchpanel_button').click();
     }
 
-    private static getVillagerById(villagerId: string): Villager {
+    public static getVillagerById(villagerId: string): Villager {
         return villagersDB.find((v: Villager) => v.id === villagerId);
     }
 
@@ -175,10 +175,4 @@ export default class Controller {
     private static filterVillagersOnSpecies(speciesQuery: string): Villager[] {
         return villagersDB.filter((villager: Villager) => villager.species.toLowerCase().includes(speciesQuery));
     }
-}
-
-export function loadWipProfileImage(element: HTMLImageElement) {
-    element.src = './villager_heads/wip.jpg';
-    element.alt = 'Profile image not available (yet)';
-    element.title = 'Profile image not available (yet)';
 }
