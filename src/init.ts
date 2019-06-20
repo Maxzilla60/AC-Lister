@@ -1,4 +1,4 @@
-import Controller, { loadWipProfileImage } from './controller';
+import Controller from './controller';
 import { getElement as $ } from './util/util';
 import villagersDB from './util/villagers.json';
 
@@ -10,7 +10,6 @@ function init(): void {
 }
 
 function bindEvents(): void {
-    $('profile_image').onerror = () => { loadWipProfileImage($('profile_image') as HTMLImageElement); };
     $('search_bar').oninput = Controller.updateSearch;
     $('search_button').onclick = Controller.updateSearch;
     $('newlist_button').onclick = Controller.newList;

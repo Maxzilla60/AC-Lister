@@ -13,11 +13,8 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
         return this;
     }
 
-    private initFallBackSrc(src: string): void {
-        this.element.src = src;
-        this.element.onerror = () => {
-            imageOnError(this.element, src);
-        };
+    private initFallBackSrc(fallbackSrc: string): void {
+        this.element.src = fallbackSrc;
     }
 
     private initLazyLoading(src: string): void {
