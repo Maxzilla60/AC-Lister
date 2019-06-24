@@ -14,38 +14,42 @@ import ProfileView from './profile.view';
 
 export default class ListsView {
     public static updateView(withListToRenameId?: string): void {
-        clearElement($('lists'));
+        const listsElement = $('lists');
 
         if (stateService.listsAreEmpty()) {
-            $('lists').appendChild(this.anEmptyListInfoElement());
+            this.appendNoListsMessage(listsElement);
         } else {
-            this.appendLists(withListToRenameId);
+            this.appendLists(listsElement, withListToRenameId);
         }
 
         this.updateListEditingButtons();
-
         if (withListToRenameId) { this.focusAndSelectRenameInput(); }
     }
 
-    private static appendLists(withListToRenameId?: string): void {
-        for (const list of stateService.getLists()) {
-            const renameEnabled = withListToRenameId && list.id === withListToRenameId;
-            this.appendListSection(list, renameEnabled);
-        }
+    private static appendNoListsMessage(listsElement: HTMLElement) {
+        clearElement(listsElement);
+        listsElement.appendChild(this.aNoListInfoElement());
     }
 
-    private static appendListSection(list: VillagerList, renameEnabled: boolean = false): void {
-        $('lists').appendChild(
-            new ListItemBuilder()
-                // TODO: Update tests to use the data- attribute
-                .withDataAttribute('id', list.id)
-                .withChildren(
-                    this.aListHeaderSection(list, renameEnabled),
-                    this.aListMembersSection(list.id, list.members),
-                )
-                .withClassNames('list')
-                .build()
-        );
+    private static appendLists(listsElement: HTMLElement, withListToRenameId?: string): void {
+        const fragment = document.createDocumentFragment();
+
+        for (const list of stateService.getLists()) {
+            const renameEnabled = withListToRenameId && list.id === withListToRenameId;
+            fragment.appendChild(this.aListElement(list, renameEnabled));
+        }
+
+        clearElement(listsElement);
+        listsElement.appendChild(fragment);
+    }
+
+    private static aListElement(list: VillagerList, renameEnabled: boolean): HTMLLIElement {
+        return new ListItemBuilder()
+            // TODO: Update tests to use the data- attribute
+            .withDataAttribute('id', list.id)
+            .withChildren(this.aListHeaderSection(list, renameEnabled), this.aListMembersSection(list.id, list.members))
+            .withClassNames('list')
+            .build();
     }
 
     private static aListHeaderSection(list: VillagerList, renameEnabled: boolean = false): HTMLDivElement {
@@ -145,6 +149,7 @@ export default class ListsView {
             .build();
     }
 
+    // TODO: VillagerService
     private static getIconImage(villagerId: string): string {
         const villager: Villager = Controller.getVillagerById(villagerId);
         return villager.hasIconImage ? `${villager.id}.gif` : 'default.gif';
@@ -160,7 +165,7 @@ export default class ListsView {
         clearListsButton.className = 'clickable fa fa-times';
     }
 
-    private static anEmptyListInfoElement(): HTMLElement {
+    private static aNoListInfoElement(): HTMLElement {
         return new DivisionBuilder()
             .withChildren(
                 aTextNode('Click'),

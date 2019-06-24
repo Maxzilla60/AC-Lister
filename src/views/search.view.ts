@@ -9,7 +9,6 @@ import villagers from '../util/villagers.json';
 export default class SearchView {
     public static updateView(resultList: Villager[] = villagers): void {
         const searchResultsElement = $('search_results');
-        clearElement(searchResultsElement);
 
         if (resultList.length <= 0) {
             this.appendNoResultsElement(searchResultsElement);
@@ -19,12 +18,16 @@ export default class SearchView {
     }
 
     private static appendResults(resultList: Villager[], searchResultsElement: HTMLElement) {
+        const fragment = document.createDocumentFragment();
         for (const villager of resultList) {
-            searchResultsElement.appendChild(this.aVillagerSearchResultButton(villager));
+            fragment.appendChild(this.aVillagerSearchResultButton(villager));
         }
+        clearElement(searchResultsElement);
+        searchResultsElement.appendChild(fragment);
     }
 
     private static appendNoResultsElement(searchResultsElement: HTMLElement) {
+        clearElement(searchResultsElement);
         searchResultsElement.appendChild(this.aNoResultsElement());
     }
 
@@ -52,6 +55,7 @@ export default class SearchView {
             .build();
     }
 
+    // TODO: VillagerService
     private static getIconImage(villagerId: string): string {
         const villager: Villager = Controller.getVillagerById(villagerId);
         return villager.hasIconImage ? `${villager.id}.gif` : 'default.gif';

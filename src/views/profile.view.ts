@@ -2,8 +2,6 @@ import ButtonBuilder from '../components/ButtonBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
 import SpanBuilder from '../components/SpanBuilder';
 import Controller from '../controller';
-import { Personality } from '../models/personality.enum';
-import { Species } from '../models/species.enum';
 import { Villager } from '../models/villager.model';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
@@ -12,10 +10,7 @@ import { aTextNode, birthdayIsToday, clearElement, getElement as $, getListSelec
 export default class ProfileView {
     public static updateView(villager: Villager, fromListId: string): void {
         stateService.currentLoadedProfileId = villager.id;
-
-        clearElement($('villager_information'));
         this.appendVillagerInfo(villager);
-
         this.updateListSelect(fromListId);
         this.updateProfileImage(villager);
     }
@@ -29,11 +24,14 @@ export default class ProfileView {
             stateService.currentListSelect = selectedListId;
         }
 
+        const fragment = document.createDocumentFragment();
+        for (const list of stateService.getLists()) {
+            fragment.appendChild(this.aListDropdownOption(list, list.id === stateService.currentListSelect));
+        }
+
         ($('list_select') as HTMLSelectElement).disabled = stateService.listsAreEmpty();
         clearElement($('list_select'));
-        for (const list of stateService.getLists()) {
-            $('list_select').appendChild(this.aListDropdownOption(list, list.id === stateService.currentListSelect));
-        }
+        $('list_select').appendChild(fragment);
 
         this.updateAddVillagerButton();
     }
@@ -54,17 +52,24 @@ export default class ProfileView {
     }
 
     private static appendVillagerInfo(villager: Villager) {
-        this.appendVillagerNameInfo(villager.name);
-        this.appendVillagerSpeciesInfo(villager.species);
-        this.appendVillagerPersonalityInfo(villager.personality);
-        this.appendVillagerCoffeeInfo(villager.coffee);
-        this.appendVillagerBirthdayInfo(villager);
-        this.appendWikiAndStoreButtons(villager);
-    }
+        const fragment = document.createDocumentFragment();
 
-    private static appendWikiAndStoreButtons(villager: Villager) {
-        $('villager_information').appendChild(this.aWikiIconButton(villager.wiki));
-        $('villager_information').appendChild(this.aStoreIconButton(villager.store));
+        // TODO: Update instead or re-inserting?
+        fragment.appendChild(this.aProfileInfoListItem('fa-tag', 'Name', villager.name));
+        fragment.appendChild(this.aProfileInfoListItem('fa-user', 'Species', villager.species));
+        fragment.appendChild(this.aProfileInfoListItem('fa-heart', 'Personality', villager.personality));
+        fragment.appendChild(this.aProfileInfoListItem('fa-coffee', 'Favourite coffee', villager.coffee));
+        fragment.appendChild(
+            birthdayIsToday(villager.birthday) ?
+                this.aBirthdayEasterEggInfoListItem(villager) :
+                this.aProfileInfoListItem('fa-birthday-cake', 'Birthday', villager.birthday)
+        );
+        fragment.appendChild(this.aWikiIconButton(villager.wiki));
+        fragment.appendChild(this.aStoreIconButton(villager.store));
+
+        const villagerInformationElement = $('villager_information');
+        clearElement(villagerInformationElement);
+        villagerInformationElement.appendChild(fragment);
     }
 
     private static updateProfileImage(villager: Villager): void {
@@ -74,34 +79,6 @@ export default class ProfileView {
 
     private static getProfileImage(villager: Villager): string {
         return villager.hasProfileImage ? `${villager.id}.jpg` : 'wip.jpg';
-    }
-
-    private static appendVillagerNameInfo(villagerName: string): void {
-        $('villager_information').appendChild(
-            this.aProfileInfoListItem('fa-tag', 'Name', villagerName)
-        );
-    }
-    private static appendVillagerSpeciesInfo(villagerSpecies: Species): void {
-        $('villager_information').appendChild(
-            this.aProfileInfoListItem('fa-user', 'Species', villagerSpecies)
-        );
-    }
-    private static appendVillagerPersonalityInfo(villagerPersonality: Personality): void {
-        $('villager_information').appendChild(
-            this.aProfileInfoListItem('fa-heart', 'Personality', villagerPersonality)
-        );
-    }
-    private static appendVillagerCoffeeInfo(villagerCoffee: string): void {
-        $('villager_information').appendChild(
-            this.aProfileInfoListItem('fa-coffee', 'Favourite coffee', villagerCoffee)
-        );
-    }
-    private static appendVillagerBirthdayInfo(villager: Villager) {
-        $('villager_information').appendChild(
-            birthdayIsToday(villager.birthday) ?
-                this.aBirthdayEasterEggInfoListItem(villager) :
-                this.aProfileInfoListItem('fa-birthday-cake', 'Birthday', villager.birthday)
-        );
     }
 
     private static aWikiIconButton(wikiLink: string): HTMLButtonElement {
