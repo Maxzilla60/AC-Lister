@@ -7,7 +7,7 @@ import { clearElement, getElement as $ } from '../util/util';
 import villagers from '../util/villagers.json';
 
 export default class SearchView {
-    public static updateView(resultList: Villager[] = villagers): void {
+    public static updateView(resultList: Villager[] = villagers as Villager[]): void {
         const searchResultsElement = $('search_results');
 
         if (resultList.length <= 0) {

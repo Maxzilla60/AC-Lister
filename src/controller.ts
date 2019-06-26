@@ -13,6 +13,7 @@ export default class Controller {
     private static readonly lozadObserver = lozad();
 
     public static init(): void {
+        // TODO: specific "init" methods
         Controller.updateSearch();
         Controller.refreshLists();
         Controller.observeLazyLoadedImages();
@@ -128,12 +129,13 @@ export default class Controller {
         return `${percentage}% of all villagers have a profile image. (${villagersWithProfileImageCount}/${allVillagersCount})`;
     }
 
-    private static closeSearchPanel() {
-        $('close_searchpanel_button').click();
-    }
-
+    // TODO: VillagerService
     public static getVillagerById(villagerId: string): Villager {
         return villagersDB.find((v: Villager) => v.id === villagerId);
+    }
+
+    private static closeSearchPanel() {
+        $('close_searchpanel_button').click();
     }
 
     private static search(query: string): void {
