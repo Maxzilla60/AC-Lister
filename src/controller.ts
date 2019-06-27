@@ -1,4 +1,4 @@
-import { Villager } from './models/villager.model';
+import Villager from './models/villager.model';
 import { stateService } from './util/state.service';
 import { birthdayIsToday, getElement as $, getListSelectValue, removeDuplicates } from './util/util';
 import villagersDB from './util/villagers.json';
@@ -131,7 +131,7 @@ export default class Controller {
 
     // TODO: VillagerService
     public static getVillagerById(villagerId: string): Villager {
-        return villagersDB.find((v: Villager) => v.id === villagerId);
+        return (villagersDB as Villager[]).find((v: Villager) => v.id === villagerId);
     }
 
     private static closeSearchPanel() {
@@ -163,18 +163,18 @@ export default class Controller {
     }
 
     private static filterVillagersWhosBirthdayIsToday(): Villager[] {
-        return villagersDB.filter((villager: Villager) => birthdayIsToday(villager.birthday));
+        return (villagersDB as Villager[]).filter((villager: Villager) => birthdayIsToday(villager.birthday));
     }
 
     private static filterVillagersOnName(nameQuery: string): Villager[] {
-        return villagersDB.filter((villager: Villager) => villager.name.toLowerCase().includes(nameQuery));
+        return (villagersDB as Villager[]).filter((villager: Villager) => villager.name.toLowerCase().includes(nameQuery));
     }
 
     private static filterVillagersOnPersonality(personalityQuery: string): Villager[] {
-        return villagersDB.filter((villager: Villager) => villager.personality.toLowerCase().includes(personalityQuery));
+        return (villagersDB as Villager[]).filter((villager: Villager) => villager.personality.toLowerCase().includes(personalityQuery));
     }
 
     private static filterVillagersOnSpecies(speciesQuery: string): Villager[] {
-        return villagersDB.filter((villager: Villager) => villager.species.toLowerCase().includes(speciesQuery));
+        return (villagersDB as Villager[]).filter((villager: Villager) => villager.species.toLowerCase().includes(speciesQuery));
     }
 }

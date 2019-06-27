@@ -2,7 +2,7 @@ import ButtonBuilder from '../components/ButtonBuilder';
 import ListItemBuilder from '../components/ListItemBuilder';
 import SpanBuilder from '../components/SpanBuilder';
 import Controller from '../controller';
-import { Villager } from '../models/villager.model';
+import Villager from '../models/villager.model';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { aTextNode, birthdayIsToday, clearElement, getElement as $, getListSelectValue } from '../util/util';

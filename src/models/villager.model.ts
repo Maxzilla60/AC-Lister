@@ -1,7 +1,7 @@
 import { Personality } from './personality.enum';
 import { Species } from './species.enum';
 
-export interface Villager {
+export default interface Villager {
     name: string;
     id: string;
     species: Species;

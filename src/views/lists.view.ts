@@ -9,7 +9,7 @@ import Controller from '../controller';
 import { VillagerList } from '../models/villagerlist.model';
 import { stateService } from '../util/state.service';
 import { aTextNode, clearElement, getElement as $, trimName } from '../util/util';
-import { Villager } from './../models/villager.model';
+import Villager from './../models/villager.model';
 import ProfileView from './profile.view';
 
 export default class ListsView {

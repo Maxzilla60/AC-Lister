@@ -2,7 +2,7 @@ import ButtonBuilder from '../components/ButtonBuilder';
 import DivisionBuilder from '../components/DivisionBuilder';
 import ImageBuilder from '../components/ImageBuilder';
 import Controller from '../controller';
-import { Villager } from '../models/villager.model';
+import Villager from '../models/villager.model';
 import { clearElement, getElement as $ } from '../util/util';
 import villagers from '../util/villagers.json';
 
