@@ -134,9 +134,9 @@ export default class ListsV {
         $('importlists_button').onclick = () => {
             this.importListsClicked();
         };
-        this.fileInputElement.addEventListener('change', () => {
+        this.fileInputElement.onchange = () => {
             this.importListsFileSelected();
-        });
+        };
     }
 
     private updateListEditingButtons(listsAreEmpty: boolean = true): void {
