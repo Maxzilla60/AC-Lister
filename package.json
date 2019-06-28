@@ -8,7 +8,7 @@
     "netlify": "npm i && parcel build index.html",
     "codenvy": "parcel index.html --host 0.0.0.0 --port 1337",
     "cypress": "cypress open",
-    "test": "cypress run --config videoUploadOnPasses=false"
+    "test": "npx cypress run --config videoUploadOnPasses=false"
   },
   "keywords": [],
   "author": "Maxime Orione",
@@ -25,9 +25,9 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "cypress": "latest",
-    "parcel-plugin-static-files-copy": "^2.0.0",
+    "cypress": "^3.3.2",
     "parcel": "latest",
+    "parcel-plugin-static-files-copy": "^2.0.0",
     "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   },
