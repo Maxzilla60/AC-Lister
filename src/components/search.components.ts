@@ -23,7 +23,6 @@ export default class SearchComponents {
     private static aVillagersSearchResultImage(villager: Villager): HTMLImageElement {
         return new ImageBuilder(`./villager_icons/${villager.getIconImage()}`, './villager_icons/default.gif')
             .withAlt(villager.name)
-            .withFloatLeft() // TODO: CSS Class
             .build();
     }
     private static aVillagersSearchResultNameElement(villagerName: string): HTMLElement {
