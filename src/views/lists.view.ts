@@ -1,6 +1,6 @@
 import ListsComponents from '../components/lists.components';
 import VillagerList from '../models/villagerlist.model';
-import { clearElement, getChildElementByClassName, getElement as $ } from '../util/util';
+import { getChildElementByClassName, getElement as $, replaceChildren } from '../util/util';
 import IListsController from './interfaces/listscontroller.interface';
 
 export default class ListsV {
@@ -38,7 +38,7 @@ export default class ListsV {
 
     public displayNewList(newList: VillagerList): void {
         if (this.currentListsAreEmpty) {
-            this.clearAndAppendToListsElement(this.aListElement(newList));
+            replaceChildren(this.listsElement, this.aListElement(newList));
         } else {
             this.listsElement.appendChild(this.aListElement(newList));
         }
@@ -158,7 +158,7 @@ export default class ListsV {
     }
 
     private appendNoListsMessage(): void {
-        this.clearAndAppendToListsElement(ListsComponents.aNoListInfoElement(() => { this.newListClicked(); }));
+        replaceChildren(this.listsElement, ListsComponents.aNoListInfoElement(() => { this.newListClicked(); }));
     }
 
     private appendLists(lists: VillagerList[]): void {
@@ -168,12 +168,7 @@ export default class ListsV {
             fragment.appendChild(this.aListElement(list));
         }
 
-        this.clearAndAppendToListsElement(fragment);
-    }
-
-    private clearAndAppendToListsElement(node: Node): void {
-        clearElement(this.listsElement);
-        this.listsElement.appendChild(node);
+        replaceChildren(this.listsElement, fragment);
     }
 
     private getRenameBar(listId: string): HTMLInputElement {

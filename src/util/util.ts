@@ -7,6 +7,11 @@ export function getChildElementByClassName(element: Element, className: string):
     return children.find(child => child.className === className);
 }
 
+export function replaceChildren(parentElement: HTMLElement, childElement: Node): void {
+    clearElement(parentElement);
+    parentElement.appendChild(childElement);
+}
+
 export function clearElement(element: HTMLElement): void {
     element.innerHTML = '';
 }

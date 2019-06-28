@@ -1,6 +1,6 @@
 import SearchComponents from '../components/search.components';
 import Villager from '../models/villager.model';
-import { clearElement, getElement as $ } from '../util/util';
+import { getElement as $, replaceChildren } from '../util/util';
 import ISearchController from './interfaces/searchcontroller.interface';
 
 export default class SearchV {
@@ -53,7 +53,7 @@ export default class SearchV {
     }
 
     private appendNoResultsElement(): void {
-        this.clearAndAppendSearchResultsElement(SearchComponents.aNoResultsElement());
+        replaceChildren(this.searchResultsElement, SearchComponents.aNoResultsElement());
     }
 
     private appendResults(resultList: Villager[]): void {
@@ -65,12 +65,6 @@ export default class SearchV {
                 }),
             );
         }
-        this.clearAndAppendSearchResultsElement(fragment);
-    }
-
-    // TODO: Make it a utility function (replaceChildren())
-    private clearAndAppendSearchResultsElement(node: Node): void {
-        clearElement(this.searchResultsElement);
-        this.searchResultsElement.appendChild(node);
+        replaceChildren(this.searchResultsElement, fragment);
     }
 }

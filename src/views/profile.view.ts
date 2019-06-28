@@ -1,7 +1,7 @@
 import ProfileComponents from '../components/profile.components';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
-import { clearElement, getElement as $ } from '../util/util';
+import { getElement as $, replaceChildren } from '../util/util';
 import IProfileController from './interfaces/profilecontroller.interface';
 
 export default class ProfileV {
@@ -79,7 +79,7 @@ export default class ProfileV {
 
     private appendVillagerInfo(): void {
         const fragment = ProfileComponents.aProfileElement(this.currentProfile);
-        this.clearAndAppendToVillagerInformationElement(fragment);
+        replaceChildren(this.villagerInformationElement, fragment);
     }
 
     private updateListSelectOptions(): void {
@@ -89,7 +89,7 @@ export default class ProfileV {
         }
 
         this.listSelectElement.disabled = this.currentLists.length <= 0;
-        this.clearAndAppendToListSelectElement(fragment);
+        replaceChildren(this.listSelectElement, fragment);
     }
 
     private updateAddRemoveVillagerButton(): void {
@@ -124,15 +124,5 @@ export default class ProfileV {
 
     private updateProfileImage(): void {
         this.profileImageElement.src = `./villager_heads/${this.currentProfile.getProfileImage()}`;
-    }
-
-    private clearAndAppendToVillagerInformationElement(node: Node): void {
-        clearElement(this.villagerInformationElement);
-        this.villagerInformationElement.appendChild(node);
-    }
-
-    private clearAndAppendToListSelectElement(fragment: DocumentFragment): void {
-        clearElement(this.listSelectElement);
-        this.listSelectElement.appendChild(fragment);
     }
 }
