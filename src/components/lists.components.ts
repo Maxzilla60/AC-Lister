@@ -1,13 +1,12 @@
 import ButtonBuilder from '../builders/ButtonBuilder';
 import DivisionBuilder from '../builders/DivisionBuilder';
 import { HTMLEvent } from '../builders/HTMLEvent.type';
-import IconBuilder from '../builders/IconBuilder';
 import ImageBuilder from '../builders/ImageBuilder';
 import InputFieldBuilder from '../builders/InputFieldBuilder';
 import ListElementBuilder from '../builders/ListElementBuilder';
 import ListItemBuilder from '../builders/ListItemBuilder';
 import VillagerList from '../models/villagerlist.model';
-import { aTextNode } from '../util/util';
+import { aTextNode, getElement as $ } from '../util/util';
 import VillagersRepository from '../util/villagers.repository';
 
 export default class ListsComponents {
@@ -139,12 +138,8 @@ export default class ListsComponents {
     }
 
     private static anAddNewListButton(newListEvent: HTMLEvent): Node {
-        // TODO: cloneNode() the existing button
-        return new IconBuilder('fa-plus')
-            .onClick(newListEvent)
-            .withId('emptylists_newlist_button')
-            .withTitle('Add list')
-            .isClickable()
-            .build();
+        const newListButton = $('newlist_button').cloneNode() as HTMLButtonElement;
+        newListButton.onclick = newListEvent;
+        return newListButton;
     }
 }
