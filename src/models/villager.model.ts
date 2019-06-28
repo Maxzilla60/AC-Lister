@@ -1,15 +1,34 @@
 import { Personality } from './personality.enum';
 import { Species } from './species.enum';
 
-export default interface Villager {
-    name: string;
-    id: string;
-    species: Species;
-    personality: Personality;
-    coffee: string;
-    birthday: string;
-    wiki: string;
-    store: string;
-    hasProfileImage: boolean;
-    hasIconImage: boolean;
+export default class Villager {
+    public name: string;
+    public id: string;
+    public species: Species;
+    public personality: Personality;
+    public coffee: string;
+    public birthday: string;
+    public wiki: string;
+    public store: string;
+    public hasProfileImage: boolean;
+    public hasIconImage: boolean;
+
+    public static serialize(object: Object): Villager {
+        return Object.assign(new Villager(), object);
+    }
+
+    public birthdayIsToday(): boolean {
+        const today: Date = new Date();
+        const birthday: Date = new Date(this.birthday);
+        return today.getDate() === birthday.getDate()
+            && today.getMonth() === birthday.getMonth();
+    }
+
+    public getIconImage(): string {
+        return this.hasIconImage ? `${this.id}.gif` : 'default.gif';
+    }
+
+    public getProfileImage(): string {
+        return this.hasProfileImage ? `${this.id}.jpg` : 'wip.jpg';
+    }
 }

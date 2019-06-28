@@ -1,166 +1,138 @@
-import ButtonBuilder from '../components/ButtonBuilder';
-import ListItemBuilder from '../components/ListItemBuilder';
-import SpanBuilder from '../components/SpanBuilder';
-import Controller from '../controller';
+import ProfileComponents from '../components/profile.components';
 import Villager from '../models/villager.model';
-import { VillagerList } from '../models/villagerlist.model';
-import { stateService } from '../util/state.service';
-import { aTextNode, birthdayIsToday, clearElement, getElement as $, getListSelectValue } from '../util/util';
+import VillagerList from '../models/villagerlist.model';
+import { clearElement, getElement as $ } from '../util/util';
+import IProfileController from './interfaces/profilecontroller.interface';
 
-export default class ProfileView {
-    public static updateView(villager: Villager, fromListId: string): void {
-        stateService.currentLoadedProfileId = villager.id;
-        this.appendVillagerInfo(villager);
-        this.updateListSelect(fromListId);
-        this.updateProfileImage(villager);
+export default class ProfileV {
+    private controller: IProfileController;
+    private currentProfile: Villager;
+    private currentSelectedList: string;
+    private currentLists: VillagerList[];
+    private villagerInformationElement: HTMLElement;
+    private profileImageElement: HTMLImageElement;
+    private listSelectElement: HTMLSelectElement;
+    private addRemoveButton: HTMLButtonElement;
+
+    constructor(controller: IProfileController) {
+        this.controller = controller;
+        this.villagerInformationElement = $('villager_information');
+        this.profileImageElement = $('profile_image') as HTMLImageElement;
+        this.listSelectElement = $('list_select') as HTMLSelectElement;
+        this.addRemoveButton = $('add_remove_button') as HTMLButtonElement;
     }
 
-    public static updateListSelect(selectedListId?: string): void {
-        if (!stateService.aProfileIsLoaded()) {
+    public init(lists: VillagerList[]): void {
+        this.currentLists = lists;
+        if (lists.length > 0) {
+            this.currentSelectedList = lists[0].id;
+        }
+        this.listSelectElement.onchange = () => {
+            this.listSelectChanged();
+        };
+    }
+
+    public updateProfile(villager: Villager, listIdToSelect?: string): void {
+        this.currentProfile = villager;
+        this.updateProfileImage();
+        this.appendVillagerInfo();
+        if (this.currentLists.length > 0) {
+            this.updateListSelectOptions();
+        }
+        if (listIdToSelect) {
+            this.selectList(listIdToSelect);
+        } else if (this.currentLists.length > 0) {
+            this.currentSelectedList = this.currentLists[0].id;
+        }
+        this.updateAddRemoveVillagerButton();
+    }
+
+    public updateLists(lists: VillagerList[]): void {
+        this.currentLists = lists;
+        if (this.currentProfile) {
+            this.updateListSelectOptions();
+            this.updateAddRemoveVillagerButton();
             return;
         }
-
-        if (selectedListId) {
-            stateService.currentListSelect = selectedListId;
-        }
-
-        const fragment = document.createDocumentFragment();
-        for (const list of stateService.getLists()) {
-            fragment.appendChild(this.aListDropdownOption(list, list.id === stateService.currentListSelect));
-        }
-
-        ($('list_select') as HTMLSelectElement).disabled = stateService.listsAreEmpty();
-        clearElement($('list_select'));
-        $('list_select').appendChild(fragment);
-
-        this.updateAddVillagerButton();
     }
 
-    public static updateAddVillagerButton(): void {
-        const addRemoveButton = $('add_remove_button') as HTMLButtonElement;
-        if (stateService.villagerIsInList(stateService.currentLoadedProfileId, getListSelectValue())) {
-            addRemoveButton.onclick = Controller.removeVillager;
-            addRemoveButton.className = 'clickable fa fa-minus';
-            addRemoveButton.title = 'Remove from list';
-            addRemoveButton.disabled = false;
+    public selectList(listId: string): void {
+        this.currentSelectedList = listId;
+        const listSelectOptions = [...this.listSelectElement.children];
+        const listToSelect = listSelectOptions.find(listOption => (listOption as HTMLOptionElement).value === listId) as HTMLOptionElement;
+        listToSelect.selected = true;
+        this.updateAddRemoveVillagerButton();
+    }
+
+    private listSelectChanged(): void {
+        this.currentSelectedList = this.listSelectElement.value;
+        this.updateAddRemoveVillagerButton();
+    }
+
+    private addVillagerClicked(): void {
+        this.controller.addVillagerToList(this.currentProfile.id, this.currentSelectedList);
+    }
+
+    private removeVillagerClicked(): void {
+        this.controller.removeVillagerFromList(this.currentProfile.id, this.currentSelectedList);
+    }
+
+    private appendVillagerInfo(): void {
+        const fragment = ProfileComponents.aProfileElement(this.currentProfile);
+        this.clearAndAppendToVillagerInformationElement(fragment);
+    }
+
+    private updateListSelectOptions(): void {
+        const fragment = document.createDocumentFragment();
+        for (const list of this.currentLists) {
+            fragment.appendChild(ProfileComponents.aListDropdownOption(list, this.isCurrentlySelected(list)));
+        }
+
+        this.listSelectElement.disabled = this.currentLists.length <= 0;
+        this.clearAndAppendToListSelectElement(fragment);
+    }
+
+    private updateAddRemoveVillagerButton(): void {
+        if (!this.currentProfile) {
+            return;
+        }
+        if (this.villagerIsInList(this.currentProfile, this.currentSelectedList)) {
+            this.addRemoveButton.onclick = () => { this.removeVillagerClicked(); };
+            this.addRemoveButton.className = 'clickable fa fa-minus';
+            this.addRemoveButton.title = 'Remove from list';
+            this.addRemoveButton.disabled = false;
         } else {
-            addRemoveButton.onclick = Controller.addVillager;
-            addRemoveButton.className = 'clickable fa fa-plus';
-            addRemoveButton.title = 'Add to list';
-            addRemoveButton.disabled = stateService.listsAreEmpty();
+            this.addRemoveButton.onclick = () => { this.addVillagerClicked(); };
+            this.addRemoveButton.className = 'clickable fa fa-plus';
+            this.addRemoveButton.title = 'Add to list';
+            this.addRemoveButton.disabled = this.currentLists.length <= 0;
         }
     }
 
-    private static appendVillagerInfo(villager: Villager) {
-        const fragment = document.createDocumentFragment();
-
-        // TODO: Update instead or re-inserting?
-        fragment.appendChild(this.aProfileInfoListItem('fa-tag', 'Name', villager.name));
-        fragment.appendChild(this.aProfileInfoListItem('fa-user', 'Species', villager.species));
-        fragment.appendChild(this.aProfileInfoListItem('fa-heart', 'Personality', villager.personality));
-        fragment.appendChild(this.aProfileInfoListItem('fa-coffee', 'Favourite coffee', villager.coffee));
-        fragment.appendChild(
-            birthdayIsToday(villager.birthday) ?
-                this.aBirthdayEasterEggInfoListItem(villager) :
-                this.aProfileInfoListItem('fa-birthday-cake', 'Birthday', villager.birthday)
-        );
-        fragment.appendChild(this.aWikiIconButton(villager.wiki));
-        fragment.appendChild(this.aStoreIconButton(villager.store));
-
-        const villagerInformationElement = $('villager_information');
-        clearElement(villagerInformationElement);
-        villagerInformationElement.appendChild(fragment);
+    private villagerIsInList(villager: Villager, listId: string): boolean {
+        const list = this.getListById(listId);
+        return this.currentLists.length > 0 && list.members.includes(villager.id);
     }
 
-    private static updateProfileImage(villager: Villager): void {
-        const profileImageElement: HTMLImageElement = $('profile_image') as HTMLImageElement;
-        profileImageElement.src = `./villager_heads/${this.getProfileImage(villager)}`;
+    private getListById(listId: string): VillagerList {
+        return this.currentLists.find(list => list.id === listId);
     }
 
-    private static getProfileImage(villager: Villager): string {
-        return villager.hasProfileImage ? `${villager.id}.jpg` : 'wip.jpg';
+    private isCurrentlySelected(list: VillagerList): boolean {
+        return list.id === this.currentSelectedList;
     }
 
-    private static aWikiIconButton(wikiLink: string): HTMLButtonElement {
-        return new ButtonBuilder(() => { window.open(wikiLink, '_blank'); })
-            .asFontAwesome('fa-wikipedia-w', true)
-            .withTitle('Open Wiki page')
-            .isClickable()
-            .build();
+    private updateProfileImage(): void {
+        this.profileImageElement.src = `./villager_heads/${this.currentProfile.getProfileImage()}`;
     }
 
-    private static aStoreIconButton(storeLink: string): HTMLButtonElement {
-        return new ButtonBuilder(() => { window.open(storeLink, '_blank'); })
-            .asFontAwesome('fa-shopping-bag')
-            .withTitle('Buy this art!')
-            .isClickable()
-            .build();
+    private clearAndAppendToVillagerInformationElement(node: Node): void {
+        clearElement(this.villagerInformationElement);
+        this.villagerInformationElement.appendChild(node);
     }
 
-    private static aProfileInfoListItem(iconName: string, iconTitle: string, infoValue: string): HTMLLIElement {
-        return new ListItemBuilder()
-            .asFontAwesome(iconName, iconTitle)
-            .appendChild(
-                this.aTextNodeOrNAElement(infoValue)
-            )
-            .build();
-    }
-
-    private static aListDropdownOption(list: VillagerList, isSelected: boolean): HTMLOptionElement {
-        const dropdownOption: HTMLOptionElement = document.createElement('option');
-        dropdownOption.innerHTML = list.title;
-        dropdownOption.value = list.id.toString();
-        dropdownOption.selected = isSelected;
-        return dropdownOption;
-    }
-
-    private static aTextNodeOrNAElement(text: string): Text | HTMLSpanElement {
-        return text === '' ? this.anNASpanElement() : aTextNode(text);
-    }
-
-    private static aBirthdayEasterEggInfoListItem(villager: Villager): HTMLLIElement {
-        return new ListItemBuilder()
-            .withChildren(
-                this.aBirthdayEasterEggButton(villager.name),
-                this.aBirthdayEasterEggTextNode(villager.birthday),
-            )
-            .build();
-    }
-
-    private static aBirthdayEasterEggButton(villagerName: string): HTMLButtonElement {
-        return new ButtonBuilder(Controller.birthdayHurray)
-            .asFontAwesome('fa-birthday-cake')
-            .withId('birthday_button')
-            .withTitle(`Happy birthday to ${villagerName}!`)
-            .isClickable()
-            .build();
-    }
-
-    private static aBirthdayEasterEggTextNode(birthday: string): Text | HTMLSpanElement {
-        return new SpanBuilder(birthday)
-            .withClassNames('birthday')
-            .build();
-    }
-
-    private static anNASpanElement(): HTMLSpanElement {
-        return new SpanBuilder('N/A')
-            .withClassNames('na')
-            .build();
-    }
-
-    private static fadeTransition() {
-        /* // Transition:
-        // Hide:
-        let results = document.querySelectorAll<HTMLElement>('#info *');
-        for (let i = 0; i < results.length; i++) {
-            results[i].style.opacity = '0';
-        }
-        // Show:
-        setTimeout(function () {
-            let results = document.querySelectorAll<HTMLElement>('#info *');
-            for (let i = 0; i < results.length; i++) {
-                results[i].style.opacity = '1';
-            }
-        }, 100); */
+    private clearAndAppendToListSelectElement(fragment: DocumentFragment): void {
+        clearElement(this.listSelectElement);
+        this.listSelectElement.appendChild(fragment);
     }
 }

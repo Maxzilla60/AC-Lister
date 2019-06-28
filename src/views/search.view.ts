@@ -1,82 +1,76 @@
-import ButtonBuilder from '../components/ButtonBuilder';
-import DivisionBuilder from '../components/DivisionBuilder';
-import ImageBuilder from '../components/ImageBuilder';
-import Controller from '../controller';
+import SearchComponents from '../components/search.components';
 import Villager from '../models/villager.model';
 import { clearElement, getElement as $ } from '../util/util';
-import villagers from '../util/villagers.json';
+import ISearchController from './interfaces/searchcontroller.interface';
 
-export default class SearchView {
-    public static updateView(resultList: Villager[] = villagers as Villager[]): void {
-        const searchResultsElement = $('search_results');
+export default class SearchV {
+    private controller: ISearchController;
+    private searchResultsElement: HTMLDivElement;
+    private searchBarElement: HTMLInputElement;
 
-        if (resultList.length <= 0) {
-            this.appendNoResultsElement(searchResultsElement);
+    constructor(controller: ISearchController) {
+        this.controller = controller;
+        this.searchResultsElement = $('search_results') as HTMLDivElement;
+        this.searchBarElement = $('search_bar') as HTMLInputElement;
+        this.bindEvents();
+    }
+
+    public init(allResults: Villager[]): void {
+        this.updateResults(allResults);
+    }
+
+    public updateResults(results: Villager[]): void {
+        if (results.length <= 0) {
+            this.appendNoResultsElement();
         } else {
-            this.appendResults(resultList, searchResultsElement);
+            this.appendResults(results);
         }
     }
 
-    private static appendResults(resultList: Villager[], searchResultsElement: HTMLElement) {
+    private bindEvents(): void {
+        this.searchBarElement.oninput = () => {
+            this.searchUpdated();
+        };
+        $('search_button').onclick = () => {
+            this.searchUpdated();
+        };
+    }
+
+    // TODO: Use Subject & Observable?
+    private resultClicked(villager: Villager): void {
+        this.controller.loadProfile(villager.id);
+    }
+
+    private searchUpdated(): void {
+        const query = this.searchBarElement.value;
+        this.controller.updateSearch(query);
+
+        if (query.toLowerCase() === 'birthday') {
+            this.searchBarElement.className = 'birthday';
+        } else {
+            this.searchBarElement.className = '';
+        }
+    }
+
+    private appendNoResultsElement(): void {
+        this.clearAndAppendSearchResultsElement(SearchComponents.aNoResultsElement());
+    }
+
+    private appendResults(resultList: Villager[]): void {
         const fragment = document.createDocumentFragment();
         for (const villager of resultList) {
-            fragment.appendChild(this.aVillagerSearchResultButton(villager));
+            fragment.appendChild(
+                SearchComponents.aVillagerSearchResultButton(villager, () => {
+                    this.resultClicked(villager);
+                }),
+            );
         }
-        clearElement(searchResultsElement);
-        searchResultsElement.appendChild(fragment);
+        this.clearAndAppendSearchResultsElement(fragment);
     }
 
-    private static appendNoResultsElement(searchResultsElement: HTMLElement) {
-        clearElement(searchResultsElement);
-        searchResultsElement.appendChild(this.aNoResultsElement());
-    }
-
-    private static aVillagerSearchResultButton(villager: Villager): HTMLButtonElement {
-        return new ButtonBuilder(() => { Controller.loadProfile(villager.id); })
-            .withClassNames('result')
-            .isClickable()
-            .withChildren(
-                this.aVillagersSearchResultImage(villager),
-                this.aVillagersSearchResultNameElement(villager.name),
-            )
-            .build();
-    }
-
-    private static aVillagersSearchResultNameElement(villagerName: string): HTMLElement {
-        return new DivisionBuilder()
-            .withInnerHTML(villagerName)
-            .build();
-    }
-
-    private static aVillagersSearchResultImage(villager: Villager): HTMLImageElement {
-        return new ImageBuilder(`./villager_icons/${this.getIconImage(villager.id)}`, './villager_icons/default.gif')
-            .withAlt(villager.name)
-            .withFloatLeft()
-            .build();
-    }
-
-    // TODO: VillagerService
-    private static getIconImage(villagerId: string): string {
-        const villager: Villager = Controller.getVillagerById(villagerId);
-        return villager.hasIconImage ? `${villager.id}.gif` : 'default.gif';
-    }
-
-    private static aNoResultsElement(): HTMLDivElement {
-        return new DivisionBuilder()
-            .withInnerHTML('No results found')
-            .withId('no_results')
-            .build();
-    }
-
-    private static fadeTransition(): void {
-        /* // Transition:
-        // Hide:
-        document.querySelectorAll<HTMLElement>('.result')
-            .forEach(result => result.style.opacity = '0');
-        // Show:
-        setTimeout(function () {
-            document.querySelectorAll<HTMLElement>('.result')
-                .forEach(result => result.style.opacity = '1');
-        }, 100); */
+    // TODO: Make it a utility function (replaceChildren())
+    private clearAndAppendSearchResultsElement(node: Node): void {
+        clearElement(this.searchResultsElement);
+        this.searchResultsElement.appendChild(node);
     }
 }

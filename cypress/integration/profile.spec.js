@@ -34,7 +34,10 @@ describe('Profile Section', () => {
 
             const randomVillager = getRandomVillager(villagersArray);
             cy.get('#search_bar').clear().type(randomVillager.name);
-            cy.get('#search_results').find('.result').first().click();
+            cy.get('#search_results')
+                .find('.result')
+                .contains(randomVillager.name)
+                .click();
 
             cy.get('#villager_information').should('contain', randomVillager.name);
             cy.get('#villager_information').should('contain', randomVillager.species);

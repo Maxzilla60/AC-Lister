@@ -1,196 +1,221 @@
-import ButtonBuilder from '../components/ButtonBuilder';
-import DivisionBuilder from '../components/DivisionBuilder';
-import IconBuilder from '../components/IconBuilder';
-import ImageBuilder from '../components/ImageBuilder';
-import InputFieldBuilder from '../components/InputFieldBuilder';
-import ListElementBuilder from '../components/ListElementBuilder';
-import ListItemBuilder from '../components/ListItemBuilder';
-import Controller from '../controller';
-import { VillagerList } from '../models/villagerlist.model';
-import { stateService } from '../util/state.service';
-import { aTextNode, clearElement, getElement as $, trimName } from '../util/util';
-import Villager from './../models/villager.model';
-import ProfileView from './profile.view';
+import ListsComponents from '../components/lists.components';
+import VillagerList from '../models/villagerlist.model';
+import { clearElement, getChildElementByClassName, getElement as $ } from '../util/util';
+import IListsController from './interfaces/listscontroller.interface';
 
-export default class ListsView {
-    public static updateView(withListToRenameId?: string): void {
-        const listsElement = $('lists');
+export default class ListsV {
+    private controller: IListsController;
+    private currentListsAreEmpty: boolean;
+    private listsElement: HTMLElement;
+    private fileInputElement: HTMLInputElement;
+    private exportListsButton: HTMLButtonElement;
+    private clearListsButton: HTMLButtonElement;
 
-        if (stateService.listsAreEmpty()) {
-            this.appendNoListsMessage(listsElement);
+    constructor(controller: IListsController) {
+        this.controller = controller;
+        this.listsElement = $('lists');
+        this.fileInputElement = $('file_input') as HTMLInputElement;
+        this.exportListsButton = $('exportlists_button') as HTMLButtonElement;
+        this.clearListsButton = $('clearlists_button') as HTMLButtonElement;
+        this.bindEvents();
+    }
+
+    public init(lists: VillagerList[]): void {
+        this.currentListsAreEmpty = lists.length <= 0;
+        if (this.currentListsAreEmpty) {
+            this.viewNoLists();
         } else {
-            this.appendLists(listsElement, withListToRenameId);
+            this.appendLists(lists);
+            this.updateListEditingButtons(false);
         }
-
-        this.updateListEditingButtons();
-        if (withListToRenameId) { this.focusAndSelectRenameInput(); }
     }
 
-    private static appendNoListsMessage(listsElement: HTMLElement) {
-        clearElement(listsElement);
-        listsElement.appendChild(this.aNoListInfoElement());
+    public viewNoLists(): void {
+        this.appendNoListsMessage();
+        this.updateListEditingButtons(true);
+        this.currentListsAreEmpty = true;
     }
 
-    private static appendLists(listsElement: HTMLElement, withListToRenameId?: string): void {
+    public displayNewList(newList: VillagerList): void {
+        if (this.currentListsAreEmpty) {
+            this.clearAndAppendToListsElement(this.aListElement(newList));
+        } else {
+            this.listsElement.appendChild(this.aListElement(newList));
+        }
+        this.currentListsAreEmpty = false;
+        this.renameListButtonClicked(newList);
+    }
+
+    public removeListFromView(listId: string): void {
+        const listElementToRemove = $(listId);
+        this.listsElement.removeChild(listElementToRemove);
+        if (this.listsElement.children.length <= 0) {
+            this.viewNoLists();
+        }
+    }
+
+    public displayUpdatedList(list: VillagerList): void {
+        this.displayTitleForList(list);
+    }
+
+    public updateMembersForList(listId: string, members: string[]): void {
+        const listElementToRename = $(listId);
+        const listMembersToReplace = getChildElementByClassName(listElementToRename, 'list_members');
+        listElementToRename.replaceChild(this.aListMembersSection(listId, members), listMembersToReplace);
+    }
+
+    // Events:
+
+    private newListClicked(): void {
+        this.controller.newList();
+    }
+
+    private clearAllListsButtonClicked(): void {
+        if (confirm('Are you sure you want to clear all lists?')) {
+            this.controller.clearLists();
+        }
+    }
+
+    private listTitleClicked(list: VillagerList): void {
+        this.controller.selectList(list.id);
+    }
+
+    private deleteListButtonClicked(list: VillagerList): void {
+        if (confirm(`Are you sure you want to delete "${list.title}"?`)) {
+            this.controller.deleteList(list.id);
+        }
+    }
+
+    private renameListButtonClicked(list: VillagerList): void {
+        this.displayRenamingForList(list);
+        const listRenameTitleElement = this.getRenameBar(list.id);
+        listRenameTitleElement.value = list.title;
+        listRenameTitleElement.focus();
+        listRenameTitleElement.select();
+    }
+
+    private applyTitleToListButtonClicked(listId: string): void {
+        this.controller.renameList(listId, this.getRenameBar(listId).value);
+    }
+
+    private listMemberButtonClicked(villagerId: string, listId: string): void {
+        this.controller.loadProfile(villagerId);
+        this.controller.selectList(listId);
+    }
+
+    private exportListsClicked(): void {
+        this.controller.exportLists();
+    }
+
+    private importListsClicked(): void {
+        if (this.currentListsAreEmpty || confirm('Are you sure you want to override current lists?')) {
+            this.fileInputElement.click();
+        }
+    }
+
+    private importListsFileSelected(): void {
+        const selectedFile = this.fileInputElement.files[0];
+        this.controller.importLists(selectedFile);
+        this.fileInputElement.value = '';
+    }
+
+    // Private methods:
+
+    private bindEvents(): void {
+        this.clearListsButton.onclick = () => {
+            this.clearAllListsButtonClicked();
+        };
+        $('newlist_button').onclick = () => {
+            this.newListClicked();
+        };
+        this.exportListsButton.onclick = () => {
+            this.exportListsClicked();
+        };
+        $('importlists_button').onclick = () => {
+            this.importListsClicked();
+        };
+        this.fileInputElement.addEventListener('change', () => {
+            this.importListsFileSelected();
+        });
+    }
+
+    private updateListEditingButtons(listsAreEmpty: boolean = true): void {
+        this.exportListsButton.disabled = listsAreEmpty;
+        this.exportListsButton.className = 'clickable fa fa-upload';
+
+        this.clearListsButton.disabled = listsAreEmpty;
+        this.clearListsButton.className = 'clickable fa fa-times';
+    }
+
+    private displayRenamingForList(list: VillagerList): void {
+        this.displayTitleForList(list, true);
+    }
+
+    private displayTitleForList(list: VillagerList, renameEnabled: boolean = false): void {
+        const listElementToRename = $(list.id);
+        const listHeaderToReplace = getChildElementByClassName(listElementToRename, 'list_header');
+        listElementToRename.replaceChild(this.aListHeaderElement(list, renameEnabled), listHeaderToReplace);
+    }
+
+    private appendNoListsMessage(): void {
+        this.clearAndAppendToListsElement(ListsComponents.aNoListInfoElement(() => { this.newListClicked(); }));
+    }
+
+    private appendLists(lists: VillagerList[]): void {
         const fragment = document.createDocumentFragment();
 
-        for (const list of stateService.getLists()) {
-            const renameEnabled = withListToRenameId && list.id === withListToRenameId;
-            fragment.appendChild(this.aListElement(list, renameEnabled));
+        for (const list of lists) {
+            fragment.appendChild(this.aListElement(list));
         }
 
-        clearElement(listsElement);
-        listsElement.appendChild(fragment);
+        this.clearAndAppendToListsElement(fragment);
     }
 
-    private static aListElement(list: VillagerList, renameEnabled: boolean): HTMLLIElement {
-        return new ListItemBuilder()
-            // TODO: Update tests to use the data- attribute
-            .withDataAttribute('id', list.id)
-            .withChildren(this.aListHeaderSection(list, renameEnabled), this.aListMembersSection(list.id, list.members))
-            .withClassNames('list')
-            .build();
+    private clearAndAppendToListsElement(node: Node): void {
+        clearElement(this.listsElement);
+        this.listsElement.appendChild(node);
     }
 
-    private static aListHeaderSection(list: VillagerList, renameEnabled: boolean = false): HTMLDivElement {
-        let headerChildren: HTMLElement[];
-        if (renameEnabled) {
-            headerChildren = [
-                this.aListTitleInputElement(list),
-                this.aListRenameConfirmButton(list),
-            ];
-        } else {
-            headerChildren = [
-                this.aListTitleElement(list),
-                this.aListDeleteButton(list),
-                this.aListRenameButton(list),
-            ];
-        }
-        return new DivisionBuilder()
-            .withClassNames('list_header')
-            .withChildren(...headerChildren)
-            .build();
+    private getRenameBar(listId: string): HTMLInputElement {
+        const listElement = $(listId);
+        const listHeader = getChildElementByClassName(listElement, 'list_header');
+        return getChildElementByClassName(listHeader, 'rename_bar') as HTMLInputElement;
     }
 
-    private static aListTitleElement(list: VillagerList): HTMLButtonElement {
-        return new ButtonBuilder(() => { ProfileView.updateListSelect(list.id); })
-            .withInnerHTML(list.title)
-            .withClassNames('list_title')
-            .isClickable()
-            .build();
+    private getMembersElement(listId: string): HTMLUListElement {
+        const listElement = $(listId);
+        return getChildElementByClassName(listElement, 'list_members') as HTMLUListElement;
     }
 
-    private static aListDeleteButton(list: VillagerList): HTMLButtonElement {
-        return new ButtonBuilder(() => { Controller.deleteList(list.id); })
-            .asFontAwesome('fa-trash')
-            .withTitle('Delete list')
-            .withClassNames('listdelete_button')
-            .isClickable()
-            .build();
+    // Components:
+
+    private aListElement(list: VillagerList): Node {
+        return ListsComponents.aListElement(
+            list,
+            () => { this.applyTitleToListButtonClicked(list.id); },
+            () => { this.listTitleClicked(list); },
+            () => { this.deleteListButtonClicked(list); },
+            () => { this.renameListButtonClicked(list); },
+            (villagerId: string) => { this.listMemberButtonClicked(villagerId, list.id); },
+        );
     }
 
-    private static aListRenameButton(list: VillagerList): HTMLButtonElement {
-        return new ButtonBuilder(() => { Controller.renameList(list.id); })
-            .asFontAwesome('fa-edit')
-            .withTitle('Edit list title')
-            .withClassNames('listrename_button')
-            .isClickable()
-            .build();
+    private aListHeaderElement(list: VillagerList, renameEnabled: boolean): Node {
+        return ListsComponents.aListHeaderElement(
+            list,
+            () => { this.applyTitleToListButtonClicked(list.id); },
+            () => { this.listTitleClicked(list); },
+            () => { this.deleteListButtonClicked(list); },
+            () => { this.renameListButtonClicked(list); },
+            renameEnabled,
+        );
     }
 
-    private static aListTitleInputElement(list: VillagerList): HTMLInputElement {
-        return new InputFieldBuilder('text')
-            .onChange(() => { Controller.applyTitle(list.id, this.getRenameListTitleValue()); })
-            .withValue(list.title)
-            .withMaxLength(30)
-            .withId('rename_bar')
-            .build();
-    }
-
-    private static aListRenameConfirmButton(list: VillagerList): HTMLButtonElement {
-        return new ButtonBuilder(() => { Controller.applyTitle(list.id, this.getRenameListTitleValue()); })
-            .asFontAwesome('fa-check')
-            .withId('confirmrename_button')
-            .withTitle('Edit name')
-            .isClickable()
-            .build();
-    }
-
-    private static aListMembersSection(listId: string, members: string[]) {
-        return new ListElementBuilder()
-            .withClassNames('list_members')
-            .withChildren(
-                ...members.map(villager => this.aMemberElement(villager, listId))
-            )
-            .build();
-    }
-
-    private static aMemberElement(villagerId: string, listId: string): HTMLLIElement {
-        return new ListItemBuilder()
-            .withTitle(villagerId)
-            .withClassNames('list_member')
-            .appendChild(
-                this.aMemberButton(villagerId, listId)
-            )
-            .build();
-    }
-
-    private static aMemberButton(villagerId: string, listId: string): Node {
-        return new ButtonBuilder(() => { Controller.loadProfile(villagerId, listId); })
-            .withClassNames('member_button')
-            .isClickable()
-            .appendChild(this.aMemberImage(villagerId))
-            .build();
-    }
-
-    private static aMemberImage(villagerId: string): Node {
-        return new ImageBuilder(`./villager_icons/${this.getIconImage(villagerId)}`, './villager_icons/default.gif')
-            .withTitle(trimName(villagerId))
-            .build();
-    }
-
-    // TODO: VillagerService
-    private static getIconImage(villagerId: string): string {
-        const villager: Villager = Controller.getVillagerById(villagerId);
-        return villager.hasIconImage ? `${villager.id}.gif` : 'default.gif';
-    }
-
-    private static updateListEditingButtons(): void {
-        const exportListsButton: HTMLButtonElement = $('exportlists_button') as HTMLButtonElement;
-        exportListsButton.disabled = stateService.listsAreEmpty();
-        exportListsButton.className = 'clickable fa fa-upload';
-
-        const clearListsButton: HTMLButtonElement = $('clearlists_button') as HTMLButtonElement;
-        clearListsButton.disabled = stateService.listsAreEmpty();
-        clearListsButton.className = 'clickable fa fa-times';
-    }
-
-    private static aNoListInfoElement(): HTMLElement {
-        return new DivisionBuilder()
-            .withChildren(
-                aTextNode('Click'),
-                this.anAddNewListButton(),
-                aTextNode('to make a new list!'),
-            )
-            .withId('emptylists_prompt')
-            .build();
-    }
-
-    private static anAddNewListButton(): Node {
-        return new IconBuilder('fa-plus')
-            .onClick(Controller.newList)
-            .withId('emptylists_newlist_button')
-            .withTitle('Add list')
-            .isClickable()
-            .build();
-    }
-
-    private static getRenameListTitleValue(): string {
-        return ($('rename_bar') as HTMLInputElement).value;
-    }
-
-    private static focusAndSelectRenameInput() {
-        $('rename_bar').focus();
-        ($('rename_bar') as HTMLInputElement).select();
+    private aListMembersSection(listId: string, members: string[]): Node {
+        return ListsComponents.aListMembersSection(
+            listId,
+            members,
+            (villagerId: string) => { this.listMemberButtonClicked(villagerId, listId); },
+        );
     }
 }

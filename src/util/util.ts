@@ -2,6 +2,11 @@ export function getElement(elementID: string): HTMLElement {
     return document.getElementById(elementID);
 }
 
+export function getChildElementByClassName(element: Element, className: string): Element {
+    const children = [...element.children];
+    return children.find(child => child.className === className);
+}
+
 export function clearElement(element: HTMLElement): void {
     element.innerHTML = '';
 }
@@ -24,10 +29,6 @@ export function birthdayIsToday(birthdayString: string): boolean {
     const birthday: Date = new Date(birthdayString);
     return today.getDate() === birthday.getDate()
         && today.getMonth() === birthday.getMonth();
-}
-
-export function getListSelectValue(): string {
-    return (getElement('list_select') as HTMLSelectElement).value;
 }
 
 export function removeDuplicates(results: any[]): any[] {

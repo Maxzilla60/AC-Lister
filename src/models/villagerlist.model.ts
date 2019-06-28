@@ -1,4 +1,4 @@
-export interface VillagerList {
+export default interface VillagerList {
     id: string;
     title: string;
     members: string[];

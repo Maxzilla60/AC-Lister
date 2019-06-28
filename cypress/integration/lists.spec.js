@@ -39,7 +39,7 @@ describe('Lists Section', () => {
         const listTitle = 'List with Custom Title';
 
         cy.get('#newlist_button').click();
-        cy.get('#rename_bar').type(listTitle);
+        cy.get('.rename_bar').type(listTitle);
         cy.get('#confirmrename_button').click();
 
         cy.get('.list').should('have.length', 1);
@@ -56,8 +56,8 @@ describe('Lists Section', () => {
             .find('.listrename_button')
             .first().click();
 
-        cy.get('#rename_bar').type(newListTitle);
-        cy.get('#rename_bar').type('{enter}');
+        cy.get('.rename_bar').type(newListTitle);
+        cy.get('.rename_bar').type('{enter}');
 
         cy.get('.list').should('have.length', 1);
         cy.get('.list').should('all.not.contain', oneListTitle);

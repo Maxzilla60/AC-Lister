@@ -1,33 +1,9 @@
 import Controller from './controller';
-import { getElement as $ } from './util/util';
-import villagersDB from './util/villagers.json';
+import VillagersRepository from './util/villagers.repository';
 
-function init(): void {
-    bindEvents();
-    Controller.init();
-    exposeHelperFunctionsToConsole();
-    exposeVillagersDB();
-}
+// TODO: addEventListener
 
-function bindEvents(): void {
-    $('search_bar').oninput = Controller.updateSearch;
-    $('search_button').onclick = Controller.updateSearch;
-    $('newlist_button').onclick = Controller.newList;
-    $('clearlists_button').onclick = Controller.clearAllLists;
-    $('exportlists_button').onclick = Controller.exportListsAsJSONFile;
-    $('importlists_button').onclick = Controller.openImportDialog;
-    $('file_input').onchange = Controller.importListsFromFile;
-    $('list_select').onchange = Controller.updateAddVillagerButton;
-}
-
-function exposeHelperFunctionsToConsole() {
-    // @ts-ignore
-    window.percentageOfVillagersWithProfileImage = Controller.percentageOfVillagersWithProfileImage;
-}
-
-function exposeVillagersDB() {
-    // @ts-ignore
-    window.villagers = villagersDB;
-}
-
-init();
+const app = new Controller();
+app.init();
+window['percentageOfVillagersWithProfileImage'] = VillagersRepository.percentageOfVillagersWithProfileImage;
+window['villagers'] = new VillagersRepository().getAllVillagers();

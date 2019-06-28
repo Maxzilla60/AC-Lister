@@ -1,9 +1,7 @@
-import { VillagerList } from '../models/villagerlist.model';
-import { getElement as $ } from '../util/util';
+import VillagerList from '../models/villagerlist.model';
 import { v4 as uuid } from 'uuid';
 
-class StateService {
-    private _currentListSelect: string = '';
+export default class AppStateService {
     private _currentProfile: string = '';
 
     public get currentLoadedProfileId(): string {
@@ -11,13 +9,6 @@ class StateService {
     }
     public set currentLoadedProfileId(newId: string) {
         this._currentProfile = newId;
-    }
-
-    public get currentListSelect(): string {
-        return this._currentListSelect;
-    }
-    public set currentListSelect(newValue: string) {
-        this._currentListSelect = newValue;
     }
 
     public getLists(): VillagerList[] {
@@ -28,24 +19,25 @@ class StateService {
         return this._lists.find(l => l.id === id);
     }
 
-    public addNewList(): string {
-        const newId = uuid();
+    public addNewList(): VillagerList {
         const tempLists = this._lists;
-        tempLists.push({
+        const newList = {
             title: 'New List',
-            id: newId,
+            id: uuid(),
             members: []
-        });
+        };
+        tempLists.push(newList);
         this._lists = tempLists;
-        return newId;
+        return newList;
     }
 
-    public renameList(listId: string, newTitle: string): void {
+    public renameList(listId: string, newTitle: string): VillagerList {
         const tempLists = this._lists;
         tempLists
             .find(l => l.id === listId)
             .title = newTitle;
         this._lists = tempLists;
+        return this.getListById(listId);
     }
 
     public deleteList(id: string): void {
@@ -57,6 +49,9 @@ class StateService {
     }
 
     public addVillagerToList(villagerIdToAdd: string, listId: string): void {
+        if (this.villagerIsInList(villagerIdToAdd, listId)) {
+            return;
+        }
         const tempLists = this._lists;
         const listToAddTo: VillagerList = tempLists.find(l => l.id === listId);
         listToAddTo.members.push(villagerIdToAdd);
@@ -84,13 +79,11 @@ class StateService {
         return this._currentProfile !== '';
     }
 
-    public importListFromFile(selectedFile: File, callbackWhenDone: Function): void {
+    public importListFromFile(selectedFile: Blob, callbackWhenDone: Function): void {
         const reader = new FileReader();
 
         reader.onload = () => {
-            this._lists = JSON.parse(reader.result as string); // Save lists
-            ($('file_input') as HTMLInputElement).value = ''; // Reset input
-
+            this._lists = JSON.parse(reader.result as string);
             callbackWhenDone();
         };
 
@@ -107,7 +100,4 @@ class StateService {
     private set _lists(newLists: VillagerList[]) {
         localStorage.lists = JSON.stringify(newLists);
     }
-
 }
-
-export const stateService = new StateService();

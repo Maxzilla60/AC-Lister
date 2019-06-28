@@ -16,12 +16,12 @@ describe('App', () => {
 
     it('should create two lists', () => {
         cy.get('#newlist_button').click();
-        cy.get('#rename_bar').type(listName1);
+        cy.get('.rename_bar').type(listName1);
         cy.get('#confirmrename_button').click();
 
         cy.get('#newlist_button').click();
-        cy.get('#rename_bar').type(listName2);
-        cy.get('#rename_bar').type('{enter}');
+        cy.get('.rename_bar').type(listName2);
+        cy.get('.rename_bar').type('{enter}');
 
         cy.get('.list').should('have.length', 2);
         cy.get('.list').should('contain', listName1);
