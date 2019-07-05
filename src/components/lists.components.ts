@@ -132,7 +132,7 @@ export default class ListsComponents {
 
     private static aMemberImage(villagerId: string): Node {
         const villager = new VillagersRepository().getVillagerById(villagerId); // TODO: Dangit
-        return new ImageBuilder(`./villager_icons/${villager.getIconImage()}`, './villager_icons/default.gif')
+        return new ImageBuilder(`/villager_icons/${villager.getIconImage()}`, '/villager_icons/default.gif')
             .withTitle(villager.name)
             .build();
     }

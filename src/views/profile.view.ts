@@ -123,6 +123,6 @@ export default class ProfileV {
     }
 
     private updateProfileImage(): void {
-        this.profileImageElement.src = `./villager_heads/${this.currentProfile.getProfileImage()}`;
+        this.profileImageElement.src = `/villager_heads/${this.currentProfile.getProfileImage()}`;
     }
 }
