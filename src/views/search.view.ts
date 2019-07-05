@@ -1,6 +1,6 @@
 import SearchComponents from '../components/search.components';
 import Villager from '../models/villager.model';
-import { getElement as $, replaceChildren } from '../util/util';
+import { getElement as $, loadImage, replaceChildren } from '../util/util';
 import ISearchController from './interfaces/searchcontroller.interface';
 
 export default class SearchV {
@@ -10,6 +10,7 @@ export default class SearchV {
 
     constructor(controller: ISearchController) {
         this.controller = controller;
+        this.preloadImages();
         this.searchResultsElement = $('search_results') as HTMLDivElement;
         this.searchBarElement = $('search_bar') as HTMLInputElement;
         this.bindEvents();
@@ -25,6 +26,10 @@ export default class SearchV {
         } else {
             this.appendResults(results);
         }
+    }
+
+    private preloadImages(): void {
+        loadImage('/villager_icons/default.gif');
     }
 
     private bindEvents(): void {
