@@ -1,7 +1,7 @@
 import ProfileComponents from '../components/profile.components';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
-import { getElement as $, replaceChildren } from '../util/util';
+import { getElement as $, loadImage, replaceChildren } from '../util/util';
 import IProfileController from './interfaces/profilecontroller.interface';
 
 export default class ProfileV {
@@ -13,11 +13,15 @@ export default class ProfileV {
     private profileImageElement: HTMLImageElement;
     private listSelectElement: HTMLSelectElement;
     private addRemoveButton: HTMLButtonElement;
+    private readonly noProfileImageSrc: string;
+    private readonly preloadedLoadingGifSrc: string = '/loading.gif';
 
     constructor(controller: IProfileController) {
         this.controller = controller;
+        this.preloadImages();
         this.villagerInformationElement = $('villager_information');
         this.profileImageElement = $('profile_image') as HTMLImageElement;
+        this.noProfileImageSrc = this.profileImageElement.src;
         this.listSelectElement = $('list_select') as HTMLSelectElement;
         this.addRemoveButton = $('add_remove_button') as HTMLButtonElement;
     }
@@ -62,6 +66,10 @@ export default class ProfileV {
         const listToSelect = listSelectOptions.find(listOption => (listOption as HTMLOptionElement).value === listId) as HTMLOptionElement;
         listToSelect.selected = true;
         this.updateAddRemoveVillagerButton();
+    }
+
+    private preloadImages(): void {
+        loadImage(this.preloadedLoadingGifSrc);
     }
 
     private listSelectChanged(): void {
@@ -123,6 +131,16 @@ export default class ProfileV {
     }
 
     private updateProfileImage(): void {
-        this.profileImageElement.src = `/villager_heads/${this.currentProfile.getProfileImage()}`;
+        // https://blog.teamtreehouse.com/learn-asynchronous-image-loading-javascript
+        // https://jsfiddle.net/fracz/kf8c6t1v/
+        this.profileImageElement.className = 'loading';
+        this.profileImageElement.src = this.preloadedLoadingGifSrc;
+        loadImage(`/villager_heads/${this.currentProfile.getProfileImage()}`)
+            .then(src => {
+                this.profileImageElement.src = src;
+            })
+            .finally(() => {
+                this.profileImageElement.className = '';
+            });
     }
 }

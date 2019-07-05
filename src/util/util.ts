@@ -39,3 +39,12 @@ export function birthdayIsToday(birthdayString: string): boolean {
 export function removeDuplicates(results: any[]): any[] {
     return [...new Set(results)];
 }
+
+export function loadImage(src: string): Promise<string> {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.addEventListener('load', () => resolve(src));
+        img.addEventListener('error', () => console.error(new Error(`Failed to load image with URL: ${src}`)));
+        img.src = src;
+    });
+}

@@ -426,6 +426,11 @@ select, option {
     padding: 0;
 }
 
+#profile_image.loading {
+    -o-object-fit: none;
+    object-fit: none;
+}
+
 @media only screen and (max-width: 730px) {
     #close_searchpanel_button,
     #open_searchpanel_button {
