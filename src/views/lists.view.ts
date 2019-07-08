@@ -1,4 +1,5 @@
 import ListsComponents from '../components/lists.components';
+import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
 import { getChildElementByClassName, getElement as $, replaceChildren } from '../util/util';
 import IListsController from './interfaces/listscontroller.interface';
@@ -58,7 +59,7 @@ export default class ListsV {
         this.displayTitleForList(list);
     }
 
-    public updateMembersForList(listId: string, members: string[]): void {
+    public updateMembersForList(listId: string, members: Villager[]): void {
         const listElementToRename = $(listId);
         const listMembersToReplace = getChildElementByClassName(listElementToRename, 'list_members');
         listElementToRename.replaceChild(this.aListMembersSection(listId, members), listMembersToReplace);
@@ -206,7 +207,7 @@ export default class ListsV {
         );
     }
 
-    private aListMembersSection(listId: string, members: string[]): Node {
+    private aListMembersSection(listId: string, members: Villager[]): Node {
         return ListsComponents.aListMembersSection(
             listId,
             members,

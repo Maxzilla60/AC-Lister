@@ -5,9 +5,9 @@ import ImageBuilder from '../builders/ImageBuilder';
 import InputFieldBuilder from '../builders/InputFieldBuilder';
 import ListElementBuilder from '../builders/ListElementBuilder';
 import ListItemBuilder from '../builders/ListItemBuilder';
+import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
 import { aTextNode, getElement as $ } from '../util/util';
-import VillagersRepository from '../util/villagers.repository';
 
 export default class ListsComponents {
     public static aListElement(
@@ -22,7 +22,7 @@ export default class ListsComponents {
             .withId(list.id)
             .withChildren(
                 this.aListHeaderElement(list, applyTitleEvent, listTitleClickedEvent, deleteListEvent, renameListEvent),
-                this.aListMembersSection(list.id, list.members, memberClickedEvent))
+                this.aListMembersSection(list.id, list.fullMembers, memberClickedEvent))
             .withClassNames('list')
             .build();
     }
@@ -61,7 +61,7 @@ export default class ListsComponents {
             .build();
     }
 
-    public static aListMembersSection(listId: string, members: string[], memberClickedEvent: (villagerId: string) => void): HTMLUListElement {
+    public static aListMembersSection(listId: string, members: Villager[], memberClickedEvent: (villagerId: string) => void): HTMLUListElement {
         return new ListElementBuilder()
             .withClassNames('list_members')
             .withChildren(...members.map(villager => this.aMemberElement(villager, listId, memberClickedEvent)))
@@ -112,26 +112,25 @@ export default class ListsComponents {
             .build();
     }
 
-    private static aMemberElement(villagerId: string, listId: string, memberClickedEvent: (villagerId: string) => void): HTMLLIElement {
+    private static aMemberElement(villager: Villager, listId: string, memberClickedEvent: (villagerId: string) => void): HTMLLIElement {
         return new ListItemBuilder()
-            .withTitle(villagerId)
+            .withTitle(villager.name)
             .withClassNames('list_member')
-            .appendChild(this.aMemberButton(villagerId, memberClickedEvent))
+            .appendChild(this.aMemberButton(villager, memberClickedEvent))
             .build();
     }
 
-    private static aMemberButton(villagerId: string, memberClickedEvent: (villagerId: string) => void): Node {
+    private static aMemberButton(villager: Villager, memberClickedEvent: (villagerId: string) => void): Node {
         return new ButtonBuilder(() => {
-            memberClickedEvent(villagerId);
+            memberClickedEvent(villager.id);
         })
             .withClassNames('member_button')
             .isClickable()
-            .appendChild(this.aMemberImage(villagerId))
+            .appendChild(this.aMemberImage(villager))
             .build();
     }
 
-    private static aMemberImage(villagerId: string): Node {
-        const villager = new VillagersRepository().getVillagerById(villagerId); // TODO: Dangit
+    private static aMemberImage(villager: Villager): Node {
         return new ImageBuilder(`/villager_icons/${villager.getIconImage()}`, '/villager_icons/default.gif')
             .withTitle(villager.name)
             .build();

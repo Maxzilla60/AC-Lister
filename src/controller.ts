@@ -29,9 +29,9 @@ export default class Controller implements ISearchController, IProfileController
     }
 
     public init(): void {
+        this.listsView.init(this.getListsWithFullMembers());
+        this.profileView.init(this.getListsWithFullMembers());
         this.searchView.init(this.villagersRepo.getAllVillagers());
-        this.profileView.init(this.state.getLists());
-        this.listsView.init(this.state.getLists());
         this.observeLazyLoadedImages();
     }
 
@@ -77,14 +77,14 @@ export default class Controller implements ISearchController, IProfileController
 
     public addVillagerToList(villagerIdToAdd: string, listId: string): void {
         this.state.addVillagerToList(villagerIdToAdd, listId);
-        this.listsView.updateMembersForList(listId, this.state.getListById(listId).members);
+        this.listsView.updateMembersForList(listId, this.getListByIdWithFullMembers(listId).fullMembers);
         this.profileView.updateLists(this.state.getLists());
         this.observeLazyLoadedImages();
     }
 
     public removeVillagerFromList(villagerIdToAdd: string, listId: string): void {
         this.state.removeVillagerFromList(villagerIdToAdd, listId);
-        this.listsView.updateMembersForList(listId, this.state.getListById(listId).members);
+        this.listsView.updateMembersForList(listId, this.getListByIdWithFullMembers(listId).fullMembers);
         this.profileView.updateLists(this.state.getLists());
         this.observeLazyLoadedImages();
     }
@@ -101,6 +101,21 @@ export default class Controller implements ISearchController, IProfileController
     public importLists(listsFile: File): void {
         this.state.importListFromFile(listsFile, () => { this.overrideLists(); });
         this.overrideLists();
+    }
+
+    private getListsWithFullMembers(): VillagerList[] {
+        const lists = this.state.getLists();
+        lists.map(list => this.addFullMembersToList(list));
+        return lists;
+    }
+
+    private getListByIdWithFullMembers(listId: string): VillagerList {
+        return this.addFullMembersToList(this.state.getListById(listId));
+    }
+
+    private addFullMembersToList(list: VillagerList): VillagerList {
+        list.fullMembers = list.members.map(memberId => this.villagersRepo.getVillagerById(memberId));
+        return list;
     }
 
     private overrideLists(): void {
