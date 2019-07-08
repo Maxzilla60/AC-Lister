@@ -1,38 +1,42 @@
 {
-  "name": "ac-lister-2",
-  "version": "0.0.1",
-  "description": "",
-  "private": true,
-  "scripts": {
-    "start": "parcel index.html",
-    "netlify": "npm i && parcel build index.html",
-    "codenvy": "parcel index.html --host 0.0.0.0 --port 1337",
-    "cypress": "cypress open",
-    "test": "npx cypress run --config videoUploadOnPasses=false"
-  },
-  "keywords": [],
-  "author": "Maxime Orione",
-  "license": "ISC",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
-    "@types/canvas-confetti": "^0.1.0",
-    "@types/file-saver": "^2.0.0",
-    "@types/lozad": "^1.9.0",
-    "@types/uuid": "^3.4.4",
-    "canvas-confetti": "^0.2.1",
-    "file-saver": "^2.0.1",
-    "lozad": "^1.9.0",
-    "uuid": "^3.3.2"
-  },
-  "devDependencies": {
-    "cypress": "^3.3.2",
-    "parcel": "latest",
-    "parcel-plugin-static-files-copy": "^2.0.0",
-    "tslint": "^5.16.0",
-    "typescript": "^3.4.5"
-  },
-  "staticFiles": {
-    "staticPath": "public",
-    "watcherGlob": "**"
-  }
+    "name": "ac-lister-2",
+    "version": "2.0.0",
+    "description": "Animal Crossing Villager Lister 2",
+    "private": true,
+    "scripts": {
+        "start": "parcel index.html",
+        "netlify": "npm i && parcel build index.html",
+        "codenvy": "parcel index.html --host 0.0.0.0 --port 1337",
+        "cypress": "cypress open",
+        "test": "npx cypress run --config videoUploadOnPasses=false"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Maxzilla60/ac-lister"
+    },
+    "keywords": [],
+    "author": "Maxime Orione",
+    "license": "ISC",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.9.0",
+        "@types/canvas-confetti": "^0.1.0",
+        "@types/file-saver": "^2.0.0",
+        "@types/lozad": "^1.9.0",
+        "@types/uuid": "^3.4.4",
+        "canvas-confetti": "^0.2.1",
+        "file-saver": "^2.0.1",
+        "lozad": "^1.9.0",
+        "uuid": "^3.3.2"
+    },
+    "devDependencies": {
+        "cypress": "^3.3.2",
+        "parcel": "latest",
+        "parcel-plugin-static-files-copy": "^2.0.0",
+        "tslint": "^5.16.0",
+        "typescript": "^3.4.5"
+    },
+    "staticFiles": {
+        "staticPath": "public",
+        "watcherGlob": "**"
+    }
 }
