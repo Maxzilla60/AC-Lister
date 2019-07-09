@@ -178,11 +178,6 @@ export default class ListsV {
         return getChildElementByClassName(listHeader, 'rename_bar') as HTMLInputElement;
     }
 
-    private getMembersElement(listId: string): HTMLUListElement {
-        const listElement = $(listId);
-        return getChildElementByClassName(listElement, 'list_members') as HTMLUListElement;
-    }
-
     // Components:
 
     private aListElement(list: VillagerList): Node {
@@ -209,7 +204,6 @@ export default class ListsV {
 
     private aListMembersSection(listId: string, members: Villager[]): Node {
         return ListsComponents.aListMembersSection(
-            listId,
             members,
             (villagerId: string) => { this.listMemberButtonClicked(villagerId, listId); },
         );

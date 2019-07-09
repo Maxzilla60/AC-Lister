@@ -22,7 +22,7 @@ export default class ListsComponents {
             .withId(list.id)
             .withChildren(
                 this.aListHeaderElement(list, applyTitleEvent, listTitleClickedEvent, deleteListEvent, renameListEvent),
-                this.aListMembersSection(list.id, list.fullMembers, memberClickedEvent))
+                this.aListMembersSection(list.fullMembers, memberClickedEvent))
             .withClassNames('list')
             .build();
     }
@@ -44,10 +44,11 @@ export default class ListsComponents {
         } else {
             headerChildren = [
                 this.aListTitleElement(list, listTitleClickedEvent),
-                this.aListDeleteButton(list, deleteListEvent),
-                this.aListRenameButton(list, renameListEvent)
+                this.aListDeleteButton(deleteListEvent),
+                this.aListRenameButton(renameListEvent)
             ];
         }
+
         return new DivisionBuilder()
             .withClassNames('list_header')
             .withChildren(...headerChildren)
@@ -61,10 +62,10 @@ export default class ListsComponents {
             .build();
     }
 
-    public static aListMembersSection(listId: string, members: Villager[], memberClickedEvent: (villagerId: string) => void): HTMLUListElement {
+    public static aListMembersSection(members: Villager[], memberClickedEvent: (villagerId: string) => void): HTMLUListElement {
         return new ListElementBuilder()
             .withClassNames('list_members')
-            .withChildren(...members.map(villager => this.aMemberElement(villager, listId, memberClickedEvent)))
+            .withChildren(...members.map(villager => this.aMemberElement(villager, memberClickedEvent)))
             .build();
     }
 
@@ -76,7 +77,7 @@ export default class ListsComponents {
             .build();
     }
 
-    private static aListDeleteButton(list: VillagerList, deleteListEvent: HTMLEvent): HTMLButtonElement {
+    private static aListDeleteButton(deleteListEvent: HTMLEvent): HTMLButtonElement {
         return new ButtonBuilder(deleteListEvent)
             .asFontAwesome('fa-trash')
             .withTitle('Delete list')
@@ -85,7 +86,7 @@ export default class ListsComponents {
             .build();
     }
 
-    private static aListRenameButton(list: VillagerList, renameListEvent: HTMLEvent): HTMLButtonElement {
+    private static aListRenameButton(renameListEvent: HTMLEvent): HTMLButtonElement {
         return new ButtonBuilder(renameListEvent)
             .asFontAwesome('fa-edit')
             .withTitle('Edit list title')
@@ -112,7 +113,7 @@ export default class ListsComponents {
             .build();
     }
 
-    private static aMemberElement(villager: Villager, listId: string, memberClickedEvent: (villagerId: string) => void): HTMLLIElement {
+    private static aMemberElement(villager: Villager, memberClickedEvent: (villagerId: string) => void): HTMLLIElement {
         return new ListItemBuilder()
             .withTitle(villager.name)
             .withClassNames('list_member')
