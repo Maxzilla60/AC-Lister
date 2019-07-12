@@ -53,10 +53,11 @@ export default class ProfileV {
 
     public updateLists(lists: VillagerList[]): void {
         this.currentLists = lists;
-        if (!this.currentSelectedList && lists.length > 0) {
-            this.selectList(lists[0].id);
-        }
         if (this.currentProfile) {
+            // TODO: Write test for adding new list after a profile has been loaded
+            if (!this.currentSelectedList && lists.length > 0) {
+                this.selectList(lists[0].id);
+            }
             this.updateListSelectOptions();
             this.updateAddRemoveVillagerButton();
         }
@@ -133,6 +134,7 @@ export default class ProfileV {
     }
 
     private updateProfileImage(): void {
+        // TODO:
         // https://blog.teamtreehouse.com/learn-asynchronous-image-loading-javascript
         // https://jsfiddle.net/fracz/kf8c6t1v/
         this.profileImageElement.className = 'loading';
