@@ -57,7 +57,10 @@ export default class SearchV {
     private searchUpdated(): void {
         const query: string = this.searchBarElement.value;
         this.searchUpdatedSubject.next(query);
+        this.styleBirthdayEasterEgg(query);
+    }
 
+    private styleBirthdayEasterEgg(query: string): void {
         if (query.toLowerCase() === 'birthday') {
             this.searchBarElement.className = 'birthday';
         } else {
