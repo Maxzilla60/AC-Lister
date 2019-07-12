@@ -53,7 +53,7 @@ export default class Controller implements ISearchController, IProfileController
 
     public newList(): void {
         const newList: VillagerList = this.state.addNewList();
-        this.listsView.displayNewList(newList);
+        this.listsView.displayNewList(this.getListByIdWithFullMembers(newList.id));
         this.profileView.updateLists(this.state.getLists());
     }
 

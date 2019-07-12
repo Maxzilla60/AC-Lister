@@ -53,10 +53,12 @@ export default class ProfileV {
 
     public updateLists(lists: VillagerList[]): void {
         this.currentLists = lists;
+        if (!this.currentSelectedList && lists.length > 0) {
+            this.selectList(lists[0].id);
+        }
         if (this.currentProfile) {
             this.updateListSelectOptions();
             this.updateAddRemoveVillagerButton();
-            return;
         }
     }
 
