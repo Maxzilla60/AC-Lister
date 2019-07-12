@@ -4,14 +4,13 @@ import AppStateService from './util/state.service';
 import VillagersRepository from './util/villagers.repository';
 import IListsController from './views/interfaces/listscontroller.interface';
 import IProfileController from './views/interfaces/profilecontroller.interface';
-import ISearchController from './views/interfaces/searchcontroller.interface';
 import ListsV from './views/lists.view';
 import ProfileV from './views/profile.view';
 import SearchV from './views/search.view';
 import { saveAs } from 'file-saver';
 import lozad from 'lozad';
 
-export default class Controller implements ISearchController, IProfileController, IListsController {
+export default class Controller implements IProfileController, IListsController {
     private villagersRepo: VillagersRepository;
     private state: AppStateService;
     private searchView: SearchV;
@@ -23,7 +22,8 @@ export default class Controller implements ISearchController, IProfileController
         this.lozadObserver = lozad();
         this.villagersRepo = new VillagersRepository();
         this.state = new AppStateService();
-        this.searchView = new SearchV(this);
+        this.searchView = new SearchV();
+        this.subscribeToSearchView();
         this.profileView = new ProfileV(this);
         this.listsView = new ListsV(this);
     }
@@ -101,6 +101,15 @@ export default class Controller implements ISearchController, IProfileController
     public importLists(listsFile: File): void {
         this.state.importListFromFile(listsFile, () => { this.overrideLists(); });
         this.overrideLists();
+    }
+
+    private subscribeToSearchView(): void {
+        this.searchView.searchQueryUpdated$.subscribe((query: string) => {
+            this.updateSearch(query);
+        });
+        this.searchView.searchResultClicked$.subscribe((villager: Villager) => {
+            this.loadProfile(villager.id);
+        });
     }
 
     private getListsWithFullMembers(): VillagerList[] {

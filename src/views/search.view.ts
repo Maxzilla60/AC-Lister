@@ -1,15 +1,15 @@
 import SearchComponents from '../components/search.components';
 import Villager from '../models/villager.model';
 import { getElement as $, loadImage, replaceChildren } from '../util/util';
-import ISearchController from './interfaces/searchcontroller.interface';
+import { Observable, Subject } from 'rxjs';
 
 export default class SearchV {
-    private controller: ISearchController;
     private searchResultsElement: HTMLDivElement;
     private searchBarElement: HTMLInputElement;
+    private readonly searchUpdatedSubject = new Subject<string>();
+    private readonly searchResultClickedSubject = new Subject<Villager>();
 
-    constructor(controller: ISearchController) {
-        this.controller = controller;
+    constructor() {
         this.preloadImages();
         this.searchResultsElement = $('search_results') as HTMLDivElement;
         this.searchBarElement = $('search_bar') as HTMLInputElement;
@@ -28,6 +28,14 @@ export default class SearchV {
         }
     }
 
+    public get searchQueryUpdated$(): Observable<string> {
+        return this.searchUpdatedSubject.asObservable();
+    }
+
+    public get searchResultClicked$(): Observable<Villager> {
+        return this.searchResultClickedSubject.asObservable();
+    }
+
     private preloadImages(): void {
         loadImage('/villager_icons/default.gif');
     }
@@ -41,14 +49,14 @@ export default class SearchV {
         };
     }
 
-    // TODO: Use Subject & Observable?
     private resultClicked(villager: Villager): void {
-        this.controller.loadProfile(villager.id);
+        this.searchResultClickedSubject.next(villager);
     }
 
+    // TODO: Throttling?
     private searchUpdated(): void {
-        const query = this.searchBarElement.value;
-        this.controller.updateSearch(query);
+        const query: string = this.searchBarElement.value;
+        this.searchUpdatedSubject.next(query);
 
         if (query.toLowerCase() === 'birthday') {
             this.searchBarElement.className = 'birthday';
