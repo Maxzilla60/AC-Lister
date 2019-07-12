@@ -2,10 +2,9 @@ import ProfileComponents from '../components/profile.components';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
 import { getElement as $, loadImage, replaceChildren } from '../util/util';
-import IProfileController from './interfaces/profilecontroller.interface';
+import { Observable, Subject } from 'rxjs';
 
 export default class ProfileV {
-    private controller: IProfileController;
     private currentProfile: Villager;
     private currentSelectedList: string;
     private currentLists: VillagerList[];
@@ -15,9 +14,10 @@ export default class ProfileV {
     private addRemoveButton: HTMLButtonElement;
     private readonly noProfileImageSrc: string;
     private readonly preloadedLoadingGifSrc: string = '/loading.gif';
+    private readonly addVillagerClickedSubject = new Subject<{ villagerIdToAdd: string, listId: string }>();
+    private readonly removeVillagerClickedSubject = new Subject<{ villagerIdToAdd: string, listId: string }>();
 
-    constructor(controller: IProfileController) {
-        this.controller = controller;
+    constructor() {
         this.preloadImages();
         this.villagerInformationElement = $('villager_information');
         this.profileImageElement = $('profile_image') as HTMLImageElement;
@@ -71,6 +71,13 @@ export default class ProfileV {
         this.updateAddRemoveVillagerButton();
     }
 
+    public get addVillagerClicked$(): Observable<{ villagerIdToAdd: string, listId: string }> {
+        return this.addVillagerClickedSubject.asObservable();
+    }
+    public get removeVillagerClicked$(): Observable<{ villagerIdToAdd: string, listId: string }> {
+        return this.removeVillagerClickedSubject.asObservable();
+    }
+
     private preloadImages(): void {
         loadImage(this.preloadedLoadingGifSrc);
     }
@@ -81,11 +88,11 @@ export default class ProfileV {
     }
 
     private addVillagerClicked(): void {
-        this.controller.addVillagerToList(this.currentProfile.id, this.currentSelectedList);
+        this.addVillagerClickedSubject.next({ villagerIdToAdd: this.currentProfile.id, listId: this.currentSelectedList });
     }
 
     private removeVillagerClicked(): void {
-        this.controller.removeVillagerFromList(this.currentProfile.id, this.currentSelectedList);
+        this.removeVillagerClickedSubject.next({ villagerIdToAdd: this.currentProfile.id, listId: this.currentSelectedList });
     }
 
     private appendVillagerInfo(): void {

@@ -2,14 +2,13 @@ import Villager from './models/villager.model';
 import VillagerList from './models/villagerlist.model';
 import AppStateService from './util/state.service';
 import VillagersRepository from './util/villagers.repository';
-import IProfileController from './views/interfaces/profilecontroller.interface';
 import ListsV from './views/lists.view';
 import ProfileV from './views/profile.view';
 import SearchV from './views/search.view';
 import { saveAs } from 'file-saver';
 import lozad from 'lozad';
 
-export default class Controller implements IProfileController {
+export default class Controller {
     private villagersRepo: VillagersRepository;
     private state: AppStateService;
     private searchView: SearchV;
@@ -23,7 +22,8 @@ export default class Controller implements IProfileController {
         this.state = new AppStateService();
         this.searchView = new SearchV();
         this.subscribeToSearchView();
-        this.profileView = new ProfileV(this);
+        this.profileView = new ProfileV();
+        this.subscribeToProfileView();
         this.listsView = new ListsV();
         this.subscribeToListsView();
     }
@@ -109,6 +109,15 @@ export default class Controller implements IProfileController {
         });
         this.searchView.searchResultClicked$.subscribe((villager: Villager) => {
             this.loadProfile(villager.id);
+        });
+    }
+
+    private subscribeToProfileView(): void {
+        this.profileView.addVillagerClicked$.subscribe((payload: { villagerIdToAdd: string, listId: string }) => {
+            this.addVillagerToList(payload.villagerIdToAdd, payload.listId);
+        });
+        this.profileView.removeVillagerClicked$.subscribe((payload: { villagerIdToAdd: string, listId: string }) => {
+            this.removeVillagerFromList(payload.villagerIdToAdd, payload.listId);
         });
     }
 
