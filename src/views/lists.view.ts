@@ -2,18 +2,25 @@ import ListsComponents from '../components/lists.components';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
 import { getChildElementByClassName, getElement as $, replaceChildren } from '../util/util';
-import IListsController from './interfaces/listscontroller.interface';
+import { Observable, Subject } from 'rxjs';
 
+// TODO: Rename to "View"
 export default class ListsV {
-    private controller: IListsController;
     private currentListsAreEmpty: boolean;
     private listsElement: HTMLElement;
     private fileInputElement: HTMLInputElement;
     private exportListsButton: HTMLButtonElement;
     private clearListsButton: HTMLButtonElement;
+    private readonly newListClickedSubject = new Subject<void>();
+    private readonly clearAllListsButtonClickedSubject = new Subject<void>();
+    private readonly listTitleClickedSubject = new Subject<VillagerList>();
+    private readonly deleteListButtonClickedSubject = new Subject<VillagerList>();
+    private readonly applyTitleToListButtonClickedSubject = new Subject<{ listId: string, newTitle: string }>();
+    private readonly listMemberButtonClickedSubject = new Subject<{ villagerId: string, listId: string }>();
+    private readonly exportListsClickedSubject = new Subject<void>();
+    private readonly importListsFileSelectedSubject = new Subject<File>();
 
-    constructor(controller: IListsController) {
-        this.controller = controller;
+    constructor() {
         this.listsElement = $('lists');
         this.fileInputElement = $('file_input') as HTMLInputElement;
         this.exportListsButton = $('exportlists_button') as HTMLButtonElement;
@@ -65,25 +72,53 @@ export default class ListsV {
         listElementToRename.replaceChild(this.aListMembersSection(listId, members), listMembersToReplace);
     }
 
+    public get newListClicked$(): Observable<void> {
+        return this.newListClickedSubject.asObservable();
+    }
+
+    public get clearAllListsButtonClicked$(): Observable<void> {
+        return this.clearAllListsButtonClickedSubject.asObservable();
+    }
+
+    public get deleteListButtonClicked$(): Observable<VillagerList> {
+        return this.deleteListButtonClickedSubject.asObservable();
+    }
+
+    public get applyTitleToListButtonClicked$(): Observable<{ listId: string, newTitle: string }> {
+        return this.applyTitleToListButtonClickedSubject.asObservable();
+    }
+
+    public get listMemberButtonClicked$(): Observable<{ villagerId: string, listId: string }> {
+        return this.listMemberButtonClickedSubject.asObservable();
+    }
+
+    public get exportListsClicked$(): Observable<void> {
+        return this.exportListsClickedSubject.asObservable();
+    }
+
+    public get importListsFileSelected$(): Observable<File> {
+        return this.importListsFileSelectedSubject.asObservable();
+    }
+
     // Events:
 
     private newListClicked(): void {
-        this.controller.newList();
+        this.newListClickedSubject.next();
     }
 
     private clearAllListsButtonClicked(): void {
         if (confirm('Are you sure you want to clear all lists?')) {
-            this.controller.clearLists();
+            this.clearAllListsButtonClickedSubject.next();
         }
     }
 
     private listTitleClicked(list: VillagerList): void {
-        this.controller.selectList(list.id);
+        this.listTitleClickedSubject.next(list);
     }
 
     private deleteListButtonClicked(list: VillagerList): void {
         if (confirm(`Are you sure you want to delete "${list.title}"?`)) {
-            this.controller.deleteList(list.id);
+            this.deleteListButtonClickedSubject.next(list);
         }
     }
 
@@ -96,16 +131,15 @@ export default class ListsV {
     }
 
     private applyTitleToListButtonClicked(listId: string): void {
-        this.controller.renameList(listId, this.getRenameBar(listId).value);
+        this.applyTitleToListButtonClickedSubject.next({ listId, newTitle: this.getRenameBar(listId).value });
     }
 
     private listMemberButtonClicked(villagerId: string, listId: string): void {
-        this.controller.loadProfile(villagerId);
-        this.controller.selectList(listId);
+        this.listMemberButtonClickedSubject.next({ villagerId, listId });
     }
 
     private exportListsClicked(): void {
-        this.controller.exportLists();
+        this.exportListsClickedSubject.next();
     }
 
     private importListsClicked(): void {
@@ -116,7 +150,7 @@ export default class ListsV {
 
     private importListsFileSelected(): void {
         const selectedFile = this.fileInputElement.files[0];
-        this.controller.importLists(selectedFile);
+        this.importListsFileSelectedSubject.next(selectedFile);
         this.fileInputElement.value = '';
     }
 

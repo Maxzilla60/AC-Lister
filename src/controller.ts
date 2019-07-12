@@ -2,7 +2,6 @@ import Villager from './models/villager.model';
 import VillagerList from './models/villagerlist.model';
 import AppStateService from './util/state.service';
 import VillagersRepository from './util/villagers.repository';
-import IListsController from './views/interfaces/listscontroller.interface';
 import IProfileController from './views/interfaces/profilecontroller.interface';
 import ListsV from './views/lists.view';
 import ProfileV from './views/profile.view';
@@ -10,7 +9,7 @@ import SearchV from './views/search.view';
 import { saveAs } from 'file-saver';
 import lozad from 'lozad';
 
-export default class Controller implements IProfileController, IListsController {
+export default class Controller implements IProfileController {
     private villagersRepo: VillagersRepository;
     private state: AppStateService;
     private searchView: SearchV;
@@ -25,7 +24,8 @@ export default class Controller implements IProfileController, IListsController 
         this.searchView = new SearchV();
         this.subscribeToSearchView();
         this.profileView = new ProfileV(this);
-        this.listsView = new ListsV(this);
+        this.listsView = new ListsV();
+        this.subscribeToListsView();
     }
 
     public init(): void {
@@ -109,6 +109,31 @@ export default class Controller implements IProfileController, IListsController 
         });
         this.searchView.searchResultClicked$.subscribe((villager: Villager) => {
             this.loadProfile(villager.id);
+        });
+    }
+
+    private subscribeToListsView(): void {
+        this.listsView.newListClicked$.subscribe(() => {
+            this.newList();
+        });
+        this.listsView.clearAllListsButtonClicked$.subscribe(() => {
+            this.clearLists();
+        });
+        this.listsView.deleteListButtonClicked$.subscribe((list: VillagerList) => {
+            this.deleteList(list.id);
+        });
+        this.listsView.applyTitleToListButtonClicked$.subscribe((payload: { listId: string, newTitle: string }) => {
+            this.renameList(payload.listId, payload.newTitle);
+        });
+        this.listsView.listMemberButtonClicked$.subscribe((payload: { villagerId: string, listId: string }) => {
+            this.loadProfile(payload.villagerId);
+            this.selectList(payload.listId);
+        });
+        this.listsView.exportListsClicked$.subscribe(() => {
+            this.exportLists();
+        });
+        this.listsView.importListsFileSelected$.subscribe((file: File) => {
+            this.importLists(file);
         });
     }
 
