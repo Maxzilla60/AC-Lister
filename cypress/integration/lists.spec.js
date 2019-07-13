@@ -34,7 +34,7 @@ describe('Lists Section', () => {
     });
 
     it('should create new list after profile has been loaded', () => {
-        cy.fixture('../../src/util/villagers.json').then(villagersArray => {
+        cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
             loadTestData('noLists');
 
             const scoot = villagersArray.find(v => v.id === 'Scoot');

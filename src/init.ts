@@ -1,5 +1,5 @@
 import Controller from './controller';
-import VillagersRepository from './util/villagers.repository';
+import VillagersRepository from './repository/villagers.repository';
 
 const app = new Controller();
 app.init();

@@ -1,7 +1,7 @@
 import ListsComponents from '../components/lists.components';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
-import { getChildElementByClassName, getElement as $, mapToVoid, replaceChildren } from '../util/util';
+import { getChildElementByClassName, getElement as $, mapToVoid, replaceChildren } from '../util';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
@@ -33,19 +33,23 @@ export default class ListsView {
     }
 
     public init(lists: VillagerList[]): void {
+        this.updateLists(lists);
+    }
+
+    public updateLists(lists: VillagerList[]): void {
         this.currentListsAreEmpty = lists.length <= 0;
         if (this.currentListsAreEmpty) {
             this.viewNoLists();
         } else {
             this.appendLists(lists);
-            this.updateListEditingButtons(false);
+            this.updateListEditingButtons();
         }
     }
 
     public viewNoLists(): void {
-        this.appendNoListsMessage();
-        this.updateListEditingButtons(true);
         this.currentListsAreEmpty = true;
+        this.appendNoListsMessage();
+        this.updateListEditingButtons();
     }
 
     public displayNewList(newList: VillagerList): void {
@@ -56,7 +60,7 @@ export default class ListsView {
         }
         this.currentListsAreEmpty = false;
         this.renameListButtonClicked(newList);
-        this.updateListEditingButtons(false);
+        this.updateListEditingButtons();
     }
 
     public removeListFromView(listId: string): void {
@@ -67,7 +71,7 @@ export default class ListsView {
         }
     }
 
-    public displayUpdatedList(list: VillagerList): void {
+    public updateList(list: VillagerList): void {
         this.displayTitleForList(list);
     }
 
@@ -93,13 +97,7 @@ export default class ListsView {
         return this.listMemberButtonClickedSubject.asObservable();
     }
 
-    // Events:
-
-    private openImportListPrompt(): void {
-        if (this.currentListsAreEmpty || confirm('Are you sure you want to override current lists?')) {
-            this.fileInputElement.click();
-        }
-    }
+    // #region Events
 
     private deleteListButtonClicked(list: VillagerList): void {
         if (confirm(`Are you sure you want to delete "${list.title}"?`)) {
@@ -108,11 +106,7 @@ export default class ListsView {
     }
 
     private renameListButtonClicked(list: VillagerList): void {
-        this.displayRenamingForList(list);
-        const listRenameTitleElement = this.getRenameBar(list.id);
-        listRenameTitleElement.value = list.title;
-        listRenameTitleElement.focus();
-        listRenameTitleElement.select();
+        this.displayRenamingTitleForList(list);
     }
 
     private applyTitleToListButtonClicked(listId: string): void {
@@ -126,8 +120,6 @@ export default class ListsView {
     private listMemberButtonClicked(villagerId: string, listId: string): void {
         this.listMemberButtonClickedSubject.next({ villagerId, listId });
     }
-
-    // Private methods:
 
     private bindEvents(): void {
         this.newListClicked$ = fromEvent(this.newListButton, 'click').pipe(
@@ -147,17 +139,24 @@ export default class ListsView {
             this.openImportListPrompt();
         });
     }
+    // #endregion
 
-    private updateListEditingButtons(listsAreEmpty: boolean = true): void {
-        this.exportListsButton.disabled = listsAreEmpty;
+    // #region DOM Manipulation
+
+    private updateListEditingButtons(): void {
+        this.exportListsButton.disabled = this.currentListsAreEmpty;
         this.exportListsButton.className = 'clickable fa fa-upload';
 
-        this.clearListsButton.disabled = listsAreEmpty;
+        this.clearListsButton.disabled = this.currentListsAreEmpty;
         this.clearListsButton.className = 'clickable fa fa-times';
     }
 
-    private displayRenamingForList(list: VillagerList): void {
+    private displayRenamingTitleForList(list: VillagerList): void {
         this.displayTitleForList(list, true);
+        const listRenameTitleElement = this.getRenameBar(list.id);
+        listRenameTitleElement.value = list.title;
+        listRenameTitleElement.focus();
+        listRenameTitleElement.select();
     }
 
     private displayTitleForList(list: VillagerList, renameEnabled: boolean = false): void {
@@ -167,12 +166,11 @@ export default class ListsView {
     }
 
     private appendNoListsMessage(): void {
-        replaceChildren(this.listsElement, ListsComponents.aNoListInfoElement(() => { this.newListButton.click(); }));
+        replaceChildren(this.listsElement, this.aNoListInfoElement());
     }
 
     private appendLists(lists: VillagerList[]): void {
         const fragment = document.createDocumentFragment();
-
         for (const list of lists) {
             fragment.appendChild(this.aListElement(list));
         }
@@ -186,7 +184,14 @@ export default class ListsView {
         return getChildElementByClassName(listHeader, 'rename_bar') as HTMLInputElement;
     }
 
-    // Components:
+    private openImportListPrompt(): void {
+        if (this.currentListsAreEmpty || confirm('Are you sure you want to override current lists?')) {
+            this.fileInputElement.click();
+        }
+    }
+    // #endregion
+
+    // #region Components
 
     private aListElement(list: VillagerList): Node {
         return ListsComponents.aListElement(
@@ -216,4 +221,9 @@ export default class ListsView {
             (villagerId: string) => { this.listMemberButtonClicked(villagerId, listId); },
         );
     }
+
+    private aNoListInfoElement(): Node {
+        return ListsComponents.aNoListInfoElement(() => { this.newListButton.click(); });
+    }
+    // #endregion
 }

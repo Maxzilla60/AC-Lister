@@ -1,6 +1,6 @@
 import SearchComponents from '../components/search.components';
 import Villager from '../models/villager.model';
-import { getElement as $, loadImage, replaceChildren } from '../util/util';
+import { getElement as $, loadImage, replaceChildren } from '../util';
 import { fromEvent, merge, Observable, Subject } from 'rxjs';
 import { auditTime, distinctUntilChanged, map, pluck, tap } from 'rxjs/operators';
 
@@ -45,6 +45,7 @@ export default class SearchView {
             fromEvent($('search_button'), 'click')
                 .pipe(map(() => this.searchBarElement.value)),
         ).pipe(
+            map((query: string) => query.toLowerCase()),
             tap((query: string) => { this.styleBirthdayEasterEgg(query); }),
             auditTime(500),
             distinctUntilChanged(),
@@ -56,7 +57,7 @@ export default class SearchView {
     }
 
     private styleBirthdayEasterEgg(query: string): void {
-        if (query.toLowerCase() === 'birthday') {
+        if (query === 'birthday') {
             this.searchBarElement.className = 'birthday';
         } else {
             this.searchBarElement.className = '';

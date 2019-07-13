@@ -29,7 +29,7 @@ describe('Profile Section', () => {
     });
 
     it('should load random villager', () => {
-        cy.fixture('../../src/util/villagers.json').then(villagersArray => {
+        cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
             loadTestData('noLists');
 
             const randomVillager = getRandomVillager(villagersArray);
@@ -65,7 +65,7 @@ describe('Profile Section', () => {
     });
 
     it('should add random villager to different lists', () => {
-        cy.fixture('../../src/util/villagers.json').then(villagersArray => {
+        cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
             loadTestData('twoEmptyLists');
             const firstListID = testData['twoEmptyLists'][0].id;
             const firstListTitle = testData['twoEmptyLists'][0].title;

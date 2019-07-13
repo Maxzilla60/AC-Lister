@@ -1,7 +1,7 @@
 import Villager from './models/villager.model';
 import VillagerList from './models/villagerlist.model';
-import AppStateService from './util/state.service';
-import VillagersRepository from './util/villagers.repository';
+import AppStateService from './state/state.service';
+import VillagersRepository from './repository/villagers.repository';
 import ListsView from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
@@ -28,14 +28,14 @@ export default class Controller {
         this.subscribeToListsView();
     }
 
-    public init(): void {
+    private init(): void {
         this.listsView.init(this.getListsWithFullMembers());
         this.profileView.init(this.getListsWithFullMembers());
         this.searchView.init(this.villagersRepo.getAllVillagers());
         this.observeLazyLoadedImages();
     }
 
-    public updateSearch(query: string): void {
+    private updateSearch(query: string): void {
         let results: Villager[];
         if (query === 'birthday') {
             results = this.villagersRepo.findVillagersWhosBirthdayIsToday();
@@ -46,60 +46,69 @@ export default class Controller {
         this.observeLazyLoadedImages();
     }
 
-    public loadProfile(villagerId: string, listId?: string): void {
+    private loadProfile(villagerId: string, listId?: string): void {
         const villager = this.villagersRepo.getVillagerById(villagerId);
         this.profileView.updateProfile(villager, listId);
     }
 
-    public newList(): void {
+    private newList(): void {
         const newList: VillagerList = this.state.addNewList();
         this.listsView.displayNewList(this.getListByIdWithFullMembers(newList.id));
         this.profileView.updateLists(this.state.getLists());
     }
 
-    public clearLists(): void {
+    private clearLists(): void {
         this.state.clearAllLists();
         this.listsView.viewNoLists();
         this.profileView.updateLists(this.state.getLists());
     }
 
-    public deleteList(listId: string): void {
+    private deleteList(listId: string): void {
         this.state.deleteList(listId);
         this.listsView.removeListFromView(listId);
         this.profileView.updateLists(this.state.getLists());
     }
 
-    public renameList(listId: string, newTitle: string): void {
+    private renameList(listId: string, newTitle: string): void {
         const renamedList = this.state.renameList(listId, newTitle);
-        this.listsView.displayUpdatedList(renamedList);
+        this.listsView.updateList(renamedList);
         this.profileView.updateLists(this.state.getLists());
     }
 
-    public addVillagerToList(villagerIdToAdd: string, listId: string): void {
+    private addVillagerToList(villagerIdToAdd: string, listId: string): void {
         this.state.addVillagerToList(villagerIdToAdd, listId);
-        this.listsView.updateMembersForList(listId, this.getListByIdWithFullMembers(listId).fullMembers);
-        this.profileView.updateLists(this.state.getLists());
-        this.observeLazyLoadedImages();
+        this.updateListMembersToViews(listId);
     }
 
-    public removeVillagerFromList(villagerIdToAdd: string, listId: string): void {
+    private removeVillagerFromList(villagerIdToAdd: string, listId: string): void {
         this.state.removeVillagerFromList(villagerIdToAdd, listId);
+        this.updateListMembersToViews(listId);
+    }
+
+    private updateListMembersToViews(listId: string): void {
         this.listsView.updateMembersForList(listId, this.getListByIdWithFullMembers(listId).fullMembers);
         this.profileView.updateLists(this.state.getLists());
         this.observeLazyLoadedImages();
     }
 
-    public selectList(listId: string): void {
+    private selectList(listId: string): void {
         this.profileView.selectList(listId);
     }
 
-    public exportLists(): void {
+    private exportLists(): void {
         const blob = new Blob([JSON.stringify(this.state.getLists(), null, 2)], { type: 'text/plain' });
         saveAs(blob, 'ACLists.json');
     }
 
-    public importLists(listsFile: File): void {
+    private importLists(listsFile: File): void {
+        // TODO: Move file reading logic to Controller? (state.overrideLists())
         this.state.importListFromFile(listsFile, () => { this.overrideLists(); });
+    }
+
+    private overrideLists(): void {
+        this.listsView.updateLists(this.getListsWithFullMembers());
+        this.profileView.updateLists(this.state.getLists());
+        this.observeLazyLoadedImages();
     }
 
     private subscribeToSearchView(): void {
@@ -141,10 +150,9 @@ export default class Controller {
         });
         this.listsView.listTitleClicked$.subscribe((list: VillagerList) => {
             this.selectList(list.id);
-        })
+        });
         this.listsView.listMemberButtonClicked$.subscribe((payload: { villagerId: string, listId: string }) => {
-            this.loadProfile(payload.villagerId);
-            this.selectList(payload.listId);
+            this.loadProfile(payload.villagerId, payload.listId);
         });
     }
 
@@ -161,12 +169,6 @@ export default class Controller {
     private addFullMembersToList(list: VillagerList): VillagerList {
         list.fullMembers = list.members.map(memberId => this.villagersRepo.getVillagerById(memberId));
         return list;
-    }
-
-    private overrideLists(): void {
-        this.listsView.init(this.getListsWithFullMembers());
-        this.profileView.updateLists(this.state.getLists());
-        this.observeLazyLoadedImages();
     }
 
     private observeLazyLoadedImages(): void { this.lozadObserver.observe(); }

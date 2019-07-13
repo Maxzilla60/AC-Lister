@@ -4,7 +4,7 @@ import ListItemBuilder from '../builders/ListItemBuilder';
 import SpanBuilder from '../builders/SpanBuilder';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
-import { aTextNode } from '../util/util';
+import { aTextNode } from '../util';
 import confetti from 'canvas-confetti';
 
 export default class ProfileComponents {

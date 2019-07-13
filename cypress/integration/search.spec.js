@@ -12,7 +12,7 @@ describe('Search Field', () => {
     });
 
     it('should search for villagers of duplicate names', () => {
-        cy.fixture('../../src/util/villagers.json').then(villagersArray => {
+        cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
             const villagersWithDuplicateNames = villagersArray
                 .filter(v => v.id.includes('(2)'))
                 .map(v => v.name);
@@ -28,7 +28,7 @@ describe('Search Field', () => {
     });
 
     it('should search and find all alligator species', () => {
-        cy.fixture('../../src/util/villagers.json').then(villagersArray => {
+        cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
             cy.get('#search_bar').clear().type('alligator');
             cy.waitForSearchDebounce();
             const amountOfAlligators = villagersArray.filter(v => v.species === 'Alligator').length;
@@ -38,7 +38,7 @@ describe('Search Field', () => {
     });
 
     it('should search and find all jock personality', () => {
-        cy.fixture('../../src/util/villagers.json').then(villagersArray => {
+        cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
             cy.get('#search_bar').clear().type('jock');
             cy.waitForSearchDebounce();
             const amountOfJocks = villagersArray.filter(v => v.personality === 'Jock').length;

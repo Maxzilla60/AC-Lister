@@ -7,7 +7,7 @@ import ListElementBuilder from '../builders/ListElementBuilder';
 import ListItemBuilder from '../builders/ListItemBuilder';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
-import { aTextNode, getElement as $ } from '../util/util';
+import { aTextNode, getElement as $ } from '../util';
 
 export default class ListsComponents {
     public static aListElement(

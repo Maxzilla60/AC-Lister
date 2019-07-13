@@ -1,7 +1,7 @@
 import ProfileComponents from '../components/profile.components';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
-import { getElement as $, loadImage, replaceChildren } from '../util/util';
+import { getElement as $, loadImage, replaceChildren } from '../util';
 import { Observable, Subject } from 'rxjs';
 
 export default class ProfileView {
@@ -43,13 +43,11 @@ export default class ProfileView {
         this.currentProfile = villager;
         this.updateProfileImage();
         this.appendVillagerInfo();
-        if (!this.currentListsAreEmpty()) {
-            this.updateListSelectOptions();
-        }
+        this.updateListSelectOptions();
         if (listIdToSelect) {
             this.selectList(listIdToSelect);
         } else if (!this.currentListsAreEmpty()) {
-            this.currentSelectedList = this.currentLists[0].id;
+            this.selectList(this.currentLists[0].id);
         }
         this.updateAddRemoveVillagerButton();
     }
@@ -70,6 +68,8 @@ export default class ProfileView {
         listToSelect.selected = true;
         this.updateAddRemoveVillagerButton();
     }
+
+    // #region Events
 
     public get addVillagerClicked$(): Observable<{ villagerIdToAdd: string, listId: string }> {
         return this.addVillagerClickedSubject.asObservable();
@@ -95,6 +95,9 @@ export default class ProfileView {
     private removeVillagerClicked(): void {
         this.removeVillagerClickedSubject.next({ villagerIdToAdd: this.currentProfile.id, listId: this.currentSelectedList });
     }
+    // #endregion
+
+    // #region DOM Manipulation
 
     private appendVillagerInfo(): void {
         const fragment = ProfileComponents.aProfileElement(this.currentProfile);
@@ -137,6 +140,23 @@ export default class ProfileView {
         }
     }
 
+    private updateProfileImage(): void {
+        // TODO:
+        // https://blog.teamtreehouse.com/learn-asynchronous-image-loading-javascript
+        // https://jsfiddle.net/fracz/kf8c6t1v/
+        this.profileImageElement.className = 'loading';
+        this.profileImageElement.src = this.preloadedLoadingGifSrc;
+        loadImage(`/villager_heads/${this.currentProfile.getProfileImage()}`)
+            .then(src => {
+                this.profileImageElement.src = src;
+            })
+            .finally(() => {
+                this.profileImageElement.className = '';
+            });
+    }
+
+    // #endregion
+
     private currentListsAreEmpty(): boolean {
         return this.currentLists.length <= 0;
     }
@@ -152,20 +172,5 @@ export default class ProfileView {
 
     private isCurrentlySelected(list: VillagerList): boolean {
         return list.id === this.currentSelectedList;
-    }
-
-    private updateProfileImage(): void {
-        // TODO:
-        // https://blog.teamtreehouse.com/learn-asynchronous-image-loading-javascript
-        // https://jsfiddle.net/fracz/kf8c6t1v/
-        this.profileImageElement.className = 'loading';
-        this.profileImageElement.src = this.preloadedLoadingGifSrc;
-        loadImage(`/villager_heads/${this.currentProfile.getProfileImage()}`)
-            .then(src => {
-                this.profileImageElement.src = src;
-            })
-            .finally(() => {
-                this.profileImageElement.className = '';
-            });
     }
 }

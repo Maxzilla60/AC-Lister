@@ -1,5 +1,5 @@
 import Villager from '../models/villager.model';
-import { removeDuplicates } from './util';
+import { removeDuplicates } from '../util';
 import villagersDB from './villagers.json';
 
 export default class VillagersRepository {
@@ -34,8 +34,6 @@ export default class VillagersRepository {
         if (query === '') {
             return this.getAllVillagers();
         }
-
-        query = query.toLowerCase();
 
         const results: Villager[] = [
             ...this.queryVillagersByName(query),
