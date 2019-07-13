@@ -34,6 +34,7 @@ describe('Profile Section', () => {
 
             const randomVillager = getRandomVillager(villagersArray);
             cy.get('#search_bar').clear().type(randomVillager.name);
+            cy.waitForSearchDebounce();
             cy.get('#search_results')
                 .find('.result')
                 .contains(randomVillager.name)
@@ -52,6 +53,7 @@ describe('Profile Section', () => {
 
         superHeroVillagers.forEach(v => {
             cy.get('#search_bar').clear().type(v);
+            cy.waitForSearchDebounce();
             cy.get('#search_results').find('.result').first().click();
             cy.get('#add_remove_button').click();
         });
@@ -72,6 +74,7 @@ describe('Profile Section', () => {
 
             const randomVillager = getRandomVillager(villagersArray);
             cy.get('#search_bar').clear().type(randomVillager.name);
+            cy.waitForSearchDebounce();
             cy.get('#search_results').find('.result').first().click();
 
             cy.get('#list_select').should('have.value', firstListID);

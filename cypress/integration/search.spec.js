@@ -5,6 +5,7 @@ describe('Search Field', () => {
 
     it('should search and find Scoot', () => {
         cy.get('#search_bar').clear().type('Scoot');
+        cy.waitForSearchDebounce();
         cy.get('#search_results').find('.result').should('have.length', 1);
 
         cy.get('.result').should('contain', 'Scoot');
@@ -18,6 +19,7 @@ describe('Search Field', () => {
 
             villagersWithDuplicateNames.forEach(villagerName => {
                 cy.get('#search_bar').clear().type(villagerName);
+                cy.waitForSearchDebounce();
                 cy.get('#search_results').find('.result').should('have.length', 2);
 
                 cy.get('.result').should('all.contain', villagerName);
@@ -28,6 +30,7 @@ describe('Search Field', () => {
     it('should search and find all alligator species', () => {
         cy.fixture('../../src/util/villagers.json').then(villagersArray => {
             cy.get('#search_bar').clear().type('alligator');
+            cy.waitForSearchDebounce();
             const amountOfAlligators = villagersArray.filter(v => v.species === 'Alligator').length;
 
             cy.get('#search_results').find('.result').should('have.length', amountOfAlligators);
@@ -37,6 +40,7 @@ describe('Search Field', () => {
     it('should search and find all jock personality', () => {
         cy.fixture('../../src/util/villagers.json').then(villagersArray => {
             cy.get('#search_bar').clear().type('jock');
+            cy.waitForSearchDebounce();
             const amountOfJocks = villagersArray.filter(v => v.personality === 'Jock').length;
 
             cy.get('#search_results').find('.result').should('have.length', amountOfJocks);

@@ -2,7 +2,7 @@ import SearchComponents from '../components/search.components';
 import Villager from '../models/villager.model';
 import { getElement as $, loadImage, replaceChildren } from '../util/util';
 import { fromEvent, merge, Observable, Subject } from 'rxjs';
-import { map, pluck, tap } from 'rxjs/operators';
+import { auditTime, distinctUntilChanged, map, pluck, tap } from 'rxjs/operators';
 
 export default class SearchV {
     public searchQueryUpdated$: Observable<string>;
@@ -39,7 +39,6 @@ export default class SearchV {
         loadImage('/villager_icons/default.gif');
     }
 
-    // TODO: Debouncing?
     private bindEvents(): void {
         this.searchQueryUpdated$ = merge(
             fromEvent(this.searchBarElement, 'input')
@@ -48,6 +47,8 @@ export default class SearchV {
                 .pipe(map(() => this.searchBarElement.value)),
         ).pipe(
             tap((query: string) => { this.styleBirthdayEasterEgg(query); }),
+            auditTime(500),
+            distinctUntilChanged(),
         );
     }
 

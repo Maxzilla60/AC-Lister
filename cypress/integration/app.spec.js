@@ -30,6 +30,7 @@ describe('App', () => {
 
     it('should find and add favourite villagers', () => {
         cy.get('#search_bar').clear().type('Scoot');
+        cy.waitForSearchDebounce();
         cy.get('#search_results').get('.result').first()
             .should('contain', 'Scoot')
             .click();
