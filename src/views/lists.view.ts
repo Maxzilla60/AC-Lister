@@ -5,8 +5,7 @@ import { getChildElementByClassName, getElement as $, mapToVoid, replaceChildren
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
-// TODO: Rename to "View"
-export default class ListsV {
+export default class ListsView {
     public newListClicked$: Observable<void>;
     public exportListsClicked$: Observable<void>;
     public importListsFileSelected$: Observable<File>;
@@ -168,7 +167,6 @@ export default class ListsV {
     }
 
     private appendNoListsMessage(): void {
-        // TODO: Write Test
         replaceChildren(this.listsElement, ListsComponents.aNoListInfoElement(() => { this.newListButton.click(); }));
     }
 

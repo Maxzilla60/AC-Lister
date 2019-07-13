@@ -4,9 +4,8 @@ import { getElement as $, loadImage, replaceChildren } from '../util/util';
 import { fromEvent, merge, Observable, Subject } from 'rxjs';
 import { auditTime, distinctUntilChanged, map, pluck, tap } from 'rxjs/operators';
 
-export default class SearchV {
+export default class SearchView {
     public searchQueryUpdated$: Observable<string>;
-
     private readonly searchResultClickedSubject = new Subject<Villager>();
 
     private searchResultsElement: HTMLDivElement;

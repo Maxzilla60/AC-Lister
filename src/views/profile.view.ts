@@ -4,7 +4,7 @@ import VillagerList from '../models/villagerlist.model';
 import { getElement as $, loadImage, replaceChildren } from '../util/util';
 import { Observable, Subject } from 'rxjs';
 
-export default class ProfileV {
+export default class ProfileView {
     private currentProfile: Villager;
     private currentSelectedList: string;
     private currentLists: VillagerList[];

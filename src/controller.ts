@@ -2,29 +2,29 @@ import Villager from './models/villager.model';
 import VillagerList from './models/villagerlist.model';
 import AppStateService from './util/state.service';
 import VillagersRepository from './util/villagers.repository';
-import ListsV from './views/lists.view';
-import ProfileV from './views/profile.view';
-import SearchV from './views/search.view';
+import ListsView from './views/lists.view';
+import ProfileView from './views/profile.view';
+import SearchView from './views/search.view';
 import { saveAs } from 'file-saver';
 import lozad from 'lozad';
 
 export default class Controller {
     private villagersRepo: VillagersRepository;
     private state: AppStateService;
-    private searchView: SearchV;
-    private profileView: ProfileV;
-    private listsView: ListsV;
+    private searchView: SearchView;
+    private profileView: ProfileView;
+    private listsView: ListsView;
     private lozadObserver: lozad.Observer;
 
     constructor() {
         this.lozadObserver = lozad();
         this.villagersRepo = new VillagersRepository();
         this.state = new AppStateService();
-        this.searchView = new SearchV();
+        this.searchView = new SearchView();
         this.subscribeToSearchView();
-        this.profileView = new ProfileV();
+        this.profileView = new ProfileView();
         this.subscribeToProfileView();
-        this.listsView = new ListsV();
+        this.listsView = new ListsView();
         this.subscribeToListsView();
     }
 
