@@ -100,7 +100,6 @@ export default class Controller {
 
     public importLists(listsFile: File): void {
         this.state.importListFromFile(listsFile, () => { this.overrideLists(); });
-        this.overrideLists();
     }
 
     private subscribeToSearchView(): void {
@@ -162,7 +161,7 @@ export default class Controller {
     }
 
     private overrideLists(): void {
-        this.listsView.init(this.state.getLists());
+        this.listsView.init(this.getListsWithFullMembers());
         this.profileView.updateLists(this.state.getLists());
         this.observeLazyLoadedImages();
     }
