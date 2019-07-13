@@ -33,6 +33,30 @@ describe('Lists Section', () => {
         cy.get('.list').should('contain', defaultTitleForNewList);
     });
 
+    it('should create new list after profile has been loaded', () => {
+        cy.fixture('../../src/util/villagers.json').then(villagersArray => {
+            loadTestData('noLists');
+
+            const scoot = villagersArray.find(v => v.id === 'Scoot');
+            cy.get('#search_bar').clear().type(scoot.name);
+            cy.waitForSearchDebounce();
+            cy.get('#search_results')
+                .find('.result')
+                .contains(scoot.name)
+                .click();
+
+            cy.get('#newlist_button').click();
+            cy.get('#confirmrename_button').click();
+
+            cy.get('.list').should('contain', defaultTitleForNewList);
+            cy.get('#villager_information').should('contain', scoot.name);
+            cy.get('#villager_information').should('contain', scoot.species);
+            cy.get('#villager_information').should('contain', scoot.personality);
+            cy.get('#villager_information').should('contain', scoot.coffee);
+            cy.get('#villager_information').should('contain', scoot.birthday);
+        });
+    });
+
     it('should create new list with name', () => {
         loadTestData('noLists');
 

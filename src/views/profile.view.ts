@@ -43,12 +43,12 @@ export default class ProfileView {
         this.currentProfile = villager;
         this.updateProfileImage();
         this.appendVillagerInfo();
-        if (this.currentLists.length > 0) {
+        if (!this.currentListsAreEmpty()) {
             this.updateListSelectOptions();
         }
         if (listIdToSelect) {
             this.selectList(listIdToSelect);
-        } else if (this.currentLists.length > 0) {
+        } else if (!this.currentListsAreEmpty()) {
             this.currentSelectedList = this.currentLists[0].id;
         }
         this.updateAddRemoveVillagerButton();
@@ -57,11 +57,8 @@ export default class ProfileView {
     public updateLists(lists: VillagerList[]): void {
         this.currentLists = lists;
         if (this.currentProfile) {
-            // TODO: Write test for adding new list after a profile has been loaded
-            if (!this.currentSelectedList && lists.length > 0) {
-                this.selectList(lists[0].id);
-            }
             this.updateListSelectOptions();
+            this.updateSelectedList();
             this.updateAddRemoveVillagerButton();
         }
     }
@@ -110,8 +107,16 @@ export default class ProfileView {
             fragment.appendChild(ProfileComponents.aListDropdownOption(list, this.isCurrentlySelected(list)));
         }
 
-        this.listSelectElement.disabled = this.currentLists.length <= 0;
+        this.listSelectElement.disabled = this.currentListsAreEmpty();
         replaceChildren(this.listSelectElement, fragment);
+    }
+
+    private updateSelectedList(): void {
+        if (this.currentListsAreEmpty()) {
+            this.currentSelectedList = undefined;
+        } else if (!this.currentSelectedList) {
+            this.selectList(this.currentLists[0].id);
+        }
     }
 
     private updateAddRemoveVillagerButton(): void {
@@ -127,13 +132,18 @@ export default class ProfileView {
             this.addRemoveButton.onclick = () => { this.addVillagerClicked(); };
             this.addRemoveButton.className = 'clickable fa fa-plus';
             this.addRemoveButton.title = 'Add to list';
-            this.addRemoveButton.disabled = this.currentLists.length <= 0;
+            this.addRemoveButton.disabled = this.currentListsAreEmpty()
+                ;
         }
+    }
+
+    private currentListsAreEmpty(): boolean {
+        return this.currentLists.length <= 0;
     }
 
     private villagerIsInList(villager: Villager, listId: string): boolean {
         const list = this.getListById(listId);
-        return this.currentLists.length > 0 && list.members.includes(villager.id);
+        return list && !this.currentListsAreEmpty() && list.members.includes(villager.id);
     }
 
     private getListById(listId: string): VillagerList {
