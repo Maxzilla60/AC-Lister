@@ -8,12 +8,15 @@ export default class ProfileV {
     private currentProfile: Villager;
     private currentSelectedList: string;
     private currentLists: VillagerList[];
+
     private villagerInformationElement: HTMLElement;
     private profileImageElement: HTMLImageElement;
     private listSelectElement: HTMLSelectElement;
     private addRemoveButton: HTMLButtonElement;
+
     private readonly noProfileImageSrc: string;
     private readonly preloadedLoadingGifSrc: string = '/loading.gif';
+
     private readonly addVillagerClickedSubject = new Subject<{ villagerIdToAdd: string, listId: string }>();
     private readonly removeVillagerClickedSubject = new Subject<{ villagerIdToAdd: string, listId: string }>();
 
@@ -74,6 +77,7 @@ export default class ProfileV {
     public get addVillagerClicked$(): Observable<{ villagerIdToAdd: string, listId: string }> {
         return this.addVillagerClickedSubject.asObservable();
     }
+
     public get removeVillagerClicked$(): Observable<{ villagerIdToAdd: string, listId: string }> {
         return this.removeVillagerClickedSubject.asObservable();
     }
