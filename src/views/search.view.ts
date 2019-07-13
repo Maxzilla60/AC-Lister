@@ -1,13 +1,16 @@
 import SearchComponents from '../components/search.components';
 import Villager from '../models/villager.model';
 import { getElement as $, loadImage, replaceChildren } from '../util/util';
-import { Observable, Subject } from 'rxjs';
+import { fromEvent, merge, Observable, Subject } from 'rxjs';
+import { map, pluck, tap } from 'rxjs/operators';
 
 export default class SearchV {
+    public searchQueryUpdated$: Observable<string>;
+
+    private readonly searchResultClickedSubject = new Subject<Villager>();
+
     private searchResultsElement: HTMLDivElement;
     private searchBarElement: HTMLInputElement;
-    private readonly searchUpdatedSubject = new Subject<string>();
-    private readonly searchResultClickedSubject = new Subject<Villager>();
 
     constructor() {
         this.preloadImages();
@@ -17,19 +20,15 @@ export default class SearchV {
     }
 
     public init(allResults: Villager[]): void {
-        this.updateResults(allResults);
+        this.updateSearchResults(allResults);
     }
 
-    public updateResults(results: Villager[]): void {
+    public updateSearchResults(results: Villager[]): void {
         if (results.length <= 0) {
             this.appendNoResultsElement();
         } else {
             this.appendResults(results);
         }
-    }
-
-    public get searchQueryUpdated$(): Observable<string> {
-        return this.searchUpdatedSubject.asObservable();
     }
 
     public get searchResultClicked$(): Observable<Villager> {
@@ -40,24 +39,20 @@ export default class SearchV {
         loadImage('/villager_icons/default.gif');
     }
 
+    // TODO: Debouncing?
     private bindEvents(): void {
-        this.searchBarElement.oninput = () => {
-            this.searchUpdated();
-        };
-        $('search_button').onclick = () => {
-            this.searchUpdated();
-        };
+        this.searchQueryUpdated$ = merge(
+            fromEvent(this.searchBarElement, 'input')
+                .pipe(pluck('target', 'value')),
+            fromEvent($('search_button'), 'click')
+                .pipe(map(() => this.searchBarElement.value)),
+        ).pipe(
+            tap((query: string) => { this.styleBirthdayEasterEgg(query); }),
+        );
     }
 
     private resultClicked(villager: Villager): void {
         this.searchResultClickedSubject.next(villager);
-    }
-
-    // TODO: Throttling?
-    private searchUpdated(): void {
-        const query: string = this.searchBarElement.value;
-        this.searchUpdatedSubject.next(query);
-        this.styleBirthdayEasterEgg(query);
     }
 
     private styleBirthdayEasterEgg(query: string): void {
@@ -76,9 +71,7 @@ export default class SearchV {
         const fragment = document.createDocumentFragment();
         for (const villager of resultList) {
             fragment.appendChild(
-                SearchComponents.aVillagerSearchResultButton(villager, () => {
-                    this.resultClicked(villager);
-                }),
+                SearchComponents.aVillagerSearchResultButton(villager, () => { this.resultClicked(villager); }),
             );
         }
         replaceChildren(this.searchResultsElement, fragment);

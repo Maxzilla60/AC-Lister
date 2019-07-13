@@ -42,7 +42,7 @@ export default class Controller {
         } else {
             results = this.villagersRepo.searchFor(query);
         }
-        this.searchView.updateResults(results);
+        this.searchView.updateSearchResults(results);
         this.observeLazyLoadedImages();
     }
 
