@@ -124,6 +124,12 @@ export default class Controller {
         this.listsView.newListClicked$.subscribe(() => {
             this.newList();
         });
+        this.listsView.exportListsClicked$.subscribe(() => {
+            this.exportLists();
+        });
+        this.listsView.importListsFileSelected$.subscribe((file: File) => {
+            this.importLists(file);
+        });
         this.listsView.clearAllListsButtonClicked$.subscribe(() => {
             this.clearLists();
         });
@@ -133,15 +139,12 @@ export default class Controller {
         this.listsView.applyTitleToListButtonClicked$.subscribe((payload: { listId: string, newTitle: string }) => {
             this.renameList(payload.listId, payload.newTitle);
         });
+        this.listsView.listTitleClicked$.subscribe((list: VillagerList) => {
+            this.selectList(list.id);
+        })
         this.listsView.listMemberButtonClicked$.subscribe((payload: { villagerId: string, listId: string }) => {
             this.loadProfile(payload.villagerId);
             this.selectList(payload.listId);
-        });
-        this.listsView.exportListsClicked$.subscribe(() => {
-            this.exportLists();
-        });
-        this.listsView.importListsFileSelected$.subscribe((file: File) => {
-            this.importLists(file);
         });
     }
 

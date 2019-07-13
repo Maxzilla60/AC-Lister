@@ -1,3 +1,6 @@
+import { OperatorFunction } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 export function getElement(elementID: string): HTMLElement {
     return document.getElementById(elementID);
 }
@@ -47,4 +50,8 @@ export function loadImage(src: string): Promise<string> {
         img.addEventListener('error', () => console.error(new Error(`Failed to load image with URL: ${src}`)));
         img.src = src;
     });
+}
+
+export function mapToVoid(): OperatorFunction<unknown, void> {
+    return map(() => { });
 }

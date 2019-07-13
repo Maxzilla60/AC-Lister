@@ -1,28 +1,33 @@
 import ListsComponents from '../components/lists.components';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
-import { getChildElementByClassName, getElement as $, replaceChildren } from '../util/util';
-import { Observable, Subject } from 'rxjs';
+import { getChildElementByClassName, getElement as $, mapToVoid, replaceChildren } from '../util/util';
+import { fromEvent, Observable, Subject } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 
 // TODO: Rename to "View"
 export default class ListsV {
+    public newListClicked$: Observable<void>;
+    public exportListsClicked$: Observable<void>;
+    public importListsFileSelected$: Observable<File>;
+    public clearAllListsButtonClicked$: Observable<void>;
+    private readonly deleteListButtonClickedSubject = new Subject<VillagerList>();
+    private readonly applyTitleToListButtonClickedSubject = new Subject<{ listId: string, newTitle: string }>();
+    private readonly listTitleClickedSubject = new Subject<VillagerList>();
+    private readonly listMemberButtonClickedSubject = new Subject<{ villagerId: string, listId: string }>();
+
     private currentListsAreEmpty: boolean;
     private listsElement: HTMLElement;
+
     private fileInputElement: HTMLInputElement;
     private exportListsButton: HTMLButtonElement;
     private clearListsButton: HTMLButtonElement;
-    private readonly newListClickedSubject = new Subject<void>();
-    private readonly clearAllListsButtonClickedSubject = new Subject<void>();
-    private readonly listTitleClickedSubject = new Subject<VillagerList>();
-    private readonly deleteListButtonClickedSubject = new Subject<VillagerList>();
-    private readonly applyTitleToListButtonClickedSubject = new Subject<{ listId: string, newTitle: string }>();
-    private readonly listMemberButtonClickedSubject = new Subject<{ villagerId: string, listId: string }>();
-    private readonly exportListsClickedSubject = new Subject<void>();
-    private readonly importListsFileSelectedSubject = new Subject<File>();
+    private newListButton: HTMLButtonElement;
 
     constructor() {
         this.listsElement = $('lists');
         this.fileInputElement = $('file_input') as HTMLInputElement;
+        this.newListButton = $('newlist_button') as HTMLButtonElement;
         this.exportListsButton = $('exportlists_button') as HTMLButtonElement;
         this.clearListsButton = $('clearlists_button') as HTMLButtonElement;
         this.bindEvents();
@@ -52,6 +57,7 @@ export default class ListsV {
         }
         this.currentListsAreEmpty = false;
         this.renameListButtonClicked(newList);
+        this.updateListEditingButtons(false);
     }
 
     public removeListFromView(listId: string): void {
@@ -72,14 +78,6 @@ export default class ListsV {
         listElementToRename.replaceChild(this.aListMembersSection(listId, members), listMembersToReplace);
     }
 
-    public get newListClicked$(): Observable<void> {
-        return this.newListClickedSubject.asObservable();
-    }
-
-    public get clearAllListsButtonClicked$(): Observable<void> {
-        return this.clearAllListsButtonClickedSubject.asObservable();
-    }
-
     public get deleteListButtonClicked$(): Observable<VillagerList> {
         return this.deleteListButtonClickedSubject.asObservable();
     }
@@ -88,32 +86,20 @@ export default class ListsV {
         return this.applyTitleToListButtonClickedSubject.asObservable();
     }
 
+    public get listTitleClicked$(): Observable<VillagerList> {
+        return this.listTitleClickedSubject.asObservable();
+    }
+
     public get listMemberButtonClicked$(): Observable<{ villagerId: string, listId: string }> {
         return this.listMemberButtonClickedSubject.asObservable();
     }
 
-    public get exportListsClicked$(): Observable<void> {
-        return this.exportListsClickedSubject.asObservable();
-    }
-
-    public get importListsFileSelected$(): Observable<File> {
-        return this.importListsFileSelectedSubject.asObservable();
-    }
-
     // Events:
 
-    private newListClicked(): void {
-        this.newListClickedSubject.next();
-    }
-
-    private clearAllListsButtonClicked(): void {
-        if (confirm('Are you sure you want to clear all lists?')) {
-            this.clearAllListsButtonClickedSubject.next();
+    private openImportListPrompt(): void {
+        if (this.currentListsAreEmpty || confirm('Are you sure you want to override current lists?')) {
+            this.fileInputElement.click();
         }
-    }
-
-    private listTitleClicked(list: VillagerList): void {
-        this.listTitleClickedSubject.next(list);
     }
 
     private deleteListButtonClicked(list: VillagerList): void {
@@ -134,44 +120,33 @@ export default class ListsV {
         this.applyTitleToListButtonClickedSubject.next({ listId, newTitle: this.getRenameBar(listId).value });
     }
 
+    private listTitleClicked(list: VillagerList): void {
+        this.listTitleClickedSubject.next(list);
+    }
+
     private listMemberButtonClicked(villagerId: string, listId: string): void {
         this.listMemberButtonClickedSubject.next({ villagerId, listId });
-    }
-
-    private exportListsClicked(): void {
-        this.exportListsClickedSubject.next();
-    }
-
-    private importListsClicked(): void {
-        if (this.currentListsAreEmpty || confirm('Are you sure you want to override current lists?')) {
-            this.fileInputElement.click();
-        }
-    }
-
-    private importListsFileSelected(): void {
-        const selectedFile = this.fileInputElement.files[0];
-        this.importListsFileSelectedSubject.next(selectedFile);
-        this.fileInputElement.value = '';
     }
 
     // Private methods:
 
     private bindEvents(): void {
-        this.clearListsButton.onclick = () => {
-            this.clearAllListsButtonClicked();
-        };
-        $('newlist_button').onclick = () => {
-            this.newListClicked();
-        };
-        this.exportListsButton.onclick = () => {
-            this.exportListsClicked();
-        };
-        $('importlists_button').onclick = () => {
-            this.importListsClicked();
-        };
-        this.fileInputElement.onchange = () => {
-            this.importListsFileSelected();
-        };
+        this.newListClicked$ = fromEvent(this.newListButton, 'click').pipe(
+            mapToVoid(),
+        );
+        this.exportListsClicked$ = fromEvent(this.exportListsButton, 'click').pipe(
+            mapToVoid(),
+        );
+        this.importListsFileSelected$ = fromEvent(this.fileInputElement, 'change').pipe(
+            map((event: Event) => (event.target as HTMLInputElement).files[0]),
+        );
+        this.clearAllListsButtonClicked$ = fromEvent(this.clearListsButton, 'click').pipe(
+            filter(() => confirm('Are you sure you want to clear all lists?')),
+            mapToVoid(),
+        );
+        $('importlists_button').addEventListener('click', () => {
+            this.openImportListPrompt();
+        });
     }
 
     private updateListEditingButtons(listsAreEmpty: boolean = true): void {
@@ -193,7 +168,8 @@ export default class ListsV {
     }
 
     private appendNoListsMessage(): void {
-        replaceChildren(this.listsElement, ListsComponents.aNoListInfoElement(() => { this.newListClicked(); }));
+        // TODO: Write Test
+        replaceChildren(this.listsElement, ListsComponents.aNoListInfoElement(() => { this.newListButton.click(); }));
     }
 
     private appendLists(lists: VillagerList[]): void {
