@@ -129,7 +129,7 @@ export default class ListsView {
             mapToVoid(),
         );
         this.importListsFileSelected$ = fromEvent(this.fileInputElement, 'change').pipe(
-            map((event: Event) => (event.target as HTMLInputElement).files[0]),
+            map((event: Event) => this.getFileFromInputElement(event.target as HTMLInputElement)),
         );
         this.clearAllListsButtonClicked$ = fromEvent(this.clearListsButton, 'click').pipe(
             filter(() => confirm('Are you sure you want to clear all lists?')),
@@ -139,6 +139,11 @@ export default class ListsView {
             this.openImportListPrompt();
         });
     }
+
+    private getFileFromInputElement(inputElement: HTMLInputElement): File {
+        return inputElement.files[0];
+    }
+
     // #endregion
 
     // #region DOM Manipulation
