@@ -23,18 +23,18 @@
         "@types/file-saver": "^2.0.0",
         "@types/lozad": "^1.9.0",
         "@types/uuid": "^3.4.4",
-        "canvas-confetti": "^0.2.1",
+        "canvas-confetti": "^0.3.0",
         "file-saver": "^2.0.1",
         "lozad": "^1.9.0",
         "rxjs": "6.5.2",
         "uuid": "^3.3.2"
     },
     "devDependencies": {
-        "cypress": "^3.3.2",
+        "cypress": "^3.4.0",
         "parcel": "latest",
-        "parcel-plugin-static-files-copy": "^2.0.0",
-        "tslint": "^5.16.0",
-        "typescript": "^3.4.5"
+        "parcel-plugin-static-files-copy": "^2.1.2",
+        "tslint": "^5.18.0",
+        "typescript": "^3.5.3"
     },
     "staticFiles": {
         "staticPath": "public",
