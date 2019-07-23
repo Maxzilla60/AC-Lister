@@ -23,6 +23,7 @@
         "@types/file-saver": "^2.0.0",
         "@types/lozad": "^1.9.0",
         "@types/uuid": "^3.4.4",
+        "ajv": "^6.10.2",
         "canvas-confetti": "^0.3.0",
         "file-saver": "^2.0.1",
         "lozad": "^1.9.0",
