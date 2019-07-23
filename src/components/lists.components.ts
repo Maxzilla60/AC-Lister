@@ -22,7 +22,7 @@ export default class ListsComponents {
             .withId(list.id)
             .withChildren(
                 this.aListHeaderElement(list, applyTitleEvent, listTitleClickedEvent, deleteListEvent, renameListEvent),
-                this.aListMembersSection(list.fullMembers, memberClickedEvent))
+                this.aListMembersSection(list.members, memberClickedEvent))
             .withClassNames('list')
             .build();
     }

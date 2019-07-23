@@ -162,8 +162,11 @@ export default class ProfileView {
     }
 
     private villagerIsInList(villager: Villager, listId: string): boolean {
-        const list = this.getListById(listId);
-        return list && !this.currentListsAreEmpty() && list.members.includes(villager.id);
+        return !this.currentListsAreEmpty()
+            && this.getListById(listId)
+                .members
+                .map(v => v.id)
+                .includes(villager.id);
     }
 
     private getListById(listId: string): VillagerList {

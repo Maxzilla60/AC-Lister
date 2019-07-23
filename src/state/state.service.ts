@@ -1,8 +1,15 @@
+import version1Schema from '../models/lists.schema.v1.json';
+import version2Schema from '../models/lists.schema.v2.json';
+import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
+import VillagerListV1 from '../models/villagerlist.model.v1.js';
+import VillagersRepository from '../repository/villagers.repository';
+import Ajv from 'ajv';
 import { v4 as uuid } from 'uuid';
 
 export default class AppStateService {
     private _currentProfile: string = '';
+    private validator = new Ajv();
 
     public get currentLoadedProfileId(): string {
         return this._currentProfile;
@@ -48,14 +55,14 @@ export default class AppStateService {
         this._lists = [];
     }
 
-    public addVillagerToList(villagerIdToAdd: string, listId: string): void {
-        if (this.villagerIsInList(villagerIdToAdd, listId)) {
+    public addVillagerToList(villagerToAdd: Villager, listId: string): void {
+        if (this.villagerIsInList(villagerToAdd.id, listId)) {
             return;
         }
         const tempLists = this._lists;
         const listToAddTo: VillagerList = tempLists.find(l => l.id === listId);
-        listToAddTo.members.push(villagerIdToAdd);
-        listToAddTo.members.sort();
+        listToAddTo.members.push(villagerToAdd);
+        listToAddTo.members.sort((a, b) => (a.id > b.id) ? 1 : -1);
         this._lists = tempLists;
     }
 
@@ -63,7 +70,7 @@ export default class AppStateService {
         const tempLists = this._lists;
         const listToRemoveFrom: VillagerList = tempLists.find(l => l.id === listId);
         listToRemoveFrom.members = listToRemoveFrom.members
-            .filter(v => v !== villagerIdToRemove);
+            .filter(v => v.id !== villagerIdToRemove);
         this._lists = tempLists;
     }
 
@@ -72,7 +79,11 @@ export default class AppStateService {
     }
 
     public villagerIsInList(villagerId: string, listId: string): boolean {
-        return !this.listsAreEmpty() && this.getListById(listId).members.includes(villagerId);
+        return !this.listsAreEmpty()
+            && this.getListById(listId)
+                .members
+                .map(v => v.id)
+                .includes(villagerId);
     }
 
     public aProfileIsLoaded(): boolean {
@@ -91,10 +102,53 @@ export default class AppStateService {
     }
 
     private get _lists(): VillagerList[] {
-        if (!localStorage.lists) {
-            localStorage.lists = '[]';
+        let parsedLists: any;
+        try {
+            parsedLists = JSON.parse(localStorage.lists);
+        } catch {
+            return this.initEmptyLists();
         }
-        return JSON.parse(localStorage.lists);
+
+        if (this.isVersion2(parsedLists)) {
+            // do nothing special
+        } else if (this.isVersion1(parsedLists)) {
+            localStorage.lists = JSON.stringify(this.convertVersion1ToVersion2(JSON.parse(localStorage.lists)));
+        } else {
+            return this.initEmptyLists();
+        }
+        return this.parseAndSerializeJSONToLists(localStorage.lists);
+    }
+
+    private parseAndSerializeJSONToLists(listsJSONString: string): VillagerList[] {
+        const parsedLists: VillagerList[] = JSON.parse(listsJSONString);
+        return parsedLists.map(list => ({
+            id: list.id,
+            title: list.title,
+            members: list.members.map(v => Villager.serialize(v)),
+        }));
+    }
+
+    private initEmptyLists(): VillagerList[] {
+        localStorage.lists = '[]';
+        return [];
+    }
+
+    private isVersion1(lists: any): boolean {
+        return this.validator.validate(version1Schema, lists) as boolean;
+    }
+
+    private isVersion2(lists: any): boolean {
+        return this.validator.validate(version2Schema, lists) as boolean;
+    }
+
+    private convertVersion1ToVersion2(lists: VillagerListV1[]): VillagerList[] {
+        return lists.map((list: VillagerListV1) => ({
+            id: uuid(),
+            title: list.title,
+            members: list.members.map((villagerId: string) =>
+                VillagersRepository.getVillagerById(villagerId)
+            )
+        }));
     }
 
     private set _lists(newLists: VillagerList[]) {

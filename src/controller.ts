@@ -1,7 +1,7 @@
 import Villager from './models/villager.model';
 import VillagerList from './models/villagerlist.model';
-import AppStateService from './state/state.service';
 import VillagersRepository from './repository/villagers.repository';
+import AppStateService from './state/state.service';
 import ListsView from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
@@ -26,9 +26,9 @@ export default class Controller {
         this.subscribeToListsView();
     }
 
-    private init(): void {
-        this.listsView.init(this.getListsWithFullMembers());
-        this.profileView.init(this.getListsWithFullMembers());
+    public init(): void {
+        this.listsView.init(this.state.getLists());
+        this.profileView.init(this.state.getLists());
         this.searchView.init(VillagersRepository.getAllVillagers());
         this.observeLazyLoadedImages();
     }
@@ -51,7 +51,7 @@ export default class Controller {
 
     private newList(): void {
         const newList: VillagerList = this.state.addNewList();
-        this.listsView.displayNewList(this.getListByIdWithFullMembers(newList.id));
+        this.listsView.displayNewList(newList);
         this.profileView.updateLists(this.state.getLists());
     }
 
@@ -74,17 +74,18 @@ export default class Controller {
     }
 
     private addVillagerToList(villagerIdToAdd: string, listId: string): void {
-        this.state.addVillagerToList(villagerIdToAdd, listId);
+        const villagerToAdd: Villager = VillagersRepository.getVillagerById(villagerIdToAdd);
+        this.state.addVillagerToList(villagerToAdd, listId);
         this.updateListMembersToViews(listId);
     }
 
-    private removeVillagerFromList(villagerIdToAdd: string, listId: string): void {
-        this.state.removeVillagerFromList(villagerIdToAdd, listId);
+    private removeVillagerFromList(villagerIdToRemove: string, listId: string): void {
+        this.state.removeVillagerFromList(villagerIdToRemove, listId);
         this.updateListMembersToViews(listId);
     }
 
     private updateListMembersToViews(listId: string): void {
-        this.listsView.updateMembersForList(listId, this.getListByIdWithFullMembers(listId).fullMembers);
+        this.listsView.updateMembersForList(listId, this.state.getListById(listId).members);
         this.profileView.updateLists(this.state.getLists());
         this.observeLazyLoadedImages();
     }
@@ -104,7 +105,7 @@ export default class Controller {
     }
 
     private overrideLists(): void {
-        this.listsView.updateLists(this.getListsWithFullMembers());
+        this.listsView.updateLists(this.state.getLists());
         this.profileView.updateLists(this.state.getLists());
         this.observeLazyLoadedImages();
     }
@@ -152,21 +153,6 @@ export default class Controller {
         this.listsView.listMemberButtonClicked$.subscribe((payload: { villagerId: string, listId: string }) => {
             this.loadProfile(payload.villagerId, payload.listId);
         });
-    }
-
-    private getListsWithFullMembers(): VillagerList[] {
-        const lists = this.state.getLists();
-        lists.map(list => this.addFullMembersToList(list));
-        return lists;
-    }
-
-    private getListByIdWithFullMembers(listId: string): VillagerList {
-        return this.addFullMembersToList(this.state.getListById(listId));
-    }
-
-    private addFullMembersToList(list: VillagerList): VillagerList {
-        list.fullMembers = list.members.map(memberId => this.villagersRepo.getVillagerById(memberId));
-        return list;
     }
 
     private observeLazyLoadedImages(): void { this.lozadObserver.observe(); }
