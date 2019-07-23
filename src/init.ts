@@ -4,4 +4,4 @@ import VillagersRepository from './repository/villagers.repository';
 const app = new Controller();
 app.init();
 window['percentageOfVillagersWithProfileImage'] = VillagersRepository.percentageOfVillagersWithProfileImage;
-window['villagers'] = new VillagersRepository().getAllVillagers();
+window['villagers'] = VillagersRepository.getAllVillagers();

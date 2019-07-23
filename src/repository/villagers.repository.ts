@@ -3,18 +3,15 @@ import { removeDuplicates } from '../util';
 import villagersDB from './villagers.json';
 
 export default class VillagersRepository {
-    private readonly villagers: Villager[];
+    private static readonly villagers: Villager[] = villagersDB.map(
+        v => Villager.serialize(v)
+    );
 
-    constructor() {
-        this.villagers = villagersDB.map(
-            v => Villager.serialize(v)
-        );
-    }
+    private constructor() { }
 
     public static percentageOfVillagersWithProfileImage(): string {
-        const repo = new VillagersRepository();
-        const allVillagersCount = repo.getAllVillagers().length;
-        const villagersWithProfileImageCount = repo.getAllVillagers()
+        const allVillagersCount = VillagersRepository.getAllVillagers().length;
+        const villagersWithProfileImageCount = VillagersRepository.getAllVillagers()
             .filter((v: Villager) => v.hasProfileImage)
             .length;
 
@@ -22,41 +19,41 @@ export default class VillagersRepository {
         return `${percentage}% of all villagers have a profile image. (${villagersWithProfileImageCount}/${allVillagersCount})`;
     }
 
-    public getAllVillagers(): Villager[] {
-        return this.villagers;
+    public static getAllVillagers(): Villager[] {
+        return VillagersRepository.villagers;
     }
 
-    public getVillagerById(id: string): Villager {
-        return this.villagers.find(v => v.id === id);
+    public static getVillagerById(id: string): Villager {
+        return VillagersRepository.getAllVillagers().find(v => v.id === id);
     }
 
-    public searchFor(query: string): Villager[] {
+    public static searchFor(query: string): Villager[] {
         if (query === '') {
-            return this.getAllVillagers();
+            return VillagersRepository.getAllVillagers();
         }
 
         const results: Villager[] = [
-            ...this.queryVillagersByName(query),
-            ...this.queryVillagersByPersonality(query),
-            ...this.queryVillagersBySpecies(query)
+            ...VillagersRepository.queryVillagersByName(query),
+            ...VillagersRepository.queryVillagersByPersonality(query),
+            ...VillagersRepository.queryVillagersBySpecies(query)
         ];
 
         return removeDuplicates(results);
     }
 
-    public queryVillagersByName(query: string): Villager[] {
-        return this.villagers.filter((villager: Villager) => villager.name.toLowerCase().includes(query));
+    public static queryVillagersByName(query: string): Villager[] {
+        return VillagersRepository.getAllVillagers().filter((villager: Villager) => villager.name.toLowerCase().includes(query));
     }
 
-    public queryVillagersByPersonality(query: string): Villager[] {
-        return this.villagers.filter((villager: Villager) => villager.personality.toLowerCase().includes(query));
+    public static queryVillagersByPersonality(query: string): Villager[] {
+        return VillagersRepository.getAllVillagers().filter((villager: Villager) => villager.personality.toLowerCase().includes(query));
     }
 
-    public queryVillagersBySpecies(query: string): Villager[] {
-        return this.villagers.filter((villager: Villager) => villager.species.toLowerCase().includes(query));
+    public static queryVillagersBySpecies(query: string): Villager[] {
+        return VillagersRepository.getAllVillagers().filter((villager: Villager) => villager.species.toLowerCase().includes(query));
     }
 
-    public findVillagersWhosBirthdayIsToday(): Villager[] {
-        return this.villagers.filter((v: Villager) => v.birthdayIsToday());
+    public static findVillagersWhosBirthdayIsToday(): Villager[] {
+        return VillagersRepository.getAllVillagers().filter((v: Villager) => v.birthdayIsToday());
     }
 }

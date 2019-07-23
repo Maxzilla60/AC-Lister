@@ -9,7 +9,6 @@ import { saveAs } from 'file-saver';
 import lozad from 'lozad';
 
 export default class Controller {
-    private villagersRepo: VillagersRepository;
     private state: AppStateService;
     private searchView: SearchView;
     private profileView: ProfileView;
@@ -18,7 +17,6 @@ export default class Controller {
 
     constructor() {
         this.lozadObserver = lozad();
-        this.villagersRepo = new VillagersRepository();
         this.state = new AppStateService();
         this.searchView = new SearchView();
         this.subscribeToSearchView();
@@ -31,23 +29,23 @@ export default class Controller {
     private init(): void {
         this.listsView.init(this.getListsWithFullMembers());
         this.profileView.init(this.getListsWithFullMembers());
-        this.searchView.init(this.villagersRepo.getAllVillagers());
+        this.searchView.init(VillagersRepository.getAllVillagers());
         this.observeLazyLoadedImages();
     }
 
     private updateSearch(query: string): void {
         let results: Villager[];
         if (query === 'birthday') {
-            results = this.villagersRepo.findVillagersWhosBirthdayIsToday();
+            results = VillagersRepository.findVillagersWhosBirthdayIsToday();
         } else {
-            results = this.villagersRepo.searchFor(query);
+            results = VillagersRepository.searchFor(query);
         }
         this.searchView.updateSearchResults(results);
         this.observeLazyLoadedImages();
     }
 
     private loadProfile(villagerId: string, listId?: string): void {
-        const villager = this.villagersRepo.getVillagerById(villagerId);
+        const villager = VillagersRepository.getVillagerById(villagerId);
         this.profileView.updateProfile(villager, listId);
     }
 
