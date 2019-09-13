@@ -90,15 +90,8 @@ export default class AppStateService {
 		return this._currentProfile !== '';
 	}
 
-	public importListFromFile(selectedFile: Blob, callbackWhenDone: () => void): void {
-		const reader = new FileReader();
-
-		reader.onload = () => {
-			this._lists = JSON.parse(reader.result as string);
-			callbackWhenDone();
-		};
-
-		reader.readAsText(selectedFile);
+	public overrideLists(lists: any): void {
+		this._lists = lists;
 	}
 
 	private set _lists(newLists: VillagerList[]) {

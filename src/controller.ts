@@ -100,14 +100,17 @@ export default class Controller {
 	}
 
 	private importLists(listsFile: File): void {
-		// TODO: Move file reading logic to Controller? (state.overrideLists())
-		this.state.importListFromFile(listsFile, () => { this.overrideLists(); });
-	}
+		const reader = new FileReader();
 
-	private overrideLists(): void {
-		this.listsView.updateLists(this.state.getLists());
-		this.profileView.updateLists(this.state.getLists());
-		this.observeLazyLoadedImages();
+		reader.onload = () => {
+			const lists = JSON.parse(reader.result as string);
+			this.state.overrideLists(lists);
+			this.listsView.updateLists(this.state.getLists());
+			this.profileView.updateLists(this.state.getLists());
+			this.observeLazyLoadedImages();
+		};
+
+		reader.readAsText(listsFile);
 	}
 
 	private subscribeToSearchView(): void {
