@@ -98,14 +98,12 @@ describe('Profile Section', () => {
 
 	it('should remove villager from list', () => {
 		loadTestData('oneList');
-		const firstListID = testData['twoEmptyLists'][0].id;
 		const firstListTitle = testData['oneList'][0].title;
 
 		cy.contains(firstListTitle)
 			.parent().siblings()
 			.find('li > button')
 			.click();
-		cy.get('#list_select').should('have.value', firstListID);
 
 		cy.get('#add_remove_button').click();
 
