@@ -7,7 +7,6 @@
 				"allow-leading-underscore"
 			]
 		},
-		"allow-retun-shorthand": true,
 		"array-type": false,
 		"arrow-parens": false,
 		"class-name": true,
@@ -15,25 +14,10 @@
 			true,
 			"check-space"
 		],
-		"component-class-suffix": true,
-		"component-selector": [
-			true,
-			"element",
-			"spectacle",
-			"kebab-case"
-		],
-		"contextual-lifecycle": true,
 		"curly": true,
 		"deprecation": {
 			"severity": "warn"
 		},
-		"directive-class-suffix": true,
-		"directive-selector": [
-			true,
-			"attribute",
-			"app",
-			"camelCase"
-		],
 		"eofline": true,
 		"import-blacklist": [
 			true,
@@ -63,7 +47,6 @@
 				]
 			}
 		],
-		"no-conflicting-lifecycle": true,
 		"no-consecutive-blank-lines": false,
 		"no-console": [
 			true,
@@ -74,18 +57,11 @@
 			"trace"
 		],
 		"no-empty": false,
-		"no-host-metadata-property": true,
 		"no-inferrable-types": [
 			true,
 			"ignore-params"
 		],
-		"no-input-rename": true,
-		"no-inputs-metadata-property": true,
 		"no-non-null-assertion": true,
-		"no-output-native": true,
-		"no-output-on-prefix": true,
-		"no-output-rename": true,
-		"no-outputs-metadata-property": true,
 		"no-redundant-jsdoc": true,
 		"no-switch-case-fall-through": true,
 		"no-use-before-declare": true,
@@ -100,15 +76,11 @@
 			true,
 			"single"
 		],
-		"template-banana-in-box": true,
-		"template-no-negated-async": true,
 		"trailing-comma": false,
 		"typedef": [
 			true,
 			"call-signature",
 			"property-declaration"
-		],
-		"use-lifecycle-interface": true,
-		"use-pipe-transform-interface": true
+		]
 	}
 }
