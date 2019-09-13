@@ -2,6 +2,7 @@ import ListsComponents from '../components/lists.components';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
 import { getChildElementByClassName, getElement as $, mapToVoid, replaceChildren } from '../util';
+import { ListElementEvents } from './../components/lists.components';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
@@ -199,32 +200,25 @@ export default class ListsView {
     // #region Components
 
     private aListElement(list: VillagerList): Node {
-        return ListsComponents.aListElement(
-            list,
-            () => { this.applyTitleToListButtonClicked(list.id); },
-            () => { this.listTitleClicked(list); },
-            () => { this.deleteListButtonClicked(list); },
-            () => { this.renameListButtonClicked(list); },
-            (villagerId: string) => { this.listMemberButtonClicked(villagerId, list.id); },
-        );
+        return ListsComponents.aListElement(list, this.createListElementEventsFromList(list));
     }
 
     private aListHeaderElement(list: VillagerList, renameEnabled: boolean): Node {
-        return ListsComponents.aListHeaderElement(
-            list,
-            () => { this.applyTitleToListButtonClicked(list.id); },
-            () => { this.listTitleClicked(list); },
-            () => { this.deleteListButtonClicked(list); },
-            () => { this.renameListButtonClicked(list); },
-            renameEnabled,
-        );
+        return ListsComponents.aListHeaderElement(list, this.createListElementEventsFromList(list), renameEnabled);
     }
 
     private aListMembersSection(listId: string, members: Villager[]): Node {
-        return ListsComponents.aListMembersSection(
-            members,
-            (villagerId: string) => { this.listMemberButtonClicked(villagerId, listId); },
-        );
+        return ListsComponents.aListMembersSection(members, (villagerId: string) => { this.listMemberButtonClicked(villagerId, listId); });
+    }
+
+    private createListElementEventsFromList(list: VillagerList): ListElementEvents {
+        return {
+            applyTitleEvent: () => { this.applyTitleToListButtonClicked(list.id); },
+            listTitleClickedEvent: () => { this.listTitleClicked(list); },
+            deleteListEvent: () => { this.deleteListButtonClicked(list); },
+            renameListEvent: () => { this.renameListButtonClicked(list); },
+            memberClickedEvent: (villagerId: string) => { this.listMemberButtonClicked(villagerId, list.id); },
+        };
     }
 
     private aNoListInfoElement(): Node {

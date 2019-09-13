@@ -10,42 +10,28 @@ import VillagerList from '../models/villagerlist.model';
 import { aTextNode, getElement as $ } from '../util';
 
 export default class ListsComponents {
-    public static aListElement(
-        list: VillagerList,
-        applyTitleEvent: HTMLEvent,
-        listTitleClickedEvent: HTMLEvent,
-        deleteListEvent: HTMLEvent,
-        renameListEvent: HTMLEvent,
-        memberClickedEvent: (villagerId: string) => void,
-    ): HTMLLIElement {
+    public static aListElement(list: VillagerList, events: ListElementEvents): HTMLLIElement {
         return new ListItemBuilder()
             .withId(list.id)
             .withChildren(
-                this.aListHeaderElement(list, applyTitleEvent, listTitleClickedEvent, deleteListEvent, renameListEvent),
-                this.aListMembersSection(list.members, memberClickedEvent))
+                this.aListHeaderElement(list, events),
+                this.aListMembersSection(list.members, events.memberClickedEvent))
             .withClassNames('list')
             .build();
     }
 
-    public static aListHeaderElement(
-        list: VillagerList,
-        applyTitleEvent: HTMLEvent,
-        listTitleClickedEvent: HTMLEvent,
-        deleteListEvent: HTMLEvent,
-        renameListEvent: HTMLEvent,
-        renameEnabled: boolean = false,
-    ): HTMLDivElement {
+    public static aListHeaderElement(list: VillagerList, events: ListElementEvents, renameEnabled: boolean = false): HTMLDivElement {
         let headerChildren: HTMLElement[];
         if (renameEnabled) {
             headerChildren = [
-                this.aListTitleInputElement(list, applyTitleEvent),
-                this.aListRenameConfirmButton(applyTitleEvent)]
+                this.aListTitleInputElement(list, events.applyTitleEvent),
+                this.aListRenameConfirmButton(events.applyTitleEvent)]
                 ;
         } else {
             headerChildren = [
-                this.aListTitleElement(list, listTitleClickedEvent),
-                this.aListDeleteButton(deleteListEvent),
-                this.aListRenameButton(renameListEvent)
+                this.aListTitleElement(list, events.listTitleClickedEvent),
+                this.aListDeleteButton(events.deleteListEvent),
+                this.aListRenameButton(events.renameListEvent)
             ];
         }
 
@@ -142,4 +128,12 @@ export default class ListsComponents {
         newListButton.onclick = newListEvent;
         return newListButton;
     }
+}
+
+export interface ListElementEvents {
+    applyTitleEvent: HTMLEvent;
+    listTitleClickedEvent: HTMLEvent;
+    deleteListEvent: HTMLEvent;
+    renameListEvent: HTMLEvent;
+    memberClickedEvent: (villagerId: string) => void;
 }
