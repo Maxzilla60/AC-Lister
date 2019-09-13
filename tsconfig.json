@@ -1,8 +1,8 @@
 {
-    "compilerOptions": {
-        "target": "ES2018",
-        "allowSyntheticDefaultImports": true,
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-    }
+	"compilerOptions": {
+		"target": "ES2018",
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+	}
 }

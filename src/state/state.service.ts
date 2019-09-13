@@ -8,150 +8,150 @@ import Ajv from 'ajv';
 import { v4 as uuid } from 'uuid';
 
 export default class AppStateService {
-    private _currentProfile: string = '';
-    private validator = new Ajv();
+	private _currentProfile: string = '';
+	private validator = new Ajv();
 
-    public get currentLoadedProfileId(): string {
-        return this._currentProfile;
-    }
-    public set currentLoadedProfileId(newId: string) {
-        this._currentProfile = newId;
-    }
+	public get currentLoadedProfileId(): string {
+		return this._currentProfile;
+	}
+	public set currentLoadedProfileId(newId: string) {
+		this._currentProfile = newId;
+	}
 
-    public getLists(): VillagerList[] {
-        return this._lists;
-    }
+	public getLists(): VillagerList[] {
+		return this._lists;
+	}
 
-    public getListById(id: string): VillagerList {
-        return this._lists.find(l => l.id === id);
-    }
+	public getListById(id: string): VillagerList {
+		return this._lists.find(l => l.id === id);
+	}
 
-    public addNewList(): VillagerList {
-        const tempLists = this._lists;
-        const newList = {
-            title: 'New List',
-            id: uuid(),
-            members: []
-        };
-        tempLists.push(newList);
-        this._lists = tempLists;
-        return newList;
-    }
+	public addNewList(): VillagerList {
+		const tempLists = this._lists;
+		const newList = {
+			title: 'New List',
+			id: uuid(),
+			members: []
+		};
+		tempLists.push(newList);
+		this._lists = tempLists;
+		return newList;
+	}
 
-    public renameList(listId: string, newTitle: string): VillagerList {
-        const tempLists = this._lists;
-        tempLists
-            .find(l => l.id === listId)
-            .title = newTitle;
-        this._lists = tempLists;
-        return this.getListById(listId);
-    }
+	public renameList(listId: string, newTitle: string): VillagerList {
+		const tempLists = this._lists;
+		tempLists
+			.find(l => l.id === listId)
+			.title = newTitle;
+		this._lists = tempLists;
+		return this.getListById(listId);
+	}
 
-    public deleteList(id: string): void {
-        this._lists = this._lists.filter(l => l.id !== id);
-    }
+	public deleteList(id: string): void {
+		this._lists = this._lists.filter(l => l.id !== id);
+	}
 
-    public clearAllLists(): void {
-        this._lists = [];
-    }
+	public clearAllLists(): void {
+		this._lists = [];
+	}
 
-    public addVillagerToList(villagerToAdd: Villager, listId: string): void {
-        if (this.villagerIsInList(villagerToAdd.id, listId)) {
-            return;
-        }
-        const tempLists = this._lists;
-        const listToAddTo: VillagerList = tempLists.find(l => l.id === listId);
-        listToAddTo.members.push(villagerToAdd);
-        listToAddTo.members.sort((a, b) => (a.id > b.id) ? 1 : -1);
-        this._lists = tempLists;
-    }
+	public addVillagerToList(villagerToAdd: Villager, listId: string): void {
+		if (this.villagerIsInList(villagerToAdd.id, listId)) {
+			return;
+		}
+		const tempLists = this._lists;
+		const listToAddTo: VillagerList = tempLists.find(l => l.id === listId);
+		listToAddTo.members.push(villagerToAdd);
+		listToAddTo.members.sort((a, b) => (a.id > b.id) ? 1 : -1);
+		this._lists = tempLists;
+	}
 
-    public removeVillagerFromList(villagerIdToRemove: string, listId: string): void {
-        const tempLists = this._lists;
-        const listToRemoveFrom: VillagerList = tempLists.find(l => l.id === listId);
-        listToRemoveFrom.members = listToRemoveFrom.members
-            .filter(v => v.id !== villagerIdToRemove);
-        this._lists = tempLists;
-    }
+	public removeVillagerFromList(villagerIdToRemove: string, listId: string): void {
+		const tempLists = this._lists;
+		const listToRemoveFrom: VillagerList = tempLists.find(l => l.id === listId);
+		listToRemoveFrom.members = listToRemoveFrom.members
+			.filter(v => v.id !== villagerIdToRemove);
+		this._lists = tempLists;
+	}
 
-    public listsAreEmpty(): boolean {
-        return this._lists.length <= 0;
-    }
+	public listsAreEmpty(): boolean {
+		return this._lists.length <= 0;
+	}
 
-    public villagerIsInList(villagerId: string, listId: string): boolean {
-        return !this.listsAreEmpty()
-            && this.getListById(listId)
-                .members
-                .map(v => v.id)
-                .includes(villagerId);
-    }
+	public villagerIsInList(villagerId: string, listId: string): boolean {
+		return !this.listsAreEmpty()
+			&& this.getListById(listId)
+				.members
+				.map(v => v.id)
+				.includes(villagerId);
+	}
 
-    public aProfileIsLoaded(): boolean {
-        return this._currentProfile !== '';
-    }
+	public aProfileIsLoaded(): boolean {
+		return this._currentProfile !== '';
+	}
 
-    public importListFromFile(selectedFile: Blob, callbackWhenDone: Function): void {
-        const reader = new FileReader();
+	public importListFromFile(selectedFile: Blob, callbackWhenDone: Function): void {
+		const reader = new FileReader();
 
-        reader.onload = () => {
-            this._lists = JSON.parse(reader.result as string);
-            callbackWhenDone();
-        };
+		reader.onload = () => {
+			this._lists = JSON.parse(reader.result as string);
+			callbackWhenDone();
+		};
 
-        reader.readAsText(selectedFile);
-    }
+		reader.readAsText(selectedFile);
+	}
 
-    private get _lists(): VillagerList[] {
-        let parsedLists: any;
-        try {
-            parsedLists = JSON.parse(localStorage.lists);
-        } catch {
-            return this.initEmptyLists();
-        }
+	private get _lists(): VillagerList[] {
+		let parsedLists: any;
+		try {
+			parsedLists = JSON.parse(localStorage.lists);
+		} catch {
+			return this.initEmptyLists();
+		}
 
-        if (this.isVersion2(parsedLists)) {
-            // do nothing special
-        } else if (this.isVersion1(parsedLists)) {
-            localStorage.lists = JSON.stringify(this.convertVersion1ToVersion2(JSON.parse(localStorage.lists)));
-        } else {
-            return this.initEmptyLists();
-        }
-        return this.parseAndSerializeJSONToLists(localStorage.lists);
-    }
+		if (this.isVersion2(parsedLists)) {
+			// do nothing special
+		} else if (this.isVersion1(parsedLists)) {
+			localStorage.lists = JSON.stringify(this.convertVersion1ToVersion2(JSON.parse(localStorage.lists)));
+		} else {
+			return this.initEmptyLists();
+		}
+		return this.parseAndSerializeJSONToLists(localStorage.lists);
+	}
 
-    private parseAndSerializeJSONToLists(listsJSONString: string): VillagerList[] {
-        const parsedLists: VillagerList[] = JSON.parse(listsJSONString);
-        return parsedLists.map(list => ({
-            id: list.id,
-            title: list.title,
-            members: list.members.map(v => Villager.serialize(v)),
-        }));
-    }
+	private parseAndSerializeJSONToLists(listsJSONString: string): VillagerList[] {
+		const parsedLists: VillagerList[] = JSON.parse(listsJSONString);
+		return parsedLists.map(list => ({
+			id: list.id,
+			title: list.title,
+			members: list.members.map(v => Villager.serialize(v)),
+		}));
+	}
 
-    private initEmptyLists(): VillagerList[] {
-        localStorage.lists = '[]';
-        return [];
-    }
+	private initEmptyLists(): VillagerList[] {
+		localStorage.lists = '[]';
+		return [];
+	}
 
-    private isVersion1(lists: any): boolean {
-        return this.validator.validate(version1Schema, lists) as boolean;
-    }
+	private isVersion1(lists: any): boolean {
+		return this.validator.validate(version1Schema, lists) as boolean;
+	}
 
-    private isVersion2(lists: any): boolean {
-        return this.validator.validate(version2Schema, lists) as boolean;
-    }
+	private isVersion2(lists: any): boolean {
+		return this.validator.validate(version2Schema, lists) as boolean;
+	}
 
-    private convertVersion1ToVersion2(lists: VillagerListV1[]): VillagerList[] {
-        return lists.map((list: VillagerListV1) => ({
-            id: uuid(),
-            title: list.title,
-            members: list.members.map((villagerId: string) =>
-                VillagersRepository.getVillagerById(villagerId)
-            )
-        }));
-    }
+	private convertVersion1ToVersion2(lists: VillagerListV1[]): VillagerList[] {
+		return lists.map((list: VillagerListV1) => ({
+			id: uuid(),
+			title: list.title,
+			members: list.members.map((villagerId: string) =>
+				VillagersRepository.getVillagerById(villagerId)
+			)
+		}));
+	}
 
-    private set _lists(newLists: VillagerList[]) {
-        localStorage.lists = JSON.stringify(newLists);
-    }
+	private set _lists(newLists: VillagerList[]) {
+		localStorage.lists = JSON.stringify(newLists);
+	}
 }

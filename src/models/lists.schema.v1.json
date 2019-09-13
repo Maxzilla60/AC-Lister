@@ -1,36 +1,36 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "definitions": {
-        "VillagerLists": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/VillagerList"
-            },
-            "additionalProperties": false
-        },
-        "VillagerList": {
-            "type": "object",
-            "properties": {
-                "id": {
-                    "type": "string"
-                },
-                "title": {
-                    "type": "string"
-                },
-                "members": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": [
-                "id",
-                "title",
-                "members"
-            ],
-            "additionalProperties": false
-        }
-    },
-    "$ref": "#/definitions/VillagerLists"
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"VillagerLists": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/VillagerList"
+			},
+			"additionalProperties": false
+		},
+		"VillagerList": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"title": {
+					"type": "string"
+				},
+				"members": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"required": [
+				"id",
+				"title",
+				"members"
+			],
+			"additionalProperties": false
+		}
+	},
+	"$ref": "#/definitions/VillagerLists"
 }

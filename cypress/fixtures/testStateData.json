@@ -1,48 +1,48 @@
 {
-    "noLists": [],
-    "oneEmptyList": [
-        {
-            "title": "My List",
-            "id": "a2a2383f-99fa-4546-a809-673b20017b13",
-            "members": []
-        }
-    ],
-    "twoEmptyLists": [
-        {
-            "title": "My List",
-            "id": "a2a2383f-99fa-4546-a809-673b20017b13",
-            "members": []
-        },
-        {
-            "title": "Other List",
-            "id": "e6243c12-d8e5-40b1-8346-34be7644067f",
-            "members": []
-        }
-    ],
-    "oneList": [
-        {
-            "title": "My List",
-            "id": "a2a2383f-99fa-4546-a809-673b20017b13",
-            "members": [
-                "Scoot"
-            ]
-        }
-    ],
-    "twoLists": [
-        {
-            "title": "My List",
-            "id": "a2a2383f-99fa-4546-a809-673b20017b13",
-            "members": [
-                "Scoot"
-            ]
-        },
-        {
-            "title": "Other List",
-            "id": "e6243c12-d8e5-40b1-8346-34be7644067f",
-            "members": [
-                "Stitches",
-                "Simon"
-            ]
-        }
-    ]
+	"noLists": [],
+	"oneEmptyList": [
+		{
+			"title": "My List",
+			"id": "a2a2383f-99fa-4546-a809-673b20017b13",
+			"members": []
+		}
+	],
+	"twoEmptyLists": [
+		{
+			"title": "My List",
+			"id": "a2a2383f-99fa-4546-a809-673b20017b13",
+			"members": []
+		},
+		{
+			"title": "Other List",
+			"id": "e6243c12-d8e5-40b1-8346-34be7644067f",
+			"members": []
+		}
+	],
+	"oneList": [
+		{
+			"title": "My List",
+			"id": "a2a2383f-99fa-4546-a809-673b20017b13",
+			"members": [
+				"Scoot"
+			]
+		}
+	],
+	"twoLists": [
+		{
+			"title": "My List",
+			"id": "a2a2383f-99fa-4546-a809-673b20017b13",
+			"members": [
+				"Scoot"
+			]
+		},
+		{
+			"title": "Other List",
+			"id": "e6243c12-d8e5-40b1-8346-34be7644067f",
+			"members": [
+				"Stitches",
+				"Simon"
+			]
+		}
+	]
 }
