@@ -1,7 +1,7 @@
 import Villager from './villager.model';
 
 export default class VillagerList {
-	id: string;
-	title: string;
-	members: Villager[];
+	public id: string;
+	public title: string;
+	public members: Villager[];
 }

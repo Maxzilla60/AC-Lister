@@ -13,7 +13,7 @@ export default class Villager {
 	public hasProfileImage: boolean;
 	public hasIconImage: boolean;
 
-	public static serialize(object: Object): Villager {
+	public static serialize(object: object): Villager {
 		return Object.assign(new Villager(), object);
 	}
 

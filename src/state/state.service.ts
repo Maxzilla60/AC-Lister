@@ -8,7 +8,7 @@ import Ajv from 'ajv';
 import { v4 as uuid } from 'uuid';
 
 export default class AppStateService {
-	private _currentProfile: string = '';
+	private _currentProfile = '';
 	private validator = new Ajv();
 
 	public get currentLoadedProfileId(): string {
@@ -90,7 +90,7 @@ export default class AppStateService {
 		return this._currentProfile !== '';
 	}
 
-	public importListFromFile(selectedFile: Blob, callbackWhenDone: Function): void {
+	public importListFromFile(selectedFile: Blob, callbackWhenDone: () => void): void {
 		const reader = new FileReader();
 
 		reader.onload = () => {
@@ -99,6 +99,10 @@ export default class AppStateService {
 		};
 
 		reader.readAsText(selectedFile);
+	}
+
+	private set _lists(newLists: VillagerList[]) {
+		localStorage.lists = JSON.stringify(newLists);
 	}
 
 	private get _lists(): VillagerList[] {
@@ -149,9 +153,5 @@ export default class AppStateService {
 				VillagersRepository.getVillagerById(villagerId)
 			)
 		}));
-	}
-
-	private set _lists(newLists: VillagerList[]) {
-		localStorage.lists = JSON.stringify(newLists);
 	}
 }

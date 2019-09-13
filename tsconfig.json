@@ -3,6 +3,6 @@
 		"target": "ES2018",
 		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "node",
-		"resolveJsonModule": true,
+		"resolveJsonModule": true
 	}
 }

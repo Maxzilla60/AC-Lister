@@ -23,7 +23,7 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
 	}
 }
 
-function imageOnError(element: HTMLImageElement, src: string) {
+function imageOnError(element: HTMLImageElement, src: string): void {
 	element.onerror = null;
 	element.src = src;
 }

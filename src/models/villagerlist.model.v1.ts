@@ -1,5 +1,5 @@
 export default class VillagerListV1 {
-	id: string;
-	title: string;
-	members: string[];
+	public id: string;
+	public title: string;
+	public members: string[];
 }
