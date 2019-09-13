@@ -10,7 +10,6 @@ import confetti from 'canvas-confetti';
 export default class ProfileComponents {
 	public static aProfileElement(profile: Villager): DocumentFragment {
 		const fragment = document.createDocumentFragment();
-		// TODO: Update instead or re-inserting?
 		fragment.appendChild(ProfileComponents.aProfileInfoListItem('fa-tag', 'Name', profile.name));
 		fragment.appendChild(ProfileComponents.aProfileInfoListItem('fa-user', 'Species', profile.species));
 		fragment.appendChild(ProfileComponents.aProfileInfoListItem('fa-heart', 'Personality', profile.personality));

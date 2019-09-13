@@ -141,7 +141,6 @@ export default class ProfileView {
 	}
 
 	private updateProfileImage(): void {
-		// TODO: Loading icon for Profile Image
 		// https://blog.teamtreehouse.com/learn-asynchronous-image-loading-javascript
 		// https://jsfiddle.net/fracz/kf8c6t1v/
 		this.profileImageElement.className = 'loading';
