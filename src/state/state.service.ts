@@ -109,7 +109,7 @@ export default class AppStateService {
 		if (this.isVersion2(parsedLists)) {
 			// do nothing special
 		} else if (this.isVersion1(parsedLists)) {
-			localStorage.lists = JSON.stringify(this.convertVersion1ToVersion2(JSON.parse(localStorage.lists)));
+			localStorage.lists = JSON.stringify(this.convertVersion1ToVersion2(parsedLists));
 		} else {
 			return this.initEmptyLists();
 		}
