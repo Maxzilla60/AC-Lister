@@ -46,8 +46,10 @@ export default class ProfileView {
 		this.updateListSelectOptions();
 		if (listIdToSelect) {
 			this.selectList(listIdToSelect);
-		} else if (!this.currentListsAreEmpty()) {
+		} else if (!this.currentSelectedList && !this.currentListsAreEmpty()) {
 			this.selectList(this.currentLists[0].id);
+		} else {
+			this.currentSelectedList = undefined;
 		}
 		this.updateAddRemoveVillagerButton();
 	}
