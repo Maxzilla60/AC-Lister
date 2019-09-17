@@ -22,8 +22,3 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
 		this.element.setAttribute('data-src', src);
 	}
 }
-
-function imageOnError(element: HTMLImageElement, src: string): void {
-	element.onerror = null;
-	element.src = src;
-}
