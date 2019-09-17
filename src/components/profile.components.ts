@@ -4,7 +4,7 @@ import ListItemBuilder from '../builders/ListItemBuilder';
 import SpanBuilder from '../builders/SpanBuilder';
 import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
-import { aTextNode } from '../util';
+import { aSpanElement } from '../util';
 import confetti from 'canvas-confetti';
 
 export default class ProfileComponents {
@@ -33,7 +33,7 @@ export default class ProfileComponents {
 	private static aProfileInfoListItem(iconName: string, iconTitle: string, infoValue: string): HTMLLIElement {
 		return new ListItemBuilder()
 			.asFontAwesome(iconName, iconTitle)
-			.appendChild(this.aTextNodeOrNAElement(infoValue))
+			.appendChild(this.aProfileInfoValueSpanElement(infoValue))
 			.build();
 	}
 
@@ -63,8 +63,12 @@ export default class ProfileComponents {
 			.build();
 	}
 
-	private static aTextNodeOrNAElement(text: string): Text | HTMLSpanElement {
-		return text === '' ? this.anNASpanElement() : aTextNode(text);
+	private static aProfileInfoValueSpanElement(text: string): HTMLSpanElement {
+		return text === '' ? this.anNASpanElement() : aSpanElement(text);
+	}
+
+	private static anNASpanElement(): HTMLSpanElement {
+		return new SpanBuilder('N/A').withClassNames('na').build();
 	}
 
 	private static aBirthdayEasterEggButton(villagerName: string, easterEggEvent: HTMLEvent): HTMLButtonElement {
@@ -78,10 +82,6 @@ export default class ProfileComponents {
 
 	private static aBirthdayEasterEggTextNode(birthday: string): Text | HTMLSpanElement {
 		return new SpanBuilder(birthday).withClassNames('birthday').build();
-	}
-
-	private static anNASpanElement(): HTMLSpanElement {
-		return new SpanBuilder('N/A').withClassNames('na').build();
 	}
 
 	private static birthdayHurray(): void {

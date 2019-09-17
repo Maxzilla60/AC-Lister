@@ -1,3 +1,4 @@
+import SpanBuilder from './builders/SpanBuilder';
 import { OperatorFunction } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -21,6 +22,10 @@ export function clearElement(element: HTMLElement): void {
 
 export function aTextNode(text: string): Text {
 	return document.createTextNode(text);
+}
+
+export function aSpanElement(text: string): HTMLSpanElement {
+	return new SpanBuilder(text).build();
 }
 
 export function aBreakElement(): HTMLElement {
