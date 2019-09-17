@@ -5,7 +5,8 @@
 	"private": true,
 	"scripts": {
 		"start": "parcel index.html",
-		"netlify": "npm i && parcel build index.html",
+		"build": "parcel build index.html",
+		"netlify": "npm i && npm build",
 		"codenvy": "parcel index.html --host 0.0.0.0 --port 1337",
 		"cypress": "cypress open",
 		"test": "npx cypress run --config videoUploadOnPasses=false"
