@@ -125,7 +125,7 @@ export default class ListsComponents {
 
 	private static anAddNewListButton(newListEvent: HTMLEvent): Node {
 		const newListButton = $('newlist_button').cloneNode() as HTMLButtonElement;
-		newListButton.onclick = newListEvent;
+		newListButton.addEventListener('click', newListEvent);
 		return newListButton;
 	}
 }

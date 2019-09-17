@@ -4,7 +4,7 @@ import { HTMLEvent } from './HTMLEvent.type';
 export default class ButtonBuilder extends HTMLElementBuilder<HTMLButtonElement> {
 	public constructor(onclick: HTMLEvent) {
 		super('button');
-		this.element.onclick = onclick;
+		this.element.addEventListener('click', onclick);
 	}
 
 	public asFontAwesome(iconName: string, brandIcon: boolean = false): ButtonBuilder {

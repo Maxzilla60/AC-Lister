@@ -8,7 +8,7 @@ export default class InputFieldBuilder extends HTMLElementBuilder<HTMLInputEleme
 	}
 
 	public onChange(event: HTMLEvent): InputFieldBuilder {
-		this.element.onchange = event;
+		this.element.addEventListener('change', event);
 		return this;
 	}
 

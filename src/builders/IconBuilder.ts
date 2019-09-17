@@ -9,7 +9,7 @@ export default class IconBuilder extends HTMLElementBuilder<HTMLElement> {
 	}
 
 	public onClick(onclick: HTMLEvent): IconBuilder {
-		this.element.onclick = onclick;
+		this.element.addEventListener('click', onclick);
 		return this;
 	}
 }

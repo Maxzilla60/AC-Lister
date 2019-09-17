@@ -20,6 +20,10 @@ export default class ProfileView {
 	private readonly addVillagerClickedSubject = new Subject<{ villagerIdToAdd: string, listId: string }>();
 	private readonly removeVillagerClickedSubject = new Subject<{ villagerIdToAdd: string, listId: string }>();
 
+	// Kept for removing eventlistener from the add-remove villager button
+	private readonly removeVillagerEvent: () => void = () => { this.removeVillagerClicked(); };
+	private readonly addVillagerEvent: () => void = () => { this.addVillagerClicked(); };
+
 	constructor() {
 		this.preloadImages();
 		this.villagerInformationElement = $('villager_information');
@@ -34,9 +38,9 @@ export default class ProfileView {
 		if (lists.length > 0) {
 			this.currentSelectedList = lists[0].id;
 		}
-		this.listSelectElement.onchange = () => {
+		this.listSelectElement.addEventListener('change', () => {
 			this.listSelectChanged();
-		};
+		});
 	}
 
 	public updateProfile(villager: Villager, listIdToSelect?: string): void {
@@ -127,12 +131,14 @@ export default class ProfileView {
 			return;
 		}
 		if (this.villagerIsInList(this.currentProfile, this.currentSelectedList)) {
-			this.addRemoveButton.onclick = () => { this.removeVillagerClicked(); };
+			this.addRemoveButton.removeEventListener('click', this.addVillagerEvent);
+			this.addRemoveButton.addEventListener('click', this.removeVillagerEvent);
 			this.addRemoveButton.className = 'clickable fa fa-minus';
 			this.addRemoveButton.title = 'Remove from list';
 			this.addRemoveButton.disabled = false;
 		} else {
-			this.addRemoveButton.onclick = () => { this.addVillagerClicked(); };
+			this.addRemoveButton.removeEventListener('click', this.removeVillagerEvent);
+			this.addRemoveButton.addEventListener('click', this.addVillagerEvent);
 			this.addRemoveButton.className = 'clickable fa fa-plus';
 			this.addRemoveButton.title = 'Add to list';
 			this.addRemoveButton.disabled = this.currentListsAreEmpty()
