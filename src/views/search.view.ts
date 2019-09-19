@@ -50,6 +50,12 @@ export default class SearchView {
 			auditTime(500),
 			distinctUntilChanged(),
 		);
+		$('open_searchpanel_button').addEventListener('click', () => {
+			setTimeout(() => {
+				this.searchBarElement.focus();
+				this.searchBarElement.select();
+			}, 350);
+		});
 	}
 
 	private resultClicked(villager: Villager): void {
