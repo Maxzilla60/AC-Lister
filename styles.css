@@ -560,6 +560,7 @@ select, option {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        margin: 0;
     }
 
     #list_select {
@@ -598,6 +599,6 @@ select, option {
     }
 
     h1 > .fa {
-        font-size: 5.5vw;
+        display: none;
     }
 }
