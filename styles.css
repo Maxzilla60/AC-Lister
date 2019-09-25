@@ -451,6 +451,8 @@ select, option {
 	#search_container.open {
 		-webkit-transform: translateX(240px);
 		transform: translateX(240px);
+		-webkit-box-shadow: -7px 0px 20px 0px brown;
+		        box-shadow: -7px 0px 20px 0px brown;
 	}
 
 	main {
