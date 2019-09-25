@@ -2,603 +2,599 @@
 /* background-light-orange == #f8e390 */
 
 * {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    font-size: 16px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-size: 16px;
 }
 
 html {
-    height: 100%;
+	height: 100%;
 }
 
 body {
-    background-image: url("background.jpg");
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-    padding: 10px;
-    max-width: 900px;
-    height: 100%;
+	background-image: url("background.jpg");
+	font-family: Arial, Helvetica, sans-serif;
+	margin: auto;
+	padding: 10px;
+	max-width: 900px;
+	height: 100%;
 }
 
 main {
-    display: grid;
-    height: 80%;
-    grid-template-columns: 25% 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
-    grid-template-areas: "search lists lists" "search lists lists" "search profile profile";
-    transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
+	display: grid;
+	height: 80%;
+	grid-template-columns: 25% 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 5px;
+	grid-template-areas: "search lists lists" "search lists lists" "search profile profile";
+	transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
 }
 
 #search_container {
-    grid-area: search;
+	grid-area: search;
 }
 
 #main_container {
-    grid-area: lists;
+	grid-area: lists;
 }
 
 #profile_container {
-    grid-area: profile;
+	grid-area: profile;
 }
 
 /* Global Stuff */
 h2 {
-    padding: 0;
-    margin-bottom: 10px;
-    display: none;
+	padding: 0;
+	margin-bottom: 10px;
+	display: none;
 }
 
 input {
-    -webkit-box-flex: 1;
-    -ms-flex: auto;
-    flex: auto;
-    border: solid orange;
-    padding: 5px;
-    border-radius: 8px;
-    width: 0;
+	-webkit-box-flex: 1;
+	-ms-flex: auto;
+	flex: auto;
+	border: solid orange;
+	padding: 5px;
+	border-radius: 8px;
+	width: 0;
 }
 
 img {
-    height: 32px;
+	height: 32px;
 }
 
 .menu {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 0;
-    right: 0;
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	top: 0;
+	right: 0;
 }
 
 .fa, .fab {
-    color: orange;
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
+	color: orange;
+	width: 30px;
+	height: 30px;
+	font-size: 16px;
 }
 
 .clickable:disabled {
-    background-color: floralwhite;
-    border: none;
-    border-radius: 8px;
-    color: gray;
+	background-color: floralwhite;
+	border: none;
+	border-radius: 8px;
+	color: gray;
 }
 
 .clickable {
-    background-color: floralwhite;
-    border: none;
-    border-radius: 8px;
+	background-color: floralwhite;
+	border: none;
+	border-radius: 8px;
 }
 
 .clickable:hover, .clickable:focus {
-    background-color: orange;
-    bottom: 1px;
-    -webkit-box-shadow: 0px 1px 5px 0px rgba(165, 42, 42, 0.3);
-    box-shadow: 0px 1px 5px 0px rgba(165, 42, 42, 0.3);
-    color: white;
-    cursor: pointer;
-    position: relative;
+	background-color: orange;
+	bottom: 1px;
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(165, 42, 42, 0.3);
+	box-shadow: 0px 1px 5px 0px rgba(165, 42, 42, 0.3);
+	color: white;
+	cursor: pointer;
+	position: relative;
 }
 
 .clickable:disabled:hover, .clickable:disabled:focus {
-    background-color: floralwhite;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: gray;
-    cursor: initial;
-    position: initial;
+	background-color: floralwhite;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: gray;
+	cursor: initial;
+	position: initial;
 }
 
 .clickable:active {
-    background-color: orangered;
+	background-color: orangered;
 }
 
 a.clickable {
-    text-align: center;
-    text-decoration: none;
-    padding-top: 7px;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 7px;
 }
 
 .na {
-    color: orange;
-    display: inline;
-    padding: 0;
+	color: orange;
+	display: inline;
+	padding: 0;
 }
 
 .birthday, #birthday_button {
-    color: hotpink;
-    display: inline;
-    font-weight: bold;
-    padding: 0;
+	color: hotpink;
+	display: inline;
+	font-weight: bold;
+	padding: 0;
 }
 
 /* Header */
 header {
-    text-align: center;
+	text-align: center;
 }
 
 h1 {
-    font-family: 'Leckerli One', cursive;
-    font-size: 35px;
-    color: brown;
-    font-weight: initial;
-    margin: 0;
-    padding: 10px;
+	font-family: 'Leckerli One', cursive;
+	font-size: 35px;
+	color: brown;
+	font-weight: initial;
+	margin: 0;
+	padding: 10px;
 }
 
 h1 > .fa {
-    font-size: 35px;
-    color: brown;
+	font-size: 35px;
+	color: brown;
 }
 
 small {
-    background-color: floralwhite;
-    color: red;
-    display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 8px;
-    margin-bottom: 5px;
+	background-color: floralwhite;
+	color: red;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 5px;
 }
 
 /* Search */
 #close_searchpanel_button,
 #open_searchpanel_button {
-    display: none;
+	display: none;
 }
 
 #search_container {
-    background-color: floralwhite;
-    border: solid orange;
-    border-radius: 8px;
-    padding: 5px;
-    z-index: inherit;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+	background-color: floralwhite;
+	border: solid orange;
+	border-radius: 8px;
+	padding: 5px;
+	z-index: inherit;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 search {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-bottom: 5px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-bottom: 5px;
 }
 
 #search_bar.birthday {
-    padding: 5px;
+	padding: 5px;
 }
 
 #search_results {
-    border: solid orange;
-    border-radius: 8px;
-    overflow-y: scroll;
-    -webkit-box-flex: 1;
-    -ms-flex: auto;
-    flex: auto;
+	border: solid orange;
+	border-radius: 8px;
+	overflow-y: scroll;
+	-webkit-box-flex: 1;
+	-ms-flex: auto;
+	flex: auto;
 }
 
 #no_results {
-    padding: 10px;
-    color: orange;
-    text-align: center;
+	padding: 10px;
+	color: orange;
+	text-align: center;
 }
 
 .result {
-    color: brown;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 0;
+	color: brown;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	cursor: pointer;
+	padding: 0;
 }
 
 .result:not(:last-child) {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 .result:active {
-    background-color: orangered;
+	background-color: orangered;
 }
 
 .result > img {
-    margin: 5px;
-    float: left;
+	margin: 5px;
+	float: left;
 }
 
 /* Lists */
 #main_container {
-    padding: 5px;
-    background-color: floralwhite;
-    border: solid orange;
-    overflow-y: auto;
-    border-radius: 8px;
-    position: relative;
+	padding: 5px;
+	background-color: floralwhite;
+	border: solid orange;
+	overflow-y: auto;
+	border-radius: 8px;
+	position: relative;
 }
 
 #main_container > .menu {
-    position: -webkit-sticky;
-    position: sticky;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    pointer-events: none;
-    z-index: 1;
+	position: -webkit-sticky;
+	position: sticky;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	pointer-events: none;
+	z-index: 1;
 }
 
 #main_container > .menu > a,
 #main_container > .menu > button {
-    pointer-events: all;
+	pointer-events: all;
 }
 
 #lists_container {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 99%;
-    top: 0;
-    position: absolute;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 99%;
+	top: 0;
+	position: absolute;
 }
 
 #lists, .list_members, #villager_information {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    -webkit-margin-before: 0;
-    margin-block-start: 0;
-    -webkit-margin-after: 0;
-    margin-block-end: 0;
-    -webkit-margin-start: 0;
-    margin-inline-start: 0;
-    -webkit-margin-end: 0;
-    margin-inline-end: 0;
-    -webkit-padding-start: 0;
-    padding-inline-start: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	-webkit-margin-before: 0;
+	margin-block-start: 0;
+	-webkit-margin-after: 0;
+	margin-block-end: 0;
+	-webkit-margin-start: 0;
+	margin-inline-start: 0;
+	-webkit-margin-end: 0;
+	margin-inline-end: 0;
+	-webkit-padding-start: 0;
+	padding-inline-start: 0;
 }
 
 .list_title {
-    color: brown;
-    font-weight: bold;
-    margin: 0;
-    padding: 5px;
+	color: brown;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px;
 }
 
 .rename_bar {
-    width: initial;
+	width: initial;
 }
 
 .list_members {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: wrap;
-    flex-flow: wrap;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: wrap;
+	flex-flow: wrap;
 }
 
 .member_button {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
 }
 
 #emptylists_prompt, noscript, .loading {
-    color: orange;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 10px;
-    padding-top: 5px;
+	color: orange;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 10px;
+	padding-top: 5px;
 }
 
 #emptylists_newlist_button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    color: orange;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: orange;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 noscript {
-    width: 400px;
-    color: red;
-    font-weight: bold;
+	width: 400px;
+	color: red;
+	font-weight: bold;
 }
 
 .loading {
-    padding-top: 10px;
+	padding-top: 10px;
 }
 
 .loading > .fa {
-    width: initial;
-    height: initial;
-    margin-right: 5px;
-    display: block;
+	width: initial;
+	height: initial;
+	margin-right: 5px;
+	display: block;
 }
 
 /* Profile */
 #profile_container {
-    padding: 5px;
-    background-color: floralwhite;
-    border: solid orange;
-    border-radius: 8px;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+	padding: 5px;
+	background-color: floralwhite;
+	border: solid orange;
+	border-radius: 8px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
 }
 
 #profile_container > .menu {
-    margin: 5px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+	margin: 5px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 select, option {
-    background-color: white;
-    border: solid orange;
-    height: 40px;
-    border-radius: 8px;
-    color: brown;
-    font-size: 14px;
-    padding: 5px;
+	background-color: white;
+	border: solid orange;
+	height: 40px;
+	border-radius: 8px;
+	color: brown;
+	font-size: 14px;
+	padding: 5px;
 }
 
 #villager_information_container {
-    -webkit-box-flex: 1;
-    -ms-flex: auto;
-    flex: auto;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+	-webkit-box-flex: 1;
+	-ms-flex: auto;
+	flex: auto;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
 }
 
 #villager_information {
-    color: brown;
-    padding: 5px;
+	color: brown;
+	padding: 5px;
 }
 
 #villager_information > li > label {
-    text-align: center;
-    padding-top: 5px;
+	text-align: center;
+	padding-top: 5px;
 }
 
 #villager_information > li > label,
 #birthday_button {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .fa-li > .fa {
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
 #profile_image {
-    -ms-flex-item-align: center;
-    align-self: center;
-    border-radius: 27px;
-    border: solid orange;
-    float: left;
-    height: 200px;
-    width: 200px;
-    padding: 0;
+	-ms-flex-item-align: center;
+	align-self: center;
+	border-radius: 27px;
+	border: solid orange;
+	float: left;
+	height: 200px;
+	width: 200px;
+	padding: 0;
 }
 
 #profile_image.loading {
-    -o-object-fit: none;
-    object-fit: none;
+	-o-object-fit: none;
+	object-fit: none;
 }
 
 @media only screen and (max-width: 730px) {
-    #close_searchpanel_button,
-    #open_searchpanel_button {
-        display: initial;
-    }
+	#close_searchpanel_button,
+	#open_searchpanel_button {
+		display: initial;
+	}
 
-    #search_container:target {
-        -webkit-transform: translateX(240px);
-        transform: translateX(240px);
-    }
+	#search_container:target {
+		-webkit-transform: translateX(240px);
+		transform: translateX(240px);
+	}
 
-    main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "lists" "lists" "profile";
-    }
+	main {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-areas: "lists" "lists" "profile";
+	}
 
-    #main_container {
-        grid-area: lists;
-    }
+	#main_container {
+		grid-area: lists;
+	}
 
-    #profile_container {
-        grid-area: profile;
-    }
+	#profile_container {
+		grid-area: profile;
+	}
 
-    #search_container {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 225px;
-        left: -240px;
-        -webkit-transition: -webkit-transform .3s ease-in-out;
-        transition: -webkit-transform .3s ease-in-out;
-        transition: transform .3s ease-in-out;
-        transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-        z-index: 2;
-    }
+	#search_container {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		width: 225px;
+		left: -240px;
+		-webkit-transition: -webkit-transform .3s ease-in-out;
+		transition: -webkit-transform .3s ease-in-out;
+		transition: transform .3s ease-in-out;
+		transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+		z-index: 2;
+	}
 
-    #main_container > .menu {
-        position: initial;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        border-bottom: orange 1px solid;
-    }
+	#main_container > .menu {
+		position: initial;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		border-bottom: orange 1px solid;
+	}
 
-    #lists_container {
-        position: initial;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
+	#lists_container {
+		position: initial;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
 
-    .list_header {
-        text-align: center;
-    }
+	.list_header {
+		text-align: center;
+	}
 
-    .list_members {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
+	.list_members {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
 
-    #villager_information:empty {
-        height: 25vw;
-    }
+	#villager_information:empty {
+		height: 25vw;
+	}
 }
 
 @media only screen and (max-width: 590px) {
-    #main_container,
-    #search_container,
-    #profile_container,
-    #search_results,
-    #search_bar,
-    #list_select {
-        border-width: 2px;
-    }
+	#main_container,
+	#search_container,
+	#profile_container,
+	#search_results,
+	#search_bar,
+	#list_select {
+		border-width: 2px;
+	}
 
-    body {
-        padding: 2px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
+	body {
+		padding: 2px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
 
-    h1 {
-        padding: 0;
-    }
+	main {
+		-webkit-box-flex: 1;
+		-ms-flex: auto;
+		flex: auto;
+	}
 
-    main {
-        -webkit-box-flex: 1;
-        -ms-flex: auto;
-        flex: auto;
-    }
+	#search_container {
+		border-left: none;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 
-    #search_container {
-        border-left: none;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
+	#profile_container {
+		display: initial;
+	}
 
-    #profile_container {
-        display: initial;
-    }
+	#profile_container > .menu {
+		position: initial;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin: 0;
+	}
 
-    #profile_container > .menu {
-        position: initial;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin: 0;
-    }
+	#list_select {
+		-webkit-box-flex: 1;
+		-ms-flex: auto;
+		flex: auto;
+	}
 
-    #list_select {
-        -webkit-box-flex: 1;
-        -ms-flex: auto;
-        flex: auto;
-    }
+	#profile_image {
+		position: absolute;
+		height: 25vw;
+		width: 25vw;
+		bottom: 0;
+		right: 0;
+		margin: 5px;
+	}
 
-    #profile_image {
-        position: absolute;
-        height: 25vw;
-        width: 25vw;
-        bottom: 0;
-        right: 0;
-        margin: 5px;
-    }
+	#villager_information {
+		padding: 0;
+	}
 
-    #villager_information {
-        padding: 0;
-    }
+	#villager_information > li {
+		margin: 0;
+	}
 
-    #villager_information > li {
-        margin: 0;
-    }
+	#villager_information > li, .na {
+		margin-bottom: -10px;
+	}
 
-    #villager_information > li, .na {
-        margin-bottom: -10px;
-    }
+	#villager_information > li > label {
+		margin-right: 0;
+	}
 
-    #villager_information > li > label {
-        margin-right: 0;
-    }
+	h1 {
+		font-size: 5.2vw;
+	}
 
-    h1 {
-        font-size: 5.2vw;
-    }
-
-    h1 > .fa {
-        display: none;
-    }
+	h1 > .fa {
+		display: none;
+	}
 }
