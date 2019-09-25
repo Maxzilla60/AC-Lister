@@ -1,6 +1,7 @@
 import SearchComponents from '../components/search.components';
 import Villager from '../models/villager.model';
 import { getElement as $, loadImage, replaceChildren } from '../util';
+import Hammer from 'hammerjs';
 import { fromEvent, merge, Observable, Subject } from 'rxjs';
 import { auditTime, distinctUntilChanged, map, pluck, tap } from 'rxjs/operators';
 
@@ -12,13 +13,28 @@ export default class SearchView {
 	private searchPanelElement: HTMLElement;
 	private searchResultsElement: HTMLDivElement;
 	private searchBarElement: HTMLInputElement;
+	private hammer: HammerManager;
 
 	constructor() {
 		this.preloadImages();
 		this.searchPanelElement = $('search_container') as HTMLElement;
 		this.searchResultsElement = $('search_results') as HTMLDivElement;
 		this.searchBarElement = $('search_bar') as HTMLInputElement;
+		this.setupSwipeGesture();
 		this.bindEvents();
+	}
+
+	private setupSwipeGesture(): void {
+		this.hammer = new Hammer.Manager(document);
+		this.hammer.add(new Hammer.Pan({
+			direction: Hammer.DIRECTION_RIGHT,
+			threshold: 200,
+		}));
+		this.hammer.on('panright', () => {
+			if (!this.searchPanelIsOpen) {
+				this.openSearchPanel();
+			}
+		});
 	}
 
 	public init(allResults: Villager[]): void {
