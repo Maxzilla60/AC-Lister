@@ -464,6 +464,15 @@ select, option {
 		grid-area: lists;
 	}
 
+	#emptylists_prompt {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+			-ms-flex-pack: center;
+				justify-content: center;
+	}
+
 	#profile_container {
 		grid-area: profile;
 	}
@@ -533,6 +542,10 @@ select, option {
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
 		flex-direction: column;
+	}
+
+	h1, footer, #profile_image {
+		display: none;
 	}
 
 	main {
