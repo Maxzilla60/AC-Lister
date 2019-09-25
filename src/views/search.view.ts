@@ -52,6 +52,7 @@ export default class SearchView {
 		loadImage('/villager_icons/default.gif');
 	}
 
+	private get searchPanelIsOpen(): boolean { return this._searchPanelIsOpen; }
 	private set searchPanelIsOpen(newValue: boolean) {
 		this._searchPanelIsOpen = newValue;
 		this.searchPanelElement.className = this._searchPanelIsOpen ? 'open' : '';
@@ -72,6 +73,22 @@ export default class SearchView {
 		$('close_searchpanel_button').addEventListener('click', () => {
 			this.closeSearchPanel();
 		});
+		this.bindClickOutside();
+	}
+
+	private bindClickOutside(): void {
+		document.addEventListener('click', (event: Event) => {
+			const target = event.target as Element;
+			if (this.targetIsOutsideSearchPanel(target)) {
+				this.closeSearchPanel();
+			}
+		});
+	}
+
+	private targetIsOutsideSearchPanel(target: Element): boolean {
+		return this.searchPanelIsOpen &&
+			target.id !== 'open_searchpanel_button' &&
+			!this.searchPanelElement.contains(target);
 	}
 
 	private resultClicked(villager: Villager): void {
