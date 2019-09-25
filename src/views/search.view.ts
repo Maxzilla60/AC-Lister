@@ -76,6 +76,7 @@ export default class SearchView {
 
 	private resultClicked(villager: Villager): void {
 		this.searchResultClickedSubject.next(villager);
+		this.closeSearchPanel();
 	}
 
 	private styleBirthdayEasterEgg(query: string): void {
