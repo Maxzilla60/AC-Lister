@@ -448,7 +448,7 @@ select, option {
 		display: initial;
 	}
 
-	#search_container:target {
+	#search_container.open {
 		-webkit-transform: translateX(240px);
 		transform: translateX(240px);
 	}

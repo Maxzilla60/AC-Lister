@@ -7,12 +7,15 @@ import { auditTime, distinctUntilChanged, map, pluck, tap } from 'rxjs/operators
 export default class SearchView {
 	public searchQueryUpdated$: Observable<string>;
 	private readonly searchResultClickedSubject = new Subject<Villager>();
+	private _searchPanelIsOpen = false;
 
+	private searchPanelElement: HTMLElement;
 	private searchResultsElement: HTMLDivElement;
 	private searchBarElement: HTMLInputElement;
 
 	constructor() {
 		this.preloadImages();
+		this.searchPanelElement = $('search_container') as HTMLElement;
 		this.searchResultsElement = $('search_results') as HTMLDivElement;
 		this.searchBarElement = $('search_bar') as HTMLInputElement;
 		this.bindEvents();
@@ -30,12 +33,28 @@ export default class SearchView {
 		}
 	}
 
+	public openSearchPanel(): void {
+		this.searchPanelIsOpen = true;
+		setTimeout(() => {
+			this.searchBarElement.focus();
+			this.searchBarElement.select();
+		}, 350);
+	}
+	public closeSearchPanel(): void {
+		this.searchPanelIsOpen = false;
+	}
+
 	public get searchResultClicked$(): Observable<Villager> {
 		return this.searchResultClickedSubject.asObservable();
 	}
 
 	private preloadImages(): void {
 		loadImage('/villager_icons/default.gif');
+	}
+
+	private set searchPanelIsOpen(newValue: boolean) {
+		this._searchPanelIsOpen = newValue;
+		this.searchPanelElement.className = this._searchPanelIsOpen ? 'open' : '';
 	}
 
 	private bindEvents(): void {
@@ -50,11 +69,8 @@ export default class SearchView {
 			auditTime(500),
 			distinctUntilChanged(),
 		);
-		$('open_searchpanel_button').addEventListener('click', () => {
-			setTimeout(() => {
-				this.searchBarElement.focus();
-				this.searchBarElement.select();
-			}, 350);
+		$('close_searchpanel_button').addEventListener('click', () => {
+			this.closeSearchPanel();
 		});
 	}
 

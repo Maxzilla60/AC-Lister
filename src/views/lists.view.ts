@@ -11,6 +11,7 @@ export default class ListsView {
 	public exportListsClicked$: Observable<void>;
 	public importListsFileSelected$: Observable<File>;
 	public clearAllListsButtonClicked$: Observable<void>;
+	public openSearchPanelClicked$: Observable<void>;
 	private readonly deleteListButtonClickedSubject = new Subject<VillagerList>();
 	private readonly applyTitleToListButtonClickedSubject = new Subject<{ listId: string, newTitle: string }>();
 	private readonly listTitleClickedSubject = new Subject<VillagerList>();
@@ -134,6 +135,9 @@ export default class ListsView {
 		);
 		this.clearAllListsButtonClicked$ = fromEvent(this.clearListsButton, 'click').pipe(
 			filter(() => confirm('Are you sure you want to clear all lists?')),
+			mapToVoid(),
+		);
+		this.openSearchPanelClicked$ = fromEvent($('open_searchpanel_button') as HTMLButtonElement, 'click').pipe(
 			mapToVoid(),
 		);
 		$('importlists_button').addEventListener('click', () => {

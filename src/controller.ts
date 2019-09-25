@@ -99,6 +99,10 @@ export default class Controller {
 		saveAs(blob, 'ACLists.json');
 	}
 
+	private openSearchPanel(): void {
+		this.searchView.openSearchPanel();
+	}
+
 	private importLists(listsFile: File): void {
 		const reader = new FileReader();
 
@@ -155,6 +159,9 @@ export default class Controller {
 		});
 		this.listsView.listMemberButtonClicked$.subscribe((payload: { villagerId: string, listId: string }) => {
 			this.loadProfile(payload.villagerId, payload.listId);
+		});
+		this.listsView.openSearchPanelClicked$.subscribe(() => {
+			this.openSearchPanel();
 		});
 	}
 
