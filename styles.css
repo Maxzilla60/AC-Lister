@@ -237,6 +237,8 @@ search {
 .result > img {
 	margin: 5px;
 	float: left;
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: pixelated;
 }
 
 /* Lists */
@@ -311,6 +313,13 @@ search {
 	border-radius: 50%;
 	height: 40px;
 	width: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.member_button > img {
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: pixelated;
 }
 
 #emptylists_prompt, noscript, .loading {
@@ -452,7 +461,7 @@ select, option {
 		-webkit-transform: translateX(240px);
 		transform: translateX(240px);
 		-webkit-box-shadow: -7px 0px 20px 0px brown;
-		        box-shadow: -7px 0px 20px 0px brown;
+		box-shadow: -7px 0px 20px 0px brown;
 	}
 
 	main {
@@ -471,8 +480,8 @@ select, option {
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-pack: center;
-			-ms-flex-pack: center;
-				justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 
 	#profile_container {
