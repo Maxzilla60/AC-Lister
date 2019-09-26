@@ -7,11 +7,8 @@ const offlineFallbackPage = "index.html";
 
 // Install stage sets up the index page (home page) in the cache and opens a new cache
 self.addEventListener("install", function (event) {
-	console.log("[PWA Builder] Install Event processing");
-
 	event.waitUntil(
 		caches.open(CACHE).then(function (cache) {
-			console.log("[PWA Builder] Cached offline page during install");
 			return cache.add(offlineFallbackPage);
 		})
 	);
@@ -24,15 +21,11 @@ self.addEventListener("fetch", function (event) {
 	event.respondWith(
 		fetch(event.request)
 			.then(function (response) {
-				console.log("[PWA Builder] add page to offline cache: " + response.url);
-
 				// If request was success, add or update it in the cache
 				event.waitUntil(updateCache(event.request, response.clone()));
-
 				return response;
 			})
 			.catch(function (error) {
-				console.log("[PWA Builder] Network request Failed. Serving content from cache: " + error);
 				return fromCache(event.request);
 			})
 	);
@@ -47,7 +40,6 @@ function fromCache(request) {
 			if (!matching || matching.status === 404) {
 				return Promise.reject("no-match");
 			}
-
 			return matching;
 		});
 	});
