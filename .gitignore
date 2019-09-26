@@ -133,3 +133,6 @@ cypress/videos
 cypress/screenshots/
 .vscode/
 .theia/
+
+# Local Netlify folder
+.netlify
