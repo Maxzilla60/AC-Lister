@@ -8,12 +8,12 @@
 	"orientation": "any",
 	"icons": [
 		{
-			"src": "/favicons/android-chrome-192x192.png",
+			"src": "/public/favicons/android-chrome-192x192.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": "/favicons/android-chrome-256x256.png",
+			"src": "/public/favicons/android-chrome-256x256.png",
 			"sizes": "256x256",
 			"type": "image/png"
 		}
