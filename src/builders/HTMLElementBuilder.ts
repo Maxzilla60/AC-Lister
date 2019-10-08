@@ -12,7 +12,7 @@ export default abstract class HTMLElementBuilder<T extends HTMLElement> {
 		return this.element;
 	}
 
-	public beforeBuild(): void { }
+	protected beforeBuild(): void { }
 
 	public withTitle(title: string): HTMLElementBuilder<T> {
 		this.element.title = title;

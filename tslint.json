@@ -1,12 +1,6 @@
 {
 	"extends": "tslint:recommended",
 	"rules": {
-		"variable-name": {
-			"options": [
-				"check-format",
-				"allow-leading-underscore"
-			]
-		},
 		"array-type": false,
 		"arrow-parens": false,
 		"class-name": true,
@@ -81,6 +75,12 @@
 			true,
 			"call-signature",
 			"property-declaration"
-		]
+		],
+		"variable-name": {
+			"options": [
+				"check-format",
+				"allow-leading-underscore"
+			]
+		}
 	}
 }
