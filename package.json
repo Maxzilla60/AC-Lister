@@ -16,7 +16,7 @@
 	},
 	"keywords": [],
 	"author": "Maxime Orione",
-	"license": "ISC",
+	"license": "GNU General Public License v3.0",
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.9.0",
 		"ajv": "^6.10.2",
