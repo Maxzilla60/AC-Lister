@@ -6,6 +6,9 @@ export default class ImageBuilder extends HTMLElementBuilder<HTMLImageElement> {
 		this.initLazyLoading(src);
 		this.initFallBackSrc(fallbackSrc);
 		this.element.setAttribute('aria-hidden', 'true');
+		this.element.addEventListener('error', (event: ErrorEvent) => {
+			(event.target as HTMLImageElement).src = fallbackSrc;
+		});
 	}
 
 	public withAlt(alt: string): ImageBuilder {

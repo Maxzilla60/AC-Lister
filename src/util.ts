@@ -47,7 +47,7 @@ export function loadImage(src: string): Promise<string> {
 	return new Promise((resolve, reject) => {
 		const img = new Image();
 		img.addEventListener('load', () => resolve(src));
-		img.addEventListener('error', () => console.error(new Error(`Failed to load image with URL: ${src}`)));
+		img.addEventListener('error', () => reject(src));
 		img.src = src;
 	});
 }

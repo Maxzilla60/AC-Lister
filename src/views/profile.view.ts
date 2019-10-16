@@ -155,6 +155,9 @@ export default class ProfileView {
 			.then(src => {
 				this.profileImageElement.src = src;
 			})
+			.catch(() => {
+				this.profileImageElement.src = this.noProfileImageSrc;
+			})
 			.finally(() => {
 				this.profileImageElement.className = '';
 			});
