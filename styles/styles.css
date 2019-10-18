@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	background-image: url("background.jpg");
+	background-image: url("/public/background.jpg");
 	font-family: Arial, Helvetica, sans-serif;
 	margin: auto;
 	padding: 10px;
