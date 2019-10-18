@@ -141,8 +141,7 @@ export default class ProfileView {
 			this.addRemoveButton.addEventListener('click', this.addVillagerEvent);
 			this.addRemoveButton.className = 'clickable fa fa-plus';
 			this.addRemoveButton.title = 'Add to list';
-			this.addRemoveButton.disabled = this.currentListsAreEmpty()
-				;
+			this.addRemoveButton.disabled = this.currentListsAreEmpty();
 		}
 	}
 
@@ -151,6 +150,7 @@ export default class ProfileView {
 		// https://jsfiddle.net/fracz/kf8c6t1v/
 		this.profileImageElement.className = 'loading';
 		this.profileImageElement.src = this.preloadedLoadingGifSrc;
+		this.profileImageElement.title = this.currentProfile.hasProfileImage ? this.currentProfile.name : 'Image not available (yet)';
 		loadImage(`/villager_heads/${this.currentProfile.getProfileImage()}`)
 			.then(src => {
 				this.profileImageElement.src = src;
