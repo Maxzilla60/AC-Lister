@@ -6,6 +6,8 @@ import { ListElementEvents } from './../components/lists.components';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
+export interface LoadProfilePayload { villagerId: string; listId: string; }
+
 export default class ListsView {
 	public newListClicked$: Observable<void>;
 	public exportListsClicked$: Observable<void>;
@@ -15,7 +17,7 @@ export default class ListsView {
 	private readonly deleteListButtonClickedSubject = new Subject<VillagerList>();
 	private readonly applyTitleToListButtonClickedSubject = new Subject<{ listId: string, newTitle: string }>();
 	private readonly listTitleClickedSubject = new Subject<VillagerList>();
-	private readonly listMemberButtonClickedSubject = new Subject<{ villagerId: string, listId: string }>();
+	private readonly listMemberButtonClickedSubject = new Subject<LoadProfilePayload>();
 
 	private currentListsAreEmpty: boolean;
 	private listsElement: HTMLElement;
@@ -95,7 +97,7 @@ export default class ListsView {
 		return this.listTitleClickedSubject.asObservable();
 	}
 
-	public get listMemberButtonClicked$(): Observable<{ villagerId: string, listId: string }> {
+	public get listMemberButtonClicked$(): Observable<LoadProfilePayload> {
 		return this.listMemberButtonClickedSubject.asObservable();
 	}
 

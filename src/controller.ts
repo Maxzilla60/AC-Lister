@@ -2,11 +2,13 @@ import Villager from './models/villager.model';
 import VillagerList from './models/villagerlist.model';
 import VillagersRepository from './repository/villagers.repository';
 import AppStateService from './state/state.service';
-import ListsView from './views/lists.view';
+import ListsView, { LoadProfilePayload } from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
 import { saveAs } from 'file-saver';
 import lozad from 'lozad';
+import { merge, Observable } from 'rxjs';
+import { distinctUntilChanged, map } from 'rxjs/operators';
 
 export default class Controller {
 	private state: AppStateService;
@@ -24,6 +26,7 @@ export default class Controller {
 		this.subscribeToProfileView();
 		this.listsView = new ListsView();
 		this.subscribeToListsView();
+		this.subscribeToLoadProfile();
 	}
 
 	public init(): void {
@@ -121,9 +124,6 @@ export default class Controller {
 		this.searchView.searchQueryUpdated$.subscribe((query: string) => {
 			this.updateSearch(query);
 		});
-		this.searchView.searchResultClicked$.subscribe((villager: Villager) => {
-			this.loadProfile(villager.id);
-		});
 	}
 
 	private subscribeToProfileView(): void {
@@ -157,12 +157,25 @@ export default class Controller {
 		this.listsView.listTitleClicked$.subscribe((list: VillagerList) => {
 			this.selectList(list.id);
 		});
-		this.listsView.listMemberButtonClicked$.subscribe((payload: { villagerId: string, listId: string }) => {
-			this.loadProfile(payload.villagerId, payload.listId);
-		});
 		this.listsView.openSearchPanelClicked$.subscribe(() => {
 			this.openSearchPanel();
 		});
+	}
+
+	private subscribeToLoadProfile(): void {
+		const mappedSearchResultClicked$: Observable<LoadProfilePayload> = this.searchView.searchResultClicked$
+			.pipe(map((villager: Villager) => {
+				return ({ villagerId: villager.id, listId: null });
+			}));
+		const distinctPayloads = distinctUntilChanged((x: LoadProfilePayload, y: LoadProfilePayload) => {
+			return x.villagerId === y.villagerId && x.listId === y.listId;
+		});
+
+		merge(mappedSearchResultClicked$, this.listsView.listMemberButtonClicked$)
+			.pipe(distinctPayloads)
+			.subscribe((payload: LoadProfilePayload) => {
+				this.loadProfile(payload.villagerId, payload.listId);
+			});
 	}
 
 	private observeLazyLoadedImages(): void { this.lozadObserver.observe(); }
