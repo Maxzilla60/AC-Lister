@@ -29,12 +29,13 @@ export default class ViewerComponents {
 		return new DivisionBuilder()
 			.withChildren(aTextNode('There are no lists here...'))
 			.withId('emptylists_prompt')
+			.withClassNames('viewer')
 			.build();
 	}
 
 	public static aListMembersSection(members: Villager[]): HTMLUListElement {
 		return new ListElementBuilder()
-			.withClassNames('list_members viewer')
+			.withClassNames('list_members', 'viewer')
 			.withChildren(...members.map(villager => this.aMemberElement(villager)))
 			.build();
 	}

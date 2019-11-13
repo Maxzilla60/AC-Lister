@@ -1,24 +1,34 @@
+import VillagerList from '../models/villagerlist.model';
 import AppStateService from '../state/state.service';
 import { getElement as $, replaceChildren } from '../util';
-import ViewerComponents from './components';
+import ViewerComponents from './viewer.components';
 import lozad from 'lozad';
 
 export default class Controller {
 	private state: AppStateService;
 	private lozadObserver: lozad.Observer;
+	private lists: VillagerList[];
 
 	constructor() {
-		this.state = new AppStateService();
 		this.lozadObserver = lozad();
 	}
 
 	public init(): void {
-		const lists = this.state.getLists();
-		const fragment = document.createDocumentFragment();
-		for (const list of lists) {
-			fragment.appendChild(ViewerComponents.aListElement(list));
+		const state = new AppStateService();
+		this.lists = state.getLists();
+		this.renderLists();
+	}
+
+	private renderLists(): void {
+		if (this.lists.length <= 0) {
+			replaceChildren($('lists'), ViewerComponents.aNoListInfoElement());
+			return;
 		}
 
+		const fragment = document.createDocumentFragment();
+		for (const list of this.lists) {
+			fragment.appendChild(ViewerComponents.aListElement(list));
+		}
 		replaceChildren($('lists'), fragment);
 		this.observeLazyLoadedImages();
 	}

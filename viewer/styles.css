@@ -9,5 +9,13 @@ main.viewer {
 }
 
 .list_members.viewer {
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+#emptylists_prompt.viewer {
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
