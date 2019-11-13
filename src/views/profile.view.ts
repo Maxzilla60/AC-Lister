@@ -170,7 +170,8 @@ export default class ProfileView {
 	}
 
 	private villagerIsInList(villager: Villager, listId: string): boolean {
-		return !this.currentListsAreEmpty()
+		return this.getListById(listId)
+			&& !this.currentListsAreEmpty()
 			&& this.getListById(listId)
 				.members
 				.map(v => v.id)
