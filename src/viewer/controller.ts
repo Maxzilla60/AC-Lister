@@ -1,3 +1,4 @@
+import Villager from '../models/villager.model';
 import VillagerList from '../models/villagerlist.model';
 import AppStateService from '../state/state.service';
 import { getElement as $, replaceChildren } from '../util';
@@ -22,6 +23,7 @@ export default class Controller {
 		this.lists = state.getLists();
 		this.renderLists();
 		$('image_button').addEventListener('click', this.exportAsImage);
+		$('text_button').addEventListener('click', this.exportAsText.bind(this));
 	}
 
 	private renderLists(): void {
@@ -46,6 +48,24 @@ export default class Controller {
 				$('menu').style.display = '';
 			});
 		});
+	}
+
+	private exportAsText(): void {
+		const content: string = mapListsToText(this.lists) + '\nMade with Animal Crossing Villager Lister\n(https://ac-lister.netlify.com/)';
+		const contentAsBlob = new Blob([content], { type: 'text/plain;charset-utf-8' });
+
+		saveAs(contentAsBlob, 'AnimalCrossing-VillagerLists.txt');
+
+		function mapListsToText(lists: VillagerList[]): string {
+			return lists.map(list =>
+				`${list.title}:\n${mapListMembersToText(list.members)}\n`
+			).join('\n');
+		}
+		function mapListMembersToText(members: Villager[]): string {
+			return members.map(member =>
+				`\t- ${member.name}`
+			).join('\n');
+		}
 	}
 
 	private observeLazyLoadedImages(): void { this.lozadObserver.observe(); }
