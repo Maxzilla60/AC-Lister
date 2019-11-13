@@ -3,10 +3,11 @@
 <html lang="en">
 
 <head>
-	<title>Animal Crossing ★ Villager Lister - Viewing</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Animal Crossing ★ Villager Lister</title>
 	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
-	<script src="https://use.fontawesome.com/e0304574ea.js" type="text/javascript"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="./styles.css">
 	<link rel="manifest" href="../manifest.webmanifest">
 	<meta name="msapplication-config" content="../public/favicons/browserconfig.xml">
 	<link rel="apple-touch-icon" sizes="180x180" href="../public/favicons/apple-touch-icon.png">
@@ -22,28 +23,46 @@
 
 <body>
 	<header>
-		Animal Crossing<i style="color: brown" class="fa fa-star" aria-hidden="true"></i>Villager Lister
+		<h1>Animal Crossing <i class="fa fa-star" aria-hidden="true"></i> Villager Lister</h1>
+		<small>🚧 This is version 2.0 and currently WIP 🚧</small>
 	</header>
 
-	<div class="viewer">
-		<div id="viewer_list_area">
+	<main class="viewer">
+		<h2>Lists</h2>
+		<section id="main_container">
 			<div class="menu">
-				<button id="image_button" onclick="exportImage();" title="Save as image" class="clickable fa fa-camera" aria-hidden="true"></button><button id="text_button" onclick="exportText();" title="Save as text file" class="clickable fa fa-file-text" aria-hidden="true"></button><button id="share_button" onclick="openShare();" title="Open sharable link" class="clickable fa fa-share" aria-hidden="true"></button><button onclick="closeViewer();" title="Close viewer" class="clickable fa fa-compress" aria-hidden="true"></button>
+				<button id="image_button" title="Save as image" class="clickable fa fa-camera" aria-hidden="true"></button>
+				<button id="text_button" title="Save as text file" class="clickable fa fa-file" aria-hidden="true"></button>
+				<button id="share_button" title="Open sharable link" class="clickable fa fa-share" aria-hidden="true"></button>
+				<a href="/" id="openviewer_button" title="Open viewer and share" class="clickable fa fa-compress" aria-hidden="true"></a>
 			</div>
-			<div id="viewer_lists">
+			<div id="lists_container">
+				<ul id="lists" class="viewer">
+					<div class="loading">
+						<i class="fa fa-star fa-spin"></i>
+						Loading...
+					</div>
+					<noscript>I'm sorry but this website requires JavaScript to be enabled to work. 😅</noscript>
+				</ul>
 			</div>
-		</div>
-	</div>
+		</section>
+	</main>
 </body>
 
+<script src="../src/viewer/init.ts" type="text/javascript" defer></script>
+<link rel="stylesheet" type="text/css" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="../styles/LeckerliOneFont.css">
 <!-- <script src="Blob.js"></script> -->
 <!-- <script src="canvas-to-blob.min.js"></script> -->
 <!-- <script src="html2canvas.js"></script> -->
 <!-- <script src="FileSaver.min.js"></script> -->
-<!-- <script src="viewer.js"></script> -->
-<footer hidden>
-	<a title="Info Page" href="info"><i class="clickable fa fa-question" aria-hidden="true"></i></a><a title="GitHub Repo" target="_blank" rel="noopener" href="https://github.com/Maxzilla60/ac-lister"><i class="clickable fa fa-github" aria-hidden="true"></i></a><a title="Tumblr" target="_blank" rel="noopener" href="https://hungrymaxzilla.tumblr.com/aclister"><i class="clickable fa fa-tumblr" aria-hidden="true"></i></a><a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/hungrymaxzilla"><i class="clickable fa fa-twitter" aria-hidden="true"></i></a><a title="Artist" target="_blank" rel="noopener" href="https://purple-pixel.tumblr.com/"><i class="clickable fa fa-paint-brush" aria-hidden="true"></i></a>
+<h2>Footer</h2>
+<footer>
+	<!-- <a title="Info Page" href="./info/index.html"><i class="clickable fa fa-question" aria-hidden="true"></i></a> -->
+	<a title="GitHub Repo" target="_blank" rel="noopener" href="https://github.com/Maxzilla60/ac-lister"><i class="clickable fab fa-github" aria-hidden="true"></i></a>
+	<a title="Tumblr" target="_blank" rel="noopener" href="https://hungrymaxzilla.tumblr.com/aclister"><i class="clickable fab fa-tumblr" aria-hidden="true"></i></a>
+	<a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/hungrymaxzilla"><i class="clickable fab fa-twitter" aria-hidden="true"></i></a>
+	<a title="Artist" target="_blank" rel="noopener" href="https://purple-pixel.tumblr.com/"><i class="clickable fa fa-paint-brush" aria-hidden="true"></i></a>
 </footer>
 
 </html>
