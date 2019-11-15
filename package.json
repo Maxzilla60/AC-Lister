@@ -27,7 +27,7 @@
 		"html2canvas": "1.0.0-rc.5",
 		"lozad": "^1.9.0",
 		"rxjs": "^6.5.2",
-		"uuid": "^3.3.2"
+		"nanoid": "^2.1.6"
 	},
 	"devDependencies": {
 		"@types/canvas-confetti": "^0.1.0",
@@ -35,7 +35,7 @@
 		"@types/hammerjs": "^2.0.36",
 		"@types/html2canvas": "^0.0.35",
 		"@types/lozad": "^1.9.0",
-		"@types/uuid": "^3.4.5",
+		"@types/nanoid": "^2.1.0",
 		"parcel-plugin-static-files-copy": "^2.2.1",
 		"parcel": "^1.12.4",
 		"tslint": "^5.20.0",

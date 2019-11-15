@@ -5,7 +5,7 @@ import VillagerList from '../models/villagerlist.model';
 import VillagerListV1 from '../models/villagerlist.model.v1.js';
 import VillagersRepository from '../repository/villagers.repository';
 import Ajv from 'ajv';
-import { v4 as uuid } from 'uuid';
+import nanoid from 'nanoid';
 
 export default class AppStateService {
 	private _currentProfile = '';
@@ -30,7 +30,7 @@ export default class AppStateService {
 		const tempLists = this._lists;
 		const newList = {
 			title: 'New List',
-			id: uuid(),
+			id: nanoid(),
 			members: []
 		};
 		tempLists.push(newList);
@@ -140,7 +140,7 @@ export default class AppStateService {
 
 	private convertVersion1ToVersion2(lists: VillagerListV1[]): VillagerList[] {
 		return lists.map((list: VillagerListV1) => ({
-			id: uuid(),
+			id: nanoid(),
 			title: list.title,
 			members: list.members.map((villagerId: string) =>
 				VillagersRepository.getVillagerById(villagerId)
