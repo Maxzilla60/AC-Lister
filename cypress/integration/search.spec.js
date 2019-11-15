@@ -1,49 +1,49 @@
 describe('Search Field', () => {
-	it('should visit the page', () => {
-		cy.visitPage();
-	})
+    it('should visit the page', () => {
+        cy.visitPage();
+    })
 
-	it('should search and find Scoot', () => {
-		cy.get('#search_bar').clear().type('Scoot');
-		cy.waitForSearchDebounce();
-		cy.get('#search_results').find('.result').should('have.length', 1);
+    it('should search and find Scoot', () => {
+        cy.get('#search_bar').clear().type('Scoot');
+        cy.waitForSearchDebounce();
+        cy.get('#search_results').find('.result').should('have.length', 1);
 
-		cy.get('.result').should('contain', 'Scoot');
-	});
+        cy.get('.result').should('contain', 'Scoot');
+    });
 
-	it('should search for villagers of duplicate names', () => {
-		cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
-			const villagersWithDuplicateNames = villagersArray
-				.filter(v => v.id.includes('(2)'))
-				.map(v => v.name);
+    it('should search for villagers of duplicate names', () => {
+        cy.fixture('../../src/shared/repository/villagers.json').then(villagersArray => {
+            const villagersWithDuplicateNames = villagersArray
+                .filter(v => v.id.includes('(2)'))
+                .map(v => v.name);
 
-			villagersWithDuplicateNames.forEach(villagerName => {
-				cy.get('#search_bar').clear().type(villagerName);
-				cy.waitForSearchDebounce();
-				cy.get('#search_results').find('.result').should('have.length', 2);
+            villagersWithDuplicateNames.forEach(villagerName => {
+                cy.get('#search_bar').clear().type(villagerName);
+                cy.waitForSearchDebounce();
+                cy.get('#search_results').find('.result').should('have.length', 2);
 
-				cy.get('.result').should('all.contain', villagerName);
-			});
-		});
-	});
+                cy.get('.result').should('all.contain', villagerName);
+            });
+        });
+    });
 
-	it('should search and find all alligator species', () => {
-		cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
-			cy.get('#search_bar').clear().type('alligator');
-			cy.waitForSearchDebounce();
-			const amountOfAlligators = villagersArray.filter(v => v.species === 'Alligator').length;
+    it('should search and find all alligator species', () => {
+        cy.fixture('../../src/shared/repository/villagers.json').then(villagersArray => {
+            cy.get('#search_bar').clear().type('alligator');
+            cy.waitForSearchDebounce();
+            const amountOfAlligators = villagersArray.filter(v => v.species === 'Alligator').length;
 
-			cy.get('#search_results').find('.result').should('have.length', amountOfAlligators);
-		})
-	});
+            cy.get('#search_results').find('.result').should('have.length', amountOfAlligators);
+        })
+    });
 
-	it('should search and find all jock personality', () => {
-		cy.fixture('../../src/repository/villagers.json').then(villagersArray => {
-			cy.get('#search_bar').clear().type('jock');
-			cy.waitForSearchDebounce();
-			const amountOfJocks = villagersArray.filter(v => v.personality === 'Jock').length;
+    it('should search and find all jock personality', () => {
+        cy.fixture('../../src/shared/repository/villagers.json').then(villagersArray => {
+            cy.get('#search_bar').clear().type('jock');
+            cy.waitForSearchDebounce();
+            const amountOfJocks = villagersArray.filter(v => v.personality === 'Jock').length;
 
-			cy.get('#search_results').find('.result').should('have.length', amountOfJocks);
-		})
-	});
+            cy.get('#search_results').find('.result').should('have.length', amountOfJocks);
+        })
+    });
 });
