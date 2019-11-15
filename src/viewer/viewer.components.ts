@@ -1,10 +1,10 @@
-import DivisionBuilder from '../builders/DivisionBuilder';
-import ImageBuilder from '../builders/ImageBuilder';
-import ListElementBuilder from '../builders/ListElementBuilder';
-import ListItemBuilder from '../builders/ListItemBuilder';
-import Villager from '../models/villager.model';
-import VillagerList from '../models/villagerlist.model';
-import { aTextNode } from '../util';
+import DivisionBuilder from '../shared/builders/DivisionBuilder';
+import ImageBuilder from '../shared/builders/ImageBuilder';
+import ListElementBuilder from '../shared/builders/ListElementBuilder';
+import ListItemBuilder from '../shared/builders/ListItemBuilder';
+import Villager from '../shared/models/villager.model';
+import VillagerList from '../shared/models/villagerlist.model';
+import { aTextNode } from '../shared/util';
 
 export default class ViewerComponents {
 	public static aListElement(list: VillagerList): HTMLLIElement {

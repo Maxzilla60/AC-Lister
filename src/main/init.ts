@@ -1,5 +1,5 @@
+import VillagersRepository from '../shared/repository/villagers.repository';
 import Presenter from './presenter';
-import VillagersRepository from './repository/villagers.repository';
 
 const app = new Presenter();
 app.init();

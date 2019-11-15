@@ -1,13 +1,13 @@
-import ButtonBuilder from '../builders/ButtonBuilder';
-import DivisionBuilder from '../builders/DivisionBuilder';
-import { HTMLEvent } from '../builders/HTMLEvent.type';
-import ImageBuilder from '../builders/ImageBuilder';
-import InputFieldBuilder from '../builders/InputFieldBuilder';
-import ListElementBuilder from '../builders/ListElementBuilder';
-import ListItemBuilder from '../builders/ListItemBuilder';
-import Villager from '../models/villager.model';
-import VillagerList from '../models/villagerlist.model';
-import { aTextNode, getElement as $ } from '../util';
+import ButtonBuilder from '../../shared/builders/ButtonBuilder';
+import DivisionBuilder from '../../shared/builders/DivisionBuilder';
+import { HTMLEvent } from '../../shared/builders/HTMLEvent.type';
+import ImageBuilder from '../../shared/builders/ImageBuilder';
+import InputFieldBuilder from '../../shared/builders/InputFieldBuilder';
+import ListElementBuilder from '../../shared/builders/ListElementBuilder';
+import ListItemBuilder from '../../shared/builders/ListItemBuilder';
+import Villager from '../../shared/models/villager.model';
+import VillagerList from '../../shared/models/villagerlist.model';
+import { aTextNode, getElement as $ } from '../../shared/util';
 
 export default class ListsComponents {
 	public static aListElement(list: VillagerList, events: ListElementEvents): HTMLLIElement {

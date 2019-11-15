@@ -1,7 +1,7 @@
-import Villager from '../models/villager.model';
-import VillagerList from '../models/villagerlist.model';
-import AppStateService from '../state/state.service';
-import { getElement as $, replaceChildren } from '../util';
+import Villager from '../shared/models/villager.model';
+import VillagerList from '../shared/models/villagerlist.model';
+import AppStateService from '../shared/state/state.service';
+import { getElement as $, replaceChildren } from '../shared/util';
 import ViewerComponents from './viewer.components';
 import { saveAs } from 'file-saver';
 import html2canvas from 'html2canvas';

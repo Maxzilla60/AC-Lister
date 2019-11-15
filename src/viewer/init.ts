@@ -1,4 +1,4 @@
-import VillagersRepository from '../repository/villagers.repository';
+import VillagersRepository from '../shared/repository/villagers.repository';
 import Controller from './controller';
 
 const app = new Controller();

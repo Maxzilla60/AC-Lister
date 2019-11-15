@@ -32,7 +32,7 @@
 	<script>
 		if ("serviceWorker" in navigator) {
 			if (!navigator.serviceWorker.controller) {
-				navigator.serviceWorker.register("src/pwabuilder-sw.js", { scope: "./" });
+				navigator.serviceWorker.register("src/shared/pwabuilder-sw.js", { scope: "./" });
 			}
 		}
 	</script>
@@ -91,7 +91,7 @@
 	</main>
 </body>
 
-<script src="./src/init.ts" type="text/javascript" defer></script>
+<script src="./src/main/init.ts" type="text/javascript" defer></script>
 <link rel="stylesheet" type="text/css" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="./styles/LeckerliOneFont.css">
 

@@ -1,7 +1,7 @@
 import ProfileComponents from '../components/profile.components';
-import Villager from '../models/villager.model';
-import VillagerList from '../models/villagerlist.model';
-import { getElement as $, loadImage, replaceChildren } from '../util';
+import Villager from '../../shared/models/villager.model';
+import VillagerList from '../../shared/models/villagerlist.model';
+import { getElement as $, loadImage, replaceChildren } from '../../shared/util';
 import { Observable, Subject } from 'rxjs';
 
 export default class ProfileView {

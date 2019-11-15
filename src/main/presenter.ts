@@ -1,7 +1,7 @@
-import Villager from './models/villager.model';
-import VillagerList from './models/villagerlist.model';
-import VillagersRepository from './repository/villagers.repository';
-import AppStateService from './state/state.service';
+import Villager from '../shared/models/villager.model';
+import VillagerList from '../shared/models/villagerlist.model';
+import VillagersRepository from '../shared/repository/villagers.repository';
+import AppStateService from '../shared/state/state.service';
 import ListsView, { LoadProfilePayload } from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';

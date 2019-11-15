@@ -1,6 +1,6 @@
 import SearchComponents from '../components/search.components';
-import Villager from '../models/villager.model';
-import { getElement as $, loadImage, replaceChildren } from '../util';
+import Villager from '../../shared/models/villager.model';
+import { getElement as $, loadImage, replaceChildren } from '../../shared/util';
 import Hammer from 'hammerjs';
 import { fromEvent, merge, Observable, Subject } from 'rxjs';
 import { auditTime, distinctUntilChanged, map, pluck, tap } from 'rxjs/operators';
