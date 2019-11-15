@@ -10,7 +10,7 @@ import lozad from 'lozad';
 import { merge, Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 
-export default class Controller {
+export default class Presenter {
 	private state: AppStateService;
 	private searchView: SearchView;
 	private profileView: ProfileView;
