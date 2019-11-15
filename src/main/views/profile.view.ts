@@ -1,7 +1,7 @@
-import ProfileComponents from '../components/profile.components';
 import Villager from '../../shared/models/villager.model';
 import VillagerList from '../../shared/models/villagerlist.model';
 import { getElement as $, loadImage, replaceChildren } from '../../shared/util';
+import ProfileComponents from '../components/profile.components';
 import { Observable, Subject } from 'rxjs';
 
 export default class ProfileView {
@@ -60,7 +60,7 @@ export default class ProfileView {
 		this.currentLists = lists;
 		if (this.currentProfile) {
 			this.updateListSelectOptions();
-			this.updateSelectedList();
+			this.updateSelectedList(true);
 			this.updateAddRemoveVillagerButton();
 		}
 	}
@@ -118,10 +118,10 @@ export default class ProfileView {
 		replaceChildren(this.listSelectElement, fragment);
 	}
 
-	private updateSelectedList(): void {
+	private updateSelectedList(force: boolean = false): void {
 		if (this.currentListsAreEmpty()) {
 			this.currentSelectedList = undefined;
-		} else if (!this.currentSelectedList) {
+		} else if (force || !this.currentSelectedList) {
 			this.selectList(this.currentLists[0].id);
 		}
 	}
@@ -170,8 +170,7 @@ export default class ProfileView {
 	}
 
 	private villagerIsInList(villager: Villager, listId: string): boolean {
-		return this.getListById(listId)
-			&& !this.currentListsAreEmpty()
+		return !this.currentListsAreEmpty()
 			&& this.getListById(listId)
 				.members
 				.map(v => v.id)
