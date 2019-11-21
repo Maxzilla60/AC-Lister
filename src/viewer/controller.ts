@@ -47,7 +47,7 @@ export default class Controller {
 				saveAs(blob, 'AnimalCrossing-VillagerLists.png');
 				$('menu').style.display = '';
 			});
-		});
+		}).catch(e => $('menu').style.display = '');
 	}
 
 	private exportAsText(): void {
