@@ -10,7 +10,6 @@ import lozad from 'lozad';
 export default class Controller {
 	private lozadObserver: lozad.Observer;
 	private lists: VillagerList[];
-
 	private listsElement: HTMLUListElement;
 
 	constructor() {
@@ -19,11 +18,22 @@ export default class Controller {
 	}
 
 	public init(): void {
-		const state = new AppStateService();
-		this.lists = state.getLists();
+		this.initLists();
 		this.renderLists();
 		$('image_button').addEventListener('click', this.exportAsImage);
 		$('text_button').addEventListener('click', this.exportAsText.bind(this));
+	}
+
+	private initLists(): void {
+		const currentURL = new URL(window.location.href);
+		const sharedListsInUrl = currentURL.searchParams.get('lists');
+
+		if (sharedListsInUrl) {
+			this.lists = JSON.parse(decodeURIComponent(sharedListsInUrl));
+		} else {
+			const state = new AppStateService();
+			this.lists = state.getLists();
+		}
 	}
 
 	private renderLists(): void {
