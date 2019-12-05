@@ -94,6 +94,15 @@ export default class AppStateService {
 		this._lists = lists;
 	}
 
+	public parseAndSerializeJSONToLists(listsJSONString: string): VillagerList[] {
+		const parsedLists: VillagerList[] = JSON.parse(listsJSONString);
+		return parsedLists.map(list => ({
+			id: list.id,
+			title: list.title,
+			members: list.members.map(v => Villager.serialize(v)),
+		}));
+	}
+
 	private set _lists(newLists: VillagerList[]) {
 		localStorage.lists = JSON.stringify(newLists);
 	}
@@ -114,15 +123,6 @@ export default class AppStateService {
 			return this.initEmptyLists();
 		}
 		return this.parseAndSerializeJSONToLists(localStorage.lists);
-	}
-
-	private parseAndSerializeJSONToLists(listsJSONString: string): VillagerList[] {
-		const parsedLists: VillagerList[] = JSON.parse(listsJSONString);
-		return parsedLists.map(list => ({
-			id: list.id,
-			title: list.title,
-			members: list.members.map(v => Villager.serialize(v)),
-		}));
 	}
 
 	private initEmptyLists(): VillagerList[] {

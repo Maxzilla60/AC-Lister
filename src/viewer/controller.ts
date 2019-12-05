@@ -22,16 +22,22 @@ export default class Controller {
 		this.renderLists();
 		$('image_button').addEventListener('click', this.exportAsImage);
 		$('text_button').addEventListener('click', this.exportAsText.bind(this));
+		$('share_button').addEventListener('click', this.shareLink.bind(this));
+	}
+
+	private shareLink(): void {
+		prompt('Copy the link and share!',
+			`http://${window.location.host}/viewer/index.html?lists=${encodeURIComponent(JSON.stringify(this.lists))}`);
 	}
 
 	private initLists(): void {
+		const state = new AppStateService();
 		const currentURL = new URL(window.location.href);
 		const sharedListsInUrl = currentURL.searchParams.get('lists');
 
 		if (sharedListsInUrl) {
-			this.lists = JSON.parse(decodeURIComponent(sharedListsInUrl));
+			this.lists = state.parseAndSerializeJSONToLists(decodeURIComponent(sharedListsInUrl));
 		} else {
-			const state = new AppStateService();
 			this.lists = state.getLists();
 		}
 	}
