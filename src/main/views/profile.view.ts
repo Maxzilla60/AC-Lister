@@ -9,10 +9,10 @@ export default class ProfileView {
 	private currentSelectedList: string;
 	private currentLists: VillagerList[];
 
-	private villagerInformationElement: HTMLElement;
-	private profileImageElement: HTMLImageElement;
-	private listSelectElement: HTMLSelectElement;
-	private addRemoveButton: HTMLButtonElement;
+	private readonly villagerInformationElement: HTMLElement;
+	private readonly profileImageElement: HTMLImageElement;
+	private readonly listSelectElement: HTMLSelectElement;
+	private readonly addRemoveButton: HTMLButtonElement;
 
 	private readonly noProfileImageSrc: string;
 	private readonly preloadedLoadingGifSrc: string = '/loading.gif';
@@ -118,7 +118,7 @@ export default class ProfileView {
 		replaceChildren(this.listSelectElement, fragment);
 	}
 
-	private updateSelectedList(force: boolean = false): void {
+	private updateSelectedList(force = false): void {
 		if (this.currentListsAreEmpty()) {
 			this.currentSelectedList = undefined;
 		} else if (force || !this.currentSelectedList) {

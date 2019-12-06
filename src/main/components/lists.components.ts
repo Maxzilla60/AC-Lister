@@ -20,7 +20,7 @@ export default class ListsComponents {
 			.build();
 	}
 
-	public static aListHeaderElement(list: VillagerList, events: ListElementEvents, renameEnabled: boolean = false): HTMLDivElement {
+	public static aListHeaderElement(list: VillagerList, events: ListElementEvents, renameEnabled = false): HTMLDivElement {
 		let headerChildren: HTMLElement[];
 		if (renameEnabled) {
 			headerChildren = [

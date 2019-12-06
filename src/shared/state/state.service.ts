@@ -9,7 +9,7 @@ import nanoid from 'nanoid';
 
 export default class AppStateService {
 	private _currentProfile = '';
-	private validator = new Ajv();
+	private readonly validator = new Ajv();
 
 	public get currentLoadedProfileId(): string {
 		return this._currentProfile;
@@ -90,7 +90,7 @@ export default class AppStateService {
 		return this._currentProfile !== '';
 	}
 
-	public overrideLists(lists: any): void {
+	public overrideLists(lists: VillagerList[]): void {
 		this._lists = lists;
 	}
 
@@ -108,7 +108,7 @@ export default class AppStateService {
 	}
 
 	private get _lists(): VillagerList[] {
-		let parsedLists: any;
+		let parsedLists;
 		try {
 			parsedLists = JSON.parse(localStorage.lists);
 		} catch {
@@ -130,11 +130,11 @@ export default class AppStateService {
 		return [];
 	}
 
-	private isVersion1(lists: any): boolean {
+	private isVersion1(lists): boolean {
 		return this.validator.validate(version1Schema, lists) as boolean;
 	}
 
-	private isVersion2(lists: any): boolean {
+	private isVersion2(lists): boolean {
 		return this.validator.validate(version2Schema, lists) as boolean;
 	}
 

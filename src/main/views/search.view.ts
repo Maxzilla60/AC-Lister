@@ -1,6 +1,6 @@
-import SearchComponents from '../components/search.components';
 import Villager from '../../shared/models/villager.model';
 import { getElement as $, loadImage, replaceChildren } from '../../shared/util';
+import SearchComponents from '../components/search.components';
 import Hammer from 'hammerjs';
 import { fromEvent, merge, Observable, Subject } from 'rxjs';
 import { auditTime, distinctUntilChanged, map, pluck, tap } from 'rxjs/operators';
@@ -10,14 +10,14 @@ export default class SearchView {
 	private readonly searchResultClickedSubject = new Subject<Villager>();
 	private _searchPanelIsOpen = false;
 
-	private searchPanelElement: HTMLElement;
-	private searchResultsElement: HTMLDivElement;
-	private searchBarElement: HTMLInputElement;
+	private readonly searchPanelElement: HTMLElement;
+	private readonly searchResultsElement: HTMLDivElement;
+	private readonly searchBarElement: HTMLInputElement;
 	private hammer: HammerManager;
 
 	constructor() {
 		this.preloadImages();
-		this.searchPanelElement = $('search_container') as HTMLElement;
+		this.searchPanelElement = $('search_container');
 		this.searchResultsElement = $('search_results') as HTMLDivElement;
 		this.searchBarElement = $('search_bar') as HTMLInputElement;
 		this.setupSwipeGesture();

@@ -7,7 +7,7 @@ export default class ButtonBuilder extends HTMLElementBuilder<HTMLButtonElement>
 		this.element.addEventListener('click', onclick);
 	}
 
-	public asFontAwesome(iconName: string, brandIcon: boolean = false): ButtonBuilder {
+	public asFontAwesome(iconName: string, brandIcon = false): ButtonBuilder {
 		this.withClassNames(
 			brandIcon ? 'fab' : 'fa',
 			iconName,
@@ -16,7 +16,7 @@ export default class ButtonBuilder extends HTMLElementBuilder<HTMLButtonElement>
 		return this;
 	}
 
-	public isDisabled(disabled: boolean = true): ButtonBuilder {
+	public isDisabled(disabled = true): ButtonBuilder {
 		this.element.disabled = disabled;
 		return this;
 	}

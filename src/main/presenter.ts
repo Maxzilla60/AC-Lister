@@ -11,11 +11,11 @@ import { merge, Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 
 export default class Presenter {
-	private state: AppStateService;
-	private searchView: SearchView;
-	private profileView: ProfileView;
-	private listsView: ListsView;
-	private lozadObserver: lozad.Observer;
+	private readonly state: AppStateService;
+	private readonly searchView: SearchView;
+	private readonly profileView: ProfileView;
+	private readonly listsView: ListsView;
+	private readonly lozadObserver: lozad.Observer;
 
 	constructor() {
 		this.lozadObserver = lozad();
@@ -165,7 +165,7 @@ export default class Presenter {
 	private subscribeToLoadProfile(): void {
 		const mappedSearchResultClicked$: Observable<LoadProfilePayload> = this.searchView.searchResultClicked$
 			.pipe(map((villager: Villager) => {
-				return ({ villagerId: villager.id, listId: null });
+				return { villagerId: villager.id, listId: null };
 			}));
 		const distinctPayloads = distinctUntilChanged((x: LoadProfilePayload, y: LoadProfilePayload) => {
 			return x.villagerId === y.villagerId && x.listId === y.listId;

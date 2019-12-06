@@ -8,9 +8,9 @@ import html2canvas from 'html2canvas';
 import lozad from 'lozad';
 
 export default class Controller {
-	private lozadObserver: lozad.Observer;
 	private lists: VillagerList[];
-	private listsElement: HTMLUListElement;
+	private readonly listsElement: HTMLUListElement;
+	private readonly lozadObserver: lozad.Observer;
 
 	constructor() {
 		this.listsElement = $('lists') as HTMLUListElement;
