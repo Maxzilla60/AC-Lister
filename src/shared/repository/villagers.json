@@ -5662,5 +5662,101 @@
 		"store": "https://www.redbubble.com/people/purplepixel/works/15977970-zucker-animal-crossing",
 		"hasProfileImage": true,
 		"hasIconImage": true
+	},
+	{
+		"name": "Cyd",
+		"id": "Cyd",
+		"species": "Elephant",
+		"personality": "Cranky",
+		"coffee": "",
+		"birthday": "June 9",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Cyd",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
+		"name": "Audie",
+		"id": "Audie",
+		"species": "Wolf",
+		"personality": "Peppy",
+		"coffee": "",
+		"birthday": "August 31",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Audie",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
+		"name": "Reneigh",
+		"id": "Reneigh",
+		"species": "Horse",
+		"personality": "Sisterly",
+		"coffee": "",
+		"birthday": "June 4",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Reneigh",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
+		"name": "Judy",
+		"id": "Judy",
+		"species": "Cub",
+		"personality": "Snooty",
+		"coffee": "",
+		"birthday": "March 10",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Judy",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
+		"name": "Dom",
+		"id": "Dom",
+		"species": "Sheep",
+		"personality": "Jock",
+		"coffee": "",
+		"birthday": "March 18",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Dom",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
+		"name": "Sherb",
+		"id": "Sherb",
+		"species": "Goat",
+		"personality": "Lazy",
+		"coffee": "",
+		"birthday": "January 18",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Sherb",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
+		"name": "Raymond",
+		"id": "Raymond",
+		"species": "Cat",
+		"personality": "Smug",
+		"coffee": "",
+		"birthday": "October 1",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Raymond",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
+		"name": "Megan",
+		"id": "Megan",
+		"species": "Bear",
+		"personality": "Normal",
+		"coffee": "",
+		"birthday": "March 13",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Megan",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	}
 ]
