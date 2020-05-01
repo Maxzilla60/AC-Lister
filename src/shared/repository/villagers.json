@@ -264,6 +264,18 @@
 		"hasIconImage": true
 	},
 	{
+		"name": "Audie",
+		"id": "Audie",
+		"species": "Wolf",
+		"personality": "Peppy",
+		"coffee": "",
+		"birthday": "August 31",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Audie",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Aurora",
 		"id": "Aurora",
 		"species": "Penguin",
@@ -1452,6 +1464,18 @@
 		"hasIconImage": true
 	},
 	{
+		"name": "Cyd",
+		"id": "Cyd",
+		"species": "Elephant",
+		"personality": "Cranky",
+		"coffee": "",
+		"birthday": "June 9",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Cyd",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Cyrano",
 		"id": "Cyrano",
 		"species": "Anteater",
@@ -1594,6 +1618,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/works/21213601-doc-animal-crossing",
 		"hasProfileImage": true,
 		"hasIconImage": true
+	},
+	{
+		"name": "Dom",
+		"id": "Dom",
+		"species": "Sheep",
+		"personality": "Jock",
+		"coffee": "",
+		"birthday": "March 18",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Dom",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Dora",
@@ -2700,6 +2736,18 @@
 		"hasIconImage": true
 	},
 	{
+		"name": "Judy",
+		"id": "Judy",
+		"species": "Cub",
+		"personality": "Snooty",
+		"coffee": "",
+		"birthday": "March 10",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Judy",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Julia",
 		"id": "Julia",
 		"species": "Ostrich",
@@ -3348,6 +3396,18 @@
 		"hasIconImage": false
 	},
 	{
+		"name": "Megan",
+		"id": "Megan",
+		"species": "Bear",
+		"personality": "Normal",
+		"coffee": "",
+		"birthday": "March 13",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Megan",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Megumi",
 		"id": "Megumi",
 		"species": "Dog",
@@ -3672,18 +3732,6 @@
 		"hasIconImage": true
 	},
 	{
-		"name": "Octavian",
-		"id": "Octavian",
-		"species": "Octopus",
-		"personality": "Cranky",
-		"coffee": "Blend - None - None",
-		"birthday": "September 20",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Octavian",
-		"store": "https://www.redbubble.com/people/purplepixel/works/15992688-octavian-animal-crossing",
-		"hasProfileImage": true,
-		"hasIconImage": true
-	},
-	{
 		"name": "O'Hare",
 		"id": "OHare",
 		"species": "Rabbit",
@@ -3692,6 +3740,18 @@
 		"birthday": "July 24",
 		"wiki": "http://animalcrossing.wikia.com/wiki/O%27Hare",
 		"store": "https://www.redbubble.com/people/purplepixel/works/21245338-ohare-animal-crossing",
+		"hasProfileImage": true,
+		"hasIconImage": true
+	},
+	{
+		"name": "Octavian",
+		"id": "Octavian",
+		"species": "Octopus",
+		"personality": "Cranky",
+		"coffee": "Blend - None - None",
+		"birthday": "September 20",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Octavian",
+		"store": "https://www.redbubble.com/people/purplepixel/works/15992688-octavian-animal-crossing",
 		"hasProfileImage": true,
 		"hasIconImage": true
 	},
@@ -4344,6 +4404,18 @@
 		"hasIconImage": true
 	},
 	{
+		"name": "Raymond",
+		"id": "Raymond",
+		"species": "Cat",
+		"personality": "Smug",
+		"coffee": "",
+		"birthday": "October 1",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Raymond",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Renée",
 		"id": "Renee",
 		"species": "Rhino",
@@ -4354,6 +4426,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/works/18109500-ren-e-animal-crossing",
 		"hasProfileImage": true,
 		"hasIconImage": true
+	},
+	{
+		"name": "Reneigh",
+		"id": "Reneigh",
+		"species": "Horse",
+		"personality": "Sisterly",
+		"coffee": "",
+		"birthday": "June 4",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Reneigh",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Rex",
@@ -4738,6 +4822,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/",
 		"hasProfileImage": false,
 		"hasIconImage": true
+	},
+	{
+		"name": "Sherb",
+		"id": "Sherb",
+		"species": "Goat",
+		"personality": "Lazy",
+		"coffee": "",
+		"birthday": "January 18",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Sherb",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Shinabiru",
@@ -5662,101 +5758,5 @@
 		"store": "https://www.redbubble.com/people/purplepixel/works/15977970-zucker-animal-crossing",
 		"hasProfileImage": true,
 		"hasIconImage": true
-	},
-	{
-		"name": "Cyd",
-		"id": "Cyd",
-		"species": "Elephant",
-		"personality": "Cranky",
-		"coffee": "",
-		"birthday": "June 9",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Cyd",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": false
-	},
-	{
-		"name": "Audie",
-		"id": "Audie",
-		"species": "Wolf",
-		"personality": "Peppy",
-		"coffee": "",
-		"birthday": "August 31",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Audie",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": false
-	},
-	{
-		"name": "Reneigh",
-		"id": "Reneigh",
-		"species": "Horse",
-		"personality": "Sisterly",
-		"coffee": "",
-		"birthday": "June 4",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Reneigh",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": false
-	},
-	{
-		"name": "Judy",
-		"id": "Judy",
-		"species": "Cub",
-		"personality": "Snooty",
-		"coffee": "",
-		"birthday": "March 10",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Judy",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": false
-	},
-	{
-		"name": "Dom",
-		"id": "Dom",
-		"species": "Sheep",
-		"personality": "Jock",
-		"coffee": "",
-		"birthday": "March 18",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Dom",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": false
-	},
-	{
-		"name": "Sherb",
-		"id": "Sherb",
-		"species": "Goat",
-		"personality": "Lazy",
-		"coffee": "",
-		"birthday": "January 18",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Sherb",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": false
-	},
-	{
-		"name": "Raymond",
-		"id": "Raymond",
-		"species": "Cat",
-		"personality": "Smug",
-		"coffee": "",
-		"birthday": "October 1",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Raymond",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": false
-	},
-	{
-		"name": "Megan",
-		"id": "Megan",
-		"species": "Bear",
-		"personality": "Normal",
-		"coffee": "",
-		"birthday": "March 13",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Megan",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": false
 	}
 ]
