@@ -1,7 +1,7 @@
 import VillagersRepository from '../shared/repository/villagers.repository';
-import Controller from './controller';
+import Presenter from './presenter';
 
-const app = new Controller();
+const app = new Presenter();
 app.init();
 // tslint:disable-next-line: no-string-literal
 window['percentageOfVillagersWithProfileImage'] = VillagersRepository.percentageOfVillagersWithProfileImage;

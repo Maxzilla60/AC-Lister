@@ -7,7 +7,7 @@ import { saveAs } from 'file-saver';
 import html2canvas from 'html2canvas';
 import lozad from 'lozad';
 
-export default class Controller {
+export default class Presenter {
 	private lists: VillagerList[];
 	private readonly listsElement: HTMLUListElement;
 	private readonly lozadObserver: lozad.Observer;
@@ -74,12 +74,13 @@ export default class Controller {
 
 		function mapListsToText(lists: VillagerList[]): string {
 			return lists.map(list =>
-				`${list.title}:\n${mapListMembersToText(list.members)}\n`
+				`${list.title}:\n${mapListMembersToText(list.members)}\n`,
 			).join('\n');
 		}
+
 		function mapListMembersToText(members: Villager[]): string {
 			return members.map(member =>
-				`\t- ${member.name}`
+				`\t- ${member.name}`,
 			).join('\n');
 		}
 	}
