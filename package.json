@@ -37,8 +37,9 @@
 		"@types/lozad": "^1.9.0",
 		"@types/nanoid": "^2.1.0",
 		"@types/node": "^12.12.14",
-		"parcel-plugin-static-files-copy": "^2.2.1",
+		"cypress": "^4.6.0",
 		"parcel": "^1.12.4",
+		"parcel-plugin-static-files-copy": "^2.2.1",
 		"tslint": "^5.20.1",
 		"typescript": "^3.7.3"
 	},
