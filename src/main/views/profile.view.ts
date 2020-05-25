@@ -60,7 +60,7 @@ export default class ProfileView {
 		this.currentLists = lists;
 		if (this.currentProfile) {
 			this.updateListSelectOptions();
-			this.updateSelectedList(true);
+			this.updateSelectedList();
 			this.updateAddRemoveVillagerButton();
 		}
 	}
@@ -118,10 +118,10 @@ export default class ProfileView {
 		replaceChildren(this.listSelectElement, fragment);
 	}
 
-	private updateSelectedList(force = false): void {
+	private updateSelectedList(): void {
 		if (this.currentListsAreEmpty()) {
 			this.currentSelectedList = undefined;
-		} else if (force || !this.currentSelectedList) {
+		} else if (!this.currentSelectedList) {
 			this.selectList(this.currentLists[0].id);
 		}
 	}

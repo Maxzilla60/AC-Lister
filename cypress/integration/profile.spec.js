@@ -79,9 +79,11 @@ describe('Profile Section', () => {
 
             cy.get('#list_select').should('have.value', firstListID);
             cy.get('#add_remove_button').click();
+			cy.get('#list_select').should('have.value', firstListID);
 
             cy.get('#list_select').select(secondListID);
-            cy.get('#add_remove_button').click();
+			cy.get('#add_remove_button').click();
+			cy.get('#list_select').should('have.value', secondListID);
 
             cy.contains(firstListTitle)
                 .parent().siblings()
