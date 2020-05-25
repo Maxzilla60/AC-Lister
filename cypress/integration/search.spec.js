@@ -33,17 +33,27 @@ describe('Search Field', () => {
             cy.waitForSearchDebounce();
             const amountOfAlligators = villagersArray.filter(v => v.species === 'Alligator').length;
 
-            cy.get('#search_results').find('.result').should('have.length', amountOfAlligators);
-        })
-    });
+			cy.get('#search_results').find('.result').should('have.length', amountOfAlligators);
+		})
+	});
 
-    it('should search and find all jock personality', () => {
-        cy.fixture('../../src/shared/repository/villagers.json').then(villagersArray => {
-            cy.get('#search_bar').clear().type('jock');
-            cy.waitForSearchDebounce();
-            const amountOfJocks = villagersArray.filter(v => v.personality === 'Jock').length;
+	it('should search and find all jock personality', () => {
+		cy.fixture('../../src/shared/repository/villagers.json').then(villagersArray => {
+			cy.get('#search_bar').clear().type('jock');
+			cy.waitForSearchDebounce();
+			const amountOfJocks = villagersArray.filter(v => v.personality === 'Jock').length;
 
-            cy.get('#search_results').find('.result').should('have.length', amountOfJocks);
-        })
-    });
+			cy.get('#search_results').find('.result').should('have.length', amountOfJocks);
+		})
+	});
+
+	it('should search and find all sisterly personality', () => {
+		cy.fixture('../../src/shared/repository/villagers.json').then(villagersArray => {
+			cy.get('#search_bar').clear().type('sisterly');
+			cy.waitForSearchDebounce();
+			const amountOfJocks = villagersArray.filter(v => v.personality === 'Sisterly').length;
+
+			cy.get('#search_results').find('.result').should('have.length', amountOfJocks);
+		})
+	});
 });
