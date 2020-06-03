@@ -1,0 +1,3 @@
+[[plugins]]
+  # local Cypress plugin will test our site after it is built
+  package = "netlify-plugin-cypress"
