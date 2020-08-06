@@ -120,6 +120,25 @@ export default class Presenter {
 		reader.readAsText(listsFile);
 	}
 
+	private exportAsText(): void {
+		const content: string = mapListsToText(this.state.getLists()) + '\nMade with Animal Crossing Villager Lister\n(https://ac-lister.netlify.com/)';
+		const contentAsBlob = new Blob([content], { type: 'text/plain;charset-utf-8' });
+
+		saveAs(contentAsBlob, 'AnimalCrossing-VillagerLists.txt');
+
+		function mapListsToText(lists: VillagerList[]): string {
+			return lists.map(list =>
+				`${list.title}:\n${mapListMembersToText(list.members)}\n`,
+			).join('\n');
+		}
+
+		function mapListMembersToText(members: Villager[]): string {
+			return members.map(member =>
+				`\t- ${member.name}`,
+			).join('\n');
+		}
+	}
+
 	private subscribeToSearchView(): void {
 		this.searchView.searchQueryUpdated$.subscribe((query: string) => {
 			this.updateSearch(query);
@@ -159,6 +178,9 @@ export default class Presenter {
 		});
 		this.listsView.openSearchPanelClicked$.subscribe(() => {
 			this.openSearchPanel();
+		});
+		this.listsView.exportTextButtonClicked$.subscribe(() => {
+			this.exportAsText();
 		});
 	}
 

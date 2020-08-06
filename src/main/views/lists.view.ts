@@ -6,7 +6,10 @@ import { ListElementEvents } from './../components/lists.components';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
-export interface LoadProfilePayload { villagerId: string; listId: string; }
+export interface LoadProfilePayload {
+	villagerId: string;
+	listId: string;
+}
 
 export default class ListsView {
 	public newListClicked$: Observable<void>;
@@ -14,6 +17,7 @@ export default class ListsView {
 	public importListsFileSelected$: Observable<File>;
 	public clearAllListsButtonClicked$: Observable<void>;
 	public openSearchPanelClicked$: Observable<void>;
+	public exportTextButtonClicked$: Observable<void>;
 	private readonly deleteListButtonClickedSubject = new Subject<VillagerList>();
 	private readonly applyTitleToListButtonClickedSubject = new Subject<{ listId: string, newTitle: string }>();
 	private readonly listTitleClickedSubject = new Subject<VillagerList>();
@@ -26,6 +30,7 @@ export default class ListsView {
 	private readonly exportListsButton: HTMLButtonElement;
 	private readonly clearListsButton: HTMLButtonElement;
 	private readonly newListButton: HTMLButtonElement;
+	private readonly exportTextButton: HTMLButtonElement;
 
 	constructor() {
 		this.listsElement = $('lists');
@@ -33,6 +38,7 @@ export default class ListsView {
 		this.newListButton = $('newlist_button') as HTMLButtonElement;
 		this.exportListsButton = $('exportlists_button') as HTMLButtonElement;
 		this.clearListsButton = $('clearlists_button') as HTMLButtonElement;
+		this.exportTextButton = $('exporttext_button') as HTMLButtonElement;
 		this.bindEvents();
 	}
 
@@ -139,6 +145,9 @@ export default class ListsView {
 			filter(() => confirm('Are you sure you want to clear all lists?')),
 			mapToVoid(),
 		);
+		this.exportTextButtonClicked$ = fromEvent(this.exportTextButton, 'click').pipe(
+			mapToVoid(),
+		);
 		this.openSearchPanelClicked$ = fromEvent($('open_searchpanel_button') as HTMLButtonElement, 'click').pipe(
 			mapToVoid(),
 		);
@@ -157,10 +166,8 @@ export default class ListsView {
 
 	private updateListEditingButtons(): void {
 		this.exportListsButton.disabled = this.currentListsAreEmpty;
-		this.exportListsButton.className = 'clickable fa fa-upload';
-
 		this.clearListsButton.disabled = this.currentListsAreEmpty;
-		this.clearListsButton.className = 'clickable fa fa-times';
+		this.exportTextButton.disabled = this.currentListsAreEmpty;
 	}
 
 	private displayRenamingTitleForList(list: VillagerList): void {
@@ -201,6 +208,7 @@ export default class ListsView {
 			this.fileInputElement.click();
 		}
 	}
+
 	// #endregion
 
 	// #region Components
@@ -230,5 +238,6 @@ export default class ListsView {
 	private aNoListInfoElement(): Node {
 		return ListsComponents.aNoListInfoElement(() => { this.newListButton.click(); });
 	}
+
 	// #endregion
 }
