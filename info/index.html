@@ -3,11 +3,11 @@
 <html lang="en">
 
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Animal Crossing ★ Villager Lister - Info</title>
 	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
-	<script src="https://use.fontawesome.com/e0304574ea.js" type="text/javascript"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
-	<script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.2/dist/showdown.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="./styles.css">
 	<link rel="manifest" href="../manifest.webmanifest">
 	<meta name="msapplication-config" content="../public/favicons/browserconfig.xml">
 	<link rel="apple-touch-icon" sizes="180x180" href="../public/favicons/apple-touch-icon.png">
@@ -22,39 +22,30 @@
 </head>
 
 <body>
-	<header>
-		Animal Crossing<i style="color: brown" class="fa fa-star" aria-hidden="true"></i>Villager Lister
-	</header>
-
-	<div class="viewer">
-		<div class="readme_area">
-			<div class="menu">
-				<i onclick="window.location.href = '/AC-Lister/';" title="Back" class="clickable fa fa-arrow-left" aria-hidden="true"></i>
-			</div>
-			<div id="readme">
-			</div>
+<header>
+	<h1>Animal Crossing <i class="fa fa-star" aria-hidden="true"></i> Villager Lister</h1>
+	<small>🚧 This is version 2.0 and currently WIP 🚧</small>
+</header>
+<main class="readme">
+	<section id="readme_container">
+		<div class="menu">
+			<a href="/" class="clickable fa fa-arrow-left" aria-hidden="true"></a>
 		</div>
-	</div>
+	</section>
+</main>
 </body>
 
+<script src="../src/info/init.ts" type="text/javascript" defer></script>
+<link rel="stylesheet" type="text/css" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="../styles/LeckerliOneFont.css">
-<script>
-	// Load README:
-	$.get("../README.md", function (response) {
-		var converter = new showdown.Converter();
-		var html = converter.makeHtml(response);
-		$("#readme").html(html);
-	});
-</script>
-<footer hidden>
-	<a title="Info Page" href="info"><i class="clickable fa fa-question" aria-hidden="true"></i></a><a title="GitHub Repo" target="_blank" rel="noopener" href="https://github.com/Maxzilla60/ac-lister"><i class="clickable fa fa-github" aria-hidden="true"></i></a><a title="Tumblr" target="_blank" rel="noopener" href="https://hungrymaxzilla.tumblr.com/aclister"><i class="clickable fa fa-tumblr" aria-hidden="true"></i></a><a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/hungrymaxzilla"><i class="clickable fa fa-twitter" aria-hidden="true"></i></a><a title="Artist" target="_blank" rel="noopener" href="https://purple-pixel.tumblr.com/"><i class="clickable fa fa-paint-brush" aria-hidden="true"></i></a>
+
+<h2>Footer</h2>
+<footer>
+	<i class="fa fa-question" aria-hidden="true"></i>
+	<a title="GitHub Repo" target="_blank" rel="noopener" href="https://github.com/Maxzilla60/ac-lister"><i class="clickable fab fa-github" aria-hidden="true"></i></a>
+	<a title="Tumblr" target="_blank" rel="noopener" href="https://hungrymaxzilla.tumblr.com/aclister"><i class="clickable fab fa-tumblr" aria-hidden="true"></i></a>
+	<a title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/hungrymaxzilla"><i class="clickable fab fa-twitter" aria-hidden="true"></i></a>
+	<a title="Artist" target="_blank" rel="noopener" href="https://purple-pixel.tumblr.com/"><i class="clickable fa fa-paint-brush" aria-hidden="true"></i></a>
 </footer>
-<script>
-	// Render checkboxes:
-	setTimeout(function () {
-		document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[ \]/g, "<input type=\"checkbox\" disabled>");
-		document.getElementById("readme").innerHTML = document.getElementById("readme").innerHTML.replace(/\[x\]/g, "<input type=\"checkbox\" checked disabled>");
-	}, 100);
-</script>
 
 </html>

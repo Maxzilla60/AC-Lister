@@ -1,0 +1,27 @@
+main.readme {
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "lists";
+}
+
+#readme_container > article h1 {
+	display: none;
+}
+
+#readme_container > article h2 {
+	display: initial;
+	font-family: 'Leckerli One', cursive;
+	font-size: 28px;
+	color: brown;
+	font-weight: initial;
+	margin: 0;
+}
+
+#readme_container {
+	padding: 0 1em 1em;
+	background-color: floralwhite;
+	border: solid orange;
+	overflow-y: auto;
+	border-radius: 8px;
+	position: relative;
+}
