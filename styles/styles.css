@@ -21,25 +21,39 @@ body {
 }
 
 main {
+	display: -ms-grid;
 	display: grid;
 	height: 80%;
+	-ms-grid-columns: 25% 5px 1fr 5px 1fr;
 	grid-template-columns: 25% 1fr 1fr;
+	-ms-grid-rows: 1fr 5px 1fr 5px 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-gap: 5px;
 	grid-template-areas: "search lists lists" "search lists lists" "search profile profile";
+	-o-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 	-webkit-transition-duration: 0.2s;
 }
 
 #search_container {
+	-ms-grid-row: 1;
+	-ms-grid-row-span: 5;
+	-ms-grid-column: 1;
 	grid-area: search;
 }
 
 #main_container {
+	-ms-grid-row: 1;
+	-ms-grid-row-span: 3;
+	-ms-grid-column: 3;
+	-ms-grid-column-span: 3;
 	grid-area: lists;
 }
 
 #profile_container {
+	-ms-grid-row: 5;
+	-ms-grid-column: 3;
+	-ms-grid-column-span: 3;
 	grid-area: profile;
 }
 
@@ -96,8 +110,8 @@ img {
 .clickable:hover, .clickable:focus {
 	background-color: orange;
 	bottom: 1px;
-	-webkit-box-shadow: 0px 1px 5px 0px rgba(165, 42, 42, 0.3);
-	box-shadow: 0px 1px 5px 0px rgba(165, 42, 42, 0.3);
+	-webkit-box-shadow: 0 1px 5px 0 rgba(165, 42, 42, 0.3);
+	box-shadow: 0 1px 5px 0 rgba(165, 42, 42, 0.3);
 	color: white;
 	cursor: pointer;
 	position: relative;
@@ -238,6 +252,9 @@ search {
 	margin: 5px;
 	float: left;
 	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-pixelated;
 	image-rendering: pixelated;
 }
 
@@ -313,12 +330,19 @@ search {
 	border-radius: 50%;
 	height: 40px;
 	width: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
 .member_button > img {
 	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-pixelated;
 	image-rendering: pixelated;
 }
 
@@ -437,6 +461,7 @@ select, option {
 
 #profile_image {
 	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
 	align-self: center;
 	border-radius: 27px;
 	border: solid orange;
@@ -452,7 +477,11 @@ select, option {
 }
 
 footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -479,19 +508,27 @@ footer > a > i:hover {
 
 	#search_container.open {
 		-webkit-transform: translateX(240px);
+		-ms-transform: translateX(240px);
 		transform: translateX(240px);
-		-webkit-box-shadow: -7px 0px 20px 0px brown;
-		box-shadow: -7px 0px 20px 0px brown;
+		-webkit-box-shadow: -7px 0 20px 0 brown;
+		box-shadow: -7px 0 20px 0 brown;
 	}
 
 	main {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: 1fr;
 		grid-template-columns: 1fr;
+		-ms-grid-rows: 1fr 5px 1fr 5px 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-areas: "lists" "lists" "profile";
 	}
 
 	#main_container {
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 3;
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 3;
 		grid-area: lists;
 	}
 
@@ -505,7 +542,26 @@ footer > a > i:hover {
 	}
 
 	#profile_container {
+		-ms-grid-row: 5;
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 3;
 		grid-area: profile;
+	}
+
+	@media only screen and (max-width: 730px) {
+
+		#main_container {
+			-ms-grid-row: 1;
+			-ms-grid-row-span: 3;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 1;
+		}
+
+		#profile_container {
+			-ms-grid-row: 5;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 1;
+		}
 	}
 
 	#search_container {
@@ -516,6 +572,7 @@ footer > a > i:hover {
 		left: -240px;
 		-webkit-transition: -webkit-transform .3s ease-in-out;
 		transition: -webkit-transform .3s ease-in-out;
+		-o-transition: transform .3s ease-in-out;
 		transition: transform .3s ease-in-out;
 		transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 		z-index: 2;
@@ -551,6 +608,19 @@ footer > a > i:hover {
 
 	#villager_information:empty {
 		height: 25vw;
+	}
+
+	#main_container {
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 3;
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+	}
+
+	#profile_container {
+		-ms-grid-row: 5;
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
 	}
 }
 
