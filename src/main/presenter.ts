@@ -9,6 +9,7 @@ import { saveAs } from 'file-saver';
 import lozad from 'lozad';
 import { merge, Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
+import Bowser from 'bowser';
 
 export default class Presenter {
 	private readonly state: AppStateService;
@@ -34,6 +35,14 @@ export default class Presenter {
 		this.profileView.init(this.state.getLists());
 		this.searchView.init(VillagersRepository.getAllVillagers());
 		this.observeLazyLoadedImages();
+		this.checkSafariWarning();
+	}
+
+	private checkSafariWarning(): void {
+		const browserParser = Bowser.getParser(window.navigator.userAgent);
+		if (browserParser.isBrowser('safari')) {
+			alert('It seems like you\'re using Safari.\nJust a little warning; this website has not been tested well for this browser.');
+		}
 	}
 
 	private updateSearch(query: string): void {
