@@ -5,7 +5,7 @@ import VillagerList from '../models/villagerlist.model';
 import VillagerListV1 from '../models/villagerlist.model.v1.js';
 import VillagersRepository from '../repository/villagers.repository';
 import Ajv from 'ajv';
-import nanoid from 'nanoid';
+import { nanoid } from 'nanoid';
 
 export default class AppStateService {
 	private _currentProfile = '';
