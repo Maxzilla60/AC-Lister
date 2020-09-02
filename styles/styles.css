@@ -451,6 +451,26 @@ select, option {
 	object-fit: none;
 }
 
+footer {
+	display: flex;
+	justify-content: center;
+}
+
+footer > a {
+	padding: 10px;
+	margin-left: 6px;
+	margin-right: 6px;
+	text-align: center;
+}
+
+footer > a > i {
+	font-size: xx-large !important;
+}
+
+footer > a > i:hover {
+	color: floralwhite;
+}
+
 @media only screen and (max-width: 730px) {
 	#close_searchpanel_button,
 	#open_searchpanel_button {
