@@ -31,17 +31,50 @@
 	"twoLists": [
 		{
 			"title": "My List",
-			"id": "a2a2383f-99fa-4546-a809-673b20017b13",
+			"id": "Uq8VlkaYGJGhlB2YJt7pY",
 			"members": [
-				"Scoot"
+				{
+					"name": "Scoot",
+					"id": "Scoot",
+					"species": "Duck",
+					"personality": "Jock",
+					"coffee": "Mocha - Regular Milk - 2 Sugars",
+					"birthday": "June 13",
+					"wiki": "http://animalcrossing.wikia.com/wiki/Scoot",
+					"store": "https://www.redbubble.com/people/purplepixel/works/15861187-scoot-animal-crossing",
+					"hasProfileImage": true,
+					"hasIconImage": true
+				}
 			]
 		},
 		{
 			"title": "Other List",
-			"id": "e6243c12-d8e5-40b1-8346-34be7644067f",
+			"id": "Qep1wh2jSmuVMBcNTPJbW",
 			"members": [
-				"Stitches",
-				"Simon"
+				{
+					"name": "Stitches",
+					"id": "Stitches",
+					"species": "Cub",
+					"personality": "Lazy",
+					"coffee": "Blend - A Little Milk - 1 Sugar",
+					"birthday": "February 10",
+					"wiki": "http://animalcrossing.wikia.com/wiki/Stitches",
+					"store": "https://www.redbubble.com/people/purplepixel/works/15272054-stitches-animal-crossing",
+					"hasProfileImage": true,
+					"hasIconImage": true
+				},
+				{
+					"name": "Simon",
+					"id": "Simon",
+					"species": "Monkey",
+					"personality": "Lazy",
+					"coffee": "Blend - None - None",
+					"birthday": "January 19",
+					"wiki": "http://animalcrossing.wikia.com/wiki/Simon",
+					"store": "https://www.redbubble.com/people/purplepixel/works/24909507-simon-animal-crossing",
+					"hasProfileImage": true,
+					"hasIconImage": true
+				}
 			]
 		}
 	]
