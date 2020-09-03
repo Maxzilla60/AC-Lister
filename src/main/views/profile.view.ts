@@ -20,7 +20,7 @@ export default class ProfileView {
 	private readonly addVillagerClickedSubject = new Subject<{ villagerIdToAdd: string, listId: string }>();
 	private readonly removeVillagerClickedSubject = new Subject<{ villagerIdToAdd: string, listId: string }>();
 
-	// Kept for removing eventlistener from the add-remove villager button
+	// Kept for removing event listener from the add-remove villager button
 	private readonly removeVillagerEvent: () => void = () => { this.removeVillagerClicked(); };
 	private readonly addVillagerEvent: () => void = () => { this.addVillagerClicked(); };
 
