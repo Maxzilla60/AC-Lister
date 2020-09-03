@@ -45,7 +45,7 @@ export default class ProfileComponents {
 
 	private static aWikiIconButton(wikiLink: string): HTMLButtonElement {
 		return new ButtonBuilder(() => {
-			window.open(wikiLink, '_blank');
+			window.open(wikiLink, '_blank', 'noopener,noreferrer');
 		})
 			.asFontAwesome('fa-wikipedia-w', true)
 			.withTitle('Open Wiki page')
@@ -55,7 +55,7 @@ export default class ProfileComponents {
 
 	private static aStoreIconButton(storeLink: string): HTMLButtonElement {
 		return new ButtonBuilder(() => {
-			window.open(storeLink, '_blank');
+			window.open(storeLink, '_blank', 'noopener,noreferrer');
 		})
 			.asFontAwesome('fa-shopping-bag')
 			.withTitle('Buy this art!')
