@@ -25,6 +25,7 @@ export default class SearchComponents {
 			.withAlt(villager.name)
 			.build();
 	}
+
 	private static aVillagersSearchResultNameElement(villagerName: string): HTMLElement {
 		return new DivisionBuilder().withInnerHTML(villagerName).build();
 	}

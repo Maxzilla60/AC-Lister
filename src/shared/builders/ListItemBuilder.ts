@@ -15,7 +15,7 @@ export default class ListItemBuilder extends HTMLElementBuilder<HTMLLIElement> {
 	public beforeBuild(): void {
 		if (this.fontAwesomeIconName) {
 			this.element.prepend(
-				this.aFontAwesomeElement()
+				this.aFontAwesomeElement(),
 			);
 		}
 	}

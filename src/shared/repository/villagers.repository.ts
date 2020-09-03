@@ -4,7 +4,7 @@ import villagersDB from './villagers.json';
 
 export default class VillagersRepository {
 	private static readonly villagers: Villager[] = villagersDB.map(
-		v => Villager.serialize(v)
+		v => Villager.serialize(v),
 	);
 
 	private constructor() { }
@@ -35,7 +35,7 @@ export default class VillagersRepository {
 		const results: Villager[] = [
 			...VillagersRepository.queryVillagersByName(query),
 			...VillagersRepository.queryVillagersByPersonality(query),
-			...VillagersRepository.queryVillagersBySpecies(query)
+			...VillagersRepository.queryVillagersBySpecies(query),
 		];
 
 		return removeDuplicates(results);

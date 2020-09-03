@@ -14,6 +14,7 @@ export default class AppStateService {
 	public get currentLoadedProfileId(): string {
 		return this._currentProfile;
 	}
+
 	public set currentLoadedProfileId(newId: string) {
 		this._currentProfile = newId;
 	}
@@ -31,7 +32,7 @@ export default class AppStateService {
 		const newList = {
 			title: 'New List',
 			id: nanoid(),
-			members: []
+			members: [],
 		};
 		tempLists.push(newList);
 		this._lists = tempLists;
@@ -143,8 +144,8 @@ export default class AppStateService {
 			id: nanoid(),
 			title: list.title,
 			members: list.members.map((villagerId: string) =>
-				VillagersRepository.getVillagerById(villagerId)
-			)
+				VillagersRepository.getVillagerById(villagerId),
+			),
 		}));
 	}
 }

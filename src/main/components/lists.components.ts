@@ -25,13 +25,13 @@ export default class ListsComponents {
 		if (renameEnabled) {
 			headerChildren = [
 				this.aListTitleInputElement(list, events.applyTitleEvent),
-				this.aListRenameConfirmButton(events.applyTitleEvent)]
-				;
+				this.aListRenameConfirmButton(events.applyTitleEvent),
+			];
 		} else {
 			headerChildren = [
 				this.aListTitleElement(list, events.listTitleClickedEvent),
 				this.aListDeleteButton(events.deleteListEvent),
-				this.aListRenameButton(events.renameListEvent)
+				this.aListRenameButton(events.renameListEvent),
 			];
 		}
 

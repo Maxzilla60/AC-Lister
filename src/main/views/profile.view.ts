@@ -99,6 +99,7 @@ export default class ProfileView {
 	private removeVillagerClicked(): void {
 		this.removeVillagerClickedSubject.next({ villagerIdToAdd: this.currentProfile.id, listId: this.currentSelectedList });
 	}
+
 	// #endregion
 
 	// #region DOM Manipulation

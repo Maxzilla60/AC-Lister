@@ -56,6 +56,7 @@ export default class SearchView {
 			this.searchBarElement.select();
 		}, 350);
 	}
+
 	public closeSearchPanel(): void {
 		this.searchPanelIsOpen = false;
 	}
@@ -69,6 +70,7 @@ export default class SearchView {
 	}
 
 	private get searchPanelIsOpen(): boolean { return this._searchPanelIsOpen; }
+
 	private set searchPanelIsOpen(newValue: boolean) {
 		this._searchPanelIsOpen = newValue;
 		this.searchPanelElement.className = this._searchPanelIsOpen ? 'open' : '';
