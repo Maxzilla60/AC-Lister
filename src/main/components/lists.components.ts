@@ -119,6 +119,7 @@ export default class ListsComponents {
 
 	private static aMemberImage(villager: Villager): Node {
 		return new ImageBuilder(`/villager_icons/${villager.getIconImage()}`, '/villager_icons/default.gif')
+			.withAlt(`List member: ${villager.name}`)
 			.withTitle(villager.name)
 			.build();
 	}
