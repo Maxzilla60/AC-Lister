@@ -1,6 +1,8 @@
 # Animal Crossing ★ Villager Lister
 Easily search, view and assemble lists of your favorite Animal Crossing villagers!
-### [**Visit it here!**](https://ac-lister.netlify.app/)
+
+### 👉 [**Visit it here!**](https://ac-lister.netlify.app/) 👈
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fd74c070-049b-43ef-b920-a28f989f7906/deploy-status)](https://app.netlify.com/sites/ac-lister/deploys)
 
 ## Features
 - Easily search through all current villagers *(by name, species, and personality)*
