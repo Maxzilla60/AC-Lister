@@ -20,7 +20,7 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.14.0",
 		"ajv": "^6.12.4",
-		"bowser": "^2.10.0",
+		"bowser": "^2.11.0",
 		"canvas-confetti": "^1.2.0",
 		"canvas-to-blob": "^1.0.0",
 		"file-saver": "^2.0.2",
