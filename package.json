@@ -37,7 +37,7 @@
 		"@types/html2canvas": "^0.0.35",
 		"@types/lozad": "^1.9.0",
 		"@types/nanoid": "^2.1.0",
-		"@types/node": "^14.11.1",
+		"@types/node": "^14.11.2",
 		"cypress": "^5.2.0",
 		"netlify-plugin-cypress": "^1.4.1",
 		"parcel": "^1.12.4",
