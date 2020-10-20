@@ -34,7 +34,7 @@
 		"@types/canvas-confetti": "^1.0.0",
 		"@types/file-saver": "^2.0.1",
 		"@types/hammerjs": "^2.0.36",
-		"@types/html2canvas": "^0.0.35",
+		"@types/html2canvas": "^0.0.36",
 		"@types/lozad": "^1.9.0",
 		"@types/nanoid": "^2.1.0",
 		"@types/node": "^14.11.4",
