@@ -1,8 +1,7 @@
 import Villager from '../../shared/models/villager.model';
 import VillagerList from '../../shared/models/villagerlist.model';
 import { getChildElementByClassName, getElement as $, mapToVoid, replaceChildren } from '../../shared/util';
-import ListsComponents from '../components/lists.components';
-import { ListElementEvents } from './../components/lists.components';
+import ListsComponents, { ListElementEvents } from '../components/lists.components';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
@@ -32,7 +31,7 @@ export default class ListsView {
 	private readonly newListButton: HTMLButtonElement;
 	private readonly exportTextButton: HTMLButtonElement;
 
-	constructor() {
+	public constructor() {
 		this.listsElement = $('lists');
 		this.fileInputElement = $('file_input') as HTMLInputElement;
 		this.newListButton = $('newlist_button') as HTMLButtonElement;

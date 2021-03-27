@@ -15,7 +15,7 @@ export default class SearchView {
 	private readonly searchBarElement: HTMLInputElement;
 	private hammer: HammerManager;
 
-	constructor() {
+	public constructor() {
 		this.preloadImages();
 		this.searchPanelElement = $('search_container');
 		this.searchResultsElement = $('search_results') as HTMLDivElement;
@@ -66,7 +66,7 @@ export default class SearchView {
 	}
 
 	private preloadImages(): void {
-		loadImage('/villager_icons/default.gif');
+		void loadImage('/villager_icons/default.gif');
 	}
 
 	private get searchPanelIsOpen(): boolean { return this._searchPanelIsOpen; }

@@ -85,12 +85,12 @@ export default class ProfileComponents {
 	}
 
 	private static birthdayHurray(): void {
-		confetti({
+		void confetti({
 			particleCount: 100,
 			spread: 70,
 			origin: { y: 0.6 },
 			colors: ['#FFC0CB'],
 		});
-		new Audio('./happybirthday.mp3').play();
+		void new Audio('./happybirthday.mp3').play();
 	}
 }

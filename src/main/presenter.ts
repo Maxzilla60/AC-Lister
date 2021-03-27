@@ -18,7 +18,7 @@ export default class Presenter {
 	private readonly listsView: ListsView;
 	private readonly lozadObserver: lozad.Observer;
 
-	constructor() {
+	public constructor() {
 		this.lozadObserver = lozad();
 		this.state = new AppStateService();
 		this.searchView = new SearchView();
@@ -119,7 +119,7 @@ export default class Presenter {
 		const reader = new FileReader();
 
 		reader.onload = () => {
-			const lists = JSON.parse(reader.result as string);
+			const lists = JSON.parse(reader.result as string) as Array<VillagerList>;
 			this.state.overrideLists(lists);
 			this.listsView.updateLists(this.state.getLists());
 			this.profileView.updateLists(this.state.getLists());
@@ -130,10 +130,11 @@ export default class Presenter {
 	}
 
 	private exportAsText(): void {
-		const content: string = mapListsToText(this.state.getLists()) + '\nMade with Animal Crossing Villager Lister\n(https://ac-lister.netlify.com/)';
-		const contentAsBlob = new Blob([content], { type: 'text/plain;charset-utf-8' });
-
-		saveAs(contentAsBlob, 'AnimalCrossing-VillagerLists.txt');
+		function mapListMembersToText(members: Villager[]): string {
+			return members.map(member =>
+				`\t- ${member.name}`,
+			).join('\n');
+		}
 
 		function mapListsToText(lists: VillagerList[]): string {
 			return lists.map(list =>
@@ -141,11 +142,9 @@ export default class Presenter {
 			).join('\n');
 		}
 
-		function mapListMembersToText(members: Villager[]): string {
-			return members.map(member =>
-				`\t- ${member.name}`,
-			).join('\n');
-		}
+		const content: string = mapListsToText(this.state.getLists()) + '\nMade with Animal Crossing Villager Lister\n(https://ac-lister.netlify.com/)';
+		const contentAsBlob = new Blob([content], { type: 'text/plain;charset-utf-8' });
+		saveAs(contentAsBlob, 'AnimalCrossing-VillagerLists.txt');
 	}
 
 	private subscribeToSearchView(): void {

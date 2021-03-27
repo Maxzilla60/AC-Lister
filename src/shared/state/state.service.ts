@@ -96,7 +96,7 @@ export default class AppStateService {
 	}
 
 	public parseAndSerializeJSONToLists(listsJSONString: string): VillagerList[] {
-		const parsedLists: VillagerList[] = JSON.parse(listsJSONString);
+		const parsedLists = JSON.parse(listsJSONString) as VillagerList[];
 		return parsedLists.map(list => ({
 			id: list.id,
 			title: list.title,
@@ -111,6 +111,7 @@ export default class AppStateService {
 	private get _lists(): VillagerList[] {
 		let parsedLists;
 		try {
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 			parsedLists = JSON.parse(localStorage.lists);
 		} catch {
 			return this.initEmptyLists();
@@ -132,11 +133,11 @@ export default class AppStateService {
 	}
 
 	private isVersion1(lists): boolean {
-		return this.validator.validate(version1Schema, lists) as boolean;
+		return this.validator.validate(version1Schema, lists);
 	}
 
 	private isVersion2(lists): boolean {
-		return this.validator.validate(version2Schema, lists) as boolean;
+		return this.validator.validate(version2Schema, lists);
 	}
 
 	private convertVersion1ToVersion2(lists: VillagerListV1[]): VillagerList[] {

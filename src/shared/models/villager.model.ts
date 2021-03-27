@@ -13,6 +13,7 @@ export default class Villager {
 	public hasProfileImage: boolean;
 	public hasIconImage: boolean;
 
+	// eslint-disable-next-line @typescript-eslint/ban-types
 	public static serialize(object: object): Villager {
 		return Object.assign(new Villager(), object);
 	}

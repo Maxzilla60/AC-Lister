@@ -11,13 +11,13 @@ export function getChildElementByClassName(element: Element, className: string):
 	return children.find(child => child.className === className);
 }
 
+export function clearElement(element: HTMLElement): void {
+	element.innerHTML = '';
+}
+
 export function replaceChildren(parentElement: HTMLElement, childElement: Node): void {
 	clearElement(parentElement);
 	parentElement.appendChild(childElement);
-}
-
-export function clearElement(element: HTMLElement): void {
-	element.innerHTML = '';
 }
 
 export function aTextNode(text: string): Text {
@@ -39,7 +39,7 @@ export function birthdayIsToday(birthdayString: string): boolean {
 		&& today.getMonth() === birthday.getMonth();
 }
 
-export function removeDuplicates(results: any[]): any[] {
+export function removeDuplicates<T>(results: T[]): T[] {
 	return [...new Set(results)];
 }
 

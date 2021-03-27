@@ -3,7 +3,7 @@ import Presenter from './presenter';
 
 const app = new Presenter();
 app.init();
-// tslint:disable-next-line: no-string-literal
+// eslint-disable-next-line @typescript-eslint/dot-notation,@typescript-eslint/unbound-method
 window['percentageOfVillagersWithProfileImage'] = VillagersRepository.percentageOfVillagersWithProfileImage;
-// tslint:disable-next-line: no-string-literal
+// eslint-disable-next-line @typescript-eslint/dot-notation
 window['villagers'] = VillagersRepository.getAllVillagers();

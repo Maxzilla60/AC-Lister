@@ -24,7 +24,7 @@ export default class ProfileView {
 	private readonly removeVillagerEvent: () => void = () => { this.removeVillagerClicked(); };
 	private readonly addVillagerEvent: () => void = () => { this.addVillagerClicked(); };
 
-	constructor() {
+	public constructor() {
 		this.preloadImages();
 		this.villagerInformationElement = $('villager_information');
 		this.profileImageElement = $('profile_image') as HTMLImageElement;
@@ -84,7 +84,7 @@ export default class ProfileView {
 	}
 
 	private preloadImages(): void {
-		loadImage(this.preloadedLoadingGifSrc);
+		void loadImage(this.preloadedLoadingGifSrc);
 	}
 
 	private listSelectChanged(): void {
