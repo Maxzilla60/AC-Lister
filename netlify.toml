@@ -5,3 +5,7 @@
 		start = 'npm start'
 		wait-on = 'http://localhost:1234'
 		wait-on-timeout = '30'
+	[plugins.inputs.postBuild]
+		enable = true
+	[plugins.inputs]
+		enable = false
