@@ -1,9 +1,7 @@
 [[plugins]]
-  package = "netlify-plugin-cypress"
-  # let's run tests against development server
-  # before building it (and testing the built site)
-  [plugins.inputs.preBuild]
-  enabled = true
-  start = 'npm start'
-  wait-on = 'http://localhost:1234'
-  wait-on-timeout = '30' # seconds
+	package = "netlify-plugin-cypress"
+	[plugins.inputs.preBuild]
+		enabled = true
+		start = 'npm start'
+		wait-on = 'http://localhost:1234'
+		wait-on-timeout = '30'
