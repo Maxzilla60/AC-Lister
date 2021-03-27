@@ -14,11 +14,10 @@
 		"type": "git",
 		"url": "https://github.com/Maxzilla60/ac-lister"
 	},
-	"keywords": [],
 	"author": "Maxime Orione",
 	"license": "GNU General Public License v3.0",
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^5.15.2",
+		"@fortawesome/fontawesome-free": "^5.15.3",
 		"ajv": "^7.2.1",
 		"bowser": "^2.11.0",
 		"canvas-confetti": "^1.4.0",
@@ -31,7 +30,7 @@
 		"rxjs": "^6.6.6"
 	},
 	"devDependencies": {
-		"@types/canvas-confetti": "^1.3.0",
+		"@types/canvas-confetti": "^1.4.0",
 		"@types/file-saver": "^2.0.1",
 		"@types/hammerjs": "^2.0.39",
 		"@types/html2canvas": "^0.0.36",
@@ -50,7 +49,7 @@
 		"parcel": "^1.12.4",
 		"parcel-bundler": "^1.12.5",
 		"parcel-plugin-markdown-it": "^1.0.0",
-		"parcel-plugin-static-files-copy": "^2.5.1",
+		"parcel-plugin-static-files-copy": "^2.6.0",
 		"typescript": "^4.2.3"
 	},
 	"staticFiles": {
