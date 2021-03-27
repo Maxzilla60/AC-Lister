@@ -48,9 +48,4 @@ export default abstract class HTMLElementBuilder<T extends HTMLElement> {
 		this.element.appendChild(child);
 		return this;
 	}
-
-	public withDataAttribute(attributeName: string, value: string): HTMLElementBuilder<T> {
-		this.element.setAttribute(`data-${attributeName}`, value);
-		return this;
-	}
 }

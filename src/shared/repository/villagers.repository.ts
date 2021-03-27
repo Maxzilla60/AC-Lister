@@ -7,8 +7,6 @@ export default class VillagersRepository {
 		v => Villager.serialize(v),
 	);
 
-	private constructor() { }
-
 	public static percentageOfVillagersWithProfileImage(): string {
 		const allVillagersCount = VillagersRepository.getAllVillagers().length;
 		const villagersWithProfileImageCount = VillagersRepository.getAllVillagers()

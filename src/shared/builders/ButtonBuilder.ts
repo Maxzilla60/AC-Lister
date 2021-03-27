@@ -15,9 +15,4 @@ export default class ButtonBuilder extends HTMLElementBuilder<HTMLButtonElement>
 		this.element.setAttribute('aria-hidden', 'true');
 		return this;
 	}
-
-	public isDisabled(disabled = true): ButtonBuilder {
-		this.element.disabled = disabled;
-		return this;
-	}
 }

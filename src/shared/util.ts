@@ -28,17 +28,6 @@ export function aSpanElement(text: string): HTMLSpanElement {
 	return new SpanBuilder(text).build();
 }
 
-export function aBreakElement(): HTMLElement {
-	return document.createElement('br');
-}
-
-export function birthdayIsToday(birthdayString: string): boolean {
-	const today: Date = new Date();
-	const birthday: Date = new Date(birthdayString);
-	return today.getDate() === birthday.getDate()
-		&& today.getMonth() === birthday.getMonth();
-}
-
 export function removeDuplicates<T>(results: T[]): T[] {
 	return [...new Set(results)];
 }

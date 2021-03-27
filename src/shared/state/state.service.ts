@@ -87,10 +87,6 @@ export default class AppStateService {
 				.includes(villagerId);
 	}
 
-	public aProfileIsLoaded(): boolean {
-		return this._currentProfile !== '';
-	}
-
 	public overrideLists(lists: VillagerList[]): void {
 		this._lists = lists;
 	}
