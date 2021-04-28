@@ -1,0 +1,124 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.24
+    - 14.14.25
+    - 14.14.26
+    - 14.14.28
+    - 14.14.30
+    - 14.14.31
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.35
+    - 14.14.37
+    - 14.14.39
+    - 14.14.41
+    - 15.0.0
+    - 15.0.1
+  - dependency-name: ajv
+    versions:
+    - 7.0.3
+    - 7.0.4
+    - 7.1.0
+    - 7.1.1
+    - 7.2.1
+    - 8.0.1
+    - 8.0.3
+    - 8.0.5
+    - 8.1.0
+    - 8.2.0
+  - dependency-name: cypress
+    versions:
+    - 6.3.0
+    - 6.4.0
+    - 6.5.0
+    - 6.6.0
+    - 6.7.1
+    - 6.8.0
+    - 7.0.0
+    - 7.0.1
+    - 7.1.0
+    - 7.2.0
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.20.0
+    - 4.21.0
+    - 4.22.0
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.20.0
+    - 4.21.0
+    - 4.22.0
+  - dependency-name: "@typescript-eslint/eslint-plugin-tslint"
+    versions:
+    - 4.20.0
+    - 4.21.0
+    - 4.22.0
+  - dependency-name: "@types/file-saver"
+    versions:
+    - 2.0.2
+  - dependency-name: typescript
+    versions:
+    - 4.1.4
+    - 4.1.5
+    - 4.2.2
+    - 4.2.3
+    - 4.2.4
+  - dependency-name: netlify-plugin-cypress
+    versions:
+    - 1.10.0
+    - 1.11.0
+    - 1.11.1
+    - 1.7.0
+    - 1.8.1
+    - 1.9.2
+    - 2.0.0
+    - 2.1.0
+    - 2.2.0
+  - dependency-name: rxjs
+    versions:
+    - 6.6.6
+    - 6.6.7
+  - dependency-name: "@types/canvas-confetti"
+    versions:
+    - 1.4.0
+  - dependency-name: parcel-plugin-static-files-copy
+    versions:
+    - 2.5.1
+    - 2.6.0
+  - dependency-name: "@fortawesome/fontawesome-free"
+    versions:
+    - 5.15.2
+    - 5.15.3
+  - dependency-name: parcel-bundler
+    versions:
+    - 1.12.5
+  - dependency-name: nanoid
+    versions:
+    - 3.1.21
+    - 3.1.22
+  - dependency-name: parcel-plugin-markdown-it
+    versions:
+    - 1.0.0
+  - dependency-name: canvas-confetti
+    versions:
+    - 1.3.3
+    - 1.4.0
+  - dependency-name: elliptic
+    versions:
+    - 6.5.4
+  - dependency-name: "@types/hammerjs"
+    versions:
+    - 2.0.37
+    - 2.0.38
+    - 2.0.39
