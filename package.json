@@ -18,7 +18,7 @@
 	"license": "GNU General Public License v3.0",
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.15.3",
-		"ajv": "^7.2.1",
+		"ajv": "^8.2.0",
 		"bowser": "^2.11.0",
 		"canvas-confetti": "^1.4.0",
 		"canvas-to-blob": "^1.0.0",
@@ -27,30 +27,30 @@
 		"html2canvas": "^1.0.0-rc.7",
 		"lozad": "^1.16.0",
 		"nanoid": "^3.1.22",
-		"rxjs": "^6.6.6"
+		"rxjs": "^6.6.7"
 	},
 	"devDependencies": {
 		"@types/canvas-confetti": "^1.4.0",
-		"@types/file-saver": "^2.0.1",
+		"@types/file-saver": "^2.0.2",
 		"@types/hammerjs": "^2.0.39",
 		"@types/html2canvas": "^0.0.36",
 		"@types/lozad": "^1.9.0",
 		"@types/nanoid": "^2.1.0",
-		"@types/node": "^14.14.35",
-		"@typescript-eslint/eslint-plugin": "^4.19.0",
-		"@typescript-eslint/eslint-plugin-tslint": "^4.19.0",
-		"@typescript-eslint/parser": "^4.19.0",
-		"cypress": "^6.8.0",
+		"@types/node": "^15.0.1",
+		"@typescript-eslint/eslint-plugin": "^4.22.0",
+		"@typescript-eslint/eslint-plugin-tslint": "^4.22.0",
+		"@typescript-eslint/parser": "^4.22.0",
+		"cypress": "^7.2.0",
 		"eslint": "^7.23.0",
 		"eslint-plugin-import": "^2.22.1",
 		"eslint-plugin-jsdoc": "^32.3.0",
 		"eslint-plugin-prefer-arrow": "^1.2.3",
-		"netlify-plugin-cypress": "^1.11.1",
+		"netlify-plugin-cypress": "^2.2.0",
 		"parcel": "^1.12.4",
 		"parcel-bundler": "^1.12.5",
 		"parcel-plugin-markdown-it": "^1.0.0",
 		"parcel-plugin-static-files-copy": "^2.6.0",
-		"typescript": "^4.2.3"
+		"typescript": "^4.2.4"
 	},
 	"staticFiles": {
 		"staticPath": "public",
