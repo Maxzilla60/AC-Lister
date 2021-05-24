@@ -28,7 +28,7 @@
 		"html2canvas": "^1.0.0-rc.7",
 		"lozad": "^1.16.0",
 		"nanoid": "^3.1.23",
-		"rxjs": "^7.0.1"
+		"rxjs": "^7.1.0"
 	},
 	"devDependencies": {
 		"@types/canvas-confetti": "^1.4.0",
