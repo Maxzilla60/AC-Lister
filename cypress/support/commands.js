@@ -38,7 +38,7 @@ Cypress.Commands.add('restoreLocalStorage', () => {
 });
 
 Cypress.Commands.add('visitPage', () => {
-	cy.visit('localhost:1234');
+	cy.visit('/');
 });
 
 Cypress.Commands.add('waitForSearchDebounce', () => {
