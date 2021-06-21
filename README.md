@@ -19,15 +19,6 @@ Please go **[here](https://github.com/Maxzilla60/AC-Lister/issues)** and let me 
 
 If you're curious about upcoming/planned features and what's currently being worked on, check out the **[Trello board](https://trello.com/b/DD4k8ncM/ac-lister-20)**.
 
-## 🎯 Version 2.0 Goals
-
- - [x] Build the website with a simple web bundler, **[Parcel](https://parceljs.org)**.
- - [x] Refactor the JavaScript code to use a Model-View-Presenter architecture with **[TypeScript](https://www.typescriptlang.org)** and **[RxJS](https://rxjs-dev.firebaseapp.com)**.
- - [x] Implement integration tests with **[Cypress](https://www.cypress.io)**.
- - [x] Overhaul the CSS & HTML to make it mobile-friendly with **[CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)**.
- - [x] Host the website on **[Netlify](https://www.netlify.com/)**.
- - [ ] Convert the website into a **[PWA](https://developers.google.com/web/progressive-web-apps/)**.
-
 ## 🌷 Credits
 - [Purple-Pixel](https://purple-pixel.tumblr.com/) for the wonderful profile art.
 - [Here](http://kelseycrossing.com/post/149344517906/animal-crossing-pixel-masterpost) and [here](http://reguluscrossing.tumblr.com/post/153233705592/tried-to-edit-some-of-rehoeass-pixels-to-make) for the small villager icons.
