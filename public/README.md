@@ -22,7 +22,7 @@ If you're curious about upcoming/planned features and what's currently being wor
 ## 🌷 Credits
 - [Purple-Pixel](https://purple-pixel.tumblr.com/) for the wonderful profile art.
 - [Here](http://kelseycrossing.com/post/149344517906/animal-crossing-pixel-masterpost) and [here](http://reguluscrossing.tumblr.com/post/153233705592/tried-to-edit-some-of-rehoeass-pixels-to-make) for the small villager icons.
-- Special thanks to Lucy for helping me out with the villager information and images (`villagers.js`).
+- Special thanks to Oscar for helping me out with the villager information and images (`villagers.js`).
 - [Font Awesome](http://fontawesome.io/) icons.
 - [Real Favicon Generator](http://realfavicongenerator.net/).
 - [Confetti](https://github.com/catdad/canvas-confetti) for the fun confetti!
