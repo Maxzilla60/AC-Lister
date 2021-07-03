@@ -6,7 +6,6 @@ import ListsView, { LoadProfilePayload } from './views/lists.view';
 import ProfileView from './views/profile.view';
 import SearchView from './views/search.view';
 import { saveAs } from 'file-saver';
-import lozad from 'lozad';
 import { merge, Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 import Bowser from 'bowser';
@@ -16,10 +15,8 @@ export default class Presenter {
 	private readonly searchView: SearchView;
 	private readonly profileView: ProfileView;
 	private readonly listsView: ListsView;
-	private readonly lozadObserver: lozad.Observer;
 
 	public constructor() {
-		this.lozadObserver = lozad();
 		this.state = new AppStateService();
 		this.searchView = new SearchView();
 		this.subscribeToSearchView();
@@ -34,7 +31,6 @@ export default class Presenter {
 		this.listsView.init(this.state.getLists());
 		this.profileView.init(this.state.getLists());
 		this.searchView.init(VillagersRepository.getAllVillagers());
-		this.observeLazyLoadedImages();
 		this.checkSafariWarning();
 	}
 
@@ -53,7 +49,6 @@ export default class Presenter {
 			results = VillagersRepository.searchFor(query);
 		}
 		this.searchView.updateSearchResults(results);
-		this.observeLazyLoadedImages();
 	}
 
 	private loadProfile(villagerId: string, listId?: string): void {
@@ -99,7 +94,6 @@ export default class Presenter {
 	private updateListMembersToViews(listId: string): void {
 		this.listsView.updateMembersForList(listId, this.state.getListById(listId).members);
 		this.profileView.updateLists(this.state.getLists());
-		this.observeLazyLoadedImages();
 	}
 
 	private selectList(listId: string): void {
@@ -123,7 +117,6 @@ export default class Presenter {
 			this.state.overrideLists(lists);
 			this.listsView.updateLists(this.state.getLists());
 			this.profileView.updateLists(this.state.getLists());
-			this.observeLazyLoadedImages();
 		};
 
 		reader.readAsText(listsFile);
@@ -207,6 +200,4 @@ export default class Presenter {
 				this.loadProfile(payload.villagerId, payload.listId);
 			});
 	}
-
-	private observeLazyLoadedImages(): void { this.lozadObserver.observe(); }
 }

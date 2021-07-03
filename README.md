@@ -26,5 +26,4 @@ If you're curious about upcoming/planned features and what's currently being wor
 - [Font Awesome](http://fontawesome.io/) icons.
 - [Real Favicon Generator](http://realfavicongenerator.net/).
 - [Confetti](https://github.com/catdad/canvas-confetti) for the fun confetti!
-- [Lozad](https://apoorv.pro/lozad.js/) for lazy loading of images.
 - [HammerJS](https://hammerjs.github.io) for mobile gestures.
