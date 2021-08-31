@@ -35,7 +35,7 @@
 		"@types/hammerjs": "^2.0.40",
 		"@types/html2canvas": "^1.0.0",
 		"@types/nanoid": "^3.0.0",
-		"@types/node": "^16.6.1",
+		"@types/node": "^16.7.8",
 		"@typescript-eslint/eslint-plugin": "^4.29.1",
 		"@typescript-eslint/eslint-plugin-tslint": "^4.29.1",
 		"@typescript-eslint/parser": "^4.29.1",
