@@ -30,6 +30,6 @@ export default class Villager {
 	}
 
 	public getProfileImage(): string {
-		return this.hasProfileImage ? `${this.id}.jpg` : 'wip.jpg';
+		return this.hasProfileImage ? `${this.id}.webp` : 'wip.webp';
 	}
 }
