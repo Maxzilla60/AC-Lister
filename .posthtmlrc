@@ -1,7 +1,0 @@
-{
-  "plugins": {
-    "posthtml-md": {
-      "root": "info"
-    }
-  }
-}
