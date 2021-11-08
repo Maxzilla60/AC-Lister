@@ -38,7 +38,7 @@
 		"@typescript-eslint/eslint-plugin-tslint": "^5.2.0",
 		"@typescript-eslint/parser": "^5.2.0",
 		"cypress": "^8.7.0",
-		"eslint": "^8.1.0",
+		"eslint": "^8.2.0",
 		"eslint-plugin-import": "^2.25.2",
 		"eslint-plugin-jsdoc": "^37.0.3",
 		"eslint-plugin-prefer-arrow": "^1.2.3",
