@@ -324,6 +324,18 @@
 		"hasIconImage": true
 	},
 	{
+		"name": "Azalea",
+		"id": "Azalea",
+		"species": "Rhino",
+		"personality": "Snooty",
+		"coffee": "",
+		"birthday": "December 18",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Azalea",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Aziz",
 		"id": "Aziz",
 		"species": "Lion",
@@ -925,18 +937,6 @@
 	},
 	{
 		"name": "Carmen",
-		"id": "Carmen (2)",
-		"species": "Mouse",
-		"personality": "Snooty",
-		"coffee": "",
-		"birthday": "March 24",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Carmen_(mouse)",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": true
-	},
-	{
-		"name": "Carmen",
 		"id": "Carmen",
 		"species": "Rabbit",
 		"personality": "Peppy",
@@ -945,6 +945,18 @@
 		"wiki": "http://animalcrossing.wikia.com/wiki/Carmen_(rabbit)",
 		"store": "https://www.redbubble.com/people/purplepixel/works/15934499-carmen-animal-crossing",
 		"hasProfileImage": true,
+		"hasIconImage": true
+	},
+	{
+		"name": "Carmen",
+		"id": "Carmen (2)",
+		"species": "Mouse",
+		"personality": "Snooty",
+		"coffee": "",
+		"birthday": "March 24",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Carmen_(mouse)",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
 		"hasIconImage": true
 	},
 	{
@@ -1020,6 +1032,18 @@
 		"hasIconImage": true
 	},
 	{
+		"name": "Cephalobot",
+		"id": "Cephalobot",
+		"species": "Octopus",
+		"personality": "Smug",
+		"coffee": "",
+		"birthday": "April 1",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Cephalobot",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Cesar",
 		"id": "Cesar",
 		"species": "Gorilla",
@@ -1030,6 +1054,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/works/21591304-cesar-animal-crossing",
 		"hasProfileImage": true,
 		"hasIconImage": true
+	},
+	{
+		"name": "Chabwick",
+		"id": "Chabwick",
+		"species": "Penguin",
+		"personality": "Lazy",
+		"coffee": "",
+		"birthday": "December 24",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Chabwick",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Chadder",
@@ -2064,6 +2100,18 @@
 		"hasIconImage": true
 	},
 	{
+		"name": "Frett",
+		"id": "Frett",
+		"species": "Dog",
+		"personality": "Cranky",
+		"coffee": "",
+		"birthday": "October 30",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Frett",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Freya",
 		"id": "Freya",
 		"species": "Wolf",
@@ -2616,6 +2664,18 @@
 		"hasIconImage": false
 	},
 	{
+		"name": "Ione",
+		"id": "Ione",
+		"species": "Squirrel",
+		"personality": "Normal",
+		"coffee": "",
+		"birthday": "September 11",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Ione",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Jacob",
 		"id": "Jacob",
 		"species": "Bird",
@@ -3157,18 +3217,6 @@
 	},
 	{
 		"name": "Lulu",
-		"id": "Lulu (2)",
-		"species": "Hippo",
-		"personality": "Peppy",
-		"coffee": "",
-		"birthday": "December 19",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Lulu_(villager)",
-		"store": "https://www.redbubble.com/people/purplepixel/",
-		"hasProfileImage": false,
-		"hasIconImage": true
-	},
-	{
-		"name": "Lulu",
 		"id": "Lulu",
 		"species": "Anteater",
 		"personality": "Peppy",
@@ -3177,6 +3225,18 @@
 		"wiki": "http://animalcrossing.wikia.com/wiki/Lulu_(islander)",
 		"store": "https://www.redbubble.com/people/purplepixel/works/21389592-lulu-animal-crossing",
 		"hasProfileImage": true,
+		"hasIconImage": true
+	},
+	{
+		"name": "Lulu",
+		"id": "Lulu (2)",
+		"species": "Hippo",
+		"personality": "Peppy",
+		"coffee": "",
+		"birthday": "December 19",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Lulu_(villager)",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
 		"hasIconImage": true
 	},
 	{
@@ -3334,6 +3394,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/works/15586967-marina-animal-crossing",
 		"hasProfileImage": true,
 		"hasIconImage": true
+	},
+	{
+		"name": "Marlo",
+		"id": "Marlo",
+		"species": "Hamster",
+		"personality": "Cranky",
+		"coffee": "",
+		"birthday": "June 26",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Marlo",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Marshal",
@@ -4056,16 +4128,16 @@
 		"hasIconImage": true
 	},
 	{
-		"name": "Petunia",
-		"id": "Petunia (2)",
-		"species": "Rhino",
+		"name": "Petri",
+		"id": "Petri",
+		"species": "Mouse",
 		"personality": "Snooty",
 		"coffee": "",
-		"birthday": "December 11",
-		"wiki": "http://animalcrossing.wikia.com/wiki/Petunia_(rhino)",
+		"birthday": "October 23",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Petri",
 		"store": "https://www.redbubble.com/people/purplepixel/",
 		"hasProfileImage": false,
-		"hasIconImage": true
+		"hasIconImage": false
 	},
 	{
 		"name": "Petunia",
@@ -4075,6 +4147,18 @@
 		"coffee": "",
 		"birthday": "April 24",
 		"wiki": "http://animalcrossing.wikia.com/wiki/Petunia_(cow)",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": true
+	},
+	{
+		"name": "Petunia",
+		"id": "Petunia (2)",
+		"species": "Rhino",
+		"personality": "Snooty",
+		"coffee": "",
+		"birthday": "December 11",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Petunia_(rhino)",
 		"store": "https://www.redbubble.com/people/purplepixel/",
 		"hasProfileImage": false,
 		"hasIconImage": true
@@ -4378,6 +4462,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/",
 		"hasProfileImage": false,
 		"hasIconImage": true
+	},
+	{
+		"name": "Quinn",
+		"id": "Quinn",
+		"species": "Eagle",
+		"personality": "Sisterly",
+		"coffee": "",
+		"birthday": "January 20",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Quinn",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Raddle",
@@ -4692,6 +4788,18 @@
 		"hasIconImage": true
 	},
 	{
+		"name": "Roswell",
+		"id": "Roswell",
+		"species": "Alligator",
+		"personality": "Smug",
+		"coffee": "",
+		"birthday": "May 2",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Roswell",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
+	},
+	{
 		"name": "Rowan",
 		"id": "Rowan",
 		"species": "Tiger",
@@ -4762,6 +4870,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/works/35556240-sandy-animal-crossing",
 		"hasProfileImage": true,
 		"hasIconImage": true
+	},
+	{
+		"name": "Sasha",
+		"id": "Sasha",
+		"species": "Rabbit",
+		"personality": "Lazy",
+		"coffee": "",
+		"birthday": "May 19",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Sasha",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Savannah",
@@ -4846,6 +4966,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/",
 		"hasProfileImage": false,
 		"hasIconImage": true
+	},
+	{
+		"name": "Shino",
+		"id": "Shino",
+		"species": "Deer",
+		"personality": "Peppy",
+		"coffee": "",
+		"birthday": "October 31",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Shino",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Shoukichi",
@@ -5278,6 +5410,18 @@
 		"store": "https://www.redbubble.com/people/purplepixel/",
 		"hasProfileImage": false,
 		"hasIconImage": true
+	},
+	{
+		"name": "Tiansheng",
+		"id": "Tiansheng",
+		"species": "Monkey",
+		"personality": "Jock",
+		"coffee": "",
+		"birthday": "August 18",
+		"wiki": "http://animalcrossing.wikia.com/wiki/Tiansheng",
+		"store": "https://www.redbubble.com/people/purplepixel/",
+		"hasProfileImage": false,
+		"hasIconImage": false
 	},
 	{
 		"name": "Tiara",
