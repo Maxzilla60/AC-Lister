@@ -72,8 +72,8 @@ describe('Profile Section', () => {
 			const secondListID = testData['twoEmptyLists'][1].id;
 			const secondListTitle = testData['twoEmptyLists'][1].title;
 
-			const randomVillager = getRandomVillager(villagersArray);
-			cy.get('#search_bar').clear().type(randomVillager.name);
+			const randomVillagerName = getRandomVillager(villagersArray).name;
+			cy.get('#search_bar').clear().type(randomVillagerName);
 			cy.waitForSearchDebounce();
 			cy.get('#search_results').find('.result').first().click();
 
@@ -89,12 +89,16 @@ describe('Profile Section', () => {
 				.parent().siblings()
 				.find('.list_member')
 				.should('have.attr', 'title')
-				.and('equal', randomVillager.name);
+				.and((innerText) =>
+					expect(innerText.toLowerCase()).to.have.string(randomVillagerName.toLowerCase())
+				);
 			cy.contains(secondListTitle)
 				.parent().siblings()
 				.find('.list_member')
 				.should('have.attr', 'title')
-				.and('equal', randomVillager.name);
+				.and((innerText) =>
+					expect(innerText.toLowerCase()).to.have.string(randomVillagerName.toLowerCase())
+				);
 		});
 	});
 
