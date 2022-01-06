@@ -16,13 +16,13 @@ describe('Lists Section', () => {
 		cy.visitPage();
 	}
 
-    /* beforeEach(() => {
-        cy.restoreLocalStorage();
-    });
+	/* beforeEach(() => {
+		cy.restoreLocalStorage();
+	});
 
-    afterEach(() => {
-        cy.saveLocalStorage();
-    }); */
+	afterEach(() => {
+		cy.saveLocalStorage();
+	}); */
 
 	it('should create new list', () => {
 		loadTestData('noLists');
