@@ -20,7 +20,7 @@ Please go **[here](https://github.com/Maxzilla60/AC-Lister/issues)** and let me 
 If you're curious about upcoming/planned features and what's currently being worked on, check out the **[Trello board](https://trello.com/b/DD4k8ncM/ac-lister-20)**.
 
 ## 🌷 Credits
-- [Purple-Pixel](https://purple-pixel.tumblr.com/) for the wonderful profile art.
+- [Purple-Pixel](https://www.instagram.com/purple_pixel_22/) for the wonderful profile art.
 - [Here](http://kelseycrossing.com/post/149344517906/animal-crossing-pixel-masterpost) and [here](http://reguluscrossing.tumblr.com/post/153233705592/tried-to-edit-some-of-rehoeass-pixels-to-make) for the small villager icons.
 - Special thanks to Blue for helping me out with the villager information and images (`villagers.js`).
 - [Font Awesome](http://fontawesome.io/) icons.
