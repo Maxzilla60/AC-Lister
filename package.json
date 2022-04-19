@@ -7,8 +7,8 @@
 		"start": "parcel index.html",
 		"build": "parcel build index.html",
 		"codenvy": "parcel index.html --host 0.0.0.0 --port 1337",
-		"cypress": "npx cypress open",
-		"test": "npx cypress run --config videoUploadOnPasses=false",
+		"cypress": "cypress open",
+		"test": "cypress run --config videoUploadOnPasses=false",
 		"upgrade": "npx npm-check-updates -u -x parcel & npm i"
 	},
 	"repository": {
