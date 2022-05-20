@@ -40,7 +40,7 @@
 		"cypress": "^9.5.4",
 		"eslint": "^8.13.0",
 		"eslint-plugin-import": "^2.26.0",
-		"eslint-plugin-jsdoc": "^39.2.3",
+		"eslint-plugin-jsdoc": "^39.3.0",
 		"eslint-plugin-prefer-arrow": "^1.2.3",
 		"netlify-plugin-cypress": "^2.2.0",
 		"parcel": "1.12.3",
