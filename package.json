@@ -18,7 +18,7 @@
 	"author": "Maxime Orione",
 	"license": "GNU General Public License v3.0",
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^6.1.1",
+		"@fortawesome/fontawesome-free": "^6.1.2",
 		"ajv": "^8.11.0",
 		"bowser": "^2.11.0",
 		"canvas-confetti": "^1.5.1",
