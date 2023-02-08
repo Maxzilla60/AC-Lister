@@ -11,22 +11,11 @@ describe('App', () => {
 
 	function loadTestData(key) {
 		localStorage.lists = JSON.stringify(testData[key]);
-		cy.visitPage();
 	}
 
-	beforeEach(() => {
-		cy.restoreLocalStorage();
-	});
-
-	afterEach(() => {
-		cy.saveLocalStorage();
-	});
-
-	it('should visit the page', () => {
-		cy.visitPage();
-	});
-
 	it('should create two lists', () => {
+		cy.visitPage();
+
 		cy.get('#newlist_button').click();
 		cy.get('.rename_bar').type(listName1);
 		cy.get('#confirmrename_button').click();
@@ -41,6 +30,9 @@ describe('App', () => {
 	});
 
 	it('should find and add favourite villagers', () => {
+		loadTestData('twoEmptyLists');
+		cy.visitPage();
+
 		cy.get('#search_bar').clear().type('Scoot');
 		cy.waitForSearchDebounce();
 		cy.get('#search_results').get('.result').first()
@@ -54,6 +46,8 @@ describe('App', () => {
 
 	it('should select list when clicking its title', () => {
 		loadTestData('twoEmptyLists');
+		cy.visitPage();
+
 		const firstListId = 'a2a2383f-99fa-4546-a809-673b20017b13';
 		const secondListId = 'e6243c12-d8e5-40b1-8346-34be7644067f';
 
@@ -71,6 +65,8 @@ describe('App', () => {
 	it('should select member when clicking its icon in a list', () => {
 		cy.fixture('../../src/shared/repository/villagers.json').then(villagersArray => {
 			loadTestData('twoLists');
+			cy.visitPage();
+
 			const firstListId = 'Uq8VlkaYGJGhlB2YJt7pY';
 			const secondListId = 'Qep1wh2jSmuVMBcNTPJbW';
 
@@ -92,6 +88,7 @@ describe('App', () => {
 	});
 
 	it('should perform the birthday easter egg', () => {
+		cy.visitPage();
 		cy.clock(Date.UTC(2020, 2, 19), ['Date'])
 
 		cy.get('#search_bar').clear().type('birthday');

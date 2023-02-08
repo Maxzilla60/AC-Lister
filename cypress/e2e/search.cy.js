@@ -1,5 +1,5 @@
 describe('Search Field', () => {
-	it('should visit the page', () => {
+	beforeEach(() => {
 		cy.visitPage();
 	})
 
