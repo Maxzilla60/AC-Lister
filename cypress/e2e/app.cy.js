@@ -63,28 +63,26 @@ describe('App', () => {
 	});
 
 	it('should select member when clicking its icon in a list', () => {
-		cy.fixture('../../src/shared/repository/villagers.json').then(villagersArray => {
-			loadTestData('twoLists');
-			cy.visitPage();
+		loadTestData('twoLists');
+		cy.visitPage();
 
-			const firstListId = 'Uq8VlkaYGJGhlB2YJt7pY';
-			const secondListId = 'Qep1wh2jSmuVMBcNTPJbW';
+		const firstListId = 'Uq8VlkaYGJGhlB2YJt7pY';
+		const secondListId = 'Qep1wh2jSmuVMBcNTPJbW';
 
-			cy.get('.list .list_member')
-				.first()
-				.children()
-				.first()
-				.click();
-			cy.get('#list_select').should('have.value', firstListId);
-			cy.get('#villager_information').should('contain', 'Scoot');
-			cy.get('.list .list_member')
-				.eq(1)
-				.children()
-				.first()
-				.click();
-			cy.get('#list_select').should('have.value', secondListId);
-			cy.get('#villager_information').should('contain', 'Stitches');
-		});
+		cy.get('.list .list_member')
+			.first()
+			.children()
+			.first()
+			.click();
+		cy.get('#list_select').should('have.value', firstListId);
+		cy.get('#villager_information').should('contain', 'Scoot');
+		cy.get('.list .list_member')
+			.eq(1)
+			.children()
+			.first()
+			.click();
+		cy.get('#list_select').should('have.value', secondListId);
+		cy.get('#villager_information').should('contain', 'Stitches');
 	});
 
 	it('should perform the birthday easter egg', () => {
