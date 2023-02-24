@@ -42,7 +42,7 @@
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-jsdoc": "^39.8.0",
 		"eslint-plugin-prefer-arrow": "^1.2.3",
-		"netlify-plugin-cypress": "^2.2.0",
+		"netlify-plugin-cypress": "^2.2.1",
 		"parcel": "1.12.3",
 		"parcel-bundler": "1.12.5",
 		"parcel-plugin-markdown-it": "^1.0.0",
