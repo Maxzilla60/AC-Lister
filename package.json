@@ -34,7 +34,7 @@
 		"@types/file-saver": "^2.0.5",
 		"@types/hammerjs": "^2.0.41",
 		"@types/node": "^18.13.0",
-		"@typescript-eslint/eslint-plugin": "^5.51.0",
+		"@typescript-eslint/eslint-plugin": "^5.54.1",
 		"@typescript-eslint/eslint-plugin-tslint": "^5.51.0",
 		"@typescript-eslint/parser": "^5.51.0",
 		"cypress": "12.5.1",
