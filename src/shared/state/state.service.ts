@@ -8,16 +8,7 @@ import Ajv from 'ajv';
 import { nanoid } from 'nanoid';
 
 export default class AppStateService {
-	private _currentProfile = '';
 	private readonly validator = new Ajv();
-
-	public get currentLoadedProfileId(): string {
-		return this._currentProfile;
-	}
-
-	public set currentLoadedProfileId(newId: string) {
-		this._currentProfile = newId;
-	}
 
 	public getLists(): VillagerList[] {
 		return this._lists;
