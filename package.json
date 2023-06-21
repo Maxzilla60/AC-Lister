@@ -2,7 +2,6 @@
 	"name": "ac-lister",
 	"version": "2.0.0",
 	"description": "Animal Crossing Villager Lister",
-	"private": true,
 	"scripts": {
 		"start": "parcel index.html",
 		"build": "parcel build index.html",
