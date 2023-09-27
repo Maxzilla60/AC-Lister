@@ -6,7 +6,7 @@
 		"start": "parcel index.html",
 		"build": "parcel build index.html",
 		"cypress": "cypress open",
-		"test": "cypress run --config videoUploadOnPasses=false",
+		"test": "cypress run",
 		"upgrade": "npx npm-check-updates -u -x parcel & npm i"
 	},
 	"repository": {
