@@ -201,7 +201,7 @@ small {
 	flex-direction: column;
 }
 
-search {
+#search {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
