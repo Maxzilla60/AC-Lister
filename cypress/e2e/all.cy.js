@@ -1,4 +1,4 @@
-import './app.cy';
-import './lists.cy';
-import './profile.cy';
-import './search.cy';
+import './app';
+import './lists';
+import './profile';
+import './search';
