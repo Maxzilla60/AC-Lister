@@ -17,9 +17,9 @@ export default class SearchView {
 
 	public constructor() {
 		this.preloadImages();
-		this.searchPanelElement = $('search_container');
-		this.searchResultsElement = $('search_results') as HTMLDivElement;
-		this.searchBarElement = $('search_bar') as HTMLInputElement;
+		this.searchPanelElement = $('search-container');
+		this.searchResultsElement = $('search-results') as HTMLDivElement;
+		this.searchBarElement = $('search-bar') as HTMLInputElement;
 		this.setupSwipeGesture();
 		this.bindEvents();
 	}
@@ -80,7 +80,7 @@ export default class SearchView {
 		this.searchQueryUpdated$ = merge(
 			fromEvent(this.searchBarElement, 'input')
 				.pipe(pluck('target', 'value')),
-			fromEvent($('search_button'), 'click')
+			fromEvent($('search-button'), 'click')
 				.pipe(map(() => this.searchBarElement.value)),
 		).pipe(
 			map((query: string) => query.toLowerCase()),
@@ -88,7 +88,7 @@ export default class SearchView {
 			auditTime(500),
 			distinctUntilChanged(),
 		);
-		$('close_searchpanel_button').addEventListener('click', () => {
+		$('close-search-panel-button').addEventListener('click', () => {
 			this.closeSearchPanel();
 		});
 		this.bindClickOutside();
@@ -105,7 +105,7 @@ export default class SearchView {
 
 	private targetIsOutsideSearchPanel(target: Element): boolean {
 		return this.searchPanelIsOpen &&
-			target.id !== 'open_searchpanel_button' &&
+			target.id !== 'open-search-panel-button' &&
 			!this.searchPanelElement.contains(target);
 	}
 

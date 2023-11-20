@@ -36,7 +36,7 @@ export default class ListsComponents {
 		}
 
 		return new DivisionBuilder()
-			.withClassNames('list_header')
+			.withClassNames('list-header')
 			.withChildren(...headerChildren)
 			.build();
 	}
@@ -44,13 +44,13 @@ export default class ListsComponents {
 	public static aNoListInfoElement(newListEvent: HTMLEvent): HTMLElement {
 		return new DivisionBuilder()
 			.withChildren(aTextNode('Click'), this.anAddNewListButton(newListEvent), aTextNode('to make a new list!'))
-			.withId('emptylists_prompt')
+			.withId('empty-lists-prompt')
 			.build();
 	}
 
 	public static aListMembersSection(members: Villager[], memberClickedEvent: (villagerId: string) => void): HTMLUListElement {
 		return new ListElementBuilder()
-			.withClassNames('list_members')
+			.withClassNames('list-members')
 			.withChildren(...members.map(villager => this.aMemberElement(villager, memberClickedEvent)))
 			.build();
 	}
@@ -58,7 +58,7 @@ export default class ListsComponents {
 	private static aListTitleElement(list: VillagerList, listTitleClickedEvent: HTMLEvent): HTMLButtonElement {
 		return new ButtonBuilder(listTitleClickedEvent)
 			.withInnerHTML(list.title)
-			.withClassNames('list_title')
+			.withClassNames('list-title')
 			.isClickable()
 			.build();
 	}
@@ -67,7 +67,7 @@ export default class ListsComponents {
 		return new ButtonBuilder(deleteListEvent)
 			.asFontAwesome('fa-trash')
 			.withTitle('Delete list')
-			.withClassNames('listdelete_button')
+			.withClassNames('list-delete-button')
 			.isClickable()
 			.build();
 	}
@@ -76,7 +76,7 @@ export default class ListsComponents {
 		return new ButtonBuilder(renameListEvent)
 			.asFontAwesome('fa-edit')
 			.withTitle('Edit list title')
-			.withClassNames('listrename_button')
+			.withClassNames('list-rename-button')
 			.isClickable()
 			.build();
 	}
@@ -86,14 +86,14 @@ export default class ListsComponents {
 			.onChange(applyTitleEvent)
 			.withValue(list.title)
 			.withMaxLength(30)
-			.withClassNames('rename_bar')
+			.withClassNames('rename-bar')
 			.build();
 	}
 
 	private static aListRenameConfirmButton(applyTitleEvent: HTMLEvent): HTMLButtonElement {
 		return new ButtonBuilder(applyTitleEvent)
 			.asFontAwesome('fa-check')
-			.withId('confirmrename_button')
+			.withId('confirm-rename-button')
 			.withTitle('Edit name')
 			.isClickable()
 			.build();
@@ -102,7 +102,7 @@ export default class ListsComponents {
 	private static aMemberElement(villager: Villager, memberClickedEvent: (villagerId: string) => void): HTMLLIElement {
 		return new ListItemBuilder()
 			.withTitle(villager.name)
-			.withClassNames('list_member')
+			.withClassNames('list-member')
 			.appendChild(this.aMemberButton(villager, memberClickedEvent))
 			.build();
 	}
@@ -111,7 +111,7 @@ export default class ListsComponents {
 		return new ButtonBuilder(() => {
 			memberClickedEvent(villager.id);
 		})
-			.withClassNames('member_button')
+			.withClassNames('member-button')
 			.isClickable()
 			.appendChild(this.aMemberImage(villager))
 			.build();
@@ -125,7 +125,7 @@ export default class ListsComponents {
 	}
 
 	private static anAddNewListButton(newListEvent: HTMLEvent): Node {
-		const newListButton = $('newlist_button').cloneNode() as HTMLButtonElement;
+		const newListButton = $('new-list-button').cloneNode() as HTMLButtonElement;
 		newListButton.addEventListener('click', newListEvent);
 		return newListButton;
 	}

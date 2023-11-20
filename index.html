@@ -46,29 +46,29 @@
 </header>
 <main>
 	<h2>Search</h2>
-	<section id="search_container">
+	<section id="search-container">
 		<search>
-			<input id="search_bar" placeholder="Search" type="search" autofocus>
-			<button id="search_button" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
-			<a id="close_searchpanel_button" class="clickable fa fa-arrow-left" href="#"></a>
+			<input id="search-bar" placeholder="Search" type="search" autofocus/>
+			<button id="search-button" title="Search (Name, Species, and Personality)" class="clickable fa fa-search" aria-hidden="true"></button>
+			<a id="close-search-panel-button" class="clickable fa fa-arrow-left" href="#"></a>
 		</search>
-		<div id="search_results">
+		<div id="search-results">
 		</div>
 	</section>
 
 	<h2>Lists</h2>
-	<section id="main_container">
+	<section id="main-container">
 		<div class="menu">
-			<button id="open_searchpanel_button" class="clickable fa fa-search" aria-hidden="true"></button>
-			<button id="newlist_button" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
-			<button id="exportlists_button" title="Save lists" class="clickable fa fa-upload" aria-hidden="true"></button>
-			<button id="importlists_button" title="Import lists" class="clickable fa fa-download" aria-hidden="true"></button>
-			<button id="clearlists_button" title="Clear all lists" class="clickable fa fa-times" aria-hidden="true"></button>
+			<button id="open-search-panel-button" class="clickable fa fa-search" aria-hidden="true"></button>
+			<button id="new-list-button" title="Add list" class="clickable fa fa-plus" aria-hidden="true"></button>
+			<button id="export-lists-button" title="Save lists" class="clickable fa fa-upload" aria-hidden="true"></button>
+			<button id="import-lists-button" title="Import lists" class="clickable fa fa-download" aria-hidden="true"></button>
+			<button id="clear-lists-button" title="Clear all lists" class="clickable fa fa-times" aria-hidden="true"></button>
 			<input id="file_input" hidden type="file" accept="application/json,.json">
-			<button id="exporttext_button" title="Save as text file" class="clickable fa fa-file" aria-hidden="true"></button>
+			<button id="export-text-button" title="Save as text file" class="clickable fa fa-file" aria-hidden="true"></button>
 			<!--<button id="share_button" title="Open sharable link" class="clickable fa fa-share" aria-hidden="true"></button>-->
 		</div>
-		<div id="lists_container">
+		<div id="lists-container">
 			<ul id="lists">
 				<div class="loading">
 					<i class="fa fa-star fa-spin"></i>
@@ -80,15 +80,15 @@
 	</section>
 
 	<h2>Profile</h2>
-	<section id="profile_container">
+	<section id="profile-container">
 		<div class="menu">
-			<select id="list_select"></select>
-			<button id="add_remove_button" aria-hidden="true" disabled title="Add to list" class="fa fa-plus clickable"></button>
+			<select id="list-select"></select>
+			<button id="add-remove-button" aria-hidden="true" disabled title="Add to list" class="fa fa-plus clickable"></button>
 		</div>
-		<summary id="villager_information_container">
-			<ul id="villager_information"></ul>
+		<summary id="villager-information-container">
+			<ul id="villager-information"></ul>
 		</summary>
-		<img title="Image not available (yet)" src="./public/villager_heads/wip.jpg" id="profile_image">
+		<img title="Image not available (yet)" src="./public/villager_heads/wip.jpg" id="profile-image">
 	</section>
 </main>
 </body>

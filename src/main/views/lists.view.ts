@@ -34,10 +34,10 @@ export default class ListsView {
 	public constructor() {
 		this.listsElement = $('lists');
 		this.fileInputElement = $('file_input') as HTMLInputElement;
-		this.newListButton = $('newlist_button') as HTMLButtonElement;
-		this.exportListsButton = $('exportlists_button') as HTMLButtonElement;
-		this.clearListsButton = $('clearlists_button') as HTMLButtonElement;
-		this.exportTextButton = $('exporttext_button') as HTMLButtonElement;
+		this.newListButton = $('new-list-button') as HTMLButtonElement;
+		this.exportListsButton = $('export-lists-button') as HTMLButtonElement;
+		this.clearListsButton = $('clear-lists-button') as HTMLButtonElement;
+		this.exportTextButton = $('export-text-button') as HTMLButtonElement;
 		this.bindEvents();
 	}
 
@@ -86,7 +86,7 @@ export default class ListsView {
 
 	public updateMembersForList(listId: string, members: Villager[]): void {
 		const listElementToRename = $(listId);
-		const listMembersToReplace = getChildElementByClassName(listElementToRename, 'list_members');
+		const listMembersToReplace = getChildElementByClassName(listElementToRename, 'list-members');
 		listElementToRename.replaceChild(this.aListMembersSection(listId, members), listMembersToReplace);
 	}
 
@@ -147,10 +147,10 @@ export default class ListsView {
 		this.exportTextButtonClicked$ = fromEvent(this.exportTextButton, 'click').pipe(
 			mapToVoid(),
 		);
-		this.openSearchPanelClicked$ = fromEvent($('open_searchpanel_button') as HTMLButtonElement, 'click').pipe(
+		this.openSearchPanelClicked$ = fromEvent($('open-search-panel-button') as HTMLButtonElement, 'click').pipe(
 			mapToVoid(),
 		);
-		$('importlists_button').addEventListener('click', () => {
+		$('import-lists-button').addEventListener('click', () => {
 			this.openImportListPrompt();
 		});
 	}
@@ -179,7 +179,7 @@ export default class ListsView {
 
 	private displayTitleForList(list: VillagerList, renameEnabled = false): void {
 		const listElementToRename = $(list.id);
-		const listHeaderToReplace = getChildElementByClassName(listElementToRename, 'list_header');
+		const listHeaderToReplace = getChildElementByClassName(listElementToRename, 'list-header');
 		listElementToRename.replaceChild(this.aListHeaderElement(list, renameEnabled), listHeaderToReplace);
 	}
 
@@ -198,8 +198,8 @@ export default class ListsView {
 
 	private getRenameBar(listId: string): HTMLInputElement {
 		const listElement = $(listId);
-		const listHeader = getChildElementByClassName(listElement, 'list_header');
-		return getChildElementByClassName(listHeader, 'rename_bar') as HTMLInputElement;
+		const listHeader = getChildElementByClassName(listElement, 'list-header');
+		return getChildElementByClassName(listHeader, 'rename-bar') as HTMLInputElement;
 	}
 
 	private openImportListPrompt(): void {

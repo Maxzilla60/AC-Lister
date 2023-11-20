@@ -4,11 +4,11 @@ main.readme {
 	grid-template-areas: "lists";
 }
 
-#readme_container > article h1 {
+#readme-container > article h1 {
 	display: none;
 }
 
-#readme_container > article h2 {
+#readme-container > article h2 {
 	display: initial;
 	font-family: 'Leckerli One', cursive;
 	font-size: 28px;
@@ -17,7 +17,7 @@ main.readme {
 	margin: 0;
 }
 
-#readme_container {
+#readme-container {
 	padding: 0 1em 1em;
 	background-color: floralwhite;
 	border: solid orange;

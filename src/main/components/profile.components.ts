@@ -74,7 +74,7 @@ export default class ProfileComponents {
 	private static aBirthdayEasterEggButton(villagerName: string, easterEggEvent: HTMLEvent): HTMLButtonElement {
 		return new ButtonBuilder(easterEggEvent)
 			.asFontAwesome('fa-birthday-cake')
-			.withId('birthday_button')
+			.withId('birthday-button')
 			.withTitle(`Happy birthday to ${villagerName}!`)
 			.isClickable()
 			.build();

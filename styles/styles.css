@@ -35,14 +35,14 @@ main {
 	-webkit-transition-duration: 0.2s;
 }
 
-#search_container {
+#search-container {
 	-ms-grid-row: 1;
 	-ms-grid-row-span: 5;
 	-ms-grid-column: 1;
 	grid-area: search;
 }
 
-#main_container {
+#main-container {
 	-ms-grid-row: 1;
 	-ms-grid-row-span: 3;
 	-ms-grid-column: 3;
@@ -50,7 +50,7 @@ main {
 	grid-area: lists;
 }
 
-#profile_container {
+#profile-container {
 	-ms-grid-row: 5;
 	-ms-grid-column: 3;
 	-ms-grid-column-span: 3;
@@ -142,7 +142,7 @@ a.clickable {
 	padding: 0;
 }
 
-.birthday, #birthday_button {
+.birthday, #birthday-button {
 	color: hotpink;
 	display: inline;
 	font-weight: bold;
@@ -181,12 +181,12 @@ small {
 }
 
 /* Search */
-#close_searchpanel_button,
-#open_searchpanel_button {
+#close-search-panel-button,
+#open-search-panel-button {
 	display: none;
 }
 
-#search_container {
+#search-container {
 	background-color: floralwhite;
 	border: solid orange;
 	border-radius: 8px;
@@ -208,11 +208,11 @@ search {
 	padding-bottom: 5px;
 }
 
-#search_bar.birthday {
+#search-bar.birthday {
 	padding: 5px;
 }
 
-#search_results {
+#search-results {
 	border: solid orange;
 	border-radius: 8px;
 	overflow-y: scroll;
@@ -221,7 +221,7 @@ search {
 	flex: auto;
 }
 
-#no_results {
+#no-results {
 	padding: 10px;
 	color: orange;
 	text-align: center;
@@ -259,7 +259,7 @@ search {
 }
 
 /* Lists */
-#main_container {
+#main-container {
 	padding: 5px;
 	background-color: floralwhite;
 	border: solid orange;
@@ -268,7 +268,7 @@ search {
 	position: relative;
 }
 
-#main_container > .menu {
+#main-container > .menu {
 	position: -webkit-sticky;
 	position: sticky;
 	-webkit-box-pack: end;
@@ -278,12 +278,12 @@ search {
 	z-index: 1;
 }
 
-#main_container > .menu > a,
-#main_container > .menu > button {
+#main-container > .menu > a,
+#main-container > .menu > button {
 	pointer-events: all;
 }
 
-#lists_container {
+#lists-container {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	width: 99%;
@@ -291,7 +291,7 @@ search {
 	position: absolute;
 }
 
-#lists, .list_members, #villager_information {
+#lists, .list-members, #villager-information {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -307,18 +307,18 @@ search {
 	padding-inline-start: 0;
 }
 
-.list_title {
+.list-title {
 	color: brown;
 	font-weight: bold;
 	margin: 0;
 	padding: 5px;
 }
 
-.rename_bar {
+.rename-bar {
 	width: initial;
 }
 
-.list_members {
+.list-members {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -326,7 +326,7 @@ search {
 	flex-flow: wrap;
 }
 
-.member_button {
+.member-button {
 	border-radius: 50%;
 	height: 40px;
 	width: 40px;
@@ -338,7 +338,7 @@ search {
 	justify-content: center;
 }
 
-.member_button > img {
+.member-button > img {
 	-ms-interpolation-mode: nearest-neighbor;
 	image-rendering: -webkit-optimize-contrast;
 	image-rendering: -moz-crisp-edges;
@@ -346,7 +346,7 @@ search {
 	image-rendering: pixelated;
 }
 
-#emptylists_prompt, noscript, .loading {
+#empty-lists-prompt, noscript, .loading {
 	color: orange;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -358,7 +358,7 @@ search {
 	padding-top: 5px;
 }
 
-#emptylists_newlist_button {
+#empty-lists-new-list-button {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -389,7 +389,7 @@ noscript {
 }
 
 /* Profile */
-#profile_container {
+#profile-container {
 	padding: 5px;
 	background-color: floralwhite;
 	border: solid orange;
@@ -404,7 +404,7 @@ noscript {
 	flex-direction: row-reverse;
 }
 
-#profile_container > .menu {
+#profile-container > .menu {
 	margin: 5px;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -421,7 +421,7 @@ select, option {
 	padding: 5px;
 }
 
-#villager_information_container {
+#villager-information-container {
 	-webkit-box-flex: 1;
 	-ms-flex: auto;
 	flex: auto;
@@ -440,18 +440,18 @@ select, option {
 	flex-direction: row-reverse;
 }
 
-#villager_information {
+#villager-information {
 	color: brown;
 	padding: 5px;
 }
 
-#villager_information > li > label {
+#villager-information > li > label {
 	text-align: center;
 	padding-top: 5px;
 }
 
-#villager_information > li > label,
-#birthday_button {
+#villager-information > li > label,
+#birthday-button {
 	margin-right: 10px;
 }
 
@@ -459,7 +459,7 @@ select, option {
 	margin-right: 5px;
 }
 
-#profile_image {
+#profile-image {
 	-ms-flex-item-align: center;
 	-ms-grid-row-align: center;
 	align-self: center;
@@ -471,7 +471,7 @@ select, option {
 	padding: 0;
 }
 
-#profile_image.loading {
+#profile-image.loading {
 	-o-object-fit: none;
 	object-fit: none;
 }
@@ -501,12 +501,12 @@ footer > a > i:hover {
 }
 
 @media only screen and (max-width: 730px) {
-	#close_searchpanel_button,
-	#open_searchpanel_button {
+	#close-search-panel-button,
+	#open-search-panel-button {
 		display: initial;
 	}
 
-	#search_container.open {
+	#search-container.open {
 		-webkit-transform: translateX(240px);
 		-ms-transform: translateX(240px);
 		transform: translateX(240px);
@@ -524,7 +524,7 @@ footer > a > i:hover {
 		grid-template-areas: "lists" "lists" "profile";
 	}
 
-	#main_container {
+	#main-container {
 		-ms-grid-row: 1;
 		-ms-grid-row-span: 3;
 		-ms-grid-column: 3;
@@ -532,7 +532,7 @@ footer > a > i:hover {
 		grid-area: lists;
 	}
 
-	#emptylists_prompt {
+	#empty-lists-prompt {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -541,7 +541,7 @@ footer > a > i:hover {
 		justify-content: center;
 	}
 
-	#profile_container {
+	#profile-container {
 		-ms-grid-row: 5;
 		-ms-grid-column: 3;
 		-ms-grid-column-span: 3;
@@ -549,22 +549,21 @@ footer > a > i:hover {
 	}
 
 	@media only screen and (max-width: 730px) {
-
-		#main_container {
+		#main-container {
 			-ms-grid-row: 1;
 			-ms-grid-row-span: 3;
 			-ms-grid-column: 1;
 			-ms-grid-column-span: 1;
 		}
 
-		#profile_container {
+		#profile-container {
 			-ms-grid-row: 5;
 			-ms-grid-column: 1;
 			-ms-grid-column-span: 1;
 		}
 	}
 
-	#search_container {
+	#search-container {
 		position: fixed;
 		top: 0;
 		bottom: 0;
@@ -578,7 +577,7 @@ footer > a > i:hover {
 		z-index: 2;
 	}
 
-	#main_container > .menu {
+	#main-container > .menu {
 		position: initial;
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
@@ -589,35 +588,35 @@ footer > a > i:hover {
 		border-bottom: orange 1px solid;
 	}
 
-	#lists_container {
+	#lists-container {
 		position: initial;
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
 		justify-content: center;
 	}
 
-	.list_header {
+	.list-header {
 		text-align: center;
 	}
 
-	.list_members {
+	.list-members {
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
 		justify-content: center;
 	}
 
-	#villager_information:empty {
+	#villager-information:empty {
 		height: 25vw;
 	}
 
-	#main_container {
+	#main-container {
 		-ms-grid-row: 1;
 		-ms-grid-row-span: 3;
 		-ms-grid-column: 1;
 		-ms-grid-column-span: 1;
 	}
 
-	#profile_container {
+	#profile-container {
 		-ms-grid-row: 5;
 		-ms-grid-column: 1;
 		-ms-grid-column-span: 1;
@@ -625,12 +624,12 @@ footer > a > i:hover {
 }
 
 @media only screen and (max-width: 590px) {
-	#main_container,
-	#search_container,
-	#profile_container,
-	#search_results,
-	#search_bar,
-	#list_select {
+	#main-container,
+	#search-container,
+	#profile-container,
+	#search-results,
+	#search-bar,
+	#list-select {
 		border-width: 2px;
 	}
 
@@ -645,7 +644,7 @@ footer > a > i:hover {
 		flex-direction: column;
 	}
 
-	h1, footer, #profile_image {
+	h1, footer, #profile-image {
 		display: none;
 	}
 
@@ -655,17 +654,17 @@ footer > a > i:hover {
 		flex: auto;
 	}
 
-	#search_container {
+	#search-container {
 		border-left: none;
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
 	}
 
-	#profile_container {
+	#profile-container {
 		display: initial;
 	}
 
-	#profile_container > .menu {
+	#profile-container > .menu {
 		position: initial;
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
@@ -673,13 +672,13 @@ footer > a > i:hover {
 		margin: 0;
 	}
 
-	#list_select {
+	#list-select {
 		-webkit-box-flex: 1;
 		-ms-flex: auto;
 		flex: auto;
 	}
 
-	#profile_image {
+	#profile-image {
 		position: absolute;
 		height: 25vw;
 		width: 25vw;
@@ -688,19 +687,19 @@ footer > a > i:hover {
 		margin: 5px;
 	}
 
-	#villager_information {
+	#villager-information {
 		padding: 0;
 	}
 
-	#villager_information > li {
+	#villager-information > li {
 		margin: 0;
 	}
 
-	#villager_information > li, .na {
+	#villager-information > li, .na {
 		margin-bottom: -10px;
 	}
 
-	#villager_information > li > label {
+	#villager-information > li > label {
 		margin-right: 0;
 	}
 

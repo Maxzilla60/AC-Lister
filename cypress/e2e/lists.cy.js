@@ -19,8 +19,8 @@ describe('Lists Section', () => {
 	it('should create new list', () => {
 		loadTestData('noLists');
 
-		cy.get('#newlist_button').click();
-		cy.get('#confirmrename_button').click();
+		cy.get('#new-list-button').click();
+		cy.get('#confirm-rename-button').click();
 
 		cy.get('.list').should('contain', defaultTitleForNewList);
 	});
@@ -30,22 +30,22 @@ describe('Lists Section', () => {
 			loadTestData('noLists');
 
 			const scoot = villagersArray.find(v => v.id === 'Scoot');
-			cy.get('#search_bar').clear().type(scoot.name);
+			cy.get('#search-bar').clear().type(scoot.name);
 			cy.waitForSearchDebounce();
-			cy.get('#search_results')
+			cy.get('#search-results')
 				.find('.result')
 				.contains(scoot.name)
 				.click();
 
-			cy.get('#newlist_button').click();
-			cy.get('#confirmrename_button').click();
+			cy.get('#new-list-button').click();
+			cy.get('#confirm-rename-button').click();
 
 			cy.get('.list').should('contain', defaultTitleForNewList);
-			cy.get('#villager_information').should('contain', scoot.name);
-			cy.get('#villager_information').should('contain', scoot.species);
-			cy.get('#villager_information').should('contain', scoot.personality);
-			cy.get('#villager_information').should('contain', scoot.coffee);
-			cy.get('#villager_information').should('contain', scoot.birthday);
+			cy.get('#villager-information').should('contain', scoot.name);
+			cy.get('#villager-information').should('contain', scoot.species);
+			cy.get('#villager-information').should('contain', scoot.personality);
+			cy.get('#villager-information').should('contain', scoot.coffee);
+			cy.get('#villager-information').should('contain', scoot.birthday);
 		});
 	});
 
@@ -54,9 +54,9 @@ describe('Lists Section', () => {
 
 		const listTitle = 'List with Custom Title';
 
-		cy.get('#newlist_button').click();
-		cy.get('.rename_bar').type(listTitle);
-		cy.get('#confirmrename_button').click();
+		cy.get('#new-list-button').click();
+		cy.get('.rename-bar').type(listTitle);
+		cy.get('#confirm-rename-button').click();
 
 		cy.get('.list').should('have.length', 1);
 		cy.get('.list').should('contain', listTitle);
@@ -69,11 +69,11 @@ describe('Lists Section', () => {
 
 		cy.contains(oneListTitle)
 			.parent()
-			.find('.listrename_button')
+			.find('.list-rename-button')
 			.first().click();
 
-		cy.get('.rename_bar').type(newListTitle);
-		cy.get('.rename_bar').type('{enter}');
+		cy.get('.rename-bar').type(newListTitle);
+		cy.get('.rename-bar').type('{enter}');
 
 		cy.get('.list').should('have.length', 1);
 		cy.get('.list').should('all.not.contain', oneListTitle);
@@ -85,7 +85,7 @@ describe('Lists Section', () => {
 
 		cy.contains(twoListTitle)
 			.parent()
-			.find('.listdelete_button')
+			.find('.list-delete-button')
 			.first().click();
 
 		cy.get('.list').should('have.length', 1);
@@ -95,9 +95,9 @@ describe('Lists Section', () => {
 	it('should clear all lists', () => {
 		loadTestData('twoLists');
 
-		cy.get('#clearlists_button').click();
+		cy.get('#clear-lists-button').click();
 
 		cy.get('.list').should('have.length', 0);
-		cy.get('#emptylists_prompt').should('exist');
+		cy.get('#empty-lists-prompt').should('exist');
 	});
 });

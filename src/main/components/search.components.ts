@@ -16,7 +16,7 @@ export default class SearchComponents {
 	public static aNoResultsElement(): HTMLDivElement {
 		return new DivisionBuilder()
 			.withInnerHTML('No results found')
-			.withId('no_results')
+			.withId('no-results')
 			.build();
 	}
 

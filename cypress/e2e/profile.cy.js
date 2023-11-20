@@ -33,18 +33,18 @@ describe('Profile Section', () => {
 			loadTestData('noLists');
 
 			const randomVillager = getRandomVillager(villagersArray);
-			cy.get('#search_bar').clear().type(randomVillager.name);
+			cy.get('#search-bar').clear().type(randomVillager.name);
 			cy.waitForSearchDebounce();
-			cy.get('#search_results')
+			cy.get('#search-results')
 				.find('.result')
 				.contains(randomVillager.name)
 				.click();
 
-			cy.get('#villager_information').should('contain', randomVillager.name);
-			cy.get('#villager_information').should('contain', randomVillager.species);
-			cy.get('#villager_information').should('contain', randomVillager.personality);
-			cy.get('#villager_information').should('contain', randomVillager.coffee);
-			cy.get('#villager_information').should('contain', randomVillager.birthday);
+			cy.get('#villager-information').should('contain', randomVillager.name);
+			cy.get('#villager-information').should('contain', randomVillager.species);
+			cy.get('#villager-information').should('contain', randomVillager.personality);
+			cy.get('#villager-information').should('contain', randomVillager.coffee);
+			cy.get('#villager-information').should('contain', randomVillager.birthday);
 		});
 	});
 
@@ -52,15 +52,15 @@ describe('Profile Section', () => {
 		loadTestData('oneEmptyList');
 
 		superHeroVillagers.forEach(v => {
-			cy.get('#search_bar').clear().type(v);
+			cy.get('#search-bar').clear().type(v);
 			cy.waitForSearchDebounce();
-			cy.get('#search_results').find('.result').first().click();
-			cy.get('#add_remove_button').click();
+			cy.get('#search-results').find('.result').first().click();
+			cy.get('#add-remove-button').click();
 		});
 
 		cy.contains(oneListTitle)
 			.parent().siblings()
-			.find('.list_member')
+			.find('.list-member')
 			.should('have.length', superHeroVillagers.length);
 	});
 
@@ -73,28 +73,28 @@ describe('Profile Section', () => {
 			const secondListTitle = testData['twoEmptyLists'][1].title;
 
 			const randomVillagerName = getRandomVillager(villagersArray).name;
-			cy.get('#search_bar').clear().type(randomVillagerName);
+			cy.get('#search-bar').clear().type(randomVillagerName);
 			cy.waitForSearchDebounce();
-			cy.get('#search_results').find('.result').first().click();
+			cy.get('#search-results').find('.result').first().click();
 
-			cy.get('#list_select').should('have.value', firstListID);
-			cy.get('#add_remove_button').click();
-			cy.get('#list_select').should('have.value', firstListID);
+			cy.get('#list-select').should('have.value', firstListID);
+			cy.get('#add-remove-button').click();
+			cy.get('#list-select').should('have.value', firstListID);
 
-			cy.get('#list_select').select(secondListID);
-			cy.get('#add_remove_button').click();
-			cy.get('#list_select').should('have.value', secondListID);
+			cy.get('#list-select').select(secondListID);
+			cy.get('#add-remove-button').click();
+			cy.get('#list-select').should('have.value', secondListID);
 
 			cy.contains(firstListTitle)
 				.parent().siblings()
-				.find('.list_member')
+				.find('.list-member')
 				.should('have.attr', 'title')
 				.and((innerText) =>
 					expect(innerText.toLowerCase()).to.have.string(randomVillagerName.toLowerCase())
 				);
 			cy.contains(secondListTitle)
 				.parent().siblings()
-				.find('.list_member')
+				.find('.list-member')
 				.should('have.attr', 'title')
 				.and((innerText) =>
 					expect(innerText.toLowerCase()).to.have.string(randomVillagerName.toLowerCase())
@@ -111,11 +111,11 @@ describe('Profile Section', () => {
 			.find('li > button')
 			.click();
 
-		cy.get('#add_remove_button').click();
+		cy.get('#add-remove-button').click();
 
 		cy.contains(firstListTitle)
 			.parent().siblings()
-			.find('.list_member')
+			.find('.list-member')
 			.should('have.length', 0);
 	});
 });

@@ -26,11 +26,11 @@ export default class ProfileView {
 
 	public constructor() {
 		this.preloadImages();
-		this.villagerInformationElement = $('villager_information');
-		this.profileImageElement = $('profile_image') as HTMLImageElement;
+		this.villagerInformationElement = $('villager-information');
+		this.profileImageElement = $('profile-image') as HTMLImageElement;
 		this.noProfileImageSrc = this.profileImageElement.src;
-		this.listSelectElement = $('list_select') as HTMLSelectElement;
-		this.addRemoveButton = $('add_remove_button') as HTMLButtonElement;
+		this.listSelectElement = $('list-select') as HTMLSelectElement;
+		this.addRemoveButton = $('add-remove-button') as HTMLButtonElement;
 	}
 
 	public init(lists: VillagerList[]): void {
