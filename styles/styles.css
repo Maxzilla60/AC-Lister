@@ -354,8 +354,7 @@ small {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	padding: 10px;
-	padding-top: 5px;
+	padding: 5px 10px 10px;
 }
 
 #empty-lists-new-list-button {
@@ -561,16 +560,12 @@ footer > a > i:hover {
 		-webkit-transition: -webkit-transform .3s ease-in-out;
 		transition: -webkit-transform .3s ease-in-out;
 		-o-transition: transform .3s ease-in-out;
-		transition: transform .3s ease-in-out;
 		transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 		z-index: 2;
 	}
 
 	#main-container > .menu {
 		position: initial;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
-		justify-content: center;
 		-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
 		justify-content: space-between;
