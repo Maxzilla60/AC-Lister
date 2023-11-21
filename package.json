@@ -30,11 +30,11 @@
 	"devDependencies": {
 		"@types/canvas-confetti": "^1.6.3",
 		"@types/file-saver": "^2.0.7",
-		"@types/hammerjs": "^2.0.44",
-		"@types/node": "^20.9.2",
-		"@typescript-eslint/eslint-plugin": "^6.11.0",
-		"@typescript-eslint/eslint-plugin-tslint": "^6.11.0",
-		"@typescript-eslint/parser": "^6.11.0",
+		"@types/hammerjs": "^2.0.45",
+		"@types/node": "^20.9.3",
+		"@typescript-eslint/eslint-plugin": "^6.12.0",
+		"@typescript-eslint/eslint-plugin-tslint": "^6.12.0",
+		"@typescript-eslint/parser": "^6.12.0",
 		"cypress": "13.5.1",
 		"eslint": "^8.54.0",
 		"eslint-plugin-import": "^2.29.0",
@@ -45,7 +45,7 @@
 		"parcel-bundler": "1.12.5",
 		"parcel-plugin-markdown-it": "^1.0.0",
 		"parcel-plugin-static-files-copy": "^2.6.0",
-		"typescript": "^5.2.2"
+		"typescript": "^5.3.2"
 	},
 	"staticFiles": {
 		"staticPath": "public",
