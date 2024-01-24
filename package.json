@@ -6,7 +6,7 @@
 		"start": "parcel index.html",
 		"build": "parcel build index.html",
 		"cypress": "cypress open",
-		"test": "cypress run",
+		"test": "npx concurrently \"npm start\" \"npm run cypress\"",
 		"upgrade": "npx npm-check-updates -u -x parcel & npm i"
 	},
 	"repository": {
