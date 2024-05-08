@@ -5,7 +5,7 @@ import VillagerList from '../models/villagerlist.model';
 import VillagerListV1 from '../models/villagerlist.model.v1.js';
 import VillagersRepository from '../repository/villagers.repository';
 import Ajv from 'ajv';
-import { nanoid } from 'nanoid';
+import { ulid as randomId } from 'ulid';
 
 export default class AppStateService {
 	private readonly validator = new Ajv();
@@ -22,7 +22,7 @@ export default class AppStateService {
 		const tempLists = this._lists;
 		const newList = {
 			title: 'New List',
-			id: nanoid(),
+			id: randomId(),
 			members: [],
 		};
 		tempLists.push(newList);
@@ -129,7 +129,7 @@ export default class AppStateService {
 
 	private convertVersion1ToVersion2(lists: VillagerListV1[]): VillagerList[] {
 		return lists.map((list: VillagerListV1) => ({
-			id: nanoid(),
+			id: randomId(),
 			title: list.title,
 			members: list.members.map((villagerId: string) =>
 				VillagersRepository.getVillagerById(villagerId),
