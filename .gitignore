@@ -137,3 +137,4 @@ cypress/videos
 cypress/screenshots/
 .vscode/
 .theia/
+/.parcel-cache/

@@ -1,4 +1,4 @@
-import { html } from '../../public/README.md';
+import html from '../../public/README.md';
 import { getElement as $ } from '../shared/util';
 
 const childNodes = new DOMParser().parseFromString(html, 'text/html').body.childNodes;
