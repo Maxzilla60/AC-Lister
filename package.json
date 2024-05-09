@@ -3,8 +3,8 @@
 	"version": "2.0.0",
 	"description": "Animal Crossing Villager Lister",
 	"scripts": {
-		"start": "parcel index.html",
-		"build": "parcel build index.html",
+		"start": "npx parcel index.html",
+		"build": "npx parcel build index.html",
 		"cypress": "cypress open",
 		"test": "npx concurrently \"npm start\" \"npm run cypress\"",
 		"upgrade": "npx npm-check-updates -u & npm i"
