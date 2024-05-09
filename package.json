@@ -47,12 +47,12 @@
 		"netlify-plugin-cypress": "^2.2.1",
 		"parcel": "2.12.0",
 		"parcel-bundler": "1.12.5",
-		"parcel-plugin-static-files-copy": "^2.6.0",
+		"parcel-reporter-static-files-copy": "^1.5.3",
 		"parcel-transformer-markdown": "^3.0.1",
 		"typescript": "^5.4.5"
 	},
 	"staticFiles": {
 		"staticPath": "public",
-		"watcherGlob": "**"
+		"staticOutPath": "public"
 	}
 }
