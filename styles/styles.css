@@ -488,6 +488,20 @@ footer > a > i:hover {
 	color: floralwhite;
 }
 
+footer > a:not([href]) > i {
+	color: gray;
+}
+
+footer .clickable {
+	background: none;
+}
+
+footer .clickable:hover {
+	background: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
 @media only screen and (max-width: 730px) {
 	#close-search-panel-button,
 	#open-search-panel-button {
