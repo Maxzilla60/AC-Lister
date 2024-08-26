@@ -2,6 +2,9 @@
 	"name": "ac-lister",
 	"version": "2.0.0",
 	"description": "Animal Crossing Villager Lister",
+	"engines": {
+		"node": "17"
+	},
 	"scripts": {
 		"start": "npx parcel index.html",
 		"build": "npx parcel build index.html",
